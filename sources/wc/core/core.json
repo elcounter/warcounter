@@ -1,0 +1,2299 @@
+{
+ "core": [
+  {
+   "num": "1.0",
+   "title": "CONCEPTS DE BASE",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Les batailles de Warhammer Age of Sigmar se déroulent sur une surface appelée champ de bataille. Chaque bataille suit un scénario appelé plan de bataille, qui explique comment disposer le champ de bataille et comment désigner le vainqueur."
+    },
+    {
+     "k": "p",
+     "x": "Chaque joueur est le commandant d’une armée. Chaque armée appartient à une faction et est composée de groupes de figurines appelés unités. Les figurines et les unités de votre armée sont appelées figurines et unités amies, et les figurines et unités de l’armée de votre adversaire sont appelées figurines et unités ennemies."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "2.0",
+   "title": "INSTRUMENTS DE GUERRE",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Pour livrer une bataille, vous aurez besoin de :"
+    },
+    {
+     "k": "p",
+     "x": "• Un mètre-ruban • Une surface (le champ de bataille) • Des dés • 2 armées de figurines Citadel"
+    }
+   ],
+   "subs": [
+    {
+     "num": "2.1",
+     "title": "MESURER LES DISTANCES",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "À Warhammer Age of Sigmar, les distances sont mesurées en pouces (\"), entre les points les plus proches des socles des figurines concernées. Vous pouvez mesurer les distances n’importe quand. Lorsque vous mesurez la distance entre des unités, mesurez-la toujours entre les points les plus proches des socles des figurines les plus proches de chaque unité. Si une figurine n’a pas de socle, mesurez à partir du point de la figurine le plus proche."
+      }
+     ]
+    },
+    {
+     "num": "2.1.1",
+     "title": "“À” ET “ENTIÈREMENT À”",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Une figurine est à une certaine distance de quelque chose (ex : une autre unité, un territoire ou un objectif) si n’importe quelle partie de son socle se trouve à cette distance ou plus près. Une figurine est entièrement à une certaine distance de quelque chose si toutes les parties de son socle se trouvent à cette distance ou plus près."
+      },
+      {
+       "k": "p",
+       "x": "Une unité est à une certaine distance de quelque chose si n’importe quelle partie du socle de n’importe quelle figurine de l’unité se trouve à cette distance ou plus près. Une unité est entièrement à une certaine distance de quelque chose si toutes les parties des socles de toutes les figurines de l’unité se trouvent à cette distance ou plus près."
+      }
+     ]
+    },
+    {
+     "num": "2.2",
+     "title": "DÉS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "À Warhammer Age of Sigmar, on utilise des dés à six faces, souvent abrégés en D6."
+      },
+      {
+       "k": "p",
+       "x": "• Certaines règles parlent de “2D6”, “3D6”, etc. – en pareils cas, jetez autant de dés que le chiffre avant “D6” et additionnez leurs résultats. • Un jet de “2+” signifiun jet de 2 ou plus, un jet de “3+” signifiun jet de 3 ou plus, et ainsi de suite. • Si une règle vous demande de jeter un D3, jetez un dé et divisez le résultat par deux, en arrondissant au supérieur. Pour les jets d’un D3, un jet de “2+” signifiun résultat de 2 ou plus après avoir divisé par deux et arrondi le total. • Les effets qui vous permettent de modifier un jet de dé sont appelés modificateurs. • Certaines règles vous permettent de relancer un jet de dé(s), ce qui signifi que vous pouvez jeter à nouveau certains ou tous les dés du jet. On ne peut pas relancer plusieurs fois un dé, et les relances se produisent avant qu’on applique les éventuels modificateurs."
+      },
+      {
+       "k": "p",
+       "x": "• Lorsqu’on vous demande de tirer au dé, chaque joueur jette un dé. Celui qui obtient le résultat le plus élevé gagne le tir au dé. En cas d’égalité, les joueurs tirent à nouveau au dé jusqu’à ce qu’il y ait un gagnant (sauf indication contraire)."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "num": "3.0",
+   "title": "FACTIONS",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Chaque armée appartient à une faction, comme les Éternels de l’Orage ou les Skavens. Chaque faction a des règles de faction, qui incluent des traits de bataille, des formations de bataille, des optimisations et des domaines. On trouve ces règles dans diverses publications, mais le plus souvent dans le tome de bataille de la faction concernée."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "4.0",
+   "title": "CHARTES",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Les règles de chaque unité figurent sur sa charte :"
+    },
+    {
+     "k": "p",
+     "x": "ARMES DE TIR Portée Attaques Touche Blessure Perf. Dégâts Aptitude Crit (Blessure Auto.), Pistolet Ratling 10\" D6 3+ 3+ 1 1"
+    },
+    {
+     "k": "p",
+     "x": "ARMES DE MÊLÉE Attaques ToucheTouc Blessure Perf. Dégâtségâ Aptitude Hallebarde de Malmétal 5 3+ 4+ 1 2 - Dents Tranchantes de Ronge-bête 4 4+ 3+ 1 D3 Compagnon"
+    },
+    {
+     "k": "ab",
+     "n": "RAT COINCÉ",
+     "flavor": "Un Griffarque qui a craint pour sa vie devient un adversaire féroce.",
+     "t": "Passif",
+     "x": [
+      "Effet: Tant que cette unité est endommagée, ajoutez 3 à la caractéristique d'Attaques de sa Hallebarde de Malmétal.",
+      "La caractéristique de MOUVEMENT détermine la vitesse à laquelle l’unité peut se déplacer sur le champ de bataille (voir 15.0)."
+     ]
+    },
+    {
+     "k": "p",
+     "x": "5 1 La caractéristique de SANTÉ détermine la quantité de dégâts qu’on peut allouer à une unité avant qu’une figurine de l’unité soit tuée (voir 18.2)."
+    },
+    {
+     "k": "p",
+     "x": "La caractéristique de CONTRÔLE détermine la capacité de chaque figurine de l’unité à contester les objectifs (voir 32.2)."
+    },
+    {
+     "k": "p",
+     "x": "La caractéristique de SAUVEGARDE détermine le niveau d’armure de l’unité. Cette caractéristique est le résultat que vous devez obtenir ou dépasser sur un jet de dé pour épargner une blessure à une figurine, donc mieux vaut une valeur basse (voir 17.0)."
+    },
+    {
+     "k": "p",
+     "x": "Les MOTS-CLÉS de l’unité (voir 5.1)"
+    },
+    {
+     "k": "p",
+     "x": "Les ARMES dont l’unité est équipée. Elles sont divisées en armes de mêlée, utilisées pour faire des attaques de mêlée, et en armes de tir, utilisées pour faire des attaques de tir. Chaque arme a ses propres caractéristiques (voir 16.0)."
+    },
+    {
+     "k": "p",
+     "x": "Les APTITUDES spéciales que l’unité peut utiliser (voir 5.0)."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "5.0",
+   "title": "APTITUDES",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "L’immense majorité des choses que les unités peuvent faire à Warhammer Age of Sigmar sont appelées aptitudes. En voici un exemple:"
+    },
+    {
+     "k": "p",
+     "x": "TIR: Les guerriers visent et lâchent une redoutable volée."
+    },
+    {
+     "k": "p",
+     "x": "Annonce: Choisissez une unité amie qui n’a pas utilisé une aptitude de Course ni de Repli à ce tour pour qu’elle utilise cette aptitude. Puis choisissez une ou plusieurs unités ennemies comme cible(s) des attaques de l’unité (voir 16.0)."
+    },
+    {
+     "k": "p",
+     "x": "Effet: Résolvez les attaques de tir contre la/les unité(s) cible(s)."
+    }
+   ],
+   "subs": [
+    {
+     "num": "5.1",
+     "title": "MOTS-CLÉS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Certaines aptitudes ont un ou plusieurs mots-clés listés en bas de leur tableau, dans la barre de mots-clés. Par exemple, l’aptitude “Tir” ci-dessus a les mots-clés Base, Attaque et Tir. Les unités ont elles aussi une barre de mots-clés sur leur charte."
+      },
+      {
+       "k": "p",
+       "x": "Les mots-clés vous indiquent les aptitudes qui peuvent être utilisées ou les unités qui peuvent être choisies comme cibles d’une aptitude. Par exemple, l’aptitude “Charge” peut être utilisée par une unité seulement si elle n’a pas déjà utilisé une aptitude avec le mot-clé Course ou Repli au même tour. Le singulier et le pluriel d’un mot-clé sont synonymes en termes de règles."
+      }
+     ]
+    },
+    {
+     "num": "5.2",
+     "title": "UTILISER LES APTITUDES",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Le timing d’une aptitude vous indique le moment où elle peut être utilisée. Lorsque vous utilisez une aptitude, suivez ces étapes:"
+      },
+      {
+       "k": "p",
+       "x": "1. Annoncer l’Aptitude: Dites à votre adversaire quelle aptitude est utilisée. Si elle a des instructions d’Annonce, résolvez-les à cette étape."
+      },
+      {
+       "k": "p",
+       "x": "2. Utiliser des Réactions: En commençant par le joueur qui utilise l’aptitude, les joueurs utilisent à tour de rôle des aptitudes ayant le timing Réaction. Les joueurs peuvent passer au lieu d’utiliser une réaction, mais une fois que les deux joueurs ont passé consécutivement, aucune autre réaction pour cette aptitude ne peut être utilisée."
+      },
+      {
+       "k": "p",
+       "x": "3. Résoudre l’Effet: Suivez les instructions de la section Effet de l’aptitude."
+      }
+     ]
+    },
+    {
+     "num": "5.3",
+     "title": "LES RÈGLES DE UN",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "• Une unité ne peut pas utiliser plus de 1 aptitude de Base par phase (voir 14.0). • Une unité ne peut pas utiliser la même aptitude plus d’une fois par phase, sauf indication contraire. • Une unité ne peut pas être affectée plusieurs fois par une même aptitude passive à un moment donné. Par exemple, si une unité est à portée de deux éléments de terrain différents qui ont l’aptitude passive “Couvert”, l’effet s’applique une seule fois à l’unité."
+      }
+     ]
+    },
+    {
+     "num": "5.4",
+     "title": "APTITUDES PASSIVES",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Les aptitudes qui ont le timing “Passif” sont appelées aptitudes passives. Ces aptitudes ne sont pas annoncées. Leurs effets s’appliquent toujours si leurs conditions sont remplies, et ils doivent être appliqués s’il est possible de le faire."
+      },
+      {
+       "k": "p",
+       "x": "EXEMPLE D’APTITUDES Ben et Jes se livrent bataille, et les Rats-ogors de Ben ont chargé les Libérators de Jes. C’est au tour de Ben de sélectionner une unité pour la faire combattre au corps à corps. Les exemples suivants montrent comment on utilise les aptitudes – ne vous souciez pas trop des aptitudes spécifiques, elles seront détaillées plus loin dans les règles."
+      },
+      {
+       "k": "p",
+       "x": "Ben utilise l’aptitude “Corps à Corps”. On résout d’abord les instructions d’Annonce de l’aptitude. Ici, Ben choisit son unité de Rats-ogors pour qu’elle utilise l’aptitude, puis elle fait un mouvement d’engagement. Enfin, Ben choisit l’unité de Libérators de Jes comme cible de toutes les attaques des Rats-ogors."
+      },
+      {
+       "k": "ab",
+       "n": "CORPS À CORPS",
+       "flavor": "Les guerriers sont engagés dans une mêlée fatale, et s’attaquent à leurs ennemis.",
+       "t": "N’importe Quelle Phase de Mêlée",
+       "x": [
+        "Annonce : Choisissez une unité amie qui est en mêlée ou qui a chargé à ce tour pour qu’elle utilise cette aptitude. Elle peut faire un mouvement d’engagement. Puis, si elle est en mêlée, vous devez choisir une ou plusieurs unités ennemies comme cible(s) de ses attaques.",
+        "Effet : Résolvez les attaques de mêlée contre la/les unité(s) cible(s).",
+        "Mots-clés : Base, Attaque, Corps à Corps"
+       ]
+      },
+      {
+       "k": "p",
+       "x": "Après avoir annoncé l’aptitude, Ben a la première opportunité d’utiliser des réactions. Comme “Corps à Corps” a le mot-clé Attaque, Ben peut utiliser “Attaque en Règle” pour améliorer les attaques de ses Rats-ogors."
+      },
+      {
+       "k": "ab",
+       "n": "ATTAQUE EN RÈGLE",
+       "flavor": "Les guerriers se battent avec une vigueur frénétique.",
+       "t": "Réaction: Vous avez annoncé une aptitude d’Attaque",
+       "x": [
+        "Utilisée Par : L’unité qui utilise l’aptitude d’Attaque’A’.",
+        "Effet : Ajoutez 1 aux jets de touche pour les attaques faites en utilisant l’aptitude d’Attaque’A’. Ceci affecte aussi les armes qui ont l’aptitude d’arme Compagnon.",
+        "“Attaque en Règle” et “Défense en Règle” sont des exemples de Règles Avancées, utilisées dans certains packs de bataille."
+       ]
+      },
+      {
+       "k": "p",
+       "x": "À présent que les instructions d’Annonce ont été résolues et que les deux joueurs ont eu l’occasion d’utiliser des réactions, Ben peut résoudre l’effet de l’aptitude, et 2 Libérators sont tués (voir 18.3)."
+      },
+      {
+       "k": "ab",
+       "n": "CORPS À CORPS",
+       "flavor": "Les guerriers sont engagés dans une mêlée fatale, et s’attaquent à leurs ennemis.",
+       "t": "N’importe Quelle Phase de Mêlée",
+       "x": [
+        "Annonce : Choisissez une unité amie qui est en mêlée ou qui a chargé à ce tour pour qu’elle utilise cette aptitude. Elle peut faire un mouvement d’engagement. Puis, si elle est en mêlée, vous devez choisir une ou plusieurs unités ennemies comme cible(s) de ses attaques.",
+        "Effet : Résolvez les attaques de mêlée contre la/les unité(s) cible(s).",
+        "Mots-clés : Base, Attaque, Corps à Corps"
+       ]
+      },
+      {
+       "k": "p",
+       "x": "Après que Ben a utilisé “Attaque en Règle”, Jes utilise “Défense en Règle” pour protéger ses Libérators de l’assaut imminent. Ben passe ensuite son tour d’utiliser des réactions, puis Jes fait de même."
+      },
+      {
+       "k": "ab",
+       "n": "DÉFENSE EN RÈGLE",
+       "flavor": "Les soldats serrent les rangs pour repousser un assaut.",
+       "t": "Réaction : L’adversaire a annoncé une aptitude d’Attaque 1",
+       "x": [
+        "Utilisée Par : Une unité ciblée par l’aptitude d’Attaque’A’.",
+        "Effet : Ajoutez 1 aux jets de sauvegarde pour l’unité à cette phase."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "num": "6.0",
+   "title": "VISIBILITÉ",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Une figurine cible est visible d’une autre figurine (que nous allons appeler la “figurine observatrice”) si vous pouvez tracer une ligne droite imaginaire (horizontale, diagonale ou verticale) entre n’importe quel point de la figurine observatrice et n’importe quel point de la figurine cible sans couper d’autres objets, hormis les autres figurines de l’unité de la figurine observatrice. Une unité cible est visible d’une unité observatrice si au moins 1 figurine de l’unité cible est visible d’au moins 1 figurine de l’unité observatrice. On considère qu’une figurine est toujours visible d’elle-même."
+    },
+    {
+     "k": "p",
+     "x": "Même si on ne voit que la moitié de ce Libérator, il compte comme étant visible. Une figurine est visible même si elle est partiellement masquée ; si la moindre partie de la figurine peut être vue, elle est visible."
+    },
+    {
+     "k": "p",
+     "x": "La visibilité d’une figurine observatrice peut être bloquée par les figurines ennemies. Sur cette photo, le Portepeste n'est pas visible du Libérator, car il est masqué par le Grand Immonde."
+    },
+    {
+     "k": "p",
+     "x": "Le Libérator à l’arrière de cette unité peut voir à travers ses camarades. Les figurines ne bloquent pas la visibilité des autres figurines de leur unité – on suppose qu’elles combattent sans gêner les attaques de leurs coéquipiers."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "7.0",
+   "title": "PORTÉE DE MÊLÉE",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Chaque figurine a une portée de mêlée qui s’étend à 3\" de son socle à l’horizontale et à n’importe quelle distance à la verticale, formant un cylindre autour de ce cercle. La portée de mêlée d’une unité s’étend à 3\" à l’horizontale, et à n’importe quelle distance à la verticale, à partir de chaque figurine de l’unité. Les unités d’armées opposées qui sont à portée de mêlée et visibles les unes des autres sont en mêlée les unes avec les autres. Lorsqu’une unité qui n’est pas en mêlée arrive à portée de mêlée d’une unité ennemie visible, elle entre en mêlée. Une figurine est considérée en mêlée avec une unité ennemie si l’unité est visible de la figurine et dans sa portée de mêlée."
+    },
+    {
+     "k": "p",
+     "x": "La portée de mêlée d’une figurine s’étend à 3\" à l’horizontale dans toutes les directions et à une distance infinie à la verticale. Notez qu’elle est mesurée à partir du bord de son socle, pas de son centre."
+    },
+    {
+     "k": "p",
+     "x": "La portée de mêlée d’une unité s’étend à 3\" à l’horizontale et à une distance infinie à la verticale à partir de toutes les figurines de l’unité. On peut voir ici que cela forme une sorte de “nuage”."
+    },
+    {
+     "k": "p",
+     "x": "Même si les deux Rats-ogors sont à portée de mêlée du Libérator, le Rat-ogor derrière le mur n’est pas visible du Libérator et n’est donc pas en mêlée."
+    },
+    {
+     "k": "p",
+     "x": "Une unité est en mêlée avec une unité ennemie visible si une ou plusieurs de ses figurines sont à portée de mêlée de l’unité ennemie. Même si 1 Rat-ogor n’est pas à portée de mêlée des Libérators, son unité est quand même en mêlée."
+    },
+    {
+     "k": "p",
+     "x": "SE PRÉPARER À LA BATAILLE"
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "8.0",
+   "title": "LES ARMÉES",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Avant de commencer une bataille, chaque joueur va avoir besoin d’une armée. Certains packs de bataille utilisent des armées “préfabriquées”, tandis que d’autres incluent des règles sur la façon de remplir votre feuille d’armée."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "9.0",
+   "title": "PLANS DE BATAILLE",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Avant chaque bataille, vous devez sélectionner un plan de bataille. Chaque pack de bataille propose différents plans de bataille, et des plans de bataille supplémentaires sont disponibles dans d’autres publications. Chaque plan de bataille est un scénario ; il définit les territoires, les objectifs et les conditions de victoire, ainsi que les éventuelles règles spéciales qui s’appliquent."
+    }
+   ],
+   "subs": [
+    {
+     "num": "9.1",
+     "title": "CARTE DE CHAMP DE BATAILLE",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Chaque plan de bataille inclut une carte de champ de bataille divisée en quarts. Elle indique l’emplacement des objectifs et des territoires des joueurs. Chaque pack de bataille ou plan de bataille indique la taille de champ de bataille recommandée en fonction de l’ampleur de votre partie."
+      }
+     ]
+    },
+    {
+     "num": "9.1.1",
+     "title": "PLACER LES OBJECTIFS ET LE TERRAIN",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Beaucoup de champs de bataille ont des sites clés appelés objectifs, et presque tous les champs de bataille ont des éléments de terrain comme des bâtiments, des ruines et des bois. Sauf indication contraire, les joueurs placent d’abord les pions d’objectif aux endroits indiqués par des ronds dorés ( ) sur la carte, puis ils placent les éléments de terrain d’une manière qui plaît aux deux joueurs. Beaucoup de packs et plans de bataille incluent des instructions supplémentaires pour placer le terrain."
+      }
+     ]
+    },
+    {
+     "num": "9.1.2",
+     "title": "TERRITOIRES",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Sauf indication contraire du pack ou du plan de bataille, une fois le terrain placé, les joueurs tirent au dé. Le gagnant attribue les territoires aux deux joueurs. Son adversaire désigne le joueur qui commence le déploiement."
+      },
+      {
+       "k": "p",
+       "x": "• Une unité est dans un territoire si la moindre partie du socle de n’importe quelle figurine de l’unité est dans ce territoire."
+      },
+      {
+       "k": "p",
+       "x": "• Une unité est entièrement dans un territoire si toutes les parties du socle de chaque figurine de l’unité sont dans ce territoire."
+      },
+      {
+       "k": "p",
+       "x": "• La zone du champ de bataille qui n’appartient à aucun territoire de joueur est un territoire neutre."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "num": "10.0",
+   "title": "LA PHASE DE DÉPLOIEMENT",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Une fois que le champ de bataille est prêt, les joueurs doivent déployer leurs armées. Ils le font lors d’une phase spéciale appelée phase de déploiement. La phase de déploiement se produit une fois par bataille, avant le début du premier round de bataille (voir 12.0)."
+    },
+    {
+     "k": "p",
+     "x": "ÉTAPE 1 – DÉPLOYER LES TERRAINS DE FACTION Certaines factions ont des éléments de terrain de faction, qui ont leurs propres chartes et sont placés grâce aux aptitudes de Déploiement de Terrain. Le joueur qui commence le déploiement doit utiliser des aptitudes de Déploiement de Terrain en premier, puis son adversaire peut en utiliser."
+    },
+    {
+     "k": "p",
+     "x": "ÉTAPE 2 – DÉPLOYER LES ARMÉES Sauf indication contraire du plan de bataille, les joueurs utilisent à tour de rôle des aptitudes de Déploiement pour déployer leurs unités, en commençant par celui qui a commencé le déploiement. Une fois qu’un joueur n’a plus d’aptitudes de Déploiement à utiliser, son adversaire doit continuer à utiliser des aptitudes de Déploiement jusqu’à ce qu’il n’en ait plus à utiliser."
+    },
+    {
+     "k": "p",
+     "x": "ÉTAPE 3 – UTILISER DES APTITUDES DE PHASE DE DÉPLOIEMENT Après que les deux joueurs ont fini de déployer leurs unités, celui qui a commencé le déploiement peut utiliser des aptitudes de Phase de Déploiement qui ne sont pas des aptitudes de Déploiement ni de Déploiement de Terrain, dans l’ordre de son choix, puis son adversaire peut faire de même."
+    }
+   ],
+   "subs": [
+    {
+     "num": "10.1",
+     "title": "APTITUDES DE PHASE DE DÉPLOIEMENT UNIVERSELLES",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Phase de Déploiement DÉPLOIEMENT D’UNITÉ : Des forces supplémentaires entrent en lice."
+      },
+      {
+       "k": "p",
+       "x": "Annonce : Choisissez comme cible une unité de votre feuille d’armée qui n’est pas encore déployée."
+      },
+      {
+       "k": "p",
+       "x": "Effet : Placez l’unité cible entièrement en territoire ami et à plus de 9\" du territoire ennemi. Elle est à présent déployée."
+      },
+      {
+       "k": "ab",
+       "n": "DÉPLOIEMENT DE TERRAIN DE FACTION",
+       "flavor": "L’armée s’est positionnée autour d’un monument puissant et capital.",
+       "t": "Phase de Déploiement",
+       "x": [
+        "Annonce : Choisissez comme cible un élément de terrain de faction ami qui n’est pas encore déployé.",
+        "Effet : Placez l’élément de terrain de faction cible entièrement en territoire ami et à plus de 3\" des objectifs et des autres éléments de terrain. Il est à présent déployé.",
+        "Mots-clés : Déploiement de Terrain"
+       ]
+      },
+      {
+       "k": "ab",
+       "n": "DÉPLOIEMENT DE RÉGIMENT",
+       "flavor": "Un héros éminent conduit sa suite à la bataille.",
+       "t": "Passif",
+       "x": [
+        "Annonce : Choisissez comme cible un régiment de votre feuille d’armée. Aucune unité du régiment ne doit être déjà déployée.",
+        "Effet : Enchaînez l’utilisation d’aptitudes de Déploiement, sans passer la main à l’adversaire, jusqu’à ce que toutes les unités du régiment soient déployées. Vous ne pouvez pas choisir des unités qui n’appartiennent pas à ce régiment comme cibles de ces aptitudes de Déploiement.",
+        "Un régiment est un regroupement d’unités. C’est une des composantes fondamentales d’une armée (voir “Composition d’Armée” dans les Règles Avancées)."
+       ]
+      },
+      {
+       "k": "p",
+       "x": "Certaines factions ont des aptitudes de Déploiement spéciales, comme l’aptitude “Le Royaume Céleste” des Éternels de l’Orage."
+      },
+      {
+       "k": "p",
+       "x": "LA BATAILLE • La bataille dure un nombre"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "num": "11.0",
+   "title": "SÉQUENCE DE BATAILLE",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Chaque bataille dure un certain nombre de rounds de bataille, indiqué par le plan de bataille. À chaque round, chaque joueur joue un tour. Chaque tour est divisé en plusieurs phases (voir 13.0)."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "12.0",
+   "title": "DÉBUT DU ROUND DE BATAILLE",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Au début de chaque round de bataille, suivez ces étapes :"
+    },
+    {
+     "k": "p",
+     "x": "1. Déterminez le Joueur Actif : Si c’est le premier round de bataille, le joueur qui a fini de déployer son armée en premier choisit qui a le premier tour (sauf indication contraire du pack de bataille ou du plan de bataille)."
+    },
+    {
+     "k": "p",
+     "x": "Si ce n’est’e’ pas le premier round, les joueurs font un tir au dé appelé jet de priorité et le gagnant choisit qui a le premier tour. Si le tir au dé est une égalité, le joueur qui a eu le premier tour au round précédent choisit qui a le premier tour du round de bataille en cours."
+    },
+    {
+     "k": "p",
+     "x": "Lorsque c’est le tour d’un joueur, qu’il s’agisse du premier ou du second tour du round, il est appelé le joueur actif.f.f"
+    },
+    {
+     "k": "p",
+     "x": "2. Déterminez l’Outsider : Le joueur qui a le moins de points de victoire est l’outsider pour la durée du round. Si les joueurs sont à égalité (au premier round, par exemple), il n’y a pas d’outsider, sauf indication contraire."
+    },
+    {
+     "k": "p",
+     "x": "3. Aptitudes de Début de Round de Bataille : Le joueur actif peut utiliser des aptitudes de Début de Round de Bataille en premier, puis son adversaire peut faire de même."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "13.0",
+   "title": "PHASES DE TOUR",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Le tour de chaque joueur est divisé en 7 phases, indiquées à gauche. À chaque phase, le joueur actif peut utiliser des aptitudes qui ont le timing “Votre Phase (…)” ou “N’importe Quelle Phase (…)” dans l’ordre de son choix. Par exemple, à la Phase de Mouvement, le joueur actif peut utiliser des aptitudes qui ont le timing Votre Phase de Mouvement ou N’importe Quelle Phase de Mouvement ."
+    },
+    {
+     "k": "p",
+     "x": "Lorsque le joueur actif a fini d’utiliser des aptitudes, son adversaire peut utiliser des aptitudes qui ont le timing “Phase (…) Adverse” ou “N’importe Quelle Phase (…)”, dans l’ordre de son choix."
+    }
+   ],
+   "subs": [
+    {
+     "num": "13.1",
+     "title": "APTITUDES DE CORPS À CORPS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Les aptitudes qui ont le mot-clé Corps à Corps obéissent à une séquence différente des autres. Lorsque les joueurs utilisent des aptitudes de Phase de Mêlée (voir 13.0), ils ne peuvent pas utiliser des aptitudes de Corps à Corps."
+      },
+      {
+       "k": "p",
+       "x": "Après que les joueurs ont fini d’utiliser des aptitudes de Phase de Mêlée qui ne sont pas des aptitudes de Corps à Corps, ils doivent choisir à tour de rôle 1 unité éligible pour qu’elle utilise une aptitude de Corps à Corps, en commençant par le joueur actif. Chaque unité qui est en mêlée doit utiliser une aptitude de Corps à Corps si elle le peut."
+      },
+      {
+       "k": "p",
+       "x": "Lorsqu’un joueur n’a plus d’unités éligibles pour utiliser une aptitude de Corps à Corps, l’autre joueur continue à choisir des unités éligibles pour utiliser une aptitude de Corps à Corps, l’une après l’autre, jusqu’à ce qu’il n’y ait plus d’unités éligibles pour utiliser une aptitude de Corps à Corps."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "num": "14.0",
+   "title": "APTITUDES DE BASE UNIVERSELLES",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Les aptitudes de Base suivantes peuvent être utilisées par n’importe quelle unité. Souvenez-vous que chaque unité peut utiliser 1 aptitude de Base par phase au maximum (voir 5.3)."
+    }
+   ],
+   "subs": [
+    {
+     "num": "14.1",
+     "title": "PHASE DE MOUVEMENT",
+     "blocks": [
+      {
+       "k": "ab",
+       "n": "MOUVEMENT NORMAL",
+       "flavor": "Les guerriers avancent sur le champ de bataille.",
+       "t": "Votre Phase de Mouvement",
+       "x": [
+        "Annonce : Choisissez une unité amie qui n’est pas en mêlée pour qu’elle utilise cette aptitude.",
+        "Effet: L’unité peut se déplacer d’une distance maximale égale à sa caractéristique de Mouvement. Elle ne peut entrer en mêlée à aucun moment de ce mouvement."
+       ]
+      },
+      {
+       "k": "ab",
+       "n": "COURSE",
+       "flavor": "L’unité court se mettre en position.",
+       "t": "Votre Phase de Mouvement",
+       "x": [
+        "Annonce : Choisissez une unité amie qui n’est pas en mêlée pour qu’elle utilise cette aptitude.",
+        "Effet : Faites un jet de course d’un D6. L’unité peut se déplacer d’une distance maximale égale à sa caractéristique de Mouvement additionnée au jet de course. Elle ne peut entrer en mêlée à aucun moment de ce mouvement.",
+        "Mots-clés : Base, Mouvement, Course"
+       ]
+      },
+      {
+       "k": "ab",
+       "n": "REPLI",
+       "flavor": "Les combattants se désengagent de la mêlée, au risque de diminuer leurs défenses.",
+       "t": "Votre Phase de Mouvement",
+       "x": [
+        "Annonce : Choisissez une unité amie qui est en mêlée pour qu’elle utilise cette aptitude.",
+        "Effet : Infligez D3 dégâts mortels à l’unité. L’unité peut se déplacer d’une distance maximale égale à sa caractéristique de Mouvement. Elle peut passer à portée de mêlée des unités ennemies au cours de ce mouvement, mais elle ne peut pas le finir à portée de mêlée des unités ennemies.",
+        "Mots-clés : Base, Mouvement, Repli"
+       ]
+      }
+     ]
+    },
+    {
+     "num": "14.2",
+     "title": "PHASE DE TIR",
+     "blocks": [
+      {
+       "k": "ab",
+       "n": "TIR",
+       "flavor": "Les guerriers visent et lâchent une volée.",
+       "t": "Votre Phase de Tir",
+       "x": [
+        "Annonce : Choisissez une unité amie qui n’a pas utilisé une aptitude de Course ni de Repli à ce tour pour qu’elle utilise cette aptitude. Puis choisissez une ou plusieurs unités ennemies comme cible(s) des attaques de l’unité (voir 16.0).",
+        "Effet : Résolvez les attaques de tir contre la/les unité(s) cible(s)."
+       ]
+      }
+     ]
+    },
+    {
+     "num": "14.3",
+     "title": "PHASE DE CHARGE",
+     "blocks": [
+      {
+       "k": "ab",
+       "n": "CHARGE",
+       "flavor": "En poussant un cri de guerre, les guerriers se ruent sur l’ennemi.",
+       "t": "Votre Phase de Charge",
+       "x": [
+        "Annonce : Choisissez une unité amie qui n’est pas en mêlée et qui n’a pas utilisé une aptitude de Course ni de Repli à ce tour pour qu’elle utilise cette aptitude. Puis faites un jet de charge de 2D6.",
+        "Effet : L’unité peut se déplacer d’une distance maximale égale au jet de charge. Elle peut passer à portée de mêlée des unités ennemies au cours de ce mouvement, et doit le finir à ½\" d’une unité ennemie visible. Si elle le fait, on dit de l’unité qui utilise cette aptitude qu’elle a chargé.",
+        "Mots-clés : Base, Mouvement, Charge"
+       ]
+      }
+     ]
+    },
+    {
+     "num": "14.4",
+     "title": "PHASE DE MÊLÉE",
+     "blocks": [
+      {
+       "k": "ab",
+       "n": "CORPS À CORPS",
+       "flavor": "Les guerriers sont engagés dans une mêlée fatale, et s’attaquent à leurs ennemis.",
+       "t": "N’importe Quelle Phase de Mêlée",
+       "x": [
+        "Annonce : Choisissez une unité amie qui est en mêlée ou qui a chargé à ce tour pour qu’elle utilise cette aptitude. Elle peut faire un mouvement d’engagement (voir 15.3). Puis, si elle est en mêlée, vous devez choisir une ou plusieurs unités ennemies"
+       ]
+      },
+      {
+       "k": "p",
+       "x": "comme cible(s) de ses attaques (voir 16.0)."
+      },
+      {
+       "k": "p",
+       "x": "Effet : Résolvez les attaques de mêlée contre la/les unité(s) cible(s)."
+      },
+      {
+       "k": "p",
+       "x": "Mots-clés Base, Attaque, Corps à Corps"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "num": "15.0",
+   "title": "MOUVEMENT",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Certaines aptitudes permettent à une unité de se déplacer. Lorsqu’une unité se déplace, chaque figurine de cette unité peut se déplacer, une par une, dans l’ordre choisi par le commandant de l’unité."
+    },
+    {
+     "k": "p",
+     "x": "Lorsqu’une figurine se déplace, elle peut pivoter et changer de direction aussi souvent que vous le souhaitez, mais aucune partie de son socle ne peut parcourir une distance totale dépassant le maximum autorisé par l’aptitude utilisée. Elle ne peut pas se déplacer au-delà du bord du champ de bataille ni à travers les autres figurines, et ne peut jamais finir un mouvement sur une autre figurine (y compris son socle, qui fait partie de la figurine)."
+    },
+    {
+     "k": "p",
+     "x": "On suppose que le socle d’une figurine reste parallèle au champ de bataille quand il se déplace. Si une figurine finit son mouvement sur une surface inégale, elle doit pouvoir tenir debout, avec son socle aussi parallèle au champ de bataille que possible (autrement dit, une figurine ne peut pas être allongée sur le champ de bataille ni appuyée contre un terrain pour l’empêcher de tomber)."
+    },
+    {
+     "k": "p",
+     "x": "Ce Prophète Gris utilise l’aptitude “Mouvement Normal” pour changer de position. Aucune partie de son mouvement ne peut passer à portée de mêlée des Libérators, le Prophète Gris doit donc rester en dehors de la zone en bleu."
+    }
+   ],
+   "subs": [
+    {
+     "num": "15.1",
+     "title": "COHÉSION",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Chaque fois qu’une unité est placée ou finit un mouvement, elle doit former un seul groupe. Une unité forme un groupe en cohésion si chaque figurine de l’unité est à portée de cohésion, mesurée horizontalement, d’au moins 1 autre figurine de la même unité (ignorez les différences de hauteur entre les deux figurines)."
+      },
+      {
+       "k": "p",
+       "x": "Pour la plupart des unités, la portée de cohésion est ½\"; d’autres unités (en particulier les grandes figurines avec des pièces en surplomb) ont une portée de cohésion plus longue, notée sur leur charte, pour faciliter le jeu. Lorsqu’une unité inclut au moins 7 figurines, elle forme un groupe en cohésion si chaque figurine de l’unité est à portée de cohésion d’au moins 2 autres figurines de la même unité."
+      },
+      {
+       "k": "p",
+       "x": "Si une unité ne peut pas finir un mouvement en un seul groupe en cohésion, ce mouvement ne peut pas être fait."
+      }
+     ]
+    },
+    {
+     "num": "15.2",
+     "title": "SE DÉPLACER SUR LE TERRAIN",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Lorsqu’une figurine se déplace, elle peut passer sur les éléments de terrain mais pas à travers. Une figurine peut être déplacée par-dessus les éléments de terrain d’une hauteur de 1\" ou moins comme s’ils n’étaient pas là. Une figurine peut être déplacée à la verticale pour escalader vers le haut ou le bas les éléments de terrain plus hauts que 1\", en comptant la distance verticale dans son mouvement. Une figurine ne peut pas finir un mouvement au milieu d’une escalade."
+      }
+     ]
+    },
+    {
+     "num": "15.2.1",
+     "title": "SAUTER",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Lorsqu’une figurine qui est sur un élément de terrain se déplace, elle peut sauter du bord de l’élément de terrain pour atterrir sur une partie inférieure du même ou d’un autre élément, ou sur le champ de bataille. Pour ce faire, vous devez suivre le parcours de la figurine jusqu’au bord de l’élément. Elle peut ensuite sauter de n’importe quelle distance, mais cela met immédiatement fià son mouvement. Une figurine ne peut pas finir un mouvement, quel qu’il soit, au milieu d’un saut – si elle ne peut pas finir le mouvement, il ne peut pas être fait."
+      },
+      {
+       "k": "p",
+       "x": "Quand une figurine se déplace sur du terrain, on suppose que son socle reste en contact avec l’élément de terrain et parallèle au champ de bataille. Elle peut escalader et sauter, mais un saut met fià son mouvement."
+      }
+     ]
+    },
+    {
+     "num": "15.3",
+     "title": "MOUVEMENTS D’ENGAGEMENT",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Certaines aptitudes, comme les aptitudes de Corps à Corps, permettent à une unité de faire un déplacement court, appelé mouvement d’engagement, pour engager l’ennemi au corps à corps. Pour ce faire :"
+      },
+      {
+       "k": "p",
+       "x": "Si votre unité est en mêlée : Choisissez une unité ennemie avec laquelle votre unité est en mêlée comme cible du mouvement d’engagement. Chaque figurine de votre unité peut se déplacer de 3\" maximum, peut traverser les portées de mêlée des unités ennemies, mais doit finir ce mouvement au moins aussi près de l’unité cible qu’au début du mouvement. À la fidu mouvement, votre unité doit encore être en mêlée avec toutes les unités avec lesquelles elle était en mêlée au début du mouvement."
+      },
+      {
+       "k": "p",
+       "x": "Si votre unité n’est pas en mêlée : Chaque figurine de votre unité peut se déplacer de 3\" dans n’importe quelle direction. Elle peut traverser les portées de mêlée et s’arrêter à portée de mêlée de n’importe quelles unités ennemies."
+      }
+     ]
+    },
+    {
+     "num": "15.4",
+     "title": "VOL",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Les unités qui ont le mot-clé Vol ont l’aptitude passive ci-dessous :"
+      },
+      {
+       "k": "ab",
+       "n": "VOL",
+       "flavor": "S’élevant au-dessus du champ de bataille, cette unité peut atteindre des destinations inaccessibles aux autres troupes.",
+       "t": "Passif",
+       "x": [
+        "Effet : Lorsque cette unité se déplace, elle ignore les autres figurines, les éléments de terrain et les portées de mêlée des unités ennemies. Elle ne peut pas finir ce mouvement en mêlée, sauf précision contraire. Ignorez la distance verticale parcourue par cette unité."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "num": "16.0",
+   "title": "CHOISIR LES CIBLES",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Lorsque vous annoncez une aptitude d’Attaque’A’ pour une unité, vous devez choisir la/les unité(s) cible(s) de ses attaques. Le nombre d’attaques que chaque figurine peut faire est égal à la caractéristique d’Attaques’A’ des armes qu’elle utilise. Dans la plupart des cas, les figurines attaquent avec toutes les armes de leur charte d’unité (les armes de mêlée pour les attaques de mêlée, les armes de tir pour les attaques de tir), mais certaines chartes précisent que certaines figurines de l’unité sont équipées d’armes spéciales ou que l’unité doit choisir dans une liste d’armes quand elle attaque."
+    },
+    {
+     "k": "p",
+     "x": "Si l’unité est en mêlée, elle peut seulement cibler les unités avec lesquelles elle est en mêlée. Si une figurine peut faire plusieurs attaques, vous pouvez les répartir entre plusieurs cibles éligibles, comme vous le souhaitez."
+    },
+    {
+     "k": "p",
+     "x": "• Les attaques de mêlée sont faites avec des armes de mêlée. La/les unité(s) cible(s) doit/doivent être à portée de mêlée et visible(s) de la figurine qui attaque. La figurine doit attaquer avec toutes les armes de mêlée dont elle est équipée."
+    },
+    {
+     "k": "p",
+     "x": "• Les attaques de tir sont faites avec des armes de tir. La/les unité(s) cible(s) doit/doivent être à une distance inférieure ou égale à la caractéristique de Portée de l’arme utilisée et visible(s) de la figurine attaquante. Les figurines ne peuvent pas faire des attaques de tir si leur unité est en mêlée, sauf indication contraire (voir 20.0 Aptitudes d’Arme)."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "17.0",
+   "title": "LA SÉQUENCE D’ATTAQUE",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Résolvez les étapes 1 à 4 ci-dessous pour chaque attaque faite contre une unité cible, une à une. Si vous avez choisi plusieurs unités cibles pour l’aptitude d’Attaque’A’, résolvez toutes les attaques ciblant une unité avant de passer à l’unité suivante, dans l’ordre de votre choix. Lorsque vous vous serez familiarisé avec la séquence d’attaque, lisez “Jets de Dés Rapides” (17.3) si vous voulez accélérer le jeu."
+    },
+    {
+     "k": "p",
+     "x": "1. Jet de Touche : Jetez un dé. Si le jet est supérieur ou égal à la caractéristique de Touche de l’arme utilisée, l’attaque cause une touche réussie; passez à l’étape suivante. Sinon, l’attaque rate et la séquence d’attaque s’arrête. Les jets de touche non modifiés de 1 ratent toujours. Si le jet de touche non modifi pour une attaque d’arme est un 6, l’attaque est une touche critique."
+    },
+    {
+     "k": "p",
+     "x": "2. Jet de Blessure : Jetez un dé. Si le jet est supérieur ou égal à la caractéristique de Blessure de l’arme, l’attaque cause une blessure réussie; passez à l’étape suivante. Sinon, l’attaque rate et la séquence d’attaque s’arrête. Les jets de blessure non modifiés de 1 ratent toujours."
+    },
+    {
+     "k": "p",
+     "x": "3. Jet de Sauvegarde : Le commandant de l’unité cible jette un dé, en soustrayant au jet la caractéristique de Perforation de l’arme utilisée. Les jets de sauvegarde non modifiés de 1 ratent toujours. Si le jet est supérieur ou égal à la caractéristique de Sauvegarde de l’unité cible, l’attaque rate et la séquence d’attaque s’arrête. Sinon, c’est une attaque réussie; passez à l’étape suivante."
+    },
+    {
+     "k": "p",
+     "x": "4. Déterminer les Dégâts : L’attaque inflige autant de dégâts à l’unité cible que la caractéristique de Dégâts de l’arme. Les dégâts infligés sont ajoutés à une réserve de dégâts temporaire pour l’unité cible."
+    },
+    {
+     "k": "p",
+     "x": "Une fois que vous avez appliqué ces étapes pour toutes les attaques faites dans le cadre de l’aptitude d’Attaque’A’, les attaques de l’aptitude sont résolues et vous pouvez passer à la séquence de dégâts (voir 18.0)."
+    }
+   ],
+   "subs": [
+    {
+     "num": "17.1",
+     "title": "MODIFICATEURS ET PLAFONDS D’ATTAQUE",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Les modificateurs des jets de touche, jets de blessure et jets de sauvegarde sont plafonnés afid’éviter des combinaisons d’aptitudes surchargées. Lorsque vous faites un jet de touche ou un jet de blessure, additionnez les modificateurs positifs et négatifs qui s’appliquent au jet, puis plafonnez le résultat à +1 maximum (s’il est positif) ou à -1 minimum (s’il est négatif)."
+      },
+      {
+       "k": "p",
+       "x": "Lorsque vous faites un jet de sauvegarde, additionnez tous les modificateurs positifs et négatifs qui s’appliquent au jet, puis plafonnez le résultat à +1 maximum. Notez que contrairement aux jets de touche et de blessure, il n’y a pas de plafond au montant pouvant être soustrait aux jets de sauvegarde."
+      }
+     ]
+    },
+    {
+     "num": "17.2",
+     "title": "DÉGÂTS MORTELS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Certaines aptitudes infligent des dégâts mortels. Si une aptitude inflige des dégâts mortels à une unité, ajoutez ces dégâts à la réserve de dégâts de l’unité pour cette aptitude (voir 18.2 Allouer des Dégâts)."
+      }
+     ]
+    },
+    {
+     "num": "17.3",
+     "title": "JETS DE DÉS RPIDES",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Pour accélérer le jeu, on peut souvent faire plusieurs attaques à la fois. Si vous le faites, toutes les attaques doivent avoir les mêmes caractéristiques de Touche, de Blessure, de Perforation et de Dégâts, les mêmes aptitudes d’arme (voir 20.0), et doivent cibler la même unité ennemie. Si c’est le cas, faites tous les jets de touche en même temps, puis tous les jets de blessure, et enfitous les jets de sauvegarde. Ensuite, additionnez tous les dégâts infligés à l’unité cible et passez à la séquence de dégâts (voir 18.0)."
+      },
+      {
+       "k": "p",
+       "x": "Si la séquence d’attaque s’arrête pour une attaque faite dans le cadre d’un jet de dés rapide, cela n’arrête pas la séquence d’attaque pour toutes les attaques, seulement pour cette attaque spécifique."
+      },
+      {
+       "k": "p",
+       "x": "La progression des Éternels de l’Orage met en rage une meute de Rats-ogors, qui lance une charge démente. Ces Skavens massifs veulent démembrer leurs adversaires avant qu’ils puissent déclencher une contre-attaque."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "num": "18.0",
+   "title": "LA SÉQUENCE DE DÉGÂTS",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Après avoir résolu l’effet des aptitudes qui infligent des dégâts à l’unité, suivez les étapes ci-dessous. Si l’aptitude a infligé des dégâts à plusieurs unités, suivez les étapes ci-dessous pour chacune de ces unités, une par une. Chaque commandant alloue les dégâts à ses propres unités, dans l’ordre de son choix, en commençant par le joueur actif."
+    },
+    {
+     "k": "p",
+     "x": "1. Résolvez les sauvegardes de protection pour tous les dégâts de la réserve de dégâts de l’unité cible, si c’est applicable (voir 17.0). 2. Allouez les dégâts de la réserve de dégâts de l’unité et retirez les figurines tuées (voir 18.3)."
+    }
+   ],
+   "subs": [
+    {
+     "num": "18.1",
+     "title": "SSAUVEGARDES DE PROTECTION",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Les unités qui ont le mot-clé Protection ont l’aptitude passive “Sauvegarde de Protection”. Le chiffre après le mot-clé Protection indique la valeur de Protection de la sauvegarde de protection. Par exemple, si une unité a une Protection (5+), sa valeur de Protection est 5. Si une unité a plusieurs sauvegardes de protection, on applique seulement celle qui a la valeur la plus basse ; les autres n’ont aucun effet."
+      },
+      {
+       "k": "ab",
+       "n": "SAUVEGARDE DE PROTECTION",
+       "flavor": "Grâce à des réflexes hors norme, une endurance surnaturelle, ou une source de protection mystique, ces guerriers peuvent se soustraire à des attaques fatales.",
+       "t": "Passif",
+       "x": [
+        "Effet : À l’étape 1 de la séquence de dégâts (voir 18.0), faites un jet de",
+        "Protection d’un D6 pour chaque dégât de la réserve de dégâts de l’unité. Si le jet est supérieur ou égal à la valeur de Protection de cette unité, retirez ce dégât de la réserve de dégâts."
+       ]
+      }
+     ]
+    },
+    {
+     "num": "18.2",
+     "title": "ALLOUER LES DÉGÂTS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Après avoir résolu l’effet d’une aptitude qui inflige des dégâts (au moyen d’attaques, de dégâts mortels, ou des deux), vous devez les allouer."
+      },
+      {
+       "k": "p",
+       "x": "Lorsque vous allouez des dégâts à une unité, les dégâts de sa réserve de dégâts sont alloués un par un. Chaque fois que le nombre de dégâts alloués à l’unité est égal à sa caractéristique de Santé, 1 figurine de l’unité est tuée (et retirée du jeu) et le nombre de dégâts alloués à l’unité est remis à zéro."
+      },
+      {
+       "k": "p",
+       "x": "Continuez d’allouer les dégâts jusqu’à ce qu’il n’y en ait plus dans la Si le nombre de dégâts alloués à l’unité ne suffi pas à tuer une figurine, tenez le compte des dégâts actuellement alloués à l’unité (la plupart des joueur mettent un dé ou des pions à côté de l’unité). Tant qu’une unité a des dégâts alloués, elle est endommagée."
+      }
+     ]
+    },
+    {
+     "num": "18.3",
+     "title": "FIGURINES TUÉES",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "C’est le commandant d’une unité qui choisit la/les figurine(s) de l’unité qui sont tuées. Toutefois, après que chaque figurine tuée a été retirée, l’unité doit former un groupe en cohésion (voir 15.1). Si ce n’est pas possible, continuez de retirer des figurines, une par une, jusqu’à ce que l’unité soit en cohésion."
+      },
+      {
+       "k": "p",
+       "x": "Vous devez retirer le moins de figurines possible pour que l’unité forme"
+      }
+     ]
+    },
+    {
+     "num": "18.4",
+     "title": "UNITÉS DÉTRUITES",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Lorsque la dernière figurine d’une unité est tuée, l’unité est détruite et tous les dégâts restants dans sa réserve de dégâts n’ont plus aucun effet. De même, si quelque chose détruit une unité, toutes les figurines de l’unité sont tuées et retirées du jeu."
+      },
+      {
+       "k": "p",
+       "x": "EXEMPLE D’ATTAQUE Les Éternels de l’Orage d’Erik affrontent les Skavens d’Emma lors d’une partie de Fer de Lance. Les Libérators d’Erik ont chargé (voir 14.3) ; à l’étape d’annonce de l’aptitude “Corps à Corps”, ils ont engagé le Griffarque d’Emma (voir 15.3) et l’ont ciblé avec toutes leurs attaques (voir 16.0). Dans cet exemple, nous allons utiliser les jets de dés Les 4 Libérators d’Erik équipés de Marteaux de Guerre attaquent en premier. Chacun d’eux peut faire 2 attaques (un Marteau de Guerre ayant une caractéristique d’A’Attaques de 2),2 et Erik doit faire des jets de touche supérieurs ou égaux à leur caractéristique de Touche de 3+. Les Libérators obtiennent 5 touches réussies sur 8 attaques."
+      },
+      {
+       "k": "p",
+       "x": "ARMES DE MÊLÉE Ataques Touche Blessure Perf. Dégâts Aptitude Marteau de Guerre 2 3+ 3+ 1 1 Crit (Mortel)"
+      },
+      {
+       "k": "p",
+       "x": "Eri fait ensuite un jet de blessure pour chacune des 5 touches réussies. Les Marteaux de Guerre ont une caractéristique de Blessure de 3+. Les Libérators obtiennent 3 blessures réussies."
+      },
+      {
+       "k": "p",
+       "x": "Emma fait un jet de sauvegarde pour chacune des 3 blessures réussies. Son Griffarque a une caractéristique de Sauvegarde de 4+, mais les Marteaux de Guerre ont une caractéristique de Perf. de 1. Emma doit donc soustraire 1 à chaque jet, ce qui veut dire qu’elle doit obtenir 5 ou plus."
+      },
+      {
+       "k": "p",
+       "x": "1 des 3 attaques est sauvegardée. 2 dégâts sont donc ajoutés à la réserve de dégâts du Griffarque (1 pour chaque Marteau de Guerre, cette arme ayant une caractéristique de Dégâts de 1)."
+      },
+      {
+       "k": "p",
+       "x": "Erik répète ce processus avec le dernier Libérator de l’unité, qui manie un Grand Marteau. Il cause 2 touches, dont une est un 6, donc une touche critique. Ce résultat déclenche l’aptitude d’arme Crit (Mortel) du Grand Marteau, qui inflige 2 dégâts mortels (voir 17.2), et qui ajoute donc directement 2 dégâts à la réserve de dégâts."
+      },
+      {
+       "k": "p",
+       "x": "Les jets de touche d’Erik Le jet de blessure d’Erik Erik fait ensuite un jet de blessure pour l’autre touche, qui donne une blessure réussie."
+      },
+      {
+       "k": "p",
+       "x": "ARMES DE MÊLÉE Ataques Touche Blessure Perf.f. Dégâts Aptitude Grand Marteau 2 3+ 3+ 1 2 Crit (Mortel)"
+      },
+      {
+       "k": "p",
+       "x": "Emma fait un jet de sauvegarde pour la blessure réussie, et doit à nouveau soustraire 1 au jet à cause de la caractéristique de Perforation de 1 du Grand Marteau. Malheureusement, son jet de sauvegarde est raté, ce qui a pour conséquence de rajouter 2 à la réserve de dégâts de son Griffarque, car le Grand Marteau a une caractéristique de Dégâts de 2."
+      },
+      {
+       "k": "p",
+       "x": "Les attaques des Libérators étant résolues, Emma doit passer à la séquence de dégâts."
+      },
+      {
+       "k": "p",
+       "x": "Le Griffarque est en danger, avec 6 dégâts dans la réserve de dégâts (et seulement 7 en Santé!). Heureusement, il a une Protection (6+), qui lui accorde une ultime chance d’éviter les dégâts. Emma fait un jet de protection pour chacun des 6 dégâts de la réserve de dégâts, et 2 de ces jets sont des 6, ce qui signifique 2 dégâts sont retirés de la réserve de dégâts."
+      },
+      {
+       "k": "p",
+       "x": "Les 4 dégâts restants sont alloués au Griffarque. Emma met un dé à côté du Griffarque pour tenir le compte des dégâts actuellement alloués à cette unité."
+      },
+      {
+       "k": "p",
+       "x": "Le Griffarque est endommagé – heureusement pour Emma, cela permet à son Griffarque d’utiliser son aptitude “Rat Coincé” pour exercer des représailles contre ces satanés Libérators…    RÈGLES SPÉCIALES"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "num": "19.0",
+   "title": "FRPPE EN PREMIER ET FRPPE EN DERNIER",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Si des unités ayant Frappe en Premier sont en mêlée après que les aptitudes de Phase de Mêlée autres que de Corps à Corps ont été utilisées, les autres unités ne peuvent pas être choisies pour utiliser une aptitude de Corps à Corps avant les unités qui ont Frappe en Premier. Après que toutes les unités qui ont Frappe en Premier ont combattu, le joueur actif choisit la prochaine unité qui se bat."
+    },
+    {
+     "k": "p",
+     "x": "Si des unités ayant Frappe en Dernier sont en mêlée, on ne peut pas les choisir pour utiliser une aptitude de Corps à Corps si des unités qui n’ont pas Frappe en Dernier sont en mêlée et n’ont pas utilisé une aptitude de Corps à Corps."
+    },
+    {
+     "k": "p",
+     "x": "Si une unité a Frappe en Premier et Frappe en Dernier, traitez-la comme si elle n’avait ni l’un ni l’autre."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "20.0",
+   "title": "APTITUDES D’ARME",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Certaines armes ont une ou plusieurs des aptitudes d’arme passives ci-dessous. Si une arme a plusieurs aptitudes d’arme qui sont déclenchées par une touche critique, le commandant de la figurine attaquante doit en choisir une seule avant le début de la séquence d’attaque."
+    },
+    {
+     "k": "p",
+     "x": "APTITUDES D’ARME UNIVERSELLES Anti-X (+1 Perf.) : Ajoutez 1 à la caractéristique de Perforation de cette arme si la cible a le mot-clé écrit après “Anti-“A“” ou remplit la condition écrite après “Anti-“A“”. Plusieurs aptitudes Anti-X (+1 Perf.) se cumulent. Par exemple, si une arme a Anti-charge (+1 Perf.) et Anti-Héros (+1 Perf.), ajoutez 2 à la caractéristique de Perforation de l’arme pour les attaques qui ciblent un Héros qui a chargé au même tour. Charge (+1 Dégât) : Ajoutez 1 à la caractéristique de Dégâts de cette arme si l’unité attaquante a chargé au même tour. Compagnon : Sauf indication contraire, cette arme n’est pas affectée par les aptitudes amies qui affectent les caractéristiques des armes ou la séquence d’attaque, hormis celles qui lui appliquent des modificateurs négatifs (ex : Tir de Couverture). Crit (2 Touches) : Si une attaque faite avec cette arme cause une touche critique, elle cause 2 touches à la cible au lieu de 1. Faites un jet de blessure pour chaque touche. Crit (Blessure Auto.) : Si une attaque faite avec cette arme cause une touche critiqueiti, ellell blesse automatiquementi la cible.ibl Faitesit un jet de sauvegarde normalement. Crit (Mortel) : Si une attaque faite avec cette arme cause une touche critique, elle inflige autant de dégâts mortels à l’unité cible que la caractéristique de Dégâts de l’arme et la séquence d’attaque s’arrête. Tir en Mêlée : Cette arme peut être utilisée pour les attaques de tir même si l’unité attaquante est en mêlée."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "21.0",
+   "title": "SOIGNER",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Certaines aptitudes vous permettent de soigner une unité. Pour ce faire, retirez autant de dégâts à l’unité que le nombre entre parenthèses après “Soin”, ex : Soin (2)."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "22.0",
+   "title": "RAMENER ET AJOUTER DES FIGURINES",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Certaines aptitudes vous permettent de ramener des figurines tuées dans une unité ou d’ajouter de nouvelles figurines à une unité. Dans les deux cas, placez les figurines, une par une, à portée de cohésion (voir 15.1) de la/des figurine(s) de l’unité qui n’a/ont pas été ramenée(s) ou ajoutée(s) au même tour. Si l’unité compte 7 figurines ou plus (y compris les figurines placées), elles doivent être placées à portée de cohésion d’au moins 2 autres figurines de l’unité qui n’ont pas été ramenées ou ajoutées au même tour. Les nouvelles figurines peuvent être placées en mêlée avec une unité ennemie seulement si leur unité était déjà en mêlée avec cette unité ennemie."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "23.0",
+   "title": "PIONS",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Les pions ne sont pas considérés comme des figurines et peuvent être ignorés ou déplacés pour des besoins de visibilité, de cohésion ou d’aptitudes. On ne peut pas les cibler avec des aptitudes. Ils servent à indiquer des effets persistants sur les unités à côté desquelles ils sont posés. Chaque fois qu’une unité qui a un pion finit un mouvement ou est placée, posez le pion à côté d’elle."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "24.0",
+   "title": "PLACER LES UNITÉS",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Certaines aptitudes vous permettent de placer une unité sur le champ de bataille. Lorsque vous le faites, vous devez placer toutes les figurines de l’unité. Si c’est impossible, vous ne pouvez pas utiliser l’aptitude. Une unité placée sur le champ de bataille à une phase autre que la phase de déploiement ne peut pas utiliser des aptitudes de Mouvement à la phase de mouvement du même tour."
+    }
+   ],
+   "subs": [
+    {
+     "num": "24.1",
+     "title": "UNITÉS DE RÉSERVE",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Certaines aptitudes vous permettent de placer des unités en réserve. Elles sont mises de côté au lieu d’être placées sur le champ de bataille. Au début du quatrième round de bataille, les unités qui ont été placées en réserve grâce à une aptitude de Déploiement et qui sont encore en réserve sont détruites."
+      }
+     ]
+    },
+    {
+     "num": "24.2",
+     "title": "UNITÉS DE REMPLACEMENT",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Certaines aptitudes vous permettent de placer une unité de remplacement. Lorsque vous le faites, elle doit avoir le même type de charte, les mêmes options d’arme(s) et le même nombre de figurines que l’unité originelle, sauf précision contraire. Beaucoup de ces aptitudes précisent la proportion de figurines de l’unité de remplacement. En pareil cas, vous pouvez choisir les figurines de l’unité originelle qui sont placées."
+      },
+      {
+       "k": "p",
+       "x": "Autrement, l’unité de remplacement est traitée comme une nouvelle unité: les mots-clés ou aptitudes que l’unité originelle a gagnés pendant la bataille, et les effets persistants qui s’appliquaient à elles, ne s’appliquent pas à l’unité de remplacement. Chaque unité ne peut être remplacée qu’une seule fois, et on ne peut pas remplacer une unité de remplacement."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "num": "25.0",
+   "title": "HÉROS GARDÉS",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Tous les Héros qui ne sont pas des Monstres ni des Machines de Guerre ont l’aptitude passive “Héros Gardé”:"
+    },
+    {
+     "k": "ab",
+     "n": "HÉROS GARDÉ",
+     "flavor": "Les guerriers serrent les rangs autour du chef pour le protéger.",
+     "t": "Passif",
+     "x": [
+      "Effet: Si ce Héros est à portée de mêlée d’une unité amie qui n’est pas un Héros: • Soustrayez 1 aux jets de touche pour les attaques de tir ciblant ce Héros. • Si ce Héros a le mot-clé Infanterie, il ne peut pas être ciblé par des attaques de tir faites par des figurines situées à plus de 12\" de lui."
+     ]
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "26.0",
+   "title": "CARCTÉRISTIQUES ALÉATOIRES",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Certaines chartes contiennent un jet de caractéristique au lieu d’une valeur fixe. En pareil cas, la valeur de la caractéristique est générée par le commandant de l’unité chaque fois qu’une aptitude a besoin de cette caractéristique."
+    },
+    {
+     "k": "p",
+     "x": "Dans le cas des caractéristiques d’arme aléatoires, générez une caractéristique d’Attaques’A’ aléatoire pour chaque figurine de l’unité attaquante chaque fois que vous annoncez une aptitude d’Attaque’A’, et générez une caractéristique de Dégâts aléatoire chaque fois que vous infligez des dégâts avec l’arme (faites un jet pour chaque attaque)."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "27.0",
+   "title": "ORDRE DES MODIFICATEURS",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Les effets de certaines aptitudes modifient une caractéristique ou un jet. Sauf indication contraire, une caractéristique ou un jet ne peut être modifi en dessous de 1. La Perforation est une exception, et peut être modifiée jusqu’à un minimum de 0 (“-”)."
+    },
+    {
+     "k": "p",
+     "x": "Si une caractéristique utilise un jet de caractéristique aléatoire (voir ci-dessus), appliquez les modificateurs de caractéristique après avoir généré la caractéristique."
+    },
+    {
+     "k": "p",
+     "x": "Si une caractéristique ou un jet est divisé par deux ou est modifien une valeur qui n’est pas un nombre entier, arrondissez à l’entier inférieur le plus proche."
+    },
+    {
+     "k": "p",
+     "x": "Appliquez les modificateurs de caractéristique dans l’ordre suivant :"
+    },
+    {
+     "k": "p",
+     "x": "1. Modificateurs qui fixent une caractéristique à une certaine valeur. 2. Modificateurs qui multiplient ou divisent une caractéristique. 3. Modificateurs qui ajoutent ou soustraient à une caractéristique."
+    },
+    {
+     "k": "p",
+     "x": "S’il y a plusieurs modificateurs du même type (ex : qui fixe une caractéristique), appliquez-les dans l’Ordre des Effets (voir 30.0)."
+    },
+    {
+     "k": "p",
+     "x": "Les effets de certaines aptitudes (ex : “Excès de Dépravation”) vous permettent de remplacer un jet par une valeur fixe. Dans ce cas, vous devez remplacer le jet avant de jeter le(s) dé(s)."
+    },
+    {
+     "k": "p",
+     "x": "La technologie des Skavens est notoirement imprévisible. Leurs armes alimentées par la malepierre sont tout aussi susceptibles de cracher une volée tonitruante que de faire long feu – quand elles n’explosent pas sans crier gare !"
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "28.0",
+   "title": "RÈGLES D’APTITUDES AVANCÉES",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "• Sauf indication contraire, les unités qui utilisent ou sont choisies dans le cadre d’une aptitude doivent être sur le champ de bataille. • Si un effet indique qu’une unité peut faire quelque chose, son commandant peut décider de résoudre cette partie de l’effet ou non. • Si un effet indique qu’une unité doit faire quelque chose, son commandant n’a pas le choix et doit résoudre cette partie de l’effet. Si c’est impossible, aucune partie de l’effet n’est appliquée, mais l’aptitude est quand même considérée comme ayant été utilisée. • Si une aptitude affecte plusieurs unités, le joueur qui utilise l’aptitude peut choisir l’ordre dans lequel elles sont affectées. • Lorsque vous résolvez un effet, si vous devez faire un jet pour plusieurs unités affectées, faites-le et résolvez l’effet pour une unité avant de passer à la suivante. • Si une aptitude vous demande de choisir plusieurs unités, vous devez choisir des unités différentes (sauf indication contraire)."
+    }
+   ],
+   "subs": [
+    {
+     "num": "28.1",
+     "title": "EFFETS PERSISTANTS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Certaines aptitudes ont des effets qu’on ne résout pas immédiatement (ex : “ajoutez 1 aux jets de sauvegarde pour cette unité jusqu’à la fidu tour” ou “cette unité a une Protection (5+) jusqu’à la fidu tour”). Ces effets comptent comme les effets des aptitudes passives (voir 5.4) le temps qu’ils durent."
+      }
+     ]
+    },
+    {
+     "num": "28.2",
+     "title": "TIMINGS “UNE FOIS PAR”",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Le timing de certaines aptitudes indique Une Fois Par Phase, Une Fois Par Tour ou Une Fois Par Bataille. Si l’aptitude est utilisée par une unité, elle peut être utilisée une seule fois à cette phase, ce tour ou cette bataille, par chaque unité qui peut l’utiliser. Si l’aptitude est utilisée par un joueur, il ne peut l’utiliser qu’une seule fois à ce timing."
+      },
+      {
+       "k": "p",
+       "x": "Certaines aptitudes utilisées par des unités indiquent Une Fois Par Phase (Armée), Une Fois Par Tour (Armée) ou Une Fois Par Bataille (Armée). On ne peut utiliser ces aptitudes qu’une fois à cette phase, ce tour ou cette bataille, quel que soit le nombre d’unités de l’armée qui peuvent les utiliser."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "num": "29.0",
+   "title": "RÈGLES CONTRDICTOIRES",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Lorsque plusieurs règles se contredisent, si une de ces règles indique qu’une chose ne peut pas faire quelque chose, elle l’emporte sur celles qui indiquent qu’elle peut ou doit faire cette chose, sauf si ces règles précisent explicitement qu’elles annulent la restriction de la première. Par exemple, l’aptitude “Mouvement Normal” indique qu’on ne peut pas entrer en mêlée pendant ce mouvement, mais l’aptitude “Vol” précise qu’on ignore les portées de mêlée des figurines ennemies au cours du mouvement. Hormis les cas ci-dessus, c’est l’effet de l’aptitude qui a été utilisée en dernier qui l’emporte."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "30.0",
+   "title": "ORDRE DES EFFETS",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "On considère que les effets des aptitudes passives ont été utilisés “en dernier” par rapport aux autres règles et aptitudes."
+    },
+    {
+     "k": "p",
+     "x": "On considère: • que les effets des aptitudes passives du joueur actif ont été utilisés en dernier par rapport aux effets des aptitudes passives de son adversaire, • que les aptitudes passives de l’adversaire ont été utilisées en dernier par rapport aux effets des aptitudes passives neutres (ex : les aptitudes passives d’un élément de terrain qui n’appartient à aucune armée de joueur)."
+    },
+    {
+     "k": "p",
+     "x": "C’est le joueur actif qui choisit l’ordre dans lequel les effets passifs neutres sont appliqués."
+    },
+    {
+     "k": "p",
+     "x": "Certaines aptitudes ont un effet retardé (ex : “chaque fois qu’une unité amie utilise une aptitude de Corps à Corps, une fois l’aptitude résolue, Soignez (D3) l’unité”). Si plusieurs de ces effets sont censés être résolus au même moment, le joueur actif résout les effets retardés de ses aptitudes en premier, dans l’ordre de son choix, puis son adversaire fait de même."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "31.0",
+   "title": "VUE D’ENSEMBLE DE LA FIN DU TOUR",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "À la fide chaque tour, suivez ces étapes :"
+    },
+    {
+     "k": "p",
+     "x": "1. Le joueur actif peut utiliser des aptitudes qui ont le timing Fin de Votre Tour ou Fin de N’importe Quel Tour , dans l’ordre de son choix, puis son adversaire peut utiliser des aptitudes qui ont le timing Fin du Tour Adverse ou Fin de N’importe Quel Tour , dans l’ordre de son choix. 2. Déterminez quel joueur contrôle chaque objectif (s’il y en a). 3. Le joueur actif marque les points de victoire indiqués dans le plan de bataille."
+    }
+   ],
+   "subs": []
+  },
+  {
+   "num": "32.0",
+   "title": "OBJECTIFS",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "Beaucoup de plans de bataille attribuent des points victoire pour le contrôle des objectifs, représentés par des pions d’objectif.f.f Sauf indication contraire, les pions d’objectif sont des ronds de 40 mm de diamètre. Les figurines peuvent se déplacer et finir un mouvement sur les pions d’objectif. Si un pion d’objectif est sur la limite entre des territoires, il est dans tous ces territoires mais n’est entièrement dans aucun d’eux. Les pions d’objectif ne bloquent pas la visibilité."
+    }
+   ],
+   "subs": [
+    {
+     "num": "32.1",
+     "title": "CONTESTER LES OBJECTIFS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Sauf indication contraire, si un objectif est à portée de mêlée d’une figurine, elle le conteste. Si une ou plusieurs figurines d’une unité contestent un objectif, leur unité le conteste."
+      },
+      {
+       "k": "p",
+       "x": "Une unité ne peut contester qu’un seul objectif au moment de déterminer le contrôle des objectifs (voir 32.2). Avant de déterminer le contrôle des objectifs, pour chacune de ses unités qui est en position de contester plusieurs objectifs, le joueur actif doit choisir l’objectif qu’elle conteste. Puis son adversaire fait de même."
+      },
+      {
+       "k": "p",
+       "x": "Note du Concepteur : Hormis la détermination du contrôle des objectifs, une unité peut contester plusieurs objectifs."
+      }
+     ]
+    },
+    {
+     "num": "32.2",
+     "title": "CONTRÔLE DES OBJECTIFS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Au début du premier round de bataille et à la fide chaque tour, appliquez cette séquence pour chaque objectif,f,f dans l’ordre choisi par le joueur actif :"
+      },
+      {
+       "k": "p",
+       "x": "1. En commençant par le joueur actif, chaque joueur détermine le score de contrôle de chacune de ses unités qui conteste l’objectif. Le score de contrôle d’une unité est la somme des caractéristiques de Contrôle des figurines de l’unité qui contestent l’objectif. Certaines aptitudes modifient le score de contrôle d’une unité, mais il ne peut pas être réduit à moins de 1. 2. Chaque joueur additionne les scores de contrôle de ses unités qui contestent l’objectif. Il obtient son score de contrôle d’armée pour cet objectif. 3. Les joueurs comparent leurs scores de contrôle d’armée pour cet objectif. Si le score d’un joueur est supérieur, il prend le contrôle de cet objectif. Une fois qu’un joueur a pris le contrôle d’un objectif, il reste sous son contrôle jusqu’à ce que son adversaire en prenne le contrôle."
+      }
+     ]
+    },
+    {
+     "num": "32.3",
+     "title": "CONTRÔLE DES ÉLÉMENTS DE TERRAIN",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Certains plans de bataille demandent de prendre le contrôle d’un élément de terrain. Les éléments de terrain sont contrôlés de la même manière que les objectifs mais ne restent pas sous votre contrôle si vos unités ne les contestent plus. Une unité peut contester 1 objectif et 1 élément de terrain à la fois."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "num": "33.0",
+   "title": "FIN DU ROUND DE BATAILLE",
+   "blocks": [
+    {
+     "k": "p",
+     "x": "À la fide chaque round de bataille, le joueur actif peut utiliser des aptitudes de Fin du Round de Bataille , puis son adversaire peut faire de même. Chaque plan de bataille précise le nombre de rounds de bataille à jouer. Une fois que vous avez joué le nombre de rounds de bataille indiqué par votre plan de bataille, la bataille est terminée, et c’est le moment de suivre les règles incluses dans le plan de bataille pour déterminer le vainqueur."
+    },
+    {
+     "k": "p",
+     "x": "Chaque section des Règles Avancées est conçue de manière modulaire pour permettre aux packs de bataille d’indiquer les Règles Avancées à appliquer. Ce livre contient les sections de Règles Avancées suivantes:"
+    },
+    {
+     "k": "p",
+     "x": "ORDRES (p. 29-30) Ces règles vous expliquent comment gagner des points d’ordre pour utiliser des ordres qui vous permettent de réagir à des aptitudes et d’interagir au tour de votre adversaire. Si vous n’utilisez pas les règles d’Ordres, ignorez les aptitudes affichant un symbole de point d’ordre au coin supérieur droit de leur encart."
+    },
+    {
+     "k": "p",
+     "x": "TERRAIN (p. 31-32) Ces règles détaillent la façon dont vos figurines interagissent avec les éléments de terrain, notamment la manière de se mettre à couvert ou de puiser de l’énergie dans des nexus ésotériques."
+    },
+    {
+     "k": "p",
+     "x": "MAGIE (p. 33-34) Si vous souhaitez manier des pouvoirs mystiques en incluant des Sorciers, des Prêtres et des manifestations dans vos batailles, reportez-vous au module de Magie."
+    },
+    {
+     "k": "p",
+     "x": "COMPOSITION D’ARMÉE (p. 35-38) Si vous êtes prêt à créer votre propre feuille d’armée et à la personnaliser avec des régiments, des formations de bataille et des optimisations, reportez-vous au module de Composition d’Armée."
+    },
+    {
+     "k": "p",
+     "x": "FIGURINES D’ÉTAT-MAJOR (p. 39) Dans ce module, vous trouverez des règles pour les figurines spéciales appelées champions, porteétendards et musiciens, qui peuvent faire partie de bon nombre d’unités de Warhammer Age of Sigmar."
+    },
+    {
+     "k": "p",
+     "x": "TACTIQUES DE BATAILLE (p. 40) Renforcez la dimension tactique de vos parties en incluant des objectifs secondaires appelés Tactiques de Bataille."
+    },
+    {
+     "k": "p",
+     "x": "CRÉEZ VOTRE PACK DE BATAILLE Il existe de nombreuses manières de jouer à Warhammer Age of Sigmar, depuis les packs de bataille Pour la Gloire, qui contiennent des batailles narratives liées par une campagne, aux packs de bataille de Fer de Lance et de Jeu Égal, où l’accent est mis sur l’équilibre et la compétition."
+    },
+    {
+     "k": "p",
+     "x": "En plus d’utiliser les packs de bataille officiels, nous vous encourageons à utiliser les règles de cette section comme une boîte à outils, en les combinant afin de concevoir votre propre pack ou plan de bataille pour jouer avec vos amis."
+    },
+    {
+     "k": "p",
+     "x": "Êtes-vous impatient à l’idée de déployer votre collection entière contre vos amis, ou de voir quel monstre atteindra la suprématie? Souhaitez vous concevoir vos propres plans de bataille et règles spéciales pour simplifier les choses et apprendre à l’un de vos proches à jouer? Ces règles vous fournissent un cadre qui rend tout cela possible."
+    },
+    {
+     "k": "p",
+     "x": "Voici quelques conseils pour vous lancer:"
+    },
+    {
+     "k": "p",
+     "x": "• Au lieu d’utiliser les Règles Avancées de la Composition d’Armée, créez une armée basée sur votre roman Black Library préféré ou sur un scénario de votre propre invention. Par exemple, comment 5 héros des Éternels de l’Orage vont-ils se comporter face à 2 énormes monstres du Chaos?"
+    },
+    {
+     "k": "p",
+     "x": "• Concevez votre propre plan de bataille en divisant votre champ de bataille en territoires adverses, en plaçant des objectifs et en inventant des péripéties. Amusez-vous et faites des expérimentations – pourquoi ne pas alterner le placement des objectifs au lieu d’avoir des emplacements fixes, ou créer deux petits champs de bataille reliés par des portes de royaume?"
+    },
+    {
+     "k": "p",
+     "x": "• Apprenez les Règles Avancées en introduisant les modules dans vos batailles un par un. Par exemple, commencez par vous familiariser avec les Ordres, puis ajoutez de la Magie dans vos parties, et enfin mélangez le tout pour surpasser votre adversaire et exécuter des Tactiques de Bataille."
+    },
+    {
+     "k": "p",
+     "x": "ORDRES • Les aptitudes qui ont un"
+    }
+   ],
+   "subs": []
+  }
+ ],
+ "adv": [
+  {
+   "name": "Ordres",
+   "sections": [
+    {
+     "num": "1.0",
+     "title": "VUE D’ENSEMBLE DES ORDRES",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Certaines aptitudes, appelées ordres, requièrent que vous dépensiez un ou plusieurs points d’ordre ( ) pour les utiliser. Toute aptitude qui a un coût en points d’ordre (indiqué en haut à droite de son encart) est un ordre."
+      }
+     ],
+     "subs": [
+      {
+       "num": "1.1",
+       "title": "GAGNER DES POINTS D’ORDRE",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Au début de chaque round de bataille, après avoir déterminé qui est l’outsider, chaque joueur gagne 4 points d’ordre. S’il y a un outsider, il reçoit 1 point d’ordre supplémentaire. À la fin du round de bataille, les points d’ordre des joueurs sont remis à 0 (les points inutilisés sont perdus)."
+        }
+       ]
+      },
+      {
+       "num": "1.2",
+       "title": "UTILISER DES ORDRES",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "On utilise les ordres d’une façon similaire aux autres aptitudes. Toutefois, chaque unité peut utiliser un seul ordre à chaque phase, chaque ordre peut être utilisé une seule fois par chaque armée à chaque phase, et on doit dépenser autant de points d’ordre que le coût indiqué pour utiliser un ordre."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "num": "2.0",
+     "title": "ORDRES DE PHASE DES HÉROS",
+     "blocks": [
+      {
+       "k": "ab",
+       "n": "RALLIEMENT",
+       "flavor": "Suite à un appel exaltant, les soldats blessés trouvent un second souffle et de nouvelles troupes viennent remplacer leurs camarades tombés.",
+       "t": "N’importe Quelle Phase des Héros",
+       "x": [
+        "Annonce: Choisissez une unité amie qui n’est pas en mêlée pour qu’elle utilise cette aptitude.",
+        "Effet: Faites 6 jets de ralliement d’un D6. Pour chaque jet de 4+, vous recevez 1 point de ralliement. Les points de ralliement peuvent être dépensés comme ceci:",
+        "• Pour chaque point de ralliement dépensé, Soin (1) pour l’unité. • Vous pouvez dépenser autant de points de ralliement que la caractéristique de Santé de l’unité pour ramener une figurine tuée dans l’unité."
+       ]
+      },
+      {
+       "k": "p",
+       "x": "Vous pouvez dépenser les points de ralliement selon n’importe quelle combinaison (Soigner et ramener). Les points non dépensés sont ensuite perdus."
+      },
+      {
+       "k": "ab",
+       "n": "INTERVENTION MAGIQUE",
+       "flavor": "Un guerrier initié aux arts mystiques prononce une incantation rapide pour perturber les plans adverses.",
+       "t": "Phase des Héros Adverse",
+       "x": [
+        "Annonce: Choisissez un Sorcier ou Prêtre ami pour qu’il utilise cette aptitude.",
+        "Effet: L’unité amie peut utiliser une aptitude de Sort ou de Prière comme si c’était votre phase des héros. Dans ce cas, soustrayez 1 aux jets de lancement ou de récitation faits dans le cadre de cette aptitude."
+       ]
+      }
+     ],
+     "subs": []
+    },
+    {
+     "num": "3.0",
+     "title": "ORDRES DE PHASE DE MOUVEMENT",
+     "blocks": [
+      {
+       "k": "ab",
+       "n": "REDÉPLOIEMENT",
+       "flavor": "Les guerriers se repositionnent en hâte en réponse aux mouvements ennemis.",
+       "t": "Phase de Mouvement Adverse",
+       "x": [
+        "Annonce: Choisissez une unité amie qui n’est pas en mêlée pour qu’elle utilise cette aptitude.",
+        "Effet: Toutes les figurines de l’unité peuvent se déplacer de D6\" maximum. Ce mouvement ne peut pas traverser ni se terminer à portée de mêlée d’une unité ennemie.",
+        "Mots-clés : Mouvement, Course"
+       ]
+      },
+      {
+       "k": "ab",
+       "n": "AU PAS DE COURSE",
+       "flavor": "Sur ordre de leur général, les guerriers courent vers une position clé du champ de bataille.",
+       "t": "Réaction: Vous avez annoncé une aptitude de Course 1",
+       "x": [
+        "Utilisé par: L’unité qui utilise l’aptitude de Course.",
+        "Effet: Ne faites pas un jet de course pour l’aptitude de Course. Au lieu de cela, ajoutez 6\" à la caractéristique de Mouvement de l’unité pour déterminer la distance que chaque figurine de l’unité peut parcourir dans le cadre de l’aptitude de Course."
+       ]
+      }
+     ],
+     "subs": []
+    },
+    {
+     "num": "4.0",
+     "title": "ORDRES DE PHASE DE TIR",
+     "blocks": [
+      {
+       "k": "ab",
+       "n": "TIR DE COUVERTURE",
+       "flavor": "Les guerriers lâchent une volée rapide sur une unité ennemie avant qu’elle lance sa charge.",
+       "t": "Phase de Tir Adverse 1",
+       "x": [
+        "Annonce: Choisissez une unité amie qui n’a pas utilisé une aptitude de Course et qui n’est pas en mêlée pour qu’elle utilise cette aptitude, puis choisissez comme cible l’unité ennemie la plus proche (de l’unité amie) qui peut être choisie comme cible d’attaques de tir. On ne peut pas choisir une Manifestation ni un élément de terrain de faction comme cible de cette aptitude.",
+        "Effet: Résolvez les attaques de tir de l’unité qui utilise cette aptitude, contre la cible. Vous devez soustraire 1 aux jets de touche pour ces attaques."
+       ]
+      }
+     ],
+     "subs": []
+    },
+    {
+     "num": "5.0",
+     "title": "ORDRES DE PHASE DE CHARGE",
+     "blocks": [
+      {
+       "k": "ab",
+       "n": "CONTRE-CHARGE",
+       "flavor": "Les guerriers sentent qu’une action décisive est nécessaire, et chargent pour endiguer l’avance de l’ennemi ou pour l’intercepter.",
+       "t": "Phase de Charge Adverse 2",
+       "x": [
+        "Annonce: Choisissez une unité amie qui n’est pas en mêlée pour qu’elle utilise cette aptitude.",
+        "Effet: Cette unité peut utiliser une aptitude de Charge comme si c’était votre phase de charge.",
+        "EN AVANT, VERS LA VICTOIRE: La charge de l’unité va faillir, quand un ordre vibrant lui redonne l’énergie nécessaire pour atteindre l’ennemi.",
+        "Utilisé par: L’unité qui utilise l’aptitude de Charge.",
+        "Effet: Vous pouvez relancer le jet de charge."
+       ]
+      }
+     ],
+     "subs": []
+    },
+    {
+     "num": "6.0",
+     "title": "ORDRES D’ATTAQUE (TIR ET MÊLÉE)",
+     "blocks": [
+      {
+       "k": "ab",
+       "n": "ATTAQUE EN RÈGLE",
+       "flavor": "Les guerriers se battent avec une vigueur frénétique.",
+       "t": "Réaction: Vous avez annoncé une aptitude d’Attaque 1",
+       "x": [
+        "Utilisée Par: L’unité qui utilise l’aptitude d’Attaque.",
+        "Effet: Ajoutez 1 aux jets de touche pour les attaques faites en utilisant l’aptitude d’Attaque. Ceci affecte aussi les armes qui ont l’aptitude d’arme Compagnon."
+       ]
+      }
+     ],
+     "subs": []
+    },
+    {
+     "num": "7.0",
+     "title": "ORDRES DÉFENSIFS",
+     "blocks": [
+      {
+       "k": "ab",
+       "n": "DÉFENSE EN RÈGLE",
+       "flavor": "Les soldats serrent les rangs pour repousser un assaut.",
+       "t": "Réaction: L’adversaire a annoncé une aptitude d’Attaque 1",
+       "x": [
+        "Utilisée Par: Une unité ciblée par l’aptitude d’Attaque.",
+        "Effet: Ajoutez 1 aux jets de sauvegarde pour l’unité à cette phase."
+       ]
+      }
+     ],
+     "subs": []
+    },
+    {
+     "num": "8.0",
+     "title": "ORDRES DE FIN DE TOUR",
+     "blocks": [
+      {
+       "k": "ab",
+       "n": "ENFONCEMENT",
+       "flavor": "Les guerriers exploitent leur nombre ou leur robustesse pour enfoncer un groupe d’ennemis plus faibles, laissant des corps brisés dans leur sillage.",
+       "t": "Fin de N’importe Quel Tour 1",
+       "x": [
+        "Annonce: Choisissez une unité amie qui a chargé à ce tour pour qu’elle utilise cette aptitude, puis vous devez choisir comme cible une unité ennemie qui est en mêlée avec elle. La cible doit avoir une caractéristique de Santé inférieure à celle de l’unité qui utilise cette aptitude.",
+        "Effet: Infligez D3 dégâts mortels à la cible. Puis l’unité qui utilise cette aptitude peut se déplacer d’une distance inférieure ou égale à sa caractéristique de Mouvement. Ce mouvement peut traverser et finir dans les portées de mêlée des unités ennemies avec lesquelles elle était en mêlée au début du mouvement, mais pas dans celles d’autres unités ennemies. Ce mouvement n’est pas obligé de finir en mêlée."
+       ]
+      }
+     ],
+     "subs": []
+    }
+   ]
+  },
+  {
+   "name": "Terrain",
+   "sections": [
+    {
+     "num": "1.0",
+     "title": "VUE D’ENSEMBLE DU TERRAIN",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Les éléments de terrain enrichissent le champ de bataille et proposent des défis tactiques. Le plan ou pack de bataille que vous utilisez explique comment placer le terrain."
+      }
+     ],
+     "subs": [
+      {
+       "num": "1.1",
+       "title": "“ENTIÈREMENT SUR” ET “DERRIÈRE” LE TERRAIN",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Une figurine est entièrement sur un élément de terrain si son socle est sur cet élément et si aucune partie de son socle ne dépasse le bord de l’élément. Une unité est entièrement sur un élément de terrain si chaque figurine de l’unité est entièrement sur cet élément."
+        },
+        {
+         "k": "p",
+         "x": "Lorsqu’une unité est ciblée par une attaque, elle est considérée comme étant derrière un élément de terrain s’il est impossible de tracer une ligne droite imaginaire entre une figurine de l’unité attaquante et une figurine de l’unité cible sans traverser l’élément de terrain. Ignorez les parties de l’élément de terrain se trouvant à portée de mêlée de l’unité attaquante pour déterminer si la cible est derrière l’élément."
+        }
+       ]
+      },
+      {
+       "num": "1.2",
+       "title": "APTITUDES DE TERRAIN UNIVERSELLES",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Chaque élément de terrain a une ou plusieurs des aptitudes passives ci-dessous:"
+        },
+        {
+         "k": "p",
+         "x": "Couvert: Soustrayez 1 aux jets de touche pour les attaques ciblant une unité qui est derrière ou entièrement sur cet élément de terrain, sauf si elle a chargé à ce tour, ou a le mot-clé Vol. Infranchissable: Les figurines ne peuvent pas se déplacer, être placées, ni finir un mouvement sur une partie de cet élément de terrain. Occultant: Une unité ne peut pas être ciblée par les attaques de tir des unités ennemies qui ne sont pas dans sa portée de mêlée si elle est derrière ou entièrement sur cet élément de terrain, sauf si elle a le mot-clé Vol. Site de Pouvoir: Les Héros à 3\" de cet élément de terrain peuvent utiliser l’aptitude “Activation de Site de Pouvoir” (voir ci-dessous). Instable: Les figurines peuvent se déplacer sur cet élément de terrain mais ne peuvent pas être placées ni finir tout type de mouvement sur des parties de cet élément plus hautes que 1\"."
+        },
+        {
+         "k": "ab",
+         "n": "ACTIVATION DE SITE DE POUVOIR",
+         "flavor": "Le héros puise dans l’énergie d’un monument mythique.",
+         "t": "Début de N’importe Quel Tour",
+         "x": [
+          "Annonce: Choisissez un Héros ami à 3\" d’un ou plusieurs Sites de Pouvoir pour qu’il utilise cette aptitude.",
+          "Effet: Jetez un dé. Sur 1, infligez D3 dégâts mortels à ce Héros. Sur 2+:",
+          "• Si ce Héros est un Sorcier ou un Prêtre, Ajoutez 1 aux jets de lancement et aux jets de récitation pour ce Héros à ce tour. • Si ce Héros n’est pas un Sorcier ni un Prêtre, il peut utiliser l’aptitude “Dissipation” ou “Bannir une Manifestation” à ce tour, comme s’il avait le mot-clé Sorcier (1)."
+         ]
+        }
+       ]
+      },
+      {
+       "num": "1.3",
+       "title": "TAILLES DE TERRAIN",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "• Un élément de terrain qui tient sur une surface inférieure ou égale à 7\" × 7\" est petit. • Un élément de terrain qui tient sur une surface inférieure ou égale à 7\" × 12\" est moyen. • Un élément de terrain qui dépasse une surface de 7\" × 12\" est grand."
+        }
+       ]
+      },
+      {
+       "num": "1.4",
+       "title": "TYPES DE TERRAIN",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Chaque élément de terrain de Warhammer Age of Sigmar appartient à l’un des types suivants:"
+        },
+        {
+         "k": "p",
+         "x": "Avant le début de la bataille, les joueurs doivent s’accorder sur le type de terrain qui s’applique à chaque élément de terrain."
+        }
+       ]
+      },
+      {
+       "num": "1.4.1",
+       "title": "OBSTACLES",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Exemples: Ruines, débris, statues, barricades Aptitudes de Terrain: Couvert, Instable"
+        }
+       ]
+      },
+      {
+       "num": "1.4.2",
+       "title": "TERRAIN OCCULTANT",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Exemples: Bois Sauvage, mur de forteresse Aptitudes de Terrain: Couvert, Occultant, Instable"
+        }
+       ]
+      },
+      {
+       "num": "1.4.3",
+       "title": "ZONES DE TERRAIN",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Exemples: Collines, Crypte de l’Orage Aptitudes de Terrain: Couvert"
+        }
+       ]
+      },
+      {
+       "num": "1.4.4",
+       "title": "SITES DE POUVOIR",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Exemples: Porte de Royaume, Aqualithe Purificateur, Siphon du Nexus Aptitudes de Terrain: Couvert, Site de Pouvoir, Instable"
+        }
+       ]
+      },
+      {
+       "num": "1.5",
+       "title": "TERRAIN DE FACTION",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Certaines factions ont des éléments de terrain spéciaux appelés éléments de terrain de faction, qui ont leurs propres chartes. Ils ne sont pas considérés comme des unités, avec les exceptions suivantes: • À la phase de mêlée, ils sont traités comme des unités pour les besoins du mouvement, de la portée de mêlée et être en mêlée ou non. Les unités peuvent finir un mouvement de charge à 1/2\" d’un élément de terrain de faction ennemi comme si c’était une unité. • Ils peuvent être choisis comme cibles des aptitudes ennemies comme si c’étaient des unités. Ils ne sont pas affectés par les aptitudes ennemies qui demandent de choisir des cibles. • On peut leur infliger des dégâts comme si c’étaient des unités et ils peuvent être détruits. • Si un élément de terrain a des armes de mêlée ou de tir, il peut utiliser les aptitudes de Base Tir et Corps à Corps comme si c’était une unité. • Les éléments de terrain qui ont une caractéristique de Mouvement de 0” (“-”) ne peuvent pas se déplacer (notez que les mouvements d’engagement sont un type de mouvement)."
+        },
+        {
+         "k": "p",
+         "x": "Certains éléments de terrain de faction vous permettent d’y placer une unité (les règles de l’élément de terrain l’indiquent clairement). Dans ce cas, au lieu de mesurer la portée ou la visibilité depuis et vers l’unité qui est sur l’élément de terrain, mesurez depuis et vers l’élément de terrain. Sauf indication contraire, les unités qui se trouvent sur un élément de terrain de faction ne peuvent pas utiliser des aptitudes de Corps à Corps."
+        },
+        {
+         "k": "p",
+         "x": "Si une unité placée sur un élément de terrain en est retirée (par une aptitude qui la retire du champ de bataille, par exemple), elle compte comme ayant quitté cet élément de terrain et perd tout avantage ou rôle spécial qu’elle avait en étant placée dessus."
+        }
+       ]
+      },
+      {
+       "num": "1.6",
+       "title": "CHARGER LES UNITÉS SUR DU TERRAIN",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Dans certains cas, il est impossible d’atteindre une unité ennemie en utilisant une aptitude de Charge si elle est entièrement sur un élément de terrain (ex: une unité au sommet d’une tour) car l’unité qui charge ne peut pas finir son mouvement à mi-hauteur de l’élément de terrain et il n’y a pas assez de place pour les figurines au sommet. En pareil cas, l’unité qui charge peut finir sa charge à ½\" de l’élément de terrain si cela lui permet de finir son mouvement en étant en mêlée avec une ou plusieurs des unités ennemies qui sont entièrement sur l’élément de terrain."
+        }
+       ]
+      },
+      {
+       "num": "1.7",
+       "title": "PIÈCES DE DÉCOR",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Certains éléments de terrain, comme les bois sauvages ou les amas de petites ruines érodées, sont composés de plusieurs pièces de décor. Les pièces de décor qui font partie du même élément de terrain doivent être placées de sorte qu’elles tiennent toutes dans la zone qui correspond à la taille de l’élément de terrain (voir 1.3). On considère que le groupe complet des pièces forme un seul élément de terrain."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Magie",
+   "sections": [
+    {
+     "num": "1.0",
+     "title": "SORCIERS ET PRÊTRES",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Les Sorciers sont des unités spéciales qui peuvent lancer des sorts, et les Prêtres sont des unités spéciales qui peuvent réciter des prières. Les sorts et les prières sont de puissantes aptitudes qui peuvent avoir un impact considérable sur la bataille."
+      }
+     ],
+     "subs": [
+      {
+       "num": "1.1",
+       "title": "NIVEAU DE PUISSANCE",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Chaque Sorcier et Prêtre a un niveau de puissance, indiqué entre parenthèses après le mot-clé, ex: Sorcier (2). Le niveau de puissance d’un Sorcier ou d’un Prêtre détermine le nombre d’aptitudes de Sort, de Prière ou de Bannissement qu’il peut utiliser à chaque phase, selon n’importe quelle combinaison. Par exemple, une unité Sorcier (2) peut utiliser 1 Sort et 1 aptitude de Bannissement à la phase des héros de son commandant."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "num": "2.0",
+     "title": "SORTS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "L’étape d’annonce de chaque sort vous demande de faire un jet de lancement de 2D6. Si le jet n’est pas supérieur ou égal à la valeur de lancement du sort (indiquée en haut à droite de l’encart du sort), le sort rate et son effet n’est pas résolu."
+      },
+      {
+       "k": "p",
+       "x": "Si le jet de lancement non modifié inclut au moins 2 jets de 1, le sort est un fiasco: le sort rate, son effet n’est pas résolu, D3 dégâts mortels sont infligés au Sorcier qui l’a utilisé, et il ne peut plus utiliser des sorts à cette phase."
+      },
+      {
+       "k": "p",
+       "x": "On peut utiliser des réactions ennemies seulement si le jet de lancement est supérieur ou égal à la valeur de lancement du sort. À condition que le sort ne soit pas dissipé (voir 4.0), il est lancé avec succès: résolvez son effet."
+      }
+     ],
+     "subs": []
+    },
+    {
+     "num": "3.0",
+     "title": "PRIÈRES",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "L’étape d’annonce de chaque prière vous demande de faire un jet de récitation d’un D6. Si le jet de récitation non modifié est 1, la prière rate, son effet n’est pas résolu et vous devez retirer D3 points de rituel au Prêtre qui utilise la prière."
+      },
+      {
+       "k": "p",
+       "x": "Sur un jet de récitation non modifié de 2 ou plus, choisissez une des choses suivantes:"
+      },
+      {
+       "k": "p",
+       "x": "• Donnez autant de points de rituel au Prêtre que le jet de récitation (les points de rituel peuvent être accumulés sur plusieurs tours). • Ajoutez les points de rituel du Prêtre au jet de récitation. Si le total est supérieur ou égal à la valeur de récitation de la prière (indiquée en haut à droite de l’encart de la prière), elle est exaucée: résolvez son effet, puis remettez le total de points de rituel du Prêtre à 0."
+      }
+     ],
+     "subs": []
+    },
+    {
+     "num": "4.0",
+     "title": "DISSIPER LES SORTS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Chaque Sorcier peut utiliser la réaction “Dissipation” autant de fois à chaque phase que son niveau de puissance. Ceci est une exception aux Règles de Un (Règles de Base, 5.3)."
+      },
+      {
+       "k": "ab",
+       "n": "DISSIPATION",
+       "flavor": "Le sorcier sape l’énergie d’un sortilège de l’ennemi, ce qui annule ses effets.",
+       "t": "Réaction: L’adversaire a annoncé une aptitude de Sort",
+       "x": [
+        "Utilisée par: Un Sorcier ami à 30\" du Sorcier ennemi qui lance le sort.",
+        "Effet: Faites un jet de dissipation de 2D6. Si le jet est supérieur au jet de lancement pour le sort, il est dissipé et son effet n’est pas résolu. Cette réaction ne peut pas être utilisée plus d’une fois pour chaque jet de lancement."
+       ]
+      }
+     ],
+     "subs": []
+    },
+    {
+     "num": "5.0",
+     "title": "MAGES JALOUX ET DIEUX CAPRICIEUX",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Chaque sort ne peut être lancé qu’une seule fois par tour et par un seul Sorcier ami, sauf si le sort a le mot-clé Illimité. De même, chaque prière ne peut être récitée qu’une seule fois par tour et par un seul Prêtre ami, sauf si la prière a le mot-clé Illimité. Souvenez-vous que chaque unité ne peut utiliser une aptitude de sort ou de prière donnée qu’une seule fois par phase (voir les Règles de Un, Règles de Base, 5.3)."
+      }
+     ],
+     "subs": []
+    },
+    {
+     "num": "6.0",
+     "title": "SORTS ET PRIÈRES CONNUS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Les Sorciers et les Prêtres peuvent seulement utiliser les sorts ou les prières qu’ils connaissent. Chaque Sorcier ou Prêtre connaît les sorts ou prières qui figurent sur sa charte, plus tous les sorts et prières des domaines de sorts, domaines de manifestations et domaines de prières que vous sélectionnez pour votre armée (voir le module de Composition d’Armée)."
+      }
+     ],
+     "subs": []
+    },
+    {
+     "num": "7.0",
+     "title": "MANIFESTATIONS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Il y a deux types de manifestations: les sorts persistants, pouvant être convoqués par les Sorciers, et les invocations, pouvant être convoquées par les Prêtres. Chaque manifestation a sa propre charte, et le sort ou la prière qui permet de la convoquer se trouve dans le domaine de manifestations approprié. Chaque manifestation ne peut être convoquée qu’une seule fois par tour et par 1 seul Sorcier ou Prêtre ami, et aucun Sorcier ou Prêtre ami ne peut tenter de convoquer une manifestation amie qui a été retirée du jeu au même tour. Les manifestations ne sont pas considérées comme des unités, avec les exceptions suivantes:"
+      },
+      {
+       "k": "p",
+       "x": "• Elles sont traitées comme des unités pour les besoins du mouvement, de la portée de mêlée, être en mêlée ou non, et placer d’autres unités. Les unités peuvent finir un mouvement de charge à 1/2\" d’une manifestation ennemie comme si c’était une unité. • Si elles ont des armes de mêlée ou de tir, elles peuvent utiliser les aptitudes de Base “Corps à Corps” et “Tir” comme si c’étaient des unités. • Si elles ont une caractéristique de Mouvement supérieure à 0\", elles peuvent utiliser les aptitudes de Base de Mouvement comme si c’étaient des unités. • Elles peuvent être choisies comme cibles des aptitudes ennemies comme si c’étaient des unités. Elles ne sont pas affectées par les aptitudes ennemies qui demandent de choisir des cibles. • On peut leur infliger des dégâts comme si c’étaient des unités et elles peuvent être détruites. • Les manifestations qui ont une caractéristique de Mouvement de 0” (“-”) ne peuvent pas se déplacer. Pour les besoins du mouve-ment, de la portée de mêlée, être en mêlée ou non, et placer d’autres unités, elles sont traitées comme des unités seulement à la phase de mêlée. Les unités peuvent finir un mouvement de charge à ½\" d’une manifestation ennemie qui a une caractéristique de Mouvement de 0\" (“-”) au lieu de ½” d’une unité ennemie. • Les figurines peuvent se déplacer au travers des manifestations mais ne peuvent pas finir un mouvement sur elles."
+      }
+     ],
+     "subs": [
+      {
+       "num": "7.1",
+       "title": "LIEN COUPÉ",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Si le Sorcier ou le Prêtre qui a convoqué une manifestation est tué, la manifestation est retirée du champ de bataille."
+        }
+       ]
+      },
+      {
+       "num": "7.2",
+       "title": "BANNIR LES MANIFESTATIONS",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Tous les Sorciers et les Prêtres peuvent utiliser cette aptitude:"
+        },
+        {
+         "k": "ab",
+         "n": "BANNIR UNE MANIFESTATION",
+         "flavor": "Annonce: Choisissez un Sorcier ou Prêtre ami pour qu’il utilise cette aptitude, et choisissez comme cible une manifestation à 30\" de lui, puis faites un jet de bannissement de 2D6. Ajoutez 1 au jet de bannissement pour chaque manifestation ennemie supplémentaire sur le champ de bataille au-delà de la première.",
+         "t": "Votre Phase des Héros",
+         "x": [
+          "Effet: Si le jet de bannissement est supérieur ou égal à la valeur de bannissement indiquée sur la charte de la manifestation, elle est bannie et retirée du jeu. Vous ne pouvez pas choisir la même manifestation comme cible de cette aptitude plus d’une fois par tour.",
+          "COMPOSITION D’ARMÉE"
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Construction d'armée",
+   "sections": [
+    {
+     "num": "1.0",
+     "title": "POUR DÉBUTER",
+     "blocks": [],
+     "subs": [
+      {
+       "num": "1.1",
+       "title": "FEUILLE D’ARMÉE",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Ces règles expliquent comment remplir une feuille d’armée pour se préparer à la bataille. Vous pouvez vous rendre sur warhammer-community.com pour télécharger une version imprimable."
+        }
+       ]
+      },
+      {
+       "num": "1.2",
+       "title": "LIMITE DE POINTS",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Avant de remplir votre feuille d’armée, vous devez vous accorder avec votre adversaire sur une limite de points pour la bataille. Vous pouvez vous accorder sur n’importe quelle limite de points, mais la plupart des joueurs utilisent une limite de 1000 points, 2000 points, ou une limite intermédiaire. Vous ne pouvez pas dépenser plus de la moitié de vos points pour une seule unité."
+        }
+       ]
+      },
+      {
+       "num": "1.2.1",
+       "title": "POINTS NON DÉPENSÉS",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Souvent le coût total en points des unités de votre armée n’atteindra pas exactement la limite de points, sans qu’il vous reste assez de points pour ajouter une nouvelle unité. Si le coût en points de votre armée est inférieur d’au moins 50 points à la limite de points de la bataille, vous gagnez 1 point d’ordre supplémentaire au début du premier round de bataille."
+        }
+       ]
+      },
+      {
+       "num": "1.3",
+       "title": "PROFILS DE BATAILLE",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Les informations dont vous aurez besoin pour remplir votre feuille d’armée se trouvent dans le profil de bataille de chaque unité. Les profils de bataille de chaque unité sont disponibles sur warhammer-community.com."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "num": "2.0",
+     "title": "FACTIONS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "La première chose à faire lorsque vous remplissez votre feuille d’armée est de choisir votre faction (ex: Éternels de l’Orage, Skavens)."
+      },
+      {
+       "k": "p",
+       "x": "Chaque faction a ses propres chartes, profils de bataille et règles de faction. On les trouve dans différentes publications, mais le plus souvent dans le tome de bataille de la faction concernée."
+      }
+     ],
+     "subs": [
+      {
+       "num": "2.1",
+       "title": "FORMATIONS DE BATAILLE",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "De nombreuses factions contiennent des formations de bataille. Chaque formation de bataille confère des avantages uniques à votre armée. Les règles de faction de votre faction détaillent vos options de formations de bataille."
+        }
+       ]
+      },
+      {
+       "num": "2.2",
+       "title": "ARMÉES DE RENOM",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Certaines factions ont accès à des règles pour des armées thématiques appelées Armées de Renom. Si vous décidez d’utiliser une Armée de Renom, les règles de cette armée remplacent les règles de faction normales."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "num": "3.0",
+     "title": "SÉLECTIONNER DES UNITÉS",
+     "blocks": [],
+     "subs": [
+      {
+       "num": "3.1",
+       "title": "RÉGIMENTS",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Les armées sont composées d’un ou plusieurs régiments, chacun dirigé par un Héros. Vous devez avoir au moins 1 régiment dans votre armée, et vous pouvez sélectionner un maximum de 5 régiments. Pour sélectionner un régiment, choisissez 1 Héros de votre faction, puis choisissez jusqu’à 3 unités qui ne sont pas des Héros pour l’accompagner."
+        },
+        {
+         "k": "p",
+         "x": "Le profil de bataille de chaque Héros indique les unités qui peuvent être ajoutées à son régiment, et le profil de bataille de chaque unité n’étant pas un Héros liste les mots-clés permettant de les ajouter. Le profil de bataille de certains Héros (comme les personnages nommés) indiquent qu’ils peuvent être ajoutés au régiment d’un autre Héros."
+        }
+       ]
+      },
+      {
+       "num": "3.2",
+       "title": "LE GÉNÉRAL",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Vous devez choisir 1 Héros de votre armée qui mène un régiment pour qu’il soit votre général. Si une ou plusieurs unités de votre armée ont le mot-clé Maître de Guerre, vous devez choisir une de ces unités pour qu’elle soit votre général. Le régiment de votre géné-ral peut inclure jusqu’à 4 unités qui ne sont pas des Héros pour l’accompagner."
+        }
+       ]
+      },
+      {
+       "num": "3.3",
+       "title": "UNITÉS RENFORCÉES",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Lorsque vous ajoutez une unité à votre feuille d’armée, vous pouvez la sélectionner en tant qu’unité renforcée. Une unité renforcée a le double de figurines de sa taille d’unité minimum et coûte le double en points. Si une unité a une taille minimum de 1, elle ne peut pas être renforcée."
+        }
+       ]
+      },
+      {
+       "num": "3.4",
+       "title": "UNITÉS UNIQUES",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Vous ne pouvez pas sélectionner plusieurs fois la même unité Unique. Les unités Uniques ne peuvent pas être renforcées."
+        }
+       ]
+      },
+      {
+       "num": "3.5",
+       "title": "RÉGIMENTS DE RENOM",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "En plus de la création de vos propres régiments, vous pouvez dépenser des points pour sélectionner 1 Régiment de Renom. Ce sont des régiments “préfabriqués”, et chacun d’eux a ses propres aptitudes spéciales. Les règles de chaque Régiment de Renom indiquent les factions qui peuvent le sélectionner. Une unité d’un Régiment de Renom ne peut pas être votre général même si c’est un Maître de Guerre."
+        },
+        {
+         "k": "p",
+         "x": "• Vous ne pouvez pas inclure plus de 1 Régiment de Renom dans votre armée, sauf indication contraire dans la colonne des notes du profil de ce régiment."
+        },
+        {
+         "k": "p",
+         "x": "• Les unités d’un Régiment de Renom ne peuvent pas utiliser les règles de faction de la faction à laquelle elles sont alliées (mais peuvent en être la cible, si elles sont éligibles), y compris les domaines et les optimisations, sauf si elles ont le mot-clé de cette faction."
+        },
+        {
+         "k": "p",
+         "x": "• Si une aptitude vous permet de placer une unité de remplacement (Règles de Base, 24.2) pour une unité d’un Régiment de Renom, elle compte comme faisant partie du Régiment de Renom."
+        },
+        {
+         "k": "p",
+         "x": "Vous pouvez choisir 1 domaine de manifestations auquel votre faction a accès. Si vous le faites, tous les Sorciers de votre armée connaissent tous les sorts de ce domaine, et tous vos Prêtres en connaissent toutes les prières."
+        }
+       ]
+      },
+      {
+       "num": "3.6",
+       "title": "UNITÉS AUXILIAIRES",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Les unités auxiliaires vous permettent de sélectionner des unités de votre faction sans les contraintes des régiments, mais au risque de donner un avantage à votre adversaire. Vous pouvez ajouter n’importe quel nombre d’unités dans la section des unités auxiliaires de votre feuille d’armée. Toutefois, le joueur qui a le moins d’unités auxiliaires sur sa feuille d’armée gagne 1 point d’ordre supplémentaire au début de chaque round de bataille (si les joueurs ont autant d’unités auxiliaires, aucun d’eux ne reçoit ce point d’ordre supplémentaire). Les Héros qui ont des choix de régiment obligatoires ne peuvent pas être sélectionnés en tant qu’unités auxiliaires."
+        }
+       ]
+      },
+      {
+       "num": "3.7",
+       "title": "ÉLÉMENTS DE TERRAIN DE FACTION",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Si votre faction a un élément de terrain de faction, ou un ensemble d’éléments de terrain de faction, vous pouvez en ajouter 1 à votre feuille d’armée. Les éléments de terrain de faction ne coûtent pas de points."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "num": "4.0",
+     "title": "TOUCHES FINALES 4.1 OPTIMISATIONS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Toutes les règles de faction incluent des optimisations pouvant être données aux unités, comme les traits héroïques, les traits de monture et les artéfacts de pouvoir."
+      },
+      {
+       "k": "p",
+       "x": "Vous pouvez prendre 1 optimisation de chaque tableau d’optimisations de vos règles de faction. Chaque tableau liste les unités pouvant recevoir l’optimisation. Les unités Uniques ne peuvent pas recevoir des optimisations."
+      },
+      {
+       "k": "p",
+       "x": "Si certaines aptitudes vous permettent de prendre des optimisations supplémen-taires, une unité ne peut jamais avoir plusieurs optimisations du même type, et votre armée ne peut jamais inclure plusieurs fois la même optimisation."
+      }
+     ],
+     "subs": [
+      {
+       "num": "4.2",
+       "title": "DOMAINES",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Vous pouvez choisir 1 domaine de sorts auquel votre faction a accès. Si vous le faites, tous les Sorciers de votre armée connaissent tous les sorts de ce domaine."
+        },
+        {
+         "k": "p",
+         "x": "Vous pouvez choisir 1 domaine de prières auquel votre faction a accès. Si vous le faites, tous les Prêtres de votre armée connaissent toutes les prières de ce domaine."
+        },
+        {
+         "k": "p",
+         "x": "VUE D’ENSEMBLE DE LA COMPOSITION D’ARMÉE Ces pages présentent une vue d’ensemble de la création d’une feuille d’armée. Vous aurez besoin d’une feuille d’armée vierge, que vous pouvez télécharger sur warhammer-community.com. Les pages 35-36 abordent ces étapes plus en détail."
+        },
+        {
+         "k": "p",
+         "x": "1. S’ACCORDER SUR LA LIMITE DE POINTS"
+        },
+        {
+         "k": "p",
+         "x": "2. CHOISIR LA FACTION ET LA FORMATION"
+        },
+        {
+         "k": "p",
+         "x": "3. FORMER LES RÉGIMENTS Général 3 Prosécutors 5 Vindictors 1-5 RÉGIMENTS PAR ARMÉE 1 Héros doit être votre général Renforcer: Doublez le coût en points et la taille d’unité"
+        },
+        {
+         "k": "p",
+         "x": "4. AJOUTER DES UNITÉS AUXILIAIRES ET UN TERRAIN DE FACTION Ajoutez des unités supplémentaires de votre faction en tant qu’unités auxiliaires Si votre adversaire a plus d’unités auxiliaires que vous, vous recevez 1 point d’ordre supplémentaire à chaque round"
+        },
+        {
+         "k": "p",
+         "x": "6. CHOISIR LES DOMAINES Choisissez 1 optimisation de chaque tableau d’optimisations disponible pour votre faction"
+        },
+        {
+         "k": "p",
+         "x": "FIGURINES D’ÉTAT-MAJOR"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Champions, musiciens et porte-étendards",
+   "sections": [
+    {
+     "num": "1.0",
+     "title": "CHAMPIONS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Les unités qui ont le mot-clé Champion ont une ou plusieurs figurines de champion. S’il y a un nombre après le mot-clé Champion, il indique la proportion de figurines de l’unité qui peuvent être des champions. Dans les autres cas, 1 figurine de l’unité peut être un champion. Les unités qui ont le mot-clé Champion ont l’aptitude passive suivante:"
+      },
+      {
+       "k": "ab",
+       "n": "CHAMPION",
+       "flavor": "Un combattant vétéran conduit la charge.",
+       "t": "Passif",
+       "x": [
+        "Effet: Ajoutez 1 à la caractéristique d’Attaques des armes utilisées par les champions de cette unité."
+       ]
+      }
+     ],
+     "subs": []
+    },
+    {
+     "num": "2.0",
+     "title": "MUSICIENS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Les unités qui ont le mot-clé Musicien ont une ou plusieurs figurines de musicien. Le nombre après le mot-clé Musicien indique la proportion de figurines de l’unité qui peuvent être des musiciens. Les unités qui ont le motclé Musicien ont l’aptitude passive suivante:"
+      },
+      {
+       "k": "ab",
+       "n": "MUSICIEN",
+       "flavor": "Les battements d’un tambour ou les notes d’un cor incitent les soldats à toujours avancer.",
+       "t": "Passif",
+       "x": [
+        "Effet: Tant que cette unité contient un ou plusieurs musiciens, vous pouvez faire 1 jet de ralliement supplémentaire d’un D6 si elle utilise l’ordre “Ralliement”."
+       ]
+      }
+     ],
+     "subs": []
+    },
+    {
+     "num": "3.0",
+     "title": "PORTE-ÉTENDARDS",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Les unités qui ont le mot-clé Porte-étendard ont une ou plusieurs figurines de porte-étendard. Le nombre après le mot-clé Porte-étendard indique la proportion de figurines de l’unité qui peuvent être des porteétendards. Les unités qui ont le mot-clé Porte-étendard ont l’aptitude passive suivante:"
+      },
+      {
+       "k": "ab",
+       "n": "PORTE-ÉTENDARD",
+       "flavor": "La bannière de l’unité est un point de ralliement visible malgré le chaos de la bataille.",
+       "t": "Passif",
+       "x": [
+        "Effet: Tant que cette unité contient un ou plusieurs porte-étendards, ajoutez 1 à son score de contrôle.",
+        "Champion Rat des Clans Rat des Clans"
+       ]
+      },
+      {
+       "k": "p",
+       "x": "TACTIQUES DE BATAILLE"
+      }
+     ],
+     "subs": []
+    }
+   ]
+  },
+  {
+   "name": "Tactiques de bataille",
+   "sections": [
+    {
+     "num": "1.0",
+     "title": "VUE D’ENSEMBLE DES TACTIQUES DE BATAILLE",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "Pendant une bataille, les joueurs peuvent marquer des points de victoire supplémentaires en exécutant des tactiques de bataille."
+      }
+     ],
+     "subs": []
+    },
+    {
+     "num": "2.0",
+     "title": "CHOISIR LES TACTIQUES DE BATAILLE",
+     "blocks": [
+      {
+       "k": "p",
+       "x": "On choisit les tactiques de bataille en utilisant l’aptitude “Manœuvre Tactique”:"
+      },
+      {
+       "k": "p",
+       "x": "MANŒUVRE TACTIQUE: Vous ordonnez à vos troupes de saisir une opportunité qui a émergé du flux de la bataille."
+      },
+      {
+       "k": "p",
+       "x": "Vous ne pouvez pas utiliser cette aptitude si vous avez joué en second au round précédent et choisi de jouer en premier au round en cours."
+      },
+      {
+       "k": "p",
+       "x": "Effet: Choisissez 1 tactique de bataille que vous n’avez pas encore tentée. Vous pouvez tenter d’exécuter cette tactique de bataille à ce tour."
+      }
+     ],
+     "subs": [
+      {
+       "num": "2.1",
+       "title": "EXÉCUTER LES TACTIQUES DE BATAILLE",
+       "blocks": [
+        {
+         "k": "p",
+         "x": "Si à la fin de votre tour, vous remplissez les critères de la tactique que vous avez choisi de tenter à ce tour, vous l’exécutez et marquez 4 points de victoire."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "num": "3.0",
+     "title": "TACTIQUES DE BATAILLE UNIVERSELLES",
+     "blocks": [
+      {
+       "k": "ab",
+       "n": "NE FLANCHEZ PAS",
+       "flavor": "Nous ne devons céder sur aucun front. Tenez bon, et maintenez l’ennemi à distance.",
+       "t": "Une Fois Par Round de Bataille, Début de Votre Tour",
+       "x": []
+      },
+      {
+       "k": "p",
+       "x": "Vous exécutez cette tactique de bataille à la fin de votre tour si au moins 2 unités amies ont combattu au corps à corps à ce tour et si aucune unité amie n’a été détruite à ce tour."
+      },
+      {
+       "k": "ab",
+       "n": "TUEZ L’ENTOURGE",
+       "flavor": "Exposez le commandant ennemi en ciblant les membres de sa garde personnelle. Choisissez une unité du régiment du général ennemi. Vous exécutez cette tactique de bataille si cette unité est détruite à ce tour.",
+       "t": "Passif",
+       "x": []
+      },
+      {
+       "k": "ab",
+       "n": "ATTAQUEZ SUR DEUX FRONTS",
+       "flavor": "Divisez et conquérez en approchant l’ennemi par deux directions.",
+       "t": "Passif",
+       "x": []
+      },
+      {
+       "k": "p",
+       "x": "Vous exécutez cette tactique de bataille à la fin de votre tour si vous contrôlez au moins 2 objectifs que vous ne contrôliez pas au début de votre tour et si au moins un de ces objectifs était contrôlé par votre adversaire au début de votre tour. PRENEZ LEUR TERRE: Établissez une tête de pont en territoire ennemi."
+      },
+      {
+       "k": "p",
+       "x": "Choisissez un élément de terrain qui est entièrement ou partiellement dans le territoire ennemi et entièrement en dehors du territoire ami. Vous exécutez cette tactique de bataille si vous contrôlez cet élément de terrain à la fin de votre tour. CAPTUREZ LE CENTRE: Établissez une position centrale solide depuis laquelle vos forces pourront dicter le cours de la bataille."
+      },
+      {
+       "k": "p",
+       "x": "Vous exécutez cette tactique de bataille à la fin de votre tour si au moins 2 unités amies sont à 3\" du centre du champ de bataille et ne sont pas en mêlée."
+      },
+      {
+       "k": "ab",
+       "n": "PRENEZ LES FLANCS",
+       "flavor": "Encerclez l’ennemi, puis portez le coup de grâce.",
+       "t": "Passif",
+       "x": []
+      },
+      {
+       "k": "p",
+       "x": "Vous exécutez cette tactique de bataille à la fin de votre tour si vous avez au moins 1 unité amie à 6\" de chaque bord court du champ de bataille, si aucune d’elles n’est entièrement en territoire ami, et si aucune d’elles n’a été placée à ce tour."
+      }
+     ],
+     "subs": []
+    }
+   ]
+  }
+ ]
+}

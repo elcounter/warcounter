@@ -1,0 +1,2327 @@
+{
+ "name": "Lumineth Realm-lords",
+ "units": [
+  {
+   "name": "Vanari Starshard Ballista",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "LUMINETH REALM-LORDS",
+    "WAR MACHINE",
+    "VANARI"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "24\"",
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend), Crit (2 Hits)",
+     "name": "Starshard Bolts",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Crew's Arming Swords",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Blinding Bolts",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Any Shooting Phase",
+     "declare": "Pick an enemy unit that was targeted by all this unit's shooting attacks this phase to be the target.",
+     "effect": "Roll a dice. Add 1 to the roll if the target is a **^^Monster^^**. On a 3+, subtract 1 from hit rolls for the target's attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Scryhawks",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 6\" to the Range characteristic of this unit's **Starshard Bolts** while it is wholly within 12\" of any friendly **Vanari Auralan Sentinels** units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Alarith Spirit of the Mountain",
+   "pts": 300,
+   "size": 1,
+   "kw": [
+    "MONSTER",
+    "ORDER",
+    "LUMINETH REALM-LORDS",
+    "ALARITH"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "14",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "5",
+     "Ability": "-",
+     "name": "Stoneheart Worldhammer",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D6",
+     "Ability": "Shoot in Combat",
+     "name": "Geomantic Blast",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Stoneheart Worldhammer** is 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Rain of Stone",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a D3. Add 2 to the roll if the target charged this turn. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "With the Force of a Landslide",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Attacks characteristic of this unit's **Stoneheart Worldhammer** for each instance of **Alaithi, Rune of the Mountain** depicted on your **battle scripture**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Ellania and Ellathor, Eclipsian Warsages",
+   "pts": 330,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "ORDER",
+    "WARD (5+)",
+    "AELF",
+    "LUMINETH REALM-LORDS",
+    "INFANTRY",
+    "WIZARD (1)",
+    "SCINARI",
+    "VANARI"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "10",
+    "Save": "4+",
+    "Control": "4"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "2+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Altairi",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Dianaer",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Blazing Sunbolt",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Total Eclipse",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Make a casting roll of 2D6.",
+     "effect": "Until the start of your next turn, the first time an enemy unit within 18\" of this unit uses a command, unless your opponent spends 1 additional command point, the command has no effect, it still counts as having been used and the command points spent to use the command are still lost.",
+     "keywords": "**^^Spell^^**",
+     "cast": "8",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Equal Prodigies",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick whether Ellania leads or Ellathor leads.",
+     "effect": "If Ellania leads, until the start of your next turn, add 1 to this unit's power level and it has **^^Ward (4+)^^**. \nIf Ellathor leads, until the start of your next turn, add the current battle round number to the Damage characteristic of **Altairi**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Sudden Translocation",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "This unit can only use this ability if any enemy models were slain this turn by this unit's combat attacks.",
+     "effect": "**Heal (D6)** this unit. Then, remove it from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Lyrior Uthralle, Warden of Ymetrica",
+   "pts": 260,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "ORDER",
+    "AELF",
+    "LUMINETH REALM-LORDS",
+    "WIZARD (1)",
+    "CAVALRY",
+    "VANARI"
+   ],
+   "stats": {
+    "Move": "14\"",
+    "Health": "7",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "2+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage), Crit (Mortal)",
+     "name": "Lyrior's Sword",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Farael's Horns and Claws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "2+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Daemon^^** (+1 Rend), Charge (+1 Damage)",
+     "name": "Daemonbane",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Focused Fury",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Make a casting roll of 2D6. Add 2 to the roll if this unit is in combat.",
+     "effect": "This unit has **^^Strike-first^^** for the rest of the turn.",
+     "keywords": "**^^Spell^^**",
+     "cast": "5",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Champion of the Lord Phoenix",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While a visible friendly **^^Vanari^^** unit is wholly within 12\" of this unit:\n• You are treated as having 1 additional instance of **Varinor, Rune of Strength** depicted on your **battle scripture** for the purposes of the abilities on that unit's warscroll.\n• If that unit is picked to be the target of the 'Depict Rune' ability, you can apply the enhanced effects of that ability to that unit as if you had an instance of **Varinor, Rune of Strength** on your **battle scripture**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vanari Dawnriders",
+   "pts": 200,
+   "size": 5,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "LUMINETH REALM-LORDS",
+    "AELF",
+    "VANARI",
+    "STANDARD BEARER (1/5)",
+    "CAVALRY"
+   ],
+   "stats": {
+    "Move": "14\"",
+    "Health": "3",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Charge (+1 Damage), Crit (Mortal)",
+     "name": "Dawnrider Lances and Blades",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Stallions' Hooves",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Dawnrider Charge",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Rend characteristic of this unit's **Dawnrider Lances and Blades** if it charged in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vanari Lord Regent on Lightcourser",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "AELF",
+    "LUMINETH REALM-LORDS",
+    "CAVALRY",
+    "VANARI"
+   ],
+   "stats": {
+    "Move": "14\"",
+    "Health": "7",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Regent's Sword",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Lightcourser's Horns and Claws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Lead the Charge",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "You can re-roll charge rolls for friendly **^^Lumineth Realm-lords^^** units while they are wholly within 6\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Purest Aetherquartz",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Battle, Your Hero Phase",
+     "declare": "",
+     "effect": "For the rest of the turn, add 1 to hit rolls for this unit's attacks and subtract 1 from hit rolls for attacks that target this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vanari Auralan Sentinels",
+   "pts": 150,
+   "size": 10,
+   "kw": [
+    "CHAMPION",
+    "INFANTRY",
+    "ORDER",
+    "LUMINETH REALM-LORDS",
+    "AELF",
+    "VANARI"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Auralan Bow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Sentinel Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Lofted Shots",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Your Shooting Phase",
+     "declare": "",
+     "effect": "For the rest of the turn, add 6\" to the Range characteristic of this unit's **Auralan Bows** but subtract 1 from hit rolls for this unit's shooting attacks.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vanari Bladelords",
+   "pts": 140,
+   "size": 5,
+   "kw": [
+    "CHAMPION",
+    "INFANTRY",
+    "ORDER",
+    "LUMINETH REALM-LORDS",
+    "AELF",
+    "VANARI"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "2",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Crit (Mortal)",
+     "name": "Sunmetal Blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Masters of Combat",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Rend characteristic of this unit's **Sunmental Blades** for each instance of **Varinor, Rune of Strength** depicted on your **battle scripture**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Guardians of the Scinari",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While any friendly **^^Scinari Heroes^^** are wholly within this unit's combat range, both this unit and those friendly units have **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vanari Bannerblade",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "AELF",
+    "LUMINETH REALM-LORDS",
+    "VANARI",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Bannerblade's Sword",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "World Banner",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "While a visible friendly **^^Lumineth Realm-lords^^** unit is wholly within 12\" of this unit, it can use the 'Rally' command even if it is in combat.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Scinari Calligrave",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "AELF",
+    "LUMINETH REALM-LORDS",
+    "INFANTRY",
+    "SCINARI",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Calligrave Blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Realmscribe",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Battle (Army), Reaction: You declared the 'Depict Rune' ability",
+     "declare": "",
+     "effect": "Replace 1 instance of a rune on your **battle scripture** with 1 of the following:\n• **Varinor, Rune of Strength**\n• **Ydriliqi, Rune of the River**\n• **Alaithi, Rune of the Mountain**\n• **Oreali, Rune of the Wind**",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Scinari Cathallar",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "AELF",
+    "LUMINETH REALM-LORDS",
+    "INFANTRY",
+    "WIZARD (1)",
+    "SCINARI"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Despairing Touch",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Darkness of the Soul",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a visible enemy unit within 18\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, the target cannot use commands until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Scinari Loreseeker",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "AELF",
+    "LUMINETH REALM-LORDS",
+    "INFANTRY",
+    "SCINARI",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Shoot in Combat",
+     "name": "Eclipsian Staff",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Loreseeker Blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Arcane Discovery",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Battle (Army), Your Movement Phase",
+     "declare": "Pick a non-**^^Faction Terrain^^** terrain feature within 3\" of this unit to be the target.",
+     "effect": "For the rest of the battle, add 1 to casting rolls for units (friendly and enemy) while they are within 3\" of the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Independent Operative",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Battle (Army), Deployment Phase",
+     "declare": "",
+     "effect": "Remove this unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Hurakan Windmage",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "AELF",
+    "LUMINETH REALM-LORDS",
+    "INFANTRY",
+    "WIZARD (1)",
+    "HURAKAN",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "1",
+     "Hit": "2+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "D3",
+     "Ability": "Shoot in Combat",
+     "name": "Windblast Vortex",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Aspiragillum",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Windleap",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Once Per Battle (Army), Your Movement Phase",
+     "declare": "Pick up to 3 visible friendly **^^Hurakan^^** units wholly within 12\" of this unit to be the targets.",
+     "effect": "For the rest of the turn, each target can use a **^^Run^^** ability and still use **^^Shoot^^** and/or **^^Charge^^** abilities later in the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Transporting Vortex",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Lumineth Realm‑lords^^** unit wholly within 12\" of this unit and not in combat to be the target, then make a casting roll of 2D6.",
+     "effect": "Remove the target from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Hurakan Windchargers",
+   "pts": 180,
+   "size": 5,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "LUMINETH REALM-LORDS",
+    "AELF",
+    "STANDARD BEARER (1/5)",
+    "CAVALRY",
+    "HURAKAN"
+   ],
+   "stats": {
+    "Move": "14\"",
+    "Health": "3",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Treerunner's Claws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti-**^^Cavalry^^** (+1 Rend), Crit (Auto-wound)",
+     "name": "Windcharger Bow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Windcharger Blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Guided by the Winds",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "While you have 2 or more instances of **Oreali, Rune of the Wind** depicted on your **battle scripture**, add 6\" to the Range characteristic of this unit's **Windcharger Bows**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Light of Eltharion",
+   "pts": 300,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "ORDER",
+    "AELF",
+    "LUMINETH REALM-LORDS",
+    "INFANTRY",
+    "WARD (4+)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "7",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "2+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "Anti-**^^Hero^^** (+1 Rend), Anti-**^^Monster^^** (+1 Rend)",
+     "name": "Celennari Blade",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "2+",
+     "Wnd": "3+",
+     "Rnd": "3",
+     "Dmg": "3",
+     "Ability": "Crit (2 Hits)",
+     "name": "Fangsword of Eltharion",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "3",
+     "Hit": "2+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "D3",
+     "Ability": "Shoot in Combat",
+     "name": "Searing Darts of Light",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Supreme Swordmaster",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Ignore negative modifiers to hit rolls and wound rolls for this unit's attacks.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Valorous Intervention",
+     "kind": "Ability (Command)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "This unit cannot use this ability if it is in combat. Pick a friendly **^^Lumineth Realm-lords^^** unit that is in combat to be the target.",
+     "effect": "Remove this unit from the battlefield and set it up again within 1\" of the target, within 1\" of an enemy unit and in combat. This unit has charged.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": "1"
+    }
+   ]
+  },
+  {
+   "name": "Alarith Stonemage",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "AELF",
+    "LUMINETH REALM-LORDS",
+    "INFANTRY",
+    "WIZARD (1)",
+    "ALARITH"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Staff of the High Peaks",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Strength of Stone",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick a friendly **Alarith Stoneguard** unit wholly within 12\" of this unit to be the target.",
+     "effect": "For the rest of the turn:\n• Add 1 to the Rend characteristic of the target's melee weapons.\n• The target cannot make pile-in moves.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Raise the Earth",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick an objective within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "Until the start of your next turn, each time a non-**^^Fly^^** unit (friendly or enemy) that is contesting the target objective uses a **^^Move^^** ability, inflict D6 mortal damage on that unit after that ability has been resolved.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Ydrilan Riverblades",
+   "pts": 150,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "ORDER",
+    "LUMINETH REALM-LORDS",
+    "AELF",
+    "CHAMPION (1/10)",
+    "YDRILAN"
+   ],
+   "stats": {
+    "Move": "7\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Ythara Darts",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Ydrilan Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Relentless as the Driving Current",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit is in combat, it can move 2D6\". It can pass through models in enemy units but must end that move in combat.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Travel the Waterways",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "",
+     "effect": "Remove this unit from the battlefield and set it up again on the battlefield wholly within 6\" of a battlefield edge and more than 9\" from all enemy units.\nIf you picked to depict **Ydriliqui, Rune of the River** on your **battle scripture** this battle round, you can instead set up this unit anywhere on the battlefield more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Archmage Teclis and Celennar, Spirit of Hysh",
+   "pts": 640,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "MONSTER",
+    "FLY",
+    "WARMASTER",
+    "ORDER",
+    "WARD (5+)",
+    "WIZARD (4)",
+    "AELF",
+    "LUMINETH REALM-LORDS"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "16",
+    "Save": "4+",
+    "Control": "10"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Celennar's Moonbright Talons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "D3",
+     "Ability": "Crit (Mortal)",
+     "name": "Sword of Teclis",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "1",
+     "Hit": "2+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D3+3",
+     "Ability": "-",
+     "name": "Lunar Staff",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Celennar's Moonbright Talons** is 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Aura of Celennar",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to casting rolls and banishment rolls for friendly **^^Lumineth Realm‑lords Wizards^^** while they are wholly within 12\" of this unit.\nIn addition, this unit can use **^^Spell^^** abilities from the Lore of Hysh, the Lore of Awakened Realms, and the warscrolls of all friendly **^^Lumineth Realm-lords Wizards^^** on the battlefield.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Archmage",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn, Your Hero Phase",
+     "declare": "",
+     "effect": "Pick 1 of the following:\n***Magical Supremacy:*** Instead of making a casting roll for the next **^^Spell^^** ability used by this unit this turn, you can use a value of 12 for the roll that cannot be modified.\n***Drain Power***: Pick a visible enemy **^^Wizard^^** or **^^Priest^^** within 18\" of this unit to be the target. Subtract 1 from the target's power level, to a minimum of 0, until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Discs of the Aelementiri",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Battle (Army), Start of Battle Round",
+     "declare": "You cannot use this ability in the first battle round.",
+     "effect": "Depict a rune of your choice on your **battle scripture**.\n**Designer's Note:** *This allows you to have that rune depicted earlier in the **battle scripture** for the purposes of other abilities. Do not resolve the effect of the 'Depict Rune' ability as part of this ability.\nThere is a smaller diamond in the battle scripture diamond in the Rules Reference where you can record this extra rune.*",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Light of Truth",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick any number of different visible enemy units within 18\" of this unit to be the targets, then make a casting roll of 2D6.",
+     "effect": "Inflict D3 mortal damage on each target.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Hurakan Spirit of the Wind",
+   "pts": 270,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "LUMINETH REALM-LORDS",
+    "MONSTER",
+    "FLY",
+    "WARD (5+)",
+    "HURAKAN"
+   ],
+   "stats": {
+    "Move": "18\"",
+    "Health": "8",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (Mortal)",
+     "name": "Swirling Shards",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "15\"",
+     "Atk": "4",
+     "Hit": "2+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Anti‑**^^Monster^^** (+1 Rend), Shoot in Combat",
+     "name": "Bow of the Wind's Vengeance",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Hunters of Majestic Beasts",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "The Damage characteristic of this unit's **Bow of the Wind's Vengeance** is 3 for attacks that target **^^Monsters^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Spirit of the Wind",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Any Shooting Phase",
+     "declare": "",
+     "effect": "If this unit used a **^^Shoot^^** ability this phase, this unit can move D6\". Add 2 to the roll for each instance of **Oreali, Rune of the Wind** depicted on your **battle scripture**. It cannot end that move in combat.",
+     "keywords": "**^^Move^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Hurricane Winds",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Any Shooting Phase",
+     "declare": "Pick an enemy unit that had any damage points allocated to it this turn by this unit's shooting attacks  to be the target.",
+     "effect": "Roll a dice. On a 3+, the target has **^^Strike-last^^** for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Scinari Enlightener",
+   "pts": 180,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "AELF",
+    "LUMINETH REALM-LORDS",
+    "INFANTRY",
+    "SCINARI",
+    "WIZARD (2)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Shoot in Combat",
+     "name": "Crescent Staff",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Enlightener Blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Rune of Enthlai",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Reaction: You declared an **^^Unlimited Spell^^** ability for this unit",
+     "declare": "",
+     "effect": "If that spell is successfully cast, roll a dice. On a 4+, after resolving the effect of that spell, this unit can immediately cast that spell a second time using the same casting roll. Do not count the second spell towards the number of **^^Spell^^** abilities this unit can use this turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Clarity of Thought",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Lumineth Realm‑lords Infantry^^** unit wholly within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "Until the start of your next turn, attacks that target that friendly unit cannot score critical hits (treat them as regular hits instead).",
+     "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Avalenor, the Stoneheart King",
+   "pts": 390,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "MONSTER",
+    "ORDER",
+    "LUMINETH REALM-LORDS",
+    "ALARITH"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "16",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "4",
+     "Ability": "-",
+     "name": "Firestealer Hammers",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D6",
+     "Ability": "Shoot in Combat",
+     "name": "Geomantic Blast",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Firestealer Hammers** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Call of the Mountains",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While a visible friendly **^^Alarith^^** unit is wholly within 12\" of this unit:\n• You are treated as having 1 additional instance of **Alaithi, Rune of the Mountain** depicted on your **battle scripture** for the purposes of the abilities on that unit's warscroll.\n• If that unit is picked to be the target of the 'Depict Rune' ability, you can apply the enhanced effects of that ability to that unit as if you had an instance of **Alaithi, Rune of the Mountain** on your **battle scripture**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Unbreakable Bulwark",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "If this unit did not charge this turn, pick an enemy unit in combat with it to be the target.",
+     "effect": "Roll a dice. On a 3+, for the rest of the turn, while that enemy unit is in combat with this unit, all attacks made by models in that unit within this unit's combat range must target this unit.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "With the Force of a Landslide",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Attacks characteristic of this unit's **Firestealer Hammers** for each instance of **Alaithi, Rune of the Mountain** depicted on your **battle scripture**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Sevireth, Lord of the Seventh Wind",
+   "pts": 350,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "ORDER",
+    "LUMINETH REALM-LORDS",
+    "MONSTER",
+    "FLY",
+    "WARD (5+)",
+    "HURAKAN"
+   ],
+   "stats": {
+    "Move": "18\"",
+    "Health": "10",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (Mortal)",
+     "name": "Swirling Shards",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "15\"",
+     "Atk": "4",
+     "Hit": "2+",
+     "Wnd": "3+",
+     "Rnd": "3",
+     "Dmg": "3",
+     "Ability": "Shoot in Combat",
+     "name": "Enathrai, the Howling Death",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Call of the Winds",
+     "kind": "Ability (Passive)",
+     "color": "Gray",
+     "timing": "",
+     "declare": "",
+     "effect": "While a visible friendly **^^Hurakan^^** unit is wholly within 12\" of this unit:\n• You are treated as having 1 additional instance of **Oreali, Rune of the Wind** depicted on your **battle scripture** for the purposes of the abilities on that unit's warscroll.\n• If that unit is picked to be the target of the 'Depict Rune' ability, you can apply the enhanced effects of that ability to that unit as if you had an instance of **Oreali, Rune of the Wind** on your **battle scripture**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Searing Desert Winds",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick up to 3 visible enemy units within 6\" of this unit this unit to be the targets.",
+     "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll and subtract 1 from wound rolls for the target's attacks for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Spirit of the Wind",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Any Shooting Phase",
+     "declare": "",
+     "effect": "If this unit used a **^^Shoot^^** ability this phase, this unit can move D6\". Add 2 to the roll for each instance of **Oreali, Rune of the Wind** depicted on your **battle scripture**. It cannot end that move in combat.",
+     "keywords": "**^^Move^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Alarith Stoneguard",
+   "pts": 120,
+   "size": 5,
+   "kw": [
+    "CHAMPION",
+    "INFANTRY",
+    "ORDER",
+    "LUMINETH REALM-LORDS",
+    "AELF",
+    "ALARITH",
+    "STANDARD BEARER (1/5)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "2",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Stoneguard Hammers",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Fortitude of the Earth",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While you have 2 or more instances of **Alaithi, Rune of the Mountain** depicted on your **battle scripture**, this unit's Save characteristic is 3+.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vanari Auralan Wardens",
+   "pts": 120,
+   "size": 10,
+   "kw": [
+    "CHAMPION",
+    "INFANTRY",
+    "ORDER",
+    "LUMINETH REALM-LORDS",
+    "AELF",
+    "VANARI"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Anti-charge (+1 Rend), Crit (Mortal)",
+     "name": "Warden Pikes and Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Anticipated Strike",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "If this unit has not charged this turn, ignore the effect of the **Charge (+1 Damage)** ability for combat attacks made by enemy units that target this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vanari Lord Regent",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "AELF",
+    "LUMINETH REALM-LORDS",
+    "VANARI",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Regent's Sword",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Shining Example",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time a friendly **^^Lumineth Realm-lords^^** unit wholly within 12\" of this unit uses the 'Rally' command, you can make 3 additional rally rolls of D6.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Wall of Blades",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick a friendly **Vanari Auralan Wardens** unit wholly within 12\" of this unit to be the wall of blades. Then, pick an enemy unit in combat with the wall of blades to be the target.",
+     "effect": "Roll a dice for each model in the wall of blades that is within 3\" of the target. For each 5+, inflict 1 mortal damage on the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Scinari Loreseeker (Scourge of Aqshy)",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "AELF",
+    "LUMINETH REALM-LORDS",
+    "INFANTRY",
+    "SCINARI",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Shoot in Combat",
+     "name": "Eclipsian Staff",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Loreseeker Blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Arcane Nullification",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a visible enemy **^^Hero^^** within 12\" of this unit to be the target.",
+     "effect": "If this unit is in combat with the target, the corresponding effect below applies until the start of your next turn. Otherwise, roll a dice. On a 3+, the corresponding effect below applies until the start of your next turn:\n***Holder of Forbidden Treasures*:** If the target has an artefact of power, that artefact of power has no effect.\n***An Insignificant Underling*:** If the target does not have an artefact of power, other than the **Companion** weapon ability, weapon abilities for the target's combat attacks have no effect.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Leashed Fury",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "",
+     "effect": "If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7. Then, for the rest of the turn:\n• Each time this unit is picked to use the 'Eruption of Fury' ability, if you spend 1 **rage dice** as part of that ability, it counts as 3 **rage dice**.\n• This unit can be picked to use the 'Eruption of Fury' ability even if you have already used it this turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Alarith Stonemage (Scourge of Aqshy)",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "AELF",
+    "LUMINETH REALM-LORDS",
+    "INFANTRY",
+    "WIZARD (1)",
+    "ALARITH"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Staff of the High Peaks",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Elemental Endurance",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "If this unit is picked to be a target of the 'Depict Rune' ability, for the rest of that battle round, when resolving the damage sequence for a friendly **^^Lumineth Realm-lords^^** unit while it is wholly within 12\" of this unit, if you spend rage dice as part of the 'Fight Through the Pain' ability, remove 1 damage point from that unit's damage pool on a 2+ instead of a 3+.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Earth's Grip",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible enemy unit that has no more than 1 model\nand is within 18\" of this unit to be the target, then make a casting roll\nof 2D6.",
+     "effect": "For the rest of the battle, the target is **gripped** until this unit is destroyed, the target **breaks free** or you pick a different target for this spell.\nWhile the target is **gripped**, each time it uses a **^^Move^^** ability, your opponent must roll a dice as a reaction and add their **fury level** to the roll. On a 7+, the target breaks free. Otherwise, that **^^Move^^** ability has no effect.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "title": "Battle Traits",
+   "items": [
+    {
+     "name": "Battle Traits",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Depict Rune",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Battle Round (Army), Start of Battle Round",
+       "declare": "",
+       "effect": "Pick 1 of the following runes to depict on your **battle scripture**. The effect and conditional **enhanced** effects of that rune last for the rest of the battle round. Each rune remains on your **battle scripture** for the rest of the battle or until it is removed or replaced by another ability.\n**Varinor, Rune of Strength**: Pick up to 2 friendly **^^Lumineth Realm-lords^^** units for each instance of this rune depicted on your **battle scripture** to be the targets. Add 1 to run rolls and charge rolls for each target. In addition, the following **enhanced** effects apply:\n• While **Ydriliqi, Rune of the River** is depicted on your **battle scripture**, add 1 to wound rolls for each target's combat attacks.\n• While **Oreali, Rune of the Wind** is depicted on your **battle scripture**, each target can use **^^Shoot^^** and/or **^^Charge^^** abilities even if it used a **^^Retreat^^** ability in the same turn.\n**Alaithi, Rune of the Mountain**: Pick up to 2 friendly **^^Lumineth Realm-lords^^** units for each instance of this rune depicted on your **battle scripture** to be the targets. Each target has **^^Ward (5+)^^**. In addition, the following **enhanced** effects apply:\n• While **Varinor, Rune of Strength** is depicted on your **battle scripture**, the targets' melee weapons have **Anti-charge (+1 Rend)**.\n• While **Ydriliqi, Rune of the River** is depicted on your **battle scripture**,subtract 1 from wound rolls for attacks made by enemy units while they are in combat with any of the targets.\n**Ydriliqi, Rune of the River**: Pick up to 2 friendly **^^Lumineth Realm-lords** units for each instance of this rune depicted on your **battle scripture** to be the targets. Subtract 2 from charge rolls for enemy units while they are within 12\" of any of the targets. In addition, the following **enhanced** effects apply:\n• While **Alaithi, Rune of the Mountain** is depicted on your **battle scripture**, ignore negative modifiers to hit rolls and wound rolls for attacks made by the targets.\n• If **Oreali, Rune of the Wind** is depicted on your **battle scripture**, each target can immediately move 3\". They can pass through the combat ranges of enemy units and can end that move in combat.\n**Oreali, Rune of the Wind**: Pick up to 2 friendly **^^Lumineth Realm-lords^^** units for each instance of this rune depicted on your **battle scripture** to be the targets. Subtract 1 from hit rolls for attacks made by enemy units while they are in combat with any of the targets. In addition, the following **enhanced** effects apply:\n• While **Varinor, Rune of Strength** is depicted on your **battle scripture**, add 4\" to each target's Move characteristic.\n• While **Alaithi, Rune of the Mountain** is depicted on your **battle scripture**, add 5 to each target's control score.\n**Thalari, Rune of the Zenith**: Add 2 to casting rolls for friendly **^^Lumineth Realm-lords^^** units. In addition, if you have 4 or more unique runes depicted on your **battle scripture**, add 4\" to the Move characteristic of friendly **^^Lumineth Realm-lords^^** units and friendly **^^Lumineth Realm-lords^^** units' attacks score critical hits on unmodified hit rolls of 5+.\n**Designer's Note**: *We recommend noting the runes you have inscribed in each battle round on a piece of paper to keep track of which are currently depicted on your **battle scripture**. Feel free to note them by type (Strength, River, Mountain etc.), by initial (each has a different first letter) or if you are feeling particularly adventurous, you can try your hand at aelven calligraphy and learn to draw each rune!*",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Artefacts of Power",
+   "items": [
+    {
+     "name": "Silver Wand",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Silver Wand",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "If this unit is not a Wizard, it can use the 'Unbind' ability as if it had **^^Wizard (1)^^**. Otherwise, add 1 to casting rolls for this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Waystone",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Waystone",
+       "kind": "Ability (Activated)",
+       "color": "Gray",
+       "timing": "Your Movement Phase",
+       "declare": "",
+       "effect": "Remove this unit from the battlefield and set it up again wholly within friendly territory and more than 9\" from all enemy units.",
+       "keywords": "**^^Core^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Phoenix Stone",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Phoenix Stone",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "The first time this unit would be destroyed, before removing it from play, roll a dice. On a 3+, this unit is not destroyed and any remaining damage points inflicted on it have no effect. Then, **Heal (D3)** this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Battle Formations: Lumineth Realm-lords",
+   "items": [
+    {
+     "name": "Scinari Council",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Arcane Focus",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "**^^Spell^^** abilities from the Lore of Hysh or the Lore of the Awakened Realms used by friendly **^^Lumineth Realm-lords Wizards^^** have the **^^Unlimited^^** keyword. However, you cannot pick the same unit to be the target of the same **^^Spell^^** ability in the same turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Pilgrims of Haixiah",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Trick of the Light",
+       "kind": "Ability (Passive)",
+       "color": "Purple",
+       "timing": "",
+       "declare": "",
+       "effect": "Friendly **^^Lumineth Realm-lords^^** units can use the 'Power Through' command even if they have not charged this turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Warhost of Duality",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Strike as One",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "When players are alternating picking units to use a **^^Fight^^** ability, when it is your turn to pick a unit, you can pick 2 friendly **^^Lumineth Realm-lords^^** units instead of 1. Resolve the second **^^Fight^^** ability immediately after the first.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Aelementor Guardians",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Ancient Spirits",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Turn (Army), Any Hero Phase",
+       "declare": "Pick a friendly **^^Lumineth Realm-lords Monster^^** to be the target.",
+       "effect": "For the rest of the turn, ignore the first damage point that would be allocated to each visible friendly **^^Lumineth Realm-lords^^** unit in each phase while it is wholly within 12\" of the target.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Heroic Traits",
+   "items": [
+    {
+     "name": "Flawless Commander",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Flawless Commander",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Deployment Phase",
+       "declare": "Pick up to 3 visible friendly **^^Lumineth Realm-lords Infantry^^** units wholly within 18\" of this unit to be the targets.",
+       "effect": "Each target can use the 'Normal Move' ability as if it were your movement phase.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Masterful Tactician",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Masterful Tactician",
+       "kind": "Ability (Activated)",
+       "color": "Gray",
+       "timing": "Reaction: You declared the 'Redeploy' command for a friendly **^^Lumineth Realm‑lords^^** unit wholly within 12\" of this unit",
+       "declare": "",
+       "effect": "If you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Acolyte of the Runes",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Acolyte of the Runes",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Start of Battle Round",
+       "declare": "Pick a friendly **^^Lumineth Realm-lords Hero^^** wholly within 12\" of this unit to be the target.",
+       "effect": "That **^^Hero^^** can be picked as an additional target the next time you use the 'Depict Rune' ability.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Aetherquartz Requisitioner",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Aetherquartz Requisitioner",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle, Reaction: You declared a **^^Spell^^** ability for a **^^Lumineth Realm-lords Wizard^^** within this unit's combat range",
+       "declare": "",
+       "effect": "Add 3 to the casting roll for that spell.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Martial Perfectionist",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Martial Perfectionist",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Any Combat Phase",
+       "declare": "Pick a visible enemy unit within 12\" of this unit that is damaged or that had any models slain this turn to be the target.",
+       "effect": "Roll a dice. On a 3+, add 1 to wound rolls for combat attacks made by friendly **^^Lumineth Realm-lords Infantry^^** units that target that enemy unit for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Scholar of the Sigils",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Scholar of the Sigils",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Deployment Phase",
+       "declare": "",
+       "effect": "Pick 1 of the following runes and apply the corresponding effect for the rest of the battle. That rune cannot be depicted on your battle scripture for the rest of the battle.\n***Varinor, Rune of Strength*:** Add 1 to run rolls and charge rolls for this unit.\n***Alaithi, Rune of the Mountain*:** This unit has **^^Ward (5+)^^**.\n***Ydriliqi, Rune of the River*:** This unit's melee weapons have **Anti-charge (+1 Rend)** and this unit's ranged weapons have **Shoot in Combat**. \n***Oreali, Rune of the Wind*:** Subtract 1 from hit rolls for combat attacks that target this unit.\n***Thalari, Rune of the Zenith*:** Add 1 to casting rolls for this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Peerless Swordsman",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Peerless Swordsman",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Any Combat Phase",
+       "declare": "Pick an enemy unit with a starting size of 1 that is in combat with this unit to be the target, then pick 1 of this unit's non-**Companion** melee weapons to be the parrying blade.",
+       "effect": "Roll a number of dice equal to the Attacks characteristic of the parrying blade. For each 3+, subtract 1 from the Attacks characteristic of the target's non-**Companion** melee weapons for the rest of the turn. In addition, for each 5+, inflict 1 mortal damage on the target.",
+       "keywords": "**^^Core^^**, **^^Attack^^**, **^^Fight^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Dispassionate Soul",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Dispassionate Soul",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "Once Per Battle, End of Your Turn",
+       "declare": "",
+       "effect": "If this unit is in combat with an enemy **^^Hero^^**, reduce your opponent's fury level by **X**, where **X** is the number of unique runes depicted on your battle scripture.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Manifestation Lores",
+   "items": [
+    {
+     "name": "Manifestations of Hysh",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Summon Hyshian Twinstones",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Hyshian Twinstones** endless spell on the battlefield, pick a friendly **^^Lumineth Realm‑lords Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Hyshian Twinstones** endless spell wholly within 18\" of the caster, visible to them and more than 9\" from all enemy units.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Rune of Petrification",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Rune of Petrification** on the battlefield, pick a friendly **^^Lumineth Realm‑lords Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Rune of Petrification** wholly within 12\" of the caster and visible to them.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Sanctum of Amyntok",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Sanctum of Amyntok** on the battlefield, pick a friendly **^^Lumineth Realm‑lords Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Sanctum of Amyntok** wholly within 12\" of the caster and more than 3\" from all enemy units. A **Sanctum of Amyntok** has 3 parts that must be set up touching each other so that they form a ring.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Spell Lores",
+   "items": [
+    {
+     "name": "Lore of Hysh",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Overwhelming Heat",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Lumineth Realm‑lords Wizard^^** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Halve the target's Move characteristic until the start of your next turn, then roll a dice. If the roll equals or exceeds the target's Save characteristic, inflict D3 mortal damage on it.",
+       "keywords": "**^^Spell^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Piercing Refraction",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Lumineth Realm‑lords Wizard^^** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.",
+       "keywords": "**^^Spell^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Beacon of Hysh",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Lumineth Realm‑lords Wizard^^** to cast this spell, pick a visible friendly non-**^^Monster Lumineth Realm‑lords^^** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Until the start of your next turn, if the unmodified hit roll for an attack that targets that friendly unit is 1-3, the attack fails and the attack sequence ends.",
+       "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Lore of the Awakened Realms",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Elemental Push",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Lumineth Realm‑lords Wizard^^** to cast this spell, pick a visible friendly **^^Lumineth Realm-lords^^** unit wholly within 12\" of them that was not set up this turn to be the target, then make a casting roll of 2D6. Subtract 1 from the roll if the target is in combat.",
+       "effect": "The target can move up to 5\". It can pass through the combat ranges of enemy units but cannot end that move in combat.",
+       "keywords": "**^^Spell^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Realmshield",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Lumineth Realm‑lords Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Until the start of your next turn, friendly **^^Lumineth Realm-lord^^** units have **^^Ward (5+)^^** while they are wholly within 12\" of the caster.",
+       "keywords": "**^^Spell^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Focused Erosion",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Lumineth Realm‑lords Wizard^^** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Subtract 1 from the Rend characteristic of the target's weapons until the start of your next turn.",
+       "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Flawless Manoeuvres",
+   "items": [
+    {
+     "name": "Perfect Footwork",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Perfect Footwork",
+       "kind": "Ability (Activated)",
+       "color": "Grey",
+       "timing": "Enemy Movement Phase",
+       "declare": "",
+       "effect": "If each model in this unit is contesting the same objective, this unit can move up to 6\". It can move through the combat ranges of enemy units but can only end that move in combat with units it was in combat with at the start of the move. It does not have to end that move in combat. It must end that move with each of its models contesting the same objective. Then, this unit cannot use **^^Run^^** abilities for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Patient Strike",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Patient Strike",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Enemy Combat Phase",
+       "declare": "Pick an enemy unit in combat with this unit to be the target.",
+       "effect": "Roll a dice for each model in this unit that is in combat with the target. For each 4+, inflict 1 mortal damage on the target.",
+       "keywords": "**^^Core^^**, **^^Attack^^**, **^^Fight^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Dazzling Phalanx",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Dazzling Phalanx",
+       "kind": "Ability (Activated)",
+       "color": "Orange",
+       "timing": "Reaction: Opponent declared a **^^Charge^^** ability for a unit within 9\" of and visible to this unit",
+       "declare": "",
+       "effect": "Spend 1 rage dice. If your opponent's fury level is lower than yours, they must increase their fury level by 1, to a maximum of 7. Then, for the rest of the turn, add 1 to wound rolls for this unit's combat attacks that target the enemy unit using that **^^Charge^^** ability.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

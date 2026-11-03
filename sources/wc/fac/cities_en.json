@@ -1,0 +1,4632 @@
+{
+ "name": "Cities of Sigmar",
+ "units": [
+  {
+   "name": "Runelord",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "DUARDIN",
+    "PRIEST (1)"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "5",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Rune Staff and Forgehammer",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Runes of Spellbreaking",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit can use the 'Unbind' ability as if it had **^^Wizard (1)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Forgefire",
+     "kind": "Ability (Prayer)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a friendly **^^Cities of Sigmar Duardin^^** unit wholly within 12\" of this unit to be the target, then make a chanting roll of D6.",
+     "effect": "If the chanting roll was 10+, you can pick another eligible unit to be a second target. Until the start of your next turn, add 1 to the Rend characteristic of each target's melee weapons.",
+     "keywords": "**^^Prayer^^**",
+     "cast": "",
+     "chant": "5",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Ironweld Great Cannon",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "WAR MACHINE",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "3\"",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "24\"",
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D3+2",
+     "Ability": "-",
+     "name": "Great Cannon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Crew's Tools and Sidearms",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Relentless Bombardment",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Any Shooting Phase",
+     "declare": "Pick an enemy unit that was targeted by this unit's shooting attacks this phase to be the target.",
+     "effect": "Roll a dice. Add 1 to the roll if this unit is **under orders**. On a 3+, subtract 2 from charge rolls and run rolls for the target unit until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Freeguild Marshal on Griffon",
+   "pts": 230,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "MONSTER",
+    "FLY",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "15",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Marshal's Armaments",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Griffon's Razor Claws and Deadly Beak",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Griffon's Razor Claws and Deadly Beak** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Tactical Acumen",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Reaction: You declared the 'Redeploy' command for a friendly **^^Cities of Sigmar^^** unit wholly within 12\" of this unit",
+     "declare": "",
+     "effect": "If you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Piercing Bloodroar",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick up to 3 enemy units in combat with this unit to be the targets.",
+     "effect": "Roll a dice for each target. On a 4+, the target cannot use commands for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Callis and Toll",
+   "pts": 240,
+   "size": 2,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "UNIQUE",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti‑**^^Wizard^^** (+1 Rend), Shoot in Combat",
+     "name": "Flintlock Pistols",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti‑**^^Wizard^^** (+1 Rend)",
+     "name": "Azyrite Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Relentless Hunters",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Start of Battle Round",
+     "declare": "This unit can use this ability even if it is **in the shadows**. If there is no enemy **mark**, pick an enemy **^^Hero^^** on the battlefield to be the target. If there are no enemy **^^Heroes^^** on the battlefield, pick an enemy non-**^^Hero^^** unit on the battlefield to be the target instead.",
+     "effect": "The target is the **mark** for the rest of the battle.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Right Tools for the Job",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Double the Damage characteristic of this unit's melee weapons for attacks that target the enemy **mark**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Freeguild Command Corps Adjutants",
+   "pts": 200,
+   "size": 3,
+   "kw": [
+    "INFANTRY",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "3",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Adjutant Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Freeguild Adjutants",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a friendly **^^Sigmarite^^** unit wholly within 12\" of this unit and under orders to be the target.",
+     "effect": "If this unit is in combat, apply the effect below. Otherwise, roll a dice. On a 3+, apply the effect below.\nAdd 5 to the target's control score until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Freeguild Cavalier-Marshal",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "CAVALRY",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "7",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Dragoon Pistol",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Master-forged Cavalier Sword",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Warhorse's Steel-shod Hooves",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "'For Sigmar, For Glory!'",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Reaction: You declared the 'Counter-charge' command for this unit.",
+     "declare": "",
+     "effect": "Pick a visible friendly non-**^^Hero Sigmarite Cavalry^^** unit that is wholly within 12\" of this unit, is not in combat and has not used a **^^Run^^** ability this turn to be the target. After the 'Counter-charge' command for this unit has been resolved, if this unit is in combat, the target can immediately use the 'Charge' ability as if it were your charge phase. In addition, you can re-roll charge rolls for the target for the rest of the phase.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Run Down the Foe",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "If this unit charged this turn, pick this unit and up to 2 non-**^^Hero Sigmarite Cavalry^^** units that charged this turn and are wholly within 12\" of this unit to be the targets.",
+     "effect": "For each target:\n• Make a pile-in move.\n• Then, pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Fusil-Major on Ogor Warhulk",
+   "pts": 160,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "8",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "24\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Crit (Auto-wound), Anti-**^^Hero^^** (+1 Rend)",
+     "name": "Long Fusil",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Warhulk's Mace",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Coordinate Attacks",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "Pick a visible enemy unit within 24\" of this unit to be the target.",
+     "effect": "For the rest of the turn, add 1 to hit rolls for attacks made by friendly **^^Sigmarite^^** units that are **under orders** that target that enemy unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Tahlia Vedra, Lioness of the Parch",
+   "pts": 340,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "SIGMARITE",
+    "MONSTER",
+    "WARMASTER",
+    "WARD (6+)",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "15",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D3+3",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Infernadine's Scorpid Stinger",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Weapon of Office",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend), Companion",
+     "name": "Infernadine's Leonine Jaws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Infernadine's Leonine Jaws** is 2.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Combat Tactician",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Enemy Hero Phase",
+     "declare": "If this unit is not in combat, pick a visible friendly **^^Sigmarite Infantry^^** unit wholly within 18\" of it and that is not in combat to be the target.",
+     "effect": "The target can immediately use the 'Normal Move' ability as if it were your movement phase. In addition, the target is **under orders** for the rest of the battle round.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Lead from the Front",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Battle, Any Combat Phase",
+     "declare": "If this unit is in combat, pick each visible friendly **^^Sigmarite^^** unit wholly within 12\" of this unit to be the targets.",
+     "effect": "Add 1 to hit rolls and wound rolls for the targets' combat attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Paralysing Venom",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a dice. If the roll is equal to or less than the target's Health characteristic, subtract 1 from wound rolls for the target's attacks for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Battlemage on Griffon",
+   "pts": 260,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "MONSTER",
+    "FLY",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "WIZARD (1)",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "15",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Anti‑**^^Monster^^** (+1 Rend)",
+     "name": "Amber Spear",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Beaststaff",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Griffon's Razor Claws and Twin Beaks",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Ghurish Ferocity",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "Roll a dice. On a 2+, add 1 to the Damage characteristic of this unit's **Griffon's Razor Claws and Twin Beaks** for attacks that target enemy **^^Monsters^^** for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Griffon's Razor Claws and Twin Beaks** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Celestial Hurricanum",
+   "pts": 170,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "WAR MACHINE",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "10",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Warhorses' Steel-shod Hooves",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Storm of Shemtek",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+     "effect": "Make a number of D3 rolls equal to the current battle round number. For each 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Portents of Battle",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Cities of Sigmar^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, add 1 to hit rolls for the target's combat attacks until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Freeguild Steelhelms",
+   "pts": 110,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "MUSICIAN (1/10)",
+    "STANDARD BEARER (1/10)",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "1",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Freeguild Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Steel of Helm and Heart",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "If this unit has 5 or more models, pick an enemy unit in combat with this unit to be the target.",
+     "effect": "If this unit is **under orders**, apply the effect below. Otherwise, roll a dice. Subtract 1 from the roll if the target is a **^^Monster^^**. On a 4+, apply the effect below.\nFor the rest of the turn, if this unit is in combat with the target when the target is picked to use a **^^Fight^^** ability:\n• This unit must be picked to be the target of pile-in move made by the target.\n• All attacks made by models in the target unit within this unit's combat range must target this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Freeguild Cavaliers",
+   "pts": 180,
+   "size": 5,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "CAVALRY",
+    "STANDARD BEARER (1/5)",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "3",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Warhorse's Steel‑shod Hooves",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Cavalier Weapon",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Storm of Steel",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "If this unit is in combat and has not charged this turn, pick an enemy unit that it is in combat with and up to 1 friendly **Freeguild Cavalier-Marshal** within this unit's combat range to be the targets.",
+     "effect": "If this unit is **under orders**, apply the effect below. Otherwise, roll a dice. On a 3+, apply the effect below.\nThis unit and the friendly target can use the 'Charge' ability even if it is not your charge phase and even if those units are in combat. Both friendly units must end that move in combat with the enemy target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Black Ark Corsairs",
+   "pts": 120,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "AELF",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Repeater Handbow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Vicious Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Swift Shots",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "",
+     "effect": "If this unit is in combat, it can immediately use the 'Shoot' ability as if it were your shooting phase. All attacks must target the same enemy unit, and the enemy unit picked to be the target of the attacks must be in combat with this unit and have charged this phase.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Battlemage on Celestial Hurricanum",
+   "pts": 230,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "WIZARD (1)",
+    "WAR MACHINE",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "12",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Wizard's Staff",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Warhorses' Steel-shod Hooves",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Storm of Shemtek",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+     "effect": "Make a number of D3 rolls equal to the current battle round number. For each 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Portents of Battle",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Cities of Sigmar^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, add 1 to hit rolls for the target's combat attacks until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Battlemage on Luminark of Hysh",
+   "pts": 280,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "WIZARD (1)",
+    "WAR MACHINE",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "12",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "24\"",
+     "Atk": "1",
+     "Hit": "2+",
+     "Wnd": "⟝See 'Searing Beam of Light' ability⟞",
+     "Rnd": "⟝See 'Searing Beam of Light' ability⟞",
+     "Dmg": "⟝See 'Searing Beam of Light' ability⟞",
+     "Ability": "-",
+     "name": "Searing Beam of Light",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Warhorses' Steel-shod Hooves",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Wizard's Staff",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Searing Beam of Light",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time this unit attacks with its **Searing Beam of Light**, pick a point on the battlefield within range to be the target. If the attack scores a hit, draw a straight line between that point and the closest point on this unit's base. Inflict D3 mortal damage on each visible unit (friendly and enemy) that the line passes across.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Aura of Protection",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Cities of Sigmar^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, until the start of your next turn, the target has **^^Ward (6+)^^** while it is wholly within 12\" of and visible to this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Irondrakes",
+   "pts": 140,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "CHAMPION",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)",
+    "DUARDIN"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "1",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti‑**^^Infantry^^** (+1 Rend)",
+     "name": "Drakegun",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Plated Fists",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Cinderblast Bomb",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "If this unit is not in combat, pick a visible enemy unit within 6\" of it to be the target.",
+     "effect": "Roll a dice. On a 3+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Luminark of Hysh",
+   "pts": 230,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "WAR MACHINE",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "10",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "24\"",
+     "Atk": "1",
+     "Hit": "2+",
+     "Wnd": "⟝See 'Searing Beam of Light' ability⟞",
+     "Rnd": "⟝See 'Searing Beam of Light' ability⟞",
+     "Dmg": "⟝See 'Searing Beam of Light' ability⟞",
+     "Ability": "-",
+     "name": "Searing Beam of Light",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Warhorses' Steel-shod Hooves",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Searing Beam of Light",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time this unit attacks with its **Searing Beam of Light**, pick a point on the battlefield within range to be the target. If the attack scores a hit, draw a straight line between that point and the closest point on this unit's base. Inflict D3 mortal damage on each visible unit (friendly and enemy) that the line passes across.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Aura of Protection",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Cities of Sigmar^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, until the start of your next turn, the target has **^^Ward (6+)^^** while it is wholly within 12\" of and visible to this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Steam Tank",
+   "pts": 240,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "WAR MACHINE",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "12",
+    "Save": "2+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "D3+2",
+     "Ability": "-",
+     "name": "Steam Cannon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Crushing Wheels",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "2D6",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Steam Gun",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "More Pressure!",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "",
+     "effect": "Roll 2D6. If the roll is less than the number of damage points this unit has, inflict D3 mortal damage on this unit. Otherwise, pick 1 of the following effects to apply to this unit until the start of your next turn:\n***Power the Wheels:*** This unit can use a **^^Run^^** ability and still use **^^Shoot^^** and/or **^^Charge^^** abilities later in the turn.\n***Power the Guns:*** Add 3 to the Attacks characteristic of this unit's **Steam Gun**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Steam Tank Commander",
+   "pts": 250,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "WAR MACHINE",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "12",
+    "Save": "2+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "D3+2",
+     "Ability": "-",
+     "name": "Steam Cannon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Crushing Wheels",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Commander's Sword",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "18\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Commander's Rifle",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "2D6",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Steam Gun",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Division Commander",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Battle, Your Shooting Phase",
+     "declare": "Pick up to 2 friendly **Steam Tank** units to be the targets.",
+     "effect": "For the rest of the turn, add 1 to hit rolls for shooting attacks made by this unit and by each target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "More Pressure!",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "",
+     "effect": "Roll 2D6. If the roll is less than the number of damage points this unit has, inflict D3 mortal damage on this unit. Otherwise, pick 1 of the following effects to apply to this unit until the start of your next turn:\n***Power the Wheels:*** This unit can use a **^^Run^^** ability and still use **^^Shoot^^** and/or **^^Charge^^** abilities later in the turn.\n***Power the Guns:*** Add 3 to the Attacks characteristic of this unit's **Steam Gun**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Pontifex Zenestra, Matriarch of the Great Wheel",
+   "pts": 170,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "PRIEST (2)",
+    "INFANTRY",
+    "WARD (4+)",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "9",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Sceptre of the Wheel",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Acolytes' Club and Axe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "The Great Wheel Turns",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time a model in a visible friendly **^^Sigmarite^^** unit wholly within 12\" of this unit is slain by a combat attack and that model was in combat with the attacking unit, make a number of zealotry rolls of D6 equal to that model's Health characteristic. For each 6+, inflict 1 mortal damage on the attacking units after the **^^Fight^^** ability has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Vessel of Sigmar",
+     "kind": "Ability (Prayer)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Make a chanting roll of D6. If the roll is an unmodified 1, you can re-roll the dice.",
+     "effect": "Pick 1 of the following effects. Pick up to 2 different effects instead if the chanting roll was 10+.\n***Sanctified Ground:*** Until the start of your next turn, visible enemy units that use a **^^Charge^^** ability while they are within 9\" of this unit have **^^Strike-last^^** for the rest of the turn.\n***Ardent Prayers:*** Add 1 to zealotry rolls for friendly **^^Sigmarite^^** units until the start of your next turn.\n***Cast Out Evil:*** Roll a D3 for each visible enemy **^^Wizard^^** and **^^Priest^^** on the battlefield. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.",
+     "keywords": "**^^Prayer^^**",
+     "cast": "",
+     "chant": "5",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Galen and Doralia ven Denst",
+   "pts": 140,
+   "size": 2,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Spell-banishing Pistol",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Wizard^^** (+1 Rend)",
+     "name": "Consecrated Blade",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "18\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti‑**^^Manifestation^^** (+1 Rend), Anti‑**^^Wizard^^** (+1 Rend)",
+     "name": "Anti‑thaumic Crossbow",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Guardian and Mentor",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit contains 2 models, it has **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Weapons of Banishment",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Sigmarite^^** unit wholly within 12\" of this unit and **under orders** to be the target.",
+     "effect": "Until the start of your next turn, while the target is wholly within 12\" of this unit and **under orders**, add 1 to the Damage characteristic of the target's weapons for combat attacks that target enemy **^^Wizards^^**, **^^Priests^^**, and **^^Manifestations^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Battlemage",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "WIZARD (1)",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Wizard's Staff",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Protective Focus",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Battle (Army), Deployment Phase",
+     "declare": "",
+     "effect": "Pick a **^^Spell^^** ability that this unit can use. For the rest of the battle, no mortal damage is inflicted on this unit if it miscasts that spell.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Warden King",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "DUARDIN"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "5",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Runic Hammer",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Fearless Leader",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly **^^Cities of Sigmar Duardin^^** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ancestral Grudgebearer",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Battle (Army), Deployment Phase",
+     "declare": "Pick an enemy unit in your opponent's army to bear a grudge against. You can pick an enemy unit that is in reserve.",
+     "effect": "For the rest of the battle, add 1 to wound rolls for combat attacks made by friendly **^^Cities of Sigmar Duardin^^** units that target that unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Freeguild Fusiliers",
+   "pts": 120,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "STANDARD BEARER (1/10)",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "1",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Fusil-cannon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Bayonet",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Blackpowder Squire",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Battle, Reaction: You declared a **^^Shoot^^** ability for this unit and this unit is in combat",
+     "declare": "",
+     "effect": "This unit's **Blackpowder Squire** is a token. Remove this unit's **Blackpowder Squire** from the battlefield, then add 1 to the Rend characteristic of this unit's ranged weapons for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Fortified Position",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit is **under orders**:\n• This unit's ranged weapons have **Shoot in Combat**.\n• Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Longbeards",
+   "pts": 130,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)",
+    "DUARDIN"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "1",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Venerable Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "'I Thought Duardin Were Made of Sterner Stuff!'",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick another friendly **^^Cities of Sigmar Duardin^^** unit wholly within 12\" of this unit to be the target. You cannot pick a Longbeards unit.",
+     "effect": "Roll a dice. On a 3+, add 1 to wound rolls for the target's combat attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Hammerers",
+   "pts": 170,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "DUARDIN"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "1",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Gromril Great Hammer",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Oathsworn",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While any friendly **Warden Kings** are wholly within this unit's combat range, both this unit and those friendly **Warden Kings** have **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Ironbreakers",
+   "pts": 120,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "DUARDIN",
+    "CHAMPION",
+    "MUSICIAN (1/10)",
+    "STANDARD BEARER (1/10)"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "1",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Ironbreaker Weapon",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Gromril Shieldwall",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "If this unit has not used a **^^Move^^** ability this turn and was not set up this turn, attacks that target this unit cannot score critical hits (treat them as regular hits instead).",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Gyrobomber",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "DUARDIN",
+    "WAR MACHINE",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "6",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Clattergun",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Rotor Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Grudgebuster Bombs",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "If this unit used a **^^Move^^** ability this phase, pick an enemy unit that does not have **^^Fly^^** and that this unit passed across this turn to be the target.",
+     "effect": "Pick 1 of the following effects:\n***Tactical Bombing:*** Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.\n***Drop It All!:*** Make 2 rolls of D3. For each 2+, inflict an amount of mortal damage on the target equal to the roll. Then, roll a D3 for each unit (friendly and enemy) within the target's combat range that does not have **^^Fly^^**. On a 2+, inflict an amount of mortal damage on that unit equal to the roll. Once the 'Drop It All!' effect of this ability has been resolved, this unit cannot use this ability again for the rest of the battle.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Black Ark Fleetmaster",
+   "pts": 90,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "AELF"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Wicked Cutlass and Murder Hook",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "'At Them, You Curs!'",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly **Black Ark Corsairs** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved. If it is picked to do so, add 1 to the Attacks characteristic of the target's melee weapons for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Gyrocopter",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "DUARDIN",
+    "WAR MACHINE",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "5",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Gyrocopter Guns",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Rotor Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Guild Bombs",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Once Per Battle, Your Movement Phase",
+     "declare": "If this unit used a **^^Move^^** ability this phase, pick an enemy unit that does not have **^^Fly^^** and that this unit passed across this turn to be the target.",
+     "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Cogsmith",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "DUARDIN"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "5",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "15\"",
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Cogsmith's Firearms",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Gun Butt and Cog Axe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Direct the Gyrocorps",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick up to 3 visible friendly **Gyrocopter** or **Gyrobomber** units wholly within 18\" of this unit to be the targets.",
+     "effect": "Roll a dice for each target. On a 3+, until the start of your\nnext turn:\n• Add 1 to hit rolls for the target's attacks.\n• Add 2\" to the target's Move characteristic.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Scourgerunner Chariot",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "AELF",
+    "WAR MACHINE"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "8",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "16\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Anti‑**^^Monster^^** (+1 Rend)",
+     "name": "Ravager Harpoon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Dark Steeds' Vicious Bites",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti‑**^^Monster^^** (+1 Rend)",
+     "name": "Hook Spear",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Prize Specimens",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "",
+     "effect": "For the rest of the turn, add 1 to hit rolls and wound rolls for this unit's shooting attacks that target enemy **^^Monsters^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Flagellants",
+   "pts": 80,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Castigating Flails and Clubs",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Glorious Martyrs",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "While a friendly **^^Sigmarite Priest^^** is wholly within this unit's combat range, add 1 to wound rolls for this unit's combat attacks.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Darkshards",
+   "pts": 150,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "AELF",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "15\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Anti-**^^Infantry^^** (+1 Rend)",
+     "name": "Master-crafted Repeater Crossbow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Cruel Dagger",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Storm of Iron-tipped Bolts",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "",
+     "effect": "If this unit has not used a **^^Move^^** ability this turn and was not set up this turn, add 1 to the Attacks characteristic of this unit's **Master‑crafted Repeater Crossbows** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Sorceress on Black Dragon",
+   "pts": 280,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "MONSTER",
+    "FLY",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "AELF",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "14",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Cruel Weapons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "2D6",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat, Companion",
+     "name": "Black Dragon's Noxious Breath",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "7",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Black Dragon's Claws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Black Dragon's Jaws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Black Dragon's Claws** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Command Underlings",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick up to 3 friendly **^^Cities of Sigmar Aelf Infantry^^** units wholly within 12\" of this unit to be targets.",
+     "effect": "Add 3\" to the Move characteristic of each target for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Feed on Life Force",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If any enemy models are slain by this ability, place a **dark sorcery token** next to this unit for the rest of the battle, to a maximum of 3 tokens.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Dark Sorcery",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to casting rolls for this unit for each **dark sorcery token** it has.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Dreadspears",
+   "pts": 110,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "AELF",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Anti-charge (+1 Rend)",
+     "name": "Darkling Spear",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Coven Guard",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit did not charge this turn, add 1 to wound rolls for this unit's attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Bleakswords",
+   "pts": 100,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "AELF",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (2 Hits)",
+     "name": "Darkling Sword",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Merciless Conquerors",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "For the rest of the turn, add 1 to the Attacks characteristic of this unit's melee weapons while it is contesting an objective you do not control.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Executioners",
+   "pts": 150,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "AELF",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Executioner's Draich",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Severing Strike",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit charged this turn, this unit's melee weapons have **Crit (Mortal)**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Kharibdyss",
+   "pts": 150,
+   "size": 1,
+   "kw": [
+    "MONSTER",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "AELF"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "12",
+    "Save": "5+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Fanged Tentacles and Spiked Tail",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Goaded and Whipped",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "Double the Attacks characteristic of this unit's **Companion** melee weapons for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Abyssal Howl",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, the target has a maximum control score of\n1 for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Dreadlord on Black Dragon",
+   "pts": 260,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "MONSTER",
+    "FLY",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "AELF"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "14",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "2D6",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat, Companion",
+     "name": "Black Dragon's Noxious Breath",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "7",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Black Dragon's Claws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Dreadlord's Weapons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Black Dragon's Jaws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Black Dragon's Claws** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Indiscriminate Slaughter",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick each other unit (friendly and enemy) within this unit's combat range to be the targets.",
+     "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Under the Shadow of Black Wings",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to charge rolls for friendly **^^Cities of Sigmar Aelf Cavalry^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Dark Riders",
+   "pts": 170,
+   "size": 5,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "CAVALRY",
+    "STANDARD BEARER (1/5)",
+    "AELF",
+    "MUSICIAN (1/5)"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "3",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Dark Steed's Vicious Bite",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (2 Hits)",
+     "name": "Repeater Crossbow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti-**^^Infantry^^** (+1 Rend)",
+     "name": "Barbed Spear",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Sow Havoc",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a dice. On a 3+:\n• Inflict D3 mortal damage on the target.\n• This unit can immediately use the 'Retreat' ability as if it were your movement phase without any mortal damage being inflicted on it.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Drakespawn Knights",
+   "pts": 190,
+   "size": 5,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "CAVALRY",
+    "STANDARD BEARER (1/5)",
+    "AELF",
+    "MUSICIAN (1/5)"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "3",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Drakespawn's Ferocious Jaws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Barbed Lance",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Bestial Instincts",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "For the rest of the turn, add 1 to the Attacks characteristic of this unit's **Drakespawn's Ferocious Jaws** while it is in combat with any enemy units that had any damage points allocated to them this phase or that had any models slain this phase.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Sorceress",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "WIZARD (1)",
+    "AELF"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Witchstaff",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Cruel Sacrifice",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Cities of Sigmar Aelf^^** unit wholly within 6\" of this unit to be the target.",
+     "effect": "Add 1 to casting rolls for this unit for the rest of the turn. Then, roll a dice. On a 4+, 1 model in the target unit is slain.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Word of Pain",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, subtract 1 from hit rolls and wound rolls for the target's attacks until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Assassin",
+   "pts": 150,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "AELF"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Hero^^** (+1 Rend), Crit (Mortal)",
+     "name": "Poison-coated Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Hidden Murderer",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit is within the combat range of a friendly **^^Infantry^^** unit that has 5 or more models and there are no enemy units within this unit's combat range, this unit is not visible to enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "In for the Kill",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "This unit has **^^Strike-first^^** if it charged in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Black Guard",
+   "pts": 130,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "AELF",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Ebon Halberd",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Steel and Sorcery",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While any friendly **^^Cities of Sigmar Aelf Infantry Heroes^^** are wholly within this unit's combat range, both this unit and those friendly units have **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Drakespawn Chariot",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "AELF",
+    "WAR MACHINE"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "8",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Barbed Spear",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Drakespawn's Ferocious Jaws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Scythed Runners",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "If this unit charged this phase, pick an enemy unit within 1\" of it to be the target.",
+     "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "War Hydra",
+   "pts": 170,
+   "size": 1,
+   "kw": [
+    "MONSTER",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "AELF"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "12",
+    "Save": "5+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "Shoot in Combat, Companion",
+     "name": "Fiery Breath",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Infantry^^** (+1 Rend), Companion",
+     "name": "Razor-sharp Fangs",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Impossible To Destroy",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "",
+     "effect": "**Heal (6)** this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Six-headed Strike",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll 6 dice. For each 3+, inflict 1 mortal damage on the target.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Freeguild Marshal and Relic Envoy",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Master-forged Weapon",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Duelling Pistols",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Front-line Commander",
+     "kind": "Ability (Command)",
+     "color": "Red",
+     "timing": "Once Per Battle (Army), Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "If this unit is **under orders**, pick a friendly **^^Sigmarite Infantry^^** or **^^Monster^^** unit that is wholly within 12\" of this unit or has this unit's **Relic Envoy** next to it and that has not used a **^^Fight^^** ability this turn to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved. If it is picked to do so, the target can use 2 **^^Fight^^** abilities this phase. After the first is used, however, the target has **^^Strike-last^^** for the rest of the turn",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": "1"
+    },
+    {
+     "name": "Attendant Relic Envoy",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "This unit's **Relic Envoy** is a token. Pick a visible friendly **^^Sigmarite^^** unit wholly within 18\" of this unit and not **under orders** to be the target.",
+     "effect": "Place this unit's **Relic Envoy** next to the target. While this unit is **under orders** and on the battlefield and this unit's **Relic Envoy** is next to the target, the target is **under orders**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Alchemite Warforger",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "WIZARD (1)",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Tongstaff",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Runic Crucible",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Sigmarite^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Make an arcane manipulation roll of D6. On a 3+, the target's melee weapons have **Crit (Mortal)** until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Wildercorps Hunters",
+   "pts": 120,
+   "size": 11,
+   "kw": [
+    "INFANTRY",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "CHAMPION (1/11)",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Trailhound's Ferocious Bite",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Wildercorps Hunting Weapons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "15\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Hunting Crossbow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Hunting Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Expert Pathfinders",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Turn (Army), Deployment Phase",
+     "declare": "Pick this unit and up to two friendly non-**^^Monster^^** non-**^^War Machine Sigmarite^^** units if none of them have been deployed.",
+     "effect": "Set up those units in reserve **scouting ahead**. They have now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Prepared Arrival",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "Pick this unit if it is **scouting ahead**.",
+     "effect": "Set up this unit on the battlefield wholly within 9\" of a battlefield edge and more than 9\" from all enemy units. Then, set up each other friendly unit **scouting ahead** wholly within 12\" of this unit and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Gate Gargants",
+   "pts": 320,
+   "size": 2,
+   "kw": [
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "MONSTER",
+    "SIGMARITE",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "10",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Scattershot Cannon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Massive Warmaul",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Aggressive Defenders",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "Pick up to 3 other visible friendly **^^Sigmarite^^** units in combat with any enemy units that are in combat with this unit to be the targets.",
+     "effect": "Each target can use **^^Shoot^^** and/or **^^Charge^^** abilitie even if it used a **^^Retreat^^** ability this turn. In addition, no mortal damage is inflicted on the targets by **^^Retreat^^** abilities for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Open the Gates!",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "Pick a visible friendly non-**^^War Machine Cities of Sigmar^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Add 2 to charge rolls for the target for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Mallus Forgepriest",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "SIGMARITE",
+    "PRIEST (1)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Meteoric Warhammer",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Consecrate the Land",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "Pick an objective you control that this unit is contesting to be the target.",
+     "effect": "If there are no enemy units contesting the target objective, it is considered by you to be **consecrated**. Otherwise, roll a dice. On a 3+, the target objective is considered by you to be **consecrated**.\nWhile they are wholly within 6\" of a **consecrated** objective and **under orders**:\n• Friendly non-**^^War Machine Sigmarite^^** units have **^^Ward (5+)^^**.\n• Friendly **^^Sigmarite War Machines^^** have **^^Ward (6+)^^**.\nIf your opponent gains control of a **consecrated** objective, it is no longer consecrated.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Freeguild Gallants",
+   "pts": 110,
+   "size": 5,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "STANDARD BEARER (1/5)",
+    "INFANTRY",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "2",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Weapons of Gallantry",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Not One Step Back",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "If this unit has not charged this turn, add 1 to the Attacks characteristic and Damage characteristic of this unit's melee weapons.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Break Them Upon the Walls",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit is **under orders**, the melee weapons of other visible friendly **^^Sigmarite^^** units, excluding **Freeguild Gallants** units, have **Anti-charge (+1 Rend)** while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Aqshian Pyrocaster",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "WIZARD (1)",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Burning Fists",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Incandescent Incineration",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible enemy unit within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "If the target was not **incandescent** when they were picked to be the target of this spell:\n• Inflict D3 mortal damage on the target.\n• The target is **incandescent** for the rest of the battle.\nIf the target was **incandescent** when they were picked to be the target of this spell:\n• Allocate 3 damage points to the target (ward rolls cannot be made for those damage points).\n• The target is no longer **incandescent**.",
+     "keywords": "",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Flames of Aqshy",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "",
+     "effect": "Make an arcane manipulation roll of D6. On a 3+, for the rest of the turn, when picking a target for the 'Incandescent Incineration' ability, you can pick a visible enemy unit within 18\" of this unit instead of within 12\".",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Jorvan Kreel, Heir of the Kraken",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Ranger Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Harrying Attacks",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit's **Thexa** is next to an enemy unit, that enemy unit's attacks cannot score critical hits (treat them as regular hits instead).",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Prowling Ash Panther",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "This unit's **Thexa** is a token. If this unit's **Thexa** is not on the battlefield, pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Place this unit's **Thexa** next to the target, then roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If the target is destroyed while this unit's **Thexa** is next to it, remove this unit's **Thexa** from the battlefield.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Fluid Combat Style",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a **^^Fight^^** ability for this unit or a non-**^^Hero Sigmarite Infantry^^** unit wholly within 12\" of this unit.",
+     "declare": "",
+     "effect": "Immediately after the **^^Fight^^** ability used by that unit has been resolved, pick a point on the battlefield within 6\" of this unit and more than 3\" from all units (friendly and enemy) and terrain features. Remove the unit that used the **^^Fight^^** ability from the battlefield and set it up again wholly within 6\" of that point and not in combat.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Freeguild Grenadiers",
+   "pts": 140,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "SIGMARITE",
+    "CHAMPION (1/10)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "1",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Ruin-sweeper Arsenal",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Grenadier Bardiche",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Cinders and Ashes",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "If this unit contains a **Cindergout**, pick a terrain feature or objective contested by this unit, then pick any enemy units contesting that terrain feature or objective to be the targets.",
+     "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Freeguild Command Corps Auxiliaries",
+   "pts": 0,
+   "size": 2,
+   "kw": [
+    "INFANTRY",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "SIGMARITE",
+    "MUSICIAN (1/2)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "3",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Assortment of Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Seize the Souls",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "If this unit contains a **Soul Shepherd**, pick a visible enemy unit within 18\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, the target cannot be healed or have slain models returned to it until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Field Surgery",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "If this unit is not in combat and contains a **War Surgeon**, pick a visible friendly non-**^^War Machine Sigmarite^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, \nIf the target is a non-**^^Hero Infantry^^** unit, return D3 slain models to it. \nIf the target is a non-**^^Hero Cavalry^^** unit, return 1 slain model to it. \nIf the target is a **^^Hero^^** or **^^Monster^^**, **Heal (D3)** the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Freeguild Command Corps Whisperblade",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "INFANTRY",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "3",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Enchanted Rapier",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Lurking Spymaster",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit cannot use or be picked as the target of the 'Form Up!' ability.\nWhile this unit is within the combat range of a friendly **^^Sigmarite Infantry^^** unit that has 3 or more models and there are no other friendly **Whisperblades** within that unit's combat range, this unit cannot be picked to be the target of shooting attacks or combat attacks.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Amethyst Knellmage",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "WIZARD (1)",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Amethyst Scythe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Deathly Candlelight",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible enemy unit within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "The target cannot use commands for the rest of the turn.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ominous Presence",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "",
+     "effect": "Make an arcane manipulation roll of D6. On a 3+, for the rest of the turn, when picking a target for the 'Deathly Candlelight' ability, you can pick a visible enemy unit within 18\" of this unit instead of within 12\".",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Conqueror Cogfort",
+   "pts": 420,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "SIGMARITE",
+    "WAR MACHINE"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "25",
+    "Save": "3+",
+    "Control": "10"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "6D6",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti-**^^Infantry^^** (+1 Rend)",
+     "name": "Realmscorcher Flame Cannon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Shoot In Combat",
+     "name": "Crew's Leadshotters",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "4",
+     "Ability": "Companion",
+     "name": "Crushing Iron Feet",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points:\n• The Attacks characteristic of its **Crushing Iron Feet** is 3.\n• It has a Control characteristic of 5.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Full Charge!",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Any Hero Phase",
+     "declare": "",
+     "effect": "Pick 1 or more of the following effects. For each effect you pick, give this unit a number of **heat tokens** equal to the number beside it.\n**1 *Breaching Assist!*:** If this unit uses the 'Sally Forth' ability this turn, melee weapons used by the targets of that ability have **Charge (+1 Damage)** for the rest of the turn.\n**2 *Full Throttle*:** For the rest of the turn, this unit's Move characteristic is 10\".\n**3 *Repel Boarders!*:** For the rest of the turn, add 2 to the Attacks characteristic of this unit's **Leadshotters** and **Crushing Iron Feet**.\n**4 *Disengage Safeties!*:** For the rest of the turn, the Attacks characteristic of this unit's **Realmscorcher Flame Cannon** is 22.\n**6 *Get Us Out of Here!*:** For the rest of the turn, this unit can use **^^Shoot^^** abilities even if it used a **^^Retreat^^** ability in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Overheating",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Immediately after resolving this unit's 'Full Power!' ability, you must roll a number of dice equal to the number of **heat tokens** this unit has. For each 5+, allocate 1 damage point to this unit (ward rolls cannot be made for those damage points), then remove 1 of this unit's **heat tokens**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "All Aboard!",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick up to 1 friendly **^^Sigmarite Infantry Hero^^** and up to 1 friendly non-**^^Hero Sigmarite Infantry^^** unit that have not been deployed.",
+     "effect": "Set up those units in reserve as this unit's **passengers**. They have now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Sally Forth",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Battle, Any Charge Phase",
+     "declare": "If this unit has not used a **^^Run^^** ability this turn, pick this unit's **passengers** to be the targets.",
+     "effect": "Set up each target wholly within 6\" of this unit and either not in combat or within 1/2\" of an enemy unit. If a target is set up in combat, it has charged. Then, if this unit is not **under orders**, this unit and the targets are **under orders** for the rest of the battle round.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Cannonade Cogfort",
+   "pts": 530,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "SIGMARITE",
+    "WAR MACHINE"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "25",
+    "Save": "3+",
+    "Control": "10"
+   },
+   "weapons": [
+    {
+     "Rng": "24\"",
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "4",
+     "Ability": "-",
+     "name": "Godbreaker Cannon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Infantry^^** (+1 Rend)",
+     "name": "Breacher Cannon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Shoot In Combat",
+     "name": "Crew's Leadshotters",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "4",
+     "Ability": "Companion",
+     "name": "Crushing Iron Feet",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points:\n• The Attacks characteristic of its **Crushing Iron Feet** is 3.\n• It has a Control characteristic of 5.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Full Power!",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Any Hero Phase",
+     "declare": "",
+     "effect": "Pick 1 or more of the following effects. For each effect you pick, give this unit a number of **heat tokens** equal to the number beside it.\n**1 *Launch Countermeasures!*:** Until the start of your next turn, subtract 1 from hit rolls for shooting attacks that target other friendly **^^Sigmarite^^** units while they are wholly within 12\" of this unit and are **under orders**.\n**2 *Full Throttle*:** For the rest of the turn, this unit's Move characteristic is 10\".\n**3 *Calculate Firing Solution!*:** For the rest of the turn, each time this unit uses a **^^Shoot^^** ability, you can re-roll 1 hit roll and 1 wound roll for shooting attacks made with this unit's **Godbreaker Cannon**.\n**6 *Get Us Out of Here!*:** For the rest of the turn, this unit can use **^^Shoot^^** abilities even if it used a **^^Retreat^^** ability in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Overheating",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Immediately after resolving this unit's 'Full Power!' ability, you must roll a number of dice equal to the number of **heat tokens** this unit has. For each 5+, allocate 1 damage point to this unit (ward rolls cannot be made for those damage points), then remove 1 of this unit's **heat tokens**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Special Ammunition",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Reaction: You declared a **^^Shoot^^** ability for this unit.",
+     "declare": "",
+     "effect": "If this unit is **under orders**, roll a dice. On a 3+, pick 1 of the following effects.\n***Nullshot*:** Subtract 1 from ward rolls for damage points inflicted by attacks made with this unit's **Godbreaker Cannon** this phase.\n***Heavy Shot*:** Add 1 to the Rend characteristic of this unit's **Godbreaker Cannon** this phase.\n***Grapeshot*:** After that **^^Shoot^^** ability has been resolve, if all of the attacks made with this unit's **Godbreaker Cannon** targeted the same enemy unit, inflict D3 mortal damage on each other enemy unit within that enemy unit's combat range.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Erasmus Zonn, the Enlightened One",
+   "pts": 160,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "SIGMARITE",
+    "FLY",
+    "CAVALRY",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "9",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "D3",
+     "Ability": "Crit (2 Hits)",
+     "name": "Rod of Radiance",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3+1",
+     "Ability": "Companion",
+     "name": "Glyphwing's Heads",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Lantern of All-Knowledge",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "",
+     "effect": "If this unit is wholly within 9\" of a corner of the battlefield, pick 1 of the following effects to apply until the start of your next turn:\n***Searing Brilliance*:** Friendly **^^Sigmarite^^** units are not visible to enemy units more than 6\" from them while those friendly units are wholly within 6\" of and visible to this unit.\n***Lambent Aura*:** Add 1 to this unit's power level.\n***Luminous Authority*:** Add 2 to arcane manipulation rolls for this unit.\n***Prismatic Diffusion*:** Add 3 to the Attacks characteristic of this unit's **Rod of Radiance** and set its Damage characteristic to 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Realmsphere Mastery",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Any Hero Phase",
+     "declare": "Pick a visible enemy **^^Manifestation^^** within 12\" of this unit and that was not set up this turn to be the target.",
+     "effect": "Make an arcane manipulation roll of 2D6. If the roll equals or exceeds the target's banishment value, set up an **^^Endless Spell^^** that can be summoned using a **^^Summon^^** spell that this unit can cast within 1\" of the target and more than 3\" from all enemy units and other enemy **^^Manifestations^^**. If that **^^Endless Spell^^** has multiple parts, both parts must be set up within 1\" of the target. This unit has summoned that **^^Endless Spell^^**. If there is already a friendly **^^Endless Spell^^** of the same type on the battlefield, it is immediately banished and removed from play before being set up as described above. Then, the target is banished and removed from play.'",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Four Corners of the Realms",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Make a casting roll of 2D6.",
+     "effect": "Remove this unit from the battlefield and set it up again wholly within 9\" of a corner of the battlefield and more than 3\" from all enemy units.",
+     "keywords": "**^^Spell^^**",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Pontifex Zenestra, Matriarch of the Great Wheel (Scourge of Aqshy)",
+   "pts": 160,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "PRIEST (2)",
+    "INFANTRY",
+    "WARD (4+)",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "9",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Sceptre of the Wheel",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Acolytes' Club and Axe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Sigmar's Blessing",
+     "kind": "Ability (Prayer)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Sigmarite^^** unit wholly within 12\" of this unit to be the target, then make a chanting roll of D6.",
+     "effect": "Until the start of your next turn:\n• The target's melee weapons have **Charge (+1 Damage)**.\n• If the chanting roll was 10+, the target has **^^Ward (5+)^^** if it charged in the same turn.",
+     "keywords": "**^^Prayer^^**",
+     "cast": "",
+     "chant": "5",
+     "cost": ""
+    },
+    {
+     "name": "Unquenchable Faith",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "If this unit would be destroyed, before removing it from play, this unit can immediately use the 'Sigmar's Blessing' ability as if it were your hero phase. If it does so:\n• That prayer does not count towards the number of **^^Prayer^^** abilities this unit can use this phase.\n• Instead of making a chanting roll for that prayer, you must use a value of 10 for the roll that cannot be modified.\n• The effect of that prayer applies for the rest of the battle instead of until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Alchemite Warforger (Scourge of Aqshy)",
+   "pts": 90,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "WIZARD (1)",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Tongstaff",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Crucible of Rage",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "",
+     "effect": "You can spend 1 **rage dice**. If you do:\n• Apply the effect below.\n• If your opponent's **fury level** is lower than yours, they must increase their fury level by 1, to a maximum of 7.\nOtherwise, roll a dice. On a 3+, apply the effect below.\nUntil the start of your next turn, add 1 to casting rolls for friendly **^^Cities of Sigmar^^** units while they are wholly within 6\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "title": "Battle Traits",
+   "items": [
+    {
+     "name": "Battle Traits",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Form Up",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Start of Battle Round",
+       "declare": "Pick a friendly **^^Cities of Sigmar ^^** unit to use this ability, then pick 2 other visible friendly **^^Cities of Sigmar^^** units wholly within 12\" of it to be the targets.\nThe unit using this ability and the targets:\n• cannot be **under orders**.\n• must each be a different unit type.",
+       "effect": "For the rest of the battle round, the unit using this ability and the targets are **under orders**.\n**Designer's Note:** *'Unit type' refers to the name of the warscroll (Core Rules, 4.0), e.g. 'Freeguild Cavalier-Marshal' or 'Cannonade Cogfort'.*",
+       "keywords": "**^^Officar's Order^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Take Aim",
+       "kind": "Ability (Activated)",
+       "color": "Blue",
+       "timing": "Once Per Turn (Army), Your Shooting Phase",
+       "declare": "Pick a friendly unit that is **under orders** to use this ability.",
+       "effect": "Pick 1 of that unit's ranged weapons. Add 1 to hit rolls for shooting attacks made with that weapon for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Sound the Attack",
+       "kind": "Ability (Activated)",
+       "color": "Orange",
+       "timing": "Once Per Turn (Army), Reaction: You declared a **^^Charge^^** ability for a unit that is **under orders**",
+       "declare": "",
+       "effect": "You can change the lowest D6 in the charge roll to match the highest D6.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Into Them, You Dogs!",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Once Per Turn (Army), Any Combat Phase",
+       "declare": "Pick a friendly **^^Hero^^** that is **under orders** to use this ability. That unit is the **field officer** for the rest of the turn. Then, pick 2 other visible friendly non-**^^Hero^^** units that are **under orders** and wholly within 12\" of the **field officer** to be the targets.",
+       "effect": "For the rest of the turn, the first time the **field officer** uses a **^^Fight^^** ability, you can pick a target that has not used a **^^Fight^^** ability this turn. That target is **inspirited** and the other target is **emboldened**.The **inspirited** target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by the **field officer** has been resolved. Then, if the **emboldened** target has not used a **^^Fight^^** ability this turn, it can be picked to use a **^^Fight^^** ability immediately after the **inspirited** target's **^^Fight^^** ability has been resolved.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Hurl Them Back!",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "One Per Turn (Army), Any Combat Phase",
+       "declare": "Pick a friendly unit that is **under orders** and in combat with an enemy unit that charged this turn to use this ability.",
+       "effect": "For the rest of the turn, add 1 to the Rend characteristic of that unit's melee weapons.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Artefacts of Power",
+   "items": [
+    {
+     "name": "The Last Blade of Embergard",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "The Last Blade of Embergard",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Deployment Phase",
+       "declare": "",
+       "effect": "This unit can use this ability while it is in reserve. Pick 1 of this unit's non-**Companion** melee weapons. Add 2 to that weapon's Attacks characteristic and Rend characteristic for the rest of the battle.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Bones of Saint Ignifus",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Bones of Saint Ignifus",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Reaction: You declared a **^^Spell^^** or **^^Prayer^^** ability for a visible unit that is wholly within 12\" of this unit and **under orders**",
+       "declare": "",
+       "effect": "Add 1 to the casting roll or chanting roll for that ability.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "The Sphere Celestial",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "The Sphere Celestial",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If this unit is not in combat, pick a point on the battlefield within 1\" of this unit and more than 3\" from all other units (friendly and enemy) and terrain features to be the target point. Then, pick another visible friendly **^^Cities of Sigmar Infantry^^** or ^^**Cavalry Hero^^** that is wholly within 18\" of this unit and not in combat to be the target unit.",
+       "effect": "Remove this unit from the battlefield and set it up again within 1\" of the target unit and not in combat. Then, remove the target from the battlefield and set it up again within 1\" of the target point and not in combat. This unit and the target unit can use **^^Move^^** abilities in the following movement phase (this is an exception to Core Rules, 24.0).",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Battle Formations: Cities of Sigmar",
+   "items": [
+    {
+     "name": "Stalwart Guardians",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "To the Last",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "Each time a friendly unit that is **under orders** uses the 'Rally' command, you can make 3 additional rally rolls of D6.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Collegiate Exemplars",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Masters of the Arcane",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to arcane manipulation rolls and banishment rolls for friendly **^^Wizards^^** that are **under orders**.\n**Designer's Note:** *Wizards in this battletome use arcane manipulation rolls for a variety of powerful effects.*",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Zealous Hordes",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Throngs of the Faithful",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Once Per Turn (Army), Reaction: Your opponent declared a **^^Fight^^** ability.",
+       "declare": "",
+       "effect": "For the rest of the turn, add 1 to wound rolls for combat attacks made by friendly **^^Sigmarite^^** units that target the enemy unit using that **^^Fight^^** ability.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Swift Reinforcements",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Dawnbringer Crusade",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Turn (Army), Your Hero Phase",
+       "declare": "Pick a friendly non-**^^Hero Cities of Sigmar Infantry^^** unit wholly within friendly territory to use this ability.",
+       "effect": "If that unit is in combat, it can move 6\". It can move through the combat ranges of enemy units but can only end that move in combat with units it was in combat with at the start of the move. It does not have to end the move in combat.\nIf that unit is not in combat, it can move 6\". It cannot move into combat during any part of that move.",
+       "keywords": "**^^Move^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Thrall Warhost",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Have No Mercy",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Turn (Army), Start of Battle Round",
+       "declare": "Pick a visible enemy unit to be the target.",
+       "effect": "Until the start of the next battle round, add 1 to wound rolls for combat attacks made by friendly **^^Cities of Sigmar Aelf^^** units that target that enemy unit while it is damaged or has had any models slain in the same turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Grudgebound War Throng",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "I've Seen Worse and Killed Better",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Once Per Turn (Army), Enemy Combat Phase",
+       "declare": "Pick an enemy unit that charged this turn and is in combat with any friendly **^^Cities of Sigmar Duardin^^** units that did not charge this turn to be the target.",
+       "effect": "Roll a dice. On a 4+, other than the **Companion** weapon ability, weapon abilities for the target's combat attacks have no effect for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Heroic Traits",
+   "items": [
+    {
+     "name": "Stentorian General",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Stentorian General",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "Subtract 1 from ward rolls for enemy units while they are in combat with any visible friendly units that are wholly within 12\" of this unit and **under orders**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Beloved Leader",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Beloved Leader",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Ignore negative modifiers to hit rolls and wound rolls applied by enemy abilities for attacks made by visible friendly units that are wholly within 12\" of this unit and **under orders**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Grizzled Drillmaster",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Grizzled Drillmaster",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Other visible friendly units have **^^Ward (6+)^^** while they are wholly within 12\" of this unit and **under orders**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Cosmopolitan Leader",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Cosmopolitan Leader",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Cities of Sigmar Infantry^^** or **^^Cavalry^^** unit wholly within 12\" of this unit to be the target. If this unit is **^^Human^^**, pick up to 3 eligible units to be the targets instead.",
+       "effect": "Roll a dice. On a 3+, until the start of your next turn:\n• If the target is **^^Human^^**, add 1 to wound rolls for the target's combat attacks.\n• If the target is **^^Duardin^^**, add 1 to charge rolls for the target.\n• If the target is **^^Aelf^^**, add 3 to the target's control score.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Draw Steel!",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Draw Steel!",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Any Combat Phase",
+       "declare": "If this unit charged this turn, pick a friendly **^^Cities of Sigmar Human^^** unit that charged this turn and is wholly within 12\" of this unit to be the target.",
+       "effect": "Add 1 to the Attacks characteristic of the target's melee weapons for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Astute Tactician",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Astute Tactician",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Cities of Sigmar^^** unit wholly within 12\" of this unit to be the target.",
+       "effect": "For the rest of the turn, add 1 to charge rolls for the target and add 2 to run rolls for the target.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Pious Veteran",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Pious Veteran",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "Each time you pick targets while declaring a **^^Prayer^^** ability used by a friendly **^^Cities of Sigmar Priest^^**, if this unit is eligible to be picked, you can pick it to be an additional target",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Bristling Attitude",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Bristling Attitude",
+       "kind": "Ability (Activated)",
+       "color": "Orange",
+       "timing": "Reaction: Opponent declared a **^^Charge^^** ability for a visible unit within 12\" of this unit",
+       "declare": "",
+       "effect": "Spend any number of rage dice. If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7. Then, roll **X** dice, where **X** is the number of rage dice spent. For each 3+, subtract 1 from the charge roll.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Prayer Lores",
+   "items": [
+    {
+     "name": "Scriptures of Sigmar",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Holy Aegis",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Cities of Sigmar Priest^^** to chant this prayer, pick a visible friendly **^^Cities of Sigmar^^** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "If the chanting roll was 7+, you can pick another eligible unit to be a second target. Until the start of your next turn, ignore the first damage point that would be allocated to each target in each phase.",
+       "keywords": "**^^Prayer^^**, **^^Unlimited^^**",
+       "cast": "",
+       "chant": "3",
+       "cost": ""
+      },
+      {
+       "name": "Benediction of the High Heavens",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Cities of Sigmar Priest^^** to chant this prayer, pick a visible friendly **^^Cities of Sigmar^^** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "**Heal (D3)** the target and the chanter. If the chanting roll was 7+, **Heal (D3)** each visible friendly **^^Cities of Sigmar^^** unit wholly within 12\" of the chanter instead.",
+       "keywords": "**^^Prayer^^**",
+       "cast": "",
+       "chant": "3",
+       "cost": ""
+      },
+      {
+       "name": "Reckoning of Sinners",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Cities of Sigmar Priest^^** to chant this prayer, pick a visible friendly **^^Cities of Sigmar^^** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "If the chanting roll was 10+, you can pick another eligible unit to be a second target. Until the start of your next turn, enemy units have a maximum control score of 1 while they are in combat with any of the targets.",
+       "keywords": "**^^Prayer^^**",
+       "cast": "",
+       "chant": "5",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Spell Lores",
+   "items": [
+    {
+     "name": "Spells of the Collegiate Arcane",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Curse of Scorched Metal",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Cities of Sigmar Wizard^^** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Until the start of your next turn, the first time the target uses an **^^Attack^^** ability, for each unmodified hit roll of 1 for an attack made by the target as part of that **^^Attack^^** ability, inflict 1 mortal damage on the target after that **^^Attack^^** ability has been resolved.",
+       "keywords": "**^^Spell^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "High Star's Light",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Cities of Sigmar Wizard^^** to cast this spell, pick a visible friendly **^^Cities of Sigmar^^** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Add 1 to the Attacks characteristic of the target's melee weapons for the rest of the turn.",
+       "keywords": "**^^Spell^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Speed of the Twin-tailed Comet",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Cities of Sigmar Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "For the rest of the turn, add 3\" to the Move characteristic of friendly non-**^^War Machine Cities of Sigmar^^** units while they are wholly within 12\" of the caster and visible to them.",
+       "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Ironweld Innovations",
+   "items": [
+    {
+     "name": "Prototype Arco-Combustor Uninhibitor",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Prototype Arco-Combustor Uninhibitor",
+       "kind": "Ability (Activated)",
+       "color": "Grey",
+       "timing": "Once Per Battle, Your Movement Phase",
+       "declare": "",
+       "effect": "For the rest of the turn:\n• Add 3\" to this unit's Move characteristic\n• This unit can use **^^Shoot^^** abilities even if it used a **^^Retreat^^** ability in the same turn.\n• No mortal damage is inflicted on this unit by **^^Retreat^^** abilities.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Emergency Bellows",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Emergency Bellows",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "End of Any Turn",
+       "declare": "",
+       "effect": "Remove 1 of this unit's **heat tokens**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Grapple-net Launcher",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Grapple-net Launcher",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Once Per Battle, Enemy Combat Phase",
+       "declare": "If this unit did not charge this turn, pick an enemy unit in combat with this unit and that charged this turn to be the target.",
+       "effect": "Subtract 1 from the Attacks characteristic of the target's melee weapons for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Decorations for Valour",
+   "items": [
+    {
+     "name": "Twin-tailed Comet of Honour",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Twin-tailed Comet of Honour",
+       "kind": "Ability (Passive)",
+       "color": "Purple",
+       "timing": "",
+       "declare": "",
+       "effect": "While this unit has any champions, add 5 to this unit's control score.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "The Living City Cross",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "The Living City Cross",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "While this unit has any champions, subtract 1 from hit rolls for shooting attacks that target this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Aqshian Order of Merit",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Aqshian Order of Merit",
+       "kind": "Ability (Passive)",
+       "color": "Purple",
+       "timing": "",
+       "declare": "",
+       "effect": "While this unit has any champions, if an enemy unit in combat with this unit uses the 'Eruption of Fury' ability, when resolving attacks as part of that ability, on an unmodified hit roll of 6, do not inflict an additional D3 mortal damage on each unit in combat with that unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

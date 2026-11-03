@@ -1,0 +1,2205 @@
+{
+ "name": "Kharadron Overlords",
+ "units": [
+  {
+   "name": "Aether-Khemist",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "INFANTRY",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Heavy Instruments",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "8\"",
+     "Atk": "3D6",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "2",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Atmospheric Anatomiser",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Aetheric Augmentation",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "Pick a friendly **Arkanaut Company** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, add 1 to the Rend characteristic of the target's ranged weapons for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Atmospheric Isolation",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from charge rolls for enemy units within 9\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Drekki Flynt",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "UNIQUE",
+    "ORDER",
+    "INFANTRY",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "6",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "2D6",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Shoot in Combat",
+     "name": "The Aethermatic Equaliser Mk. III",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend)",
+     "name": "Grunnsson's Axe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Captain of the Aelsling",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick an **Arkanaut Frigate** in this unit's regiment to be the target. This unit can use this ability while in reserve, and the target can also be in reserve.",
+     "effect": "The target has the **^^Aelsling^^** keyword. Add 1 to the Damage characteristic of the target's **Boarding Weapons** for the rest of the battle.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Auxiliary Skyhook",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick an enemy **^^Monster^^** in combat with this unit to be the target.",
+     "effect": "Roll a D3. On a 2+:\n• Inflict an amount of mortal damage on the target equal to the roll.\n• Subtract 1 from wound rolls made for the target's attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "She Can Handle It!",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "You can re-roll run rolls and charge rolls for the **^^Aelsling^^** while it is wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Grundstok Gunhauler",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "FLY",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "WAR MACHINE",
+    "SKYVESSEL"
+   ],
+   "stats": {
+    "Move": "14\"",
+    "Health": "10",
+    "Save": "2+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "15\"",
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Sky Ordnance",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Boarding Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Long-line Slings",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "When you use the 'Transport Skyfarers' ability for this unit, you can pick units in combat to be targets.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Light Bomb Racks",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Your Movement Phase",
+     "declare": "Pick an enemy unit that does not have **^^Fly^^** and that this unit passed across this phase to be the target.",
+     "effect": "Roll 4 dice. For each 4+, inflict 1 mortal damage on the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Transport Capacity",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit can transport 1 friendly **^^Kharadron Overlords Infantry^^** units with a model count of up to 5 (see Battle Traits).",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Aethershot Overwatch",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
+     "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Arkanaut Admiral",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "INFANTRY",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "6",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Shoot in Combat",
+     "name": "Masterwork Volley Pistol",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Skalfhammer",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "The Admiral's Flagship",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "Pick a friendly **^^Flagship^^** wholly within 12\" of this unit to be the target.",
+     "effect": "For the rest of the phase, each time the target uses a **^^Shoot^^** ability, you can re-roll 1 of the hit rolls made for that ability.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "'Bring Every Gun to Bear!'",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "Pick a friendly **Skyvessel** wholly within 24\" of this unit to be the target.",
+     "effect": "For the rest of the turn, add 1 to the Attacks characteristic of the target's ranged weapons.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Brokk Grungsson, Lord-Magnate of Barak-Nar",
+   "pts": 260,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WARMASTER",
+    "UNIQUE",
+    "ORDER",
+    "INFANTRY",
+    "FLY",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "8",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D3+3",
+     "Ability": "-",
+     "name": "Grungsson's Boast",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Shoot in Combat",
+     "name": "The Magnate's Charter",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Crit (2 Hits)",
+     "name": "Brokk's Aethermatic Saw",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Command the Fleet",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Once Per Battle, Your Movement Phase",
+     "declare": "Pick up to 3 visible friendly **^^Skyvessels^^** wholly within 24\" of this unit that are not in combat to be the targets.",
+     "effect": "Each target can use a **^^Run^^** ability and still use **^^Shoot^^** and/or **^^Charge^^** abilities later in the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "First Rule of Grungsson",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick up to 2 other friendly **^^Skyfarer^^** units within this unit's combat range to be the targets.",
+     "effect": "Add 1 to the Attacks characteristic of the targets' melee weapons for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Moustache-mounted Aetherblasters",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Aetheric Navigator",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "INFANTRY",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "5",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Ranging Pistol",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Zephyrscope",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Read the Winds",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "Pick a friendly **^^Skyvessel^^** or **^^Auto-Endrin^^** within this unit's combat range and that is not in combat to be the target.",
+     "effect": "Remove the target from the battlefield and set it up again on the battlefield more than 9\" from all enemy units. Then, if the target is a **^^Skyvessel^^**, you can remove this unit from the battlefield and set it up again on the battlefield wholly within 6\" of the target and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Aethersight",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit can use **^^Unbind^^** abilities as if it had **^^Wizard (1)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Endrinmaster with Endrinharness",
+   "pts": 150,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "INFANTRY",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "6",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Aethermight Hammer",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "'Aye Aye, Captain!'",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a friendly **^^Skyvessel^^** within this unit's combat range to be the target.",
+     "effect": "For the rest of the turn:\n• The target can use a **^^Retreat^^** or **^^Run^^** ability and still use **^^Shoot^^** abilities later in the turn.\n• No mortal damage is inflicted on the target by **^^Retreat^^** abilities.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Mobile Repairs",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a friendly **^^Skyvessel^^** or **Zontari Endrin Dock** within this unit's combat range to be the target.",
+     "effect": "Roll a dice. On a 2+, **Heal (3)** the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Codewright",
+   "pts": 80,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "INFANTRY",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "5",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Battletome",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Aethershot Pistol",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Advisory Role",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick up to 3 visible friendly **^^Skyfarers^^** units to be the targets.",
+     "effect": "Roll a dice for each target. On a 3+, pick 1 of the following effects to apply to that target for the rest of the turn:\n***Seek New Prospects:*** Add 5 to the target's control score.\n***Don't Argue With the Wind:*** Add 1 to run rolls and charge rolls for the target.\n***There's No Trading With Some People:*** The target can use a **^^Retreat^^** ability and still use **^^Shoot^^** abilities later in the turn. In addition, no mortal damage is inflicted on the target by **^^Retreat^^** abilities.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Grundstok Thunderers",
+   "pts": 130,
+   "size": 5,
+   "kw": [
+    "CHAMPION",
+    "INFANTRY",
+    "ORDER",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER",
+    "STANDARD BEARER (1/5)"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "2",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Grundstok Mortar or Aethercannon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Rng": "18\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Aethershot Rifle",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Gun Butt",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Aetheric Fumigator or Decksweeper",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Specialist Grundstok Ammunition",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase, Reaction: You declared a **^^Shoot^^** ability for this unit",
+     "declare": "Pick **Shieldbreaker** ammunition or **Thunderdrakk** ammunition.",
+     "effect": "If all of the attacks made for that **^^Shoot^^** ability target the same enemy unit, after that **^^Shoot^^** ability has been resolved, roll a dice and add the number of damage points allocated to the target by that **^^Shoot^^** ability. If the roll is higher than the target's Control characteristic, apply the following effect to the target based on the ammunition type picked:\n***Shieldbreaker:*** Ward rolls cannot be made for the target until the start of your next turn.\n***Thunderdrakk:*** That target has a maximum control score of 1 until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Arkanaut Company",
+   "pts": 80,
+   "size": 10,
+   "kw": [
+    "CHAMPION",
+    "INFANTRY",
+    "ORDER",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "1",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Skypike",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Privateer Pistol",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Arkanaut Hand Weapon",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "15\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Privateer Heavy Weapon",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Grizzled Buccaneers",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
+     "effect": "Roll a dice. On a 3+:\n• This unit can immediately use a **^^Shoot^^** ability as if it were your shooting phase but all of its attacks must target the target enemy unit.\n• For the rest of the phase, this unit's **Privateer Heavy Weapons** have **Shoot in Combat**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Endrinriggers",
+   "pts": 90,
+   "size": 3,
+   "kw": [
+    "CHAMPION",
+    "INFANTRY",
+    "ORDER",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "2",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "15\"",
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend)",
+     "name": "Skyrigger Heavy Weapon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Gun Butt",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Rapid-fire Rivet Gun",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-charge (+1 Rend)",
+     "name": "Aethermatic Saw",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "15\"",
+     "Atk": "2D6",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (2 Hits)",
+     "name": "Aethermatic Volley Gun",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Emergency Field Repairs",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "Pick a friendly **^^Skyvessel^^** or **Zontari Endrin Dock** within this unit's combat range to be the target.",
+     "effect": "Make a field repairs roll of D6 for each model in this unit. For each 4-5, **Heal (1)** the target. For each 6, **Heal (2)** the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Skywardens",
+   "pts": 130,
+   "size": 3,
+   "kw": [
+    "CHAMPION",
+    "INFANTRY",
+    "ORDER",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "2",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "15\"",
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend)",
+     "name": "Skyrigger Heavy Weapon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Gun Butt",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Vulcaniser Pistol",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Skywarden's Skypike",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "15\"",
+     "Atk": "2D6",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (2 Hits)",
+     "name": "Aethermatic Volley Gun",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Timed Charges",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a D3. On a 2+:\n• Inflict an amount of mortal damage on the target equal to the roll.\n• This unit can immediately use the 'Retreat' ability as if it were your movement phase without any mortal damage being inflicted on it.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Endrinmaster with Dirigible Suit",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "INFANTRY",
+    "FLY",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "8",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Aethercannon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Dirigible Suit Weapon Battery",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Upgraded Aethermatic Saw",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Combat Engineers",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick this unit and up to 1 friendly **Endrinriggers** unit wholly within 12\" of this unit to be the targets.",
+     "effect": "For the rest of the turn, combat attacks made by the targets against enemy units that charged this turn have **Crit (2 Hits)**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Mobile Repairs",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a friendly **^^Skyvessel^^** or **Zontari Endrin Dock** within this unit's combat range to be the target.",
+     "effect": "Roll a dice. On a 2+, **Heal (3)** the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Arkanaut Ironclad",
+   "pts": 430,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "FLY",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "WAR MACHINE",
+    "SKYVESSEL"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "18",
+    "Save": "2+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "24\"",
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Great Sky Ordnance",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Rng": "18\"",
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Aethershock Torpedoes",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "8",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Boarding Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Incoming!",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
+     "effect": "Roll a dice. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Great Sky Ordnance** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Heavy Bomb Racks",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Your Movement Phase",
+     "declare": "Pick an enemy unit that does not have **^^Fly^^** and that this unit passed across this phase to be the target.",
+     "effect": "Roll 10 dice. For each 4+, inflict 1 mortal damage on the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Transport Capacity",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit can transport up to 3 friendly **^^Kharadron Overlords Infantry^^** units with a combined model count of up to 22 (see Battle Traits).",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Arkanaut Frigate",
+   "pts": 280,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "FLY",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "WAR MACHINE",
+    "SKYVESSEL"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "14",
+    "Save": "2+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "24\"",
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Heavy Sky Ordnance",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "8",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Boarding Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Assault Boat",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Your Charge Phase",
+     "declare": "This unit cannot use this ability if it is in combat or has used a **^^Run^^** or **^^Retreat^^** ability this turn. Pick a number of units up to its Transport Capacity that are wholly within 6\" of it, are not in combat and that have not charged this turn to be the targets. Then, make a charge roll of 2D6.",
+     "effect": "This unit can move a distance up to the value of the charge roll and must end the move within 1/2\" of a visible enemy unit. If it does so:\n• Remove the targets from the battlefield and set them up again wholly within this unit's combat range. The targets can be set up in combat.\n• This unit and the targets have charged, and the targets cannot use another **^^Core^^** ability this phase.\n• Pick up to 1 of the targets to have **^^Strike-first^^** for the rest of the turn.",
+     "keywords": "**^^Core^^**, **^^Move^^**, **^^Charge^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Heavy Sky Ordnance** is 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Medium Bomb Racks",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Your Movement Phase",
+     "declare": "Pick an enemy unit that does not have **^^Fly^^** and that this unit passed across this phase to be the target.",
+     "effect": "Roll 6 dice. For each 4+, inflict 1 mortal damage on the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Transport Capacity",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit can transport up to 2 friendly **^^Kharadron Overlords Infantry^^** units with a combined model count of up to 12 (see Battle Traits).",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Incoming!",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
+     "effect": "Roll a dice. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Null-Khemist",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "INFANTRY",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "8",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Prospecting Clamp",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "8\"",
+     "Atk": "3D6",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Null-gas Extinguisher",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Protection of the Void",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While they are wholly within 12\" of this unit, friendly **^^Skyfarer^^** units have **^^Ward (5+)^^** against mortal damage inflicted by **^^Spell^^** abilities, **^^Prayer^^** abilities and abilities used by **^^Manifestations^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Nullsuit",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Double the Damage characteristic of this unit's weapons for attacks that target **^^Priests^^**, **^^Wizards^^**, or **^^Manifestations^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vongrim Salvagers",
+   "pts": 110,
+   "size": 5,
+   "kw": [
+    "CHAMPION",
+    "INFANTRY",
+    "ORDER",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "2",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Crit (2 Hits)",
+     "name": "Vongrim Cutlass",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Privateer Pistol",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Spotter's Flaregun",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an objective within 9\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, apply the following effects for the rest of the turn:\n• Add 1 to hit rolls for combat attacks made by friendly **^^Skyfarer^^** units that target a unit that is contesting the target objective.\n• Add 1 to the Rend characteristic of melee weapons used by friendly **Vongrim Salvagers** and **Vongrim Harpoon Crew** units for attacks that target a unit that is contesting the target objective",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vongrim Harpoon Crew",
+   "pts": 120,
+   "size": 5,
+   "kw": [
+    "CHAMPION",
+    "INFANTRY",
+    "ORDER",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "2",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Pioneer Weapons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend)",
+     "name": "Skydrake Harpoon or Firearm",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Light Endrinpacks",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit is in combat, it can move 2D6\" but must end that move in combat.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Zontari Endrin Dock",
+   "pts": 20,
+   "size": 1,
+   "kw": [
+    "FACTION TERRAIN",
+    "ORDER",
+    "KHARADRON OVERLORDS",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "-",
+    "Health": "10",
+    "Save": "3+",
+    "Control": "-"
+   },
+   "weapons": [],
+   "abilities": [
+    {
+     "name": "Repair Routines",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a friendly **^^Skyvessel^^** within 3\" of this terrain feature to be the target.",
+     "effect": "Make a repair roll of D6. Add 1 to the roll if there is a friendly **Endrinmaster with Dirigible Suit** or **Endrinmaster with Endrinharness** within 3\" of this terrain feature. On a 4+, **Heal (3)** the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Release the Auto-Endrins",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "",
+     "effect": "Set up a friendly **Nullifier Auto-Endrin**, **Stuncloud Auto-Endrin** and **Grudgeblast Auto-Endrin** (see the Auto-Endrin warscroll) on the battlefield within friendly territory, wholly within 6\" of this terrain feature and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Endrinworks Outpost",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a friendly **^^Auto-Endrin^^** or replacement **^^Auto-Endrin^^** that has been removed from the battlefield to be the target.",
+     "effect": "Make a manufacturing roll of D6. Add 1 to the roll if there is a friendly **Endrinmaster with Dirigible Suit** or **Endrinmaster with Endrinharness** within 3\" of this terrain feature. On a 4+, set up a replacement **^^Auto-Endrin^^** on the battlefield, wholly within 6\" of this terrain feature and more than 3\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Null-Khemist (Scourge of Aqshy)",
+   "pts": 160,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "INFANTRY",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "8",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Prospecting Clamp",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "8\"",
+     "Atk": "3D6",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Null-gas Extinguisher",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Diligent Researcher",
+     "kind": "Ability (Passive)",
+     "color": "Purple",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time your opponent spends any rage dice as part of the 'Eruption of Fury' ability, after that ability has been resolved, if this unit is not in combat, it can move up to **X**D6\", where **X** is the number of rage dice spent. It cannot end that move in combat.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Customised Nullsuit",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "• This unit can use **^^Unbind^^** and **^^Banish^^** abilities as if it had **^^Wizard (1)^^**.\n• Add 1 to the number of dice rolled when making unbinding rolls and banishment rolls for this unit, to a maximum of 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Endrinriggers (Scourge of Aqshy)",
+   "pts": 120,
+   "size": 3,
+   "kw": [
+    "CHAMPION",
+    "INFANTRY",
+    "ORDER",
+    "KHARADRON OVERLORDS",
+    "DUARDIN",
+    "SKYFARER"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "2",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "15\"",
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend)",
+     "name": "Skyrigger Heavy Weapon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Gun Butt",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Rapid-fire Rivet Gun",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-charge (+1 Rend)",
+     "name": "Aethermatic Saw",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "15\"",
+     "Atk": "2D6",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (2 Hits)",
+     "name": "Aethermatic Volley Gun",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "We're Working Here",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "",
+     "effect": "Until the start of your next turn, if this unit has not charged in the same turn, the following cumulative effects apply depending on your **fury level**.\n**1+ *Irked*:** This unit's **Aethermatic Saws** have **Crit (Auto-wound)**.\n**4+ *Exasperated*:** This unit has Ward (5+).\n**7 *Incensed*:** Add 1 to the Damage characteristic of this unit's melee weapons.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "title": "Battle Traits",
+   "items": [
+    {
+     "name": "Battle Traits",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Skyvessel Cover",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Subtract 1 from hit rolls for attacks that target friendly **^^Kharadron Overlords Infantry^^** units that have not charged in the same turn while they are wholly within 6\" of a friendly **Arkanaut Ironclad** or **Arkanaut Frigate** that has not charged in the same turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Flying High",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Battle (Army), Deployment Phase",
+       "declare": "Pick a friendly **^^Skyvessel^^** that is in a regiment from which no units have been deployed, then pick a number of units up to its Transport Capacity (see its warscroll) that are in its regiment.",
+       "effect": "Set up all of those units in reserve **in the clouds**. They have now been deployed.",
+       "keywords": "**^^Deploy^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Descend from the Clouds",
+       "kind": "Ability (Activated)",
+       "color": "Gray",
+       "timing": "Your Movement Phase",
+       "declare": "Pick a friendly **^^Skyvessel^^** **in the clouds** to use this ability.",
+       "effect": "Set up that **^^Skyvessel^^** anywhere on the battlefield more than 9\" from all enemy units. Then, set up all other units that were set up **in the clouds** with that **^^Skyvessel^^** wholly within 6\" of it and more than 9\" from all enemy units.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Transport Skyfarers",
+       "kind": "Ability (Activated)",
+       "color": "Gray",
+       "timing": "Your Movement Phase, Reaction: You declared a non-**^^Charge Move^^** ability for a friendly **^^Skyvessel^^**",
+       "declare": "The **^^Skyvessel^^** using that **^^Move^^** ability",
+       "effect": "Pick a number of units up to that **^^Skyvessel^^**'s Transport Capacity (see its warscroll) that are wholly within 6\" of it and not in combat to be the targets. Units that have been transported this turn cannot be targets.\nRemove the targets from the battlefield. After the **^^Skyvessel^^** ends its move, you must set up each target unit on the battlefield, wholly within 6\" of that **^^Skyvessel^^** and not in combat. Those units have been transported. A unit cannot use **^^Charge^^** abilities if it was transported in the same turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "The Flagship",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Battle (Army), Deployment Phase",
+       "declare": "Pick a friendly **^^Skyvessel^^** to be the target. The target can be in reserve.",
+       "effect": "The target has the **^^Flagship^^** keyword for the rest of the battle. If the target does not have a Great Endrinwork, give the target 1 Great Endrinwork.\n**Designer's Note:** *This Great Endrinwork is given to the unit during the deployment phase not during army composition.*",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Artefacts of Power",
+   "items": [
+    {
+     "name": "Celestium Burst Grenade",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Celestium Burst Grenade",
+       "kind": "Ability (Activated)",
+       "color": "Blue",
+       "timing": "Once Per Battle, Your Shooting Phase",
+       "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+       "effect": "Ward rolls cannot be made for the target for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Voidstone Orb",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Voidstone Orb",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle, Reaction: Opponent declared a **^^Spell^^** ability for a **^^Wizard^^** within 30\" of this unit",
+       "declare": "",
+       "effect": "That spell is unbound.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Blazebeard and Sons Bamboozling Flakgun",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Blazebeard and Sons Bamboozling Flakgun",
+       "kind": "Ability (Activated)",
+       "color": "Orange",
+       "timing": "Once Per Turn, Reaction: Opponent declared a **^^Charge^^** ability for a unit within 12\" of this unit.",
+       "declare": "",
+       "effect": "Pick 1 dice in that charge roll. Then, make a **bamboozling flak roll** of D6. If the roll equals or exceeds the value on the dice, remove that dice from the charge roll.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Emberstone Flare",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Emberstone Flare",
+       "kind": "Ability (Activated)",
+       "color": "Gray",
+       "timing": "Once Per Battle, Your Movement Phase",
+       "declare": "Pick a friendly **^^Kharadron Overlords^^** unit that has **^^Fly^^** and is not in combat to be the target.",
+       "effect": "Remove the target from the battlefield and set it up again wholly within 9\" of this unit and more than 9\" from all enemy units.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Karst-Bana Aether-Powered Combat Rig",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Karst-Bana Aether-Powered Combat Rig",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "This unit has **^^Ward (5+)^^**. In addition, add 1 to the Attacks characteristic of this unit's melee weapons.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Spell in a Bottle",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Spell in a Bottle",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle, Your Hero Phase",
+       "declare": "",
+       "effect": "This unit can use a **^^Summon^^** ability from the manifestation lore you picked during army composition as if it had **^^Wizard (1)^^**. Instead of making a casting roll for that **^^Summon^^** ability, the casting roll is 7 and cannot be modified. That **^^Summon^^** ability cannot be unbound.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Persistent Drillbill",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Persistent Drillbill",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+       "effect": "Roll a D3. On a 2+:\n• Inflict an amount of mortal damage on the target equal to the roll.\n• If the target unit's starting size was 1, subtract 1 from hit rolls for the target's attacks until the start of your next turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Experimental Aether-powered Ejector Rig",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Experimental Aether-powered Ejector Rig",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Once Per Battle, Any Combat Phase",
+       "declare": "",
+       "effect": "Remove this unit from the battlefield and set it up again wholly within 3\" of a friendly **^^Skyvessel^^** or **Zontari Endrin Dock** and more than 9\" from all enemy units.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Heat-seeking Auto-endrin",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Heat-seeking Auto-endrin",
+       "kind": "Ability (Activated)",
+       "color": "Gray",
+       "timing": "Your Movement Phase",
+       "declare": "Pick a visible enemy unit within 18\" of this unit to be the target.",
+       "effect": "Until the start of your next turn, subtract your opponent's **fury level** from the target's control score.\n**Designer's Note:** *Use your opponent's fury level at the point the unit's control score is determined.*",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Battle Formations: Kharadron Overlords",
+   "items": [
+    {
+     "name": "Veteran Ground Troops",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Entrenched Crews",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Turn (Army), Start of Battle Round",
+       "declare": "Pick up to 3 friendly **Arkanaut Company** units to be the targets.",
+       "effect": "For the rest of the battle round, if the target has not been set up this battle round and while it has not moved this turn, subtract 1 from the Rend characteristic of attacks that target that unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Rapid Redeployment Squadron",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Extra Rappel Anchors",
+       "kind": "Ability (Passive)",
+       "color": "Grey",
+       "timing": "",
+       "declare": "",
+       "effect": "Friendly **Grundstok Gunhaulers** can transport up to 2 friendly **^^Kharadron Overlords Infantry^^** units instead of 1 and with a combined model count of up to 6 instead of 5 (see Battle Traits).",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Endrineers Guild Expeditionary Force",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Special Procurement",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Battle, Deployment Phase",
+       "declare": "Pick a friendly non-**^^Unique Kharadron Overlords Hero^^** that does not have an artefact of power.",
+       "effect": "Give that **^^Hero^^** 1 artefact of power from the 'Inventions of the Sky-ports' or the 'Ingenious Innovations'.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Pioneers and Scavengers",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Gritty Fortune-Hunters",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Friendly **Vongrim Harpoon Crew** and **Vongrim Salvagers** units have **^^Ward (6+)^^** while they are contesting an objective.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Heroic Traits",
+   "items": [
+    {
+     "name": "Bold as Brass",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Bold as Brass",
+       "kind": "Ability (Passive)",
+       "color": "Purple",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 5 to this unit's control score.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Combat Grafter",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Combat Grafter",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Once Per Battle, Any Combat Phase",
+       "declare": "",
+       "effect": "This unit can use 2 **^^Fight^^** abilities this phase. After the first is used, however, this unit has **^^Strike-last^^** for the rest of the phase.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Shrewd Opportunist",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Shrewd Opportunist",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Deployment Phase",
+       "declare": "Pick this unit and up to 2 other friendly **^^Kharadron Overlords^^** non-**^^Hero Infantry^^** units to be the targets.",
+       "effect": "Each target can immediately use the 'Normal Move' ability as if it were your movement phase.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Great Endrinworks",
+   "items": [
+    {
+     "name": "Coalbeard's Collapsible Bombrack",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Coalbeard's Collapsible Bombrack",
+       "kind": "Ability (Passive)",
+       "color": "Grey",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to each dice roll when using this unit's 'Heavy Bomb Racks', 'Medium Bomb Racks' or 'Light Bomb Racks' ability.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Grandiose Fuselage",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Grandiose Fuselage",
+       "kind": "Ability (Passive)",
+       "color": "Purple",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 5 to this unit's Control characteristic.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Hegsson Solutions 'Old Reliable' Hullplates",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Hegsson Solutions 'Old Reliable' Hullplates",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "This unit has **^^Ward (5+)^^** against damage inflicted by shoot abilities.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Nullstone Galvanisation",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Nullstone Galvanisation",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "End of Any Turn",
+       "declare": "",
+       "effect": "Inflict D6 mortal damage on each enemy **^^Manifestation^^** within this unit's combat range.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Gruksson Wide-Bore Cylinders",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Gruksson Wide-Bore Cylinders",
+       "kind": "Ability (Passive)",
+       "color": "Grey",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 2\" to this unit's Move characteristic.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Tracer-Fire Rounds",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Tracer-Fire Rounds",
+       "kind": "Ability (Activated)",
+       "color": "Blue",
+       "timing": "Your Shooting Phase, Reaction: You declared a **^^Shoot^^** ability for this unit.",
+       "declare": "",
+       "effect": "If all of the attacks target the same enemy unit, ignore negative modifiers to hit rolls for those attacks.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Voidstone Repulser Vents",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Voidstone Repulser Vents",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Reaction: A friendly unit within 12\" of this unit was picked to be the target of an enemy **^^Spell^^** ability.",
+       "declare": "",
+       "effect": "Roll a dice. On a 4+:\n• Ignore the effect of that spell on that friendly unit.\n• Inflict D3 mortal damage on the caster.\nThis unit can use this ability more than once per phase but you can only roll once for each friendly unit per spell cast.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Zonbarcorp 'Dealbreaker' Battle Ram",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Zonbarcorp 'Dealbreaker' Battle Ram",
+       "kind": "Ability (Activated)",
+       "color": "Orange",
+       "timing": "Any Charge Phase",
+       "declare": "If this unit charged this phase, pick an enemy unit in combat with it to be the target.",
+       "effect": "Roll a number of dice equal to the unmodified charge roll. For each 4+, inflict 1 mortal damage on the target.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Blazebeard and Sons Ejector Pod",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Blazebeard and Sons Ejector Pod",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Once Per Battle, Any Combat Phase",
+       "declare": "If this unit is in combat, pick a visible friendly **^^Kharadron Overlords Hero^^** wholly within 6\" of this unit to be the target.",
+       "effect": "Remove the target from the battlefield, then set it up again wholly within 18\" of this unit and more than 9\" from all enemy units.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Artycle References",
+   "items": [
+    {
+     "name": "Artycle 15, Point 4",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Artycle 15, Point 4",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "• Add 1 to hit rolls for this unit's combat attacks that target an enemy unit that has **^^Fly^^**.\n• Add 1 to wound rolls for this unit's combat attacks that target an enemy unit that does not have **^^Fly^^**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Artycle 20, Amendment 2",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Artycle 20, Amendment 2",
+       "kind": "Ability (Activated)",
+       "color": "Orange",
+       "timing": "Once Per Battle, Enemy Charge Phase",
+       "declare": "If this unit has not charged this turn, pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
+       "effect": "The target's attacks cannot score critical hits for the rest of the turn (treat them as regular hits instead).",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Artycle 25, Point 6",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Artycle 25, Point 6",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Friendly **^^Kharadron Overlords Heroes^^** have **^^Ward (5+)^^** while they are within this unit's combat range.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

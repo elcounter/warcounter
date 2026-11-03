@@ -1,0 +1,1782 @@
+{
+ "name": "Fyreslayers",
+ "units": [
+  {
+   "name": "Auric Runesmiter on Magmadroth",
+   "pts": 280,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "MONSTER",
+    "ORDER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN",
+    "MAGMADROTH",
+    "PRIEST (1)"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "14",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Latch-axe",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Anti‑**^^Infantry^^** (+1 Rend), Companion",
+     "name": "Roaring Fyrestream",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Magmadroth's Blazing Maw",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Magmadroth's Claws and Horns",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Volcanic Blood",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "If you make an unmodified save roll of 1 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Runic Empowerment",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a friendly **^^Fyreslayers^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, add 1 to wound rolls for the target's attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Lashing Tail",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll 2D6. If the roll is equal to or less than the number of models in the target unit, inflict D3+3 mortal damage on the target.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Magmadroth's Claws and Horns** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Grimhold Exile",
+   "pts": 90,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "6",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Fyre-rune Hammers",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Honour to Grimnir!",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Battle, Your Hero Phase",
+     "declare": "Pick up to 3 friendly **^^Fyreslayers Infantry^^** units wholly within 12\" of this unit to be the targets.",
+     "effect": "You can re-roll charge rolls for the targets for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Last of the Lodge-fire",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Battle, Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a number of dice equal to the target's Health characteristic. For each 4+, inflict 1 mortal damage on the target.",
+     "keywords": "**^^Core^^**, **^^Attack^^**, **^^Fight^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Auric Flamekeeper",
+   "pts": 80,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Brazier Axe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Masterflame Rune",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "If any friendly units have been destroyed during the battle, pick a friendly **^^Fyreslayers Infantry^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. If the roll is equal to or less than the number of **^^Fyreslayers^^** units that have been destroyed during the battle, pick 1 of the following effects to apply until the start of your next turn:\n***Grimnir's Grit:*** The target has **^^Ward (5+)^^**.\n***Grimnir's Resolve:*** Add 2 to charge rolls for the target.\n***Grimnir's Vengeance:*** Add 1 to the Damage characteristic of the target's melee weapons.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Auric Runefather on Magmadroth",
+   "pts": 320,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "MONSTER",
+    "ORDER",
+    "WARMASTER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN",
+    "MAGMADROTH"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "14",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Latchkey Grandaxe",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Anti‑**^^Infantry^^** (+1 Rend), Companion",
+     "name": "Roaring Fyrestream",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Magmadroth's Blazing Maw",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Magmadroth's Claws and Horns",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Volcanic Blood",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "If you make an unmodified save roll of 1 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Warrior-kings",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Battle (Army), Your Combat Phase",
+     "declare": "",
+     "effect": "For the rest of the turn, add 1 to the Attacks characteristic of melee weapons used by friendly **^^Fyreslayers^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Raging Inferno",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, subtract 1 from save rolls for the target for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Magmadroth's Claws and Horns** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Auric Runeson on Magmadroth",
+   "pts": 240,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "MONSTER",
+    "ORDER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN",
+    "MAGMADROTH"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "14",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti‑**^^Monster^^** (+1 Rend)",
+     "name": "Ancestral Weapons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Anti‑**^^Infantry^^** (+1 Rend), Companion",
+     "name": "Roaring Fyrestream",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Magmadroth's Blazing Maw",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Magmadroth's Claws and Horns",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Volcanic Blood",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "If you make an unmodified save roll of 1 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Magmadroth's Claws and Horns** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Dominating Roar",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick an enemy **^^Monster^^** in combat with this unit to be the target.",
+     "effect": "If this unit has fewer damage points than the target, subtract 10 from the target's control score for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Vying for Glory",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time this unit destroys a **^^Monster^^**, add 1 to the Attacks characteristic of this unit's **Ancestral Weapons** for the rest of the battle. This unit can be affected by this ability multiple times and the effects are cumulative.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Auric Runeson",
+   "pts": 90,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti‑**^^Monster^^** (+1 Rend)",
+     "name": "Ancestral Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Fearless Charge",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "If this unit charged this turn, for the rest of the turn, add 1 to charge rolls for friendly **^^Fyreslayers Infantry^^** units while they are wholly within 18\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Dauntless Assault",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly non-**^^Hero Fyreslayers Infantry^^** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Auric Runesmiter",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN",
+    "INFANTRY",
+    "PRIEST (1)"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Latch-axe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Emergence",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick this unit if it is **underground**.",
+     "effect": "Set up this unit anywhere on the battlefield more than 9\" from all enemy units. Then, set up the other units that were set up **underground** with it (if any) wholly within 6\" of this unit and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Magmic Tunnelling",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick this unit and any number of other units in its regiment if none of those units have been deployed.",
+     "effect": "Set up those units in reserve **underground**. They have now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Auric Runemaster",
+   "pts": 160,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN",
+    "INFANTRY",
+    "PRIEST (2)"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Brazier Staff",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "High Priest of the Zharrgrim",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time a **^^Prayer^^** chanted by this unit is answered, this unit gains a **magmic power token**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Master of the Runes",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Reaction: You declared an **^^Ur-gold Rune^^** ability",
+     "declare": "",
+     "effect": "Remove 3 of this unit's **magmic power tokens**. If you do so, apply the effect below that corresponds to the **^^Ur-gold Rune^^** ability that was used:\n***Rune of Fury:*** For the rest of the battle round, add 1 to wound rolls for combat attacks made by friendly **^^Fyreslayers^^** units while they have **^^Strike-first^^**.\n***Rune of Fiery Determination:*** Add 1 to save rolls for friendly **^^Fyreslayers^^** units for the rest of the battle round.\n***Rune of Relentless Zeal:*** Add 1 to run rolls and charge rolls for friendly **^^Fyreslayers^^** units for the rest of the battle round.\n***Rune of Searing Heat:*** Add 1 to the Rend characteristic of melee weapons used by friendly **^^Fyreslayers^^** units for the rest of the battle round.\n***Rune of Farsight:*** Increase the range of the 'Rune of Farsight' ability to 16\".",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Battlesmith",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Ancestral Battle-axe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Icon of Grimnir",
+     "kind": "Ability (Passive)",
+     "color": "Purple",
+     "timing": "",
+     "declare": "",
+     "effect": "Ignore negative modifiers to the control scores of friendly **^^Fyreslayers^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Bard of the Lodge",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "If a friendly unit wholly within 12\" of this unit uses the 'Rally' command, you can make 3 additional rally rolls of D6.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Grimwrath Berzerker",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Fyrestorm Greataxe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Grimwrath Oaths",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "",
+     "effect": "Pick 1 of the following oaths for this unit to swear:\n***'I will guard them with my life!':*** While this unit is wholly within 6\" of another friendly **^^Fyreslayers Hero^^**:\n• Add 1 to hit rolls for this unit's attacks.\n• Add 1 to ward rolls for this unit.\nIf a friendly **^^Fyreslayers Hero^^** wholly within 6\" of this unit is destroyed, this effect no longer applies.\n***'I will not be stopped!':*** Add 1 to charge rolls for this unit, and add 1 to save rolls for this unit while it is in combat. If this unit uses the 'Retreat' or 'Rally' abilities, this effect no longer applies.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle-fury",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Battle, Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit is in combat, it can use 2 **^^Fight^^** abilities this phase. After the first is used, however, this unit has **^^Strike-last^^** for the rest of the phase.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Auric Runefather",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "WARMASTER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Latchkey Grandaxe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Royal Retinue",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Battle (Army), Deployment Phase",
+     "declare": "Pick a friendly non-**^^Hero Fyreslayers Infantry^^** unit within this unit's combat range to be the royal retinue.",
+     "effect": "For the rest of the battle, while the royal retinue is wholly within 6\" of this unit, add 1 to hit rolls for attacks made by the royal retinue and this unit has **^^Ward (4+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Commanding Presence",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "",
+     "effect": "Add the current battle round number to the control scores of friendly **^^Fyreslayers Infantry^^** units wholly within 12\" of this unit for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Doomseeker",
+   "pts": 80,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Doomseeker Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Runic Power",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Damage characteristic of this unit's melee weapons while this unit has 1 damage point. Add 2 to the Damage characteristic of this unit's melee weapons instead while this unit has 2 or more damage points.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Oathbound",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick an enemy unit to be this unit's quarry. You can pick a unit that has been deployed in reserve.",
+     "effect": "Add 1 to hit rolls and wound rolls for attacks made by this unit that target its quarry. \nIf this unit is destroyed while it is in combat with its quarry, inflict 3 mortal damage on this unit's quarry immediately after the ability that destroyed this unit has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Auric Hearthguard",
+   "pts": 120,
+   "size": 5,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "ORDER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN",
+    "MUSICIAN (1/10)"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "2",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Magmapike",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Molten Rockbolts",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time a shooting attack made by this unit scores a critical hit, subtract 1\" from the target unit's Move characteristic until the start of your next turn. This ability cannot reduce the target unit's unmodified Move characteristic below half",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Hearthguard Berzerkers with Berzerker Broadaxes",
+   "pts": 100,
+   "size": 5,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "ORDER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "2",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Berzerker Broadaxe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Duty Unto Death",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While any friendly **^^Fyreslayers Infantry Heroes^^** are wholly within this unit's combat range, both this unit and those friendly units have **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Fires of Vengeance",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit is within the combat ranges of any damaged friendly **^^Fyreslayers Heroes^^**, add 1 to the Attacks characteristic of this unit's melee weapons.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vulkite Berzerkers with Fyresteel Weapons",
+   "pts": 120,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "ORDER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN",
+    "MUSICIAN (1/10)"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "2",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Fyresteel Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Whirlwind of Destruction",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Attacks characteristic of this unit's melee weapons if this unit charged this turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vulkyn Flameseekers",
+   "pts": 160,
+   "size": 9,
+   "kw": [
+    "INFANTRY",
+    "ORDER",
+    "CHAMPION (1/9)",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend)",
+     "name": "Vulkyn Weapons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Emberteeth",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Drothmasters",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick an enemy **^^Monster^^** in combat with this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, subtract D3 from the Damage characteristic of the target's **Companion** melee weapons for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vulkite Berzerkers with Bladed Slingshields",
+   "pts": 140,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "ORDER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN",
+    "MUSICIAN (1/10)"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Fyresteel Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Berserk Fury",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time a model in this unit is slain by a combat attack and that model was in combat with the attacking unit, roll a dice. On a 5+, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Hearthguard Berzerkers with Flamestrike Poleaxes",
+   "pts": 110,
+   "size": 5,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "ORDER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "2",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Flamestrike Poleaxe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Duty Unto Death",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While any friendly **^^Fyreslayers Infantry Heroes^^** are wholly within this unit's combat range, both this unit and those friendly units have **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Smouldering Braziers",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Auric Runeson on Magmadroth (Scourge of Aqshy)",
+   "pts": 330,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "MONSTER",
+    "ORDER",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN",
+    "MAGMADROTH"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "14",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti‑**^^Monster^^** (+1 Rend)",
+     "name": "Ancestral Weapons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Anti‑**^^Infantry^^** (+1 Rend), Companion",
+     "name": "Roaring Fyrestream",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Magmadroth's Blazing Maw",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Magmadroth's Claws and Horns",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Volcanic Blood",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time you make an unmodified save roll of 1 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Magmadroth's Claws and Horns** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Fire, Blood and Vengeance",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick a friendly **Auric Runefather on Magmadroth** on the battlefield to be the target.",
+     "effect": "Add 1 to the Damage characteristic of this unit's melee weapons, including **Companion** weapons, while the target is in combat, damaged or destroyed.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Seeing Red",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "Spend 1 **rage dice**. If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7. Then, pick 1 of the following effects:\n***Channelled Ire*:** Add 1 to the Attacks characteristic of this unit's **Companion** melee weapons for the rest of the turn.\n***Cathartic Release*:** Roll a number of dice equal to your **fury level**. For each 4+, **Heal (1)** this unit.\n***Shield of Anger*:** This unit has **^^Ward (5+)^^** for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vulkyn Flameseekers (Scourge of Aqshy)",
+   "pts": 190,
+   "size": 9,
+   "kw": [
+    "INFANTRY",
+    "ORDER",
+    "CHAMPION (1/9)",
+    "WARD (6+)",
+    "FYRESLAYERS",
+    "DUARDIN"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend)",
+     "name": "Vulkyn Weapons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Emberteeth",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Fiery Disposition",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "",
+     "effect": "Spend 1 **rage dice**. If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7.\nThen, pick 1 of the following effects to apply until the start of your next turn, where **X** is equal to your **fury level**.\n***Vigour of the Ur-Salamander*:** Add **X**\" to this unit's Move characteristic.\n***Fiery Determination*:** Add **X** to this unit's control score.\n***Kyndlewrath*:** Add **X** to the Attacks characteristic of this unit's **Emberteeth**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "title": "Battle Traits",
+   "items": [
+    {
+     "name": "Battle Traits",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Rune of Fiery Determination",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle (Army), Any Hero Phase",
+       "declare": "",
+       "effect": "You can only use this ability if you have not used any **^^Ur-gold Rune^^** abilities this battle round.\nFriendly **^^Fyreslayers^^** units have **^^Ward (5+)^^** for the rest of the battle round.",
+       "keywords": "**^^Ur-gold Rune^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Rune of Farsight",
+       "kind": "Ability (Activated)",
+       "color": "Blue",
+       "timing": "Once Per Battle (Army), Any Shooting Phase",
+       "declare": "You can only use this ability if you have not used any **^^Ur-gold Rune^^** abilities this battle round.\nPick any number of enemy units that are within 10\" of and visible to any friendly **^^Fyreslayers^^** units to be the targets.",
+       "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. In addition,\nfor the rest of the battle round, ranged weapons, including Companion weapons, used by friendly **^^Fyreslayers^^** units have **Crit (2 Hits)**.",
+       "keywords": "**^^Ur-gold Rune^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Rune of Relentless Zeal",
+       "kind": "Ability (Activated)",
+       "color": "Gray",
+       "timing": "Once Per Battle (Army), Your Movement Phase",
+       "declare": "",
+       "effect": "You can only use this ability if you have not used any **^^Ur-gold Rune^^** abilities this battle round.\nFor the rest of the battle round, friendly **^^Fyreslayers^^** units can use **^^Charge^^** abilities even if they used a **^^Run^^** ability in the same turn.",
+       "keywords": "**^^Ur-gold Rune^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Rune of Searing Heat",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Once Per Battle (Army), Any Combat Phase",
+       "declare": "",
+       "effect": "You can only use this ability if you have not used any **^^Ur-gold Rune^^** abilities this battle round.\nMelee weapons used by friendly **^^Fyreslayers^^** units have **Crit (Mortal)** for the rest of the battle round.",
+       "keywords": "**^^Ur-gold Rune^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Rune of Fury",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Battle (Army), Start of Any Turn",
+       "declare": "",
+       "effect": "You can only use this ability if you have not used any **^^Ur-gold Rune^^** abilities this battle round.\nFor the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^Strike-first^^** while they are in combat with an enemy unit that charged in the same turn.",
+       "keywords": "**^^Ur-gold Rune^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Prayer Lores",
+   "items": [
+    {
+     "name": "Zharrgrim Blessings",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Prayer of Ash",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Fyreslayers Priest^^** to chant this prayer, pick a visible friendly **^^Fyreslayers^^** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "Subtract 1 from wound rolls for attacks that target that friendly unit until the start of your next turn.\nIf the chanting roll was 8+, also subtract 1 from the Rend characteristic of attacks that target that friendly unit until the start of your next turn.",
+       "keywords": "**^^Prayer^^**, **^^Unlimited^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      },
+      {
+       "name": "Prayer of Grimnir's Fury",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Fyreslayers Priest^^** to chant this prayer, pick a visible friendly **^^Fyreslayers Infantry Hero^^** wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "The target can use 2 **^^Fight^^** abilities this turn. After the first is used, however, the target has **^^Strike-last^^** for the rest of the turn.\nIf the chanting roll was 8+, also add 1 to wound rolls for the target's combat attacks for the rest of the turn.",
+       "keywords": "**^^Prayer^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      },
+      {
+       "name": "Wrath of Vulcatrix",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Fyreslayers Priest^^** to chant this prayer, pick a visible friendly **^^Magmadroth^^** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "For the rest of the turn, the 'Battle Damaged' ability has no effect on the target and add 1 to the Attacks characteristic of the target's **Companion** weapons.\nIf the chanting roll was 8+, add 1 to the Attacks characteristic of the target's **Companion** weapons for every 4 damage points the target has instead.",
+       "keywords": "**^^Prayer^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Artefacts of Power",
+   "items": [
+    {
+     "name": "Droth-helm",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Droth-helm",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to hit rolls for **Companion** weapons used by friendly **^^Fyreslayers^^** units while they are wholly within 12\" of this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Draught of the Finest Magmalt",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Draught of the Finest Magmalt",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Once Per Battle, Any Combat Phase",
+       "declare": "",
+       "effect": "Add 3 to the Attacks characteristic of this unit's melee weapons for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Ash-cloud Rune",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Ash-cloud Rune",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle, Enemy Hero Phase",
+       "declare": "",
+       "effect": "Until the start of your next turn, friendly **^^Infantry^^** units cannot be targeted by shooting attacks while they are wholly within 12\" of this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Battle Formations: Fyreslayers",
+   "items": [
+    {
+     "name": "Forge Brethren",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Bulwark of Molten Stone",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to save rolls for friendly **^^Fyreslayers Infantry^^** units while they are wholly within friendly territory.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Scales of Vulcatrix",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Ancient Bloodlines",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 2 to the Health characteristic of friendly Magmadroth units.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Warrior Kinband",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Berserk Kindred",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to wound rolls for combat attacks made by friendly **^^Fyreslayers Infantry^^** units that charged in the same turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Lords of the Lodge",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Martial Pride and Stubborn Will",
+       "kind": "Ability (Passive)",
+       "color": "Purple",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 3 to the control scores of friendly **^^Fyreslayers Heroes^^**. In addition, the control scores of **^^Fyreslayers Heroes^^** cannot be modified by enemy abilities.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Heroic Traits",
+   "items": [
+    {
+     "name": "Ash-beard",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Ash-beard",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "If this unit is not a **^^Priest^^**, they have **^^Priest (1)^^**. If this unit was already a **^^Priest^^**, add 1 to this unit's chanting rolls.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Blood of the Berzerker",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Blood of the Berzerker",
+       "kind": "Ability (Passive)",
+       "color": "Orange",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to charge rolls for friendly **^^Fyreslayers^^** units while they are wholly within 12\" of this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Fiercely Competitive",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Fiercely Competitive",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "If this unit is in combat with an enemy unit that has **^^Strike-first^^**, this unit has **^^Strike-first^^**. If this unit is in combat with an enemy unit that uses the 'All-out Attack' command, add 1 to hit rolls for this unit's attacks for the rest of the turn",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Manifestation Lores",
+   "items": [
+    {
+     "name": "Magmic Invocations",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Summon Molten Infernoth",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Molten Infernoth** on the battlefield, pick a friendly **^^Fyreslayers Priest^^** to chant this prayer, then make a chanting roll of D6.",
+       "effect": "Set up a **Molten Infernoth** wholly within 12\" of the chanter, visible to them and more than 9\" from all enemy units.",
+       "keywords": "**^^Prayer^^**, **^^Summon^^**",
+       "cast": "",
+       "chant": "6",
+       "cost": ""
+      },
+      {
+       "name": "Summon Runic Fyrewall",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Runic Fyrewall** on the battlefield, pick a friendly **Fyreslayers Priest** to chant this prayer, then make a chanting roll of D6.",
+       "effect": "Set up a **Runic Fyrewall** wholly within 12\" of the chanter and visible to them.",
+       "keywords": "**^^Prayer^^**, **^^Summon^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      },
+      {
+       "name": "Summon Zharrgron Flame-spitter",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Zharrgron Flame-spitter** on the battlefield, pick a friendly **^^Fyreslayers Priest^^** to chant this prayer, then make a chanting roll of D6.",
+       "effect": "Set up a **Zharrgron Flame-spitter** wholly within 12\" of the chanter and visible to them.",
+       "keywords": "**^^Prayer^^**, **^^Summon^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Marks of Vulcatrix",
+   "items": [
+    {
+     "name": "Incandescent Blaze",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Incandescent Blaze",
+       "kind": "Ability (Activated)",
+       "color": "Blue",
+       "timing": "Once Per Battle, Your Shooting Phase",
+       "declare": "",
+       "effect": "For the rest of the turn:\n• Double the Attacks characteristic of this unit's **Roaring Fyrestream**.\n• This unit's **Roaring Fyrestream** has a Damage characteristic of 3.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Peerless Lineage",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Peerless Lineage",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Reaction: You declared a **^^Rampage^^** ability for this unit.",
+       "declare": "",
+       "effect": "You can pick another eligible unit to be a second target of that **^^Rampage^^** ability. If that ability requires a roll, you must roll for each target.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Thickened Scales",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Thickened Scales",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Aureate Hide",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Aureate Hide",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Reaction: You declared a **^^Fight^^** ability for this unit",
+       "declare": "",
+       "effect": "After that **^^Fight^^** ability has been resolved, if any enemy models were slain by that **^^Fight^^** ability, you can pick a visible friendly **^^Fyreslayers Priest^^** wholly within 12\" of this unit. Give that **^^Priest^^** D3 ritual points.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Intense Fyrestream",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Intense Fyrestream",
+       "kind": "Ability (Activated)",
+       "color": "Blue",
+       "timing": "Any Shooting Phase",
+       "declare": "",
+       "effect": "Spend 1 **rage dice**. If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7. Then, for the rest of the turn:\n• Add **X**\" to the Range characteristic and **X** to the Attacks characteristic of this unit's **Companion** ranged weapons, where **X** is equal to your **fury level**.\n• This unit's **Companion** ranged weapons have **Shoot in Combat**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

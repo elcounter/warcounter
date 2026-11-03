@@ -1,0 +1,2127 @@
+{
+ "name": "Blades of Khorne",
+ "units": [
+  {
+   "name": "Skull Cannon",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "CHAOS",
+    "DAEMON",
+    "BLADES OF KHORNE",
+    "WARD (6+)",
+    "WAR MACHINE"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "8",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "15\"",
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Shoot in Combat",
+     "name": "Burning Skulls",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Blood-hungry, Companion",
+     "name": "Gnashing Maw",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Blood-hungry, Crit (Mortal)",
+     "name": "Hellblades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Gruesome Bombardment",
+     "kind": "Ability (Passive)",
+     "color": "Purple",
+     "timing": "",
+     "declare": "",
+     "effect": "If any damage points are allocated to an enemy unit by a **^^Shoot^^** ability used by this unit, subtract 3 from that enemy unit's control score for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Grind Their Bones, Seize Their Skulls",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "If any enemy models are slain by a **^^Fight^^** ability used by this unit, after that **^^Fight^^** ability has been resolved, this unit can immediately use a **^^Shoot^^** ability as if it were your shooting phase.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Skarbrand",
+   "pts": 430,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "UNIQUE",
+    "CHAOS",
+    "DAEMON",
+    "MONSTER",
+    "WARD (5+)",
+    "BLADES OF KHORNE",
+    "BLOODTHIRSTER"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "16",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "4",
+     "Ability": "Blood-hungry",
+     "name": "Slaughter",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "8",
+     "Ability": "Crit (Mortal)",
+     "name": "Carnage",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Skarbrand's Rage",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, or if it did not use a **^^Fight^^** ability last turn, the effects of the 'Blood-drenched' ability apply to this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Roar of Total Rage",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll either 3 dice or a number of dice equal to the number of damage points this unit has. For each 4+, inflict 1 mortal damage on the target.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Inescapable Wrath",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the number of dice rolled when making charge rolls for this unit, to a maximum of 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Wrath of Khorne Bloodthirster",
+   "pts": 400,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DAEMON",
+    "MONSTER",
+    "WARD (5+)",
+    "FLY",
+    "BLADES OF KHORNE",
+    "BLOODTHIRSTER"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "16",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "4",
+     "Ability": "Anti-**^^Hero^^** (+1 Rend), Blood-hungry",
+     "name": "Mighty Axe of Khorne and Bloodflail",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "8\"",
+     "Atk": "2D6",
+     "Hit": "2+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Hellfire Breath",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Mighty Axe of Khorne and Bloodflail** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Vengeance of Khorne",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy **^^Hero^^** in combat with this unit to be the target.",
+     "effect": "Roll 8 dice. For each 4+, inflict 1 mortal damage on the target.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Commander of Tyrants",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick another visible friendly non-**^^Unique Blades of Khorne Daemon^^** unit to be the target.",
+     "effect": "Add 1 to the Attacks characteristic of the target's melee weapons for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Wrathful Dominance",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to hit rolls for this unit's attacks that target an enemy **^^Hero^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Bloodthirster of Insensate Rage",
+   "pts": 410,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DAEMON",
+    "MONSTER",
+    "WARD (5+)",
+    "FLY",
+    "BLADES OF KHORNE",
+    "BLOODTHIRSTER"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "16",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "5",
+     "Ability": "Anti-**^^Infantry^^** (+1 Rend), Blood-hungry",
+     "name": "Great Axe of Khorne",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Great Axe of Khorne** is 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Shattering Charge",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "If this unit charged this turn, pick a visible enemy unit within 1\" of it to be the target.",
+     "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If the target is **^^Infantry^^**, inflict an additional 3 mortal damage on it.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Outrageous Carnage",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time an attack made by this unit scores a critical hit, inflict D3 mortal damage on each enemy unit within 8\" of it after the **^^Fight^^** ability has been resolved (and continue the attack sequence).",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Karanak",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "UNIQUE",
+    "CHAOS",
+    "DAEMON",
+    "BLADES OF KHORNE",
+    "BEAST",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "7",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Hero^^** (+1 Rend), Blood-hungry",
+     "name": "Savage Maws and Goreslick Claws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Prey of the Blood God",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Turn, Your Movement Phase",
+     "declare": "",
+     "effect": "Pick an enemy **^^Hero^^** to be this unit's quarry. You can pick a **^^Hero^^** in reserve.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Stalk the Prey",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Your Movement Phase",
+     "declare": "If this unit's quarry is on the battlefield, pick this unit and up to 1 friendly **Flesh hounds** unit to be the targets.",
+     "effect": "Remove the targets from the battlefield and set them up again on the battlefield more than 6\" from this unit's quarry and more than 9\" from all other enemy units. If picked to be a target, the unit of **Flesh Hounds** must also be set up wholly within 12\" of this unit.",
+     "keywords": "**^^Core^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "First of the Pack",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit is wholly within 12\" of a friendly **Flesh Hounds** unit, add 2 to charge rolls for this unit. In addition, while any friendly **Flesh Hounds** units are wholly within 12\" of this unit, they can ignore the effect of the 'Beast' ability.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Wrathmongers",
+   "pts": 130,
+   "size": 5,
+   "kw": [
+    "CHAOS",
+    "CHAMPION",
+    "BLOODBOUND",
+    "INFANTRY",
+    "BLADES OF KHORNE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "3",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Blood-hungry, Crit (2 Hits)",
+     "name": "Wrath-flails",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Bloodfury",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick a visible enemy model within 3\" of this unit to be the target.",
+     "effect": "Both player's roll off. If you win the roll-off, pick a melee weapon that the target is armed with. Your opponent must pick a visible unit in their army within 3\" of the target (they can pick the target's own unit, and even if it is a single-model unit).\nYour opponent must resolve combat attacks for the target using the melee weapon you picked against the unit they picked.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Crimson Haze",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit is in combat, add 1 to the Attacks characteristic of melee weapons used by friendly **^^Bloodbound^^** units, excluding **Wrathmongers** units, while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Bloodthirster of Unfettered Fury",
+   "pts": 390,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DAEMON",
+    "MONSTER",
+    "WARD (5+)",
+    "FLY",
+    "BLADES OF KHORNE",
+    "BLOODTHIRSTER"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "16",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "4",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend), Blood-hungry",
+     "name": "Mighty Axe of Khorne",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "8\"",
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Shoot in Combat",
+     "name": "Lash of Khorne",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Mighty Axe of Khorne** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ensnaring Lash",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy **^^Monster^^** in combat with this unit to be the target.",
+     "effect": "If the target is in combat with this unit when the target is picked to use a **^^Fight^^** ability:\n• It must pick this unit to be the target of the pile-in move (Core Rules, 15.3).\n• Subtract 1 from hit rolls and wound rolls for attacks made as part of that **^^Fight^^** ability against this unit.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Beckon the Hunt",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "Pick a friendly non-**^^Unique Blades of Khorne Daemon^^** unit to be the target.",
+     "effect": "For the rest of the turn, when making charge rolls for the target, roll 1 additional dice, to a maximum of 3, and discard 1 dice of your choice.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Bloodmaster, Herald of Khorne",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DAEMON",
+    "BLADES OF KHORNE",
+    "INFANTRY",
+    "WARD (6+)",
+    "PRIEST (1)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Blood-hungry, Crit (2 Hits)",
+     "name": "Blade of Blood",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "The Blood Must Flow",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a Fight ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly **Bloodletters** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved. For the rest of the turn, add 1 to hit rolls for combat attacks made by this unit and that friendly **Bloodletters** unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Claws of Karanak",
+   "pts": 100,
+   "size": 8,
+   "kw": [
+    "CHAOS",
+    "INFANTRY",
+    "CHAMPION (1/8)",
+    "BLOODBOUND",
+    "BLADES OF KHORNE"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Blood-hungry, Crit (2 Hits)",
+     "name": "Weapons of the Hunt",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "The Scent of Blood",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "",
+     "effect": "This unit can use the 'Normal Move' ability as if it were your movement phase.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Pack Hunters",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit is wholly within 12\" of a friendly **Flesh Hounds** unit or a friendly **Karanak**, this unit's combat attacks score critical hits on unmodified hit rolls of 5+.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Bloodreavers",
+   "pts": 80,
+   "size": 10,
+   "kw": [
+    "CHAOS",
+    "INFANTRY",
+    "CHAMPION",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)",
+    "BLOODBOUND",
+    "BLADES OF KHORNE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "1",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Blood-hungry",
+     "name": "Reaver Blades and Axes",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Blood for the Blood God!",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Rend characteristic of this unit's melee weapons if it charged in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Flesh Hounds",
+   "pts": 100,
+   "size": 5,
+   "kw": [
+    "WARD (6+)",
+    "BEAST",
+    "CHAMPION (1/5)",
+    "CHAOS",
+    "DAEMON",
+    "BLADES OF KHORNE"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "2",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Blood-hungry, Companion",
+     "name": "Blood-dark Claws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Hunters of Mystics",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "If the casting roll for an enemy **^^Wizard^^** within 12\" of this unit contains 2 or more results of 1 or 2, the spell is miscast.\nIf the chanting roll for an enemy **^^Priest^^** within 12\" of this unit is an unmodified 2, the prayer fails and its effect is not resolved. In addition, your opponent cannot give that **^^Priest^^** any ritual points for the rest of the phase.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Herald of Khorne on Blood Throne",
+   "pts": 150,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DAEMON",
+    "BLADES OF KHORNE",
+    "PRIEST (1)",
+    "WAR MACHINE",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "10",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "7",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Blood-hungry, Crit (Mortal)",
+     "name": "Blade of Blood and Hellblades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Blood Marked",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit has **^^Ward (4+)^^** against damage inflicted by **^^Spell^^** abilities and abilities used by **^^Manifestations^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Offering of Blood",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a friendly unit within 3\" of this unit to be the target.",
+     "effect": "Allocate 3 damage points to the target (ward rolls cannot be made for those damage points). For the rest of the turn, add 1 to this unit's power level, to a maximum of 2.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Realmgore Ritualist",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "BLADES OF KHORNE",
+    "PRIEST (1)",
+    "INFANTRY",
+    "BLOODBOUND"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "D3",
+     "Ability": "Blood-hungry",
+     "name": "Ritual Athame",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Desecrating Blood Runes",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Once Per Battle (Army), Your Movement Phase",
+     "declare": "Pick an objective or terrain feature within this unit's combat range to be the target.",
+     "effect": "For the rest of the battle, add 1 to wound rolls for combat attacks made by friendly **Bloodbound** units while they are wholly within 12\" of the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Mighty Lord of Khorne",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "BLADES OF KHORNE",
+    "INFANTRY",
+    "BLOODBOUND"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "7",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Blood-hungry",
+     "name": "Axe of Khorne",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Flesh Hound's Blood-dark Claws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Lord of the Bloodbound",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to wound rolls for friendly **^^Bloodbound Infantry^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "'Bring Me Their Skull!'",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Your Combat Phase",
+     "declare": "Pick another friendly **^^Bloodbound Infantry Hero^^** wholly within 12\" of this unit to be the target.",
+     "effect": "The target has **^^Strike-first^^** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Skulltaker",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "UNIQUE",
+    "CHAOS",
+    "DAEMON",
+    "BLADES OF KHORNE",
+    "INFANTRY",
+    "WARD (5+)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "7",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "2+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Hero^^** (+1 Rend), Blood-hungry",
+     "name": "The Slayer Sword",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Heroes' Bane",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick an enemy **^^Hero^^** in combat with this unit to be the target.",
+     "effect": "For the rest of the turn, while the target is in combat with this unit, this unit has **^^Strike-first^^** but all of its combat attacks must target that enemy **^^Hero^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Eternal Duel",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "",
+     "effect": "If an enemy **^^Hero^^** had any damage points allocated to it by this unit's combat attacks this turn and that **^^Hero^^** was destroyed this turn, **Heal (X)** this unit, where **X** is the number of damage points this unit has.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Drawn by Blood",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Battle (Army), End of Enemy Turn",
+     "declare": "Pick an enemy **^^Hero^^** unit that used a **^^Fight^^** ability this turn to be the target.",
+     "effect": "Remove this unit from the battlefield and set it up again on the battlefield in combat with the target and not in combat with any other enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Bloodsecrator",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "BLADES OF KHORNE",
+    "INFANTRY",
+    "BLOODBOUND"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "6",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Blood-hungry",
+     "name": "Ensorcelled Axe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Icon of the Blood God",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "If a friendly **^^Bloodbound^^** unit wholly within 12\" of this unit uses the 'Rally' command, you can make 3 additional rally rolls of D6.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Rage of Khorne",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Battle (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "Add 1 to the Attacks characteristics of friendly **^^Bloodbound^^** units' melee weapons for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Slaughterpriest",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "BLADES OF KHORNE",
+    "INFANTRY",
+    "BLOODBOUND",
+    "PRIEST (1)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "6",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Blood-hungry",
+     "name": "Bloodbathed Weapon",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Scorn of Sorcery",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit can use **^^Unbind^^** abilities as if it had **^^Wizard (1)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Blood Sacrifice",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn, Any Hero Phase",
+     "declare": "Pick a unit (friendly or enemy) within this unit's combat range to be the target.",
+     "effect": "Roll a D3. On a 2+:\n• Inflict an amount of mortal damage on the target equal to the roll.\n• This unit gains 1 ritual point.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Skullgrinder",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "BLADES OF KHORNE",
+    "INFANTRY",
+    "BLOODBOUND"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "6",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend), Blood-hungry",
+     "name": "Brazen Anvil",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Bone-crushing Strikes",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a dice. If the roll is equal to or less than the target's control characteristic, the target has **^^Strike-last^^** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Tempered by Fury",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Battle (Army), Deployment Phase",
+     "declare": "Pick another friendly **^^Bloodbound Hero^^** within 8\" of this unit to be the target.",
+     "effect": "Pick 1 of the target's melee weapons. Add 1 to the Rend characteristic of that weapon for the rest of the battle.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Bloodletters",
+   "pts": 150,
+   "size": 10,
+   "kw": [
+    "WARD (6+)",
+    "CHAOS",
+    "DAEMON",
+    "INFANTRY",
+    "CHAMPION",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)",
+    "BLADES OF KHORNE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Blood-hungry, Crit (Mortal)",
+     "name": "Hellblade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Ceaseless Violence",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit is in combat, it can move 3\". It can pass through the combat ranges of enemy units and must end that move in combat.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Bloodletters (Scourge of Aqshy)",
+   "pts": 140,
+   "size": 10,
+   "kw": [
+    "WARD (6+)",
+    "CHAOS",
+    "DAEMON",
+    "INFANTRY",
+    "CHAMPION",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)",
+    "BLADES OF KHORNE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Blood-hungry, Crit (Mortal)",
+     "name": "Hellblade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Drawn to Slaughter",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), Reaction: You or your opponent declared the 'Eruption of Fury' ability for a unit within 12\" of this unit",
+     "declare": "",
+     "effect": "Return 1 slain model to this unit. If your opponent declared that 'Eruption of Fury' ability and the unit using the ability is in combat with this unit, return 3 slain models to this unit instead.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Bloodcrushers",
+   "pts": 130,
+   "size": 3,
+   "kw": [
+    "WARD (6+)",
+    "CHAOS",
+    "DAEMON",
+    "CHAMPION",
+    "MUSICIAN (1/3)",
+    "STANDARD BEARER (1/3)",
+    "CAVALRY",
+    "BLADES OF KHORNE"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Blood-hungry, Crit (Mortal)",
+     "name": "Bloodcrusher Hellblade",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Anti-**^^Cavalry^^** (+1 Rend), Companion",
+     "name": "Juggernaut's Brazen Hooves",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Crushing Onslaught",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "If the unmodified charge roll for this unit is 8+:\n• For the rest of the phase, this unit can pass through models in enemy units.\n• Enemy **^^Cavalry^^** units passed through by this unit in this phase cannot make pile-in moves for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Mighty Skullcrushers",
+   "pts": 200,
+   "size": 3,
+   "kw": [
+    "CHAOS",
+    "CHAMPION",
+    "MUSICIAN (1/3)",
+    "STANDARD BEARER (1/3)",
+    "CAVALRY",
+    "BLOODBOUND",
+    "BLADES OF KHORNE"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "5",
+    "Save": "2+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Blood-hungry, Charge (+1 Damage)",
+     "name": "Gorebathed Glaive or Axe",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Companion",
+     "name": "Juggernaut's Brazen Hooves",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Slaughterous Charge",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Any Charge Phase",
+     "declare": "If this unit charged this turn, pick a visible enemy unit within 1\" of it to be the target.",
+     "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Skullreapers",
+   "pts": 170,
+   "size": 5,
+   "kw": [
+    "CHAOS",
+    "CHAMPION",
+    "BLOODBOUND",
+    "INFANTRY",
+    "STANDARD BEARER (1/5)",
+    "BLADES OF KHORNE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "3",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Blood-hungry, Crit (2 Hits)",
+     "name": "Daemonforged Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Trial of Skulls",
+     "kind": "Ability (Passive)",
+     "color": "Purple",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 8 to this unit's control score while it is in combat.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Blood Warriors",
+   "pts": 180,
+   "size": 10,
+   "kw": [
+    "CHAMPION",
+    "INFANTRY",
+    "CHAOS",
+    "BLADES OF KHORNE",
+    "BLOODBOUND",
+    "STANDARD BEARER (1/10)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "2",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Blood-hungry, Crit (Auto-wound)",
+     "name": "Goreweapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "No Respite",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit is contesting an objective you do not control, it has **Ward (5+)**",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Blood Warriors (Scourge of Aqshy)",
+   "pts": 190,
+   "size": 10,
+   "kw": [
+    "CHAMPION",
+    "INFANTRY",
+    "CHAOS",
+    "BLADES OF KHORNE",
+    "BLOODBOUND",
+    "STANDARD BEARER (1/10)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "2",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Blood-hungry, Crit (Auto-wound)",
+     "name": "Goreweapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Only the Worthy",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "The following cumulative effects apply depending on the number of models in this unit that are slain.\n**1+** Add 1 to charge rolls for this unit.\n**4+** Add 1 to hit rolls for this unit's combat attacks.\n**8+** Add 1 to wound rolls for this unit's combat attacks.\n**16+** Double the Attacks characteristic of this unit's melee weapons and this unit's combat attacks score critical hits on unmodified hit rolls of 5+.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Khorgorath",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "CHAOS",
+    "BLADES OF KHORNE",
+    "MONSTER",
+    "BLOODBOUND"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "8",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Claws and Fangs",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Horrific Predators",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Feast Upon Their Bones",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "",
+     "effect": "Subtract 3 from the control scores of enemy non-**^^Monster^^** units while they are in combat with this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Bloodstoker",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "BLADES OF KHORNE",
+    "INFANTRY",
+    "BLOODBOUND"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Blood-hungry",
+     "name": "Torture Blade and Blood Whip",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Whipped to Fury",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "Pick a friendly non-**^^Hero Bloodbound^^** unit within this unit's combat range to be the target.",
+     "effect": "For the rest of the turn, the target can use **^^Charge^^** abilities even if it used a **^^Run^^** ability in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Deathbringer",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "BLADES OF KHORNE",
+    "INFANTRY",
+    "BLOODBOUND"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "6",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "Blood-hungry, Crit (2 Hits)",
+     "name": "Kingslayer Axe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Trophies of Glorious Deaths",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Reaction: Opponent declared a command for a unit within 8\" of this unit",
+     "declare": "",
+     "effect": "Roll a dice. On a 5+, that command has no effect, it still counts as having been used and the command points spent to use it are still lost. This reaction cannot be used more than once per command.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Killer of Kings",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick each enemy unit and **^^Manifestation^^** in combat with this unit to be the target.",
+     "effect": "Roll 2D6 for each target. If the roll exceeds the target's Health characteristic, 1 model from that unit is slain, or, if the target is a **^^Manifestation^^**, it is automatically destroyed.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "title": "Battle Traits",
+   "items": [
+    {
+     "name": "Battle Traits",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Blood-drenched",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Turn, Reaction: You declared the 'Skulls for the Skull Throne' ability",
+       "declare": "",
+       "effect": "After that ability has been resolved, if you unlocked a **^^Blood Tithe^^** ability this turn, pick a friendly **^^Blades of Khorne^^** unit to be the target. The following effects apply to the target for the rest of the battle:\n***Wild-eyed Brutality:*** Ignore positive modifiers to save rolls for the target.\n***Blood Haze:*** If the target is **^^Bloodbound^^**, its **Blood-hungry** weapons have **Crit (Mortal)**.\n***Weapons of Murder:*** If the target is a non-**^^Monster^^** **^^Daemon^^** unit, add 1 to the Rend characteristic of its **Blood-hungry** weapons, including **Blood-hungry Companion** weapons.\n***Bloodlords Supreme:*** If the target is a **^^Monster^^**, add 1 to the Damage characteristic of its **Blood-hungry** weapons.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Blood for the Blood God",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "Earn 1 blood tithe point each time a unit (friendly or enemy) is destroyed. Blood tithe points are spent to unlock **^^Blood Tithe^^** abilities. You can only use **^^Blood Tithe^^** abilities that are unlocked. Once a **^^Blood Tithe^^** ability is unlocked, you do not need to spend further blood tithe points to use it.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Skulls for the Skull Throne",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Turn (Army), Start of Any Turn",
+       "declare": "",
+       "effect": "Pick a **^^Blood Tithe^^** ability that you have not unlocked and spend the number of blood tithe points required to unlock that ability. That **^^Blood Tithe^^** ability is now unlocked for the rest of the battle.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Murderlust",
+       "kind": "Ability (Blood Tithe)",
+       "color": "Orange",
+       "timing": "Once Per Turn (Army), Reaction: You declared a **^^Charge^^** ability.",
+       "declare": "",
+       "effect": "Roll a dice. You can replace one of the dice in the charge roll with that value. If you do so, inflict D3 mortal damage on the unit using that **^^Charge^^** ability after that ability is resolved.",
+       "keywords": "**^^Blood Tithe^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Divine Scorn",
+       "kind": "Ability (Blood Tithe)",
+       "color": "Black",
+       "timing": "Once Per Turn, Start of Any Turn",
+       "declare": "Pick up to 3 enemy **^^Wizards^^** or **^^Priests^^** within 6\" of any friendly **^^Blades of Khorne^^** units to be the target(s).",
+       "effect": "Roll a dice for each target. On a 3+, subtract 1 from the target's power level, to a minimum of 0, until the start of the next turn.",
+       "keywords": "**^^Blood Tithe^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Punish the Pacifist",
+       "kind": "Ability (Blood Tithe)",
+       "color": "Red",
+       "timing": "Once Per Turn (Army), Your Combat Phase",
+       "declare": "Each unit (friendly and enemy) and enemy **^^Manifestation^^** that is not in combat is a target.",
+       "effect": "Roll a dice. On a 1-2, inflict 1 mortal damage on each target. On a 3+, inflict 1 mortal damage on each enemy target.",
+       "keywords": "**^^Blood Tithe^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Murder the Mystic",
+       "kind": "Ability (Blood Tithe)",
+       "color": "Yellow",
+       "timing": "Once Per Turn (Army),Your Hero Phase",
+       "declare": "Pick up to 4 enemy **^^Manifestations^^** to be the target(s).",
+       "effect": "Make a **banishment roll** of 2D6 for each target. If the banishment roll equals or exceeds the banishment value listed on that **^^Manifestation^^**'s warscroll, inflict D3 mortal damage on each enemy unit within 3\" of it and then it is **banished** and removed from play.",
+       "keywords": "**^^Blood Tithe^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Glorious Combat or Naught",
+       "kind": "Ability (Blood Tithe)",
+       "color": "Green",
+       "timing": "Passive",
+       "declare": "",
+       "effect": "Subtract 1 from hit rolls for shooting attacks that target friendly **^^Blades of Khorne^^** units.",
+       "keywords": "**^^Blood Tithe^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Revel in Battle",
+       "kind": "Ability (Blood Tithe)",
+       "color": "Green",
+       "timing": "Passive",
+       "declare": "",
+       "effect": "Other than the **Companion** weapon ability, weapon abilities for combat attacks made by enemy units that charged this turn and that target a friendly **^^Blades of Khorne^^** unit have no effect.",
+       "keywords": "**^^Blood Tithe^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Slaughter Triumphant",
+       "kind": "Ability (Blood Tithe)",
+       "color": "Red",
+       "timing": "Passive",
+       "declare": "",
+       "effect": "Add 1 to the Attacks characteristic of weapons used by friendly **^^Blades of Khorne^^** units that charged in the same turn.",
+       "keywords": "**^^Blood Tithe^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Cleave Wide the Grin of Khorne",
+       "kind": "Ability (Blood Tithe)",
+       "color": "Red",
+       "timing": "Passive",
+       "declare": "",
+       "effect": "Add 1 to hit rolls for combat attacks made by friendly **^^Blades of Khorne^^** units.",
+       "keywords": "**^^Blood Tithe^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Artefacts of Power",
+   "items": [
+    {
+     "name": "Collar of Contempt",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Collar of Contempt",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "This unit can use **^^Unbind^^** abilities as if it had **^^Wizard (1)^^**. Each time this unit successfully unbinds a spell, inflict D3 mortal damage on the caster.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Butcher's Blade",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Butcher's Blade",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "End of Your Turn",
+       "declare": "Pick each enemy unit that had any damage points allocated to it this turn by this unit's combat attacks to be the targets.",
+       "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Ar'gath, the King of Blades",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Ar'gath, the King of Blades",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "Ward rolls cannot be made for enemy **^^Heroes^^** while they are in combat with this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Battle Formations: Blades of Khorne",
+   "items": [
+    {
+     "name": "Brass Stampede",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Obliterating Charge",
+       "kind": "Ability (Passive)",
+       "color": "Orange",
+       "timing": "",
+       "declare": "",
+       "effect": "Add **X** to charge rolls for friendly **^^Blades of Khorne^^** units, where **X** is the number of friendly **^^Blades of Khorne Cavalry^^** or **^^Monster^^** units that have already charged this phase and that are wholly within 12\" of the unit being rolled for.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Khornate Legion",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Butchers of Nations",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Once Per Turn (Army), Reaction: You declared a **^^Fight^^** ability for a friendly **^^Blades of Khorne Daemon^^** unit",
+       "declare": "",
+       "effect": "Pick a friendly **^^Bloodbound^^** unit that has not used a **^^Fight^^** ability this turn and is wholly within 12\" of the unit using this ability to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Murderhost",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Eager Killers",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "End of Your Turn",
+       "declare": "",
+       "effect": "Each friendly **^^Blades of Khorne Daemon^^** unit that has used a **^^Fight^^** ability this turn and is not in combat can move D6\". It cannot end that move in combat.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Bloodbound Warhorde",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Tireless Conquerors",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to hit rolls for combat attacks made by friendly **^^Bloodbound^^** units that target an enemy unit that is contesting an objective you do not control.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Heroic Traits",
+   "items": [
+    {
+     "name": "Magical Scorn",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Magical Scorn",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "Subtract 1 from casting rolls for **^^Wizards^^** while they are within 12\" of this unit.\nSubtract 1 from chanting rolls for enemy **^^Priests^^** while they are within 12\" of this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Skull Collector",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Skull Collector",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "End of Any Turn",
+       "declare": "",
+       "effect": "If any damage points were allocated to an enemy **^^Hero^^** by this unit's combat attacks this turn and that enemy **^^Hero^^** has been destroyed, add 1 to the Attacks characteristic of this unit's melee weapons for the rest of the battle.\nThis unit can be affected by this ability multiple times and the effects are cumulative.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Frenzied Taskmaster",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Frenzied Taskmaster",
+       "kind": "Ability (Activated)",
+       "color": "Grey",
+       "timing": "Your Movement Phase",
+       "declare": "Pick a friendly **^^Blades of Khorne Infantry^^** or **^^Cavalry^^** unit within this unit's combat range that is not in combat to be the target.",
+       "effect": "The target can move D6\" but cannot end that move in combat. If the target ends that move within this unit's combat range, inflict an amount of mortal damage on the target equal to the roll.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Manifestation Lores",
+   "items": [
+    {
+     "name": "Judgements of Khorne",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Summon Bleeding Icon",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Bleeding Icon** on the battlefield, pick a friendly **^^Blades of Khorne Priest^^** to chant this prayer, then make a chanting roll of D6.",
+       "effect": "Set up a **Bleeding Icon** wholly within 18\" of the chanter and visible to them.",
+       "keywords": "**^^Prayer^^**, **^^Summon^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      },
+      {
+       "name": "Summon Hexgorger Skulls",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Hexgorger Skulls** invocation on the battlefield, pick a friendly **^^Blades of Khorne Priest^^** to chant this prayer, then make a chanting roll of D6.",
+       "effect": "Set up a **Hexgorger Skulls** invocation wholly within 12\" of the chanter, visible to them and more than 9\" from all enemy units. A **Hexgorger Skulls** invocation has 2 parts that must be set up within 8\" of each other.",
+       "keywords": "**^^Prayer^^**, **^^Summon^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      },
+      {
+       "name": "Summon Wrath-axe",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Wrath-axe** on the battlefield, pick a friendly **^^Blades of Khorne Priest^^** to chant this prayer, then make a chanting roll of D6.",
+       "effect": "Set up a **Wrath-axe** wholly within 12\" of the chanter, visible to them and more than 9\" from all enemy units.",
+       "keywords": "**^^Prayer^^**, **^^Summon^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Prayer Lores",
+   "items": [
+    {
+     "name": "Blood Blessings of Khorne",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Blood Boil",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Blades of Khorne Priest^^** to chant this prayer, pick a visible enemy unit within 18\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "Roll a number of dice equal to the number of models in the target unit. For each 5+, inflict 1 mortal damage on the target. In addition, if the chanting roll was 8+, subtract 1 from wound rolls for the target until the start of your next turn.",
+       "keywords": "**^^Prayer^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      },
+      {
+       "name": "Uncontrollable Rage",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Blades of Khorne Priest^^** to chant this prayer, pick a visible friendly unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "Until the start of your next turn, the effects of the 'Blood-drenched' ability (see 'Battle Traits') apply to the target. In addition, if the chanting roll was 8+, ignore the effect of 'Wild-eyed Brutality' on the target.",
+       "keywords": "**^^Prayer^^**, **^^Unlimited^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      },
+      {
+       "name": "Final Act of Violence",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Blades of Khorne Priest^^** to chant this prayer, pick a visible friendly **^^Blades of Khorne^^** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "Until the start of your next turn, each time a model in the target unit is slain by a combat attack and that model was in combat with the attacking unit, roll a dice. If the chanting roll as 8+, roll 2 dice instead. For each 5+, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.",
+       "keywords": "**^^Prayer^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Brazen Mutations",
+   "items": [
+    {
+     "name": "Brass Flesh",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Brass Flesh",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Unmodified save rolls of 5+ for this unit cannot fail.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Blade-Limbs",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Blade-Limbs",
+       "kind": "Ability (Passive)",
+       "color": "Purple",
+       "timing": "",
+       "declare": "",
+       "effect": "Each time this unit is picked to use the 'Eruption of Fury' ability, for each unmodified hit roll of 6 for the attacks made as part of that ability, inflict an additional 3 mortal damage on each enemy unit in combat with this unit instead of D3.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Scorpion Tails",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Scorpion Tails",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Any Combat Phase",
+       "declare": "Pick an enemy unit in combat with this unit to be the target.",
+       "effect": "• Inflict D3 mortal damage on the target.\n• If the target unit's starting size was 1, subtract 1 from wound rolls for its combat attacks for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1744 @@
+{
+ "name": "Helsmiths of Hashut",
+ "units": [
+  {
+   "name": "Dominator Engine with Immolation Cannons",
+   "pts": 150,
+   "size": 1,
+   "kw": [
+    "CHAOS",
+    "HELSMITHS OF HASHUT",
+    "WAR MACHINE",
+    "AUTOMATON"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "10",
+    "Save": "2+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "8\"",
+     "Atk": "5",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Anti-**^^Cavalry^^** (+1 Rend), Shoot in Combat",
+     "name": "Immolation Cannons",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Horns and Pummelling Strikes",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "All Must Burn",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "Pick 2 or more visible enemy units within 8\" of this unit to be the targets.",
+     "effect": "For the rest of the turn, add 2 to the Attacks characteristic of this unit's **Immolation Cannons** for each unit picked to be the target of this ability, but each time this unit uses a **^^Shoot^^** ability, it must target each of those units with at least 3 of its attacks.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Daemonic Strength",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "For each **daemonic power point** this unit has:\n• Add 1\" to its Move characteristic\n• Add 1 to the Attacks characteristic of its weapons.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Urak Taar, the First Daemonsmith",
+   "pts": 340,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "UNIQUE",
+    "WARMASTER",
+    "CHAOS",
+    "WAR MACHINE",
+    "MONSTER",
+    "FLY",
+    "HELSMITHS OF HASHUT",
+    "DUARDIN",
+    "WIZARD (2)"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "16",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Dumakar",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "18\"",
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Crit (2 Hits), Shoot in Combat",
+     "name": "Ruinous Torrents",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Charge (+1 Damage), Companion",
+     "name": "Ghorrakos's Horns and Hooves",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Pitiless Trampling",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "If this unit charged this phase, pick an enemy unit within 1\" of it to be the target.",
+     "effect": "Inflict D3 mortal damage on the target. Then, roll 2D6. This unit can move a distance up to the value of the roll. during that move, this unit can pass through models in the target unit but must end that move in combat.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Peerless Among Daemonsmiths",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Apply the effect below that corresponds with the number of **daemonic power points** this unit has:\n**1** This unit has **^^Ward (6+)^^**.\n**2** Add 1 to casting rolls for this unit. In addition, this unit has **^^Ward (5+)^^**.\n**3** Add 2 to casting rolls for this unit. In addition, this unit has **^^Ward (4+)^^** against damage inflicted by **^^Spells^^**, **^^Prayers^^**, and abilites used by **^^Manifestations^^**. Otherwise, it has **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Curse of Stone",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a point on the battlefield within 9\" of this unit, then pick a second point on the battlefield within 9\" of the first point. Draw a line between the caster and the first point, and between the first and second points. Each enemy unit the lines pass across is a target. Then, make a casting roll of 2D6.",
+     "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Ghorrakos's Horns and Hooves** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Master of Daemonic Power",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Enemy Hero Phase",
+     "declare": "",
+     "effect": "Remove up to 3 **daemonic power points** in total from any combination of friendly units wholly within 18\" of this unit. Then, allocate them to a different friendly non-**^^Hobgrot Helsmiths of Hashut^^** unit wholly within 18\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Daemonsmith on Infernal Taurus",
+   "pts": 270,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "WAR MACHINE",
+    "MONSTER",
+    "FLY",
+    "HELSMITHS OF HASHUT",
+    "DUARDIN",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "15",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Infernal Staff",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "18\"",
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Crit (2 Hits), Shoot in Combat",
+     "name": "Hurled Daemonfire",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Charge (+1 Damage), Companion",
+     "name": "Horns and Hooves",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Unholy Stampede",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While a friendly **^^Helsmiths of Hashut Cavalry^^** unit is wholly within 12\" of this unit:\n• That unit can use a **^^Retreat^^** ability and still use **^^Charge^^** abilities later in the turn.\n• No mortal damage is inflicted on that unit by **^^Retreat^^** abilities.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Horns and Hooves** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Immolating Presence",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a dice. If the roll exceeds the target's Health characteristic, 1 model in the target unit is slain.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Daemonic Resilience",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Apply the effect below that corresponds with the number of **daemonic power points** this unit has:\n**1** This unit has **^^Ward (6+)^^**.\n**2** This unit has **^^Ward (5+)^^**.\n**3** This unit has **^^Ward (4+)^^** against damage inflicted by **^^Spells^^**, **^^Prayers^^**, and abilites used by **^^Manifestations^^**. Otherwise, it has **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Daemonsmith on Infernal Taurus (Scourge of Aqshy)",
+   "pts": 350,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "WAR MACHINE",
+    "MONSTER",
+    "FLY",
+    "HELSMITHS OF HASHUT",
+    "DUARDIN",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "15",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Infernal Staff",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "18\"",
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Crit (2 Hits), Shoot in Combat",
+     "name": "Hurled Daemonfire",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Charge (+1 Damage), Companion",
+     "name": "Horns and Hooves",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Leech Realm-Magic",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "",
+     "effect": "• Add 1 to casting rolls and unbinding rolls for this unit until the start of your next turn.\n• You can pick an objective or terrain feature that has a friendly **desolation token** and that this unit is contesting. If you do so, add 1 to this unit's power level for the rest of the battle, then remove that **desolation token** from the battlefield. This unit can be affected by this ability multiple times and the effects are cumulative.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Horns and Hooves** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Calamitous Shockwave",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick up to 3 enemy units in combat with this unit to be the targets.",
+     "effect": "Roll a dice for each target. If the roll is lower than your **fury level**, for the rest of the turn:\n• The target cannot use the 'Eruption of Fury' ability.\n• When resolving the damage sequence for the target, your opponent cannot spend **rage dice** as part of the 'Fight Through the Pain' ability.\n• Add 1 to the Rend characteristic of weapons used for attacks that target that enemy unit.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Daemonic Resilience",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Apply the effect below that corresponds with the number of **daemonic power points** this unit has:\n**1** This unit has **^^Ward (6+)^^**.\n**2** This unit has **^^Ward (5+)^^**.\n**3** This unit has **^^Ward (4+)^^** against damage inflicted by **^^Spells^^**, **^^Prayers^^**, and abilites used by **^^Manifestations^^**. Otherwise, it has **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Daemonsmith",
+   "pts": 80,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "HELSMITHS OF HASHUT",
+    "DUARDIN",
+    "WIZARD (1)",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Darkiron Talon",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "18\"",
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Crit (2 Hits), Shoot in Combat",
+     "name": "Hurled Daemonfire",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Molten Mending",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a friendly **^^Helsmiths of Hashut War Machine^^** wholly within 6\" of this unit to be the target. Add 6\" to the range of this ability for each **daemonic power point** this unit has.",
+     "effect": "**Heal (D3+X)** the target, where **X** is the number of **daemonic power points** this unit has.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "War Despot",
+   "pts": 80,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "HELSMITHS OF HASHUT",
+    "DUARDIN",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "6",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Daemonflame Glaive",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "'Fight, You Scum!'",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly non-**^^Hero Helsmiths of Hashut Infantry^^** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved. If it is picked to do so, add 1 to the Attacks characteristic of its melee weapons for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Black-Hearted Conqueror",
+     "kind": "Ability (Passive)",
+     "color": "Purple",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 3 to the control scores of friendly **^^Helsmith of Hashut Infantry^^** units while they are wholly within 6\" of this unit. Add 6\" to the range of this ability for each **daemonic power point** this unit has.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Infernal Razers with Flamehurlers",
+   "pts": 90,
+   "size": 5,
+   "kw": [
+    "CHAOS",
+    "INFANTRY",
+    "HELSMITHS OF HASHUT",
+    "DUARDIN",
+    "CHAMPION"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "1",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "3",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Karagthrun Flamehurlers",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Weapon Butt",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Scorched Remains",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "If this unit used a **^^Shoot^^** ability this turn and all of its attacks targeted the same enemy **^^Infantry^^** unit, that enemy unit is the target.",
+     "effect": "Roll a dice. On a 3+, subtract an amount equal to the roll from the target's control score until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Manglers of Metal",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Rend characteristic of this unit's ranged weapons for each **daemonic power point** this unit has.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Anointed Sentinels",
+   "pts": 130,
+   "size": 3,
+   "kw": [
+    "CHAOS",
+    "HELSMITHS OF HASHUT",
+    "DUARDIN",
+    "CHAMPION",
+    "CAVALRY"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "4",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Cavalry^^** (+1 Rend), Charge (+1 Damage)",
+     "name": "Thrice-cursed Glaive",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Zealous Counter-Attack",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Reaction: You declared the 'Counter-charge' command for this unit",
+     "declare": "",
+     "effect": "This unit has **^^Strike-first^^** for he rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Crush the Unworthy",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to charge rolls for each **daemonic power point** it has.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Anointed Sentinels (Scourge of Aqshy)",
+   "pts": 170,
+   "size": 3,
+   "kw": [
+    "CHAOS",
+    "HELSMITHS OF HASHUT",
+    "DUARDIN",
+    "CHAMPION",
+    "CAVALRY"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "4",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Cavalry^^** (+1 Rend), Charge (+1 Damage)",
+     "name": "Thrice-cursed Glaive",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Zealous Acolytes",
+     "kind": "Ability (Passive)",
+     "color": "Grey",
+     "timing": "",
+     "declare": "",
+     "effect": "• Add 1 to the Attacks characteristic of this unit's melee weapons while it is contesting an objective you do not control.\n• Add 10 to this unit's control score while it is contesting an objective you control.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Daemonic Resilience",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Apply the effect below that corresponds with the number of **daemonic power points** this unit has:\n**1** This unit has **^^Ward (6+)^^**.\n**2** This unit has **^^Ward (5+)^^**.\n**3** This unit has **^^Ward (4+)^^** against damage inflicted by **^^Spells^^**, **^^Prayers^^**, and abilites used by **^^Manifestations^^**. Otherwise, it has **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Infernal Cohort with Hashutite Spears",
+   "pts": 90,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)",
+    "CHAOS",
+    "HELSMITHS OF HASHUT",
+    "DUARDIN"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "1",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Anti-**^^Cavalry^^** (+1 Rend), Anti-charge (+1 Rend)",
+     "name": "Hashutite Spear",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Conquered Lands",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "If this unit is contesting an objective you control, pick a friendly non-**^^Hobgrot Helsmiths of Hashut^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, give the target 1 **daemonic power point**.\n**Designer's Note:** *You cannot make more than one roll for each objective in each turn regardless of how many friendly units with this ability are contesting that objective.*",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Daemonic Resilience",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Apply the effect below that corresponds with the number of **daemonic power points** this unit has:\n**1** This unit has **^^Ward (6+)^^**.\n**2** This unit has **^^Ward (5+)^^**.\n**3** This unit has **^^Ward (4+)^^** against damage inflicted by **^^Spells^^**, **^^Prayers^^**, and abilites used by **^^Manifestations^^**. Otherwise, it has **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Sacred Gongs",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit's **Gong Carriers** are tokens. There is 1 **Gong Carrier** for every **^^Musician^^** in this unit. If this unit uses the 'Rally' command, as a reaction, you can remove a **Gong Carrier** to make an additional rally roll of D6.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Hobgrot Vandalz",
+   "pts": 70,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)",
+    "CHAOS",
+    "HELSMITHS OF HASHUT",
+    "HOBGROT"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Scavenged Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Disposable Lackeys",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "",
+     "effect": "This unit can immediately use the 'Normal Move' ability as if it were your movement phase.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Infernal Cohort with Hashutite Blades",
+   "pts": 90,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)",
+    "CHAOS",
+    "HELSMITHS OF HASHUT",
+    "DUARDIN"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "1",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Anti-**^^Infantry^^** (+1 Rend)",
+     "name": "Hashutite Blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Disciplined March",
+     "kind": "Ability (Passive)",
+     "color": "Grey",
+     "timing": "",
+     "declare": "",
+     "effect": "When making run rolls for this unit, if you roll a 1-3, you can use a value of 4 instead.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Daemonic Resilience",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Apply the effect below that corresponds with the number of **daemonic power points** this unit has:\n**1** This unit has **^^Ward (6+)^^**.\n**2** This unit has **^^Ward (5+)^^**.\n**3** This unit has **^^Ward (4+)^^** against damage inflicted by **^^Spells^^**, **^^Prayers^^**, and abilites used by **^^Manifestations^^**. Otherwise, it has **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Sacred Gongs",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit's **Gong Carriers** are tokens. There is 1 **Gong Carrier** for every **^^Musician^^** in this unit. If this unit uses the 'Rally' command, as a reaction, you can remove a **Gong Carrier** to make an additional rally roll of D6.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Infernal Razers with Blunderbusses",
+   "pts": 110,
+   "size": 5,
+   "kw": [
+    "CHAOS",
+    "INFANTRY",
+    "HELSMITHS OF HASHUT",
+    "DUARDIN",
+    "CHAMPION"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "1",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Grizmalok Blunderbusses",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Weapon Butt",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Hateful Hail",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "If this unit used a **^^Shoot^^** ability this turn and all of its attacks targeted the same enemy unit, that enemy unit is the target.",
+     "effect": "Roll a dice and add the number of enemy models in the target unit slain by attacks made by this unit this turn. If the result is 6+, the target has **^^Strike-last^^** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Manglers of Metal",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Rend characteristic of this unit's ranged weapons for each **daemonic power point** this unit has.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Bull Centaurs",
+   "pts": 190,
+   "size": 3,
+   "kw": [
+    "CHAOS",
+    "HELSMITHS OF HASHUT",
+    "DUARDIN",
+    "CHAMPION",
+    "CAVALRY"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "4",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage), Crit (Mortal)",
+     "name": "Brazen Mauls",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Bull Charge",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Any Charge Phase",
+     "declare": "If this unit charged this turn, pick a visible enemy unit within 1\" of it to be the target.",
+     "effect": "Roll a dice for each model in this unit. Add the number of **daemonic power points** this unit has. For each 6+, inflict 1 mortal damage on the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Crush the Unworthy",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to charge rolls for each **daemonic power point** it has.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Ashen Elder",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "HELSMITHS OF HASHUT",
+    "DUARDIN",
+    "INFANTRY",
+    "PRIEST (1)"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Black Hammer of Hashut",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Extract Power",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Your Turn",
+     "declare": "",
+     "effect": "If this unit is contesting an objective, a **Place of Power** or a terrain feature and that objective, **Place of Power** or terrain feature has a friendly desolation token, give this unit 1 ritual point.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Stoked Fanaticism",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Ignore the first damage point allocated to each friendly non-**^^Hobgrot Helsmiths of Hashut^^** unit each phase while it is wholly within 6\" of this unit. Add 6\" to the range of this ability for each **daemonic power point** this unit has",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Deathshrieker Rocket Battery",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "CHAOS",
+    "HELSMITHS OF HASHUT",
+    "WAR MACHINE"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "8",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "24\"",
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D3+2",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend), Anti-**^^War Machine^^** (+1 Rend)",
+     "name": "Hashu-Zharr Rockets",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Artillerist Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Hungering Flames",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "",
+     "effect": "For the rest of the turn, the Damage characteristic of this unit's **Hashu-Zharr Rockets** is 5 if the target is a **^^Monster^^** or **^^War Machine^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Watch Them Burn",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Reaction: You declared a **^^Shoot^^** ability for this unit and all of its attacks targeted the same enemy unit",
+     "declare": "",
+     "effect": "Roll a number of dice equal to the number of **daemonic power points** this unit has for each other enemy unit within the combat range of the target of this unit's shooting attacks. For each 3+, inflict 1 mortal damage on the enemy unit being rolled for.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Tormentor Bombard",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "CHAOS",
+    "HELSMITHS OF HASHUT",
+    "WAR MACHINE"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "8",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "30\"",
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Anti-**^^Cavalry^^** (+1 Rend), Anti-**^^Infantry^^** (+1 Rend)",
+     "name": "Torrent of Ruinous Energy",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Artillerist Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Ruinous Bombardment",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "If this unit used a **^^Shoot^^** ability this turn and all of its attacks targeted the same enemy unit, that enemy unit is the target. Then, you can pick a number of enemy units within 6\" of the target equal to the number of **daemonic power points** this unit has to be additional targets.",
+     "effect": "Roll a dice for each target. On a 3+, that unit cannot use commands until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Calculated Trajectory",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to hit rolls for this unit's shooting attacks that target an enemy unit with 5 or more models that is more than 12\" from this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Dominator Engine with Bane Maces",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "CHAOS",
+    "HELSMITHS OF HASHUT",
+    "WAR MACHINE",
+    "AUTOMATON"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "10",
+    "Save": "2+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Bane Maces",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Engine of Domination",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit is in combat with any enemy **^^Heroes^^**, it can use 2 **^^Fight^^** abilities this phase. After the first is used, however, this unit has **^^Strike-last^^** for the rest of the phase and can only be picked to use a second **^^Fight^^** ability if it is still in combat with any enemy **^^Heroes^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Daemonic Strength",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "For each **daemonic power point** this unit has:\n• Add 1\" to its Move characteristic\n• Add 1 to the Attacks characteristic of its weapons.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "title": "Battle Traits",
+   "items": [
+    {
+     "name": "Battle Traits",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Harness Daemonic Power",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Turn (Army), Start of Your Turn",
+       "declare": "",
+       "effect": "You must use this ability at the start of each of your turns. Remove all **daemonic power points** from each friendly unit. Then, gain 1 **daemonic power point** for each friendly **desolation token** on the battlefield.\nThen, allocate your **daemonic power points** to friendly non-**^^Hobgrot Helsmiths of Hashut^^** units. Each unit can have a maximum of 3 **daemonic power points**. Then, all unallocated **daemonic power points** are lost.\n**Designer's Note:** *Non-***^^Hobgrot^^** *units have abilities that become more powerful depending on how many daemonic power points they have. We recommend using coloured dice to track the number of points each units has.*",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Reserves of Daemonic Power",
+       "kind": "Ability (Command)",
+       "color": "Yellow",
+       "timing": "Once Per Turn (Army), Any Hero Phase",
+       "declare": "Pick a friendly non-**^^Hobgrot Helsmiths of Hashut^^** unit that has no **daemonic power points** to be the target.",
+       "effect": "Give 2 **daemonic power points** to the target.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": "1"
+      },
+      {
+       "name": "Leave the Land in Ruin",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Turn (Army), Start of Any Turn",
+       "declare": "Pick a terrain feature or objective that does not have a friendly **desolation token** and is contested by a friendly **^^Helsmiths of Hashut^^** unit that is not in combat to be the target.",
+       "effect": "Give the target a **desolation token**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Spell Lores",
+   "items": [
+    {
+     "name": "Lore of Infernal Power",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Ashen Smog",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Helsmiths of Hashut Wizard^^** to cast this spell, pick a visible terrain feature within 18\" of them that has a friendly **desolation token** to be the target, then make a casting roll of 2D6.",
+       "effect": "That terrain feature has the 'Obscuring' ability until the start of your next turn. Then, roll a D3 for each enemy unit contesting the target terrain feature. On a 2+, inflict an amount of damage equal to the roll on that unit.",
+       "keywords": "**^^Spell^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Hateful Fractures",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Helsmiths of Hashut Wizard^^** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Halve the target's Move characteristic until the start of your next turn.",
+       "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Molten Metal",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Helsmiths of Hashut Wizard^^** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Roll a number of dice equal to the unmodified casting roll. Inflict 1 mortal damage on the target for each roll that equals or exceeds the target's Save characteristic.",
+       "keywords": "**^^Spell^^**",
+       "cast": "8",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Artefacts of Power",
+   "items": [
+    {
+     "name": "Gem of Utorak",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Gem of Utorak",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle, Your Hero Phase",
+       "declare": "",
+       "effect": "If this unit is not a **^^Wizard^^**, it has **^^Wizard (2)^^** until the start of your next turn.\n\nIf this unit is a **^^Wizard^^**, until the start of your next turn:\n• Add 1 to this unit's power level.\n• Add D3 to casting rolls for this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Casque of Belittlement",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Casque of Belittlement",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Any Combat Phase",
+       "declare": "Pick an enemy unit in combat with this unit to be the target.",
+       "effect": "Roll a number of dice equal to your **fury level**. If this unit charged this turn, add 1 to each roll. For each 3+, inflict 1 mortal damage on the target.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Horn of the Bullfather",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Horn of the Bullfather",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Deployment Phase",
+       "declare": "Pick a visible friendly **^^Helsmiths of Hashut^^** unit to be the target. Then, you can pick a visible friendly **^^Hobgrot Vandalz^^** unit to be a second target.",
+       "effect": "Remove each target from the battlefield and set them up again wholly within 7\" of the battlefield edge and more than 9\" from all enemy units.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Scroll of Petrification",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Scroll of Petrification",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle, Any Hero Phase",
+       "declare": "Pick a friendly **^^Helsmiths of Hashut^^** unit wholly within 12\" of this unit to be the target.",
+       "effect": "For the rest of the turn:\n• The target has **^^Ward (2+)^^**.\n• The target cannot use non-passive abilities or be picked to be the target of friendly abilities.\n• Enemy units can ignore the target's combat range for the purposes of movement and charging.\n• Enemy units can ignore the target for the purposes of setting up on the battlefield but cannot be set up on the target.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Crucible of Spite",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Crucible of Spite",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle, Your Hero Phase",
+       "declare": "",
+       "effect": "Give up to 3 **daemonic power points** to this unit. However, you cannot allocate or give any more **daemonic power points** to this unit for the rest of the battle.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Gauntlets of Punishment",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Gauntlets of Punishment",
+       "kind": "Ability (Activated)",
+       "color": "Blue",
+       "timing": "Your Shooting Phase",
+       "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+       "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Battle Formations: Helsmiths of Hashut",
+   "items": [
+    {
+     "name": "Hashutite Host",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Amassed Legions",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "Each time a friendly **^^Helsmiths of Hashut^^** unit within the combat range of a friendly **^^Helsmiths of Hashut Infantry^^** unit with 1 or more **daemonic power points** uses the 'Rally' command, you can make 3 additional rally rolls of D6.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Castigation Battery",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Experimental Munitions",
+       "kind": "Ability (Passive)",
+       "color": "Blue",
+       "timing": "",
+       "declare": "",
+       "effect": "Ranged weapons used by friendly **^^Helsmiths of Hashut^^** units have **Crit (2 Hits)** while they have 2 or more **daemonic power points**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "The Bullfather's Horns",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Bulls of the Ziggurat",
+       "kind": "Ability (Passive)",
+       "color": "Grey",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1\" to the Move characteristic of friendly **^^Helsmiths of Hashut^^** units for each **daemonic power point** that unit has.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Daemonsmith Cabal",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Arcane Dominance",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to casting rolls, chanting rolls, unbinding rolls, and banishment rolls for friendly **^^Helsmiths of Hashut Wizards^^** and **^^Priests^^** while they are wholly within 12\" of another friendly **^^Helsmiths of Hashut Wizard^^** or **^^Priest^^** with 1 or more **daemonic power points**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Heroic Traits",
+   "items": [
+    {
+     "name": "Servile Automaton",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Servile Automaton",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Deployment Phase",
+       "declare": "Pick a friendly **^^Helsmiths of Hashut Automaton^^** unit within this unit's combat range to be the target.",
+       "effect": "For the rest of the battle, the target is this unit's bodyguard and the following effects apply:\n• While this unit is in combat and its bodyguard is within its combat range, its bodyguard has **^^Strike-first^^**.\n• If this unit is **^^Infantry^^**, it has **^^Ward (5+)^^** while its bodyguard is within its combat range.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "'Fire, You Worms!'",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "'Fire, You Worms!'",
+       "kind": "Ability (Activated)",
+       "color": "Orange",
+       "timing": "Enemy Charge Phase",
+       "declare": "Pick a friendly **^^Helsmiths of Hashut Infantry^^** unit that is not in combat and is wholly within 12\" of this unit to be the target.",
+       "effect": "The target can immediately use the 'Shoot' ability as if it were your shooting phase. All attacks must target the same enemy unit, and the enemy unit picked to be the target of the attacks must have charged this phase. If the unmodified hit roll for any of those attacks is 1-5, the attack fails and the attack sequence ends.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "An Eye for Weakness",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "An Eye for Weakness",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a visible enemy unit within 18\" of this unit to be the target.",
+       "effect": "Until the start of your next turn, add 1 to wound rolls for combat attacks made by friendly **^^Helsmiths of Hashut^^** units that target that enemy unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Prayer Lores",
+   "items": [
+    {
+     "name": "Prayers of the Scorched Sect",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Black Flames of Hashut",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Helsmiths of Hashut Priest^^** to chant this prayer, pick a visible enemy unit within 12\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "Roll a number of dice equal to the number of models in the target unit. For each 5+, inflict 1 mortal damage on the target. If the chanting roll was 8+, inflict 1 mortal damage on the target for each 4+ instead.",
+       "keywords": "**^^Prayer^^**, **^^Unlimited^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      },
+      {
+       "name": "Furnace Blessing",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Helsmiths of Hashut Priest^^** to chant this prayer, pick a visible friendly **^^Helsmiths of Hashut^^** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "Add 1 to the Rend characteristic of the target's melee weapons for the rest of the turn. If the chanting roll was 8+, that unit's melee weapons also have **Crit (Mortal)** for the rest of the turn.",
+       "keywords": "**^^Prayer^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      },
+      {
+       "name": "Storm of Obsidian Shards",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Helsmiths of Hashut Priest^^** to chant this prayer, pick a visible enemy unit within 18\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "Inflict D3 mortal damage on the target and subtract 3 from the target's control score for the rest of the turn. If the chanting roll was 10+, you can pick another eligible unit to be a second target.",
+       "keywords": "**^^Prayer^^**",
+       "cast": "",
+       "chant": "5",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Accursed Devices",
+   "items": [
+    {
+     "name": "Infernal Motivators",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Infernal Motivators",
+       "kind": "Ability (Passive)",
+       "color": "Gray",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 2\" to this unit's Move characteristic.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Earthwrack Stabilisers",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Earthwrack Stabilisers",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to the Rend characteristic of this unit's melee weapons if it has not charged in the same turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Bullfather's Scorn",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Bullfather's Scorn",
+       "kind": "Ability (Activated)",
+       "color": "Blue",
+       "timing": "Your Shooting Phase",
+       "declare": "",
+       "effect": "You can spend 1 **rage dice**. If you do:\n• Apply the effect below.\n• If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7.\nOtherwise, roll a dice. On a 3+, apply the effect below.\n\nThis unit's ranged weapons have **^^Crit (2 Hits)^^** until the start of your next turn. If each of this unit's ranged weapons already have **^^Crit (2 Hits)^^**, this unit's shooting attacks score critical hits on unmodified hit rolls of 5+ until the start of your next turn instead.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Greed Pistons",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Greed Pistons",
+       "kind": "Ability (Passive)",
+       "color": "Orange",
+       "timing": "",
+       "declare": "",
+       "effect": "When making charge rolls for this unit, add 1 to the number of dice rolled, to a maximum of 3, then remove 1 dice of your choice and use the remaining dice as the charge roll.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Breath of Contempt",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Breath of Contempt",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "End of Any Turn",
+       "declare": "Pick up to 3 enemy units in combat with this unit to be the targets.",
+       "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Overdrive Switch",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Overdrive Switch",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Turn (Army), Reaction: You declared an **^^Attack^^** ability for this unit",
+       "declare": "",
+       "effect": "For the rest of the phase:\n• Add 1 to hit rolls for this unit's attacks, including those made with **Companion** weapons, that target an enemy unit within 9\" of it.\n• Each time an unmodified hit roll for an attack made by this unit is 1, allocate 1 damage point to this unit after the Attack ability has been resolved (ward rolls cannot be made for those damage points).",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

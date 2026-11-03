@@ -1,0 +1,1733 @@
+{
+ "name": "Daughters of Khaine",
+ "units": [
+  {
+   "name": "Hag Queen",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WARD (6+)",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "PRIEST (1)",
+    "AELF",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Blade of Khaine",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Catechisms of Violence",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "For the rest of the turn, each time a visible friendly **^^Daughters of Khaine^^** unit wholly within 12\" of this unit uses a **Fight** ability, after that ability has been resolved, you can pick a visible friendly **^^Daughters of Khaine Priest^^** wholly within 12\" of this unit. That **^^Priest^^** gains 1 ritual point.",
+     "keywords": "**^^Exalted^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Morathi-Khaine",
+   "pts": 770,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "WARMASTER",
+    "ORDER",
+    "WIZARD (3)",
+    "INFANTRY",
+    "AELF",
+    "DAUGHTERS OF KHAINE",
+    "WARD (4+)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "6",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Heartrender and Bladed Wings",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Surge of Hatred",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick either a friendly **Shadow Queen** wholly within 12\" of this unit and in combat or a visible friendly non-**^^Hero Daughters of Khaine^^** unit wholly within 12\" of this unit and in combat to be the target, then make a casting roll of 2D6.",
+     "effect": "If the target is a friendly **Shadow Queen**, it can immediately use a **^^Fight^^** ability as if it were your combat phase. Otherwise, inflict D3 mortal damage on each enemy unit in combat with the target.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Iron Heart of Khaine",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time you perform a blood rite, immediately after the ability that destroyed a unit has been resolved, pick 1 of the following effects:\n• Until the start of your next turn, this unit is only visible to enemy units while those units are within its combat range.\n• **Heal (D6)** this unit or a friendly **Shadow Queen**.\n• A friendly **Shadow Queen** can immediately use the 'Normal Move' or 'Retreat' ability as if it was your movement phase even if it has already used that ability or another **^^Core^^** ability this phase.\n**Designer's Note:** *If the Shadow Queen retreats with the 'Iron Heart of Khaine' ability, she cannot subsequently use the 'Fight' ability in the same combat phase.*\n• Remove this unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.\n• For the rest of the turn, set this unit's Control characteristic to 5 and a friendly **Shadow Queen**'s Control characteristic to 15.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Divine Matriarch",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Daughters of Khaine Priest^^** or **^^Wizard^^** wholly within 12\" of this unit to be the target.",
+     "effect": "Add 1 to casting rolls and chanting rolls for the target until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Krethusa the Croneseer",
+   "pts": 220,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "FLY",
+    "INFANTRY",
+    "AELF",
+    "PRIEST (2)",
+    "WARD (5+)"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "6",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Staff of Morai-Heg",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "The Croneseer",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time you perform a blood rite, immediately after the ability that destroyed a unit has been resolved, give this unit 1 **prophecy token**.\n• While this unit has 2 or more **prophecy tokens**, this unit cannot be picked to be the target of shooting attacks or **^^Spell^^** abilities used by enemy units.\n• While this unit has 3 or more **prophecy tokens**, you can re-roll unmodified chanting rolls of 1 for this unit.\n• While this unit has 4 or more **prophecy tokens**, if the unmodified hit roll for an attack that targets this unit is 1-4, the attack fails and the attack sequence ends.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Omens of Doom",
+     "kind": "Ability (Prayer)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Make a chanting roll of D6.",
+     "effect": "Pick 1 of the following effects. If the chanting roll was 10+, pick up to 2 different effects instead.\n**Prophecy of Exile**: Pick a visible enemy **^^Wizard^^** or **^^Priest^^** within 18\" of this unit. Subtract 1 from that unit's power level until the start of your next turn.\n**Prophecy of Dark Wings**: Pick a visible friendly **^^Daughters of Khaine Infantry^^** unit wholly within 12\" of this unit. That unit can immediately use the 'Normal Move' ability as if it were your movement phase and counts as having used a **^^Run^^** ability this turn.\n**Prophecy of Futile Endeavours**: Pick a visible enemy unit within 12\" of this unit. Until the start of your next turn, that unit's attacks cannot score critical hits (treat them as regular hits instead).",
+     "keywords": "**^^Prayer^^**",
+     "cast": "",
+     "chant": "4",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Bloodwrack Shrine",
+   "pts": 270,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WARD (6+)",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "WAR MACHINE",
+    "WIZARD (2)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "12",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "15\"",
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Crit (2 Hits), Shoot in Combat",
+     "name": "Bloodwrack Stare",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "9",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Shrine Guardians' Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Aura of Agony",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "",
+     "effect": "Until the start of your next turn:\n• Enemy **^^Manifestations^^** cannot be set up within 12\" of this unit.\n• This unit has **^^Ward (4+)^^** against mortal damage inflicted by **^^Spell^^** abilities, **^^Prayer^^** abilities and abilities used by **^^Manifestations^^**.",
+     "keywords": "^^**Exalted^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Born of Slaughter",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "If there are fewer friendly **Avatars of Khaine** on the battlefield than there are friendly **Bloodwrack Shrines** on the battlefield, make a casting roll of 2D6.",
+     "effect": "Set up an **Avatar of Khaine** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
+     "keywords": "**^^Spell^^**, **^^Summon^^**",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Agonising Spasms",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Reaction: You declared a **^^Shoot^^** ability for this unit",
+     "declare": "",
+     "effect": "After that **^^Shoot^^** ability has been resolved, if all of this unit's attacks made as part of that **^^Shoot^^** ability targeted the same enemy unit and any enemy models were slain by those attacks, roll a dice. On a 3+, that enemy unit has a maximum control score of 1 for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Melusai Ironscale",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WARD (6+)",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "6",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Keldrisaíth",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Ironscale's Fury",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick each friendly **^^Daughters of Khaine^^** unit within this unit's combat range to be the targets.",
+     "effect": "For the rest of the phase, each time a model in a target unit is slain by a combat attack, roll a dice. If that unit is a **Blood Sisters** or **Blood Stalkers** unit, roll 2 dice instead. For each 5+, inflict 1 mortal damage on the attacking unit.",
+     "keywords": "^^**Exalted**^^",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Bloodwrack Medusa",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WARD (6+)",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "WIZARD (1)",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "6",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Bloodwrack Spear and Whisperclaw",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Exsanguinating Glare",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "If this unit is in combat, pick an enemy unit in combat with it to be the target. If this unit is not in combat, pick a visible enemy unit within 12\" of it to be the target.",
+     "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Then, if any enemy models were slain by that mortal damage, inflict an amount of mortal damage on the target equal to its Health characteristic.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Arcane Resonance",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to casting rolls for this unit when it uses a **^^Summon^^** ability and add 1 to banishment rolls for this unit.",
+     "keywords": "**^^Exalted^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "High Gladiatrix",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WARD (6+)",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "AELF",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Barbed Whip and Gladiatrix's Blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Paragon of Slaughter",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Daughters of Khaine Infantry^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "If this unit is in combat, add 1 to the Rend characteristic of the target's melee weapons for the rest of the turn. If this unit is not in combat, roll a dice. On a 3+, add 1 to the Rend characteristic of the target's melee weapons for the rest of the turn.",
+     "keywords": "**^^Exalted^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Hag Queen on Cauldron of Blood",
+   "pts": 280,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WARD (6+)",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "WAR MACHINE",
+    "PRIEST (1)",
+    "AELF"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "12",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Avatar's Sword",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "9",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Shrine Guardians' Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Wrathful Repulsion",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Charge Phase",
+     "declare": "Pick a visible friendly **^^Daughters of Khaine^^** unit that is wholly within 12\" of this unit and is in combat with an enemy unit that charged this turn to be the target. If there are any friendly **Slaughter Queens on Cauldrons of Blood** on the battlefield, you can pick another eligible unit to be a second target.",
+     "effect": "The targets have **^^Ward (5+)^^** for the rest of the turn.",
+     "keywords": "**^^Exalted^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Roaring Idol",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a friendly **^^Daughters of Khaine Manifestation^^** wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, the target cannot be picked to be the target of **^^Banish^^** abilities used by enemy units until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Slaughter Queen on Cauldron of Blood",
+   "pts": 300,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WARD (6+)",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "WAR MACHINE",
+    "PRIEST (1)",
+    "AELF"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "12",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Avatar's Sword",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "9",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Shrine Guardians' Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Consecrated Revulsion",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to save rolls for friendly **^^Daughters of Khaine Infantry^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Icon of Slaughter",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time a friendy **^^Daughters of Khaine^^** unit wholly within 12\" of this unit uses the 'Rally' command, you can make 3 additional rally rolls of D6. In addition, if there are any friendly **Hag Queens on Cauldrons of Blood** on the battlefield when that command is used, you receive D3 additional rally points.",
+     "keywords": "**^^Exalted^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Slaughter Queen",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WARD (6+)",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "PRIEST (1)",
+    "AELF",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Deathsword and Blade of Khaine",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Fanatical Blademaster",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Daughters of Khaine^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, pick a blessing from the 'Blessings of Khaine' ability that is not **active**. The effect of that blessing applies to the target until the start of your next turn as if it were **active**. If you have used the 'Blessings of Khaine' ability 3 or more times this battle, you can pick 2 blessings instead of 1.",
+     "keywords": "**^^Exalted^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Witch Aelves",
+   "pts": 120,
+   "size": 10,
+   "kw": [
+    "WARD (6+)",
+    "CHAMPION",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "AELF",
+    "MUSICIAN (1/5)",
+    "STANDARD BEARER (1/5)",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Sciansá",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Frenzied Fervour",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Rend characteristic of this unit's melee weapons if it charged in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Khainite Shadowstalkers",
+   "pts": 100,
+   "size": 9,
+   "kw": [
+    "WARD (6+)",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "INFANTRY",
+    "AELF",
+    "CHAMPION (1/9)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Cursed Bolts and Missiles",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Blades of Murder",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Shadow Leap",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "",
+     "effect": "Remove this unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Doomfire Warlocks",
+   "pts": 150,
+   "size": 5,
+   "kw": [
+    "WARD (6+)",
+    "CHAMPION",
+    "CAVALRY",
+    "WIZARD (1)",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "AELF"
+   ],
+   "stats": {
+    "Move": "14\"",
+    "Health": "3",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Doomfire Crossbow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Dark Steed's Vicious Bite",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Cursed Scimitar",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Outmanoeuvre",
+     "kind": "Ability (Passive)",
+     "color": "Gray",
+     "timing": "",
+     "declare": "",
+     "effect": "When this unit uses the 'Redeploy' command, if you roll a 1-3 when determining the distance this unit can move, you can use a value of 4 instead.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Blood Stalkers",
+   "pts": 150,
+   "size": 5,
+   "kw": [
+    "WARD (6+)",
+    "CHAMPION",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "3",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Heartseeker Bow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Scianlar",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Heartseekers",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Reaction: You declared a **^^Shoot^^** ability for this unit",
+     "declare": "",
+     "effect": "After that **^^Shoot^^** ability has been resolved, if all of this unit's attacks targeted the same enemy unit, roll a dice. Add 1 to the roll if any other friendly **Blood Stalkers** units picked that enemy unit to be the target of all of their shooting attacks this turn. On a 3+, until the start of your next turn, subtract 1 from the number of dice rolled when making charge rolls for the target, to a minimum of 1.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Blood Sisters",
+   "pts": 170,
+   "size": 5,
+   "kw": [
+    "WARD (6+)",
+    "CHAMPION",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "3",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Heartshard Glaive",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Crystal Touch",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy **^^Infantry^^** or **^^Cavalry^^** unit in combat with this unit to be the target.",
+     "effect": "Roll a dice. If the roll is equal to or less than the target's Health characteristic, the target has **^^Strike-last^^** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Khinerai Heartrenders",
+   "pts": 100,
+   "size": 5,
+   "kw": [
+    "WARD (6+)",
+    "CHAMPION",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "INFANTRY",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Barbed Javelin",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Fire and Flight",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Reaction: You declared a **^^Shoot^^** ability for this unit",
+     "declare": "",
+     "effect": "After that **^^Shoot^^** ability has been resolved, this unit can move 2D6\". It cannot move into combat during any part of that move.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Khinerai Lifetakers",
+   "pts": 110,
+   "size": 5,
+   "kw": [
+    "WARD (6+)",
+    "CHAMPION",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "INFANTRY",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Barbed Sickle",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Fight and Flight",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit is in combat, it can move 12\". It can pass through the combat ranges of enemy units but cannot end that move in combat. Then, roll a D3 for each enemy unit that this unit passed across during that move. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.",
+     "keywords": "**^^Core^^**, **^^Attack^^**, **^^Fight^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Sisters of Slaughter",
+   "pts": 110,
+   "size": 10,
+   "kw": [
+    "WARD (6+)",
+    "CHAMPION",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "AELF",
+    "MUSICIAN (1/5)",
+    "STANDARD BEARER (1/5)",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Kruiplash",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Dance of Death",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
+     "effect": "Subtract 1 from hit rolls and wound rolls for the target's combat attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Blood Hags",
+   "pts": 150,
+   "size": 10,
+   "kw": [
+    "WARD (6+)",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "AELF",
+    "INFANTRY",
+    "CHAMPION (1/10)",
+    "STANDARD BEARER (1/10)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Ki'raich",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Valthrai",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Wicked Wardens",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit is wholly within 12\" of a friendly **Hag Queen on Cauldron of Blood**, **Slaughter Queen on Cauldron of Blood** or **Shrine of Dark Tribute**, this unit's melee weapons have **^^Anti-charge (+1 Rend)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Crimson Offerings",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), Reaction: You declared the 'Blessings of Khaine' ability",
+     "declare": "",
+     "effect": "If an enemy unit was destroyed by this unit's combat attacks this turn, when resolving that ability, you can pick 2 blessings instead of 1.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Shrine of Dark Tribute",
+   "pts": 20,
+   "size": 1,
+   "kw": [
+    "FACTION TERRAIN",
+    "ORDER",
+    "WARD (6+)",
+    "DAUGHTERS OF KHAINE"
+   ],
+   "stats": {
+    "Move": "-",
+    "Health": "12",
+    "Save": "4+",
+    "Control": "-"
+   },
+   "weapons": [],
+   "abilities": [
+    {
+     "name": "In Dark Communion",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a friendly **^^Daughters of Khaine^^** **^^Wizard^^** or **^^Priest^^** within 3\" of this terrain feature to be the target.",
+     "effect": "The target is in dark communion until this terrain feature uses this ability again or until this terrain feature is removed from the battlefield, whichever comes first. While the target is in dark communion, you can re-roll 1 casting roll or 1 chanting roll for the target each turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Call to Murder",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "",
+     "effect": "Pick a blessing from the 'Blessings of Khaine' ability that is active. That blessing is no longer active. Then, pick a blessing that is not active. That blessing is now active.\n\n\nDesigner's Note: When you use this ability, you are not using the 'Blessings of Khaine' ability.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Khainite Shadowstalkers (Scourge of Aqshy)",
+   "pts": 120,
+   "size": 9,
+   "kw": [
+    "WARD (6+)",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "INFANTRY",
+    "AELF",
+    "CHAMPION (1/9)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Cursed Bolts and Missiles",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Blades of Murder",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Shadow Lariat",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "If this unit is not in combat, pick a visible enemy **^^Infantry^^** or **^^Cavalry Hero^^** that has no more than 1 model and is within 12\" of this unit to be the target.",
+     "effect": "If the target is more than 3\" from all other enemy units, apply the effect below. Otherwise, roll a dice. On a 3+, apply the effect below. \nYour opponent must remove the target from the battlefield and set it up again in combat with this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Melusai Ironscale (Scourge of Aqshy)",
+   "pts": 150,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WARD (6+)",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "6",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Keldrisaíth",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Frenzied Slaughter",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Daughters of Khaine^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. If this unit is in combat, you can re-roll the dice. If the roll is lower than your **fury level**, add 1 to the Attacks characteristic of weapons used by this unit and the target until the start of your next turn.",
+     "keywords": "^^**Exalted**^^",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "title": "Battle Traits",
+   "items": [
+    {
+     "name": "Battle Traits",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Blood Rites",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "You perform a blood rite each time:\n• An enemy unit is destroyed and any damage points were allocated to that unit by a friendly **anointed** unit's combat attacks in the same turn.\n• A friendly **anointed** unit is destroyed.\n• A friendly unit contesting an objective you control is destroyed.\n• An enemy unit is destroyed by a friendly **^^Daughters of Khaine^^** unit's attacks and any models in that enemy unit were contesting an objective you do not control in the same phase.\n• A unit (friendly or enemy) is destroyed and it was within 3\" of a **Place of Power** at the start of the phase.\nOnly one blood rite can be performed per unit destroyed.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Anointed Ritualist",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Start of First Battle Round",
+       "declare": "If there are no friendly **anointed** units on the battlefield, pick a friendly non-Unique **^^Daughters of Khaine^^** Hero on the battlefield to be the target.",
+       "effect": "The target is **anointed** for the rest of the battle, even if it has been destroyed. Friendly **anointed** units on the battlefield treat **^^Exalted^^** abilities on the warscrolls of friendly **anointed** units that have been destroyed as if they were on their warscroll.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Bloody Succession",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "Each time a friendly **anointed** unit is destroyed, after removing it from play, you can immediately use the 'Anointed Ritualist' ability as if it were the start of the first battle round.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Strident War Cry",
+       "kind": "Ability (Activated)",
+       "color": "Orange",
+       "timing": "Once Per Turn (Army), Reaction: You declared a Charge ability for an anointed unit",
+       "declare": "",
+       "effect": "Pick a friendly non-**Hero** **^^Daughters of Khaine^^** unit that is not in combat, is wholly within 12\" of that **anointed** unit and has not charged this turn to be the target. If that **anointed** unit charges, after that **^^Charge^^** ability has been resolved, the target can immediately use the 'Charge' ability even if it is not your charge phase. In addition, you can re-roll charge rolls for the target for the rest of the phase.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Blessings of Khaine",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "Once Per Turn (Army), End of Any Turn",
+       "declare": "You can only use this ability if you performed any blood rites this turn.",
+       "effect": "Pick 1 of the following blessings that is not **active**. That blessing is **active**. While a blessing is **active**, its effect applies to friendly **^^Daughters of Khaine^^** units. The effects of more than 1 blessing can apply to a unit at the same time.\n•  **Blessing of Ruthlessness**: Add 1 to hit rolls for those units' combat attacks.\n•  **Blessing of Hatred**: Add 1 to wound rolls for those units' combat attacks.\n•  **Blessing of Haste**: Add 3\" to those units' Move characteristic.\n•  **Blessing of Zeal**: If those units charged in the same turn, they have **^^Ward (5+)^^** for the rest of the turn.\n•  **Blessing of Shadow**: Subtract 1 from hit rolls for shooting attacks that target those units.\n•  **Blessing of Cruelty**: Those units can use **^^Charge^^** and/or **^^Shoot^^** abilities even if they have used a **^^Retreat^^** ability in the same turn.\n•  **Blessing of Clarity**: Add 1 to chanting rolls and casting rolls for those units.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Artefacts of Power",
+   "items": [
+    {
+     "name": "Crimson Draught",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Crimson Draught",
+       "kind": "Ability (Passive)",
+       "color": "Orange",
+       "timing": "",
+       "declare": "",
+       "effect": "You can re-roll charge rolls for this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Darkling Elixir",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Darkling Elixir",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "End of Your Turn",
+       "declare": "Pick a visible friendly **^^Daughters of Khaine^^** unit wholly within 12\" of this unit to be the target.",
+       "effect": "Roll a dice. On a 3+, the target can immediately use the 'Retreat' ability as if it were your movement phase.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Witchbrew",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Witchbrew",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a visible friendly non-**^^Unique Daughters of Khaine^^** unit wholly within 12\" of this unit to be the target.",
+       "effect": "Roll a dice. On a 3+, ignore negative modifiers to save rolls for the target until the start of your next turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Battle Formations: Daughters of Khaine",
+   "items": [
+    {
+     "name": "Coven of Blood",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "The Breath of Khaine",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "While each model in a friendly **^^Daughters of Khaine^^** unit is contesting an objective you control, those models are not visible to enemy models more than 9\" away.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Frenzied Devotees",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Heretic's Bane",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Turn (Army), Start of Enemy Turn",
+       "declare": "Pick an enemy **^^Wizard^^** or **^^Priest^^** on the battlefield to be the target.",
+       "effect": "Roll a dice for each objective you control. For each 3+, subtract 1 from castitng rolls and chanting rolls for the target for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Cold-Hearted Murderers",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Bloody-Handed Worshippers",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Reaction: You declared a Fight ability for an anointed unit",
+       "declare": "",
+       "effect": "Pick a friendly non-**^^Hero Daughters of Khaine^^** unit that has not used a **^^Fight^^** ability this turn and is within that **anointed** unit's combat range to the the target. The target  can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by that **anointed** unit has been resolved. If it is picked to do so, the target's melee weapons have **Crit (Auto-wound)** for the rest of the turn. If the melee weapons already have **Crit (Auto-wound)**, they have **Crit (Mortal)** for the rest of the turn instead.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Fervent Ritualists",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Final Frenzy",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "Once Per Turn (Army), End of Any Turn",
+       "declare": "Pick each friendly **^^Daughters of Khaine^^** unit contesting an objective to be the targets.",
+       "effect": "Return up to D3 slain models to each target that has a Health characteristic of up to 2.\nReturn up to 1 slain model to each target that that has a Health characteristic of 3 or more.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Heroic Traits",
+   "items": [
+    {
+     "name": "Shadow-Blooded",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Shadow-Blooded",
+       "kind": "Ability (Activated)",
+       "color": "Grey",
+       "timing": "Reaction: You declared the 'Redeploy' command for a **^^Daughters of Khaine^^** unit wholly within 12\" of this unit",
+       "declare": "",
+       "effect": "If you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Hand of Khaine",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Hand of Khaine",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Any Combat Phase",
+       "declare": "Pick an enemy **^^Hero^^** in combat with this unit to be the target.",
+       "effect": "Roll 2D6. If the roll exceeds the target's Health characteristic, it is automatically destroyed. If the target is destroyed by this ability, this unit can use 2 **^^Fight^^** abilities this phase. After the first is used, however, this unit has **^^Strike-Last^^** for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Murderous Duellist",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Murderous Duellist",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Any Combat Phase",
+       "declare": "Pick an enemy unit that has no more than 1 model and is in combat with this unit to be the target.",
+       "effect": "Roll 2D6. If the roll equals or exceeds the target's Control characteristic, for the rest of the turn, if this unit is in combat with the target when the target is picked to use a **^^Fight^^** ability, all of the target's attacks must target this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Murder Manifested",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Murder Manifested",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Reaction: This unit used the 'Activate Place of Power' ability",
+       "declare": "",
+       "effect": "Apply the effect below instead of the effect of that 'Activate Place of Power' ability. \nRoll a dice. On a 1, inflict D3 mortal damage on this unit. On a 2+, if there are no friendly **Avatars of Khaine** on the battlefield, set up an **Avatar of Khaine** wholly within 12\" of this unit, visible to it and more than 9\" from all enemy units. This unit has summoned that **^^Manifestation^^**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Loyal Unto Death",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Loyal Unto Death",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Deployment Phase",
+       "declare": "Pick another friendly **^^Daughters of Khaine Hero^^** that has a Health characteristic that equals or exceeds this unit's Health characteristic to be the target.",
+       "effect": "For the rest of the battle, if this unit is within the target's combat range when the target would be destroyed, the target is not destroyed and any remaining damage points inflicted on it have no effect. Then, **Heal (D3)** the target. Then, this unit is destroyed.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Honoured Among Sects",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Honoured Among Sects",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "If this unit is anointed, the effect of all blessings from the 'Blessings of Khaine' ability apply to this unit as if they were active.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Manifestation Lores",
+   "items": [
+    {
+     "name": "Manifestations of Khaine",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Summon Bladewind",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Bladewind** on the battlefield, pick a friendly **^^Daughters Of Khaine Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Bladewind** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Bloodwrack Viper",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Bloodwrack Viper** on the battlefield, pick a friendly **^^Daughters of Khaine Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Bloodwrack Viper** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Heart of Fury",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Heart of Fury** on the battlefield, pick a friendly **^^Daughters of Khaine Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Heart of Fury** wholly within 18\" of the caster and visible to them.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Prayer Lores",
+   "items": [
+    {
+     "name": "Prayers of the Khainite Cult",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Covenant of the Iron Heart",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Daughters of Khaine Priest^^** to chant this prayer, pick a visible friendly **^^Daughters of Khaine^^** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "Add 10 to the target's control score until the start of your next turn. In addition, if the chanting roll was 6+, ignore the first damage point that would be allocated to the target in each phase until the start of your next turn.",
+       "keywords": "**^^Prayer^^**",
+       "cast": "",
+       "chant": "3",
+       "cost": ""
+      },
+      {
+       "name": "Catechism of Murder",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Daughters of Khaine Priest^^** to chant this prayer, pick a visible friendly **^^Daughters of Khaine^^** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "The target's melee weapons have **Crit (Auto-wound)** until the start of your next turn. In addition, if the chanting roll was 7+, the target's combat attacks score critical hits on unmodified hit rolls of 5+ until the start of your next turn.",
+       "keywords": "**^^Prayer^^**, **^^Unlimited^^**",
+       "cast": "",
+       "chant": "3",
+       "cost": ""
+      },
+      {
+       "name": "Dance of Doom",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Daughters of Khaine Priest^^** to chant this prayer, pick a visible friendly non-**^^Unique Daughters of Khaine^^** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "Add 1 to the Attacks characteristic of the target's melee weapons for the rest of the turn. In\naddition, if the chanting roll was 10+, the target can use 2 **^^Fight^^** abilities this turn. After the first is used, however, the target has **^^Strike-Last^^** for the rest of the turn.",
+       "keywords": "**^^Prayer^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Spell Lores",
+   "items": [
+    {
+     "name": "Lore of Shadows",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Steed of Shadows",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Daughters of Khaine Wizard^^** to cast this spell, pick a visible friendly **^^Daughters of Khaine^^** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "The target can use **^^Charge^^** abilities this turn even if it used a **^^Run^^** ability in the same turn.",
+       "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Mindrazor",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Daughters of Khaine Wizard^^** to cast this spell, pick a visible friendly **^^Daughters of Khaine^^** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "The target's melee weapons have **Charge (+1 Damage)** until the start of your next turn.",
+       "keywords": "**^^Spell^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Black Horror of Ulgu",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Daughters of Khaine Wizard^^** to cast this spell, pick a point on the battlefield within 18\" of them, pick up to 3 enemy units within 3\" of that point to be the targets, then make a casting roll of 2D6.",
+       "effect": "The targets cannot use **^^Run^^** abilities until the start of your next turn.",
+       "keywords": "**^^Spell^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Boons of Shadow",
+   "items": [
+    {
+     "name": "Ulguan Reactions",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Ulguan Reactions",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Talismans of Shadow",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Talismans of Shadow",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Reaction: You declared a **^^Spell^^**, **^^Prayer^^** or **^^Unbind^^** ability for a unit within 3\" of this unit",
+       "declare": "",
+       "effect": "Spend 1 **rage dice**. If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7. Then, add 1 to that casting roll, chanting roll or unbinding roll.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Tenebrous Aura",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Tenebrous Aura",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Start of Any Turn",
+       "declare": "Pick an enemy unit in combat with this unit to be the target.",
+       "effect": "For the rest of the turn:\n• The target cannot use **^^Retreat^^** abilities.\n• If an ability would heal or return any slain models to the target unit, that ability does not heal any damage points or return any slain models to it.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

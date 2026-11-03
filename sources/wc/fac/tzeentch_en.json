@@ -1,0 +1,2468 @@
+{
+ "name": "Disciples of Tzeentch",
+ "units": [
+  {
+   "name": "Chaos Spawn of Tzeentch",
+   "pts": 60,
+   "size": 1,
+   "kw": [
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "BEAST"
+   ],
+   "stats": {
+    "Move": "2D6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2D6",
+     "Hit": "5+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (2 Hits), Companion",
+     "name": "Freakish Mutations",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "A Twisted Fate",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "This unit must be deployed using this ability.",
+     "effect": "Set up this unit in reserve **masked by illusion**. It has now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Waves of Mutation",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time this unit or the replacement of this unit is destroyed, set up a replacement unit in reserve **masked by illusion**. Each friendly **Chaos Spawn of Tzeentch** unit can be replaced any number of times.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Kairos Fateweaver",
+   "pts": 400,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "UNIQUE",
+    "WARMASTER",
+    "CHAOS",
+    "DAEMON",
+    "MONSTER",
+    "WARD (5+)",
+    "WIZARD (3)",
+    "FLY",
+    "DISCIPLES OF TZEENTCH"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "16",
+    "Save": "5+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Staff of Tomorrow",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Curved Beaks",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, subtract 1 from its power level.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Master of Destiny",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "If this unit has not already **engineered the outcome** this battle round, instead of making a casting roll, unbinding roll, banishment roll, hit roll, wound roll, or save roll for a visible friendly **^^Disciples of Tzeentch^^** unit wholly within 12\" of this unit, this unit can **engineer the outcome**.\nIf the roll would have been a D6 roll, you can use a value of 6 for the roll, you can use a value of 6 for it that cannot be modified. If the roll would have been a 2D6 roll, you can use a value of 9 for it that cannot be modified.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Mastery of Magic",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "When you make a casting roll for this unit, you can change the lowest D6 to match the highest D6.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Fateful Reverse",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible enemy unit within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "Until the start of your next turn:\n• If the target charged in the same turn, friendly **^^Disciples of Tzeentch^^** units in combat with the target have **^^Strike-first^^**.\n• The target's weapons cannot be affected by the **Charge (+1 Damage)** weapon ability.",
+     "keywords": "**^^Spell^^**",
+     "cast": "8",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Beacon of Sorcery",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to casting rolls and unbinding rolls for friendly **^^Disciples of Tzeentch Wizards^^** while they are wholly within 12\" of this unit.\nIn addition, if a friendly **^^Disciples of Tzeentch Wizard^^** wholly within 12\" of this unit unbinds a spell, no command points are spent for that **^^Wizard^^** to use the 'Magical Intervention' command in that phase.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Lord of Change",
+   "pts": 380,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DAEMON",
+    "MONSTER",
+    "WARD (5+)",
+    "FLY",
+    "DISCIPLES OF TZEENTCH",
+    "WIZARD (3)"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "14",
+    "Save": "5+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Storm of Wyrdfire",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Eldritch Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, subtract 1 from its power level.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Summon Daemons of Tzeentch",
+     "kind": "Ability (Command)",
+     "color": "Gray",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "Pick a friendly non-**^^Hero^^** non-**^^Unique Disciples of Tzeentch Daemon^^** unit that has been destroyed to be the target.",
+     "effect": "Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12\" of this unit and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": "1"
+    },
+    {
+     "name": "Temporal Manipulation",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick another visible friendly **^^Disciples of Tzeentch^^** unit that was not set up this turn and that is wholly within 18\" of this unit to be the target. Them, make a casting roll of 2D6.",
+     "effect": "The target can use the 'Normal Move' ability as if it were your movement phase, but it must end that move closer to this unit.",
+     "keywords": "**^^Spell^^**, **^^Wyrdflame^^**",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Locus of Impossibility",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to casting rolls for this unit. In addition, subtract 1 from hit rolls for attacks that target friendly **^^Disciples of Tzeentch Daemon^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Burning Chariot of Tzeentch",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "CHAOS",
+    "DAEMON",
+    "FLY",
+    "DISCIPLES OF TZEENTCH",
+    "WARD (6+)",
+    "WAR MACHINE"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "8",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "16\"",
+     "Atk": "4",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "Anti-**^^Infantry^^** (+1 Rend), Shoot in Combat",
+     "name": "Wyrdflame Blast",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Flaming Maws and Blue Horrors' Jabs",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Charge (+1 Damage), Companion",
+     "name": "Screamers' Lamprey Bites",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Fiery Death From Above",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "If this unit charged this turn, pick a visible enemy unit within 1\" of it to be the target.",
+     "effect": "Roll a D3. On a 1, gain 1 **fate point**. On a 2+:\n• Inflict an amount of mortal damage on the target equal to the roll.\n• This unit can immediately use a **^^Retreat^^** ability as if it were your movement phase. No mortal damage is inflicted on this unit by that **^^Retreat^^** ability.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Changeling",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DAEMON",
+    "DISCIPLES OF TZEENTCH",
+    "INFANTRY",
+    "UNIQUE",
+    "WIZARD (2)",
+    "WARD (5+)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "6",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "The Trickster's Staff",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Arch-Deceiver",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "This unit can only use this ability if it is **masked by illusion**. Pick a model in a friendly **^^Disciples of Tzeentch^^** unit to be the target.",
+     "effect": "This unit can immediately use a **^^Spell^^** ability. When it does so, measure the range and visibility of that **^^Spell^^** ability from the target. The target is treated as the caster for the purposes of other abilities such as 'Unbind'.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Puckish Misdirection",
+     "kind": "Ability (Passive)",
+     "color": "Grey",
+     "timing": "",
+     "declare": "",
+     "effect": "While they are wholly within 12\" of this unit, friendly **^^Disciples of Tzeentch^^** units can use the 'Redeploy' command even if they were set up in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Whispers of Treachery",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible enemy unit within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "Roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Curseling, Eye of Tzeentch",
+   "pts": 170,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "WIZARD (2)",
+    "INFANTRY",
+    "ARCANITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "6",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "D6",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Hurled Arcane Energy",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Staff of Tzeentch and Blazing Sword",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Armour-bane Curse",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible enemy unit within 12\" of this unit to be the target then make a casting roll of 2D6.",
+     "effect": "Subtract 1 from save rolls for combat attacks that target that unit until the start of your next turn.",
+     "keywords": "**^^Spell^^**",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "With Spell and Sword",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit is in combat, it can use a non-**^^Summon Spell^^** ability as if it were your hero phase, as if that ability had the **^^Unlimited^^** keyword and as if this unit had not cast any spells this turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Flamers of Tzeentch",
+   "pts": 130,
+   "size": 3,
+   "kw": [
+    "INFANTRY",
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "DAEMON",
+    "WARD (6+)",
+    "FLY",
+    "CHAMPION"
+   ],
+   "stats": {
+    "Move": "9\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Flaming Maws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "3",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "Anti-**^^Infantry^^** (+1 Rend), Shoot in Combat",
+     "name": "Warping Flames",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Capricious Wyrdflame",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Any Shooting Phase",
+     "declare": "Pick an enemy unit that had any damage points allocated to it this turn by this unit's shooting attacks to be the target.",
+     "effect": "The target has the **^^Burning^^** keyword for the rest of the battle",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Lingering Burns",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "This unit can use this ability even if it has been destroyed or is in reserve. Pick any number of **^^Burning^^** enemy units to be the targets.",
+     "effect": "Roll a D3 for each target. On a 1, the target no longer has the **^^Burning^^** keyword. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Jade Obelisk",
+   "pts": 100,
+   "size": 9,
+   "kw": [
+    "INFANTRY",
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "ARCANITE",
+    "CHAMPION (1/9)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "1",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti-**^^Faction Terrain^^** (+1 Rend)",
+     "name": "Mason's Tools",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Silver Monoliths",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit while it is wholly within 12\" of a friendly **Argent Shard**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Idolarc",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit's **Idolarc** is a token. After setting up this unit on the battlefield for the first time, place its **Idolarc** next to it.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Chosen by the Stone",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "If this unit has any models carrying an **Antithete Bow**, pick a visible enemy unit within 18\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, place the **Idolarcs** of all other friendly **Jade Obelisk** units next to their respective units. Then, place this unit's **Idolarc** next to the target.\nWhile a friendly **Idolarc** is next to an enemy unit, subtract 1\" from that enemy unit's Move characteristic for each **fate point** you have. This ability cannot reduce an enemy unit's Move characteristic below half its unmodified value.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Exalted Flamer of Tzeentch",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "CHAOS",
+    "DAEMON",
+    "FLY",
+    "DISCIPLES OF TZEENTCH",
+    "WARD (6+)",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "9\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "16\"",
+     "Atk": "4",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "Anti-**^^Infantry^^** (+1 Rend), Shoot in Combat",
+     "name": "Wyrdflame Blast",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Flaming Maws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Unnatural Heat",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Any Shooting Phase",
+     "declare": "Pick an enemy unit that was targeted by this unit's shooting attacks this phase to be the target.",
+     "effect": "Roll a dice. Add the number of damage points allocated to the target this phase by this unit's shooting attacks to the roll. On a 5+,subtract 1 from save rolls for the target for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Heart of the Inferno",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "Pick up to 2 visible **Flamers of Tzeentch** units wholly within 12\" of this unit to be the targets.",
+     "effect": "Add 1 to wound rolls for the targets' shooting attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Tzaangor Enlightened on Foot",
+   "pts": 110,
+   "size": 3,
+   "kw": [
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "CHAMPION",
+    "ARCANITE",
+    "WARFLOCK",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "3",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Tzaangor Spear and Vicious Beak",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Vicious Protectors",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "While there is a visible friendly **^^Arcanite Hero^^** within this unit's combat range:\n• Subtract 1 from hit rolls for combat attacks that target that friendly **^^Arcanite Hero^^**.\n• Add 1 to hit rolls for this unit's combat attacks.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Fateskimmer, Herald of Tzeentch on Burning Chariot",
+   "pts": 150,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DAEMON",
+    "FLY",
+    "DISCIPLES OF TZEENTCH",
+    "WARD (6+)",
+    "WAR MACHINE",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "10",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Staff of Change and Ritual Dagger",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Charge (+1 Damage), Companion",
+     "name": "Screamers' Lamprey Bites",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Fuel for the Flames",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Any Hero Phase",
+     "declare": "Pick a visible friendly **^^Disciples of Tzeentch^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "If the target is destroyed this turn, before removing it from play, gain 1 **fate point**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Spread the Inferno",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "**Companion** weapons used by friendly **^^Disciples of Tzeentch^^** units have **Crit (2 Hits)** while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Blue Horrors and Brimstone Horrors",
+   "pts": 120,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "DAEMON",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Arcane Flames",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Spiteful Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Split Again",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "",
+     "effect": "Roll a dice for each **Blue Horror** model in this unit that is slain. For each 3+, if there are fewer **Brimstone Horrors** models in this unit than its starting size, you can add 1 **Brimstone Horrors** model to this unit.\n**Designer's Note:** *Dice are only rolled for Blue Horror models that are currently slain – models that have been slain and returned to this unit do not count until they are slain once more. When adding Brimstone Horrors to this unit, do not count slain Brimstone Horrors towards the maximum.*",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Immolation",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Slain **Brimstone Horrors** cannot be returned to this unit. When setting up a replacement unit for this unit, **Brimstone Horror** models are ignored when determining the number of models in this unit, and you cannot pick them to be set up.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Changecaster, Herald of Tzeentch",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DAEMON",
+    "DISCIPLES OF TZEENTCH",
+    "WARD (6+)",
+    "WIZARD (1)",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Staff of Change and Ritual Dagger",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Locus of Command",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time a friendly **^^Disciples of Tzeentch Daemon^^** unit wholly within 12\" of this unit uses the 'Rally' command, you can make 3 additional rally rolls of D6.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Weapon Curse",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Disciples of Tzeentch Daemon^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. Add 1 to the roll if the target was set up this turn, On a 3+, until the start of your next turn, other than the **Companion** weapon ability, weapon abilities for attacks that target that unit have no effect.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Ogroid Thaumaturge",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "WIZARD (1)",
+    "ARCANITE",
+    "INFANTRY",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "8",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "Shoot in Combat",
+     "name": "Thaumaturge Staff",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Great Horns and Cloven Hooves",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Arcane Absorption",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "",
+     "effect": "If any damage points were allocated to an enemy **^^Wizard^^** or **^^Priest^^** by this unit's attacks this turn and that enemy unit has been destroyed:\n• **Heal (7)** this unit.\n• Add 1 to this unit's power level for the rest of the battle.\nThis unit can be affected by this ability multiple times and the effects are cumulative.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Thaumaturgic Hunger",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Reaction: Opponent declared a **^^Spell^^** ability for a unit within 30\" of this unit.",
+     "declare": "",
+     "effect": "This unit can move 6\". It can move into combat and must end that move closer to the caster. If this unit was in combat at the start of the move, it must end that move in combat.",
+     "keywords": "**^^Move^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Ogroid Thaumaturge (Scourge of Aqshy)",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "WIZARD (1)",
+    "ARCANITE",
+    "INFANTRY",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "8",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "Shoot in Combat",
+     "name": "Thaumaturge Staff",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Great Horns and Cloven Hooves",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Soul-Deep Devotion",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit is within a friendly non-**^^Hero^^** **^^Arcanite^^** unit's combat range:\n• This unit has **Ward (4+)**.\n• Each time you make a successful ward roll for this unit, allocate 1 damage point to a friendly non-**^^Hero^^** **^^Arcanite^^** unit within this unit's combat range after the damage sequence for this unit has been resolved (ward rolls cannot be made for those damage points).",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Wrath of the Thaumaturge",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "If this unit is not in combat, pick a friendly **^^Arcanite^^** unit in combat to be the target.",
+     "effect": "Remove this unit from the battlefield and set it up again within 1\" of the target and in combat. This unit has charged.",
+     "keywords": "**^^Core^^**, **^^Charge^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Gaunt Summoner on Disc of Tzeentch",
+   "pts": 190,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DAEMON",
+    "DISCIPLES OF TZEENTCH",
+    "WIZARD (2)",
+    "CAVALRY",
+    "DISC OF TZEENTCH",
+    "FLY",
+    "WARD (5+)"
+   ],
+   "stats": {
+    "Move": "14\"",
+    "Health": "7",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Crit (Mortal)",
+     "name": "Changestaff",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Warptongue Blade",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Companion",
+     "name": "Disc's Teeth and Horns",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Masters of the Silver Towers",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "Enemy units cannot end a charge move within 1/2\" of a friendly **Argent Shard** that is wholly within 12\" of this unit and was set up on the battlefield in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Arcane Imprisonment",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick an enemy **^^Hero^^** in combat with this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "If the unmodified casting roll exceeds the target's Health characteristic, it is automatically destroyed and cannot be replaced for the rest of the battle.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "All Belongs to Tzeentch",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Battle (Army), Start of Any Turn",
+     "declare": "Pick an objective you do not control and that you controlled earlier in the battle to be the target.",
+     "effect": "You control the target objective.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Gaunt Summoner",
+   "pts": 160,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DAEMON",
+    "DISCIPLES OF TZEENTCH",
+    "WIZARD (2)",
+    "INFANTRY",
+    "WARD (5+)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Crit (Mortal)",
+     "name": "Changestaff",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Warptongue Blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Leaden Limbs",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible enemy unit within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "Until the start of your next turn:\n• Halve the target's Move characteristic.\n• The effects of the 'Fly' ability do not apply to the target.",
+     "keywords": "",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Masters of the Silver Towers",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "Enemy units cannot end a charge move within 1/2\" of a friendly **Argent Shard** that is wholly within 12\" of this unit and was set up on the battlefield in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "All Belongs to Tzeentch",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Battle (Army), Start of Any Turn",
+     "declare": "Pick an objective you do not control and that you controlled earlier in the battle to be the target.",
+     "effect": "You control the target objective.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Tzaangor Shaman",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "CAVALRY",
+    "FLY",
+    "WIZARD (1)",
+    "ARCANITE",
+    "WARFLOCK",
+    "DISC OF TZEENTCH"
+   ],
+   "stats": {
+    "Move": "14\"",
+    "Health": "6",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Staff of Change and Ritual Dagger",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Companion",
+     "name": "Disc's Teeth and Horns",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Avian Swiftness",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Arcanite^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, for the rest of the turn, the target can use **^^Charge^^** abilities even if it used a **^^Run^^** ability in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Wit of Beasts",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick a visible enemy **^^Monster^^** or **^^Cavalry^^** unit within 6\" of the target.",
+     "effect": "The target's melee weapons have the **Companion** ability for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Magister",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "WIZARD (1)",
+    "ARCANITE",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Tzeentchian Runestaff",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Warpsteel Sword",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Imbued with Arcane Fire",
+     "kind": "Ability (Command)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick a visible friendly **^^Arcanite^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "The target's melee weapons have **Crit (Mortal)** until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": "1"
+    },
+    {
+     "name": "Spellmaster",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Reaction: You declared a **^^Spell^^** ability for a **^^Wizard^^** within 30\" of this unit and the casting roll equalled or exceeded the spell's casting value and that spell has not been unbound",
+     "declare": "",
+     "effect": "Make an unbinding roll of 2D6. If the roll exceeds the casting roll for the spell, the spell is unbound and its effect is not resolved.\nIf the spell is unbound, add 1 to casting rolls for this unit for the rest of the phase.",
+     "keywords": "**^^Unbind^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Magister on Disc of Tzeentch",
+   "pts": 150,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "CAVALRY",
+    "DISC OF TZEENTCH",
+    "FLY",
+    "WIZARD (1)",
+    "ARCANITE"
+   ],
+   "stats": {
+    "Move": "14\"",
+    "Health": "7",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Tzeentchian Runestaff",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Warpsteel Sword",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Companion",
+     "name": "Disc's Teeth and Horns",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Fates Converge",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "While you have 6 or more **fate points**, add 1 to the Attacks characteristic of melee weapons used by friendly **^^Arcanite^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Spellmaster",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Reaction: You declared a **^^Spell^^** ability for a **^^Wizard^^** within 30\" of this unit and the casting roll equalled or exceeded the spell's casting value and that spell has not been unbound",
+     "declare": "",
+     "effect": "Make an unbinding roll of 2D6. If the roll exceeds the casting value, the spell is unbound and its effect is not resolved.\nIf the spell is unbound, add 1 to casting rolls for this unit for the rest of the phase.",
+     "keywords": "**^^Unbind^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Screamers of Tzeentch",
+   "pts": 80,
+   "size": 3,
+   "kw": [
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "DAEMON",
+    "WARD (6+)",
+    "BEAST",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "14\"",
+    "Health": "3",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Charge (+1 Damage), Companion",
+     "name": "Lamprey Bite",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Drawn to Magic",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "If this unit is not in combat, pick an enemy **^^Manifestation^^** to be the target. Then, make a charge roll of 3D6.",
+     "effect": "This unit can move a distance up to the value of the charge roll. It can move through the combat ranges of enemy units and must end that move within 1/2\" of the target. If it does so, this unit has charged.\nThen, if this unit charged this turn, inflict D3 mortal damage on each enemy **^^Manifestation^^** in combat with this unit.",
+     "keywords": "**^^Core^^**, **^^Move^^**, **^^Charge^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Screamers of Tzeentch (Scourge of Aqshy)",
+   "pts": 120,
+   "size": 3,
+   "kw": [
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "DAEMON",
+    "WARD (6+)",
+    "BEAST",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "14\"",
+    "Health": "3",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Charge (+1 Damage), Companion",
+     "name": "Lamprey Bite",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Imperilling Slashes",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "If this unit charged this turn, pick an enemy unit in combat with it to be the target.",
+     "effect": "Subtract 1 from save rolls for the target for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Pink Horrors",
+   "pts": 170,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)",
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "DAEMON",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Arcane Flames",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Taloned Hands",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Lunatic Demise",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time a model in this unit is slain, before removing the model from play, pick 1 of the following effects: \n***Split:*** Pick a friendly **Blue Horrors and Brimstone Horrors** unit within 12\" of this unit. Return up to 2 slain **Blue Horror** models to that unit. \n***Petty Vengeance:*** Pick an enemy unit in combat with this unit to be the target, then roll a dice. On a 5+, inflict 1 mortal damage on the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Tzaangor Skyfires",
+   "pts": 160,
+   "size": 3,
+   "kw": [
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "FLY",
+    "CAVALRY",
+    "CHAMPION",
+    "ARCANITE",
+    "WARFLOCK",
+    "DISC OF TZEENTCH"
+   ],
+   "stats": {
+    "Move": "14\"",
+    "Health": "4",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Arrow of Fate",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Bow Stave and Vicious Beak",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Companion",
+     "name": "Disc's Teeth and Horns",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Guided by the Future",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "Ignore negative modifiers to hit rolls and wound rolls for this unit's shooting attacks.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Destined Quarry",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Your Shooting Phase",
+     "declare": "Pick an enemy unit that had any damage points allocated to it by this unit's attacks this phase to be the target.",
+     "effect": "Add 1 to hit rolls for combat attacks made by friendly **^^Warflock^^** units that target that enemy unit for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Tzaangor Enlightened",
+   "pts": 200,
+   "size": 3,
+   "kw": [
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "FLY",
+    "CAVALRY",
+    "CHAMPION",
+    "ARCANITE",
+    "WARFLOCK",
+    "DISC OF TZEENTCH"
+   ],
+   "stats": {
+    "Move": "14\"",
+    "Health": "4",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Tzeentchian Spear and Vicious Beak",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Companion",
+     "name": "Disc's Teeth and Horns",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "All Too Predictable",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit charged this turn, pick 1 of the following effects to apply for the rest of the turn:\n• This unit's **Tzeentchian Spear and Vicious Beak** has **Crit (2 Hits)**\n• Add 1 to the Rend characteristic of this unit's **Tzeentchian Spear and Vicious Beak**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Tzaangors",
+   "pts": 170,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)",
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "ARCANITE",
+    "WARFLOCK"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Crit (2 Hits)",
+     "name": "Savage Blade and Vicious Beak",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Eldritch Raiders",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to wound rolls for this unit's attacks while it is wholly within enemy territory.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Kairic Acolytes",
+   "pts": 90,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "ARCANITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Cursed Blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Driven by Destiny",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Turn (Army), Enemy Movement Phase",
+     "declare": "",
+     "effect": "If this unit is more than 6\" from all enemy units, it can move **X**\", where **X** is the number of **fate points** you have. It cannot move into combat during any part of that move.",
+     "keywords": "**^^Move^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Fatemaster",
+   "pts": 150,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "ARCANITE",
+    "INFANTRY",
+    "DISC OF TZEENTCH",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Cursewrought Glaive",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Bound Retinue",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "This unit can only use this ability if it is **masked by illusion**. Pick up to 1 other friendly unit that is **masked by illusion** to be the target.",
+     "effect": "Set up this unit on the battlefield more than 9\" from all enemy units. Then, set up the target wholly within 6\" of this unit and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Long in the Planning",
+     "kind": "Ability (Fate)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Enemy Hero Phase",
+     "declare": "Spend 2 **fate points**. Then, pick a visible friendly **^^Arcanite^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "For the rest of the turn, the first time an enemy unit ends a charge move within 3\" of the target, you can remove the target from the battlefield and set it up in reserve **masked by illusion**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "title": "Battle Traits",
+   "items": [
+    {
+     "name": "Battle Traits",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Eldritch Illusions",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Turn (Army), Deployment Phase",
+       "declare": "Pick up to 3 friendly non-**^^Monster Disciples of Tzeentch^^** units to be the targets.",
+       "effect": "Remove the targets from the battlefield and set them up in reserve **masked by illusion**.\nFriendly units that are **masked by illusion** are destroyed at the end of the fifth battle round and not at the start of the fourth battle round.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "All Part of the Plan",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "You start the battle with 0 **fate points**, Gain 1 **fate point** each time:\n• You lose the priority toll.\n• A spell cast by a friendly **^^Disciples of Tzeentch^^** unit is unbound.\n• A friendly **^^Disciples of Tzeentch^^** unit miscasts a spell.\n• Your opponent gains control of an objective that you controlled at the start of the turn.\n• A friendly **Argent Shard** is **demolished**.\nYou can have a maximum of 9 **fate points**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Smoke and Mirrors",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Turn (Army), Any Hero Phase",
+       "declare": "Pick a friendly non-**^^Monster Disciples of Tzeentch^^** unit that was not set up on the battlefield this turn and was not set up on the battlefield using this ability in the previous turn to be the target, then pick a friendly unit that is **masked by illusion** to be the substitute.",
+       "effect": "Set up the substitute wholly within 6\" of the target and not in combat. Then, remove the target from the battlefield and set up in reserve **masked by illusion**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Silver Simulacrum",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Battle (Army), Deployment Phase",
+       "declare": "",
+       "effect": "If there is a friendly **Argent Shard** on the battlefield, you can set up 1 additional **Argent Shard** on the battlefield. It must be set up wholly within friendly territory and more than 3\" from all objectives and other terrain features.\n**Designer's Note**: *The original Argent Shard is set up in Step 1 of the deployment phase using the 'Deploy Faction Terrain' ability. This ability allows you to set up a second such terrain feature and is used in Step 3 of the deployment phase, after armies have been deployed.*",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Destined to Serve",
+       "kind": "Ability (Fate)",
+       "color": "Green",
+       "timing": "Passive",
+       "declare": "",
+       "effect": "Before allocating damage points to a friendly **Disciples of Tzeentch** unit, you can spend any number of **fate points**. For each **fate point** you spend, remove 1 damage point in that unit's damage pool.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Destined Arcana",
+       "kind": "Ability (Fate)",
+       "color": "Yellow",
+       "timing": "Reaction: You declared a **^^Spell^^** ability for a **^^Disciples of Tzeentch^^** unit",
+       "declare": "",
+       "effect": "Spend any number of **fate points**. For each **fate point** you spend, add 1 to the casting roll for that spell.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Destined for Battle",
+       "kind": "Ability (Fate)",
+       "color": "Orange",
+       "timing": "Reaction: You declared a **^^Charge^^** ability for a **^^Disciples of Tzeentch^^** unit in your turn",
+       "declare": "",
+       "effect": "Spend any number of **fate points**. For each **fate point** you spend, add 1 to the charge roll for that **^^Charge^^** ability.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Spell Lores",
+   "items": [
+    {
+     "name": "Lore of Fate",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Shield of Fate",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Disciples of Tzeentch Wizard^^** to cast this spell, pick a visible friendly **^^Disciples of Tzeentch^^** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Until the start of your next turn:\n• The target has **^^Ward (5+)^^**.\n• Subtract 1 from hit rolls for attacks that target that unit.",
+       "keywords": "**^^Spell^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Wyrdflame Haze",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Disciples of Tzeentch Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Until the start of your next turn, friendly **^^Disciples of Tzeentch^^** units are not visible to enemy units more than 12\" from them while those friendly units are wholly within 12\" of a friendly **^^Disciples of Tzeentch^^** unit that was set up in the same turn.",
+       "keywords": "**^^Spell^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Infernal Gateway",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Disciples of Tzeentch Wizard^^** to cast this spell, pick a visible enemy unit within 18\" of them that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6.",
+       "effect": "Roll either 5 dice or a number of dice equal to the number of **fate points** you have. For each 4+, inflict 1 mortal damage on the target.",
+       "keywords": "**^^Spell^^**. **^^Unlimited^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Lore of Change",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Bolt of Tzeentch",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Disciples of Tzeentch Wizard^^** to cast this spell, pick a visible enemy unit within 18\" of them that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6",
+       "effect": "Inflict D3 mortal damage on the target. Subtract 1 from wound rolls for the target's attacks until the start of your next turn.",
+       "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Fold Reality",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Disciples of Tzeentch Wizard^^** to cast this spell, then you can pick a friendly non-**^^Monster Disciples of Tzeentch^^** unit wholly within 12\" of the caster to be the target. Then, make a casting roll of 2D6.",
+       "effect": "Set the target up in reserve **masked by illusion**. Then, you can pick a friendly unit that is **masked by illusion** and set it up wholly within 12\" of the caster or a friendly **Argent Shard** and more than 9\" from all enemy units.\n**Designer's Note**: *Both parts of the effect are optional; you can carry out either part or both.*",
+       "keywords": "**^^Spell^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Transformed to Spawn",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Disciples of Tzeentch Wizard^^** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Inflict D3 mortal damage on the target. If any models are slain by this ability, you can pick a friendly **Chaos Spawn of Tzeentch** unit that is **masked by illusion** and set it up on the battlefield in combat with the target and not in combat with any other enemy units.",
+       "keywords": "**^^Spell^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Artefacts of Power",
+   "items": [
+    {
+     "name": "Tome of Scorched Insight",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Tome of Scorched Insight",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Reaction: You declared a non-**^^Summon^^** **^^Spell^^** ability for this unit",
+       "declare": "",
+       "effect": "Change the casting roll for that spell to a value of 12 that cannot be modified. That spell cannot be unbound and this unit cannot use that **^^Spell^^** ability again for the rest of the battle.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "The Searing Eye",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "The Searing Eye",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Reaction: You declared a **^^Spell^^** ability for a **^^Disciples of Tzeentch^^** unit wholly within 12\" of this unit",
+       "declare": "",
+       "effect": "Spend 1 **rage dice**. If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7.\nThen, roll a dice. If the roll is the same as any of the dice in the casting roll, that spell is miscast. Otherwise, add the roll to the casting roll.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "The Five Verses of Volarian",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "The Five Verses of Volarian",
+       "kind": "Ability (Passive)",
+       "color": "Gray",
+       "timing": "",
+       "declare": "",
+       "effect": "This unit has a Move characteristic of 14\" and has **^^Fly^^**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Kairic Tome",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Kairic Tome",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Reaction: You declared a **^^Spell^^** ability for a **^^Disciples of Tzeentch^^** unit wholly within 6\" of this unit",
+       "declare": "",
+       "effect": "Add 1 to or subtract 1 form the casting roll for that spell. This unit can use this ability more than once per phase but only once per **^^Spell^^** ability.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Fate Slicer",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Fate Slicer",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "End of Any Turn",
+       "declare": "",
+       "effect": "Gain 1 **fate point** if any models were slain by this unit this turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Cloaked in Wyrdflame",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Cloaked in Wyrdflame",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Subtract 1 from wound rolls for attacks that target this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Arcane Siphon",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Arcane Siphon",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Turn (Army), Your Hero Phase",
+       "declare": "Pick a visible **^^Manifestation^^** (friendly or enemy) that was not set up this turn and is within 12\" of this unit to be the target.",
+       "effect": "Roll a dice. On a 3+:\n• The target is banished.\n• **Heal (X)** this unit, where X is the target's Health characteristic.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Mutating Blade",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Mutating Blade",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Deployment Phase",
+       "declare": "",
+       "effect": "Pick 1 of this unit's melee weapons. That weapon's Attacks characteristic is 2D6 for the rest of the battle.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Spell-Catcher Amulet",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Spell-Catcher Amulet",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Turn (Army), Your Hero Phase",
+       "declare": "This unit can use this ability if any enemy **^^Manifestations^^** were banished this phase.",
+       "effect": "This unit can use a **^^Summon^^** ability from the manifestation lore you picked during army composition. That **^^Summon^^** ability does not count towards the total number of **^^Spell^^** or **^^Banish^^** abilities this unit can use this phase.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Battle Formations: Disciples of Tzeentch",
+   "items": [
+    {
+     "name": "Fated Blades",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Cometh the Hour",
+       "kind": "Ability (Passive)",
+       "color": "Orange",
+       "timing": "",
+       "declare": "",
+       "effect": "If you make a charge roll of 9+ for a friendly **^^Disciples of Tzeentch^^** unit, add 1 to the Attacks characteristic of that unit's melee weapons for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Malevolent Schemers",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Inevitable Ending",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Turn (Army), Start of Any Turn",
+       "declare": "Pick a unit (friendly or enemy) to be the target.",
+       "effect": "If the target is destroyed this turn, gain 1 **fate point**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Denizens of the Silver Tower",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Twist of Fate",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "Each time a friendly **^^Disciples of Tzeentch^^** unit uses an ability that requires you to spend 1 or more **fate points**, after that ability has been resoled, roll a dice. On a 4+, gain 1 **fate point**.\nIf you remove 1 or more damage points from the damage pool of a friendly **^^Disciples of Tzeentch^^** unit as a result of the 'Destined to Serve' ability, after the damage sequence for that unit has been resolved, roll a dice. On a 4+, gain 1 **fate point**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Mutants and Mad Things",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Hideous Unpredictability",
+       "kind": "Ability (Activated)",
+       "color": "Grey",
+       "timing": "Once Per Turn (Army), Your Movement Phase",
+       "declare": "Pick a friendly unit that is **masked by illusion** to be the target.",
+       "effect": "Set up the target wholly within 6\" of a battlefield edge and more than 9\" from all enemy units.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Heroic Traits",
+   "items": [
+    {
+     "name": "Silver Summoner",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Silver Summoner",
+       "kind": "Ability (Command)",
+       "color": "Movement",
+       "timing": "Your Movement Phase",
+       "declare": "Pick a friendly non-**^^Warflock Arcanite^^** unit that has been destroyed to be the target.",
+       "effect": "Set up a replacement unit with half the number of models from the target unit (rounding up) more than 9\" away from all enemy units and wholly within 12\" of a friendly **Argent Shard** that is visible to this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": "1"
+      }
+     ]
+    },
+    {
+     "name": "Grand Illusionist",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Grand Illusionist",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Any Hero Phase",
+       "declare": "",
+       "effect": "If this unit was set up this turn, it can move D3\". That move cannot pass through or end within the combat range of an enemy unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Devolving Aura",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Devolving Aura",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Any Hero Phase",
+       "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+       "effect": "Roll a dice. Add 1 to the roll if any damage points were allocated to the target this phase. On a 3+, the target has a maximum control score of 1 until the start of your next turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Manifestation Lores",
+   "items": [
+    {
+     "name": "Manifestations of Tzeentch",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Summon Burning Sigil of Tzeentch",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **^^Burning Sigil of Tzeentch^^** on the battlefield, pick a friendly **^^Disciples of Tzeentch Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **^^Burning Sigil of Tzeentch^^** wholly within 18\" of the caster and visible to them.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Daemonic Simulacrum",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Daemonic Simulacrum** on the battlefield, pick a friendly **^^Disciples of Tzeentch Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Daemonic Simulacrum** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Tome of Eyes",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Tome of Eyes** on the battlefield, pick a friendly **^^Disciples of Tzeentch Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Tome of Eyes** wholly within 18\" of the caster, visible to them and more than 9\" from all enemy units.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "5",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Visions of Fate",
+   "items": [
+    {
+     "name": "Vision of Defiant Supremacy",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Vision of Defiant Supremacy",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle, Any Hero Phase",
+       "declare": "",
+       "effect": "If you won the priority roll this battle round and chose for your opponent to take the first turn or if your opponent seized the initiative this battle round, this unit has **^^Strike-first^^** for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Vision of Destined Conquest",
+     "pts": 30,
+     "abilities": [
+      {
+       "name": "Vision of Destined Conquest",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Battle, Start of Your Turn",
+       "declare": "",
+       "effect": "If this unit is contesting an objective that you control that is wholly outside friendly territory:\n• If you are the **underdog**, gain 1 **fate point** for each command point you have.\n• If you are not the **underdog**, roll a dice for each command point you have. For each 3+, gain 1 **fate point**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Vision of Arcane Sacrifice",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Vision of Arcane Sacrifice",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "While units (friendly or enemy) are within 6\" of this unit:\n• Add 1 to unbinding rolls for those units.\n• Spells cast by those units are miscast on an unmodified casting roll of 4 or less.\nThe first time this unit is destroyed, gain D6 **fate points**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

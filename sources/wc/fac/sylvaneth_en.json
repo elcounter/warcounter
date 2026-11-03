@@ -1,0 +1,2183 @@
+{
+ "name": "Sylvaneth",
+ "units": [
+  {
+   "name": "Branchwych",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "SYLVANETH",
+    "HERO",
+    "WIZARD (1)",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Greenwood Scythe and Bittergrub",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Slay The Trespassers!",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick an enemy unit that is within the **creeping overgrowth** or that is visible to this unit and within friendly territory to be the target.",
+     "effect": "Rolla dice. On a 3+, add 1 to wound rolls for combat attacks that target that enemy unit for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Alarielle the Everqueen",
+   "pts": 620,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "MONSTER",
+    "FLY",
+    "WARMASTER",
+    "ORDER",
+    "SYLVANETH",
+    "WIZARD (3)",
+    "WARD (5+)"
+   ],
+   "stats": {
+    "Move": "14\"",
+    "Health": "16",
+    "Save": "4+",
+    "Control": "10"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Spear of Kurnoth",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "4",
+     "Ability": "Companion",
+     "name": "Wardroth Beetle's Antlers",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Wardroth Beetle's Antlers** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Metamorphosis",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible enemy unit within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "Inflict 2D3 mortal damage on the target. If the target would be destroyed by this spell, before removing any models, pick the closest terrain feature to the target that does not have a friendly **overgrown token** and give it a friendly **overgrown token**. If all terrain features on the battlefield already have a friendly **overgrown token**, inflict D3 mortal damage on each enemy unit within 6\" of the target instead.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Lifebloom",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Any Hero Phase",
+     "declare": "",
+     "effect": "**Heal (2D6)** this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Living Battering Ram",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "If this unit charged this turn, pick a visible enemy unit within 1\" of it to be the target.",
+     "effect": "Roll a dice. On a 3+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Goddess Of Life",
+     "kind": "Ability (Command)",
+     "color": "Gray",
+     "timing": "Once Per Battle, Your Movement Phase",
+     "declare": "This unit can use this ability even if it has been destroyed.",
+     "effect": "Set up a replacement unit with 8 damage points allocated to it (ward rolls cannot be made for those damage points) wholly within the **creeping overgrowth** and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": "2"
+    },
+    {
+     "name": "Seasons Of War",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Start of Battle Round",
+     "declare": "You must use this ability.",
+     "effect": "Pick 1 of the following effects to apply for the rest of the battle round. You cannot pick the effect that you picked in the previous battle round.\n\n\n***The Burgeoning***: Each time a friendly **Awakened Wyldwood** uses the 'Ever Growing' ability, you can pick any terrain feature your opponent does not control to be the target rather than the closest.\n\n***The Reaping***: Add 1 to casting rolls and chanting rolls for friendly **^^Sylvaneth^^** units while they are wholly within 12\" of this unit.\n\n\n***The Dwindling***: Friendly **^^Sylvaneth^^** units can use **^^Charge^^** abilities even if they used a **^^Retreat^^** ability in the same turn. In addition, no mortal damage is inflicted on those units when they use **^^Retreat^^** abilities.\n\n***Everdusk***: Each time you use the 'Creeping Dread' ability this battle round, you can pick up to 3 targets instead of 1.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Lady of Vines",
+   "pts": 280,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "MONSTER",
+    "ORDER",
+    "SYLVANETH",
+    "WIZARD (2)",
+    "WARD (5+)",
+    "FOREST ELDER"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "10",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "1",
+     "Hit": "2+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D6",
+     "Ability": "-",
+     "name": "Kurnotheal's Wrath",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Kurnotheal's Wrath and Lashing Vines",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Verdian Crown",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Battle, Any Hero Phase",
+     "declare": "Pick a terrain feature within 18\" of this unit that does not have a friendly **overgrown token** to be the target.",
+     "effect": "Give the target a friendly **overgrown token**",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Protection Of The Everqueen",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Make a casting roll of 2D6. Add 1 to the roll if this unit is wholly within the **creeping overgrowth**.",
+     "effect": "Until the start of your next turn, friendly **^^Sylvaneth^^** units have **^^Ward (5+)^^** while they are wholly within 12\" of this unit.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Hands Of The Everqueen",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Any Hero Phase",
+     "declare": "Pick a terrain feature within 18\" of this unit that has a friendly **overgrown token** to be the target.",
+     "effect": "The next time this unit uses a non-Summon Spell ability this phase, when picking targets for that spell, you can measure range and visibility from the target terrain feature instead of from this unit, and your opponent can measure range and visibility to the target terrain feature instead of to this unit for the purposes of the 'Unbind' ability.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Drycha Hamadreth",
+   "pts": 250,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "MONSTER",
+    "ORDER",
+    "SYLVANETH",
+    "WIZARD (1)",
+    "FOREST ELDER"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "12",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Crit (2 Hits)",
+     "name": "Slashing Talons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "20",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "",
+     "Dmg": "1",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Swarm of Spites",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Terror Of The Deep Woods",
+     "kind": "Ability (Passive)",
+     "color": "Grey",
+     "timing": "",
+     "declare": "",
+     "effect": "Enemy units cannot use **^^Run^^** or **^^Retreat^^** abilities while they are within 9\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Enrage The Spites",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick up to 3 enemy units that are visible to and within 12\" of this unit or that are within the **creeping overgrowth** to be the targets, then make a casting roll of 2D6.",
+     "effect": "Inflict D3 mortal damage on each target.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Merciless Ambush",
+     "kind": "Ability (Command)",
+     "color": "Orange",
+     "timing": "Your Charge Phase",
+     "declare": "If this unit is not in combat and has not used a **^^Run^^** or **^^Retreat^^** ability this turn, make a charge roll of 2D6.",
+     "effect": "You can remove this unit from the battlefield and set it up again within 1/2\" of an enemy unit and wholly within **X**\" of a terrain feature that has a friendly **overgrown token**, where **X** is equal to the charge roll. If you do so, this unit has charged.",
+     "keywords": "**^^Core^^**, **^^Move^^**, **^^Charge^^**, **^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": "1"
+    }
+   ]
+  },
+  {
+   "name": "Belthanos, First Thorn of Kurnoth",
+   "pts": 290,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "MONSTER",
+    "ORDER",
+    "SYLVANETH",
+    "FLY",
+    "KURNOTHI"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "14",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Kurnoth Glaive",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Carnelian Greatspite's Mandibles",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Huntmaster's Strike",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "",
+     "effect": "If this unit charged this turn, remove it from the battlefield and set it up again more than 6\" from all enemy units and wholly within the **creeping overgrowth**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Kurnothi War-horn",
+     "kind": "Ability (Passive)",
+     "color": "Grey",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 2\" to the Move characteristic of friendly **^^Kurnothi^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Rhythm of the Chase",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll, then you can remove this unit from the battlefield and set it up again on the battlefield within 1\" of the target.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Carnelian Greatspite's Mandibles** is 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Warsong Revenant",
+   "pts": 190,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "SYLVANETH",
+    "FLY",
+    "INFANTRY",
+    "WARD (6+)",
+    "PRIEST (1)",
+    "REVENANT"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "7",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": " Spirit Falchion and Spearing Vines",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Wyldwood Revenants",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Reaction: You made an unmodified chanting roll of 1 for a **^^Sylvaneth Priest**^^ wholy within 12\" of this unit.",
+     "declare": "",
+     "effect": "Re-roll that chanting roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Alarielle's Song",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Friendly **^^Sylvaneth^^** units have **^^Ward (6+)^^** while they are wholly within 12\" of this unit. Subtract 1 from ward rolls for enemy units while they are within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Arch-Revenant",
+   "pts": 90,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "SYLVANETH",
+    "FLY",
+    "INFANTRY",
+    "REVENANT"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Revenant's Glaive and Tail Pincers",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Fight And Fly",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "If this unit charged this turn, this unit can move up to 2D6\" after that **^^Fight^^** ability has been resolved. It cannot end that move in combat.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Gossamid Commander",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "If this unit charged this turn, pick a visible friendly **Gossamid Archers** unit that is not in combat and is wholly within 18\" of this unit to be the target.",
+     "effect": "The target can immediately use a **^^Shoot^^** ability as if it were your shooting phase but all of the attacks made as part of that **^^Shoot^^** ability must target an enemy unit that is in combat with this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Spirit of Durthu",
+   "pts": 320,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "SYLVANETH",
+    "MONSTER",
+    "FOREST ELDER"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "14",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Verdant Blast",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "4",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend)",
+     "name": "Guardian Sword",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Crit (Mortal)",
+     "name": "Massive Impaling Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Groundshaker",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy non-**^^Fly Infantry^^** or **^^Cavalry^^** unit in combat with this unit to be the target.",
+     "effect": "Roll a dice, On a 3+, the target has **^^Strike-last^^** for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Guardian Sword** is 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Guardian Of The Glades",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Reaction: You declared a **^^Charge^^** ability for this unit",
+     "declare": "",
+     "effect": "Add 2 to the charge roll but this unit must end that charge move within 1/2\" of an enemy unit that is in combat with another friendly **^^Sylvaneth Hero^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Treelord",
+   "pts": 200,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "SYLVANETH",
+    "MONSTER",
+    "FOREST ELDER"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "14",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Shoot in Combat",
+     "name": "Strangleroots",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-charge (+1 Rend)",
+     "name": "Sweeping Blows",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Crit (Mortal)",
+     "name": "Massive Impaling Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Strangling Grasp",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick a visible enemy unit within 10\" of this unit to be the target",
+     "effect": "Roll a dice. If the roll exceeds the target's Health characteristic, 1 model in the target unit is slain.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Sweeping Blows** is 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Lash And Tangle",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Any Shooting Phase",
+     "declare": "Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this unit's **Strangleroots** to be the target.",
+     "effect": "Roll a dice. Add 1 to the roll if the target is within the **creeping overgrowth**. On a 3+, subtract 1 from hit rolls for the target's attacks until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Treelord Ancient",
+   "pts": 260,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "SYLVANETH",
+    "MONSTER",
+    "HERO",
+    "FOREST ELDER",
+    "WIZARD (2)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "14",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Doom Tendril Staff",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-charge (+1 Rend)",
+     "name": "Sweeping Blows",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Crit (Mortal)",
+     "name": "Massive Impaling Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Eldest Of Elders",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick each friendly **^^Forest Elder^^** within this unit's combat range to be the targets.",
+     "effect": "Roll a dice for each target, On a 3+, add 1 to hit rolls for that target's combat attack until the start of your next turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Sweeping Blows** is 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Awaken Slumbering Spirits",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "Pick a visible terrain feature that has a friendly **overgrown token** and is within 12\" of this unit. Then, pick a friendly non-**^^Unique Kurnothi^^** or **^^Treelord^^** unit that has been destroyed to be the target.",
+     "effect": "Set up a replacement unit with 1 model from the target unit wholly within 6\" of that terrain feature and more than 9\" from all enemy units. Then, remove the friendly **overgrown token** from that terrain feature. If the target was a **Treelord**, allocate 10 damage points to the replacement unit (ward rolls cannot be made for those damage points).",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Kurnoth Hunters with Kurnoth Greatbows",
+   "pts": 190,
+   "size": 3,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "INFANTRY",
+    "SYLVANETH",
+    "KURNOTHI"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Cavalry^^** (+1 Rend)",
+     "name": "Kurnoth Greatbow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Vicious Claws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Hunter's Endurance",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit while it is wholly within the **creeping overgrowth**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Steady Aim",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "",
+     "effect": "If this unit has not used a **^^Move^^** ability this turn and was not set up this turn, add 1 to hit rolls for this unit's shooting attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Twistweald",
+   "pts": 160,
+   "size": 8,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "ORDER",
+    "SYLVANETH",
+    "REVENANT"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Twistroot Weapons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "18\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Warden's Bow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Voracious Swarm",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Latching Paraspites",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "The target has the **^^Infested^^** keyword for the rest of the battle. **^^Infested^^** enemy units cannot move more than 6\" when using non-**^^Charge Move^^** abilities.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Pain-Induced Frenzy",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit's melee weapons have **Crit (2 Hits)** if it charged in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Spite-Revenants",
+   "pts": 100,
+   "size": 5,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "SYLVANETH",
+    "INFANTRY",
+    "REVENANT"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (Mortal)",
+     "name": "Cruel Talons and Fangs",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Shadowcreep",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "",
+     "effect": "If this unit is wholly within the **creeping overgrowth**, remove this unit from the battlefield and set it up again wholly within 3\" of a terrain feature and more than 9\" from all enemy units. Then add 1 to charge rolls for this unit for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Spiterider Lancers",
+   "pts": 230,
+   "size": 3,
+   "kw": [
+    "CAVALRY",
+    "CHAMPION",
+    "STANDARD BEARER (1/3)",
+    "MUSICIAN (1/3)",
+    "FLY",
+    "ORDER",
+    "SYLVANETH",
+    "REVENANT"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Charge (+1 Damage), Crit (2 Hits)",
+     "name": "Spiterider Lance",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Dragonspite's Mandibles",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Strike And Fade",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "",
+     "effect": "If this unit charged this turn, remove it from the battlefield and set it up again more than 9\" from all enemy units and wholly within the **creeping overgrowth**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Forest Fighters",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit has a coherency range of 2\".",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Gossamid Archers",
+   "pts": 120,
+   "size": 5,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "INFANTRY",
+    "FLY",
+    "SYLVANETH",
+    "REVENANT"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Crit (Auto-wound), Shoot in Combat",
+     "name": "Gossamid Bow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Cruel Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Forest Fighters",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit has a coherency range of 2\".",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Zephyrspites",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Reaction: You declared a **^^Shoot^^** ability for this unit",
+     "declare": "",
+     "effect": "After that **^^Shoot^^** ability has been resolved, this unit can move up to D6\". It cannot move into combat during any part of that move.",
+     "keywords": "**^^Move^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Kurnoth Hunters with Kurnoth Greatswords",
+   "pts": 210,
+   "size": 3,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "INFANTRY",
+    "SYLVANETH",
+    "KURNOTHI"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Kurnoth Greatsword",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Hunter's Endurance",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit while it is wholly within the **creeping overgrowth**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Crashing Impact",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "If this unit charged this turn, pick an enemy unit that is in combat with this unit to be the target.",
+     "effect": "Roll a dice for each model in this unit that is in combat with the target. For each 3+, inflict 1 mortal damage on the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Kurnoth Hunters with Kurnoth Scythes",
+   "pts": 200,
+   "size": 3,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "INFANTRY",
+    "SYLVANETH",
+    "KURNOTHI"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "Anti-charge (+1 Rend)",
+     "name": "Kurnoth Scythe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Hunter's Endurance",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit while it is wholly within the **creeping overgrowth**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Tanglethorn Thicket",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
+     "effect": "Roll a dice for each model in this unit that is in combat with the target. For each 3+, inflict 1 mortal damage on the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Dryads",
+   "pts": 100,
+   "size": 10,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "INFANTRY",
+    "SYLVANETH"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Wracking Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "One With The Forest",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from hit rolls and wound rolls for attacks that target this unit while it is wholly within the **creeping overgrowth**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Revenant Seekers",
+   "pts": 180,
+   "size": 3,
+   "kw": [
+    "CAVALRY",
+    "CHAMPION",
+    "STANDARD BEARER (1/3)",
+    "MUSICIAN (1/3)",
+    "FLY",
+    "ORDER",
+    "SYLVANETH",
+    "REVENANT"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Crit (Mortal)",
+     "name": "Seeker's Sickle",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Dragonspite's Mandibles",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Deafening Drone",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "If this unit did not charge this turn, pick an enemy unit in combat with it to be the target.",
+     "effect": "Subtract 1 from the Attacks characteristic of the target's melee weapons for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Forest Fighters",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit has a coherency range of 2\".",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Tree-Revenants",
+   "pts": 110,
+   "size": 5,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "SYLVANETH",
+    "INFANTRY",
+    "STANDARD BEARER (1/5)",
+    "MUSICIAN (1/5)",
+    "REVENANT"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Revenant Blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Waypiper's Dance",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit is in combat and has not charged this turn, add 1 to the Damage characteristic of this unit's melee weapons.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Grove Guardian",
+   "pts": 200,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "SYLVANETH",
+    "FOREST ELDER",
+    "INFANTRY",
+    "PRIEST (2)"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "7",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Grove Sickle or Shears",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Guardian Spites",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Soulshriek",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick each friendly non-Hero Revenant unit wholly within 12\" of and visible to this unit to be the targets.",
+     "effect": "For the rest of the phase, each time a model in a target unit is slain by a combat attack, roll a dice. On a 5+, inflict 1 mortal damage on the attacking unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Regenesis",
+     "kind": "Ability (Prayer)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a friendly **^^Sylvaneth^^** unit that is wholly within the **creeping overgrowth** or that is visible to and wholly within 12\" of this unit to be the target, then make a chanting roll of D6.",
+     "effect": "If the chanting roll was 6+, you can pick another eligible unit to be a second target. If a target is a non-**^^Hero Revenant Infantry^^** or **Dryads** unit, return up to D3 models to the target unit. Otherwise, **Heal (3)** that target",
+     "keywords": "**^^Prayer^^**",
+     "cast": "",
+     "chant": "4",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Kurnoth Hunters with Kurnoth Greatswords (Scourge of Aqshy)",
+   "pts": 220,
+   "size": 3,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "INFANTRY",
+    "SYLVANETH",
+    "KURNOTHI"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Kurnoth Greatsword",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Hunter's Endurance",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit while it is wholly within the **creeping overgrowth**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Vital Rangers",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Your Turn",
+     "declare": "",
+     "effect": "If this unit is not in combat, it can move a distance up to its Move characteristic. It must end that move within the **creeping overgrowth** and not in combat.",
+     "keywords": "**^^Move^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Treelord Ancient (Scourge of Aqshy)",
+   "pts": 290,
+   "size": 1,
+   "kw": [
+    "ORDER",
+    "SYLVANETH",
+    "MONSTER",
+    "HERO",
+    "FOREST ELDER",
+    "WIZARD (2)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "14",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Doom Tendril Staff",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-charge (+1 Rend)",
+     "name": "Sweeping Blows",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Crit (Mortal)",
+     "name": "Massive Impaling Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Jade Abjuration",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick this unit or a visible friendly **Awakened Wyldwood** wholly within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "Until the start of your next turn:\n• Ignore the effects of enemy **^^Spell^^** abilities on units (friendly and enemy) while they are within 6\" of the target.\n• Weapons used by enemy **^^Manifestations^^** have a maximum Attacks characteristic of 1 while they are within 6\" of the target.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Sweeping Blows** is 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Arcane Osmosis",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "",
+     "effect": "For the rest of the turn:\n• Each time you make a casting roll for this unit, add D3 to the roll.\n• This unit cannot move or be removed from the battlefield by an ability that would allow it to be set up elsewhere on the battlefield or in reserve.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "title": "Battle Traits",
+   "items": [
+    {
+     "name": "Battle Traits",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Endless Growth",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "Once Per Turn (Army), End of Any Turn",
+       "declare": "Pick each friendly **^^Sylvaneth^^** unit that is wholly within the **creeping overgrowth** to be the targets.",
+       "effect": "For each target, roll a D3 and pick 1 of the following effects:\n\n\n• **Heal (X)** the target, where **X** is equal to the roll.\n• Return a number of slain models to it with a combined Health characteristic of up to the value of the roll.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "The Creeping Overgrowth",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "The **creeping overgrowth** is measured from each terrain feature that has a friendly **overgrown token**. The range of the **creeping overgrowth** is based on the number of friendly, **overgrown tokens** on the battlefield as shown:\n\n• 0-2 **overgrown tokens**: 6\"\n• 3-5 **overgrown tokens**: 9\"\n• 6-8 **overgrown tokens**: 12\"\n• 9+ **overgrown tokens**: Whole battlefield\n\n\n***Designer's Note**: Awakened Wyldwoods are your main way of generating overgrown tokens. Some unit abilities allow you to too.*",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Fury of The Forest",
+       "kind": "Ability (Command)",
+       "color": "Red",
+       "timing": "Enemy Combat Phase",
+       "declare": "Pick a friendly **^^Sylvaneth^^** unit wholly within the **creeping overgrowth** and that is in combat with only 1 enemy unit to use this ability.",
+       "effect": "The unit using this ability has **^^Strike-first^^** for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": "1"
+      },
+      {
+       "name": "The Land Awakens",
+       "kind": "Ability (Command)",
+       "color": "Purple",
+       "timing": "End of Your Turn",
+       "declare": "Pick a friendly non-**^^Hero Revenant Infantry^^** unit or friendly **Dryads** unit that has been destroyed to be the target.",
+       "effect": "Setup a replacement unit with half the number of models from the target unit (rounding up) wholly within **creeping overgrowth** and more than 9\" from all enemy units.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": "1"
+      },
+      {
+       "name": "Reclaimed By Nature",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Turn (Army), Your Hero Phase",
+       "declare": "",
+       "effect": "If there are fewer than 3 friendly **Awakened Wyldwoods** on the battlefield, you can set up an **Awakened Wyldwood** on the battlefield more than 3\" from all objectives and enemy units, more than 12\" from all other friendly **Awakened Wyldwoods** and more than 1\" from all other terrain features.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Creeping Dread",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Turn (Army), Start of Any Turn",
+       "declare": "Pick an enemy unit within the **creeping overgrowth** to be the target.",
+       "effect": "For the rest of the turn, the first time your opponent declares a command for the target while it is not wholly within 12\" of a **^^Hero^^** in their army, unless your opponent spends 1 additional command point to use that command, the command has no effect, it still counts as being used and the command points spent to use the command are still lost.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Spell Lores",
+   "items": [
+    {
+     "name": "Lore of the Deepwood",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Jade Thorns",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Sylvaneth Wizard^^** to cast this spell, pick a visible friendly **^^Sylvaneth^^** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Add 1 to the wound rolls for the target's combat attacks for the rest of the turn, including attacks made with **Companion** weapons.",
+       "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Zephyrspite Rush",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Sylvaneth Wizard^^** to cast this spell, pick a visible friendly **^^Sylvaneth^^** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "For the rest of the turn, the target can use **^^Charge^^** abilities even if it used a **^^Run^^** ability in the same turn.",
+       "keywords": "**^^Spell^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Grasping Roots",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Sylvaneth Wizard^^** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Until the start of your next turn:\n• The target cannot use **^^Run^^** abilities.\n• Subtract 1 from charge rolls for the target.",
+       "keywords": "**^^Spell^^**",
+       "cast": "5",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Artefacts of Power",
+   "items": [
+    {
+     "name": "Seed of Rebirth",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Seed of Rebirth",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "The first time this unit would be destroyed, before removing it from play, roll a die. On a 3+, this unit is not destroyed and any remaining damage points inflicted on it have no effect. **Heal (D3)** this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Amberglade Nectar",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Amberglade Nectar",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Once Per Battle, Any Combat Phase",
+       "declare": "Pick a visible enemy unit within 6\" of this unit to be the target.",
+       "effect": "For the rest of the turn, add 1 to the Damage characteristic of **Companion** weapons used by friendly **^^Sylvaneth^^** units for attacks that target that enemy unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Wychwood Glaive",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Wychwood Glaive",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "End of Any Turn",
+       "declare": "Pick an enemy unit that had any damage points allocated to it by this unit's combat attacks this turn to be the target.",
+       "effect": "Subtract 1 from save rolls for the target for the rest of the battle. This unit can use this ability even if it has been destroyed.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Acorn of the Ages",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Acorn of the Ages",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "While they are wholly within 12\" of this unit, friendly **Awakened Wyldwoods** have **^^Ward (5+)^^**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Ranu's Lamentiri",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Ranu's Lamentiri",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Turn (Army), Reaction: Opponent declared a **^^Spell^^** ability for a unit within 30\" of this unit",
+       "declare": "",
+       "effect": "Make an unbinding roll of 2D6. If the roll exceeds the casting roll for the spell, the spell is unbound and its effect is not resolved. Then, inflict an amount of mortal damage on the caster equal to the difference between the casting roll and the unbinding roll, to a maximum of 6.",
+       "keywords": "**^^Unbind^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Glamourweave",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Glamourweave",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "Each phase, you can re-roll 1 hit roll, 1 wound roll and 1 save roll for this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Dancing Mystiflies",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Dancing Mystiflies",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Reaction: Opponent declared a ^^**Spell**^^ ability for a unit within 30\" of this unit",
+       "declare": "",
+       "effect": "• If this unit is not a **^^Wizard^^**, it can use the 'Unbind' ability as if it had **^^Wizard (1)^^**. Otherwise, it can use the 'Unbind' ability an additional time each phase.\n• If this unit successfully unbinds the spell being reacted to and the caster is within the creeping overgrowth, inflict an amount of mortal damage on the caster equal to the difference between the casting roll and the unbinding roll, to a maximum of 6.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Amulet of Resonance",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Amulet of Resonance",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "End of Any Turn",
+       "declare": "",
+       "effect": "If this unit used the 'Eruption of Fury' ability this turn or you spent **rage dice** as part of the 'Fight Through the Pain' ability when resolving the damage sequence for this unit this turn, give 1 ritual point to each visible friendly **^^Sylvaneth Priest^^** wholly within 12\" of this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Battle Formations: Sylvaneth",
+   "items": [
+    {
+     "name": "Lords of the Clan",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Nature's Titans",
+       "kind": "Ability (Passive)",
+       "color": "Purple",
+       "timing": "",
+       "declare": "",
+       "effect": "When using the 'Endless Growth' ability, do not roll a D3 for **^^Monster^^** targets. Instead **Heal (3)** each of those targets.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Followers Of Kurnoth",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Sacred Quarry",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Turn (Army), Your Hero Phase",
+       "declare": "Pick a friendly **^^Sylvaneth^^** unit to be the target.",
+       "effect": "Until the start of your next turn, add 1 to hit rolls for the target's attacks while it is wholly within 12\" of the enemy general or an enemy **^^Warmaster^^**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Glade Defenders",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Memories Of The Fallen",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Turn (Army), Any Hero Phase",
+       "declare": "For each friendly **^^Sylvaneth^^** unit or friendly **Awakened Wyldwood** that was destroyed in the previous turn, you can pick a friendly **^^Sylvaneth^^** unit to be the target.",
+       "effect": "Add 1 to the Attacks characteristic of each target's melee weapons for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Outcasts",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Fear of The Deepwoods",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "In the 'Creeping Dread' ability, replace 'while it is not wholly within 12\" of a **^^Hero^^** in their army' with 'while it is not wholly within 6\" of a **^^Hero^^** in their army'.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Heroic Traits",
+   "items": [
+    {
+     "name": "Spellsinger",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Spellsinger",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "If this unit is a ^^**Wizard**^^, add 1 to casting rolls for this unit.\nIf this unit is not a ^^**Wizard^^**, it can use the 'Unbind' ability as if it has **^^Wizard(1)^^**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Spirit of The Dark Forest",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Spirit of The Dark Forest",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per battle, Enemy Hero Phase",
+       "declare": "Pick a visible enemy ^^**Hero^^** to be the target.",
+       "effect": "Halve the target's Move characteristic the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Realmroot Guide",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Realmroot Guide",
+       "kind": "Ability (Activated)",
+       "color": "Gray",
+       "timing": "Once Per Battle, Your Movement Phase",
+       "declare": "This unit can only use this ability if it is wholly within the **creeping overgrowth**. Pick this unit and up to 1 other friendly **^^Sylvaneth^^** unit. within this unit's combat range to be the targets.",
+       "effect": "Remove the targets from the battlefield and set them up again wholly within the **creeping overgrowth** and more than 9\" from all enemy units.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Manifestation Lores",
+   "items": [
+    {
+     "name": "Manifestations of the Deepwood",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Summon Gladewyrm",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Gladewyrm** on the battlefield, pick a friendly **^^Sylvaneth Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Gladewyrm** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Spiteswarm Hive",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Spiteswarm Hive** on the battlefield, pick a friendly **^^Sylvaneth Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Spiteswarm Hive** wholly within 12\" of the caster and visible to them.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Vengeful Skullroot",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Vengeful Skullroot** on the battlefield, pick a friendly **^^Sylvaneth Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Vengeful Skullroot** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Prayer Lores",
+   "items": [
+    {
+     "name": "Lore of the Spirit-Song",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Song Of The Lost",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Sylvaneth Priest^^** to chant this prayer, pick a friendly **^^Sylvaneth^^** unit that is wholly within the **creeping overgrowth** or that is visible to them and wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "Until the start of your next turn, subtract 1 from wound rolls for attacks that target that friendly unit. In addition, if the chanting roll was 8+, pick 1 of the following effects:\n• You can **Heal (3)** the target.\n• If the target is not a **^^Monster^^**, ignore modifiers to save rolls for the target (positive and negative) until the start of your next turn.",
+       "keywords": "**^^Prayer^^**, **^^Unlimited^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      },
+      {
+       "name": "Song Of Dread",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Sylvaneth Priest^^** to chant this prayer, pick an enemy unit that is wholly within the **creeping overgrowth** or that is visible to them and within 18\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "If the chanting roll was 8+, you can pick another eligible unit to be a second target. Until the start of your next turn, each time a target uses a **^^Move^^** ability and ends that move within the **creeping overgrowth**, inflict D3 mortal damage on the target after that **^^Move^^** ability has been resolved.",
+       "keywords": "**^^Prayer^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      },
+      {
+       "name": "Song Of War",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Sylvaneth Priest^^** to chant this prayer, pick a friendly **^^Sylvaneth^^** unit that is wholly within the **creeping overgrowth** or that is visible to them and wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "If the chanting roll was 10+, you can pick another eligible unit to be a second target. Until the start of your next turn, add 1 to the Rend characteristic of the target(s) melee weapons.",
+       "keywords": "**^^Prayer^^**",
+       "cast": "",
+       "chant": "5",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Aspects of the Deepwoods",
+   "items": [
+    {
+     "name": "Aspect of Harvestboon",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Aspect of Harvestboon",
+       "kind": "Ability (Passive)",
+       "color": "Grey",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 2\" to this unit's Move characteristic while it is wholly within the **creeping overgrowth**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Aspect of Ironbark",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Aspect of Ironbark",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "When resolving the damage sequence for this unit, if you spend **rage dice** as part of the 'Fight Through the Pain' ability, you can re-roll any of the dice that determine whether damage points are removed from this unit's damage pool. After the damage sequence has been resolved, if you rolled a total of 10+ on those re-rolls, this ability has no effect for the rest of the battle.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Aspect of Heartwood",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Aspect of Heartwood",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "Once Per Battle, Reaction: You declared the 'Endless Growth' ability",
+       "declare": "",
+       "effect": "If this unit is wholly within the **creeping overgrowth**, for each target of that ability that is wholly within 12\" of this unit, you can pick 1 of the following effects:\n• When resolving that ability, roll a D6 for the target instead of a D3. If, as a result of another ability, you would Heal **(3)** the target instead of rolling a dice, **Heal (6)** the target instead.\n• If the target is **^^Kurnothi^^**, instead of rolling a D3 and picking 1 of the effects of that ability to apply to it, you can return 1 slain model to the target unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

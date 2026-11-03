@@ -1,0 +1,3091 @@
+{
+ "name": "Soulblight Gravelords",
+ "units": [
+  {
+   "name": "Neferata, Mortarch of Blood",
+   "pts": 450,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "WIZARD (2)",
+    "UNIQUE",
+    "WARD (6+)",
+    "MONSTER",
+    "FLY",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE",
+    "WARMASTER"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "14",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "2+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Aken-seth",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "1",
+     "Ability": "Anti-**^^Hero^^** (+1 Rend)",
+     "name": "Akmet-har",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "3",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Nagadron's Claws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Nagadron's Claws** is 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Adevore",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick an enemy **^^Hero^^** that was allocated any damage points inflicted by this unit's **Akmet-har** this turn to be the target.",
+     "effect": "Roll a dice. On a 5+, the target is automatically destroyed.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Twilight's Allure",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from hit rolls for combat attacks that target friendly **^^Soulblight Gravelords^^** units while they are wholly within 6\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Dark Mist",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible friendly non-**^^Monster Soulblight Gravelords^^** unit wholly within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "Ignore modifiers to save rolls for the target (positive and negative) until the start of your next turn.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Mortarch of Blood",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick up to 3 friendly **^^Deathrattle Infantry^^** or **^^Deadwalkers Infantry^^** units to be the targets.",
+     "effect": "Each target can use the 'Normal Move' ability as if it were your movement phase.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Deathrattle Skeletons",
+   "pts": 90,
+   "size": 10,
+   "kw": [
+    "DEATH",
+    "INFANTRY",
+    "WARD (6+)",
+    "CHAMPION",
+    "STANDARD BEARER (1/10)",
+    "SOULBLIGHT GRAVELORDS",
+    "DEATHRATTLE"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Ancient Weapon",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Skeleton Legion",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "",
+     "effect": "You can return D3 slain models to this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Barrow Knights",
+   "pts": 190,
+   "size": 5,
+   "kw": [
+    "DEATH",
+    "WARD (6+)",
+    "CAVALRY",
+    "CHAMPION",
+    "STANDARD BEARER (1/5)",
+    "SOULBLIGHT GRAVELORDS",
+    "DEATHRATTLE",
+    "MUSICIAN (1/5)"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "3",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Skeletal Steed's Hooves and Teeth",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Crit (Mortal), Charge (+1 Damage)",
+     "name": "Barrow Lance",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Cursed to Rise Once More",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "",
+     "effect": "You can return 1 slain model to this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Knights of the King",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While any friendly **^^Deathrattle Cavalry Heroes^^** are within this unit's combat range, both this unit and those friendly units have **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Mortis Engine",
+   "pts": 210,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WIZARD (1)",
+    "WARD (6+)",
+    "DEATH",
+    "SOULBLIGHT GRAVELORDS",
+    "WAR MACHINE",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "12",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Corpsemaster's Staff",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "10",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Spectral Host's Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Nexus of Death Energy",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "When a friendly **^^Deathrattle^^** or **^^Deadwalkers^^** unit wholly within 12\" of this unit is picked to be the target of the 'Deathly Invocation' ability, add D3 to the number of damage points that can be healed or the combined Health characteristic of models that can be returned.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Wave of Power",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "Pick up to 3 enemy units within 10\" of this unit to be the targets.",
+     "effect": "Roll a dice for each target. On a 3+, inflict an amount of mortal damage on the target equal to the value of this unit's **stored energy dice**. Then, change the value of the **stored energy dice** back to 1.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Reliquary",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "When this unit is set up for the first time, place a **stored energy dice** beside it with the '1' facing up. Each time a friendly **^^Soulblight Gravelords Wizards^^** successfully casts a spell while it is within 12\" of this unit, increase the value of the **stored energy dice** beside this unit by 1 (to a maximum of 6).",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Nagash, Supreme Lord of the Undead",
+   "pts": 750,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "UNIQUE",
+    "HERO",
+    "MONSTER",
+    "WIZARD (9)",
+    "WARD (5+)",
+    "FLY",
+    "SOULBLIGHT GRAVELORDS"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "18",
+    "Save": "3+",
+    "Control": "10"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "D6",
+     "Ability": "-",
+     "name": "Alakanash, the Staff of Power",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Zefet-nebtar, the Mortis Blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, subtract 3 from its power level.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Staff of Power",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 2 to casting rolls for this unit while it has not miscast any spells this turn. If this unit miscasts a spell, ignore the restriction that would stop this unit from casting any more spells this turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Hand of Dust",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick a visible enemy **^^Hero^^** or **^^Monster^^** in combat with this unit to be the target.",
+     "effect": "Hide a dice in one of your hands or under one of two appropriate containers. Your opponent must pick one of your hands or containers. If they pick the one hiding the dice, this ability has no effect. If they pick the empty one, the target is automatically destroyed.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Supreme Lord of the Undead",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Battle, Your Hero Phase",
+     "declare": "Pick a friendly non-**^^Hero^^** non-**^^Unique Death^^** unit that has been destroyed to be the target.",
+     "effect": "Set up a replacement unit identical to the target wholly within 12\" of this unit and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Invocation of Nagash",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "This unit can cast this spell more than once per phase. Pick a visible unit wholly within 18\" of this unit that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6.",
+     "effect": "If the target is an enemy unit, inflict D3 mortal damage on it. If the target is a friendly **^^Death^^** unit, pick 1 of the following effects:\n• Return a number of slain models to the target unit with a combined Health characteristic of up to 3.\n• The target has **^^Ward (5+)^^** until the start of your next turn.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Mannfred von Carstein, Mortarch of Night",
+   "pts": 410,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "WIZARD (2)",
+    "UNIQUE",
+    "WARD (6+)",
+    "MONSTER",
+    "FLY",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE",
+    "WARMASTER"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "14",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "3",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Ashigaroth's Claws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Gheistvor",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Ashigaroth's Claws** is 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ashigaroth's Hunger",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit charged this turn, roll a dice. On a 3+, this unit has **^^Strike-First^^** for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Sword of Unholy Power",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "If this unit has slain any enemy models this turn, for the rest of the turn, add 1 to the Attacks characteristic of melee weapons used by friendly **^^Deathrattle^^** and **^^Deadwalkers^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Wind of Death",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a point on the battlefield within 18\" of the caster, pick up to 3 enemy units within 6\" of that point and visible to the caster to be the targets, then make a casting roll of 2D6.",
+     "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Mortarch of Night",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Reaction: You declared the 'Redeploy' command for a **^^Soulblight Gravelords^^** unit wholly within 12\" of this unit",
+     "declare": "",
+     "effect": "The unit using the 'Redeploy' command can move into combat when using that ability",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Radukar the Beast",
+   "pts": 250,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "UNIQUE",
+    "WARD (6+)",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE",
+    "WIZARD (1)",
+    "MONSTER"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "12",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Crit (Mortal)",
+     "name": "Blood-slick Claws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Vyrkos Blood-born's Piercing Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Armour of the Night",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Make a casting roll of 2D6.",
+     "effect": "Subtract 1 from hit rolls and wound rolls for attacks that target this unit for the rest of the turn.",
+     "keywords": "**^^Spell^^**",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Beast Will Out",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "",
+     "effect": "If this unit is not in combat, it can move D6\". It can move into combat.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Call to the Hunt",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "If this unit charged this turn, for the rest of the turn, add 1 to wound rolls for combat attacks made by friendly **^^Deathrattle^^** and **^^Deadwalkers^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Prince Vhordrai",
+   "pts": 450,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "UNIQUE",
+    "WARD (6+)",
+    "MONSTER",
+    "FLY",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "18",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "7",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Shordmaire's Claws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Shordmaire's Maw",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "The Bloodlance",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "D6",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Shoot in Combat, Companion",
+     "name": "Shordemaire's Miasma",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Shordmaire's Claws** is 5.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Trail of Crimson",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "This unit can make a pile-in move (even if it is not in combat). Then, if this unit is in combat, pick an enemy unit in combat with it to be the target.",
+     "effect": "Roll a dice. On a 4+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Quickblood",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Make a casting roll of 2D6.",
+     "effect": "This unit has **^^Strike-First^^** until the start of your next turn.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Saint of Slaughter",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "Pick a friendly non-**^^Monster Vampire^^** unit that destroyed a unit this turn using a **^^Fight^^** ability and is wholly within 12\" of this unit to be the target.",
+     "effect": "Pick 1 of the following effects to apply for the rest of the battle:\n• Add 2\" to the target's Move characteristic.\n• Add 1 to the Attacks characteristic of the target's melee weapons.\n• Add 1 to the Damage characteristic of the target's melee weapons.\nMore than 1 effect can apply to a unit at the same time; however, each effect can only be applied to a unit once.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Ivya Volga, the Outcast",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "UNIQUE",
+    "WARD (6+)",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE",
+    "WIZARD (1)",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Monster^^**(+1 Rend)",
+     "name": "Heirloom Axe",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "2D6",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat, Companion",
+     "name": "Bat Swarm's Needling Fangs",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Total Dominance",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Make a casting roll of 2D6.",
+     "effect": "For the rest of the turn, subtract 5 from the control scores of enemy **^^Monsters^^** while they are within 12\" of this unit.",
+     "keywords": "**^^Spell^^**",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Shrieking Swarm",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from hit rolls for attacks that target this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Behemoth's Bane",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 2 from the Attacks characteristic of enemy **^^Monsters^^**' melee weapons while they are in combat with this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Lauka Vai, Mother of Nightmares",
+   "pts": 200,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "UNIQUE",
+    "WARD (6+)",
+    "MONSTER",
+    "FLY",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "11",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Askurga Rapier",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "3",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Gore-drenched Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "The Queen's Dictat",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible friendly non-**^^Unique Soulblight Gravelords Monster^^** wholly within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "Pick 1 of the target's melee weapons. If the target has any **Companion** melee weapons, you must pick 1 of those. Add D3 to the Attacks characteristic of that weapon for the rest of the turn.",
+     "keywords": "**^^Spell^^**",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Nightmare's Miasma",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from the Rend characteristic of melee weapons used by enemy units while they are in combat with this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Impaling Talons",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "If this unit charged this turn, pick an enemy unit in combat with it to be the target.",
+     "effect": "Roll a dice. If the roll is equal to or less than the target's Health characteristic, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Belladamma Volga, First of the Vyrkos",
+   "pts": 200,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "UNIQUE",
+    "WARD (6+)",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE",
+    "WIZARD (2)",
+    "CAVALRY"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "9",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Lupine Fangs and Claws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Timeworn Scimitar",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Under a Killing Moon",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick up to 3 visible friendly **Dire Wolves** units wholly within 18\" of this unit to be the targets, then make a casting roll of 2D6.",
+     "effect": "For the rest of the turn:\n• Add 1 to the Rend characteristic of the targets' melee weapons (including **Companion** weapons).\n• The targets can ignore the effect of the 'Beast' ability.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "First of the Vyrkos",
+     "kind": "Ability (Passive)",
+     "color": "Purple",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 3 to the control scores of friendly **Radukar the Wolf**, **Radukar the Beast**, **Ivya Volga**, **Lady Annika** and **Kritza** units while they are wholly within 18\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Wolfguard",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit is within the combat range of a friendly **Dire Wolves** unit:\n• This unit has **^^Ward (4+)^^**.\n• Each time you make a successful ward roll for this unit, allocate 1 damage point to a friendly **Dire Wolves** unit within this unit's combat range after the damage sequence for this unit has been resolved (ward rolls cannot be made for those damage points).",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Radukar the Wolf",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "UNIQUE",
+    "WARD (6+)",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE",
+    "WIZARD (1)",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "7",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Vyrkos Barrow-blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Master of the Pack",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Make a casting roll of 2D6.",
+     "effect": "Until the start of your next turn, you can re-roll charge rolls for friendly **^^Soulblight Gravelords Infantry^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "**^^Spell^^**",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Call to the Hunt",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "If this unit charged this turn, for the rest of the turn, add 1 to wound rolls for combat attacks made by friendly **^^Deathrattle^^** and **^^Deadwalkers^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Kritza, the Rat Prince",
+   "pts": 70,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "UNIQUE",
+    "WARD (6+)",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (2 Hits)",
+     "name": "Gnawblade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Scurrying Retreat",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit is in combat, roll a dice. On a 3+, this unit can immediately use the 'Retreat' ability as if it were your movement phase without any mortal damage being inflicted on it.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Verminous Court",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target, then pick an artefact of power that the target has.",
+     "effect": "Roll a dice. On a 3+, the target no longer has that artefact of power.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Lady Annika, the Thirsting Blade",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "UNIQUE",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE",
+    "INFANTRY",
+    "WARD (4+)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "7",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Blade Proboscian",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Starving Nightmare",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Your Movement Phase",
+     "declare": "Pick this unit if it is **lying in wait**.",
+     "effect": "Set up this unit wholly within enemy territory and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Kiss of the Blade Proboscian",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "Pick an enemy unit that was allocated any damage points inflicted by this unit's combat attacks this turn to be the target.",
+     "effect": "Roll a dice. On a 2+, subtract 1 from save rolls for the target for the rest of the battle.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Supernatural Speed",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick this unit if it has not been deployed.",
+     "effect": "Set up this unit in reserve **lying in wait**. It has now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vengorian Lord",
+   "pts": 200,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WIZARD (1)",
+    "WARD (6+)",
+    "DEATH",
+    "MONSTER",
+    "FLY",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "11",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "3",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Gore-drenched Talons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Nightmare Sabre",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Festering Feast",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "",
+     "effect": "If any damage points were allocated to enemy units by this unit's attacks this turn, **Heal (D3)** this unit and each other friendly **^^Soulblight Gravelords Monster^^** wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Scything Talons",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "If this unit charged this turn, pick an enemy unit in combat with it to be the target.",
+     "effect": "Roll a dice. On a 3+, roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Nightmare's Miasma",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from the Rend characteristic of melee weapons used by enemy units while they are in combat with this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vengorian Lord (Scourge of Aqshy)",
+   "pts": 310,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WIZARD (1)",
+    "WARD (6+)",
+    "DEATH",
+    "MONSTER",
+    "FLY",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "11",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "3",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Gore-drenched Talons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Nightmare Sabre",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Indignant Outburst",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit is in combat, gain 1 **rage dice**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Frenzied Surge",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "You can pick another visible friendly non-**^^Hero^^** **^^Soulblight Gravelords^^** **^^Infantry^^** or **^^Monster^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "This unit can move up to **X**\", where **X** is your **fury level**. It must end that move in combat.\nThen, the target can move up to **X**\", where **X** is your **fury level**. It can move through enemy models and the combat ranges of enemy units during that move but must end that move in combat with an enemy unit that this unit is in combat with.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Nightmare's Miasma",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from the Rend characteristic of melee weapons used by enemy units while they are in combat with this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Askurgan Trueblades",
+   "pts": 150,
+   "size": 8,
+   "kw": [
+    "INFANTRY",
+    "WARD (6+)",
+    "DEATH",
+    "CHAMPION (1/8)",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend), Crit (2 Hits)",
+     "name": "Askurgan Weapons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Elongated Claws and Slavering Maw",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Gut-wrenching Howl",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit's **Curseblood** to be the target.",
+     "effect": "Roll a dice. On a 4+, the target has **^^Strike-Last^^** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Creed of the Askurga Renkai",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from hit rolls for combat attacks made by enemy **^^Monsters^^** that target this unit. \nAdd 1 to hit rolls for combat attacks made by this unit that target enemy **^^Monsters^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Blood Knights",
+   "pts": 210,
+   "size": 5,
+   "kw": [
+    "DEATH",
+    "WARD (6+)",
+    "CAVALRY",
+    "CHAMPION",
+    "STANDARD BEARER (1/5)",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "3",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Nightmare's Hooves and Teeth",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti-**^^Infantry^^**(+1 Rend), Charge (+1 Damage)",
+     "name": "Templar Weapon",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Riders of Ruin",
+     "kind": "Ability (Passive)",
+     "color": "Gray",
+     "timing": "",
+     "declare": "",
+     "effect": "When this unit moves, it can pass through models in enemy **^^Infantry^^** units and can pass through the combat ranges of enemy **^^Infantry^^** units, but it cannot end a move in combat unless specified in the ability used.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Trampled to Dust",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Any Charge Phase",
+     "declare": "Pick an enemy unit that this unit passed across this turn to be the target.",
+     "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vargheists",
+   "pts": 120,
+   "size": 3,
+   "kw": [
+    "DEATH",
+    "WARD (6+)",
+    "CHAMPION",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE",
+    "INFANTRY",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "4",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (2 Hits)",
+     "name": "Murderous Fangs and Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Death's Descent",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "",
+     "effect": "If this unit is not in combat, remove it from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.",
+     "keywords": "**^^Core^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vampire Lord",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WIZARD (1)",
+    "WARD (6+)",
+    "DEATH",
+    "SOULBLIGHT GRAVELORDS",
+    "INFANTRY",
+    "VAMPIRE"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Hero^^**(+1 Rend), Crit (2 Hits)",
+     "name": "Dynastic War-relic",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Sanguine Blur",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "",
+     "effect": "Roll a dice. On a 3+, remove this unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy non-**^^Hero^^** units and more than 3\" from all enemy **^^Heroes^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Coven Throne",
+   "pts": 210,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WIZARD (1)",
+    "WARD (6+)",
+    "DEATH",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE",
+    "WAR MACHINE",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "12",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Acolytes' Poniards",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (2 Hits)",
+     "name": "Matriarch's Stiletto",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "10",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Spectral Host's Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Scrying Pool",
+     "kind": "Ability (Passive)",
+     "color": "Gray",
+     "timing": "",
+     "declare": "",
+     "effect": "If a friendly **^^Soulblight Gravelords^^** unit wholly within 12\" of this unit uses the 'Redeploy' command, you can pick another friendly **^^Soulblight Gravelords^^** unit wholly within 12\" of this unit that has not used a command this phase to use the 'Redeploy' command immediately after the first has been resolved (this is an exception to Commands, 1.2). No command point is spent the second time that command is used.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "A Promising Concoction",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Battle (Army), Your Combat Phase",
+     "declare": "Pick up to 3 friendly **^^Vampire^^** units wholly within 12\" of this unit to be the targets.",
+     "effect": "Add 1 to the Attacks characteristic of the targets' melee weapons for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Tactical Insight",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Friendly **^^Deathrattle^^** and **^^Deadwalkers^^** units have **^^Ward (5+)^^** while they are wholly within 6\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Wight King on Skeletal Steed",
+   "pts": 180,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WARD (6+)",
+    "DEATH",
+    "SOULBLIGHT GRAVELORDS",
+    "DEATHRATTLE",
+    "CAVALRY"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "8",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage), Crit (Mortal)",
+     "name": "King's Relic Weapon",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Skeletal Steed's Hooves and Teeth",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Immortal Conqueror",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick an objective or terrain feature within enemy territory.",
+     "effect": "For the rest of the turn, add 1 to hit rolls for attacks made by friendly **^^Deathrattle^^** units while they are wholly within 6\" of that objective or terrain feature.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ancient Barrow Curse",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "If an attack made with this unit's **King's Relic Weapon** scores a critical hit, the target unit becomes **cursed** for the rest of the battle. Subtract 1 from save rolls for **cursed** units even if this unit has been destroyed.\n**Designer's Note:** *Multiple enemy units can become cursed by this ability but the same enemy unit cannot become cursed more than once.*",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Corpse Cart",
+   "pts": 70,
+   "size": 1,
+   "kw": [
+    "WARD (6+)",
+    "DEATH",
+    "SOULBLIGHT GRAVELORDS",
+    "WAR MACHINE",
+    "DEADWALKERS"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "7",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Corpsemaster's Weapon",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2D6",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Zombies' Rusty Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Locus of Undeath",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Melee weapons used by other friendly **^^Deadwalkers^^** units have **Crit (Auto-wound)** while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Barrow Guard",
+   "pts": 130,
+   "size": 10,
+   "kw": [
+    "DEATH",
+    "INFANTRY",
+    "WARD (6+)",
+    "CHAMPION",
+    "SOULBLIGHT GRAVELORDS",
+    "DEATHRATTLE",
+    "STANDARD BEARER (1/5)",
+    "MUSICIAN (1/5)"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "1",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Crit (Mortal)",
+     "name": "Wight Blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Guardians of the King",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While any friendly **^^Soulblight Gravelords Infantry Heroes^^** are within this unit's combat range, both this unit and those friendly units have **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Wight King",
+   "pts": 80,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WARD (6+)",
+    "DEATH",
+    "SOULBLIGHT GRAVELORDS",
+    "INFANTRY",
+    "DEATHRATTLE"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "5",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Baleful Tomb Blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Ancient Strategies",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly non-**^^Hero Deathrattle Infantry^^** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the target's attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "King of Shambling Bones",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a friendly **^^Deathrattle^^** unit within this unit's combat range to be the target.",
+     "effect": "Roll a dice. On a 3+, the target's melee weapons have **Crit (2 Hits)** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Necromancer",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WARD (6+)",
+    "DEATH",
+    "SOULBLIGHT GRAVELORDS",
+    "INFANTRY",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Mortis Staff",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Vanhel's Danse Macabre",
+     "kind": "Ability (Command)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Your Combat Phase",
+     "declare": "Pick a friendly **^^Deathrattle^^** or **^^Deadwalkers^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "The target can use 2 **^^Fight^^** abilities this phase. After the first is used, however, the target has **^^Strike-last^^** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": "1"
+    },
+    {
+     "name": "Undead Minions",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit is within the combat range of a friendly **^^Deathrattle^^** or **^^Deadwalkers^^** unit:\n• This unit has **^^Ward (4+)^^**.\n• Each time you make a successful ward roll for this unit, allocate 1 damage point to a friendly **^^Deathrattle^^** or **^^Deadwalkers^^** unit within this unit's combat range after the damage sequence for this unit has been resolved (ward rolls cannot be made for those damage points).",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Sekhar, Fang of Nulahmia",
+   "pts": 160,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "UNIQUE",
+    "WARD (6+)",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE",
+    "INFANTRY",
+    "WIZARD (2)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "6",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (2 Hits)",
+     "name": "Nulahmian Warglaive",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "D3",
+     "Ability": "Companion",
+     "name": "Ouboroth's Godhusk Fangs",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Death's Construction",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible enemy unit within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "Until the start of your next turn, while they are wholly within 6\" of this unit, friendly **^^Soulblight Gravelords^^** units cannot be picked to be the target of abilities used by the target other than **^^Fight^^** abilities.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Serpentine Agility",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "If the unmodified hit roll for an attack that targets this unit is 1-4, the attack fails and the attack sequence ends.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Time-swallower's Maw",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Battle, Any Combat Phase",
+     "declare": "Pick each enemy unit in combat with this unit to be the targets.",
+     "effect": "This unit cannot use the 'Serpentine Agility' ability for the rest of the battle. Roll 2D6 for each target. If the roll exceeds the target's Move characteristic, inflict an amount of mortal damage on the target equal to the difference between the roll and its Move characteristic.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Deadwalker Zombies",
+   "pts": 120,
+   "size": 20,
+   "kw": [
+    "DEATH",
+    "INFANTRY",
+    "WARD (6+)",
+    "SOULBLIGHT GRAVELORDS",
+    "DEADWALKERS"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "1",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "1",
+     "Hit": "5+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Crude Weapon or Infectious Bite",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Mindless Ferocity",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time a model in this unit is slain by a combat attack and that model was in combat with the attacking unit, roll a dice. On a 6+, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Fell Bats",
+   "pts": 90,
+   "size": 3,
+   "kw": [
+    "DEATH",
+    "WARD (6+)",
+    "SOULBLIGHT GRAVELORDS",
+    "BEAST",
+    "DEADWALKERS",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "3",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Chiropteran Fangs",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Fleet and Fell",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit can use **^^Charge^^** abilities even if it used a **^^Retreat^^** ability in the same turn. In addition, no mortal damage is inflicted on this unit by **^^Retreat^^** abilities.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Dire Wolves",
+   "pts": 150,
+   "size": 10,
+   "kw": [
+    "DEATH",
+    "WARD (6+)",
+    "SOULBLIGHT GRAVELORDS",
+    "DEADWALKERS",
+    "BEAST",
+    "CHAMPION (1/10)"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Rotting Fangs and Claws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "On the Hunt",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit can use a **^^Run^^** ability and still use **^^Charge^^** abilities later in the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Wight Lord on Skeletal Steed",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WARD (6+)",
+    "DEATH",
+    "SOULBLIGHT GRAVELORDS",
+    "DEATHRATTLE",
+    "CAVALRY"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "7",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage), Crit (Mortal)",
+     "name": "Lord's Tomb Blade",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Skeletal Steed's Hooves and Teeth",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Royal Companions",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly non-**^^Hero Deathrattle Cavalry^^** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Lord of Trampling Bones",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to charge rolls for friendly **^^Deathrattle Cavalry^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Blades of the Hollow King",
+   "pts": 260,
+   "size": 3,
+   "kw": [
+    "INFANTRY",
+    "UNIQUE",
+    "WARD (6+)",
+    "DEATH",
+    "WIZARD (1)",
+    "VAMPIRE",
+    "SOULBLIGHT GRAVELORDS",
+    "HERO"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "3",
+     "Dmg": "D3",
+     "Ability": "Companion",
+     "name": "Kennistrix's Fangs",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Ezechiarian Greatsword",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "8",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Crit (Mortal)",
+     "name": "Sissendra's Twin Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Solia, the Tutor",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "This unit can use this ability while its **Cado Ezechiar** is on the battlefield.",
+     "effect": "Pick 1 of the following to apply for the rest of the turn:\n• This unit has **^^Ward (5+)^^**\n• This unit's **Ezechiarian Greatsword** has **Crit (Mortal)**",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Aurelias",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "This unit can use this ability while its **Aurelias** is on the battlefield.",
+     "effect": "Pick 1 of the following to apply for the rest of the turn:\n• Add 1 to this unit's power level.\n• Each time a casting roll is made for this unit, you can re-roll 1 of the dice.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Retribution or Salvation",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "This unit can cast this spell while its **Cado Ezechiar** is on the battlefield. Pick a visible unit within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "If the target is an enemy unit, inflict D3 mortal damage on it. If the target is a friendly **Deathrattle** or **Deadwalkers** unit, subtract 1 from wound rolls for combat attacks that target that unit for the rest of the turn.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Vampire Lord on Nightmare Steed",
+   "pts": 170,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "WIZARD (1)",
+    "WARD (6+)",
+    "DEATH",
+    "SOULBLIGHT GRAVELORDS",
+    "VAMPIRE",
+    "CAVALRY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "7",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Dynastic Cavalier Weapon",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Nightmare's Hooves and Teeth",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Strike at the Heart",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick a friendly **Blood Knights** unit that charged this turn and is wholly within 12\" of this unit to be the target.",
+     "effect": "Add 1 to the Rend characteristic of that unit's **Templar Weapons** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "'For Glory! For Blood!'",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Reaction: You declared a **^^Charge^^** ability for this unit",
+     "declare": "",
+     "effect": "You can re-roll the charge roll for that **^^Charge^^** ability. Then, before the charge move is made, you can pick a friendly **Blood Knights** unit that is not in combat, is wholly within 12\" of this unit and has not used a **^^Charge^^** ability this turn to be the target. If this unit charges, then, immediately after the **^^Charge^^** ability used by this unit has been resolved, the target can immediately use the 'Charge' ability even if it is not your charge phase. In addition, you can re-roll charge rolls for the target this phase.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Revenant Draconith",
+   "pts": 170,
+   "size": 1,
+   "kw": [
+    "WARD (6+)",
+    "DEATH",
+    "MONSTER",
+    "FLY",
+    "SOULBLIGHT GRAVELORDS"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "16",
+    "Save": "5+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Shoot in Combat, Companion",
+     "name": "Pestilential Miasma",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Draconic Maw",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "7",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Draconic Claws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Draconic Claws** is 5.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Death on Tattered Wings",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick this unit if it has not been deployed.",
+     "effect": "Set up this unit in reserve **high above the battlefield**. It has now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Loathsome Descent",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Your Movement Phase",
+     "declare": "Pick this unit if it is **high above the battlefield**.",
+     "effect": "Set up this unit anywhere on the battlefield more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Red Ruin",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a D3. On a 2+, resolve the following effects:\n• Inflict an amount of mortal damage on the target equal to the roll.\n• **Heal (X)** this unit where **X** is an amount equal to the roll.\n• This unit can be removed from the battlefield and set up in reserve **high above the battlefield**.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Revenant Draconith (Scourge of Aqshy)",
+   "pts": 290,
+   "size": 1,
+   "kw": [
+    "WARD (6+)",
+    "DEATH",
+    "MONSTER",
+    "FLY",
+    "SOULBLIGHT GRAVELORDS"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "16",
+    "Save": "5+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Shoot in Combat, Companion",
+     "name": "Pestilential Miasma",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Draconic Maw",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "7",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Draconic Claws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Draconic Claws** is 5.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Brimming with Rancour",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Enemy Hero Phase",
+     "declare": "Pick a visible enemy unit to be the target.",
+     "effect": "For the rest of the turn, the target cannot end moves made as part of a non-**^^Charge Move^^** ability within **X**\" of this unit, where **X** is equal to your current **fury level**.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Volatile Animus",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "Spend 1 **rage dice**. If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7. Then, pick 1 of the following effects:\n\n**Retaliatory Posture:** For the rest of the turn:\n• Ignore positive modifiers to hit rolls and wound rolls for attacks made by enemy units while they are in combat with this unit.\n• Add 1 to save rolls for this unit.\n• Add 1 to hit rolls for this unit's attacks, including attacks made with **Companion** weapons, that target an enemy unit that used a **^^Fight^^** ability this phase.\n\n**Unrelenting Ferocity:** For the rest of the turn:\n• Ignore negative modifiers to hit rolls and wound rolls for this unit's attacks.\n• Add 1 to the Rend and Damage characteristics of this unit's **Companion** melee weapons for attacks that target an enemy unit that has not used a **^^Fight^^** ability this phase.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "title": "Battle Traits",
+   "items": [
+    {
+     "name": "Battle Traits",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "The Hunger",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "Once Per Turn (Army), End of Any Turn",
+       "declare": "Pick each friendly **^^Vampire^^** unit that used a **^^Fight^^** ability this turn to be the targets.",
+       "effect": "**Heal (D3)** each target. **Heal (2D3)** the target instead if it destroyed an enemy unit this turn using a **^^Fight^^** ability",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "The Unquiet Dead",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Deployment Phase",
+       "declare": "Pick a friendly **^^Deathrattle^^** or **^^Deadwalkers^^** unit that has not been deployed.",
+       "effect": "Set up that unit in reserve **in the grave**. It has now been deployed. You cannot set up more friendly units **in the grave** than there are on the battlefield.",
+       "keywords": "**^^Deploy^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Endless Legions",
+       "kind": "Ability (Activated)",
+       "color": "Gray",
+       "timing": "Once Per Battle Round (Army), Any Movement Phase",
+       "declare": "Pick a friendly non-**^^Unique Deathrattle^^** or **^^Deadwalkers^^** unit that started the battle with 2 or more models and that has been destroyed to be the target.",
+       "effect": "Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12\" of a friendly **^^Soulblight Gravelords Hero^^**  or wholly within 6\" of a friendly **Cursed Sepulchre**. It must be set up more than 9\" from all enemy units.\nIf it is your movement phase, you can set up the replacement unit more than3\" from all enemy units instead of more than 9\", but if you set it up within 9\" of any enemy units, it cannot use **^^Charge^^** abilities this turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Deathly Invocation",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Turn (Army), Any Hero Phase",
+       "declare": "Pick a friendly **^^Soulblight Gravelords Hero^^** to use this ability, then pick up to 3 friendly **^^Deathrattle^^** or **^^Deadwalkers^^** units wholly within 12\" of that Hero to be the targets.",
+       "effect": "For each target:\n• If the target is damaged, **Heal (3)** the target.\n• If the target is not damaged, return a number of slain models to it with a combined Health characteristic of up to 3.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "The Rising Dead",
+       "kind": "Ability (Activated)",
+       "color": "Gray",
+       "timing": "Your Movement Phase",
+       "declare": "Pick a friendly unit that is **in the grave**.",
+       "effect": "Set up that unit wholly within 6\" of a friendly **Cursed Sepulchre** and more than 9\" from all enemy unit, or wholly within 6\" of the edge of the battlefield, wholly within friendly territory, and more than 9\" from all enemy units.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Ancient Burial Sites",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Battle (Army), Deployment Phase",
+       "declare": "",
+       "effect": "If there is a friendly **Cursed Sepulchre** on the battlefield, you can set up to 2 additional friendly **Cursed Sepulchres** on the battlefield. The first must be set up more than 3\" from all units, objectives, and other terrain features. The second must be set up wholly outside enemy territory and more than 3\" from all units, objectives and other terrain features.\n**Designer's Note:** *The original* **Cursed Sepulchre** *is set up in Step 1 of the deployment phase using the 'Deploy Faction Terrain' ability. This ability allows you to set up a second and third such terrain feature and is used in Step 3 of the deployment phase, after armies have been deployed.*",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Spell Lores",
+   "items": [
+    {
+     "name": "Lore of Undeath",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Prison of Grief",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Soulblight Gravelords Wizard^^** to cast this spell, pick a visible enemy unit within 12\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "The target has **^^Strike-last^^** until the start of your next turn.",
+       "keywords": "**^^Spell^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Vile Transference",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Soulblight Gravelord Wizard^^** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Roll a number of dice equal to the number of models in the target unit. For each 6, inflict 1 mortal damage on that unit. If any enemy models were slain by this spell, **Heal(D3)** the caster.",
+       "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Waste Away",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Soulblight Gravelords Wizard^^** to cast this spell, pick a visible enemy unit within 12\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "For the rest of the turn, subtract 1 from the Damage characteristic of the target's melee weapons.",
+       "keywords": "**^^Spell^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Artefacts of Power",
+   "items": [
+    {
+     "name": "Terminus Clock",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Terminus Clock",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "",
+       "effect": "Roll a dice. On a 3+, until the start of your next turn, subtract 1 from casting rolls for enemy **^^Wizards^^** while they are within 18\" of this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Amulet of Graves",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Amulet of Graves",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle, Your Hero Phase",
+       "declare": "",
+       "effect": "If there are fewer than 3 friendly **Cursed Sepulchres** on the battlefield, set up a **Cursed Sepulchre** on the battlefield more than 9\" away from all enemy units, more than 1\" from all friendly units and more than 3\" from all objectives and other terrain features.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Shard of Night",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Shard of Night",
+       "kind": "Ability (Passive)",
+       "color": "Blue",
+       "timing": "",
+       "declare": "",
+       "effect": "Ignore modifiers to save rolls for shooting attacks that target this unit (positive and negative).",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Battle Formations: Soulblight Gravelords",
+   "items": [
+    {
+     "name": "Deathstench Drove",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Dragged Down and Torn Apart",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "Once Per Turn (Army), End of Any Turn",
+       "declare": "Pick up to 3 friendly **^^Deadwalkers^^** units in combat to be the targets.",
+       "effect": "For each target:\n• Make a pile-in move.\n• Then, pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Bacchanal of Blood",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Aristocracy of the Night",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to casting rolls for friendly **^^Vampire^^** units that are not in combat and add 1 to wound rolls for combat attacks made by friendly VAMPIRE units that charged in the same turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Deathmarch",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Tide of Bones and Blades",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to the Rend characteristic of melee weapons used by friendly **^^Deathrattle^^** units that charged in the same turn for attacks that target a unit that has fewer models than the attacking unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Legion of Shyish",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Horror Unending",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "You can pick 1 additional target when using the 'Deathly Invocation' ability.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Legions of Ulfenkarn",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Wardens of the Wolf",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "Each time 1 or more slain models are returned to a friendly **^^Soulblight Gravelords Infantry^^** or **^^Beast^^** unit wholly within 12\" of a friendly **Belladamma Volga**, **Radukar the Wolf**, **Radukar the Beast**, **Ivya Volga**, **Lady Annika**, **Kritza**, **Torgillius the Chamberlain**, **Gorslav the Gravekeeper** or **Watch Captain Halgrim**, add 1 to the number of slain models returned to that unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Heroic Traits",
+   "items": [
+    {
+     "name": "Immortal Ego",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Immortal Ego",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "Each phase, you can re-roll 1 hit roll, 1 wound roll and 1 save roll for this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Eternal Thrall",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Eternal Thrall",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Deployment Phase",
+       "declare": "Pick another friendly non-**^^Unique Soulblight Gravelords Infantry Hero^^** to be the target.",
+       "effect": "For the rest of the battle, while the target is on the battlefield:\n• If this unit is a **^^Necromancer^^**, add 1 to this unit's power level.\n• If this unit is a **^^Vampire^^**, add 1 to unbinding rolls for this unit.\n• If this unit is **^^Deathrattle^^**, ignore the first damage point that would be allocated to this unit in each phase.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Furious Endings",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Furious Endings",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "Each time a **^^Manifestation^^** within 12\" of this unit is removed from play, gain 1 **rage dice**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Lash of the Sire",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Lash of the Sire",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick another friendly **^^Soulblight Gravelords^^** unit within this unit's combat range to be the target.",
+       "effect": "Roll a dice. On a 2+:\n• If the target is not in combat, it can move D6\" but cannot move into combat during any part of the move. \n• If the target is in combat, it can make a pile-in move.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Unbending Will",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Unbending Will",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Deathrattle^^** or **^^Deadwalkers^^** unit that has 2 or more models and is wholly within 12\" of this unit to be the target.",
+       "effect": "Add D6 to the target's control score for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Unhinged Rampager",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Unhinged Rampager",
+       "kind": "Ability (Passive)",
+       "color": "Orange",
+       "timing": "",
+       "declare": "",
+       "effect": "You can re-roll charge rolls for this unit in your charge phase.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "A Wastrel and a Vagabond",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "A Wastrel and a Vagabond",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "While a friendly **Deadwalker Zombies** or **Deathrattle Skeletons** unit is wholly within 12\" of this unit:\n• Add 2 to run rolls for that unit.\n• Add 3\" to the distance that unit can move when it piles in.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Frightening Vitality",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Frightening Vitality",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Each time an ability would heal exactly 1 or 2 of this unit's damage points, heal 3 damage points instead.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Manifestation Lores",
+   "items": [
+    {
+     "name": "Manifestations of the Grave",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Summon Hand of Nagash",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Hand of Nagash** on the battlefield, pick a friendly **^^Soulblight Gravelords Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Hand of Nagash** wholly within 12\" of and visible to the caster and more than 9\" from all enemy units.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Unholy Reliquary",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Unholy Reliquary** on the battlefield, pick a friendly **^^Soulblight Gravelords Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Unholy Reliquary** endless spell wholly within 18\" of the caster, visible to them, and more than 3\" from all enemy units.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Sanguine Swarm",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Sanguine Swarm** on the battlefield, pick a friendly **^^Soulblight Gravelords Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Sanguine Swarm** endless spell wholly within 12\" of and visible to the caster and more than 9\" from all enemy units. A Sanguine Swarm endless spell has 2 parts that must be set up within 9\" of each other.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Origins of Terrifying Folk Tales",
+   "items": [
+    {
+     "name": "The Empty Graveyard",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "The Empty Graveyard",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Deployment Phase",
+       "declare": "",
+       "effect": "Remove this unit from the battlefield and set it up again more than 9\" from all enemy units and either wholly within 7\" of a terrain feature or wholly within 7\" of the battlefield edge. This unit cannot use **^^Move^^** abilities in the first turn of the first battle round.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "The Never-Dead",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "The Never-Dead",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Any Hero Phase",
+       "declare": "",
+       "effect": "Spend 1 **rage dice**. If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7.\nThen, for the rest of the turn, each time you make an unmodified save roll of 5+ for an attack that targets this unit, the attack fails and the attack sequence ends.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "The Incarnadine Killers",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "The Incarnadine Killers",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "End of Any Turn",
+       "declare": "",
+       "effect": "If this unit is not in combat and an enemy unit was destroyed by its combat attacks this turn, this unit can move up to D6\". It can end that move in combat.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

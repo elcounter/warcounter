@@ -1,0 +1,1844 @@
+{
+ "name": "Idoneth Deepkin",
+ "units": [
+  {
+   "name": "Lotann, Warden of the Soul Ledgers",
+   "pts": 90,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "UNIQUE",
+    "ORDER",
+    "INFANTRY",
+    "ISHARANN",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "8",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Meloch's Tentacles and Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Fount of Willpower",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn, Reaction: You declared a **^^Spell^^** ability for a friendly **^^Isharann^^** unit wholly within 12\" of this unit",
+     "declare": "",
+     "effect": "Remove 1 of this unit's **soul-quota tokens**. Then, you can re-roll the casting roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Catalogue of Souls",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time an enemy unit is destroyed, give this unit a **soul-quota token**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Empowered by Memory",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Idoneth Deepkin^^** unit wholly within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "The target's melee weapons have **Crit (Auto-wound)** for the rest of the turn.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Eidolon of Mathlann, Aspect of the Storm",
+   "pts": 280,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "FLY",
+    "MONSTER",
+    "WARD (5+)",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "EIDOLON",
+    "ORDER"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "12",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "7",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Spear of Repressed Fury and Crulhook",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Drench With Hate",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to wound rolls for combat attacks made by friendly **^^Idoneth Deepkin^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Crashing Upon the Foe",
+     "kind": "Ability (Passive)",
+     "color": "Gray",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit can use **^^Charge^^** abilities even if it used a **^^Retreat^^** ability in the same turn. In addition, no mortal damage is inflicted on this unit by **^^Retreat^^** abilities.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Pulled Into the Depths",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "Pick an enemy **^^Hero^^** in combat with this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, the target has **^^Strike-last^^** for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Akhelian Allopex",
+   "pts": 160,
+   "size": 1,
+   "kw": [
+    "IDONETH DEEPKIN",
+    "ORDER",
+    "CAVALRY",
+    "FLY",
+    "AELF",
+    "AKHELIAN"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "8",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Barbed Hooks and Blades",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Anti‑**^^Monster^^** (+1 Rend), Companion",
+     "name": "Allopex's Ferocious Bite",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "18\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "Anti‑**^^Monster^^** (+1 Rend)",
+     "name": "Razorshell Harpoon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Rng": "18\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "Anti‑**^^Cavalry^^** (+1 Rend)",
+     "name": "Retarius Net Launcher",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Bloodthirsty Predators",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Attacks characteristic of this unit's** Allopex's Ferocious Bite** while it is within 6\" of any damaged enemy units or while it is within 6\" of any enemy units that had any models slain in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ensnared",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Any Shooting Phase",
+     "declare": "Pick an enemy **^^Monster^^** or **^^Cavalry^^** unit that had any damage points allocated to it this turn by this unit's shooting attacks to be the target.",
+     "effect": "Roll a dice. On a 3+, until the start of your next turn, subtract 1 from the number of dice rolled when making charge rolls for the target, to a minimum of 1.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Eidolon of Mathlann, Aspect of the Sea",
+   "pts": 310,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "FLY",
+    "MONSTER",
+    "WARD (5+)",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "EIDOLON",
+    "WIZARD (2)",
+    "ORDER"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "12",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Blasts of Abyssal Energy",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "7",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Psi-trident and Deep-sea Sceptre",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Dormant Energies",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to casting rolls for this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Tranquillity of the Abyss",
+     "kind": "Ability (Passive)",
+     "color": "Purple",
+     "timing": "",
+     "declare": "",
+     "effect": "Ignore negative modifiers to the control scores of friendly **^^Idoneth Deepkin^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Vengeful Waves",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "If this unit has not charged this turn, pick an enemy unit in combat with it to be the target.",
+     "effect": "Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Tsunami of Terror",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick up to 3 different visible enemy units within 12\" of this unit to be the targets, then make a casting roll of 2D6.",
+     "effect": "Subtract 1 from save rolls for combat attacks that target those units until the start of your next turn.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Akhelian King",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "FLY",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "CAVALRY",
+    "AKHELIAN",
+    "ORDER"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "7",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Deepmare's Fangs, Talons and Lashing Tails",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Akhelian Royal Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Wave Rider",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Any Charge Phase",
+     "declare": "If this unit charged this phase, pick an enemy unit within 1\" of it to be the target.",
+     "effect": "Roll a D3. On a 2+:\n• Inflict an amount of mortal damage on the target equal to the roll.\n• Add 1 to the Rend characteristic of this unit's **Akhelian Royal Weapons** for attacks that target that enemy unit for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Crest of the Wave",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit charged this turn, add 1 to the Rend characteristic of melee weapons used by other friendly **^^Idoneth Deepkin^^** units for attacks that target enemy units in combat with this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Volturnos, High King of the Deep",
+   "pts": 190,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "FLY",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "WARMASTER",
+    "CAVALRY",
+    "UNIQUE",
+    "AKHELIAN",
+    "ORDER"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "8",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "2+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "The Astra Solus",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Uasall's Fangs, Talons and Lashing Tails",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "First Among Akhelians",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to hit rolls for combat attacks made by other friendly **^^Akhelian^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Cealith, the High King's Shield",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit has **^^Ward (3+)^^** against mortal damage inflicted by **^^Spell^^** abilities, **^^Prayer^^** abilities or abilities used by **^^Manifestations^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Supreme Lord of Tides",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Battle, Any Combat Phase",
+     "declare": "Pick up to 3 other friendly **^^Idoneth Deepkin^^** units wholly within 12\" of this unit to be the targets.",
+     "effect": "Add 1 to the Attacks characteristic of the targets' melee weapons for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Isharann Tidecaster",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "ORDER",
+    "WIZARD (1)",
+    "ISHARANN",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Pelagic Staff",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Master of the Ethersea",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Make an Isharann ritual roll of D6.",
+     "effect": "On a 3+, pick 1 of the following effects to apply until the start of your next turn:\n***Creeping Mist:*** Friendly **^^Idoneth Deepkin^^** units cannot be targeted by shooting attacks unless the attacking model is within 12\" of them.\n***Surging Stream:*** Add 1 to run rolls and charge rolls for friendly **^^Idoneth Deepkin^^** units.\n***Spiteful Riptide:*** Each time an enemy unit uses a **^^Retreat^^** ability, after the effect of that ability has been resolved, inflict D3 mortal damage on that unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Isharann Soulscryer",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "ORDER",
+    "ISHARANN",
+    "INFANTRY",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Abyssal Touch",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Finder of Ways",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Reaction: You declared the 'Unpredictable Tide' ability or the 'Steed of Tides' ability",
+     "declare": "",
+     "effect": "Instead of setting up the targets as described in the ability used, set them up on the battlefield wholly within 12\" of this unit and more than 7\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Isharann Soulrender",
+   "pts": 90,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "ORDER",
+    "ISHARANN",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Rakerdart's Serrated Bill",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Talúnhook",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Lurelight",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "Pick up to 3 different friendly **^^Namarti^^** units wholly within 12\" of this unit to be the targets. You cannot pick the same unit to be the target of this ability more than once per turn.",
+     "effect": "Make a lurelight roll of D3 for each target unit. On a 2+, return a number of slain models to the target unit equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Hangman's Knot",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick an enemy **^^Hero^^** in combat with this unit to be the target.",
+     "effect": "Roll 2D6. If the roll exceeds the target's Health characteristic, it is automatically destroyed.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Akhelian Ishlaen Guard",
+   "pts": 170,
+   "size": 3,
+   "kw": [
+    "CAVALRY",
+    "CHAMPION",
+    "MUSICIAN (1/3)",
+    "STANDARD BEARER (1/3)",
+    "FLY",
+    "ORDER",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "AKHELIAN"
+   ],
+   "stats": {
+    "Move": "14\"",
+    "Health": "4",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Helsabre",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Companion",
+     "name": "Fangmora's Fangs and Lashing Tail",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Biovoltaic Barrier",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, subtract 1 from the Attacks characteristic of the target unit's weapons for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Galv-shields",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit has **^^Ward (5+)^^** if it charged in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Akhelian Morrsarr Guard",
+   "pts": 160,
+   "size": 3,
+   "kw": [
+    "CAVALRY",
+    "CHAMPION",
+    "MUSICIAN (1/3)",
+    "STANDARD BEARER (1/3)",
+    "FLY",
+    "ORDER",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "AKHELIAN"
+   ],
+   "stats": {
+    "Move": "14\"",
+    "Health": "4",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Charge (+1 Damage), Anti‑**^^Cavalry^^** (+1 Rend)",
+     "name": "Voltspear",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Companion",
+     "name": "Fangmora's Fangs and Lashing Tail",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Biovoltaic Blast",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Any Charge Phase",
+     "declare": "If this unit charged this phase, pick an enemy unit within 1\" of it to be the target.",
+     "effect": "Roll a number of dice equal to the number of models in this unit. Add 1 to each roll if there are more models in the target unit than this unit. For each 3+, inflict 1 mortal damage on the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Akhelian Leviadon",
+   "pts": 450,
+   "size": 1,
+   "kw": [
+    "IDONETH DEEPKIN",
+    "ORDER",
+    "FLY",
+    "AELF",
+    "AKHELIAN",
+    "MONSTER",
+    "WARD (5+)"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "16",
+    "Save": "3+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Crew's Spears and Harpoons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "7",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Leviadon's Scythed Fins and Crushing Jaws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "18\"",
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "Anti‑**^^Monster^^** (+1 Rend)",
+     "name": "Razorshell Harpoon Launchers",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Leviadon's Scythed Fins and Crushing Jaws** is 5.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Crushing Charge",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "If this unit charged this phase, pick an enemy **^^Infantry^^** unit within 1\" of it to be the target.",
+     "effect": "Roll a dice. Add 1 to the roll if the target unit has more than 10 models. On a 3+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Void Drum",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Friendly **^^Idoneth Deepkin^^** units have **^^Ward (5+)^^** while they are wholly within 6\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Akhelian Thrallmaster",
+   "pts": 70,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "ORDER",
+    "INFANTRY",
+    "AKHELIAN"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Esoteric Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Thrallmaster",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly **Namarti Thralls** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Akhelian Insights",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "",
+     "effect": "Melee weapons used by friendly **^^Namarti^^** units have **Crit (2 Hits)** while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Namarti Thralls",
+   "pts": 90,
+   "size": 10,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "INFANTRY",
+    "NAMARTI"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti‑**^^Infantry^^** (+1 Rend), Anti-**^^Monster^^** (+1 Rend)",
+     "name": "Lanmari",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Sweeping Blows",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "If any damage points inflicted by attacks made as part of that **^^Fight^^** ability are allocated to any enemy units, subtract 1 from wound rolls for attacks made by those enemy units for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Namarti Reavers",
+   "pts": 110,
+   "size": 10,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "INFANTRY",
+    "NAMARTI"
+   ],
+   "stats": {
+    "Move": "7\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Keening Blade",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Whisperbow",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Strike On the Move",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit can use **^^Shoot^^** abilities even if it used a **^^Run^^** or **^^Retreat^^** ability in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Ikon of the Sea",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "ORDER",
+    "INFANTRY",
+    "AKHELIAN"
+   ],
+   "stats": {
+    "Move": "7\"",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Tidal Glaive",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "The Surging Sea",
+     "kind": "Ability (Activated)",
+     "color": "Orance",
+     "timing": "Once Per Turn (Army), Your Charge Phase",
+     "declare": "Pick this unit and up to 1 friendly **^^Idoneth Deepkin^^** unit within this unit's combat range to be the targets.",
+     "effect": "For the rest of the turn, add 1 to the number of dice rolled when making charge rolls for the targets, to a maximum of 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Rapid Approach",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit can use a **^^Run^^** ability and still use **^^Charge^^** abilities later in the turn",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Mathaela, Oracle of the Abyss",
+   "pts": 150,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "UNIQUE",
+    "ORDER",
+    "INFANTRY",
+    "ISHARANN",
+    "WARD (6+)",
+    "WIZARD (1)",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "6",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "3",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Shoot in Combat",
+     "name": "Riptide Blast",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Staff of the Abyss",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Dark Shoal's Ferocious Bites",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Siren Song of The Abyss",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick up to 3 friendly **^^Idoneth Deepkin^^** units wholly within 12\" of this unit to be the targets.",
+     "effect": "For the rest of the turn, add 1 to the Attacks characteristic of the targets' **Companion** weapons.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Crushing Pressure",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible enemy unit within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "Roll a number of dice equal to the target's Health characteristic, to a maximum of 10. For each 4+, inflict 1 mortal damage on the target.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Ikon of the Storm",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "ORDER",
+    "INFANTRY",
+    "AKHELIAN"
+   ],
+   "stats": {
+    "Move": "7\"",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "7",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Maelstrom Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Storm of Blades",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Battle, Any Combat Phase",
+     "declare": "",
+     "effect": "This unit can use 2 **^^Fight^^** abilities this phase. After the first is used, however, this unit has **^^Strike-last^^** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Whirlpool's Fury",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Enemy units cannot use **^^Retreat^^** abilities while they are in combat with this unit.\nFriendly units that use a **^^Retreat^^** ability while they are wholly within 12\" of this unit can still use **^^Shoot^^** and/or **^^Charge^^** abilities later in the turn.\nNo mortal damage is inflicted on friendly **^^Idoneth Deepkin^^** units by **^^Retreat^^** abilities while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Isharann Tidecaster (Scourge of Aqshy)",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "ORDER",
+    "WIZARD (1)",
+    "ISHARANN",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Pelagic Staff",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Master of the Ethersea",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Idoneth Deepkin^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "If the target is **^^Namarti^^**, pick 1 of the following effects to apply until the start of your next turn. Otherwise, make an **^^Isharann^^** ritual roll of D6. On a 3+, pick 1 of the following effects to apply until the start of your next turn.\n***Torrent of Blows*:** Pick 1 of the target's melee weapons. That weapon has **Crit (2 Hits)**.\n***Protection of the Waves*:** While this unit is within 3\" of and visible to the target, both units have **^^Ward (5+)^^**.\n***Frenzy of the Ethersea*:** For each unmodified hit roll of 1 for a combat attack that targets that friendly unit, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Namarti Reavers (Scourge of Aqshy)",
+   "pts": 100,
+   "size": 10,
+   "kw": [
+    "CHAMPION",
+    "ORDER",
+    "IDONETH DEEPKIN",
+    "AELF",
+    "INFANTRY",
+    "NAMARTI"
+   ],
+   "stats": {
+    "Move": "7\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Keening Blade",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Whisperbow",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Merciless Hunters",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Reaction: You declared a Shoot ability for\nthis unit",
+     "declare": "",
+     "effect": "After that **^^Shoot^^** ability has been resolved, if all of this unit's attacks targeted the same enemy unit and any models in that unit were slain, pick 1 of the effects below to apply for the rest of the turn. If all of this unit's attacks targeted the same enemy unit and no models in that unit were slain, roll a dice. On a 3+, pick 1 of the effects below to apply for the rest of the turn:\n• Subtract 1 from ward rolls for the target.\n• Ignore positive modifiers to save rolls for the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "title": "Battle Traits",
+   "items": [
+    {
+     "name": "Battle Traits",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Concealing Tide",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle Round, Any Hero Phase",
+       "declare": "You can only use this ability if you did not use it in the previous battle round and you have not used any other **^^Tidal^^** abilities this round.",
+       "effect": "For the rest of the battle round, subtract 1 from hit rolls for attacks that target friendly **^^Idoneth Deepkin^^** units that did not use any **^^Charge^^** abilities in the same turn.",
+       "keywords": "**^^Tidal^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Swift Tide",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle Round, Any Hero Phase",
+       "declare": "You can only use this ability if you used the 'Concealing Tide' ability in the previous battle round and you have not used any other **^^Tidal^^** abilities this round.",
+       "effect": "For the rest of the battle round, friendly **^^Idoneth Deepkin^^** units can use **^^Run^^** abilities and still use **^^Shoot^^** and/or **^^Charge^^** abilities later in the turn.",
+       "keywords": "**^^Tidal^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Sea's Embrace",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle Round, Your Hero Phase",
+       "declare": "You can only use this ability if you used the 'Swift Tide' ability in the previous battle round and you have not used any other **^^Tidal^^** abilities this round.",
+       "effect": "Friendly **^^Idoneth Deepkin^^** units have **^^Strike-first^^** for the rest of the turn.",
+       "keywords": "**^^Tidal^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Unpredictable Tide",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle Round, Your Hero Phase",
+       "declare": "You can only use this ability if you did not use it in the previous battle round and you have not used any other **^^Tidal^^** abilities this round. Pick a friendly **^^Idoneth Deepkin^^** unit that is not in combat to be the target.",
+       "effect": "Remove the target from the battlefield and set it up again wholly within 7\" of a battlefield edge and more than 9\" from all enemy units.",
+       "keywords": "**^^Tidal^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Inexorable Tide",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle Round, Any Hero Phase",
+       "declare": "You can only use this ability if you used the 'Unpredictable Tide' ability in the previous battle round and you have not used any other **^^Tidal^^** abilities this round.",
+       "effect": "Subtract 1 from the Rend characteristic of weapons used for attacks that target friendly **^^Idoneth Deepkin^^** units for the rest of the battle round.",
+       "keywords": "**^^Tidal^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Storm's Wrath",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle Round, Your Hero Phase",
+       "declare": "You can only use this ability if you used the 'Inexorable Tide' ability in the previous battle round and you have not used any other **^^Tidal^^** abilities this round.",
+       "effect": "Friendly **^^Idoneth Deepkin^^** units' melee weapons have **Crit (Mortal)** for the rest of the turn.",
+       "keywords": "**^^Tidal^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Twin Tides",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Turn(Army), Reaction: You declared an Attack ability for a friendly **^^Akhelian^^** unit",
+       "declare": "",
+       "effect": "Pick a visible friendly **^^Namarti^^** unit that has not used an **^^Attack^^** ability this phase to be the target.\n• If this unit used a **^^Shoot^^** ability, immediately after the **^^Shoot^^** ability used by this unit has been resolved, the target can be picked to use a **^^Shoot^^** ability as if it were your shooting phase.\n• If this unit used a **^^Fight^^** ability, immediately after the **^^Fight^^** ability used by this unit has been resolved, the target can be picked to use a **^^Fight^^** ability. If the target does so, for the rest of the phase, add 1 to the Attacks characteristic of its weapons but all of its attacks must target enemy units that had any damage points allocated to it this phase by this unit's attacks.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Artefacts of Power",
+   "items": [
+    {
+     "name": "Lifekelp Pod",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Lifekelp Pod",
+       "kind": "Ability (Activated)",
+       "color": "Gray",
+       "timing": "Any Movement Phase",
+       "declare": "",
+       "effect": "**Heal (D3)** each friendly **^^Idoneth Deepkin Cavalry^^** unit within this unit's combat range.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Dritchleech",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Dritchleech",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "Subtract 1 from casting rolls for enemy **^^Wizards^^** while they are within 18\" of this unit. In addition, each time an enemy spell fails, after that ability has been resolved, **Heal (1)** this unit",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Armour of the Cythai",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Armour of the Cythai",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "If this unit has not charged this turn, subtract 1 from hit rolls for combat attacks made by enemy units while they are in combat with this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Battle Formations: Idoneth Deepkin",
+   "items": [
+    {
+     "name": "Soul-raid Ambushers",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Fade Like Mist",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "When using the 'Unpredictable Tide' ability, you can pick up to 2 eligible targets instead of 1.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Namarti Corps",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Surge Forward",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "You can re-roll run rolls and charge rolls for friendly **^^Namarti^^** units while they are wholly within 12\" of a friendly **^^Akhelian^^** unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Isharann Council",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Wisdom of the Deep",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to casting rolls, Isharann ritual rolls and lurelight rolls for friendly **^^Isharann^^** units while they are within the combat ranges of any other friendly **^^Isharann^^** units",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Akhelian Beastmasters",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Ferocious Predators",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to hit rolls for combat attacks made with **Companion** weapons by friendly **^^Akhelian^^** units.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Heroic Traits",
+   "items": [
+    {
+     "name": "Form of the Fangmora",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Form of the Fangmora",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "If the unmodified hit roll for an attack that targets this unit is 1-3, the attack fails and the attack sequence ends.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Nightmare Legacy",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Nightmare Legacy",
+       "kind": "Ability (Passive)",
+       "color": "Purple",
+       "timing": "",
+       "declare": "",
+       "effect": "Subtract 3 from the control scores of enemy units while they are within 6\" of this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Hunter of Souls",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Hunter of Souls",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "Pick 1 of the following weapon abilities for this unit's melee weapons to have\nthis battle:\n• **Anti-^^Cavalry^^ (+1 Rend)**\n• **Anti-^^Infantry^^(+1 Rend)**\n• **Anti-^^Monster^^(+1 Rend)**",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Endless Sea-Storm",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Endless Sea-Storm",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle, Any Hero Phase",
+       "declare": "",
+       "effect": "If this unit is a **^^Wizard^^**, add 1 to its power level for the rest of the turn. If this unit is not a **^^Wizard^^**, it gains **^^Wizard (1)^^** for the rest of the turn.\nIn addition, add 2 to the next casting roll or banishment roll for this unit this turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Merciless Raider",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Merciless Raider",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Any Combat Phase",
+       "declare": "",
+       "effect": "If this unit is within 6\" of a damaged enemy unit, this unit can move 6\". It can pass through the combat ranges of enemy units but must end that move in combat with a damaged enemy unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Lord of Storm and Sea",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Lord of Storm and Sea",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "Each time an ability returns at least 1 slain model to a friendly unit wholly within 12\" of this unit, after that ability has been resolved, you can return 1 additional slain model to it.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Abyssal Dweller",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Abyssal Dweller",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle, Any Hero Phase",
+       "declare": "Pick an objective within 18\" of this unit to be the target.",
+       "effect": "For the rest of the battle, while enemy units are contesting the target objective, those units cannot use **^^Run^^**, **^^Retreat^^** or **^^Charge^^** abilities.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Cursed Lineage",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Cursed Lineage",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "End of Your Turn",
+       "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+       "effect": "Roll a number of dice equal to your opponent's **fury level**. For each 3+, inflict 1 mortal damage on the target.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Adherent of Kir-Nadarr",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Adherent of Kir-Nadarr",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+       "effect": "You can spend 1 **rage dice**. If you do:\n• Apply the effect below.\n• If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7. \nOtherwise, roll a dice. On a 3+, apply the effect below.\nFor the rest of the turn, ignore negative modifiers to hit rolls and wound rolls for combat attacks made by friendly **^^Idoneth Deepkin^^** units that target that enemy unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Spell Lores",
+   "items": [
+    {
+     "name": "Lore of the Deeps",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Counter-current",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Idoneth Deepkin Wizard^^** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Until the start of your next turn, halve run rolls and charge rolls for the target.",
+       "keywords": "**^^Spell^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Pressure of the Deep",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Idoneth Deepkin Wizard^^** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.",
+       "keywords": "**^^Spell^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Steed of Tides",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Idoneth Deepkin Wizard^^** to cast this spell, pick a visible friendly **^^Idoneth Deepkin^^** unit wholly within 12\" of them and not in combat to be the target, then make a casting roll of 2D6.",
+       "effect": "Remove the target from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.",
+       "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Manifestation Lores",
+   "items": [
+    {
+     "name": "Lore of the Abyss",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Summon Incarnate of the Deep",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Incarnate of the Deep** endless spell on the battlefield, pick a friendly **^^Idoneth Deepkin Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up an **Incarnate of the Deep** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "8",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Ethersea Companions",
+   "items": [
+    {
+     "name": "Ironshell Barnacles",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Ironshell Barnacles",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "If this unit is **^^Infantry^^**, subtract 1 from the Damage characteristic of weapons used for attacks that target it.\n• If this unit is **^^Cavalry^^**, subtract 1 from the Rend characteristic of weapons used for attacks that target it.\n• If this unit is a **^^Monster^^**, ignore negative modifiers to run rolls and charge rolls for it.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Stonefoot Anemone",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Stonefoot Anemone",
+       "kind": "Ability (Activated)",
+       "color": "Gray",
+       "timing": "Your Movement Phase",
+       "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+       "effect": "Roll a dice. On a 3+, the target cannot use **^^Move^^** abilities for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Aqshian Sea Nettles",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Aqshian Sea Nettles",
+       "kind": "Ability (Activated)",
+       "color": "Orange",
+       "timing": "Any Charge Phase",
+       "declare": "Pick an enemy unit in combat with this unit and that charged this turn to be the target.",
+       "effect": "Spend 1 **rage dice**. If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7.\nThen, for the rest of the turn:\n• Other enemy units cannot use **^^Fight^^** abilities if the target is eligible to be picked.\n• If possible, this unit must be picked to be the target of pile-in moves made by the target.\n• All attacks made by models in the target unit within this unit's combat range must target this unit.\n**Designer's Note:** *This ability does not override the* **^^Strike-first^^** *or* **^^Strike-last^^** *constraints.*",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
