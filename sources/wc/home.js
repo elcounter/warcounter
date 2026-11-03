@@ -195,8 +195,10 @@
   function installHtml(){
     const step = (n, t) => `<li><span class="snum">${n}</span><span>${t}</span></li>`;
     return `<div class="inst">
-      <p class="inst-lead">Installe WarCounter sur l'écran d'accueil de ton téléphone : elle s'ouvre en plein écran, comme une vraie application, et fonctionne même sans réseau.</p>
+      <p class="inst-lead">Installe WarCounter sur ton téléphone ou ton ordinateur : elle s'ouvre en plein écran, comme une vraie application, et fonctionne même sans réseau.</p>
       <button type="button" class="btn-install" id="direct-install"${deferredPrompt ? "" : " hidden"}>${I('<path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 19h14"/>')}<span>Installer maintenant</span></button>
+      <p class="inst-pc">Sur ordinateur, si le bouton n'apparaît pas, ouvre WarCounter avec Chrome ou Edge.</p>
+      <div class="inst-mobile">
       <h2 class="rh">Android (Chrome)</h2>
       <ol class="steps">
         ${step(1, "Appuie sur les <b>3 petits points</b> en haut à droite de ton navigateur (la flèche te les montre).")}
@@ -210,6 +212,7 @@
         ${step(2, "Choisis <b>Sur l'écran d'accueil</b>, puis <b>Ajouter</b>.")}
       </ol>
       <p class="hint">Tes listes et tes parties restent enregistrées sur ton téléphone, dans l'app.</p>
+      </div>
     </div>`;
   }
   document.addEventListener("click", async e => {

@@ -491,6 +491,13 @@ input::placeholder{color:#a5a5a5;opacity:1}
 #app-home .snum{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--bar);color:#fff;font:700 15px var(--display)}
 #app-home .hint{color:var(--muted);font-size:13px}
 
+#app-home .inst-pc{display:none}
+@media (hover:hover) and (pointer:fine){
+  #app-home .menu-hint{display:none !important}
+  #app-home .inst-mobile{display:none}
+  #app-home #direct-install[hidden] + .inst-pc{display:block;color:var(--muted);font-size:13px}
+}
+
 </style>
 <div id="app-army" hidden>
 <header class="bar">
@@ -506,12 +513,12 @@ input::placeholder{color:#a5a5a5;opacity:1}
   <section id="view-memo"><div id="memo-banner"></div><div class="list" id="list"></div></section>
   <section id="view-unit" hidden><div class="sheet" id="unit"></div></section>
   <section id="view-phases" hidden><div id="phase-banner"></div><div class="phases" id="phases"></div></section>
-  <p class="copy">© 2026 elcounter<br>WarCounter version 1.2.0 · MAJ 03-11-2026</p>
+  <p class="copy">© 2026 elcounter<br>WarCounter version 1.2.1 · MAJ 03-11-2026</p>
 </main>
 </div>
 <div id="app-home">
 <header class="bar"><div class="in top"><button class="back" id="home-back" type="button" aria-label="Retour" hidden><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><h1 id="home-title">WarCounter</h1><span class="menu-hint" id="menu-hint" hidden aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M6 11l6-6 6 6"/></svg><span>App</span></span></div></header>
-<main class="in"><div id="home-view"></div><p class="copy">© 2026 elcounter<br>WarCounter version 1.2.0 · MAJ 03-11-2026</p></main>
+<main class="in"><div id="home-view"></div><p class="copy">© 2026 elcounter<br>WarCounter version 1.2.1 · MAJ 03-11-2026</p></main>
 </div>
 <div id="app-bs" hidden>
 
@@ -527,7 +534,7 @@ input::placeholder{color:#a5a5a5;opacity:1}
   </div>
 </header>
 
-<main class="in"><div class="stack" id="view"></div><p class="copy">© 2026 elcounter<br>WarCounter version 1.2.0 · MAJ 03-11-2026</p></main>
+<main class="in"><div class="stack" id="view"></div><p class="copy">© 2026 elcounter<br>WarCounter version 1.2.1 · MAJ 03-11-2026</p></main>
 
 <footer class="foot" id="foot" hidden>
   <div class="in">
@@ -4183,8 +4190,10 @@ window.WC_FIMG = {"cities": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/
   function installHtml(){
     const step = (n, t) => `<li><span class="snum">${n}</span><span>${t}</span></li>`;
     return `<div class="inst">
-      <p class="inst-lead">Installe WarCounter sur l'écran d'accueil de ton téléphone : elle s'ouvre en plein écran, comme une vraie application, et fonctionne même sans réseau.</p>
+      <p class="inst-lead">Installe WarCounter sur ton téléphone ou ton ordinateur : elle s'ouvre en plein écran, comme une vraie application, et fonctionne même sans réseau.</p>
       <button type="button" class="btn-install" id="direct-install"${deferredPrompt ? "" : " hidden"}>${I('<path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 19h14"/>')}<span>Installer maintenant</span></button>
+      <p class="inst-pc">Sur ordinateur, si le bouton n'apparaît pas, ouvre WarCounter avec Chrome ou Edge.</p>
+      <div class="inst-mobile">
       <h2 class="rh">Android (Chrome)</h2>
       <ol class="steps">
         ${step(1, "Appuie sur les <b>3 petits points</b> en haut à droite de ton navigateur (la flèche te les montre).")}
@@ -4198,6 +4207,7 @@ window.WC_FIMG = {"cities": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/
         ${step(2, "Choisis <b>Sur l'écran d'accueil</b>, puis <b>Ajouter</b>.")}
       </ol>
       <p class="hint">Tes listes et tes parties restent enregistrées sur ton téléphone, dans l'app.</p>
+      </div>
     </div>`;
   }
   document.addEventListener("click", async e => {
