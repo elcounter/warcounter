@@ -7,7 +7,7 @@ Application web installable (PWA), hébergée sur GitHub Pages : https://elcount
 
 ## Version
 
-Version actuelle : **1.9.0** (MAJ 03-11-2026).
+Version actuelle : **2.0.0** (MAJ 03-11-2026).
 Numérotation X.Y.Z :
 - X : très gros changement (décidé par elcounter uniquement)
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
@@ -17,6 +17,7 @@ Numérotation X.Y.Z :
 
 ## Historique
 
+- 2.0.0 (03-11-2026) : Sons of Behemat. Toutes les factions principales sont maintenant disponibles.
 - 1.9.0 (03-11-2026) : Kruleboyz.
 - 1.8.0 (03-11-2026) : Ironjawz.
 - 1.7.0 (03-11-2026) : Gloomspite Gitz.
@@ -83,8 +84,6 @@ Tous les chemins sont relatifs au dépôt (Python 3 sans dépendance ; Node seul
 
 ## Reste à faire
 
-- Chaos : (complet)
-- Mort : (complet)
-- Destruction : Sons of Behemat
+Toutes les factions principales sont intégrées.
 
 Images déjà prêtes dans `sources/wc/fac-img-next/`.
