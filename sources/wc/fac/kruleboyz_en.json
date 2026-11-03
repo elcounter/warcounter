@@ -1,0 +1,1805 @@
+{
+ "name": "Kruleboyz",
+ "units": [
+  {
+   "name": "Marshcrawla Sloggoth",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "DESTRUCTION",
+    "KRULEBOYZ",
+    "WAR MACHINE"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "10",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Nets and Snatcha‑stikks",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Sloggoth's Claws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "On da March",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "While they are wholly within 12\" of this unit, friendly **^^Kruleboyz Infantry^^** units can use **^^Charge^^** abilities even if they used a **^^Run^^** ability in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Regeneration",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Start of Any Turn",
+     "declare": "",
+     "effect": "**Heal (D3)** this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Gobsprakk, the Mouth of Mork",
+   "pts": 240,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "UNIQUE",
+    "MONSTER",
+    "WARMASTER",
+    "DESTRUCTION",
+    "KRULEBOYZ",
+    "WIZARD (2)",
+    "WARD (6+)",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "14",
+    "Save": "5+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "Anti-**^^Wizard^^** (+1 Rend), Crit (Mortal)",
+     "name": "Bogbark Staff",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "D6",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Killabeak's Stinger",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "7",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Wizard^^** (+1 Rend), Companion",
+     "name": "Killabeak's Talons and Beak",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Killabeak's Talons and Beak** is 5.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Screamin' Mandrakk",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Reaction: Opponent declared a **^^Spell^^** ability",
+     "declare": "",
+     "effect": "This unit uses the 'Unbind' ability but the unbinding roll is 3D6 instead of 2D6.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Crush to Death",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a dice. If the roll exceeds the target's Health characteristic, 1 model in the target unit is slain.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Mork Sez No!",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time this unit unbinds a spell, inflict D3 mortal damage on the caster. If the unbinding roll was 10+, inflict D6 mortal damage on the caster instead.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Strangle Hex",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible enemy unit within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "Roll a number of dice equal to the target's Health characteristic, to a maximum of 10. For each 4+, inflict 1 mortal damage on the target.",
+     "keywords": "**^^Spell^^**",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Killaboss on Corpse-rippa Vulcha",
+   "pts": 240,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "MONSTER",
+    "DESTRUCTION",
+    "KRULEBOYZ",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "14",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Boss-stikka or Boss-hacka",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "D6",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Vulcha's Stinger",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "7",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Vulcha's Talons and Beak",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Vulcha's Talons and Beak** is 5.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Commanding View",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Reaction: You declared the 'Redeploy' command for a friendly **Gutrippaz** unit wholly within 12\" of this unit",
+     "declare": "",
+     "effect": "If you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Vulcha Dive",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "If this unit charged this phase, pick an enemy unit in combat with it to be the target.",
+     "effect": "Roll a number of dice equal to the unmodified charge roll. For each 4+, inflict 1 mortal damage on the target.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Killaboss on Great Gnashtoof",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "KRULEBOYZ",
+    "CAVALRY"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "10",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Boss-stikka",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Great Gnashtoof's Jaws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "That's Ours, Ya Gitz",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit is contesting an objective you do not control, add 1 to hit rolls for combat attacks made by friendly **^^Kruleboyz^^** units wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "All Part of da Plan",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick another friendly **^^Kruleboyz^^** unit wholly within 9\" of this unit to be the target.",
+     "effect": "Add 3 to the target's control score until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Killaboss on Great Gnashtoof (Scourge of Aqshy)",
+   "pts": 150,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "KRULEBOYZ",
+    "CAVALRY"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "10",
+    "Save": "3+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-Hero (+1 Rend), Crit (Mortal)",
+     "name": "Boss-skewa",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Great Gnashtoof's Jaws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Prowling the Flanks",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "",
+     "effect": "If this unit is wholly within 6\" of the battlefield edge, remove it from the battlefield and set it up again wholly within 6\" of the battlefield edge and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Drag 'Em Out",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Your Combat Phase",
+     "declare": "Pick an enemy **^^Infantry Hero^^** in combat with this unit to be the target.",
+     "effect": "Roll 2D6. This unit can move a distance in inches up to the value of the roll. Then, if possible, your opponent must remove the target from the battlefield and set it up again within 1\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Killaboss with Stab-grot",
+   "pts": 70,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "KRULEBOYZ",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Boss-hacka",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Stab-grot's Shiv",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Keep 'Em in Line",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared the 'All-out Attack' command for a friendly **^^Kruleboyz Infantry^^** unit",
+     "declare": "",
+     "effect": "If this unit is wholly within 12\" of the unit using the 'All-out Attack' command, add 1 to wound rolls for combat attacks made by that unit for the rest of the phase.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Unleash the Stab-grot!",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Battle, Any Combat Phase",
+     "declare": "",
+     "effect": "Pick 1 of the following effects:\n• Pick an enemy unit in combat with this unit to be the target. Inflict D3 mortal damage on the target.\n• This unit has **^^Ward (5+)^^** for the rest of the turn.\nAfter resolving either effect, remove this unit's **Stab-grot** from the battlefield.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Stab-grot",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit's **Stab-grot** is a token. If this unit's **Stab grot** has been removed, it can no longer attack with its **Stab-grot's Shiv** and it cannot use the 'Unleash the Stab-grot!' ability.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Killaboss with Stab-grot (Scourge of Aqshy)",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "KRULEBOYZ",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Boss-hacka",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Just Keep Stabbin'",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a number of dice equal to your fury level. You can spend 1 rage dice. If you do:\n• Add 1 to each roll.\n• If your opponent's fury level is lower than yours, they must increase their fury level by 1, to a maximum of 7.\nThen, for each 3+, inflict 1 mortal damage on the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Jump 'Em, Ladz, Or Else!",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly **Gutrippaz** or **Hobgrot Slittaz** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target.\nThe target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved. If it is picked to do so, add 1 to the Attacks characteristic of the target's melee weapons for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Murknob with Belcha-banna",
+   "pts": 80,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "KRULEBOYZ",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Murknob Cleaver",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Power of Kragnos",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Friendly **^^Kruleboyz^^** units have **^^Ward (6+)^^** while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Breath of the Mire-drakes",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick each enemy unit in combat with this unit to be the targets.",
+     "effect": "Roll a dice for each target. On a 1, this ability has no effect. On a 2-5, inflict 1 mortal damage on the target. On a 6, inflict D3 mortal damage on the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Kruleboyz Monsta-killaz",
+   "pts": 140,
+   "size": 7,
+   "kw": [
+    "INFANTRY",
+    "DESTRUCTION",
+    "KRULEBOYZ",
+    "CHAMPION (1/7)",
+    "MUSICIAN (1/7)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend), Crit (Mortal)",
+     "name": "Monsta-killa Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Klutcha-grot",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit's **Klutcha-grot** is a token. If it is removed from the battlefield, this unit cannot use the 'A Tough Grot to Swallow' ability.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Bait and Trap",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick an enemy **^^Monster^^** in combat with this unit to be the target.",
+     "effect": "Roll a dice. Add 1 to the roll if the target is damaged. On a 3+, the target has **^^Strike-last^^** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "A Tough Grot to Swallow",
+     "kind": "Ability (Activated)",
+     "color": "Green",
+     "timing": "Once Per Turn, Reaction: Opponent declared a **^^Rampage^^** ability for an enemy **^^Monster^^** within 6\" of this unit",
+     "declare": "",
+     "effect": "Roll a dice. On a 2+, that **^^Rampage^^** ability has no effect. On a 1, remove this unit's **Klutcha-grot** from the battlefield.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Man-skewer Boltboyz",
+   "pts": 100,
+   "size": 3,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "DESTRUCTION",
+    "KRULEBOYZ"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Man-skewer Crossbow: Hasty Shot",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Rng": "18\"",
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Man-skewer Crossbow: Aimed Shot",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (Mortal)",
+     "name": "Jaggedy Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Man-skewer Crossbows",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time this unit uses a **^^Shoot^^** ability, pick either the **Hasty Shot** or **Aimed Shot** weapon characteristics for all the attacks it makes with its **Man‑skewer Crossbows**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Pick 'Em Off",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Your Shooting Phase",
+     "declare": "",
+     "effect": "If this unit has not used a **^^Move^^** ability this turn and was not set up this turn, add 1 to hit rolls for this unit's shooting attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Swampcalla Shaman with Pot-grot",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "KRULEBOYZ",
+    "INFANTRY",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "6",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "Crit (Mortal)",
+     "name": "Bogbark Staff",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Pot-grot",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit's **Pot-grot** is a token. Add 1 to casting rolls for this unit while its **Pot-grot** is on the battlefield. If you make an unmodified casting roll of 4 or less for this unit, remove its **Pot-grot** from the battlefield.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Foul Elixirs",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a friendly **^^Kruleboyz Infantry^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 2+, add 1 to save rolls for the target for the rest of the turn. On a 1, inflict D3 mortal damage on the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Swampboss Skumdrekk",
+   "pts": 150,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "KRULEBOYZ",
+    "UNIQUE",
+    "MONSTER"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "15",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "D3+3",
+     "Ability": "Companion",
+     "name": "Sloppklaw's Bite",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Snatcha-stikk",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Sloppklaw's Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Sloppklaw's Talons** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Kountin' Krew",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick a friendly **Hobgrot Slittaz** unit within this unit's combat range to be the target.",
+     "effect": "For the rest of the battle, the target's **Slitta-knives** have **Crit (Mortal)** while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Aggravate Wounds",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick an enemy **^^Monster^^** in combat with this unit to be the target.",
+     "effect": "Roll a number of dice equal to the number of damage points the target has. For each 5+, inflict 1 mortal damage on the target.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Bet-master",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick an enemy unit on the battlefield to be **the bet**.",
+     "effect": "Add 1 to wound rolls for attacks made by this unit and friendly **Hobgrot Slittaz** units that target **the bet**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Breaka-boss on Mirebrute Troggoth",
+   "pts": 180,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "KRULEBOYZ",
+    "MONSTER"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "12",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Bident-goad",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Companion",
+     "name": "Mirebrute's Clubs",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Tear Limb From Limb",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick an enemy **^^Infantry^^** unit within 1\" of this unit to be the target.",
+     "effect": "Roll a dice. If the roll exceeds the target's Health characteristic, 1 model in the target unit is slain.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Breaka-harness",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "",
+     "effect": "Make a breaka-roll of D3.\n• Inflict an amount of mortal damage on this unit equal to the breaka-roll.\n• Double the breaka-roll and add that value to the Attacks characteristic of this unit's **Mirebrute's Clubs** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Regeneration",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Start of Any Turn",
+     "declare": "",
+     "effect": "**Heal (D3)** this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Beast-skewer Killbow",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "DESTRUCTION",
+    "KRULEBOYZ",
+    "WAR MACHINE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "24\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D6",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend), Crit (Auto-wound)",
+     "name": "Beast-skewer Bolts",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (Mortal)",
+     "name": "Jaggedy Blades",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Skewering Bolts",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "",
+     "effect": "For the rest of the turn, the Damage characteristic of this unit's **Beast-skewer Bolts** is 6 if the target is a **^^Monster^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Pick 'Em Off",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Your Shooting Phase",
+     "declare": "",
+     "effect": "If this unit has not used a **^^Move^^** ability this turn and was not set up this turn, add 1 to hit rolls for this unit's shooting attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Gutrippaz",
+   "pts": 150,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "DESTRUCTION",
+    "KRULEBOYZ",
+    "CHAMPION",
+    "MUSICIAN (1/10)",
+    "STANDARD BEARER (1/10)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (Mortal)",
+     "name": "Stikka or Hacka",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Scare Taktikz",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "",
+     "effect": "Roll a dice. On a 3+, subtract 1 from hit rolls for attacks made by non-**^^Hero^^** units that target this unit for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Hobgrot Slittaz",
+   "pts": 70,
+   "size": 10,
+   "kw": [
+    "INFANTRY",
+    "CHAMPION",
+    "DESTRUCTION",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)",
+    "KRULEBOYZ"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "1",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "8\"",
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Scrap-grenades",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Slitta-knives",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Scrap-bang",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a dice. On a 3+:\n• Inflict 1 mortal damage on the target.\n• This unit can immediately use the 'Retreat' ability as if it were your movement phase without any mortal damage being inflicted on it.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Snatchaboss on Sludgeraker Beast",
+   "pts": 180,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "KRULEBOYZ",
+    "MONSTER"
+   ],
+   "stats": {
+    "Move": "8\"",
+    "Health": "14",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "Crit (Mortal)",
+     "name": "Grappling Hook",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Sludgeraker's Talons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "D3+3",
+     "Ability": "Companion",
+     "name": "Sludgeraker's Bite",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Sludgeraker's Talons** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Festering Wounds",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick up to 3 enemy units that had any damage points allocated to them this turn by attacks made by this unit or a friendly unit with the **^^Sludgeraker Venom^^** keyword to be the targets.",
+     "effect": "Roll a D3 for each target. On a 2+:\n• Inflict an amount of mortal damage on the target equal to the roll.\n• Subtract 1 from wound rolls for the target's attacks until the end of the next turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Sludgeraker Venom",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a friendly **^^Kruleboyz^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "That unit has the **^^Sludgeraker Venom^^** keyword for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Hobgrot Slittaboss",
+   "pts": 60,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "KRULEBOYZ",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Crit (Mortal)",
+     "name": "Toxin-smeared Slitta-sword",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Toxic Stash",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Battle, Any Combat Phase",
+     "declare": "Pick an enemy **^^Infantry Hero^^** in combat with this unit to be the target.",
+     "effect": "Roll 2D6. If the roll exceeds the target's Health characteristic, it is automatically destroyed.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Kompany Taktikz",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly **Hobgrot Slittaz** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved. If it is picked to do so, add 1 to wound rolls for the target's attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "title": "Battle Traits",
+   "items": [
+    {
+     "name": "Battle Traits",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Dirty Tricks",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "The effect of a **^^Dirty Trick^^** ability is only applied if you make a successful dirty trick roll. The success of a dirty trick roll depends on the number of **^^Dirty Trick^^** abilities your army has already used this battle round:\n**First:**  2+\n**Second:** 3+\n**Third:** 4+\n**Fourth or subsequent:** 5+",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Venom-encrusted Weapons",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Turn (Army), Any Hero Phase",
+       "declare": "Pick a friendly **^^Kruleboyz Infantry^^** unit to be the target, then make a dirty trick roll.",
+       "effect": "Until the start of your next turn, the target's attacks score critical hits on unmodified hit rolls of 5+.",
+       "keywords": "**^^Dirty Trick^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Lethal Surprise",
+       "kind": "Ability (Activated)",
+       "color": "Orange",
+       "timing": "Once Per Turn (Army), Any Charge Phase",
+       "declare": "Pick an enemy unit that charged this turn and is in combat with any friendly **^^Kruleboyz^^** units to be the target, then make a dirty trick roll.",
+       "effect": "Inflict D3 mortal damage on the target. In addition, for the rest of the turn, the target's weapons cannot be affected by the Charge (+1 Damage) weapon ability",
+       "keywords": "**^^Dirty Trick^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Sneaky Sneakin'",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Turn (Army), Any Hero Phase",
+       "declare": "Pick a friendly **^^Kruleboyz Infantry^^** unit that has 10 or fewer models,  is not in combat and has not been the target of a **^^Dirty Trick^^** ability this turn to be the target, then make a dirty trick roll.",
+       "effect": "Remove the target from the battlefield and set it up again wholly within 3\" of a terrain feature and more than 9\" from all enemy units.",
+       "keywords": "**^^Dirty Trick^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Noisy Racket",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Once Per Turn (Army), Any Combat Phase",
+       "declare": "Pick an enemy unit in combat with any friendly **^^Kruleboyz^^** units to be the target, then make a dirty trick roll.",
+       "effect": "The target has **^^Strike-last^^** for the rest of the turn.",
+       "keywords": "**^^Dirty Trick^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Spell Lores",
+   "items": [
+    {
+     "name": "Lore of the Swamp",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Choking Mist",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, pick a visible enemy unit within 12\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Subtract 1 from the Attacks characteristic of the target's weapons until the start of your next turn.",
+       "keywords": "**^^Spell^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Da Black Pit",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Roll a dice for each model in the target unit. For each 6, inflict 1 mortal damage on the target.",
+       "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+       "cast": "5",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Mork's Kunnin'",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, pick a visible friendly **^^Kruleboyz^^** unit wholly within 12\" of them, then make a casting roll of 2D6.",
+       "effect": "Until the start of your next turn, add 1 to save rolls for attacks that target that friendly unit",
+       "keywords": "**^^Spell^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Artefacts of Power",
+   "items": [
+    {
+     "name": "Tattermask",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Tattermask",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "If the unmodified hit roll for an attack that targets this unit is 1-3, that attack fails and the attack sequence ends.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Spell in a Rattle",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Spell in a Rattle",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle, Any Hero Phase",
+       "declare": "",
+       "effect": "This unit can use a non-**^^Summon^^** **^^Spell^^** ability from a spell lore you picked during army composition as if it had **^^Wizard (1)^^**. Instead of making a casting roll for that spell, the casting roll is 9 and cannot be modified. That spell cannot be unbound.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Woggly Bogstikk",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Woggly Bogstikk",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+       "effect": "Roll a dice. If the roll exceeds the target's Control characteristic, inflict an amount of mortal damage on the target equal to the roll.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Swamp Staff",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Swamp Staff",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "If this unit is not a **^^Wizard^^**, it can use the 'Unbind' ability as if it had **^^Wizard (1)^^**. Otherwise, add 1 to this unit's power level.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Mork's Eye Pebble",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Mork's Eye Pebble",
+       "kind": "Ability (Activated)",
+       "color": "Green",
+       "timing": "Once Per Battle, Reaction: Opponent declared an **^^Attack^^** ability",
+       "declare": "",
+       "effect": "For the rest of the turn, friendly **^^Kruleboyz^^** units have **^^Ward (5+)^^** while they are wholly within 12\" of this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Eye-biter Ash",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Eye-biter Ash",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Once Per Battle, Any Combat Phase",
+       "declare": "Pick an enemy unit in combat with this unit to be the target.",
+       "effect": "Subtract 1 from hit rolls and wound rolls for the target's attacks for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Battle Formations: Kruleboyz",
+   "items": [
+    {
+     "name": "Light Finga",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Ded Sneaky",
+       "kind": "Ability (Passive)",
+       "color": "Gray",
+       "timing": "",
+       "declare": "",
+       "effect": "You can use the 'Sneaky Sneakin'' **^^Dirty Trick^^** ability twice per turn instead of only once per turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Trophy Finga",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Meanest Beasts",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "**Companion** weapons used by friendly **^^Kruleboyz^^** units have **Crit (2 Hits)**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Kruleboyz Klaw",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Swamp Shroud",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Friendly **^^Kruleboyz^^** units that are wholly within 3\" of a terrain feature are not visible to enemy units that are more than 12\" away from them.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Middul Finga",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Far-killa Bolts",
+       "kind": "Ability (Activated)",
+       "color": "Blue",
+       "timing": "Your Shooting Phase",
+       "declare": "Pick up to 3 friendly **Man-skewer Boltboyz** or **Beast skewer Killbow** units to be the targets.",
+       "effect": "For the rest of the turn, add 3\" to the Range characteristic of the targets' ranged weapons.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Heroic Traits",
+   "items": [
+    {
+     "name": "Slippery Skumbag",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Slippery Skumbag",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Any Combat Phase",
+       "declare": "",
+       "effect": "If this unit is in combat, roll a dice. On a 3+, it can immediately use the 'Retreat' ability as if it were your movement phase without any mortal damage being inflicted on it.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Egomaniak",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Egomaniak",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "While this unit is within the combat range of a friendly non-**^^Hero Kruleboyz^^** Infantry unit:\n• This unit has **^^Ward (4+)^^**.\n• Each time you make a successful ward roll for this unit, allocate 1 damage point to a friendly non-**^^Hero Kruleboyz Infantry^^** unit within this unit's combat range after the damage sequence for this unit has been resolved (ward rolls cannot be made for those damage points).",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Backstabba",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Backstabba",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "End of Any Turn",
+       "declare": "Pick an enemy **^^Hero^^** in combat with both this unit and another friendly **^^Kruleboyz^^** unit to be the target.",
+       "effect": "Inflict D3 mortal damage on the target. Add 1 to the mortal damage inflicted for each friendly **^^Kruleboyz^^** unit in combat with the target in addition to the first two **^^Kruleboyz^^** units.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Manifestation Lores",
+   "items": [
+    {
+     "name": "Manifestations of Gorkamorka",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Summon Foot of Gork",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Foot of Gork** on the battlefield, pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Foot of Gork** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units. A **Foot of Gork** has 2 parts that must be set up within 9\" of each other.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Gork-Roara",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Gork-Roara** on the battlefield, pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Gork-Roara** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "5",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Morkspit Marsh",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Morkspit Marsh** on the battlefield, pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Morkspit Marsh** wholly within 18\" of the caster and visible to them.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "5",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Monstrous Traits",
+   "items": [
+    {
+     "name": "Sly 'Un",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Sly 'Un",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "Once Per Battle, End of Any Turn",
+       "declare": "",
+       "effect": "Remove this unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Quick 'Un",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Quick 'Un",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "Add half your fury level (rounding up) to run rolls and charge rolls for this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Spittin' 'Un",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Spittin' 'Un",
+       "kind": "Ability (Passive)",
+       "color": "Blue",
+       "timing": "",
+       "declare": "",
+       "effect": "This unit is armed with **Caustic Saliva**, where X is equal to your fury level.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Mean 'Un",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Mean 'Un",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to hit rolls for attacks made with this unit's **Companion** weapons.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Sneaky 'Un",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Sneaky 'Un",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle, Enemy Hero Phase",
+       "declare": "",
+       "effect": "This unit can use the 'Normal Move' or 'Retreat' ability as if it were your movement phase. In addition, no mortal damage is inflicted on this unit by **^^Retreat^^** abilities this phase.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Tough 'Un",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Tough 'Un",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
