@@ -91,7 +91,7 @@
       ].filter(t => t.items.length),
       spells: mk(sec("Sorts"), "s"), prayers: mk(sec("Prières"), "p"), manifs: mk(sec("Manifestations"), "m"),
       when: whenOf,
-      photo: id => id === "armee" ? (FIMG[F.img] || "") : id === "tactiques" ? (IMG[PHOTO_OF.tactiques] || "") : ""
+      photo: id => id === "armee" ? (FIMG[F.img] || "") : id === "tactiques" ? (IMG[PHOTO_OF.tactiques] || "") : (IMG[PHOTO_OF[id]] || "")
     };
   });
   const FAC_ORDER = Object.values(FX).sort((a, b) => a.en.localeCompare(b.en));
