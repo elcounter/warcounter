@@ -1,0 +1,2284 @@
+{
+ "name": "Flesh-eater Courts",
+ "units": [
+  {
+   "name": "Nagash, Supreme Lord of the Undead",
+   "pts": 750,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "UNIQUE",
+    "HERO",
+    "MONSTER",
+    "WIZARD (9)",
+    "WARD (5+)",
+    "FLY",
+    "WARMASTER",
+    "FLESH-EATER COURTS"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "18",
+    "Save": "3+",
+    "Control": "10"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "D6",
+     "Ability": "-",
+     "name": "Alakanash, the Staff of Power",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Zefet-nebtar, the Mortis Blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, subtract 3 from its power level.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Staff of Power",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 2 to casting rolls for this unit while it has not miscast any spells this turn. If this unit miscasts a spell, ignore the restriction that would stop this unit from casting any more spells this turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Hand of Dust",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick a visible enemy **^^Hero^^** or **^^Monster^^** in combat with this unit to be the target.",
+     "effect": "Hide a dice in one of your hands or under one of two appropriate containers. Your opponent must pick one of your hands or containers. If they pick the one hiding the dice, this ability has no effect. If they pick the empty one, the target is automatically destroyed.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Supreme Lord of the Undead",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Battle, Your Hero Phase",
+     "declare": "Pick a friendly non-**^^Hero^^** non-**^^Unique Death^^** unit that has been destroyed to be the target.",
+     "effect": "Set up a replacement unit identical to the target wholly within 12\" of this unit and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Invocation of Nagash",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "This unit can cast this spell more than once per phase. Pick a visible unit wholly within 18\" of this unit that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6.",
+     "effect": "If the target is an enemy unit, inflict D3 mortal damage on it. If the target is a friendly **^^Death^^** unit, pick 1 of the following effects:\n• Return a number of slain models to the target unit with a combined Health characteristic of up to 3.\n• The target has **^^Ward (5+)^^** until the start of your next turn.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Utter Contempt",
+     "kind": "Ability (Passive)",
+     "color": "",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit ignores the effects of **^^Delusion^^** abilities.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Grand Justice Gormayne",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "UNIQUE",
+    "HERO",
+    "FLESH-EATER COURTS",
+    "ABHORRANT",
+    "INFANTRY",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Gore-streaked Gavel",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Arrest those Miscreants",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Your Charge Phase",
+     "declare": "Pick a visible enemy unit within 18\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, until the start of your next turn, the target has **^^Strike-last^^** while it is combat with any friendly **^^Flesh-eater Courts Heroes^^** and any friendly **^^Serfs^^** or **^^Knights^^** units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Abhorrant Ghoul King on Royal Zombie Dragon",
+   "pts": 400,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "MONSTER",
+    "FLESH-EATER COURTS",
+    "ABHORRANT",
+    "FLY",
+    "WIZARD (1)",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "16",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Gory Talons and Fangs",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "4",
+     "Ability": "Crit (Auto-wound), Companion",
+     "name": "Draconic Jaws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "7",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Auto-wound), Companion",
+     "name": "Draconic Claws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "D6",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "Shoot in Combat, Companion",
+     "name": "Baneful Breath",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Necromantic Limits",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit's **Draconic Claws** have a maximum Attacks characteristic of 10.\nWhile this unit has 10 or more damage points, the Attacks characteristic of its **Draconic Claws** is 5.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Monstrous Hunger",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "While they are wholly within 12\" of this unit, friendly non-**^^Hero Flesh-eater Courts Monsters^^** can use **^^Charge^^** abilities even if they used a Run ability in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Draconic Terror",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a dice. If the roll exceeds the target's Control characteristic, the target cannot use commands for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Abhorrant Ghoul King on Royal Terrorgheist",
+   "pts": 400,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "MONSTER",
+    "FLESH-EATER COURTS",
+    "ABHORRANT",
+    "FLY",
+    "WIZARD (1)",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "16",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D6",
+     "Ability": "Shoot in Combat, Companion",
+     "name": "Death Shriek",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Gory Talons and Fangs",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D3+3",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Terrorgheist's Fanged Maw",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Terrorgheist's Skeletal Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Necromantic Limits",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit's **Terrorgheist's Skeletal Talons** have a maximum Attacks characteristic of 10.\nWhile this unit has 10 or more damage points, the Attacks characteristic of its **Terrorgheist's Skeletal Talons** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Wicked Predator",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "For each champion, standard bearer, and musician in the target unit, add 1 to the Attacks characteristic of this unit's **Terrorgheist's Skeletal Talons**, to a maximum of 10, for the rest of the phase. Those additional attacks must target that enemy unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ferocious Hunger",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "Roll a dice. On a 3+, add 1 to hit rolls for attacks made with this unit's **Companion** melee weapons for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Ushoran, Mortarch of Delusion",
+   "pts": 450,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "UNIQUE",
+    "HERO",
+    "MONSTER",
+    "WARD (5+)",
+    "WARMASTER",
+    "FLESH-EATER COURTS",
+    "WIZARD (2)",
+    "ABHORRANT"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "16",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D3+3",
+     "Ability": "-",
+     "name": "Sceptre of the Carrion King",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "8",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Monstrous Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Monstrous Talons** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Shroudcage Fragment",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick up to 3 enemy units in combat with this unit to be the targets.",
+     "effect": "Roll a dice for each target. If the roll exceeds the target's Control characteristic, the target has **^^Strike-last^^** for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Epicentre of Delusion",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time you make a delusion roll, you can add 1 or subtract 1 from the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Glimpse of Delusion",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible enemy model within 18\" of this unit to be the target, pick another enemy unit that is visible to the target and within the target's combat range to be the victim, then make a casting roll of 2D6. You can only pick the target's unit to be the victim if that unit has 2 or more models.",
+     "effect": "Pick 1 of the target's melee weapons. Immediately resolve combat attacks made with that weapon against the victim.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Abhorrant Cardinal",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "FLESH-EATER COURTS",
+    "WARD (6+)",
+    "INFANTRY",
+    "PRIEST (1)",
+    "ABHORRANT"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Cursed Crosier",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Insular Contemplations",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit is more than 6\" from all enemy units, add 1 to chanting rolls for this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Abhorrant Gorewarden",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "FLESH-EATER COURTS",
+    "ABHORRANT",
+    "FLY",
+    "WIZARD (1)",
+    "WARD (6+)",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "7",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Gory Talons and Fangs",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Lord of the Marches",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick this unit and up to 2 friendly **^^Flesh-eater Courts^^** units in this unit's regiment that have not been deployed to be the targets.",
+     "effect": "Set up the target units in reserve **patrolling the borders**. They have now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Trespassers!",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Your Movement Phase",
+     "declare": "Pick this unit if it is **patrolling the borders**, then pick an enemy unit to be the target.",
+     "effect": "Set up this unit more than 6\" from the target and more than 9\" from all other enemy units. Then, set up the units that were **patrolling the borders** with this unit wholly within 12\" of this unit and more than 9\" from all enemy units.",
+     "keywords": "**^^Core^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Cryptguard",
+   "pts": 120,
+   "size": 10,
+   "kw": [
+    "WARD (6+)",
+    "DEATH",
+    "CHAMPION",
+    "FLESH-EATER COURTS",
+    "STANDARD BEARER (1/10)",
+    "MUSICIAN (1/10)",
+    "SERFS",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti-charge (+1 Rend), Crit (Auto-wound)",
+     "name": "Cursed Weapon",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Royal Bodyguard",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While any friendly non-**^^Monster Flesh-eater Courts Heroes^^** are wholly within this unit's combat range, both this unit and those **^^Heroes^^** have **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Elite Guardians",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit is in combat with any enemy units that charged this turn, roll a dice. On a 3+, for the rest of the turn, this unit has **^^Strike-first^^** but ward rolls cannot be made for it.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Morbheg Knights",
+   "pts": 150,
+   "size": 3,
+   "kw": [
+    "WARD (6+)",
+    "DEATH",
+    "CHAMPION",
+    "FLY",
+    "CAVALRY",
+    "STANDARD BEARER (1/3)",
+    "MUSICIAN (1/3)",
+    "FLESH-EATER COURTS",
+    "KNIGHTS"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "4",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Nightshrieker's Claws and Teeth",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Grisly Lance",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Predator Knights",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Enemy Turn",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Inflict D3 mortal damage on the target. Then, this unit can use a **^^Retreat^^** ability as if it were your movement phase. No mortal damage is inflicted on this unit by that **^^Retreat^^** ability.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Marrowscroll Herald",
+   "pts": 90,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "FLESH-EATER COURTS",
+    "WARD (6+)",
+    "INFANTRY",
+    "NOBLE"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Bone Scythe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Infected",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Reaction: Opponent declared a command, **^^Spell^^** ability or **^^Prayer^^** ability for an **^^Infected^^** unit",
+     "declare": "",
+     "effect": "Roll a dice. On a 5+:\n• If they declared a command, that command has no effect, it still counts as having been used and the command points spent to use the command are still lost.\n• If they declared a **^^Spell^^** or **^^Prayer^^** ability, that spell or prayer fails.\nThis reaction can be used more than once per phase but only once per command, **^^Spell^^** ability or **^^Prayer^^** ability.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The King's Entreaty",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Enemy Charge Phase",
+     "declare": "Pick a visible enemy unit within 6\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, your opponent must decide whether the target will accept or reject the entreaty offered by this unit.\n***Accept:*** The target has the **^^Infected^^** keyword for the rest of the battle.\n***Reject:*** The target has **^^Strike-last^^** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Crypt Infernal Courtier",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "FLESH-EATER COURTS",
+    "WARD (6+)",
+    "INFANTRY",
+    "NOBLE",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "6",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "D3",
+     "Ability": "Shoot in Combat",
+     "name": "Piercing Death Screech",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Skewering Claws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Mind-shattering Cacophony",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this unit's **Piercing Death Screech** to be the target.",
+     "effect": "For the rest of the turn, add 1 to the Damage characteristic of ranged weapons used by friendly **Crypt Flayers** units for attacks that target that enemy unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "On Winged Steeds",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "Pick a friendly **Crypt Flayers** ability that used the 'To Our Liege' ability this turn and is wholly within 9\" of this unit to be the target.",
+     "effect": "The target can immediately move D3\" but cannot end that move in combat.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Abhorrant Archregent",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "FLESH-EATER COURTS",
+    "WARD (6+)",
+    "INFANTRY",
+    "ABHORRANT",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "6",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Gory Talons and Fangs",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Countless Servants",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a friendly **^^Serfs^^** or **^^Knights^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+:\n• If the target is a **^^Serfs^^** unit, return up to 3 slain models to it.\n• If the target is a **^^Knights^^** unit, return 1 slain model to it.",
+     "keywords": "**^^Core^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Varghulf Courtier",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "FLESH-EATER COURTS",
+    "WARD (6+)",
+    "BEAST"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "8",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "7",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Infantry^^** (+1 Rend)",
+     "name": "Immense Claws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Anti-**^^Infantry^^** (+1 Rend)",
+     "name": "Dagger-like Fangs",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Victory Feast",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "",
+     "effect": "If any models were slain by this unit this turn:\n• **Heal (D6)** this unit.\n• If this unit is in combat, this unit can immediately move 10\". It can move through the combat ranges of enemy units but must end that move in combat with the units it was already in combat with at the start of the move.\n• If that unit is not in combat, this unit can immediately move 10\" but cannot end that move in combat.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Varghulf Courtier (Scourge of Aqshy)",
+   "pts": 110,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "FLESH-EATER COURTS",
+    "WARD (6+)",
+    "BEAST"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "8",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "7",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Infantry^^** (+1 Rend)",
+     "name": "Immense Claws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Anti-**^^Infantry^^** (+1 Rend)",
+     "name": "Dagger-like Fangs",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "The Howling Saint",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Any Hero Phase",
+     "declare": "Pick a visible friendly **^^Flesh-eater Courts^^** **^^Priest^^** wholly within 18\" of this unit to be the target.",
+     "effect": "The next time the target uses a **^^Prayer^^** ability this phase:\n• When picking targets for that prayer, you can measure range and visibility from this unit instead of from the chanter.\n• Add 1 to the chanting roll for that prayer.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Beast",
+     "kind": "Ability (Passive)",
+     "color": "Purple",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit has a maximum control score of 1.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Abhorrant Ghoul King",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "FLESH-EATER COURTS",
+    "ABHORRANT",
+    "FLY",
+    "WIZARD (1)",
+    "WARD (6+)",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Hero (+1 Rend)^^**",
+     "name": "Bloodstained Talons and Fangs",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Vassals, to Arms!",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly **^^Serfs^^** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved. If it is picked to do so, add 1 to wound rolls for the target's attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Crypt Haunter Courtier",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "FLESH-EATER COURTS",
+    "WARD (6+)",
+    "INFANTRY",
+    "NOBLE"
+   ],
+   "stats": {
+    "Move": "7\"",
+    "Health": "6",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Massive Bone Club and Rancid Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Knightly Exemplar",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly **Crypt Horrors** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the target's attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Blessed Blood",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "",
+     "effect": "Heal (D3) this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Royal Decapitator",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "FLESH-EATER COURTS",
+    "WARD (6+)",
+    "INFANTRY",
+    "NOBLE"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Headsman's Axe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Executioner's Entourage",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly **^^Serfs^^** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved. If it is picked to do so, the target's melee weapons have **Crit (2 Hits)** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Off With Their Head!",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Immediately after that **^^Fight^^** ability has been resolved, pick an enemy **^^Infantry Hero^^** in combat with this unit to be the target. Roll 2D6. If the roll exceeds the target's Health characteristic, it is automatically destroyed.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Royal Decapitator (Scourge of Aqshy)",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "HERO",
+    "FLESH-EATER COURTS",
+    "WARD (6+)",
+    "INFANTRY",
+    "NOBLE"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Headsman's Axe",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Executioner and Enforcer",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick another friendly **^^Flesh-eater Courts^^** **^^Infantry^^** unit within this unit's combat range to be the target.",
+     "effect": "1 model in the target unit is automatically slain. Then, until the start of your next turn, ignore the first damage point that would be allocated to each visible friendly **^^Flesh-eater Courts^^** unit in each phase while it is wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Heads on Pikes",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "If any damage points were allocated to an enemy **^^Hero^^** by this unit's combat attacks this turn and that enemy **^^Hero^^** has been destroyed, pick an objective or terrain feature within 6\" of this unit to be the target.",
+     "effect": "Spend 1 **rage dice**. If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7. Then, for the rest of the turn, subtract 5 from the control scores of enemy units while they are contesting the target objective or terrain feature.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Crypt Horrors",
+   "pts": 150,
+   "size": 3,
+   "kw": [
+    "WARD (6+)",
+    "DEATH",
+    "CHAMPION",
+    "FLESH-EATER COURTS",
+    "KNIGHTS",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "7\"",
+    "Health": "4",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Cavalry^^** (+1 Rend), Crit (Auto-wound)",
+     "name": "Club and Septic Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Holy Blades of Bone",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll 2 dice for each model in this unit. Add 2 to each roll if the target is **^^Cavalry^^**. For each 5+, inflict 1 mortal damage on the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Crypt Flayers",
+   "pts": 90,
+   "size": 3,
+   "kw": [
+    "WARD (6+)",
+    "DEATH",
+    "CHAMPION",
+    "FLY",
+    "FLESH-EATER COURTS",
+    "KNIGHTS",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "4",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Piercing Talons",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Death Scream",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "To Our Liege",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "",
+     "effect": "If this unit is not in combat, remove it from the battlefield and set it up again wholly within 12\" of a friendly **^^Flesh-eater Courts Hero^^** and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Crypt Ghouls",
+   "pts": 140,
+   "size": 20,
+   "kw": [
+    "WARD (6+)",
+    "DEATH",
+    "CHAMPION",
+    "FLESH-EATER COURTS",
+    "INFANTRY",
+    "SERFS"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Sharpened Teeth and Filthy Claws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Royal Approval",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Rend characteristic of this unit's melee weapons while it is wholly within 12\" of any friendly **^^Nobles^^** or **^^Abhorrants^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Royal Zombie Dragon",
+   "pts": 260,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "MONSTER",
+    "FLESH-EATER COURTS",
+    "WARD (6+)",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "14",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "D6",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "Shoot in Combat, Companion",
+     "name": "Baneful Breath",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "4",
+     "Ability": "Crit (Auto-wound), Companion",
+     "name": "Draconic Jaws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "7",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Auto-wound), Companion",
+     "name": "Draconic Claws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Soaring Terror",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit charged this turn, roll a dice. On a 3+, this unit can move 2D6\". It can pass through the combat ranges of enemy units but must end that move in combat. Then, pick an enemy unit that this unit passed across during that move. Inflict D3 mortal damage on that enemy unit.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "On Rotten Wings",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "",
+     "effect": "Remove this unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Necromantic Limits",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit's **Draconic Claws** have a maximum Attacks characteristic of 10.\nWhile this unit has 10 or more damage points, the Attacks characteristic of its **Draconic Claws** is 5.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Royal Terrorgheist",
+   "pts": 240,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "MONSTER",
+    "FLESH-EATER COURTS",
+    "FLY",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "14",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D6",
+     "Ability": "Shoot in Combat, Companion",
+     "name": "Death Shriek",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D3+3",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Terrorgheist's Fanged Maw",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Terrorgheist's Skeletal Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Shriek of Terror",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy **^^Infantry^^** unit in combat with this unit to be the target.",
+     "effect": "Roll a dice for each model in the target unit. For each 6, inflict 1 mortal damage on the target. If 3 or more damage points are allocated to the target by this ability, subtract 1 from hit rolls for the target's attacks for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Necromantic Limits",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit's **Skeletal Talons** have a maximum Attacks characteristic of 10.\nWhile this unit has 10 or more damage points, the Attacks characteristic of its **Skeletal Talons** is 4.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Wicked Predator",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "For each champion, standard bearer, and musician in the target unit, add 1 to the Attacks characteristic of this unit's **Terrorgheist's Skeletal Talons**, to a maximum of 10, for the rest of the phase. Those additional attacks must target that enemy unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Royal Beastflayers",
+   "pts": 120,
+   "size": 10,
+   "kw": [
+    "WARD (6+)",
+    "DEATH",
+    "FLESH-EATER COURTS",
+    "INFANTRY",
+    "SERFS",
+    "CHAMPION (1/10)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "1",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Anti-**^^Beast^^** (+1 Rend), Anti-**^^Monster^^** (+1 Rend)",
+     "name": "Beastflayer Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Hunter's Instincts",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Enemy **^^Monsters^^** cannot use **^^Rampage^^** abilities while they are in combat with this unit. In addition, subtract 1 from the Damage characteristic of melee weapons used by enemy **^^Monsters^^** and **^^Beast^^** units while they are in combat with this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Charnel Throne",
+   "pts": 10,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "FACTION TERRAIN",
+    "FLESH-EATER COURTS"
+   ],
+   "stats": {
+    "Move": "-",
+    "Health": "10",
+    "Save": "4+",
+    "Control": "-"
+   },
+   "weapons": [],
+   "abilities": [
+    {
+     "name": "Steward of the Realm",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this terrain feature has a Steward:\n• The Steward cannot use **^^Move^^** abilities.\n• Instead of measuring range or visibility to the Steward, measure to this terrain feature instead.\n• All attacks that would target the Steward target this terrain feature instead.\n• If this terrain feature is destroyed, before removing it from the battlefield, inflict D3 mortal damage on the Steward. Then, set up the Steward on the battlefield within 3\" of this terrain feature and not in combat. That unit is no longer the Steward. If it is not possible to set up the Steward, it is slain.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Reigning Champion",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "If this terrain feature does not have a Steward, pick a friendly **^^Flesh-eater Courts Infantry Hero^^** within 3\" of it and not in combat to be the target.",
+     "effect": "Place the target on this terrain feature. The target is now the Steward (see 'Steward of the Realm').",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ruler of All They Survey",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Your Movement Phase",
+     "declare": "If this terrain feature has a Steward, pick a visible friendly non-**^^Hero Flesh-eater Courts^^** unit that is not in combat to be the target.",
+     "effect": "The target can move D3\". If the target was set up this turn, it can move D6\" instead. It cannot move into combat during that move.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Duty Calls",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Your Movement Phase",
+     "declare": "",
+     "effect": "If this terrain feature has a Steward that was not placed on it this turn, set up the Steward on the battlefield wholly within 6\" of this terrain feature and not in combat. That unit is no longer the Steward.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "High Falconer Felgryn",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "DEATH",
+    "UNIQUE",
+    "HERO",
+    "FLESH-EATER COURTS",
+    "ABHORRANT",
+    "INFANTRY",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D6",
+     "Ability": "Shoot in Combat, Companion",
+     "name": "Carrion Flock",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Filthy Talons and Fangs",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Be Mine Eyes",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "This unit's **Grype** is a token. If this unit's **Grype** is not next to an enemy unit, pick an enemy unit within 18\" of this unit and not in combat to be the target.",
+     "effect": "Place this unit's **Grype** next to the target. If the target is destroyed while this unit's Grype is next to it, remove this unit's **Grype** from the battlefield.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Winged Reconnoitrer",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit's **Grype** is next to an enemy unit, ward rolls cannot be made for damage points inflicted on that enemy unit by combat attacks made by this unit and friendly **^^Serfs^^** units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "title": "Battle Traits",
+   "items": [
+    {
+     "name": "Battle Traits",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Royal Blood",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Turn (Army), Your Hero Phase",
+       "declare": "Pick any number of friendly **^^Abhorrants^^** to be the targets.",
+       "effect": "**Heal (D3)** each target.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Loyal Subjects",
+       "kind": "Ability (Command)",
+       "color": "Gray",
+       "timing": "Once Per Turn (Army) Your Movement Phase",
+       "declare": "Pick a friendly **^^Abhorrant^^** to use this ability, then pick a friendly **^^Serfs^^** or **^^Knights^^** unit that has been destroyed to be the target.",
+       "effect": "Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 6\" of a battlefield edge and more than 9\" from all enemy units.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": "1"
+      },
+      {
+       "name": "Muster Guard",
+       "kind": "Ability (Activated)",
+       "color": "Gray",
+       "timing": "Once Per Turn (Army), Your Movement Phase",
+       "declare": "Pick any number of friendly **^^Nobles^^** to be the targets.",
+       "effect": "For each target, pick 1 of the following:\n• Return up to 3 slain models to a friendly **^^Serfs^^** unit wholly within 12\" of it.\n• Return 1 slain model to a friendly **^^Knights^^** unit wholly within 12\" of it.\nThe same unit cannot have models returned to it by this ability more than once per turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Feeding Frenzy",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Once Per Battle (Army), Any Combat Phase",
+       "declare": "Pick a friendly **^^Flesh-eater Courts Hero^^** in combat to be the target.",
+       "effect": "For the rest of the turn, add 1 to the Attacks characteristic of melee weapons, including **Companion** weapons, used by friendly **^^Flesh-eater Courts^^** units while they are wholly within 12\" of the target.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "A Kingdom Deluded",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Turn (Army), Start of Any Turn",
+       "declare": "You must use this ability at the start of each turn. If it is the first turn of the battle, pick a **^^Delusion^^** from these battle traits or, unless otherwise specified, from the warscroll of a friendly unit on the battlefield. If it is not the first turn, make a delusion roll of D6.",
+       "effect": "On a delusion roll of 1-2, you must pick a different **^^Delusion^^** to the one you picked last turn. On a 3-4, you must pick the same **^^Delusion^^** as the one you picked last turn, even if it is on the warscroll of a unit that has been destroyed. In such cases, the effect of that **^^Delusion^^** applies as if the unit had not been destroyed. On a 5-6, you must pick a **^^Delusion^^** like you did in the first turn. For the rest of the turn, you believe the **^^Delusion^^** you picked.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Artefacts of Power",
+   "items": [
+    {
+     "name": "Fool's Cap",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Fool's Cap",
+       "kind": "Ability (Activated)",
+       "color": "Gray",
+       "timing": "Any Movement Phase",
+       "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+       "effect": "Spend 1 rage dice. If your opponent's fury level is lower than yours, they must increase their fury level by 1, to a maximum of 7.\nThen, for the rest of the turn:\n• Add 1 to charge rolls for the target.\n• Each time the target uses a **^^Charge^^** ability, if possible, it must end the charge move within 1/2\" of this unit.\n• While the target is in combat with this unit, subtract 1 from hit rolls for the target's combat attacks that do not target this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Flayed Flags",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Flayed Flags",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick an objective you do not control within 18\" of this unit to be the target.",
+       "effect": "Until the start of your next turn, when resolving the damage sequence for enemy units contesting the target objective, your opponent cannot spend rage dice as part of the 'Fight Through the Pain' ability.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Ring of Nightmarish Visions",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Ring of Nightmarish Visions",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Any Combat Phase",
+       "declare": "Pick an enemy unit in combat with this unit to be the target.",
+       "effect": "Roll a number of dice equal to your fury level. Add 1 to each roll if this unit charged this turn. For each 4+, inflict 1 mortal damage on the target.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Charnel Vestments",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Charnel Vestments",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "If this unit is not a **^^Priest^^**, it has **^^Priest (1)^^**. If this unit is already a **^^Priest^^**, add 1 to chanting rolls for this unit. If this unit is a Wizard, it cannot use **^^Spell^^** abilities and **^^Prayer^^** abilities in the same phase.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "The Grisly Pennant",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "The Grisly Pennant",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Any Combat Phase",
+       "declare": "If this unit charged this phase, pick an enemy unit in combat with it to be the target.",
+       "effect": "Roll a dice. If the roll is greater than the target's control characteristic or is a 6, the following effects apply for the rest of the turn:\n• Subtract 1 from hit rolls for the target's combat attacks.\n• Add 1 to hit rolls for combat attacks made by friendly units that target that enemy unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "The Splintered Femur",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "The Splintered Femur",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "End of Your Turn",
+       "declare": "Pick an enemy unit in combat with this unit to be the target.",
+       "effect": "Roll a D3: On a 2+, pick 1 of the following:\n• Inflict an amount of mortal damage on the target equal to the roll.\n• Subtract 1 from the target's power level, to a minimum of 0, until the start of your next turn.\n• If the target is a **^^Manifestation^^**, it is banished and removed from play.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Spell Lores",
+   "items": [
+    {
+     "name": "Lore of Madness",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Charnel Feast",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Flesh-eater Courts Wizard^^** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6. You can also pick a friendly **^^Serfs^^** unit within 6\" of the target to be the raised ranks. Then, make a casting roll of 2D6.",
+       "effect": "Inflict D3 mortal damage on the target. For each damage point allocated to the target by this ability, you can return 1 slain model to the raised ranks.",
+       "keywords": "**^^Spell^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Deranged Transformation",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Flesh-eater Courts Wizard^^** to cast this spell, pick a visible friendly **^^Flesh-eater Courts Infantry^^** or **^^Cavalry^^** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Until the start of your next turn:\n• Add 2\" to the target's Move characteristic.\n• Add 1 to wound rolls for the target's combat attacks.",
+       "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Miasma of Madness",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Flesh-eater Courts Wizard^^** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+       "effect": "Until the start of your next turn, for each unmodified hit roll of 1 for a combat attack made by the target, inflict 1 mortal damage on the target after the **^^Fight^^** ability has been resolved.",
+       "keywords": "**^^Spell^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Battle Formations: Flesh-eater Courts",
+   "items": [
+    {
+     "name": "Royal Menagerie",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Indulge, My Pretties",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "While a friendly non-**^^Hero Flesh-eater Courts Monster^^** or **^^Beast^^** is wholly within 12\" of any friendly **^^Flesh-eater Courts Heroes^^**:\n• That non-**^^Hero^^** can use a **^^Rampage^^** ability on its warscroll even if that ability has already been used by another friendly **^^Monster^^** in the same turn.\n• If that non-**^^Hero^^** unit charged in the same turn and the unmodified charge roll was 9+, it has **^^Strike-first^^** for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Knightly Echelon",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Sound the Charge",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to the Rend characteristic of melee weapons used by friendly **^^Knights^^** that charged in the same turn while they are wholly within 12\" of any friendly **^^Flesh-eater Courts Heroes^^**.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "The Royal Hunt",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Like Snapping Hounds",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "Once Per Turn (Army), End of Any Turn",
+       "declare": "Pick each friendly **^^Serfs^^** unit in combat to be the targets.",
+       "effect": "For each target:\n• Make a pile-in move.\n• Then, pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Lords of the Manor",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Raise the Banners",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "Each time another ability returns at least 1 slain model to a friendly unit that is not in combat, after that ability has been resolved, if that unit is a **^^Serfs^^** unit, you can return 1 additional slain model to it, and if it is a **^^Knights^^** unit, roll a dice. On a 4+, you can return 1 additional slain model to it.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Heroic Traits",
+   "items": [
+    {
+     "name": "Cruel Taskmaster",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Cruel Taskmaster",
+       "kind": "Ability (Activated)",
+       "color": "Orange",
+       "timing": "Your Charge Phase",
+       "declare": "Pick a friendly non-**^^Hero Flesh-eater Courts^^** unit wholly within 12\" of this unit to be the target.",
+       "effect": "For the rest of the turn, you can re-roll charge rolls for the target.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Stronger in Madness",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Stronger in Madness",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Ignore the first damage point that would be allocated to this unit each phase.\nIn addition, other than the **Companion** weapon ability, weapon abilities for combat attacks that target this unit have no effect.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Savage Beyond Reason",
+     "pts": 40,
+     "abilities": [
+      {
+       "name": "Savage Beyond Reason",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to the Attacks characteristic of this unit's melee weapons, including **Companion** weapons, if it did not use a **^^Fight^^** ability in the previous turn. Add 2 to the Attacks characteristic of those weapons instead while this unit has not used a **^^Fight^^** ability this battle.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Manifestation Lores",
+   "items": [
+    {
+     "name": "Manifested Insanity",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Summon Cadaverous Barricade",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Cadaverous Barricade** on the battlefield, pick a friendly **^^Flesh-eater Courts Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Cadaverous Barricade** wholly within 18\" of the caster and visible to them.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Chalice of Ushoran",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Chalice of Ushoran** on the battlefield, pick a friendly **^^Flesh-eater Courts Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Chalice of Ushoran** wholly within 12\" of the caster and visible to them.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Corpsemare Stampede",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Corpsemare Stampede** on the battlefield, pick a friendly **^^Flesh-eater Courts Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Corpsemare Stampede** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Prayer Lores",
+   "items": [
+    {
+     "name": "Rites of Delusion",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Excommunication",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Flesh-eater Courts Priest^^** to chant this prayer, pick a visible enemy unit within 18\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "Until the start of your next turn, ignore positive modifiers to save rolls for the target. In addition, if the chanting roll was 10+, ward rolls cannot be made for the target until the start of your next turn.",
+       "keywords": "**^^Prayer^^**, **^^Unlimited^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      },
+      {
+       "name": "Charnel Conviction",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Flesh-eater Courts Priest^^** to chant this prayer, pick a visible friendly **^^Flesh-eater Courts^^** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+       "effect": "Until the start of your next turn, the target has **^^Ward (5+)^^**. If the chanting roll was 10+, you can pick another eligible unit to be a second target.",
+       "keywords": "**^^Prayer^^**",
+       "cast": "",
+       "chant": "4",
+       "cost": ""
+      },
+      {
+       "name": "The Summerking's Favour",
+       "kind": "Ability (Prayer)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Flesh-eater Courts Priest^^** to chant this prayer, pick a visible friendly **^^Flesh-eater Courts Hero^^** wholly within 12\" of them to be the target, then make a chanting roll of D6. You cannot pick **Nagash** to be the target of this prayer.",
+       "effect": "Resolve the effect of 'Renowned Might' below. If the chanting roll was 10+, resolve the effect of either 'Renowned Might' or 'Righteous Tenacity' instead.\n***Renowned Might:*** Add 1 to the Damage characteristic of the target's melee weapons for the rest of the turn.\n***Righteous Tenacity:*** The target can use 2 **^^fight^^** abilities this turn. After the first is used, however, the target has **^^Strike-last^^** for the rest of the turn.",
+       "keywords": "**^^Prayer^^**",
+       "cast": "",
+       "chant": "5",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Monstrous Traits",
+   "items": [
+    {
+     "name": "Horribly Resilient",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Horribly Resilient",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "End of Any Turn",
+       "declare": "",
+       "effect": "Heal (D3) this unit. If this unit is not a **^^Hero^^**, **Heal (2D3)** this unit instead.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Savage Abomination",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Savage Abomination",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to the Attacks characteristic of this unit's **Companion** melee weapons.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Revered Monstrosity",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Revered Monstrosity",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "Add 1 to hit rolls for combat attacks made with **Companion** weapons by other friendly non‑**^^Unique Flesh-eater Courts Monsters^^** while they are wholly within 12\" of this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Noble Pursuits",
+   "items": [
+    {
+     "name": "Homage and Fealty",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Homage and Fealty",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Deployment Phase",
+       "declare": "If this unit is a **^^Knight^^**, pick a friendly **^^Serf^^** unit wholly within 12\" of it to be the target. If this unit is a **^^Serf^^**, pick a friendly **^^Knight^^** unit wholly within 12\" of it to be the target.",
+       "effect": "For the rest of the battle, add 1 to save rolls for this unit and the target while they are within 3\" of and visible to each other.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Defenders of Chivalry",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Defenders of Chivalry",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "While your fury level is 7, add 1 to the Rend characteristic of this unit's melee weapons.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Loyal Squires",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Loyal Squires",
+       "kind": "Ability (Activated)",
+       "color": "Orange",
+       "timing": "Any Charge Phase",
+       "declare": "Pick an enemy unit in combat with a friendly **^^Varghulf Courtier^^** to be the target.",
+       "effect": "For the rest of the phase:\n• Add 2 to charge rolls for this unit.\n• If this unit uses a **^^Charge^^** ability, it must end the charge move in combat with the target.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
