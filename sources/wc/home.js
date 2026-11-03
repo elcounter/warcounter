@@ -81,7 +81,7 @@
   const FACDATA = window.WC_FAC || [];
   const FIMG = window.WC_FIMG || {};
   const FACTIONS = [{id:"hashut", en:"Helsmiths of Hashut", ga:"Chaos", src:(window.WC_IMG || {}).armee}]
-    .concat(FACDATA.map(f => ({id:f.id, en:f.en, ga:{ogors:"Destruction", lumineth:"Ordre", skaven:"Chaos", cities:"Ordre", stormcast:"Ordre", slaves:"Chaos", soulblight:"Mort", daughters:"Ordre", fyreslayers:"Ordre", idoneth:"Ordre", kharadron:"Ordre", seraphon:"Ordre", sylvaneth:"Ordre", khorne:"Chaos", tzeentch:"Chaos", nurgle:"Chaos", slaanesh:"Chaos", fec:"Mort", nighthaunt:"Mort"}[f.id] || "Autres", src:FIMG[f.img], data:f})));
+    .concat(FACDATA.map(f => ({id:f.id, en:f.en, ga:{ogors:"Destruction", lumineth:"Ordre", skaven:"Chaos", cities:"Ordre", stormcast:"Ordre", slaves:"Chaos", soulblight:"Mort", daughters:"Ordre", fyreslayers:"Ordre", idoneth:"Ordre", kharadron:"Ordre", seraphon:"Ordre", sylvaneth:"Ordre", khorne:"Chaos", tzeentch:"Chaos", nurgle:"Chaos", slaanesh:"Chaos", fec:"Mort", nighthaunt:"Mort", ossiarch:"Mort"}[f.id] || "Autres", src:FIMG[f.img], data:f})));
   const ALLIANCES = ["Ordre", "Chaos", "Mort", "Destruction"];
   const RULES = GHB.concat(CORE_PAGES);
   function abCard(a){
