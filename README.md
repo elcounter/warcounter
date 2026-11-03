@@ -7,7 +7,7 @@ Application web installable (PWA), hébergée sur GitHub Pages : https://elcount
 
 ## Version
 
-Version actuelle : **1.7.0** (MAJ 03-11-2026).
+Version actuelle : **1.8.0** (MAJ 03-11-2026).
 Numérotation X.Y.Z :
 - X : très gros changement (décidé par elcounter uniquement)
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
@@ -17,6 +17,7 @@ Numérotation X.Y.Z :
 
 ## Historique
 
+- 1.8.0 (03-11-2026) : Ironjawz.
 - 1.7.0 (03-11-2026) : Gloomspite Gitz.
 - 1.6.0 (03-11-2026) : Ossiarch Bonereapers.
 - 1.5.0 (03-11-2026) : Nighthaunt.
@@ -83,6 +84,6 @@ Tous les chemins sont relatifs au dépôt (Python 3 sans dépendance ; Node seul
 
 - Chaos : (complet)
 - Mort : (complet)
-- Destruction : Ironjawz, Kruleboyz, Sons of Behemat
+- Destruction : Kruleboyz, Sons of Behemat
 
 Images déjà prêtes dans `sources/wc/fac-img-next/`.
