@@ -13,7 +13,7 @@ Numérotation X.Y.Z :
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
 - Z : changement mineur (correctif, texte, réglage)
 
-À chaque version : mettre à jour `VERSION` et `MAJ` (format JJ-MM-AAAA) en haut de `sources/wc/build.py`, changer le nom du cache `VERSION` dans `sw.js`, et fournir aussi un fichier HTML téléchargeable `WarCounter-X.Y.Z.html`.
+À chaque version : mettre à jour `VERSION` et `MAJ` (format JJ-MM-AAAA) en haut de `sources/wc/build.py`, lancer `publish.py` et fournir à elcounter le fichier `WarCounter-X.Y.Z.html`.
 
 ## Structure du dépôt
 
@@ -46,7 +46,18 @@ sources/bsdata/          Copie des catalogues BSData (age-of-sigmar-4th)
 3. Ajouter `('slug','Nom','slug')` dans la liste de `__main__` de `convert.py`, lancer `python3 convert.py` : « Traductions manquantes : [] » attendu. Corriger les timings restés en anglais via `TFIX2` dans `convert.py`.
 4. Copier `fac-img-next/slug.jpg` dans `fac-img/`.
 5. Dans `home.js`, ajouter `slug:"Alliance"` dans la table des alliances (Ordre, Chaos, Mort, Destruction).
-6. `cd .. && python3 build.py` (génère `warcounter.html`), puis reporter le contenu dans `index.html` à la racine (garder l'en-tête PWA et l'enregistrement du service worker).
+6. Publier : voir « Construire et publier ».
+
+## Construire et publier
+
+Tous les chemins sont relatifs au dépôt (Python 3 sans dépendance ; Node seulement pour vérifier).
+
+1. Mettre à jour `VERSION` et `MAJ` en haut de `sources/wc/build.py`.
+2. `python3 sources/wc/publish.py` : construit l'app, remplace le contenu de `index.html` (en-tête PWA et enregistrement du service worker conservés), met à jour le cache dans `sw.js` et crée `sources/wc/build-check/WarCounter-X.Y.Z.html` (non versionné, à envoyer à elcounter).
+3. Vérifier : `for n in army bs home top; do node --check sources/wc/build-check/wc-$n.js; done`, puis ouvrir `index.html` et contrôler l'accueil, Règles, une faction, Listes, Mémo, Phases et le pied de page.
+4. Commit explicite, `git tag vX.Y.Z`, `git push --follow-tags`.
+
+`sources/wc/shells/` contient les feuilles de base des anciennes apps (Méga Forge, Feuille de Bataille), nécessaires au build.
 
 ## Conventions de traduction
 

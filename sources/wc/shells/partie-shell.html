@@ -1,0 +1,192 @@
+<title>Feuille de Bataille</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Bitter:wght@400;600;700&display=swap">
+<style>
+/* Layout : barre rouge (titre + score), étapes en cartes blanches, barre d'actions fixée en bas */
+:root{
+  color-scheme: light;
+  --bar:#6b2119; --bar-dk:#4e170f; --bar-ink:#ffffff;
+  --khaki:#b9a979; --gold:#d4ae3f; --gold-dk:#9a7a1c;
+  --page:#f1f1f1; --card:#ffffff; --namebar:#333333;
+  --ink:#1b1b1b; --muted:#5f5f5f; --line:#cfcfcf; --soft:#ececec;
+  --ok:#3e6b26; --rim:#b49a48;
+  --ph-hero:#9a8a3c; --ph-shoot:#24475f; --ph-fight:#6e2620; --ph-charge:#a8683a;
+  --ph-passive:#000000; --ph-end:#4f3866; --ph-defense:#38521b; --ph-move:#5b5b5b;
+  --display:"Oswald", "Arial Narrow", Impact, sans-serif;
+  --body:"Bitter", Georgia, "Times New Roman", serif;
+}
+*{box-sizing:border-box}
+html,body{background:var(--page);color:var(--ink)}
+body{font-family:var(--body);font-size:15px;line-height:1.45}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bar)}
+.in{max-width:760px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))}
+button,select,input{font-family:inherit;font-size:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* Barre du haut */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bar);color:var(--bar-ink);box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.bar .top{display:flex;align-items:center;gap:8px;min-height:60px;padding-block:6px}
+.icon-btn{flex:none;display:grid;place-items:center;width:40px;height:40px;background:none;border:0;color:var(--bar-ink);border-radius:4px}
+.icon-btn:hover{background:rgba(255,255,255,.12)}
+.icon-btn[hidden]{display:none}
+.back{margin-left:-8px}
+.bar h1{flex:1;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(20px,5.5vw,28px);line-height:1.05;margin:0;min-width:0;text-wrap:balance}
+.score{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:12px;padding-block:6px 12px}
+.score[hidden]{display:none}
+.score .nm{font:600 15px var(--body);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.score .nm:first-child{text-align:right}
+.score .pts{font:700 34px/1 var(--display);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+
+main{padding-block:16px calc(96px + env(safe-area-inset-bottom,0px))}
+.stack{display:grid;gap:14px}
+
+/* Cartes */
+.panel{background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.sec{background:var(--khaki);color:#fff;font:700 15px var(--body);text-transform:uppercase;letter-spacing:.04em;padding:11px 16px;margin:0;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.sec.dark{background:var(--namebar)}
+.body{padding:14px 16px;display:grid;gap:14px}
+.lbl{display:block;font:600 12px var(--body);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px}
+.hint{font-size:13px;color:var(--muted);margin:0}
+input[type=text],select{width:100%;font:600 16px var(--body);color:var(--ink);background:#f7f7f7;border:2px solid var(--line);border-radius:6px;padding:9px 10px}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--bar) 50%),linear-gradient(135deg,var(--bar) 50%,transparent 50%);background-position:calc(100% - 16px) 55%,calc(100% - 11px) 55%;background-size:5px 5px;background-repeat:no-repeat;padding-right:30px}
+.row{display:flex;gap:8px;align-items:center}
+.row > .grow{flex:1;min-width:0}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+
+/* Boutons */
+.btn{border:2px solid var(--line);background:#fff;color:var(--ink);border-radius:8px;padding:10px 14px;font:700 15px var(--body);min-height:46px}
+.btn:hover{border-color:var(--muted)}
+.btn.primary{background:var(--bar);border-color:var(--bar);color:#fff}
+.btn.primary:hover{background:var(--bar-dk)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#1b1b1b}
+.btn.ghost{background:none;border-color:transparent;color:var(--bar);padding-inline:6px}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.pick{border:2px solid var(--line);background:#fff;border-radius:8px;padding:12px 10px;font:700 16px var(--body);min-height:52px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pick[aria-pressed="true"]{background:var(--gold);border-color:var(--gold-dk);color:#1b1b1b}
+.info{flex:none;width:34px;height:34px;border-radius:50%;border:2px solid currentColor;background:none;color:inherit;font:700 15px/1 var(--body);display:grid;place-items:center;padding:0}
+.stepper{display:flex;align-items:center;gap:6px}
+.stepper button{width:40px;height:40px;border-radius:50%;border:2px solid var(--ink);background:#fff;font:700 20px/1 var(--body);display:grid;place-items:center;padding:0}
+.stepper output{min-width:34px;text-align:center;font:700 20px var(--display);font-variant-numeric:tabular-nums}
+.switch{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.switch input{width:22px;height:22px;accent-color:var(--bar)}
+
+/* Joueurs */
+.who{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font:700 11px var(--body);text-transform:uppercase;letter-spacing:.06em;padding:3px 8px;border-radius:4px;background:var(--soft);color:var(--ink)}
+.tag.out{background:var(--bar);color:#fff}
+.tag.first{background:var(--gold);color:#1b1b1b}
+.cp{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.cp .hex{width:44px;height:44px;flex:none;background:#3a3a3a;clip-path:polygon(25% 4%,75% 4%,100% 50%,75% 96%,25% 96%,0 50%);display:grid;place-items:center;color:#fff;font:700 18px var(--display)}
+.cp .hex.plus{background:var(--bar)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px dashed #8a8a8a;background:#fff;border-radius:999px;padding:8px 14px;font:600 15px var(--body);display:flex;align-items:center;gap:8px}
+.chip .v{font:700 13px var(--display);background:var(--soft);border-radius:999px;padding:1px 7px}
+.chip[aria-pressed="true"]{background:var(--gold);border-style:solid;border-color:var(--gold-dk)}
+.chip[aria-pressed="true"] .v{background:rgba(255,255,255,.55)}
+.tt{width:100%;border-collapse:collapse;font-size:14px}
+.tt th{font:700 12px var(--body);text-transform:uppercase;letter-spacing:.04em;color:var(--muted);text-align:center;padding:6px 4px;border-bottom:1px solid var(--line)}
+.tt th:first-child{text-align:left}
+.tt td{padding:8px 4px;border-bottom:1px solid var(--soft);text-align:center;vertical-align:middle}
+.tt td:first-child{text-align:left}
+.tname{display:flex;align-items:center;gap:6px;font-weight:600}
+.tname .info{width:26px;height:26px;font-size:13px;color:var(--muted)}
+.box{width:38px;height:38px;border-radius:6px;border:2px solid var(--ink);background:#fff;display:inline-grid;place-items:center;padding:0;font:700 12px var(--display)}
+.box.on{background:var(--gold);border-color:var(--gold-dk)}
+.box.past{background:var(--soft);border-color:var(--line);color:var(--muted);cursor:default}
+.box.lock{border-color:var(--line);color:#9a9a9a;cursor:not-allowed}
+.sub{display:flex;justify-content:space-between;font:600 14px var(--body);color:var(--muted);padding-top:2px}
+.sub b{color:var(--ink);font-variant-numeric:tabular-nums}
+.note{border-left:4px solid var(--bar);background:#fff;padding:10px 12px;border-radius:6px;font-size:14px}
+.note.gold{border-color:var(--gold-dk)}
+.missing{margin:0;color:#a3231a;font-weight:600;font-size:14px}
+.missing:empty{display:none}
+
+/* Carte de déploiement */
+.map{display:block;width:100%;max-width:100%;height:auto;border-radius:8px}
+
+/* Accueil */
+.hero{padding:20px 16px;display:grid;gap:10px;text-align:center}
+.hero h2{font:700 24px var(--display);text-transform:uppercase;margin:0}
+.game-card .big{font:700 30px var(--display);font-variant-numeric:tabular-nums}
+.live .big{font:700 26px var(--display);font-variant-numeric:tabular-nums;white-space:nowrap}
+.live .body{gap:10px}
+.hist{display:grid;gap:8px}
+.hist div{display:flex;justify-content:space-between;gap:8px;padding:10px 12px;background:#fff;border-radius:8px;font-size:14px}
+.hist .grow{flex:1;min-width:0}
+.hopen{text-align:left;background:none;border:0;padding:0;font:inherit;color:inherit}
+.hopen:hover b{text-decoration:underline}
+.del{flex:none;width:40px;height:40px;border-radius:8px;border:0;background:none;color:var(--bar);display:grid;place-items:center}
+.del:hover{background:var(--soft)}
+input::placeholder{color:#a5a5a5;opacity:1}
+
+/* Récap */
+.status{justify-self:center;font:700 12px var(--body);text-transform:uppercase;letter-spacing:.08em;padding:4px 12px;border-radius:999px;background:var(--soft)}
+.status.win{background:var(--ok);color:#fff}
+.final{text-align:center;display:grid;gap:6px;padding:18px 12px}
+.final .big{font:700 52px/1 var(--display);font-variant-numeric:tabular-nums}
+.final .names{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-weight:700}
+.scroll{overflow-x:auto}
+.rt{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:14px;min-width:320px}
+.rt th,.rt td{padding:7px 2px;text-align:center;border-bottom:1px solid var(--soft)}
+.rt th{font:700 12px var(--body);text-transform:uppercase;color:var(--muted)}
+.rt td:first-child,.rt th:first-child{text-align:left}
+.rt td.tot{font-weight:700}
+.rt td.cell span{display:inline-block;min-width:26px;padding:2px 0;border:1px solid var(--line);border-radius:5px}
+
+/* Règles (fenêtres) */
+.ab{border-radius:10px;overflow:hidden;border:3px solid var(--c);background:var(--card)}
+.ab-head{background:var(--c);color:#fff;padding:9px 12px;font:700 14px var(--body)}
+.ab-name{padding:10px 12px 0;font:700 15px var(--body)}
+.ab-body{padding:6px 12px 12px;font-size:14px}
+.ab-body p{margin:0}
+.ab-body p + p{margin-top:6px}
+.tier{border-top:1px solid var(--soft);padding-top:10px}
+.tier h4{margin:0 0 2px;font:700 12px var(--body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.tier b{display:block}
+
+/* Barre d'actions */
+.foot{position:fixed;left:0;right:0;bottom:0;z-index:5;background:var(--namebar);padding-bottom:env(safe-area-inset-bottom,0px)}
+.foot .in{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-block:10px}
+.foot .btn.ghost{color:#e9c96b}
+.foot[hidden]{display:none}
+
+/* Fenêtre modale */
+.modal{position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.55);display:flex;align-items:flex-end;justify-content:center;padding:max(16px, env(safe-area-inset-top,0px)) 0 0}
+.modal[hidden]{display:none}
+.sheet{background:var(--page);width:100%;max-width:760px;max-height:100%;overflow:auto;border-radius:14px 14px 0 0;padding-bottom:env(safe-area-inset-bottom,0px)}
+.sheet .sec{position:sticky;top:0;z-index:1}
+.sheet .sec .icon-btn{width:34px;height:34px}
+@media (min-width:700px){.modal{align-items:center;padding:24px}.sheet{border-radius:14px;max-height:90vh}}
+@media (prefers-reduced-motion:no-preference){.sheet{animation:up .18s ease-out}@keyframes up{from{transform:translateY(24px);opacity:.6}}}
+</style>
+
+<header class="bar">
+  <div class="in top">
+    <button class="icon-btn back" id="back" type="button" aria-label="Retour" hidden><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <h1 id="title">Feuille de Bataille</h1>
+    <button class="icon-btn" id="bp-info" type="button" aria-label="Voir le battleplan" hidden><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg></button>
+  </div>
+  <div class="in score" id="score" hidden>
+    <span class="nm" id="s-n0"></span><span class="pts" id="s-pts">0 - 0</span><span class="nm" id="s-n1"></span>
+  </div>
+</header>
+
+<main class="in"><div class="stack" id="view"></div></main>
+
+<footer class="foot" id="foot" hidden>
+  <div class="in">
+    <button class="btn ghost" id="prev" type="button">Précédent</button>
+    <button class="btn gold" id="next" type="button">Suivant</button>
+  </div>
+</footer>
+
+<div class="modal" id="modal" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true"></div></div>
+
+<script>
+(function(){
+  "use strict";
+/*DATA*/
+/*APP*/
+})();
+</script>

@@ -1,5 +1,6 @@
+import os
 import xml.etree.ElementTree as ET, json, re, sys, os
-D='/tmp/claude-0/bsd/'
+D=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'bsdata') + '/'
 B='{http://www.battlescribe.net/schema/catalogueSchema}'
 tn=lambda e:e.tag.split('}')[1]
 ROOTS={}
@@ -82,6 +83,6 @@ def extract(fac):
 if __name__=='__main__':
     fac=sys.argv[1]; slug=sys.argv[2]
     d=extract(fac)
-    json.dump(d,open(f'/home/claude/wc/fac/{slug}_en.json','w'),indent=1,ensure_ascii=False)
+    json.dump(d,open(f'{os.path.dirname(os.path.abspath(__file__))}/{slug}_en.json','w'),indent=1,ensure_ascii=False)
     print(fac, len(d['units']),'units')
     for g in d['groups']: print('  ',g['title'],[ (i['name'],i['pts'],len(i['abilities'])) for i in g['items']])

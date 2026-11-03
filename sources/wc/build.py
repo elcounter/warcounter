@@ -1,3 +1,6 @@
+import os
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+os.makedirs('build-check', exist_ok=True)
 VERSION='1.2.0'
 MAJ='03-11-2026'
 import re, json, base64, glob, os
@@ -43,9 +46,9 @@ def scope(css, sc, keep_global):
 def get_css(path):
     s=open(path).read(); return s[s.index('<style>')+7:s.index('</style>')]
 
-army_css=scope(get_css('/home/claude/mega/shell.html'),'#app-army',True)
-bs_css=scope(get_css('/home/claude/partie/shell.html'),'#app-bs',False)
-home_css=scope(get_css('/home/claude/mega/shell.html'),'#app-home',False)
+army_css=scope(get_css('shells/mega-shell.html'),'#app-army',True)
+bs_css=scope(get_css('shells/partie-shell.html'),'#app-bs',False)
+home_css=scope(get_css('shells/mega-shell.html'),'#app-home',False)
 extra='''
 .bnav .in{margin:0 auto;padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))}
 #app-army .lc-fac{display:block;font:500 12px var(--display);text-transform:uppercase;letter-spacing:.06em;color:var(--gold-dk);margin-top:2px}
@@ -77,7 +80,7 @@ HOME_A='<a class="hm" href="#accueil" aria-label="Accueil">'+I('<path d="M3 11l9
 ICON_DICE=I('<rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1.2" fill="currentColor"/><circle cx="15" cy="15" r="1.2" fill="currentColor"/><circle cx="15" cy="9" r="1.2" fill="currentColor"/><circle cx="9" cy="15" r="1.2" fill="currentColor"/>')
 BACK='<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>'
 
-bs_shell=open('/home/claude/partie/shell.html').read()
+bs_shell=open('shells/partie-shell.html').read()
 bs_body=bs_shell[bs_shell.index('</style>')+8:bs_shell.index('<script>')]
 bs_body=bs_body.replace('id="back"','id="bs-back"').replace('<h1 id="title">Feuille de Bataille</h1>','<h1 id="bs-title">Feuille de Bataille</h1>')
 bs_body=bs_body.replace('<main class="in"><div class="stack" id="view"></div></main>','<main class="in"><div class="stack" id="view"></div><p class="copy">© 2026 elcounter<br>WarCounter version '+VERSION+' · MAJ '+MAJ+'</p></main>')
@@ -176,5 +179,5 @@ html='''<title>WarCounter</title>
 </script>
 '''
 open('warcounter.html','w').write(html)
-for n,js in [('army',army_js),('bs',bs_js),('home',home_js),('top',top_js)]: open(f'/tmp/claude-0/wc-{n}.js','w').write(js)
+for n,js in [('army',army_js),('bs',bs_js),('home',home_js),('top',top_js)]: open(f'build-check/wc-{n}.js','w').write(js)
 print(len(html))

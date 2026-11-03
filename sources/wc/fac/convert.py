@@ -1,7 +1,8 @@
+import os
 #!/usr/bin/env python3
 """Convertit <slug>_en.json + fr_<slug>.py en données de page faction (lecture seule) pour l'onglet Règles."""
 import json, re, sys, importlib
-sys.path.insert(0, '/home/claude/wc/fac')
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 KW = {'HERO':'HÉROS','INFANTRY':'INFANTERIE','CAVALRY':'CAVALERIE','MONSTER':'MONSTRE','WAR MACHINE':'MACHINE DE GUERRE','WIZARD':'SORCIER',
       'PRIEST':'PRÊTRE','FLY':'VOL','UNIQUE':'UNIQUE','WARMASTER':'SEIGNEUR DE GUERRE','CHAMPION':'CHAMPION','MUSICIAN':'MUSICIEN',
@@ -188,7 +189,7 @@ SEC_FR = {'Battle Traits':'Traits de bataille','Spell Lores':'Sorts','Prayer Lor
 ORDER = ['Battle Traits','Battle Formations','Heroic Traits','Artefacts of Power','Spell Lores','Prayer Lores','Manifestation Lores']
 def convert(slug, name, img):
     T = importlib.import_module('fr_' + slug).T
-    d = json.load(open(f'/home/claude/wc/fac/{slug}_en.json'))
+    d = json.load(open(f'{os.path.dirname(os.path.abspath(__file__))}/{slug}_en.json'))
     units = []
     for u in d['units']:
         s = u['stats']
@@ -209,6 +210,6 @@ def convert(slug, name, img):
 
 if __name__ == '__main__':
     out = [convert(*x) for x in [('ogors','Ogor Mawtribes','ogors'), ('lumineth','Lumineth Realm-lords','lumineth'), ('skaven','Skaven','skaven'), ('cities','Cities of Sigmar','cities'), ('stormcast','Stormcast Eternals','stormcast'), ('slaves','Slaves to Darkness','slaves'), ('soulblight','Soulblight Gravelords','soulblight'), ('daughters','Daughters of Khaine','daughters'), ('fyreslayers','Fyreslayers','fyreslayers'), ('idoneth','Idoneth Deepkin','idoneth'), ('kharadron','Kharadron Overlords','kharadron'), ('seraphon','Seraphon','seraphon'), ('sylvaneth','Sylvaneth','sylvaneth'), ('khorne','Blades of Khorne','khorne'), ('tzeentch','Disciples of Tzeentch','tzeentch')]]
-    open('/home/claude/wc/fac/factions.json', 'w').write(json.dumps(out, ensure_ascii=False).replace("OFFICAR'S", "OFFICER'S"))
+    open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'factions.json'), 'w').write(json.dumps(out, ensure_ascii=False).replace("OFFICAR'S", "OFFICER'S"))
     print('Traductions manquantes :', sorted(set(MISSING)))
     for f in out: print(f['en'], len(f['units']), 'unités', [(s['title'], len(s['items'])) for s in f['sections']])

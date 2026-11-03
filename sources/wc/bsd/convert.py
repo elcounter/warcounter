@@ -1,10 +1,11 @@
+import os
 #!/usr/bin/env python3
 """Convertit l'export BSData (hashut_en.json) + traductions (fr.py) en army-data.js pour WarCounter."""
 import json, re, sys
-sys.path.insert(0, '/home/claude/wc/bsd')
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from fr import T
 
-d = json.load(open('/home/claude/wc/bsd/hashut_en.json'))
+d = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'hashut_en.json')))
 
 # ---------- Glossaires ----------
 KW = {'HERO':'HÉROS','INFANTRY':'INFANTERIE','CAVALRY':'CAVALERIE','MONSTER':'MONSTRE','WAR MACHINE':'MACHINE DE GUERRE',
@@ -158,7 +159,7 @@ traits_bt = [ability(a) for a in items('Battle Traits')[0]['abilities']]
 SPELL_LORE, PRAYER_LORE = items('Spell Lores')[0]['name'], items('Prayer Lores')[0]['name']
 
 J = lambda o: json.dumps(o, ensure_ascii=False)
-old = open('/home/claude/mega/data.js').read()
+old = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'shells', 'mega-data.js')).read()
 tail = old[old.index('  // Battle Tactics 2026-27'):]
 js = f"""  // ---------- Données ----------
   // Généré depuis BSData (age-of-sigmar-4th) et traduit en français. Ne pas modifier à la main : relancer bsd/convert.py.
@@ -179,6 +180,6 @@ js = f"""  // ---------- Données ----------
   const WHEN = {J(WHEN)};
 
 {tail}"""
-open('/home/claude/wc/army-data.js', 'w').write(js)
+open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'army-data.js'), 'w').write(js)
 print('OK', len(units), 'unités,', len(WHEN), 'aptitudes')
 for u in units: print(' ', u['id'], u['pts'], u['size'], u.get('lead',''), u['kw'][:60])

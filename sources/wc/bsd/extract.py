@@ -1,7 +1,8 @@
+import os
 import xml.etree.ElementTree as ET, json, re, sys
 B='{http://www.battlescribe.net/schema/catalogueSchema}'
 G='{http://www.battlescribe.net/schema/gameSystemSchema}'
-D='/tmp/claude-0/bsd/'
+D=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'bsdata') + '/'
 def load(f): return ET.parse(D+f).getroot()
 lib=load('Helsmiths of Hashut - Library.cat'); main=load('Helsmiths of Hashut.cat'); lores=load('Lores.cat'); gst=load('Age of Sigmar 4.0.gst')
 ALL=[lib,main,lores,gst]
@@ -68,6 +69,6 @@ for g in main.find(B+'sharedSelectionEntryGroups'):
 for se in main.iter():
     if tagname(se)=='entryLink' and se.attrib.get('name','').startswith('Battle Traits'):
         t=resolve(se); out['groups']['Battle Traits']=[{'name':'Battle Traits','abilities':[ability(p) for p in profiles(t) if p.attrib.get('typeName','').startswith('Ability')]}]
-json.dump(out,open('/home/claude/wc/bsd/hashut_en.json','w'),indent=1,ensure_ascii=False)
+json.dump(out,open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'hashut_en.json'),'w'),indent=1,ensure_ascii=False)
 for u in out['units']: print(u['name'],u['pts'],u['size'],u['stats'],len(u['weapons']),len(u['abilities']))
 
