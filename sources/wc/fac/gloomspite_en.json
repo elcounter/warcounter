@@ -1,0 +1,3198 @@
+{
+ "name": "Gloomspite Gitz",
+ "units": [
+  {
+   "name": "Dankhold Troggoth",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "MONSTER",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "TROGGOTH"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "10",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D3+3",
+     "Ability": "-",
+     "name": "Colossal Boulder Club",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Wade and Smash",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "This unit can move 6\" but must end that move in combat. Then, roll a D3 for each enemy unit within 1\" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Magical Resistance",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Reaction: Opponent declared a **^^Spell^^** ability",
+     "declare": "",
+     "effect": "If this unit was picked to be the target of that spell, roll a dice. On a 4+, ignore the effect of that spell on this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Regeneration",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Start of Any Turn",
+     "declare": "",
+     "effect": "**Heal (D3)** this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Rockgut Troggoths",
+   "pts": 170,
+   "size": 3,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "INFANTRY",
+    "TROGGOTH",
+    "WARD (5+)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "10\"",
+     "Atk": "1",
+     "Hit": "5+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Throwin' Boulders",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Stone Maul or Craggy Hands",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Regeneration",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Start of Any Turn",
+     "declare": "",
+     "effect": "**Heal (D3)** this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Skragrott, the Loonking",
+   "pts": 200,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "UNIQUE",
+    "WARMASTER",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "INFANTRY",
+    "WIZARD (2)",
+    "WARD (4+)",
+    "MOONCLAN"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "6",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Da Moon Onna Stikk",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Fangz of da Bad Moon",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible enemy unit within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "Roll a number of dice equal to the unmodified casting roll. For each 3+, inflict 1 mortal damage on the target.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Loonking's Entreaty",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Battle (Army), Reaction: You declared the 'The Faces of the Bad Moon' ability",
+     "declare": "",
+     "effect": "The face of the Bad Moon stays in its current position this battle round instead of moving to the next face in the sequence.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Babbling Wand",
+     "kind": "Ability (Passive)",
+     "color": "Gray",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time a friendly **^^Moonclan^^** unit wholly within 12\" of this unit uses the 'Redeploy' command, no command points are spent.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Squigboss with Gnasha-squig",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "INFANTRY",
+    "MOONCLAN",
+    "SQUIG"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "4",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Fang-filled Gob",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Squig-krook",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Feedin' Time",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a friendly Squig unit\nwithin this unit's combat range to be\nthe target.",
+     "effect": "Roll a dice. On a 2+, pick 1 of the following effects to apply for the rest of the turn:\n***Crimson Deffcap:*** Add 3\" to the target's Move characteristic.\n***Yellow Lurka:*** The target's **Fang-filled Gobs**, **Huge Fang-filled Gobs** or **Massive Fang-filled Gobs** have **Crit (Mortal)**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Mangler Squigs",
+   "pts": 130,
+   "size": 1,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "MOONCLAN",
+    "MONSTER",
+    "FLY",
+    "SQUIG"
+   ],
+   "stats": {
+    "Move": "D6+8\"",
+    "Health": "14",
+    "Save": "5+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "Companion",
+     "name": "Balls and Chains",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "D6",
+     "Ability": "Companion",
+     "name": "Huge Fang-filled Gobs",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Bashin' Stikks",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Squig Rage",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Huge Fang-filled Gobs** is 6.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Watch Out!",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "If this unit is destroyed, before removing it from play, roll a dice for each enemy unit within this unit's combat range. On a 4+, inflict D3 mortal damage on that unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Giant Boing!",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "",
+     "effect": "If this unit charged this turn, roll a dice. On a 3+, this unit can move 3D6\" but must end that move in combat.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Rabble-Rowza",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "INFANTRY",
+    "MOONCLAN"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "12\"",
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Bat Squigs",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Moon-sickle and Basha",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Secret Tunnels",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick this unit if it has not been deployed.",
+     "effect": "Set up this unit in reserve **in a secret tunnel**. It has now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "'Neh Neh Na-neh Neh! Can't Catch Me!\"",
+     "kind": "Ability (Activated)",
+     "color": "",
+     "timing": "Once Per Turn (Army), Your Movement Phase",
+     "declare": "Pick a visible friendly **^^Monster^^** or **^^Beast^^** unit to be the target.",
+     "effect": "For the rest of the turn, the target can use **^^Charge^^** abilities even if it used a **^^Run^^** ability in the same turn, but each time it uses a **^^Move^^** ability, it must end the move closer to this unit.\nIn addition, for the rest of the turn, the first time the target ends a move within this unit's combat range, inflict D6 mortal damage on this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Emerge from the Depths",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Your Movement Phase",
+     "declare": "Pick this unit if it is in a secret tunnel.",
+     "effect": "Set up this unit anywhere on the battlefield more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Fungoid Cave-Shaman",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "INFANTRY",
+    "MOONCLAN",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Spore Squig's Vicious Teeth",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Moon-sickle",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Deffcap Mushroom",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Battle, Your Hero Phase",
+     "declare": "",
+     "effect": "Add 1 to this unit's power level for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Webspinner Shaman on Arachnarok Spider",
+   "pts": 230,
+   "size": 1,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "SPIDERFANG",
+    "MONSTER",
+    "HERO",
+    "WIZARD (1)",
+    "ARACHNAROK"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "16",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "10",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Spider-bows",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "10",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Crooked Spears",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Monstrous Spider Fangs",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "8",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Chitinous Legs",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "Crit (Mortal)",
+     "name": "Spider God Staff",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Chitinous Legs** is 6.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Catchweb Spidershrine",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to casting rolls for friendly **^^Spiderfang Wizards^^** while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ensnaring Webbing",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy **^^Infantry Hero^^** within 1\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, the target has **^^Strike-last^^** for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Loonboss on Giant Cave Squig",
+   "pts": 80,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "MOONCLAN",
+    "SQUIG",
+    "CAVALRY"
+   ],
+   "stats": {
+    "Move": "D6+6\"",
+    "Health": "6",
+    "Save": "5+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "D3",
+     "Ability": "Companion",
+     "name": "Massive Fang-filled Gob",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Moon-cutta or Loonboss Stabba",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Let's Get Bouncin'!",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly non-**^^Hero Moonclan Cavalry^^** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target. The target\ncan be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Squig Herd",
+   "pts": 100,
+   "size": 12,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "MOONCLAN",
+    "BEAST",
+    "SQUIG"
+   ],
+   "stats": {
+    "Move": "D6+3\"",
+    "Health": "1",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Fang-filled Gob",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "5+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Squig Prodder",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Squigs Gone Wild",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time a model in this unit is slain by a combat attack and that model was in combat with the attacking unit, roll a dice. On a 5+, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Herding Squigs",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "",
+     "effect": "Roll a dice for each **Squig Herder** in this unit. For each 2+, you can return D3 slain **Cave Squigs** to this unit. For each 1, 1 **Squig Herder** in this unit is slain.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Moonclan Stabbas",
+   "pts": 110,
+   "size": 20,
+   "kw": [
+    "CHAMPION",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "INFANTRY",
+    "MOONCLAN",
+    "MUSICIAN (1/20)",
+    "STANDARD BEARER (1/20)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "1",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Stabba",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Netters",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick an enemy **^^Infantry^^** unit in combat with this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, subtract 1 from hit rolls for the target's attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Gobbapalooza",
+   "pts": 150,
+   "size": 5,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "INFANTRY",
+    "MOONCLAN",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "3",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Staff, Stikka or Jaggedy Blade",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Hallucinogenic Fungus Brews",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "In the first battle round, this unit has **^^Ward (4+)^^**. In the second battle round, this unit has **^^Ward (5+)^^**. In the third and subsequent battle rounds, this unit has **^^Ward (6+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Gobbapalooza Know-wotz",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "",
+     "effect": "Roll a dice. On a 3+, pick 1 of the following effects:\n***Glareface Dance:*** Pick a friendly **^^Gloomspite Gitz^^** unit within this unit's combat range. Add 1 to run rolls and charge rolls for that unit until the start of your next turn.\n***Nasty Poisons:*** Pick a friendly **^^Gloomspite Gitz^^** unit within this unit's combat range. Add 1 to the Rend characteristic of that unit's weapons until the start of your next turn.\n***Mesmerise:*** Pick a visible enemy unit within 12\" of this unit. Until the start of your next turn, that unit cannot use commands.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Loonsmasha Fanatics",
+   "pts": 110,
+   "size": 5,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "INFANTRY",
+    "MOONCLAN"
+   ],
+   "stats": {
+    "Move": "2D6\"",
+    "Health": "1",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "D6",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Ball and Chain",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Whirling Death",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit has **^^Strike-first^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Hidden Loons",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick this unit if it has not been deployed.",
+     "effect": "Set up this unit in reserve **hidden among the mobs**. It has now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Release the Fanatics!",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Any Movement Phase",
+     "declare": "Pick this unit if it is **hidden among the mobs**. Then, pick a friendly **Moonclan Shootas** or **Moonclan Stabbas** unit that has 10 or more models to be the target.",
+     "effect": "Set up this unit anywhere on the battlefield wholly within 6\" of the target and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Boingrot Bounderz",
+   "pts": 120,
+   "size": 5,
+   "kw": [
+    "CAVALRY",
+    "CHAMPION",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "SQUIG",
+    "MOONCLAN",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "D6+6\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Fang-filled Gob",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Pokin' Lance",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Boing! Smash!",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Any Charge Phase",
+     "declare": "If this unit charged this phase, pick an enemy unit within 1\" of it to be the target.",
+     "effect": "Roll a dice for each model in this unit. For each 4+, inflict 1 mortal damage on the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Moonclan Shootas",
+   "pts": 110,
+   "size": 20,
+   "kw": [
+    "CHAMPION",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "INFANTRY",
+    "MOONCLAN",
+    "MUSICIAN (1/20)",
+    "STANDARD BEARER (1/20)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "1",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Moonclan Bow",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Netters",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick an enemy **^^Infantry^^** unit in combat with this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, subtract 1 from hit rolls for the target's attacks for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Sporesplatta Fanatics",
+   "pts": 90,
+   "size": 5,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "INFANTRY",
+    "MOONCLAN"
+   ],
+   "stats": {
+    "Move": "2D6\"",
+    "Health": "1",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "D3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Spore-ball and Chain",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Puffshroom Frenzy",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Attacks characteristic of melee weapons used by other friendly **^^Moonclan^^** units while they are wholly within 12\" of this unit. Subtract 1 from the Attacks characteristic of melee weapons used by enemy units while they are in combat with this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "A Prod in the Right Direction",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "",
+     "effect": "This unit can use the 'Normal Move' ability as if it were your movement phase.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Loonboss on Mangler Squigs",
+   "pts": 140,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "MOONCLAN",
+    "MONSTER",
+    "FLY",
+    "SQUIG"
+   ],
+   "stats": {
+    "Move": "D6+8\"",
+    "Health": "14",
+    "Save": "5+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "Companion",
+     "name": "Balls and Chains",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "D6",
+     "Ability": "Companion",
+     "name": "Huge Fang-filled Gobs",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Moon-cutta",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Squig Rage",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Huge Fang-filled Gobs** is 6.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Bite da Moon!",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Battle (Army), Any Combat Phase",
+     "declare": "Pick this unit and all friendly **^^Squig^^** units wholly within 12\" of this unit to be the targets.",
+     "effect": "Add 1 to hit rolls for the targets' **Fang-filled Gobs**, **Massive Fang-filled Gobs** and **Huge Fang-filled Gobs** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Watch Out!",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "If this unit is destroyed, before removing it from play, roll a dice for each enemy unit within this unit's combat range. On a 4+, inflict D3 mortal damage on that unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ker-splat!",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "If this unit charged this phase, pick an enemy unit within 1\" of it to be the target.",
+     "effect": "Roll a dice for each model in the target unit, to a maximum of 10. For each 4+, inflict 1 mortal damage on the target.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Spider Riders",
+   "pts": 110,
+   "size": 5,
+   "kw": [
+    "CAVALRY",
+    "CHAMPION",
+    "MUSICIAN (1/5)",
+    "STANDARD BEARER (1/5)",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "SPIDERFANG"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Spider-bow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Spider Fangs",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Crooked Spear",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": []
+  },
+  {
+   "name": "Squig Hoppers",
+   "pts": 150,
+   "size": 10,
+   "kw": [
+    "CAVALRY",
+    "CHAMPION",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "SQUIG",
+    "MOONCLAN",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "D6+8\"",
+    "Health": "2",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Fang-filled Gob",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Slitta",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Boing! Boing! Boing!",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Any Movement Phase",
+     "declare": "Pick an enemy unit that this unit passed across this phase to be the target.",
+     "effect": "Roll a dice for each model in this unit that passed across the target. For each 4+, inflict 1 mortal damage on the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Kragnos, the End of Empires",
+   "pts": 580,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "UNIQUE",
+    "MONSTER",
+    "WARMASTER",
+    "WARD (5+)",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "18",
+    "Save": "4+",
+    "Control": "15"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "3",
+     "Dmg": "4",
+     "Ability": "-",
+     "name": "The Dread Mace",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D3",
+     "Ability": "Crit (2 Hits)",
+     "name": "Tuskbreaker",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Hooves of Wrack and Ruin",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **The Dread Mace** is 4 and this unit has a Control characteristic of 10.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Avatar of Destruction",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "If this unit would be automatically destroyed, it is not automatically destroyed. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points).",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Rampaging Destruction",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "",
+     "effect": "If this unit charged this phase, pick 1 of the following effects:\n• Roll a dice for each enemy unit within 1\" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.\n• Pick an enemy **^^Monster^^** in combat with this unit and roll 2D6. On a 7, this ability has no effect. Otherwise, inflict an amount of mortal damage on that unit equal to the results on the dice used for the 2D6 roll multiplied together. For example, a 2D6 roll of 2 and 6 would inflict 12 mortal damage (2 × 6).",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The End of Empires",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Your Charge Phase",
+     "declare": "",
+     "effect": "For the rest of the turn, add 1 to the number of dice rolled when making charge rolls for friendly **^^Destruction^^** units while they are wholly within 12\" of this unit, to a maximum of 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Shield Inviolate",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Reaction: Opponent declared a **^^Spell^^** ability",
+     "declare": "",
+     "effect": "If this unit was picked to be the target of that spell, roll a dice. On a 3+, ignore the effect of that spell on this unit. This unit can use this ability more than once per phase but only once per **^^Spell^^** ability.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Trugg, the Troggoth King",
+   "pts": 340,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "UNIQUE",
+    "MONSTER",
+    "WARMASTER",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "TROGGOTH"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "16",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "3",
+     "Dmg": "4",
+     "Ability": "-",
+     "name": "Ironshell Club",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D3+3",
+     "Ability": "-",
+     "name": "Mighty Antlers",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, when it uses the 'Malfunctioning Leystone' ability, roll 1 dice instead of 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Crushing Grip",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit within 1\" of this unit to be the target.",
+     "effect": "Roll a dice. If the roll equals or exceeds the target's Health characteristic, 1 model in the target unit is slain.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Malfunctioning Leystone",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "",
+     "effect": "Roll 3 dice. You must pick 1 of those dice and apply the effect that corresponds to its value. Effects 2-6 persist until the start of your next turn.\n**1 *Glyph of Shyish:*** Inflict D3 mortal damage on this unit.\n**2 *Glyph of Ghur:*** Add 1 to the Attacks characteristic of melee weapons used by friendly **^^Troggoth^^** units while they are wholly within 12\" of this unit.\n**3 *Glyph of Aqshy:*** Add 1 to the Rend characteristic of melee weapons used by friendly **^^Troggoth^^** units while they are wholly within 12\" of this unit.\n**4 *Glyph of Hysh:*** This unit can use Unbind abilities as if it had **^^Wizard (1)^^**.\n**5 *Glyph of Ulgu:*** Subtract 1 from hit rolls for shooting attacks that target friendly **^^Troggoth^^** units while they are wholly within 12\" of this unit.\n**6 *Glyph of Chamon:*** This unit has **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Greater Regeneration",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Start of Any Turn",
+     "declare": "",
+     "effect": "**Heal (D6)** this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Dankhold Troggboss",
+   "pts": 200,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "MONSTER",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "TROGGOTH"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "12",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "D6",
+     "Ability": "-",
+     "name": "Boulder Club",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Shepherd of Destruction",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "Roll a dice. On a 4+, for the rest of the turn, add 1 to the Attacks characteristic of melee weapons used by friendly **^^Troggoth^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Magical Resistance",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Reaction: Opponent declared a **^^Spell^^** ability",
+     "declare": "",
+     "effect": "If this unit was picked to be the target of that spell, roll a dice. On a 4+, ignore the effect of that spell on this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Greater Regeneration",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Start of Any Turn",
+     "declare": "",
+     "effect": "**Heal (D6)** this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Sneaky Snufflers",
+   "pts": 80,
+   "size": 6,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "INFANTRY",
+    "MOONCLAN",
+    "WARD (5+)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "2",
+    "Save": "6+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Loonfungus Sickle",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Snufflesquig's Gnashers",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Looncap Mushrooms",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "If this unit is not in combat, pick a friendly **^^Moonclan^^** unit wholly within 12\" of it to be the target.",
+     "effect": "Roll a dice. Add 1 to the roll if the face of the Bad Moon is **Cacklin'** this turn. On a 3+, the target has **^^Ward (5+)^^** until the start of your next turn. On a 6+, also add 1 to the Attacks characteristic of the target's melee weapons until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Fellwater Troggoths",
+   "pts": 160,
+   "size": 3,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "INFANTRY",
+    "TROGGOTH"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "6\"",
+     "Atk": "D3",
+     "Hit": "2+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Noxious Vomit",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Spiked Club",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Noxious Vomit",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "If any damage points are allocated to an enemy unit by attacks made with this unit's **Noxious Vomit**, that unit is **drenched in vomit** until the start of your next turn.\nWhile a unit is **drenched in vomit**:\n• Subtract 1 from save rolls for that unit.\n• Ignore positive modifiers to save rolls for that unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Regeneration",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Start of Any Turn",
+     "declare": "",
+     "effect": "**Heal (D3)** this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Fellwater Troggoths (Scourge of Aqshy)",
+   "pts": 160,
+   "size": 3,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "INFANTRY",
+    "TROGGOTH"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "6\"",
+     "Atk": "D3",
+     "Hit": "2+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "1",
+     "Ability": "Shoot in Combat",
+     "name": "Noxious Vomit",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Spiked Club",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Gut-Wrenching Stench",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a dice. You can spend up to 3 **rage dice**. If you do:\n• Add X to the roll, where X is the number of **rage dice** spent.\n• If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7.\nThen, on a 5+, the target has **^^Strike-last^^** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Regeneration",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Start of Any Turn",
+     "declare": "",
+     "effect": "**Heal (D3)** this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Snarlfang Riders",
+   "pts": 110,
+   "size": 5,
+   "kw": [
+    "CAVALRY",
+    "CHAMPION",
+    "MUSICIAN (1/5)",
+    "STANDARD BEARER (1/5)",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "GITMOB"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "15\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Grot Bow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Snarlfang's Slavering Jaws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Stabbin' Stikka",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Can't Catch Us!",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Once Per Turn (Army), Enemy Movement Phase",
+     "declare": "",
+     "effect": "If this unit is not in combat, this unit can move D6\". It cannot end that move in combat.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Loonboss",
+   "pts": 70,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "INFANTRY",
+    "MOONCLAN",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Moon-slicer",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "I'm da Boss",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible friendly **Moonclan Stabbas** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 2+, pick 1 of the following effects:\n***Get Back 'Ere!:*** If the target is not in combat, you can return D6 slain models to it.\n***Stab 'Em Good!:*** Add 1 to wound rolls for the target's attacks until the start of your next turn",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Let's Get Stabbin'!",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly non-**^^Hero Moonclan Infantry^^** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Webspinner Shaman",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "INFANTRY",
+    "WARD (6+)",
+    "SPIDERFANG",
+    "WIZARD (1)"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "4",
+    "Save": "6+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "Crit (Mortal)",
+     "name": "Spider God Staff",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Web Slingshot",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a friendly **^^Spiderfang^^** unit or terrain feature within 18\" of this unit to be the target.",
+     "effect": "Roll a dice. On a 2+, remove this unit from the battlefield and set it up again wholly within 3\" of the target and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Speed of the Spider God",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible friendly **^^Spiderfang^^** unit wholly within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "The target can use a **^^Run^^** ability this turn and still use **^^Shoot^^** and/or **^^Charge^^** abilities later in the turn.",
+     "keywords": "**^^Spell^^**",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Arachnarok Spider with Flinger",
+   "pts": 210,
+   "size": 1,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "SPIDERFANG",
+    "MONSTER",
+    "ARACHNAROK"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "14",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Monstrous Spider Fangs",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "8",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Chitinous Legs",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "10",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Crooked Spears",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "18\"",
+     "Atk": "10",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Spider-bows",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Rng": "24\"",
+     "Atk": "D3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Crit (2 Hits)",
+     "name": "Flinger",
+     "kind": "Ranged Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Flinger",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "If any attacks made with this unit's **Flinger** score a hit, after the **^^Shoot^^** ability has been resolved, roll a dice. On a 2+, the target unit is **entangled** until the start of your next turn. Halve the Move characteristic of a unit while it is **entangled**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Beast-binding Webbing",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, subtract 1 from the Attacks characteristic of the target's **Companion** weapons for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Arachnarok Spider with Spiderfang Warparty",
+   "pts": 200,
+   "size": 1,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "SPIDERFANG",
+    "MONSTER",
+    "ARACHNAROK"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "16",
+    "Save": "4+",
+    "Control": "10"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "10",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Spider-bows",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "10",
+     "Hit": "5+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Crooked Spears",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Monstrous Spider Fangs",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "8",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Chitinous Legs",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Chitinous Legs** is 6.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Voracious Predator",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "Pick up to 3 enemy units within 1\" of this unit to be the targets.",
+     "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Skitterstrand Arachnarok",
+   "pts": 180,
+   "size": 1,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "SPIDERFANG",
+    "MONSTER",
+    "ARACHNAROK"
+   ],
+   "stats": {
+    "Move": "10\"",
+    "Health": "13",
+    "Save": "4+",
+    "Control": "5"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "3",
+     "Ability": "Crit (Mortal), Companion",
+     "name": "Monstrous Spider Fangs",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "8",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Chitinous Legs",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Chitinous Legs** is 6.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Realmweb Lurker",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick this unit if it has not been deployed.",
+     "effect": "Set up this unit in reserve **skittering through tunnels in reality**. It has now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Scuttling Terror",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit charged this turn, roll a dice. On a 3+, this unit can move 2D6\". It can pass through the combat ranges of enemy units and can pass through models in enemy **^^Infantry^^** units, but it must end that move in combat.\nThen, pick an enemy **^^Infantry^^** unit that this unit passed across during that move. Inflict D3 mortal damage on that enemy unit.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ambush from Beyond",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Any Movement Phase",
+     "declare": "Pick this unit if it is **skittering through tunnels** in reality.",
+     "effect": "Set up this unit anywhere on the battlefield more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Droggz da Sunchompa",
+   "pts": 150,
+   "size": 1,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "UNIQUE",
+    "HERO",
+    "CAVALRY",
+    "GITMOB"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "7",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Jaggedsnarl's Jaws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Da Metal Toof",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Da Frazzlefangz",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While an enemy unit is within 6\" of this unit:\n• Subtract 1 from hit rolls for that enemy unit's attacks.\n• That enemy unit cannot use the 'All-out Attack' command.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Rip 'Em ta Bits",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Reaction: You declared a **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly **^^Gitmob^^** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Time ta Scarper",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Reaction: You declared a **^^Fight^^** ability for a unit wholly within 9\" of this unit",
+     "declare": "",
+     "effect": "Roll a dice. On a 4+, the unit using that **^^Fight^^** ability can move 2D6\" after that **^^Fight^^** ability has been resolved. It can move through the combat ranges of any enemy units but cannot end that move in combat.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Snarlboss",
+   "pts": 100,
+   "size": 1,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "HERO",
+    "GITMOB",
+    "CAVALRY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "5",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Snarlfang's Slavering Jaws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Boss Loppa",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Vicious Snarls and Great Howls",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "If this unit charged this turn, pick this unit and up to 2 friendly **^^Gitmob Cavalry^^** units within this unit's combat range to be the targets.",
+     "effect": "For the rest of the turn, add 1 to the Attacks characteristic of the targets' **Companion** melee weapons.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Boss Snarlfang",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 2 to charge rolls for friendly **^^Gitmob Cavalry^^** units while they are wholly within 12\" of this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Frazzlegit Shaman on War-Wheela",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "HERO",
+    "WIZARD (1)",
+    "WAR MACHINE",
+    "GITMOB"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "9",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Snarlfangs' Frothing Jaws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Wheela Slicers",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Gimme All da Light",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Friendly **^^Gitmob^^** units that are not **Frazzlegit Shamans on War-Wheelas** cannot be targeted by shooting attacks while they are wholly within 6\" of this unit,",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Frazzlemist",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "Pick up to 3 visible enemy units within 9\" of this unit to be the targets.",
+     "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Doom Diver Catapult",
+   "pts": 150,
+   "size": 1,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "WAR MACHINE",
+    "GITMOB"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "12",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Slicers and Krag-smasha's Paws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "24\"",
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "3",
+     "Dmg": "3",
+     "Ability": "-",
+     "name": "Doom Diver",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "5+",
+     "Wnd": "6+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Catapult Crew Tools",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Shoddy Wing-like Gizmos",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Any Shooting Phase",
+     "declare": "",
+     "effect": "You can re-roll hit rolls for this unit's shooting attacks this turn, but for each hit roll that is re-rolled, subtract 1 from the Rend characteristic of this unit's **Doom Diver** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Wolfgit Retinue",
+   "pts": 70,
+   "size": 2,
+   "kw": [
+    "CAVALRY",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "GITMOB"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "2",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Rng": "15\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Grot Bow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Snarlfang's Slavering Jaws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Stabbin' Stikka",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "I Got Dis, Boss!",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While a friendly **Snarlboss** is within this unit's combat range, both this unit and that **Snarlboss** have **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Sunsteala Wheelas",
+   "pts": 120,
+   "size": 2,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "GITMOB",
+    "WAR MACHINE",
+    "CHAMPION"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "15\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Grot Bow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Wheela Slicers and Stabbin' Stikka",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Snarlfangs' Frothing Jaws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Careening Destruction",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Turn (Army), Any Movement Phase",
+     "declare": "",
+     "effect": "If this unit is in combat, it can move a distance up to its Move characteristic. It can pass through other models and the combat ranges of enemy units, but it cannot end that move in combat. Then, pick up to 1 enemy **^^Infantry^^** or **^^Cavalry^^** unit that this unit passed across during that move to be the target. Inflict D3 mortal damage on the target. Add 1 to the amount of mortal damage inflicted for each model in this unit.\n**Designer's Note:** *This unit can use this ability even if it is in combat.*",
+     "keywords": "**^^Core^^**, **^^Move^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Sunsteala Wheelas (Scourge of Aqshy)",
+   "pts": 150,
+   "size": 2,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "GITMOB",
+    "WAR MACHINE",
+    "CHAMPION"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "15\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Grot Bow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Wheela Slicers and Stabbin' Stikka",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Snarlfangs' Frothing Jaws",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Slice and Soar",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "This unit can only use this ability if it charged this turn. Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll a dice for each model in the target unit. If there are 2 models in this unit, add 1 to each roll. If there are 3 or more models in this unit, add 2 to each roll. For each 6+, inflict 1 mortal damage on the target.\nThen, you can spend 1 **rage dice**. If you do:\n• Roll 2D6. This unit can move a distance in inches up to the value of the roll. It can move through the combat ranges of enemy units but cannot end that move in combat.\n• If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7.",
+     "keywords": "**^^Core^^**, **^^Attack^^**, **^^Fight^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Snarlboss on War-Wheela",
+   "pts": 120,
+   "size": 1,
+   "kw": [
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "HERO",
+    "WAR MACHINE",
+    "GITMOB"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "9",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Snarlfangs' Frothing Jaws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Chain Basha",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Wheela Slicers",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Frazzlegit's Flame Stream",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Your Movement Phase",
+     "declare": "",
+     "effect": "This unit can move a distance up to its Move characteristic. It can pass through other models and the combat ranges of enemy units, but it cannot end that move in combat. Then, pick up to 1 enemy **^^Infantry^^** unit that this unit passed across during that move to be the target. Inflict D6 mortal damage on the target.\n**Designer's Note:** *This unit can use this ability even if it is in combat.*",
+     "keywords": "**^^Core^^**, **^^Move^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Keepin' Up Wiv da Boss",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Reaction: You declared a  **^^Fight^^** ability for this unit",
+     "declare": "",
+     "effect": "Pick a friendly **Sunsteala Wheelas** unit that has not used a **^^Fight^^** ability this turn and is within this unit's combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Da Glare of Frazzlegit",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Battle (Army), Any Hero Phase",
+     "declare": "",
+     "effect": "For the rest of the turn: \n•  Subtract 1 from hit rolls for attacks made by enemy units while they are in combat with any friendly **Sunsteala Wheelas**.\n•  Add 6\" to the Move characteristic of this unit and friendly **Sunsteala Wheelas**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Snarlpack Cavalry",
+   "pts": 100,
+   "size": 3,
+   "kw": [
+    "CAVALRY",
+    "CHAMPION",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ",
+    "GITMOB"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "3",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "Companion",
+     "name": "Giant Snarlfang's Jaws",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Charge (+1 Damage)",
+     "name": "Pointy Skewas",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Markin' Territory",
+     "kind": "Ability (Passive)",
+     "color": "Purple",
+     "timing": "",
+     "declare": "",
+     "effect": "If this unit charged this turn, add 5 to its control score for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Frazzleburned Scrap",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "If this unit charged this turn, it has **^^Strike-first^^** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "title": "Battle Traits",
+   "items": [
+    {
+     "name": "Battle Traits",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "The Faces of the Bad Moon",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Once Per Battle Round (Army), Start of Battle Round",
+       "declare": "You must use this ability at the start of the battle round. If multiple players are commanding a Gloomspite Gitz army, then instead, at the start of the battle round, those players roll off and only the winner declares and uses this ability this battle round.",
+       "effect": "If it is the first battle round, pick the starting face of the Bad Moon (**Grinnin'**, **Scowlin'**, **Sulkin'** **Cacklin'**). If it is not the first battle round, the face of the Bad Moon moves to the next face in the sequence.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Under the Light of the Bad Moon",
+       "kind": "Ability (Passive)",
+       "color": "Black",
+       "timing": "",
+       "declare": "",
+       "effect": "During the battle, the effects below apply to friendly **^^Gloomspite Gitz^^** units based on the current face of the Bad Moon:\n***Frothing Zealots:*** While the Bad Moon is **Cacklin'** or **Grinnin'**, add 5 to the control scores of friendly non-**^^Squig Moonclan^^** units.\n***Spiderfang Venom:*** While the Bad Moon is **Cacklin'** or **Grinnin'**, combat attacks made by friendly **^^Spiderfang^^** units score critical hits on unmodified hit rolls of 5+. This ability also affects **Companion** weapons.\n***Moonlit Hide:*** While the Bad Moon is **Grinnin'** or **Scowlin'**, subtract 1 from the Rend characteristic of combat attacks that target friendly **^^Troggoth^^** units.\n***Lunar Squigs:*** While the Bad Moon is **Scowlin'** or **Sulkin'**, instead of rolling the dice to determine the Move characteristic of a friendly **^^Squig^^** unit, you can use a value of 4.\n***Sneaky Snarlfangs:*** While the Bad Moon is **Sulkin''** or **Cacklin''**, friendly **^^Gitmob^^** units can use **^^Charge^^** and **^^Shoot^^** abilities even if they used a **^^Retreat^^** ability in the same turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Creeping Gloom",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Turn (Army), Your Hero Phase",
+       "declare": "Pick a terrain feature to be the target.",
+       "effect": "Until the start of your next turn, while friendly non-**^^Monster^^** non-**^^War Machine Gloomspite Gitz^^** units are wholly within 3\" of that terrain feature, they are not visible to enemy units more than 9\" away.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Artefacts of Power",
+   "items": [
+    {
+     "name": "The Clammy Cowl",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "The Clammy Cowl",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Subtract 1 from hit rolls for attacks that target this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Backstabber's Blade",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Backstabber's Blade",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "Once Per Battle, End of Any Turn",
+       "declare": "Pick an enemy **^^Hero^^** in combat with this unit to be the target.",
+       "effect": "Roll a dice. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Leering Gitshield",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Leering Gitshield",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "Each time an unmodified hit roll for an attack that targets this unit is 1, inflict 1 mortal damage on the attacking unit after the **^^Attack^^** ability has been resolved.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Battle Formations: Gloomspite Gitz",
+   "items": [
+    {
+     "name": "Squigalanche",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Bouncing Fury",
+       "kind": "Ability (Passive)",
+       "color": "Red",
+       "timing": "",
+       "declare": "",
+       "effect": "Each time a friendly **^^Squig^^** unit charges, add 1 to the Attacks characteristic of its **Fang-filled Gobs**, **Massive Fang-filled Gobs** or **Huge Fang-filled Gobs** for the rest of the turn.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Troggherd",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Herd Healing",
+       "kind": "Ability (Passive)",
+       "color": "Green",
+       "timing": "",
+       "declare": "",
+       "effect": "Each time a friendly **^^Troggoth^^** unit uses a **^^Fight^^** ability, after that ability has been resolved, **Heal (D3)** that unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Gitmob Pack",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Git and Run",
+       "kind": "Ability (Activated)",
+       "color": "",
+       "timing": "Your Movement Phase",
+       "declare": "Pick a friendly **^^Gitmob^^** unit that is in combat to use this ability. Then, you can pick an enemy unit in combat with that **^^Gitmob^^** unit to be the target. The same enemy unit cannot be picked to be the target of this ability more than once per phase.",
+       "effect": "If you picked a target, roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Then, the unit using this ability can move a distance up to its Move characteristic. It can move through the combat range of enemy units but cannot end that move in combat.",
+       "keywords": "**^^Core^^**, **^^Move^^**, **^^Retreat^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Gloomspite Horde",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Spreading Loonacy",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "Once Per Turn (Army), End of Your Turn",
+       "declare": "Pick up to 3 friendly non-**^^Squig Moonclan^^** or **^^Spiderfang^^** units in combat to be the targets.",
+       "effect": "For each target:\n• Make a pile-in move with the target.\n• Then, pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Heroic Traits",
+   "items": [
+    {
+     "name": "Loontouched",
+     "pts": 20,
+     "abilities": [
+      {
+       "name": "Loontouched",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^**. Otherwise, add 1 to casting rolls for this unit.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "The Clammy Hand",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "The Clammy Hand",
+       "kind": "Ability (Passive)",
+       "color": "Yellow",
+       "timing": "",
+       "declare": "",
+       "effect": "Each time a friendly **^^Gloomspite Gitz^^** unit wholly within 12\" of this unit uses the 'Rally' command, you can make 3 additional rally rolls of D6.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Fight Another Day",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Fight Another Day",
+       "kind": "Ability (Activated)",
+       "color": "Red",
+       "timing": "Any Combat Phase",
+       "declare": "",
+       "effect": "If this unit is in combat, roll a dice. On a 3+, this unit can immediately use the 'Retreat' ability as if it were your movement phase without any mortal damage being inflicted on it.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Manifestation Lores",
+   "items": [
+    {
+     "name": "Dank Manifestations",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "Summon Malevolent Moon",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Malevolent Moon** on the battlefield, pick a friendly **^^Gloomspite Gitz Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Malevolent Moon** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Mork's Mighty Mushroom",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Mork's Mighty Mushroom** on the battlefield, pick a friendly **^^Gloomspite Gitz Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Mork's Mighty Mushroom** wholly within 12\" of the caster and visible to them.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Scrapskuttle's Arachnacauldron",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Scrapskuttle's Arachnacauldron** on the battlefield, pick a friendly **^^Gloomspite Gitz Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Scrapskuttle's Arachnacauldron** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Summon Scuttletide",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "If there is not a friendly **Scuttletide** on the battlefield, pick a friendly **^^Gloomspite Gitz Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Set up a **Scuttletide** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
+       "keywords": "**^^Spell^^**, **^^Summon^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Spell Lores",
+   "items": [
+    {
+     "name": "Lore of the Clammy Dank",
+     "pts": null,
+     "abilities": [
+      {
+       "name": "The Hand of Gork",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Gloomspite Gitz Wizard^^** to cast this spell, pick a visible friendly unit wholly within 12\" of them and not in combat to be the target, then make a casting roll of 2D6.",
+       "effect": "Remove the target from the battlefield and set it up again on the battlefield wholly within 24\" of the caster and more than 9\" from all enemy units.",
+       "keywords": "**^^Spell^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Spore Maws",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Gloomspite Gitz Wizard^^** to cast this spell, pick up to 3 visible enemy units within 12\" of them to be the targets, then make a casting roll of 2D6.",
+       "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+       "keywords": "**^^Spell^^**",
+       "cast": "7",
+       "chant": "",
+       "cost": ""
+      },
+      {
+       "name": "Bad Portents",
+       "kind": "Ability (Spell)",
+       "color": "Yellow",
+       "timing": "Your Hero Phase",
+       "declare": "Pick a friendly **^^Gloomspite Gitz Wizard^^** to cast this spell, then make a casting roll of 2D6.",
+       "effect": "Roll a dice. On a 1-2, nothing happens. On a 3-5, the face of the Bad Moon moves to the next face. On a 6, pick a new face of the Bad Moon for this battle round.",
+       "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+       "cast": "6",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Special Knick-knacks",
+   "items": [
+    {
+     "name": "Fizzcap",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Fizzcap",
+       "kind": "Ability (Activated)",
+       "color": "Yellow",
+       "timing": "Once Per Battle, Any Hero Phase",
+       "declare": "",
+       "effect": "This unit can use a **^^Summon Spell^^** ability from the manifestation lore you picked during army composition as if it had **^^Wizard (1)^^**. Instead of making a casting roll for that spell, the casting roll is 12 and cannot be modified. That spell cannot be unbound. Then, if this unit is not **^^Moonclan^^**, roll a dice. On a 1-4, 1 model in this unit is automatically slain.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Glitzy Bitz Rolla",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Glitzy Bitz Rolla",
+       "kind": "Ability (Activated)",
+       "color": "Black",
+       "timing": "Start of Any Turn",
+       "declare": "",
+       "effect": "Spend 1 rage dice. If your opponent's fury level is lower than yours, they must increase their fury level by 1, to a maximum of 7.\n\nIf this unit is a non-**^^Troggoth^^** unit, add 1 to wound rolls for its attacks for the rest of the turn.\n\nIf this unit is a **^^Troggoth^^**, pick 1 of the following effects to apply for the rest of the turn:\n&#8226; Set the Damage characteristic of this unit's **Colossal Boulder Club** to 6.\n&#8226; Set the Damage characteristic of this unit's **Throwin' Boulders** to 3.\n&#8226; Set the Attacks characteristic of this unit's **Noxious Vomit** to 3.",
+       "keywords": "",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    },
+    {
+     "name": "Spoofshrooms",
+     "pts": 10,
+     "abilities": [
+      {
+       "name": "Spoofshrooms",
+       "kind": "Ability (Activated)",
+       "color": "Purple",
+       "timing": "End of Any Turn",
+       "declare": "",
+       "effect": "Roll a dice. If this unit is **^^Gitmob^^**, roll D3+3 instead. This unit can move a distance in inches up to the roll. It can move through the combat ranges of enemy units but cannot end that move in combat.",
+       "keywords": "**^^Move^^**",
+       "cast": "",
+       "chant": "",
+       "cost": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
