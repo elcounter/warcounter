@@ -7,7 +7,7 @@ Application web installable (PWA), hébergée sur GitHub Pages : https://elcount
 
 ## Version
 
-Version actuelle : **1.4.0** (MAJ 03-11-2026).
+Version actuelle : **1.5.0** (MAJ 03-11-2026).
 Numérotation X.Y.Z :
 - X : très gros changement (décidé par elcounter uniquement)
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
@@ -17,6 +17,7 @@ Numérotation X.Y.Z :
 
 ## Historique
 
+- 1.5.0 (03-11-2026) : Nighthaunt.
 - 1.4.0 (03-11-2026) : Flesh-eater Courts.
 - 1.3.1 (03-11-2026) : Hedonites of Slaanesh + correction placement Maggotkin of Nurgle (Chaos) + suppression catégorie Autres.
 - 1.3.0 (03-11-2026) : Maggotkin of Nurgle.
@@ -79,7 +80,7 @@ Tous les chemins sont relatifs au dépôt (Python 3 sans dépendance ; Node seul
 ## Reste à faire
 
 - Chaos : (complet)
-- Mort : Nighthaunt, Ossiarch Bonereapers
+- Mort : Ossiarch Bonereapers
 - Destruction : Gloomspite Gitz, Ironjawz, Kruleboyz, Sons of Behemat
 
 Images déjà prêtes dans `sources/wc/fac-img-next/`.
