@@ -7,7 +7,7 @@ Application web installable (PWA), hébergée sur GitHub Pages : https://elcount
 
 ## Version
 
-Version actuelle : **2.0.0** (MAJ 03-11-2026).
+Version actuelle : **2.1.0** (MAJ 04-11-2026).
 Numérotation X.Y.Z :
 - X : très gros changement (décidé par elcounter uniquement)
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
@@ -17,6 +17,7 @@ Numérotation X.Y.Z :
 
 ## Historique
 
+- 2.1.0 (04-11-2026) : Images d'unités pour Ogor Mawtribes.
 - 2.0.0 (03-11-2026) : Sons of Behemat. Toutes les factions principales sont maintenant disponibles.
 - 1.9.0 (03-11-2026) : Kruleboyz.
 - 1.8.0 (03-11-2026) : Ironjawz.
