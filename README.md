@@ -7,13 +7,20 @@ Application web installable (PWA), hébergée sur GitHub Pages : https://elcount
 
 ## Version
 
-Version actuelle : **1.2.0** (MAJ 03-11-2026).
+Version actuelle : **1.2.1** (MAJ 03-11-2026).
 Numérotation X.Y.Z :
 - X : très gros changement (décidé par elcounter uniquement)
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
 - Z : changement mineur (correctif, texte, réglage)
 
-À chaque version : mettre à jour `VERSION` et `MAJ` (format JJ-MM-AAAA) en haut de `sources/wc/build.py`, lancer `publish.py` et fournir à elcounter le fichier `WarCounter-X.Y.Z.html`.
+À chaque version : mettre à jour `VERSION` et `MAJ` (format JJ-MM-AAAA) en haut de `sources/wc/build.py`, lancer `publish.py`, fournir à elcounter le fichier `WarCounter-X.Y.Z.html` et **mettre à jour ce README** (version actuelle, historique, et toute section concernée par la modification).
+
+## Historique
+
+- 1.2.1 (03-11-2026) : sur ordinateur, flèche « APP » et étapes d'installation mobiles masquées ; page Installer l'app réduite à la phrase et au bouton.
+- 1.2.0 (03-11-2026) : Blades of Khorne, Disciples of Tzeentch.
+- 1.1.0 (03-11-2026) : Kharadron Overlords, Seraphon, Sylvaneth.
+- 1.0.0 (03-11-2026) : numéro de version et date de MAJ en pied de page ; 16 factions dont Daughters of Khaine, Fyreslayers, Idoneth Deepkin.
 
 ## Structure du dépôt
 
@@ -27,7 +34,7 @@ sources/wc/              Atelier de fabrication
   army-data.js           Données Hashut (Méga Forge) + Battle Tactics
   army-app.js            Listes, Mémo, Phases (toutes factions)
   bs-app.js, bs-data.js  Feuille de bataille (Parties)
-  home.js, home.css      Accueil, page Installer l'app, Règles
+  home.js, home.css      Accueil, page Installer l'app (étapes mobiles masquées sur ordinateur), Règles
   core/                  Règles de base FR (core.json)
   fac/                   Factions issues de BSData
     extract.py           python3 extract.py "<Faction>" <slug>  ->  <slug>_en.json
