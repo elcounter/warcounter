@@ -1,7 +1,7 @@
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs('build-check', exist_ok=True)
-VERSION='2.0.0'
+VERSION='2.1.0'
 MAJ='03-11-2026'
 import re, json, base64, glob, os
 
@@ -116,7 +116,16 @@ of={"urak-taar":"v13-urak-taar","taurus":"taurus","taurus-aqshy":"taurus","war-d
 "dominator-cannons":"v13-dominator","dominator-maces":"v13-dominator","razers-blunder":"v13-infernal-razers","razers-flame":"razers-flame",
 "cohort-spears":"v13-infernal-cohort","cohort-blades":"v13-infernal-cohort","bull-centaurs":"v13-bull-centaurs","sentinels":"v13-sentinels",
 "sentinels-aqshy":"sentinels-aqshy","bombard":"v13-tormentor-bombard","deathshrieker":"v13-deathshrieker","hobgrotz":"v13-hobgrotz",
-"armee":"armee","sorts":"v13-sorts","prieres":"v13-prieres","tactiques":"tactiques"}
+"armee":"armee","sorts":"v13-sorts","prieres":"v13-prieres","tactiques":"tactiques",
+# Ogor Mawtribes
+"tyrant":"tyrant","tyrant-on-glutthorn":"tyrant-on-glutthorn","gluttons":"gluttons","ironguts":"ironguts",
+"leadbelchers":"leadbelchers","butcher":"butcher","slaughtermaster":"slaughtermaster","ironblaster":"ironblaster",
+"gnoblar-scraplauncher":"gnoblar-scraplauncher","gnoblars":"gnoblars","mantrapper":"mantrapper",
+"hunters-with-sabrefangs":"hunters-with-sabrefangs","maulbeast-cavalry":"maulbeast-cavalry","maulbeast-raiders":"maulbeast-raiders",
+"cleavers":"cleavers","gutseers":"gutseers","frostlord-on-stonehorn":"frostlord-on-stonehorn",
+"frostlord-on-thundertusk":"frostlord-on-thundertusk","huskard-on-stonehorn":"huskard-on-stonehorn",
+"huskard-on-thundertusk":"huskard-on-thundertusk","stonehorn-beastriders":"stonehorn-beastriders",
+"thundertusk-beastriders":"thundertusk-beastriders","mournfang-pack":"mournfang-pack","great-mawpot":"great-mawpot"}
 maps={os.path.basename(f)[:-4]:'data:image/jpeg;base64,'+base64.b64encode(open(f,'rb').read()).decode() for f in sorted(glob.glob('maps/*.jpg'))}
 
 fac_js='window.WC_FAC = '+open('fac/factions.json').read()+';\nwindow.WC_FIMG = '+json.dumps({os.path.basename(f)[:-4]:'data:image/jpeg;base64,'+base64.b64encode(open(f,'rb').read()).decode() for f in sorted(glob.glob('fac-img/*.jpg'))})+';'
