@@ -358,7 +358,6 @@
     h += `<div class="panel"><h3 class="sec">Formation et domaines</h3><div class="body">
       <div><label class="lbl" for="formation">Formation de bataille</label><select id="formation" data-act="formation"><option value="">Choisir…</option>${optList(F.formations, l.formation, o => o.en + (o.pts ? ` (+${o.pts} pts)` : ""))}</select>
       ${f ? `<p class="hint">${esc(f.abs.map(a => a.n).join(", "))}</p>` : ""}</div>
-      ${TERR.length ? `<div><label class="lbl" for="terrain">Terrain de faction</label><select id="terrain" data-act="terrain"><option value="">Aucun</option>${optList(TERR, l.terrain, o => o.en + (o.pts ? ` (+${o.pts} pts)` : ""))}</select></div>` : ""}
       ${loreSel("spells", "Domaine de sorts")}${loreSel("prayers", "Domaine de prières")}${loreSel("manifs", "Domaine de manifestations", true)}
       ${!F.spells.length && !F.prayers.length ? `<p class="hint">Pas de domaine de sorts ni de prières pour cette faction.</p>` : ""}
     </div></div>`;
@@ -383,6 +382,13 @@
     h += `<button type="button" class="btn wide" data-act="addreg"${l.regiments.length >= MAX_REG ? " disabled" : ""}>+ Ajouter un régiment (${l.regiments.length} / ${MAX_REG})</button>`;
     if (!F.hashut) h += `<p class="hint">Les options de régiment propres à chaque héros (warscroll) ne sont pas vérifiées : contrôle-les dans ton tome de bataille.</p>`;
 
+    if (TERR.length) {
+      const tu = terrOf(l);
+      h += `<div class="panel"><h3 class="sec"><span>Terrain de faction</span><span class="sec-r">${tu ? (tu.pts ? tu.pts + " pts" : "Gratuit") : "0 pts"}</span></h3><div class="body">
+        <div><label class="lbl" for="terrain">Terrain de faction (0-1)</label><select id="terrain" data-act="terrain"><option value="">Aucun</option>${optList(TERR, l.terrain, o => o.en + (o.pts ? ` (+${o.pts} pts)` : " (gratuit)"))}</select></div>
+        <p class="hint">Hors régiment : ne compte pas comme une pose. Le terrain est placé à l'étape « Déployer le Terrain de Faction ».</p>
+      </div></div>`;
+    }
     h += `<div class="panel"><h3 class="sec"><span>Unités auxiliaires</span><span class="sec-r">${l.aux.reduce((s, e) => s + entryPts(l, e), 0) + auxSurcharge(l)} pts</span></h3><div class="body">
       ${l.aux.map((e, j) => entRow(e, `aux.${j}`, l)).join("")}
       <select data-act="addaux" aria-label="Ajouter une unité auxiliaire"><option value="">+ Ajouter une unité auxiliaire</option>${unitOpts}</select>

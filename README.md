@@ -7,7 +7,7 @@ Application web installable (PWA), hébergée sur GitHub Pages : https://elcount
 
 ## Version
 
-Version actuelle : **2.6.0** (MAJ 04-11-2026).
+Version actuelle : **2.6.1** (MAJ 04-11-2026).
 Numérotation X.Y.Z :
 - X : très gros changement (décidé par elcounter uniquement)
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
@@ -17,6 +17,7 @@ Numérotation X.Y.Z :
 
 ## Historique
 
+- 2.6.1 (04-11-2026) : le terrain de faction a sa propre section « Terrain de faction » dans l'éditeur de liste, sous les régiments (avant les auxiliaires), avec la mention « gratuit » ou « +X pts ».
 - 2.6.0 (04-11-2026) : terrains de faction pour les 23 factions qui en ont un dans BSData (Sons of Behemat et Helsmiths of Hashut n'en ont pas). `extract.py` garde désormais les entrées FACTION TERRAIN sans points (marquées `terrain` dans `factions.json`) ; 49 aptitudes traduites (bloc « # Terrain de faction » en fin des fichiers `fr_*.py`). Liste : menu « Terrain de faction » (0-1, hors régiments, points ajoutés au total), affiché dans le Mémo, les Phases et le texte partagé ; Règles : rubrique « Terrain de faction » dans les warscrolls.
 - 2.5.1 (04-11-2026) : un nouvel utilisateur démarre sans aucune liste (la liste d'exemple Hashut n'est plus créée) ; menus « Sélectionner une faction » sans faction présélectionnée (création de liste et catalogue du Mémo), bouton Créer actif seulement une fois la faction choisie.
 - 2.5.0 (04-11-2026) : statistiques de visites avec GoatCounter (sans cookies), tableau de bord https://elcount3r.goatcounter.com ; chaque changement d'onglet est compté (identifiants de listes anonymisés en `#liste`).

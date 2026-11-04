@@ -530,12 +530,12 @@ input::placeholder{color:#a5a5a5;opacity:1}
   <section id="view-memo"><div id="memo-banner"></div><div class="list" id="list"></div></section>
   <section id="view-unit" hidden><div class="sheet" id="unit"></div></section>
   <section id="view-phases" hidden><div id="phase-banner"></div><div class="phases" id="phases"></div></section>
-  <p class="copy">Propriété intellectuelle © 2026 elcounter<br>WarCounter version 2.6.0 · MAJ 04-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span></p>
+  <p class="copy">Propriété intellectuelle © 2026 elcounter<br>WarCounter version 2.6.1 · MAJ 04-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span></p>
 </main>
 </div>
 <div id="app-home">
 <header class="bar"><div class="in top"><button class="back" id="home-back" type="button" aria-label="Retour" hidden><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><h1 id="home-title">WarCounter</h1><span class="menu-hint" id="menu-hint" hidden aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M6 11l6-6 6 6"/></svg><span>App</span></span></div></header>
-<main class="in"><div id="home-view"></div><p class="copy">Propriété intellectuelle © 2026 elcounter<br>WarCounter version 2.6.0 · MAJ 04-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span></p></main>
+<main class="in"><div id="home-view"></div><p class="copy">Propriété intellectuelle © 2026 elcounter<br>WarCounter version 2.6.1 · MAJ 04-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span></p></main>
 </div>
 <div id="app-bs" hidden>
 
@@ -551,7 +551,7 @@ input::placeholder{color:#a5a5a5;opacity:1}
   </div>
 </header>
 
-<main class="in"><div class="stack" id="view"></div><p class="copy">Propriété intellectuelle © 2026 elcounter<br>WarCounter version 2.6.0 · MAJ 04-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span></p></main>
+<main class="in"><div class="stack" id="view"></div><p class="copy">Propriété intellectuelle © 2026 elcounter<br>WarCounter version 2.6.1 · MAJ 04-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span></p></main>
 
 <footer class="foot" id="foot" hidden>
   <div class="in">
@@ -996,7 +996,6 @@ window.WC_FIMG = {};
     h += `<div class="panel"><h3 class="sec">Formation et domaines</h3><div class="body">
       <div><label class="lbl" for="formation">Formation de bataille</label><select id="formation" data-act="formation"><option value="">Choisir…</option>${optList(F.formations, l.formation, o => o.en + (o.pts ? ` (+${o.pts} pts)` : ""))}</select>
       ${f ? `<p class="hint">${esc(f.abs.map(a => a.n).join(", "))}</p>` : ""}</div>
-      ${TERR.length ? `<div><label class="lbl" for="terrain">Terrain de faction</label><select id="terrain" data-act="terrain"><option value="">Aucun</option>${optList(TERR, l.terrain, o => o.en + (o.pts ? ` (+${o.pts} pts)` : ""))}</select></div>` : ""}
       ${loreSel("spells", "Domaine de sorts")}${loreSel("prayers", "Domaine de prières")}${loreSel("manifs", "Domaine de manifestations", true)}
       ${!F.spells.length && !F.prayers.length ? `<p class="hint">Pas de domaine de sorts ni de prières pour cette faction.</p>` : ""}
     </div></div>`;
@@ -1021,6 +1020,13 @@ window.WC_FIMG = {};
     h += `<button type="button" class="btn wide" data-act="addreg"${l.regiments.length >= MAX_REG ? " disabled" : ""}>+ Ajouter un régiment (${l.regiments.length} / ${MAX_REG})</button>`;
     if (!F.hashut) h += `<p class="hint">Les options de régiment propres à chaque héros (warscroll) ne sont pas vérifiées : contrôle-les dans ton tome de bataille.</p>`;
 
+    if (TERR.length) {
+      const tu = terrOf(l);
+      h += `<div class="panel"><h3 class="sec"><span>Terrain de faction</span><span class="sec-r">${tu ? (tu.pts ? tu.pts + " pts" : "Gratuit") : "0 pts"}</span></h3><div class="body">
+        <div><label class="lbl" for="terrain">Terrain de faction (0-1)</label><select id="terrain" data-act="terrain"><option value="">Aucun</option>${optList(TERR, l.terrain, o => o.en + (o.pts ? ` (+${o.pts} pts)` : " (gratuit)"))}</select></div>
+        <p class="hint">Hors régiment : ne compte pas comme une pose. Le terrain est placé à l'étape « Déployer le Terrain de Faction ».</p>
+      </div></div>`;
+    }
     h += `<div class="panel"><h3 class="sec"><span>Unités auxiliaires</span><span class="sec-r">${l.aux.reduce((s, e) => s + entryPts(l, e), 0) + auxSurcharge(l)} pts</span></h3><div class="body">
       ${l.aux.map((e, j) => entRow(e, `aux.${j}`, l)).join("")}
       <select data-act="addaux" aria-label="Ajouter une unité auxiliaire"><option value="">+ Ajouter une unité auxiliaire</option>${unitOpts}</select>
