@@ -126,3 +126,10 @@ T = {
 "Starfall": ("Choisissez un SORCIER STORMCAST ETERNALS ami pour lancer ce sort, choisissez comme cible une unité d'INFANTERIE ou de CAVALERIE ennemie visible à 18\" de lui, puis faites un jet de lancement de 2D6.", "Jusqu'au début de votre prochain tour, soustrayez 1 au nombre de dés jetés pour les jets de charge de la cible (1 minimum)."),
 "Thundershock": ("Choisissez un SORCIER STORMCAST ETERNALS ami pour lancer ce sort, choisissez comme cible une unité ennemie visible à 12\" de lui, puis faites un jet de lancement de 2D6.", "Soustrayez 1 aux jets de blessure des attaques de la cible jusqu'au début de votre prochain tour."),
 }
+
+# Compagnons (repris de fr_ror.py)
+T.update({
+    'Shield of Azyr': ('', 'Tant que des HÉROS THE BLACKTALONS amis sont entièrement dans la portée de combat de cette unité, cette unité et ces unités amies ont PROTECTION (5+).'),
+    'Aquatic Illusions': ('', 'Soustrayez 1 aux jets de touche des attaques qui ciblent cette unité.'),
+    'Nebulous Sea-fog': ('Faites un jet de lancement de 2D6.', 'Jusqu\'au début de votre prochain tour, tant qu\'une unité THE BLACKTALONS amie est entièrement à 6" ou moins de cette unité, si le jet de touche non modifié d\'une attaque de tir qui cible cette unité est de 1-5, l\'attaque échoue et la séquence d\'attaque prend fin.'),
+})

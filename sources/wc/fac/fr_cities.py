@@ -136,3 +136,10 @@ T["Battle Damaged"]=("", "Tant que cette unité a 10 points de dégâts ou plus 
 # Terrain de faction
 T['Hauled to War'] = ('', 'Après la résolution de l\'aptitude « Mouvement Normal », choisissez un point du champ de bataille à 1" de l\'unité qui l\'a utilisée et à 6" de cet élément de terrain. Retirez cet élément de terrain du champ de bataille et replacez-le à 1" de ce point et à plus de 3" de toutes les unités ennemies.')
 T['Fury of the Faithful'] = ('Choisissez comme cible une unité ennemie visible à 6" de cet élément de terrain.', "Si cet élément de terrain est en mêlée, appliquez l'effet ci-dessous. Sinon, jetez un dé : sur 3+, appliquez-le.\nPour le restant du tour, les armes de mêlée des unités d'INFANTERIE et de CAVALERIE CITIES OF SIGMAR amies ont Crit (Blessure auto) pour les attaques qui ciblent cette unité ennemie.")
+
+# Compagnons (repris de fr_ror.py)
+T.update({
+    'Hidden Agents': ("Choisissez cette unité et une unité de Callis and Toll amie si elles n'ont pas été déployées.", "Placez ces unités en réserve dans l'ombre. Elles sont maintenant déployées."),
+    'Emerge from the Shadows': ("Choisissez cette unité si elle est dans l'ombre.", 'Placez cette unité n\'importe où sur le champ de bataille à plus de 6" de la cible désignée et à plus de 9" de toutes les autres unités ennemies. Puis placez l\'unité de Callis and Toll qui est dans l\'ombre entièrement à 6" ou moins de cette unité, à plus de 6" de la cible désignée et à plus de 9" de toutes les autres unités ennemies.'),
+    'Saviours of Cinderfall': ('', "Tant qu'une unité de Callis and Toll amie est entièrement dans la portée de combat de cette unité, cette unité et cette unité amie ont PROTECTION (5+)."),
+})

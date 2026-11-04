@@ -675,7 +675,7 @@
     if (st.W) discs.push([st.W,"Prot.","wd"]);
     h += `<div class="statband"><div class="stats" style="--n:${discs.length}">` +
       discs.map(([v,lab,c]) => `<div><div class="disc${c ? " " + c : ""}">${esc(v)}</div><div class="l">${lab}</div></div>`).join("") + `</div>
-      <p class="unit-pts">${u.size} figurine${u.size > 1 ? "s" : ""} · ${u.pts ? u.pts + " pts" : "régiment de renom uniquement"}${u.pts && u.size > 1 && !u.hero ? ` · renforcée : ${u.size * 2} fig., ${u.pts * 2} pts` : ""}${u.aqshy ? " · Fléau d'Aqshy" : ""}</p></div>`;
+      <p class="unit-pts">${u.size} figurine${u.size > 1 ? "s" : ""} · ${u.pts ? u.pts + " pts" : /^rr-/.test(u.id) ? "régiment de renom uniquement" : "0 pt, prise avec son héros"}${u.pts && u.size > 1 && !u.hero ? ` · renforcée : ${u.size * 2} fig., ${u.pts * 2} pts` : ""}${u.aqshy ? " · Fléau d'Aqshy" : ""}</p></div>`;
     h += weaponBlock(u.weapons.filter(w => !isMelee(w)), true);
     h += weaponBlock(u.weapons.filter(isMelee), false);
     h += sectionHtml("Aptitudes", u.abilities);

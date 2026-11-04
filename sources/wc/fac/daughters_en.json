@@ -120,6 +120,98 @@
    ]
   },
   {
+   "name": "The Shadow Queen",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "WARD (6+)",
+    "ORDER",
+    "DAUGHTERS OF KHAINE",
+    "MONSTER",
+    "FLY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "15",
+    "Save": "4+",
+    "Control": "10"
+   },
+   "weapons": [
+    {
+     "Atk": "8",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Crit (Mortal)",
+     "name": "Heartrender",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "6",
+     "Ability": "Crit (Mortal)",
+     "name": "Envenomed Tail",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Coils of the Shadow",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "If any enemy units are **constricted**, they are no longer **constricted**. Pick an enemy **^^Hero^^** or **^^Monster^^** in combat with this unit to be the target.",
+     "effect": "Roll a dice. On a 3+, until the start of your next turn, the target is **constricted** while it is in combat with this unit.\nThis unit's combat attacks that target a **constricted** enemy unit score critical hits on unmodified hit rolls of 5+.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Heartrender** is 5.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Crown of Serpents",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick an enemy unit in combat with this unit to be the target.",
+     "effect": "Roll 5 dice. Add 2 to each roll if the target is **constricted**. For each 5+, pick 1 of the following effects. You cannot pick the same effect more than once per turn.\n• Subtract 1 from hit rolls for the target's combat attacks for the rest of the turn.\n• Subtract 1 from wound rolls for the target's combat attacks for the rest of the turn.\n• Random characteristic rolls for. the Damage characteristic of the target's melee weapons are treated as unmodified rolls of 1 for the rest of the turn.\n• Inflict D3 mortal damage on the target.\n• The target cannot be healed or have slain models returned to it for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Two Bodies, One Soul",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Battle (Army), Your Hero Phase",
+     "declare": "This unit can use this ability even if it has been destroyed. If you have used the 'Blessings of Khaine' ability 3 or more times this battle, pick a friendly **Morathi-Khaine** or **Shadow Queen** that has been destroyed to be the target.",
+     "effect": "Set up a replacement unit identical to the target within 3\" of a friendly **Morathi-Khaine** or **Shadow Queen**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
    "name": "Krethusa the Croneseer",
    "pts": 220,
    "size": 1,

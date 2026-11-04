@@ -1029,6 +1029,140 @@
    ]
   },
   {
+   "name": "Neave's Companions",
+   "pts": 0,
+   "size": 3,
+   "kw": [
+    "INFANTRY",
+    "ORDER",
+    "STORMCAST ETERNALS",
+    "UNIQUE",
+    "THE BLACKTALONS"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "3",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Cyclone Sword and Axe",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Stormcharged Warhammer",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "18\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Hero^^** (+1 Rend)",
+     "name": "Typhoon Crossbow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Anda's Celestial Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Shield of Azyr",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While any friendly **^^The Blacktalons Heroes^^** are wholly within this unit's combat range, both this unit and those friendly units have **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Lorai, Child of the Abyss",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "UNIQUE",
+    "ORDER",
+    "INFANTRY",
+    "THE BLACKTALONS",
+    "WIZARD (1)",
+    "WARD (5+)",
+    "IDONETH DEEPKIN"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Abyssal Touch",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Aquatic Illusions",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from hit rolls for attacks that target this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Nebulous Sea-fog",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Make a casting roll of 2D6.",
+     "effect": "Until the start of your next turn, while a friendly **^^The Blacktalons^^** unit is wholly within 6\" of this unit, if the unmodified hit roll for a shooting attack that targets that unit is 1-5, the attack fails and the attack sequence ends.",
+     "keywords": "**^^Spell^^**",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
    "name": "Neave Blacktalon",
    "pts": 280,
    "size": 1,

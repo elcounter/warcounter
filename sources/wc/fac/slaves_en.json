@@ -2286,6 +2286,73 @@
    ]
   },
   {
+   "name": "The Oathsworn Kin",
+   "pts": 0,
+   "size": 3,
+   "kw": [
+    "UNIQUE",
+    "SLAVES TO DARKNESS",
+    "CHAOS",
+    "DARKOATH",
+    "GUNNAR'S OATHSWORN",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "3",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Heavy Darkoath Weapon",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Gnarled Staff",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Broken Nadja",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit's **Broken Nadja** is on the battlefield, it has **^^Wizard (1)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Withering Death",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible enemy **^^Hero^^** within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "Inflict 1 mortal damage on the target and subtract 1 from the Attacks characteristic of the target's melee weapons until the start of your next turn.",
+     "keywords": "**^^Spell^^**",
+     "cast": "5",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
    "name": "Abraxia, Spear of the Everchosen",
    "pts": 230,
    "size": 1,
@@ -2440,6 +2507,85 @@
      "timing": "Once Per Battle, End of Any Turn",
      "declare": "This unit can only use this ability if any enemy **^^Heroes^^** were slain by this unit's combat attacks this turn.",
      "effect": "Friendly **^^Gunnar's Oathsworn^^** units have **^^Ward (4+)^^** for the rest of the battle.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Singri Brand",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "SLAVES TO DARKNESS",
+    "CHAOS",
+    "DARKOATH",
+    "GUNNAR'S OATHSWORN",
+    "CAVALRY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "4",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Singri's Warbow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Warsteed's Hooves",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Brand Ancestral Knife",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Swift as the Wind",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "Only critical hits score successful hits for shooting attacks that target this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Uncanny Shot",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Rend characteristic of this unit's **Singri's Warbow** for attacks that target enemy units that are within 6\" of a friendly **Gunnar Brand**.",
      "keywords": "",
      "cast": "",
      "chant": "",

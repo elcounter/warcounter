@@ -104,3 +104,11 @@ T = {
 T['Draw Power'] = ('', 'Jetez un dé. Donnez à cet élément de terrain autant de points de pouvoir que le résultat (12 maximum).')
 T['Corrupt the Realms'] = ('Si cet élément de terrain a au moins 9 points de pouvoir, choisissez comme source un objectif ou un élément de terrain à 24" de lui. Puis choisissez comme cibles autant d\'unités ennemies que vous le souhaitez à 3" de la source.', 'Retirez 9 points de pouvoir de cet élément de terrain, puis jetez un D3 pour chaque cible. Sur 2+, infligez-lui autant de dégâts mortels que le résultat.')
 T['Infernal Sorcery'] = ('Si cet élément de terrain a au moins 3 points de pouvoir, choisissez comme cible un SORCIER SLAVES TO DARKNESS ami à 3" de lui.', 'Retirez 3 points de pouvoir de cet élément de terrain, puis ajoutez 1 aux jets de lancement de la cible pour le restant du tour.')
+
+# Compagnons (repris de fr_ror.py)
+T.update({
+    'Broken Nadja': ('', "Tant que la Broken Nadja de cette unité est sur le champ de bataille, l'unité a SORCIER (1)."),
+    'Withering Death': ('Choisissez comme cible un HÉROS ennemi visible à 18" ou moins de cette unité, puis faites un jet de lancement de 2D6.', "Infligez 1 dégât mortel à la cible et soustrayez 1 à la caractéristique d'Attaques des armes de mêlée de la cible jusqu'au début de votre prochain tour."),
+    'Swift as the Wind': ('', 'Seules les touches critiques sont des touches réussies pour les attaques de tir qui ciblent cette unité.'),
+    'Uncanny Shot': ('', 'Ajoutez 1 à la caractéristique de Perforation du Singri\'s Warbow de cette unité pour les attaques qui ciblent des unités ennemies à 6" ou moins d\'un Gunnar Brand ami.'),
+})

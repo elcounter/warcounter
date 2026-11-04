@@ -31,6 +31,8 @@ def extract(fac):
                 if x.attrib.get('name')=='pts' and el.attrib['name'] not in pts: pts[el.attrib['name']]=int(float(x.attrib['value']))
     linked=set(el.attrib.get('name') for el in main.iter(B+'entryLink'))
     units=[]
+    # unités liées sans coût (ex. The Shadow Queen, 0 pt, prise avec Morathi-Khaine)
+    free={el.attrib['name'] for el in main.iter(B+'entryLink') if el.attrib.get('type')=='selectionEntry' and el.attrib.get('hidden')!='true' and el.find(B+'costs') is None}
     for se in lib.find(B+'sharedSelectionEntries'):
         if se.attrib.get('type')!='unit': continue
         n=se.attrib['name']
@@ -40,6 +42,7 @@ def extract(fac):
         if 'Legends' in kws or 'Scourge of Ghyran' in n or 'Anvil of Apotheosis' in n: continue
         if n not in pts:
             if terrain and n in linked: pts[n]=0
+            elif n in free and any(c.attrib.get('name')=='Control' and (c.text or '').strip() not in ('','-') for c in se.iter(B+'characteristic')): pts[n]=0
             else: continue
         size=0
         for m in se.iter(B+'selectionEntry'):

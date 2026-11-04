@@ -9,7 +9,7 @@ Application web installable (PWA), hébergée sur GitHub Pages : https://elcount
 
 ## Version
 
-Version actuelle : **2.13.0** (MAJ 04-11-2026).
+Version actuelle : **2.13.1** (MAJ 04-11-2026).
 Numérotation X.Y.Z :
 - X : très gros changement (décidé par elcounter uniquement)
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
@@ -19,6 +19,7 @@ Numérotation X.Y.Z :
 
 ## Historique
 
+- 2.13.1 (04-11-2026) : unités à 0 pt prises avec leur héros désormais extraites (`extract.py` : entrées liées sans coût, hors jetons sans Contrôle) : The Shadow Queen (Daughters of Khaine), Toll's Companions (Cities of Sigmar), The Oathsworn Kin et Singri Brand (Slaves to Darkness), Neave's Companions et Lorai (Stormcast Eternals). Signalé par un utilisateur.
 - 2.13.0 (04-11-2026) : import d'une liste en texte (écran Listes, panneau « Importer une liste » : champ à coller + bouton « Importer ma liste »). `parseList` dans `army-app.js` lit le format d'export (WarCounter ou app officielle) : nom et points, faction, formation ou armée de renom, domaines, Battle Tactic Cards, régiments, puces General / Reinforced / améliorations, régiment de renom, auxiliaires, terrain de faction. Les lignes non reconnues sont signalées sous le panneau.
 - 2.12.0 (04-11-2026) : export liste par liste en texte à copier-coller (bouton « Exporter la liste (copier le texte) » de l'éditeur), au format des apps d'armée : nom et points, faction, formation ou armée de renom, Manuel du Général, poses (Drops), domaines, Battle Tactic Cards, régiments (General's Regiment, Regiment 1…) avec puces General, Reinforced et améliorations, régiment de renom, auxiliaires, terrain de faction, pied « Créée avec WarCounter ». Suppression de l'export/import JSON de toutes les listes. `window.WC_VERSION` injecté par `build.py`.
 - 2.11.0 (04-11-2026) : armées de renom, paquet Chaos (16 : Blades of Khorne, Disciples of Tzeentch, Maggotkin of Nurgle, Hedonites of Slaanesh, Helsmiths of Hashut, Skaven, Slaves to Darkness). Éditeur de liste : menu « Armée de renom » sous la faction (traits de bataille, améliorations et domaines propres, unités autorisées et points de l'AoR, pas de formation ; les unités non autorisées sont retirées) ; régiments de renom limités à ceux autorisés pour l'AoR ; Mémo et Phases suivent l'AoR ; Règles : rubrique « Armées de renom » dans chaque faction, warscrolls propres en `#regle-u-ar~<id>`, recherche. Sources : `fac/aor.py` -> `aor_en.json` (les 60 AoR), `aor_dump.py "Faction1,Faction2"` liste les textes à traduire, traductions `fr_aor_<paquet>.py`, paquets déclarés dans `AOR_PACKS` de `convert.py` (réutilise les traductions de faction quand le texte anglais est identique), sortie `aor.json` -> `window.WC_AOR`. Restent les paquets Destruction, Ordre et Mort.

@@ -3008,6 +3008,74 @@
    ]
   },
   {
+   "name": "Toll's Companions",
+   "pts": 0,
+   "size": 4,
+   "kw": [
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "UNIQUE",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "3",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti‑**^^Wizard^^** (+1 Rend)",
+     "name": "Exotic Assortment of Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Hidden Agents",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick this unit and a friendly **Callis and Toll** unit if those units have not been deployed.",
+     "effect": "Set up those units in reserve **in the shadows**. They have now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Emerge from the Shadows",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Your Movement Phase",
+     "declare": "Pick this unit if it is **in the shadows**.",
+     "effect": "Set up this unit anywhere on the battlefield more than 6\" from the enemy **mark** and more than 9\" from all other enemy units. Then, set up the **Callis and Toll** unit **in the shadows** wholly within 6\" of this unit, more than 6\" from the enemy **mark** and more than 9\" from all other enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Saviours of Cinderfall",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While a friendly **Callis and Toll** unit is wholly within this unit's combat range, both this unit and that friendly unit have **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
    "name": "Wildercorps Hunters",
    "pts": 120,
    "size": 11,
