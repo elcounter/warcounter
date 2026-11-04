@@ -89,3 +89,12 @@
 #app-home .sup-main{display:block;width:100%;text-align:center;text-decoration:none;margin:0 0 14px;padding:13px 16px}
 #app-home .sup-qr{text-align:center;margin-top:12px}
 #app-home .sup-qr img{width:200px;height:auto;border-radius:10px;border:1px solid #e3ded5}
+
+/* Extra home links */
+.home-extra{display:flex;flex-direction:column;gap:10px;margin:22px 0 8px;align-items:stretch}
+.home-extra .btn-link{display:block;text-align:center;padding:12px 14px;border:1px solid #d8d8d8;border-radius:10px;background:#fff;color:#6b2119;font:600 14px var(--display);text-decoration:none}
+.home-extra .btn-link:active{background:#f7f2ea}
+.fld{display:flex;flex-direction:column;gap:6px;margin:0 0 14px}
+.fld span{font:600 13px var(--display);color:#444}
+.fld select,.fld textarea{font:400 15px var(--body);padding:10px 12px;border:1px solid #ccc;border-radius:8px;background:#fff}
+.fld textarea{resize:vertical;min-height:110px}
