@@ -271,7 +271,7 @@
       <div class="panel"><div class="body">
         <ul class="blk">${items.map(([t,d]) => `<li><b>${t}</b><br>${d}</li>`).join("")}</ul>
       </div></div>
-      <p class="sup-thanks">Tu as une idée ? Utilise le bouton <b>Signaler un bug / Suggestion</b> sur l'accueil.</p>
+      <p class="sup-thanks">Tu as une idée ?<br>Utilise le bouton <b>Signaler un bug / Suggestion</b> sur l'accueil.</p>
     </div>`;
   }
   function feedbackMailto(type, message){
@@ -283,20 +283,10 @@
     return `<div class="sup">
       <div class="sup-hero">
         <h2>Signaler un bug ou suggérer une amélioration</h2>
-        <p>Décris le problème ou ton idée. Un e-mail prérempli s'ouvrira vers <b>warcounter@proton.me</b>.</p>
+        <p>Décris le problème ou ton idée. Un e-mail s'ouvrira vers <b>warcounter@proton.me</b>.</p>
       </div>
       <div class="panel"><div class="body">
-        <label class="fld"><span>Type</span>
-          <select id="fb-type">
-            <option value="Bug">Bug</option>
-            <option value="Suggestion">Suggestion</option>
-            <option value="Autre">Autre</option>
-          </select>
-        </label>
-        <label class="fld"><span>Message</span>
-          <textarea id="fb-msg" rows="5" placeholder="Décris le bug ou ta suggestion…"></textarea>
-        </label>
-        <button type="button" class="btn primary" id="fb-send">Envoyer par e-mail</button>
+        <a class="btn primary" href="mailto:warcounter@proton.me?subject=${encodeURIComponent("[WarCounter] Retour")}">Écrire un e-mail</a>
       </div></div>
     </div>`;
   }
@@ -388,12 +378,6 @@
     } else if (h === "feedback") {
       $("home-title").textContent = "Retour";
       $("home-view").innerHTML = feedbackHtml();
-      const send = $("fb-send");
-      if (send) send.addEventListener("click", () => {
-        const type = ($("fb-type") || {}).value || "Retour";
-        const msg = ($("fb-msg") || {}).value || "";
-        location.href = feedbackMailto(type, msg);
-      });
     } else if (h === "installer") {
       $("home-title").textContent = "Installer l'app";
       $("home-view").innerHTML = installHtml();
