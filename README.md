@@ -7,7 +7,7 @@ Application web installable (PWA), hébergée sur GitHub Pages : https://elcount
 
 ## Version
 
-Version actuelle : **2.2.0** (MAJ 04-11-2026).
+Version actuelle : **2.3.0** (MAJ 04-11-2026).
 Numérotation X.Y.Z :
 - X : très gros changement (décidé par elcounter uniquement)
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
@@ -17,6 +17,7 @@ Numérotation X.Y.Z :
 
 ## Historique
 
+- 2.3.0 (04-11-2026) : suppression des images de factions ; l'onglet Règles affiche les factions en lignes cliquables (nom + nombre d'unités). L'app ne contient plus aucune image Games Workshop, hors cartes des battleplans (onglet Parties).
 - 2.2.0 (04-11-2026) : plus aucune image dans le Mémo (Règles de l'armée, Sorts, Prières, Battle Tactics, unités) ; les tuiles carrées deviennent des lignes cliquables (cartes compactes). Seules restent les images des factions dans l'onglet Règles (Hashut compris, `fac-img/hashut.jpg`). Objectif : limiter les risques de droits d'auteur en vue d'une diffusion grand public.
 - 2.1.1 (04-11-2026) : suppression de toutes les images d'unités (Hashut et Ogor Mawtribes) dans le Mémo et les fiches. On garde les images des factions (onglet Règles, tuile Règles de l'armée) et des tuiles Sorts, Prières et Battle Tactics. Choix définitif : pas d'images d'unités.
 - 2.1.0 (04-11-2026) : Images d'unités pour Ogor Mawtribes.
@@ -53,8 +54,6 @@ sources/wc/              Atelier de fabrication
     dump.py              python3 dump.py <slug>  : liste les textes à traduire
     fr_<slug>.py         Traductions : T = {nom: (annonce_fr, effet_fr)}
     convert.py           Construit factions.json (liste des factions dans __main__)
-  fac-img/               Images des factions (onglet Règles uniquement, 600 px, JPEG q80) ; aucune autre image dans l'app
-  fac-img-next/          Images prêtes pour les factions restantes
 sources/bsdata/          Copie des catalogues BSData (age-of-sigmar-4th)
 ```
 
@@ -63,9 +62,8 @@ sources/bsdata/          Copie des catalogues BSData (age-of-sigmar-4th)
 1. `cd sources/wc/fac && python3 extract.py "Nom BSData" slug`
 2. `python3 dump.py slug` puis écrire `fr_slug.py` (toutes les entrées).
 3. Ajouter `('slug','Nom','slug')` dans la liste de `__main__` de `convert.py`, lancer `python3 convert.py` : « Traductions manquantes : [] » attendu. Corriger les timings restés en anglais via `TFIX2` dans `convert.py`.
-4. Copier `fac-img-next/slug.jpg` dans `fac-img/`.
-5. Dans `home.js`, ajouter `slug:"Alliance"` dans la table des alliances (Ordre, Chaos, Mort, Destruction).
-6. Publier : voir « Construire et publier ».
+4. Dans `home.js`, ajouter `slug:"Alliance"` dans la table des alliances (Ordre, Chaos, Mort, Destruction).
+5. Publier : voir « Construire et publier ».
 
 ## Construire et publier
 
@@ -84,9 +82,8 @@ Tous les chemins sont relatifs au dépôt (Python 3 sans dépendance ; Node seul
 - Mots-clés en majuscules françaises (HÉROS, INFANTERIE, SORCIER, PRÊTRE, MONSTRE…).
 - Formules : « Choisissez comme cible… », « Jetez un dé. Sur 3+… », « dégâts mortels », « PROTECTION (5+) », « pour le restant du tour », « jusqu'au début de votre prochain tour », « Soignez (D3) », « FRAPPE EN PREMIER / EN DERNIER », « Note : » pour les Designer's Notes.
 - Pas d'emoji dans l'app.
+- Aucune image d'unité, de faction ni de groupe (choix définitif d'elcounter, pour les droits d'auteur et une diffusion grand public).
 
 ## Reste à faire
 
 Toutes les factions principales sont intégrées.
-
-Images déjà prêtes dans `sources/wc/fac-img-next/`.
