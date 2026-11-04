@@ -138,7 +138,8 @@
   const drops = l => l.regiments.length + l.aux.length;
   const sizeOf = (l, e) => UF(fx(l), e.u).size * (e.reinf ? 2 : 1);
   const holdersFor = (l, t) => entries(l).filter(o => { const u = UF(fx(l), o.e.u); return !u.unique && (t.hero ? u.hero : t.war ? u.war : true); });
-  const lore = (l, kind) => { const L = fx(l)[kind]; const id = l.lore && l.lore[kind]; return id === "" ? null : byId(L, id) || L[0] || null; };
+  const UMANIF = window.WC_UMANIF || [];
+  const lore = (l, kind) => { const L = fx(l)[kind], id = l.lore && l.lore[kind]; if (id === "") return null; return byId(L, id) || (kind === "manifs" ? byId(UMANIF, id) : null) || L[0] || null; };
 
   // Migration et nettoyage des références
   function normalize(l){
@@ -229,7 +230,7 @@
     if (!l) {
       const F = FX[state.cat] || FX.hashut;
       return {l:null, F, units:F.units.slice(), formations:F.formations, tables:F.tables.map(t => ({t, items:t.items, holder:""})),
-        spells:F.spells, prayers:F.prayers, manifs:F.manifs, tactics:TACTICS, wizard:true, priest:true, holders:{}};
+        spells:F.spells, prayers:F.prayers, manifs:F.manifs.concat(UMANIF), tactics:TACTICS, wizard:true, priest:true, holders:{}};
     }
     const F = fx(l), ents = entries(l), ids = [];
     ents.forEach(o => { if (!ids.includes(o.e.u)) ids.push(o.e.u); });
@@ -358,7 +359,7 @@
     h += `<div class="panel"><h3 class="sec">Formation et domaines</h3><div class="body">
       <div><label class="lbl" for="formation">Formation de bataille</label><select id="formation" data-act="formation"><option value="">Choisir…</option>${optList(F.formations, l.formation, o => o.en + (o.pts ? ` (+${o.pts} pts)` : ""))}</select>
       ${f ? `<p class="hint">${esc(f.abs.map(a => a.n).join(", "))}</p>` : ""}</div>
-      ${loreSel("spells", "Domaine de sorts")}${loreSel("prayers", "Domaine de prières")}${loreSel("manifs", "Domaine de manifestations", true)}
+      ${loreSel("spells", "Domaine de sorts")}${loreSel("prayers", "Domaine de prières")}
       ${!F.spells.length && !F.prayers.length ? `<p class="hint">Pas de domaine de sorts ni de prières pour cette faction.</p>` : ""}
     </div></div>`;
 
@@ -387,6 +388,14 @@
       h += `<div class="panel"><h3 class="sec"><span>Terrain de faction</span><span class="sec-r">${tu ? (tu.pts ? tu.pts + " pts" : "Gratuit") : "0 pts"}</span></h3><div class="body">
         <div><label class="lbl" for="terrain">Terrain de faction (0-1)</label><select id="terrain" data-act="terrain"><option value="">Aucun</option>${optList(TERR, l.terrain, o => o.en + (o.pts ? ` (+${o.pts} pts)` : " (gratuit)"))}</select></div>
         <p class="hint">Hors régiment : ne compte pas comme une pose. Le terrain est placé à l'étape « Déployer le Terrain de Faction ».</p>
+      </div></div>`;
+    }
+    {
+      const cur = lore(l, "manifs"), og = (lab, L) => L.length ? `<optgroup label="${lab}">${optList(L, cur && cur.id, o => o.en)}</optgroup>` : "";
+      h += `<div class="panel"><h3 class="sec"><span>Manifestations</span></h3><div class="body">
+        <div><label class="lbl" for="lore-manifs">Domaine de manifestations</label><select id="lore-manifs" data-act="lore" data-k="manifs"><option value=""${cur ? "" : " selected"}>Aucun</option>${og("Manifestations de la faction", F.manifs)}${og("Manifestations génériques", UMANIF)}</select></div>
+        ${cur ? `<p class="hint">${esc(cur.abs.map(a => a.n.replace(/^Summon /, "")).join(", "))}</p>` : ""}
+        <p class="hint">1 domaine de manifestations par armée : celui de ta faction ou un domaine générique. Il faut un SORCIER ou un PRÊTRE pour les invoquer.</p>
       </div></div>`;
     }
     h += `<div class="panel"><h3 class="sec"><span>Unités auxiliaires</span><span class="sec-r">${l.aux.reduce((s, e) => s + entryPts(l, e), 0) + auxSurcharge(l)} pts</span></h3><div class="body">
@@ -428,7 +437,7 @@
     out.push(l.name || "Sans nom", `${F.en} · ${listPts(l)} / ${l.limit} pts · ${drops(l)} pose${drops(l) > 1 ? "s" : ""}`);
     if (f) out.push(`Formation : ${f.en}`);
     if (terrOf(l)) out.push(`Terrain de faction : ${terrOf(l).en}${terrOf(l).pts ? ` (${terrOf(l).pts} pts)` : ""}`);
-    [["spells","Sorts"],["prayers","Prières"],["manifs","Manifestations"]].forEach(([k, lab]) => { const x = lore(l, k); if (x && F[k].length) out.push(`${lab} : ${x.en}`); });
+    [["spells","Sorts"],["prayers","Prières"],["manifs","Manifestations"]].forEach(([k, lab]) => { const x = lore(l, k); if (x) out.push(`${lab} : ${x.en}`); });
     l.regiments.forEach((r, i) => {
       out.push("", i === 0 ? "Régiment du général" : `Régiment ${i + 1}`);
       if (r.hero) out.push(line(r.hero).replace(/^- /, i === 0 ? "- Général : " : "- "));

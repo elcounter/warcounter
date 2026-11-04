@@ -1,7 +1,7 @@
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs('build-check', exist_ok=True)
-VERSION='2.6.1'
+VERSION='2.7.0'
 MAJ='04-11-2026'
 LEGAL='<span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span>'
 import re, json, base64, glob, os
@@ -128,7 +128,7 @@ imgs={os.path.basename(f)[:-4]:'data:image/jpeg;base64,'+base64.b64encode(open(f
 of={}
 maps={os.path.basename(f)[:-4]:'data:image/jpeg;base64,'+base64.b64encode(open(f,'rb').read()).decode() for f in sorted(glob.glob('maps/*.jpg'))}
 
-fac_js='window.WC_FAC = '+open('fac/factions.json').read()+';\nwindow.WC_FIMG = '+json.dumps({os.path.basename(f)[:-4]:'data:image/jpeg;base64,'+base64.b64encode(open(f,'rb').read()).decode() for f in sorted(glob.glob('fac-img/*.jpg'))})+';'
+fac_js='window.WC_FAC = '+open('fac/factions.json').read()+';\nwindow.WC_UMANIF = '+open('fac/universal.json').read()+';\nwindow.WC_FIMG = '+json.dumps({os.path.basename(f)[:-4]:'data:image/jpeg;base64,'+base64.b64encode(open(f,'rb').read()).decode() for f in sorted(glob.glob('fac-img/*.jpg'))})+';'
 army_js='(function(){\n  "use strict";\n'+open('army-data.js').read()+"\n  const IMG = "+json.dumps(imgs)+";\n  const PHOTO_OF = "+json.dumps(of)+";\n"+open('army-app.js').read()+'\n})();'
 bs_js='(function(){\n  "use strict";\n'+open('bs-data.js').read()+"\n  const MAPS = "+json.dumps(maps)+";\n  window.WC_BS = {BATTLEPLANS, TACTICS, TIERS, MAPS};\n"+open('bs-app.js').read()+'\n})();'
 home_js='(function(){\n  "use strict";\n'+open('home.js').read().replace('/*AB*/',open('ab.js').read()).replace('/*CORE*/',open('core/core.json').read()).replace('/*FACTIONS*/',open('fac/factions.json').read()).replace('/*FIMG*/',json.dumps({os.path.basename(f)[:-4]:'data:image/jpeg;base64,'+base64.b64encode(open(f,'rb').read()).decode() for f in sorted(glob.glob('fac-img/*.jpg'))}))+'\n})();'

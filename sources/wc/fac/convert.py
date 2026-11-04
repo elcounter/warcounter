@@ -218,3 +218,10 @@ if __name__ == '__main__':
     open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'factions.json'), 'w').write(json.dumps(out, ensure_ascii=False).replace("OFFICAR'S", "OFFICER'S"))
     print('Traductions manquantes :', sorted(set(MISSING)))
     for f in out: print(f['en'], len(f['units']), 'unités', [(s['title'], len(s['items'])) for s in f['sections']])
+
+    # Domaines de manifestations génériques
+    import fr_universal
+    U = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'universal_en.json')))
+    uni = [{'id':'u%d' % i, 'en':L['name'], 'abs':[ability(a, fr_universal.T) for a in L['abilities']]} for i, L in enumerate(U)]
+    open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'universal.json'), 'w').write(json.dumps(uni, ensure_ascii=False))
+    print('Manifestations génériques :', [(u['en'], len(u['abs'])) for u in uni])
