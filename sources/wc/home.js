@@ -225,7 +225,12 @@
     return `<div class="welcome"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#6b2119"/><circle cx="32" cy="32" r="25" fill="none" stroke="#d4ae3f" stroke-width="2.5"/><path d="M20 18l6 28 6-18 6 18 6-28" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></svg>
       <h2>Bienvenue sur WarCounter</h2><p>Ton compagnon pour Warhammer Age of Sigmar.</p></div>
       ${STANDALONE ? "" : `<a class="btn-install" href="#installer">${I('<path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 19h14"/>')}<span>Installer l'app</span></a>`}
-      <div class="feat">${FEATURES.map(([id, n, d, svg]) => `<a class="fcard" href="#${id}"><span class="ficon">${I(svg)}</span><span><b>${n}</b><br>${d}</span></a>`).join("")}</div>`;
+      <div class="feat">${FEATURES.map(([id, n, d, svg]) => `<a class="fcard" href="#${id}"><span class="ficon">${I(svg)}</span><span><b>${n}</b><br>${d}</span></a>`).join("")}</div>
+      <div class="home-extra">
+        <a class="btn-link" href="#feedback">Signaler un bug / Suggestion</a>
+        <a class="btn-link" href="#avenir">Fonctionnalités à venir</a>
+        <a class="btn-link" href="#soutenir">Si tu veux soutenir le projet</a>
+      </div>`;
   }
   const STANDALONE = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
   let deferredPrompt = null;
@@ -237,8 +242,8 @@
     return `<div class="sup">
       <div class="sup-hero"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#6b2119"/><circle cx="32" cy="32" r="25" fill="none" stroke="#d4ae3f" stroke-width="2.5"/><path d="M32 46s-13-8-13-17a7 7 0 0 1 13-3.5A7 7 0 0 1 45 29c0 9-13 17-13 17z" fill="#fff"/></svg>
         <h2>Soutenir WarCounter</h2>
-        <p>WarCounter est gratuit, sans publicité, et le restera. Je le développe seul, sur mon temps libre, pour la communauté Age of Sigmar.</p>
-        <p>Si l'app t'est utile et que tu as envie de m'aider à la faire avancer (nouvelles fonctions, mises à jour des règles, corrections), tu peux faire un petit don. <b>Ce n'est absolument pas obligatoire</b> : utiliser l'app et me faire des retours, c'est déjà un super soutien.</p></div>
+        <p>Projet piloté sur mon temps libre, ton abonnement servira à payer un meilleur hébergement et à me donner du temps pour peaufiner l'application.</p>
+        <p>WarCounter est gratuit, sans publicité, et le restera. <b>Ce n'est absolument pas obligatoire</b> : utiliser l'app et me faire des retours, c'est déjà un super soutien.</p></div>
       <div class="panel"><h3 class="sec">Faire un don avec PayPal</h3><div class="body">
         <a class="btn primary sup-main" href="${PAYPAL_URL}" target="_blank" rel="noopener">Faire un don avec PayPal</a>
         <ol class="steps">
@@ -249,6 +254,50 @@
         <div class="sup-qr"><img src="${PAYPAL_QR}" alt="QR code PayPal pour faire un don" width="200" height="200"></div>
       </div></div>
       <p class="sup-thanks">Merci du fond du cœur, et bonnes parties !<br><b>elcounter</b></p>
+    </div>`;
+  }
+  function roadmapHtml(){
+    const items = [
+      ["Gestion de collection", "Suivre tes figurines peintes, en cours et à peindre."],
+      ["Notes personnalisées et renommage des unités", "Annoter et renommer tes unités pour coller à ton armée."],
+      ["Mode campagne PtG / Narratif", "Suivre une campagne Path to Glory ou narrative."],
+      ["Carte communautaire", "Trouver des joueurs, des associations, se localiser sur la map."]
+    ];
+    return `<div class="sup">
+      <div class="sup-hero">
+        <h2>Fonctionnalités à venir</h2>
+        <p>Voici ce qui est prévu pour améliorer WarCounter. L'ordre et les délais peuvent évoluer.</p>
+      </div>
+      <div class="panel"><div class="body">
+        <ul class="blk">${items.map(([t,d]) => `<li><b>${t}</b><br>${d}</li>`).join("")}</ul>
+      </div></div>
+      <p class="sup-thanks">Tu as une idée ? Utilise le bouton <b>Signaler un bug / Suggestion</b> sur l'accueil.</p>
+    </div>`;
+  }
+  function feedbackMailto(type, message){
+    const subject = encodeURIComponent("[WarCounter] " + (type || "Retour"));
+    const body = encodeURIComponent((message || "").trim() || "(Écris ton message ici)");
+    return `mailto:warcounter@proton.me?subject=${subject}&body=${body}`;
+  }
+  function feedbackHtml(){
+    return `<div class="sup">
+      <div class="sup-hero">
+        <h2>Signaler un bug ou suggérer une amélioration</h2>
+        <p>Décris le problème ou ton idée. Un e-mail prérempli s'ouvrira vers <b>warcounter@proton.me</b>.</p>
+      </div>
+      <div class="panel"><div class="body">
+        <label class="fld"><span>Type</span>
+          <select id="fb-type">
+            <option value="Bug">Bug</option>
+            <option value="Suggestion">Suggestion</option>
+            <option value="Autre">Autre</option>
+          </select>
+        </label>
+        <label class="fld"><span>Message</span>
+          <textarea id="fb-msg" rows="5" placeholder="Décris le bug ou ta suggestion…"></textarea>
+        </label>
+        <button type="button" class="btn primary" id="fb-send">Envoyer par e-mail</button>
+      </div></div>
     </div>`;
   }
   function installHtml(){
@@ -324,15 +373,27 @@
     let unitPage = null;
     if (h.startsWith("regle-u-")) { const [fid, ...rest] = h.slice(8).split("~"); const F = FACTIONS.find(f => f.id === fid); const U = fid === "ar" ? (AORU[rest.join("~")] || {}).u : fid === "rr" ? RORU.find(u => u.id === rest.join("~")) : F && F.data && F.data.units.find(u => u.id === rest.join("~")); if (U) unitPage = {F, U}; }
     const rule = unitPage ? {en:unitPage.U.en, unit:true} : fac ? {en:fac.en, fac:true} : h === "regle-renom" ? {en:"Régiments de renom", renom:true} : h.startsWith("regle-") ? RULES.find(r => r.id === h.slice(6)) : null;
-    if (!(h === "" || h === "accueil" || h === "regles" || h === "installer" || h === "soutenir" || rule)) return;
+    if (!(h === "" || h === "accueil" || h === "regles" || h === "installer" || h === "soutenir" || h === "avenir" || h === "feedback" || rule)) return;
     $("menu-hint").hidden = STANDALONE || !(h === "" || h === "accueil" || h === "installer");
-    $("home-back").hidden = !rule && h !== "installer" && h !== "soutenir";
+    $("home-back").hidden = !rule && h !== "installer" && h !== "soutenir" && h !== "avenir" && h !== "feedback";
     if (rule) {
       $("home-title").textContent = rule.en;
       $("home-view").innerHTML = `<div class="rules">${rule.unit ? unitSheet(unitPage.U) : rule.renom ? rorPage() : rule.fac ? (fac.data ? genFactionPage(fac.data) : factionPage()) : rule.core ? corePage(rule) : rule.bp ? bpPage() : rule.tac ? tacPage() : blocks(rule.blocks)}</div>`;
     } else if (h === "soutenir") {
       $("home-title").textContent = "Soutenir le projet";
       $("home-view").innerHTML = supportHtml();
+    } else if (h === "avenir") {
+      $("home-title").textContent = "À venir";
+      $("home-view").innerHTML = roadmapHtml();
+    } else if (h === "feedback") {
+      $("home-title").textContent = "Retour";
+      $("home-view").innerHTML = feedbackHtml();
+      const send = $("fb-send");
+      if (send) send.addEventListener("click", () => {
+        const type = ($("fb-type") || {}).value || "Retour";
+        const msg = ($("fb-msg") || {}).value || "";
+        location.href = feedbackMailto(type, msg);
+      });
     } else if (h === "installer") {
       $("home-title").textContent = "Installer l'app";
       $("home-view").innerHTML = installHtml();
@@ -345,6 +406,6 @@
     }
     window.scrollTo(0, 0);
   }
-  $("home-back").addEventListener("click", () => { const h = location.hash.slice(1); location.hash = h === "installer" || h === "soutenir" ? "accueil" : h.startsWith("regle-u-rr~") ? "regle-renom" : h.startsWith("regle-u-ar~") ? "regle-faction-" + ((AORU[h.slice(11)] || {}).fac || "") : h.startsWith("regle-u-") ? "regle-faction-" + h.slice(8).split("~")[0] : "regles"; });
+  $("home-back").addEventListener("click", () => { const h = location.hash.slice(1); location.hash = h === "installer" || h === "soutenir" || h === "avenir" || h === "feedback" ? "accueil" : h.startsWith("regle-u-rr~") ? "regle-renom" : h.startsWith("regle-u-ar~") ? "regle-faction-" + ((AORU[h.slice(11)] || {}).fac || "") : h.startsWith("regle-u-") ? "regle-faction-" + h.slice(8).split("~")[0] : "regles"; });
   window.addEventListener("hashchange", route);
   route();
