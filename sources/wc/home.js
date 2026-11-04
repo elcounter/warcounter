@@ -152,6 +152,7 @@
   }
   // Régiments de renom
   const ROR = (window.WC_ROR || {}).regiments || [], RORU = (window.WC_ROR || {}).units || [];
+  const UMANIF = window.WC_UMANIF || [];
   function uLink(n){
     for (const F of FACTIONS) { const u = F.data && F.data.units.find(x => x.en === n); if (u) return `#regle-u-${F.id}~${u.id}`; }
     const h = ARMY && ARMY.UNITS.find(x => x.en === n); if (h) return "#" + h.id;
@@ -188,6 +189,10 @@
     return L.length ? `<details class="fold"><summary><span>Régiments de renom <small>· ${L.length}</small></span></summary><div class="fold-body">${L.map(r => rorHtml(r, false)).join("")}</div></details>` : "";
   }
   const rorPage = () => `<p class="hint">Liste et points issus de BSData (Manuel du Général 2025-26). 1 régiment de renom maximum par armée : il compte comme un de tes 5 régiments et ses unités ne peuvent pas être le général ni porter d'amélioration.</p>` + ROR.slice().sort((a, b) => a.en.localeCompare(b.en)).map(r => rorHtml(r, true)).join("");
+  function manifPage(){
+    const lore = L => `<details class="fold"><summary><span>${esc(L.en)} <small>· ${L.abs.length} sort${L.abs.length > 1 ? "s" : ""}</small></span></summary><div class="fold-body">${L.abs.map(abCard).join("")}</div></details>`;
+    return `<p class="hint">Manifestations génériques (domaines universels). Un sorcier peut invoquer les manifestations de son domaine choisi.</p>` + UMANIF.slice().sort((a, b) => a.en.localeCompare(b.en)).map(lore).join("");
+  }
   function genFactionPage(F){
     const sec = s => `<details class="fold"><summary><span>${esc(s.title)}</span></summary><div class="fold-body">${s.items.map(i => i.abs.length === 1 && i.abs[0].n === i.n
         ? abCard({...i.abs[0], cost:i.pts ? "+" + i.pts + " pts" : i.abs[0].cost})
@@ -337,6 +342,7 @@
     add("Régiments de renom", "Manuel du Général", "#regle-renom");
     AOR.forEach(a => { const fe = facEn(a.fac), h = "#regle-faction-" + a.fac; add(a.en, "Armée de renom · " + fe, h); a.bt.concat(...a.tables.map(t => t.items.flatMap(i => i.abs)), ...[a.spells, a.prayers, a.manifs].map(L => L.flatMap(i => i.abs))).forEach(x => add(x.n, `Aptitude · ${a.en} (armée de renom)`, h)); a.xunits.forEach(u => add(u.en, "Unité · armée de renom " + a.en, `#regle-u-ar~${u.id}`, [u.kw])); });
     ROR.forEach(r => { add(r.en, `Régiment de renom · ${r.pts} pts`, "#regle-renom", r.units.map(x => x[0]).concat(r.abs.map(a => a.n))); r.abs.forEach(a => add(a.n, "Aptitude · " + r.en + " (régiment de renom)", "#regle-renom")); });
+    UMANIF.forEach(L => { add(L.en, "Manifestations génériques · domaine", "#regle-manifestations"); L.abs.forEach(a => add(a.n, "Manifestation · " + L.en, "#regle-manifestations")); });
     RORU.forEach(u => add(u.en, "Unité · régiment de renom", `#regle-u-rr~${u.id}`, [u.kw]));
     const seen = new Set(); return out.filter(x => { const k = x.t + "|" + x.href; if (seen.has(k)) return false; seen.add(k); return true; });
   }
@@ -354,7 +360,7 @@
     const card = r => `<a class="rcard core" href="#regle-${r.id}"><b>${esc(r.en)}</b><span>${esc(r.sub)}</span></a>`;
     return `<input type="search" class="rsearch" id="rules-q" placeholder="Rechercher une règle, une faction, une unité, une aptitude…" value="${esc(rulesQ)}" autocomplete="off"><div id="rres" class="rres" hidden></div><div id="rall" class="rall"><h2 class="rh">Général</h2><div class="rgrid">${CORE_PAGES.slice(0, 1).map(card).join("")}</div>
       <h2 class="rh">Règles avancées</h2><div class="rgrid">${CORE_PAGES.slice(1).map(card).join("")}</div>
-      <h2 class="rh">Manuel du Général 2026-27</h2><div class="rgrid">${GHB.map(card).join("")}${ROR.length ? card({id:"renom", en:"Régiments de renom", sub:ROR.length + " régiments"}) : ""}</div>
+      <h2 class="rh">Manuel du Général 2026-27</h2><div class="rgrid">${GHB.map(card).join("")}${ROR.length ? card({id:"renom", en:"Régiments de renom", sub:ROR.length + " régiments"}) : ""}${UMANIF.length ? card({id:"manifestations", en:"Manifestations génériques", sub:UMANIF.length + " domaines"}) : ""}</div>
       ${ALLIANCES.map(g => { const L = FACTIONS.filter(f => f.ga === g); return L.length ? `<h2 class="rh">${g}</h2><div class="rgrid">${L.map(f => `<a class="rcard" href="#regle-faction-${f.id}"><b>${esc(f.en)}</b><span>${f.data ? f.data.units.length : (ARMY ? ARMY.UNITS.length : "")} unités</span></a>`).join("")}</div>` : ""; }).join("")}</div>`;
   }
   function route(){
@@ -362,13 +368,13 @@
     const fac = h.startsWith("regle-faction-") ? FACTIONS.find(f => f.id === h.slice(14)) : null;
     let unitPage = null;
     if (h.startsWith("regle-u-")) { const [fid, ...rest] = h.slice(8).split("~"); const F = FACTIONS.find(f => f.id === fid); const U = fid === "ar" ? (AORU[rest.join("~")] || {}).u : fid === "rr" ? RORU.find(u => u.id === rest.join("~")) : F && F.data && F.data.units.find(u => u.id === rest.join("~")); if (U) unitPage = {F, U}; }
-    const rule = unitPage ? {en:unitPage.U.en, unit:true} : fac ? {en:fac.en, fac:true} : h === "regle-renom" ? {en:"Régiments de renom", renom:true} : h.startsWith("regle-") ? RULES.find(r => r.id === h.slice(6)) : null;
+    const rule = unitPage ? {en:unitPage.U.en, unit:true} : fac ? {en:fac.en, fac:true} : h === "regle-renom" ? {en:"Régiments de renom", renom:true} : h === "regle-manifestations" ? {en:"Manifestations génériques", manif:true} : h.startsWith("regle-") ? RULES.find(r => r.id === h.slice(6)) : null;
     if (!(h === "" || h === "accueil" || h === "regles" || h === "installer" || h === "soutenir" || h === "avenir" || h === "feedback" || rule)) return;
     $("menu-hint").hidden = STANDALONE || !(h === "" || h === "accueil" || h === "installer");
     $("home-back").hidden = !rule && h !== "installer" && h !== "soutenir" && h !== "avenir" && h !== "feedback";
     if (rule) {
       $("home-title").textContent = rule.en;
-      $("home-view").innerHTML = `<div class="rules">${rule.unit ? unitSheet(unitPage.U) : rule.renom ? rorPage() : rule.fac ? (fac.data ? genFactionPage(fac.data) : factionPage()) : rule.core ? corePage(rule) : rule.bp ? bpPage() : rule.tac ? tacPage() : blocks(rule.blocks)}</div>`;
+      $("home-view").innerHTML = `<div class="rules">${rule.unit ? unitSheet(unitPage.U) : rule.renom ? rorPage() : rule.manif ? manifPage() : rule.fac ? (fac.data ? genFactionPage(fac.data) : factionPage()) : rule.core ? corePage(rule) : rule.bp ? bpPage() : rule.tac ? tacPage() : blocks(rule.blocks)}</div>`;
     } else if (h === "soutenir") {
       $("home-title").textContent = "Soutenir le projet";
       $("home-view").innerHTML = supportHtml();
