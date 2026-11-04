@@ -1,7 +1,7 @@
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs('build-check', exist_ok=True)
-VERSION='2.13.1'
+VERSION='2.13.2'
 MAJ='04-11-2026'
 LEGAL='<span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span>'
 import re, json, base64, glob, os
@@ -97,7 +97,7 @@ BACK='<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="curren
 bs_shell=open('shells/partie-shell.html').read()
 bs_body=bs_shell[bs_shell.index('</style>')+8:bs_shell.index('<script>')]
 bs_body=bs_body.replace('id="back"','id="bs-back"').replace('<h1 id="title">Feuille de Bataille</h1>','<h1 id="bs-title">Feuille de Bataille</h1>')
-bs_body=bs_body.replace('<main class="in"><div class="stack" id="view"></div></main>','<main class="in"><div class="stack" id="view"></div><p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir notre travail</a><br>Propriété intellectuelle © 2026 elcounter<br>WarCounter version '+VERSION+' · MAJ '+MAJ+'<br>'+LEGAL+'</p></main>')
+bs_body=bs_body.replace('<main class="in"><div class="stack" id="view"></div></main>','<main class="in"><div class="stack" id="view"></div><p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir notre travail</a><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version '+VERSION+' · MAJ '+MAJ+'<br>'+LEGAL+'</p></main>')
 bs_body=bs_body.replace('<button class="icon-btn" id="bp-info"',HOME_A+'<button class="icon-btn" id="bp-info"')
 assert 'id="bs-title"' in bs_body and 'class="copy"' in bs_body
 
@@ -114,7 +114,7 @@ army_body='''<header class="bar">
   <section id="view-memo"><div id="memo-banner"></div><div class="list" id="list"></div></section>
   <section id="view-unit" hidden><div class="sheet" id="unit"></div></section>
   <section id="view-phases" hidden><div id="phase-banner"></div><div class="phases" id="phases"></div></section>
-  <p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir notre travail</a><br>Propriété intellectuelle © 2026 elcounter<br>WarCounter version '''+VERSION+''' · MAJ '''+MAJ+'''<br>'''+LEGAL+'''</p>
+  <p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir notre travail</a><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version '''+VERSION+''' · MAJ '''+MAJ+'''<br>'''+LEGAL+'''</p>
 </main>'''
 
 nav='''<nav class="bnav" aria-label="Navigation principale"><div class="in">
@@ -166,7 +166,7 @@ html='''<title>WarCounter</title>
 </div>
 <div id="app-home">
 <header class="bar"><div class="in top"><button class="back" id="home-back" type="button" aria-label="Retour" hidden>'''+BACK+'''</button><h1 id="home-title">WarCounter</h1><span class="menu-hint" id="menu-hint" hidden aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M6 11l6-6 6 6"/></svg><span>App</span></span></div></header>
-<main class="in"><div id="home-view"></div><p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir notre travail</a><br>Propriété intellectuelle © 2026 elcounter<br>WarCounter version '''+VERSION+''' · MAJ '''+MAJ+'''<br>'''+LEGAL+'''</p></main>
+<main class="in"><div id="home-view"></div><p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir notre travail</a><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version '''+VERSION+''' · MAJ '''+MAJ+'''<br>'''+LEGAL+'''</p></main>
 </div>
 <div id="app-bs" hidden>
 '''+bs_body+'''

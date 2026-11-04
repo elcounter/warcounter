@@ -16,4 +16,4 @@ Application web gratuite, installable sur téléphone et ordinateur, utilisable 
 
 Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar et les noms associés appartiennent à Games Workshop.
 
-Propriété intellectuelle © 2026 elcounter. Tous droits réservés (voir le fichier `LICENSE`).
+© 2026 elcounter. Tous droits réservés (voir le fichier `LICENSE`).
