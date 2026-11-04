@@ -76,3 +76,9 @@ T = {
 "Venom-encrusted Weapons": ('', 'Ajoutez 1 à la Perforation des armes de mêlée de cette unité.'),
 "Vulcha Dive": ('Si cette unité a chargé à ce tour, choisissez une unité ennemie à 1" d\'elle comme cible.', 'Jetez un D3. Sur 2+, infligez à la cible autant de dégâts mortels que le résultat.'),
 }
+
+# Terrain de faction
+T['Man da Tower!'] = ('', 'Tant que cet élément de terrain a un Shouty Boss :\n• Le Shouty Boss ne peut pas utiliser d\'aptitudes de MOUVEMENT.\n• Au lieu de mesurer la portée ou la visibilité vers le Shouty Boss, mesurez-les vers cet élément de terrain.\n• Toutes les attaques qui devraient cibler le Shouty Boss ciblent cet élément de terrain à la place.\n• Si cet élément de terrain est détruit, avant de le retirer du champ de bataille, infligez D3 dégâts mortels au Shouty Boss. Puis placez-le à 3" de cet élément de terrain et hors de mêlée. Cette unité n\'est plus le Shouty Boss. S\'il est impossible de la placer, elle est tuée.')
+T["I'm Off!"] = ('', 'Si cet élément de terrain a un Shouty Boss qui n\'y a pas été placé à ce tour, placez le Shouty Boss entièrement à 6" de cet élément de terrain et hors de mêlée. Cette unité n\'est plus le Shouty Boss.')
+T['Up We Go!'] = ('Si cet élément de terrain n\'a pas de Shouty Boss, choisissez comme cible un HÉROS d\'INFANTERIE KRULEBOYZ ami hors de mêlée et à 3" de lui.', 'Placez la cible sur cet élément de terrain. Elle est à présent un Shouty Boss (voir « Man da Tower! »).')
+T['Sinister Stare'] = ('', 'Ajoutez 1 aux jets de sale coup des unités KRULEBOYZ amies entièrement à 12" de cet élément de terrain ou des unités ennemies à 12" de lui. S\'il a un Shouty Boss, la distance passe à 18" au lieu de 12".')

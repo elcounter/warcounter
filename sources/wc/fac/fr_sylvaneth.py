@@ -76,3 +76,8 @@ T = {
 "Aspect of Ironbark": ("", "En résolvant la séquence de dégâts de cette unité, si vous dépensez des dés de rage dans le cadre de l'aptitude « Braver la Douleur », vous pouvez relancer n'importe lequel des dés qui déterminent si des dégâts sont retirés de sa réserve de dégâts. Après la résolution de la séquence de dégâts, si vous avez obtenu un total de 10+ sur ces relances, cette aptitude n'a plus d'effet pour le restant de la bataille."),
 "Aspect of Heartwood": ("", "Si cette unité est entièrement dans la végétation envahissante, pour chaque cible de cette aptitude entièrement à 12\" d'elle, vous pouvez choisir 1 des effets suivants :\n• En résolvant cette aptitude, jetez un D6 pour la cible au lieu d'un D3. Si, du fait d'une autre aptitude, vous deviez Soigner (3) la cible au lieu de jeter un dé, Soignez (6) à la place.\n• Si la cible est KURNOTHI, au lieu de jeter un D3 et de choisir 1 des effets de cette aptitude, vous pouvez ramener 1 figurine tuée dans la cible."),
 }
+
+# Terrain de faction
+T['Budding Forest'] = ('', 'Quand cet élément de terrain est placé, donnez-lui un pion envahi ami.')
+T['Vengeful Forest Spirits'] = ('Choisissez comme cibles chaque unité ennemie à 3" de cet élément de terrain.', 'Jetez un D3 pour chaque cible. Sur 2+, infligez-lui autant de dégâts mortels que le résultat.')
+T['Ever Growing'] = ("Choisissez comme cible l'élément de terrain le plus proche de celui-ci qui n'a pas de pion envahi ami.", "Si la cible n'est pas contrôlée par votre adversaire, donnez-lui un pion envahi ami.")

@@ -96,3 +96,8 @@ T = {
 "Chuckling Murrain": ("Choisissez comme cible une unité ennemie visible à 12\" de cette unité. Vous ne pouvez pas choisir une MANIFESTATION ou un élément de terrain.", "La cible gagne le mot-clé DISEASED."),
 "Rustfang": ("", "Ajoutez 1 à la Perforation des armes de mêlée de cette unité."),
 }
+
+# Terrain de faction
+T['Rot-Blossom'] = ('', 'Les unités ROTBRINGERS amies ont une PROTECTION (5+) tant qu\'elles sont entièrement à 12" de cet élément de terrain.')
+T['Tendrils of Corruption'] = ('', 'Pour le restant de la phase, cet élément de terrain a un Mouvement de 3" et peut aussitôt se déplacer de 3". Il ne peut ni traverser ni finir ce mouvement dans la portée de mêlée d\'une unité ennemie, ni le finir sur un objectif ou un autre élément de terrain.\nNote : cet élément de terrain ne peut pas utiliser d\'aptitudes de MOUVEMENT, de COURSE, de REPLI ni de CHARGE.')
+T['Riddled With Disease'] = ('', 'Chaque fois qu\'une unité DÉMON MAGGOTKIN OF NURGLE amie entièrement à 12" de cet élément de terrain utilise l\'ordre « Ralliement », vous pouvez faire 1 jet de ralliement supplémentaire d\'un D6, ou 3 si c\'est une unité non HÉROS.')

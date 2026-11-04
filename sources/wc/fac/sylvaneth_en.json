@@ -1397,6 +1397,62 @@
    ]
   },
   {
+   "name": "Awakened Wyldwood",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "FACTION TERRAIN",
+    "ORDER",
+    "SYLVANETH"
+   ],
+   "stats": {
+    "Move": "-",
+    "Health": "8",
+    "Save": "4+",
+    "Control": "-"
+   },
+   "weapons": [],
+   "abilities": [
+    {
+     "name": "Budding Forest",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "When this terrain feature is set up, give it a friendly **overgrown token**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Vengeful Forest Spirits",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick each enemy unit within 3\" of this terrain feature to be the targets.",
+     "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ever Growing",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Battle Round, Start of Battle Round",
+     "declare": "Pick the closest terrain feature to this terrain feature that does not have a friendly **overgrown token** to be the target.",
+     "effect": "If the target is not controlled by your opponent, give that target a friendly **overgrown token**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ],
+   "terrain": true
+  },
+  {
    "name": "Grove Guardian",
    "pts": 200,
    "size": 1,

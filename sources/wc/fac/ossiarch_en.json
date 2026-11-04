@@ -1330,7 +1330,8 @@
      "chant": "",
      "cost": ""
     }
-   ]
+   ],
+   "terrain": true
   },
   {
    "name": "Liege-Kavalos on War Chariot",

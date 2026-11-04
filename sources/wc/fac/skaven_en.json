@@ -2292,6 +2292,62 @@
    ]
   },
   {
+   "name": "Gnawhole",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "FACTION TERRAIN",
+    "CHAOS",
+    "SKAVEN"
+   ],
+   "stats": {
+    "Move": "-",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "-"
+   },
+   "weapons": [],
+   "abilities": [
+    {
+     "name": "Volatile Ground",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Models can pass through this terrain feature but cannot be set up on or end moves on any part of this terrain feature.\nEach time an enemy unit ends a move that passed through or across this terrain feature, roll a D3. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Tunnels Through Reality",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Your Movement Phase",
+     "declare": "Pick a friendly **^^Skaven^^** unit that is not in combat and is wholly within 6\" of this terrain feature to be the target.",
+     "effect": "Remove the target from the battlefield and set it up again wholly within 6\" of another friendly **Gnawhole** and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Endless Vermintide",
+     "kind": "Ability (Command)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Your Turn",
+     "declare": "Pick a friendly non-**^^Hero Skaven Infantry^^** unit that has been destroyed to be the target.",
+     "effect": "Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 6\" of a friendly **Gnawhole** and more than 3\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": "1"
+    }
+   ],
+   "terrain": true
+  },
+  {
    "name": "Brood Terror",
    "pts": 200,
    "size": 1,

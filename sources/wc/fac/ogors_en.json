@@ -1437,6 +1437,74 @@
    ]
   },
   {
+   "name": "Mawpit",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "FACTION TERRAIN",
+    "DESTRUCTION",
+    "OGOR MAWTRIBES",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "-",
+    "Health": "12",
+    "Save": "4+",
+    "Control": "-"
+   },
+   "weapons": [
+    {
+     "Atk": "2D6",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Crit (Mortal)",
+     "name": "Ever-hungry Pit",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Hungry Sinkhole",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick this **Mawpit** to be a **sinkhole**. Then, you can pick another terrain feature within 12\" of this **Mawpit** and that you have not already picked to be a **sinkhole** this battle to be a **sinkhole** for the rest of the turn.\n\nThen, pick each enemy unit within 3\" of the **sinkhole(s)** to be the targets.\n\nFrom the second battle round onwards, increase the range at which another terrain feature can be picked to be a **sinkhole** by 3\" for each previous battle round. If this terrain feature has a **Head Butcher**, increase the range at which another terrain feature can be picked to be a **sinkhole** by 6\" for each previous battle round instead of 3\".",
+     "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Feed the Maw",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "If this terrain feature does not have a **Head Butcher**, pick a friendly **Butcher** within 3\" of it and not in combat to be the target.",
+     "effect": "Place the target on this terrain feature. The target is now a **Head Butcher** (see 'Hungry Sinkhole').\n\nIf this terrain feature is demolished, before removing it from the battlefield, inflict D3 mortal damage on the **Head Butcher**. Then, set up the **Head Butcher** on the battlefield wholly within 3\" of this terrain feature and not in combat. That unit is no longer a **Head Butcher**. If it is not possible to set up the **Head Butcher**, it is slain.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Step Away from the Maw",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Your Movement Phase",
+     "declare": "",
+     "effect": "If this terrain feature has a **Head Butcher** that was not placed on it this turn, set up the **Head Butcher** on the battlefield wholly within 3\" of this terrain feature and not in combat. That unit is no longer a **Head Butcher**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ],
+   "terrain": true
+  },
+  {
    "name": "Ironguts",
    "pts": 200,
    "size": 3,
@@ -2725,7 +2793,8 @@
      "chant": "",
      "cost": ""
     }
-   ]
+   ],
+   "terrain": true
   }
  ],
  "groups": [

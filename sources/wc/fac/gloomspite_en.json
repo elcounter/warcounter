@@ -2162,6 +2162,38 @@
    ]
   },
   {
+   "name": "Bad Moon Loonshrine",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "FACTION TERRAIN",
+    "DESTRUCTION",
+    "GLOOMSPITE GITZ"
+   ],
+   "stats": {
+    "Move": "-",
+    "Health": "14",
+    "Save": "4+",
+    "Control": "-"
+   },
+   "weapons": [],
+   "abilities": [
+    {
+     "name": "Moonclan Lairs",
+     "kind": "Ability (Command)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Your Turn",
+     "declare": "Pick a friendly non-**^^Hero^^** non-**^^Monster^^** non-**^^War Machine Gloomspite Gitz^^** unit that has been destroyed to be the target.",
+     "effect": "Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12\" of this terrain feature and more than 3\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": "1"
+    }
+   ],
+   "terrain": true
+  },
+  {
    "name": "Droggz da Sunchompa",
    "pts": 150,
    "size": 1,

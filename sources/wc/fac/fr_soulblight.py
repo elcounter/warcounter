@@ -110,3 +110,7 @@ T = {
 "The Never-Dead": ("", "Dépensez 1 dé de rage. Si le niveau de fureur de votre adversaire est inférieur au vôtre, il doit l'augmenter de 1 (7 maximum).\nPuis, pour le restant du tour, chaque fois que vous obtenez un jet de sauvegarde non modifié de 5+ contre une attaque qui cible cette unité, l'attaque échoue et la séquence d'attaque s'arrête."),
 "The Incarnadine Killers": ("", "Si cette unité n'est pas en mêlée et qu'une unité ennemie a été détruite par ses attaques de mêlée à ce tour, elle peut se déplacer de D6\" maximum. Elle peut finir ce mouvement en mêlée."),
 }
+
+# Terrain de faction
+T['Locus of Shyish'] = ('', "Chaque fois qu'un SORCIER SOULBLIGHT GRAVELORDS ami lance un SORT d'INVOCATION du domaine « Manifestations of the Grave », vous pouvez mesurer la portée et la visibilité depuis cet élément de terrain.")
+T['Leeching Soil'] = ('', 'Chaque fois qu\'une figurine (amie ou ennemie) est tuée à 9" de cet élément de terrain, Soignez (1) cet élément de terrain.')

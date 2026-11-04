@@ -3095,6 +3095,51 @@
    ]
   },
   {
+   "name": "Dawner's Triumph",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "FACTION TERRAIN",
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "-",
+    "Health": "8",
+    "Save": "4+",
+    "Control": "-"
+   },
+   "weapons": [],
+   "abilities": [
+    {
+     "name": "Hauled to War",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Turn (Army), Reaction: You declared the 'Normal Move' ability for a **^^Cities of Sigmar Infantry^^** unit within 3\" of this terrain feature",
+     "declare": "",
+     "effect": "After the 'Normal Move' ability has been resolved, pick a point on the battlefield within 1\" of the unit that used that ability and within 6\" of this terrain feature. Remove this terrain feature from the battlefield and set it up again within 1\" of that point and more than 3\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Fury of the Faithful",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "Pick a visible enemy unit within 6\" of this terrain feature to be the target.",
+     "effect": "If this terrain feature is in combat, apply the effect below. Otherwise, roll a dice. On a 3+, apply the effect below.\nFor the rest of the turn, melee weapons used by friendly **^^Cities of Sigmar Infantry^^** and **^^Cavalry^^** units have **Crit (Auto-wound)** for attacks that target that enemy unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ],
+   "terrain": true
+  },
+  {
    "name": "Gate Gargants",
    "pts": 320,
    "size": 2,

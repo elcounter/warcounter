@@ -1869,6 +1869,62 @@
    ]
   },
   {
+   "name": "Nexus Chaotica",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "FACTION TERRAIN",
+    "CHAOS",
+    "SLAVES TO DARKNESS"
+   ],
+   "stats": {
+    "Move": "-",
+    "Health": "12",
+    "Save": "4+",
+    "Control": "-"
+   },
+   "weapons": [],
+   "abilities": [
+    {
+     "name": "Draw Power",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "",
+     "effect": "Roll a dice. Give a number of **power points** to this terrain feature equal to the roll. This terrain feature can have a maximum of 12 **power points** at once.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Corrupt the Realms",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "If this terrain feature has 9 or more power points, pick an objective or terrain feature within 24\" of this terrain feature to be the source. Then, pick any number of enemy units within 3\" of the source to be the targets.",
+     "effect": "Remove 9 power points from this terrain feature, then roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Infernal Sorcery",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "If this terrain feature has 3 or more power points, pick a friendly **^^Slaves to Darkness Wizard^^** within 3\" of this terrain feature to be the target.",
+     "effect": "Remove 3 power points from this terrain feature, then add 1 to casting rolls for the target for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ],
+   "terrain": true
+  },
+  {
    "name": "Darkoath Wilderfiend",
    "pts": 120,
    "size": 1,

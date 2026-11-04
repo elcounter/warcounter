@@ -29,19 +29,25 @@ def extract(fac):
         if c is not None:
             for x in c:
                 if x.attrib.get('name')=='pts' and el.attrib['name'] not in pts: pts[el.attrib['name']]=int(float(x.attrib['value']))
+    linked=set(el.attrib.get('name') for el in main.iter(B+'entryLink'))
     units=[]
     for se in lib.find(B+'sharedSelectionEntries'):
         if se.attrib.get('type')!='unit': continue
         n=se.attrib['name']
         kws=[c.attrib['name'] for c in se.iter() if tn(c)=='categoryLink']
         if ghy(se): continue
-        if 'Legends' in kws or 'Scourge of Ghyran' in n or 'Anvil of Apotheosis' in n or n not in pts: continue
+        terrain='FACTION TERRAIN' in kws
+        if 'Legends' in kws or 'Scourge of Ghyran' in n or 'Anvil of Apotheosis' in n: continue
+        if n not in pts:
+            if terrain and n in linked: pts[n]=0
+            else: continue
         size=0
         for m in se.iter(B+'selectionEntry'):
             if m.attrib.get('type')=='model':
                 for c in m.findall(B+'constraints/'+B+'constraint'):
                     if c.attrib['type']=='min' and c.attrib['scope']=='parent': size+=int(float(c.attrib['value']))
         u={'name':n,'pts':pts.get(n),'size':size or 1,'kw':kws,'stats':{},'weapons':[],'abilities':[]}
+        if terrain: u['terrain']=True
         seen=set()
         for p in se.iter(B+'profile'):
             t=p.attrib.get('typeName','')

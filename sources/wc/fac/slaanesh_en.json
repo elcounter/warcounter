@@ -1883,6 +1883,39 @@
    ]
   },
   {
+   "name": "Fane of Slaanesh",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "FACTION TERRAIN",
+    "WARD (6+)",
+    "CHAOS",
+    "HEDONITES OF SLAANESH"
+   ],
+   "stats": {
+    "Move": "-",
+    "Health": "10",
+    "Save": "4+",
+    "Control": "-"
+   },
+   "weapons": [],
+   "abilities": [
+    {
+     "name": "Damned Conduit",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a visible enemy unit within 18\" of this terrain feature to be the target.",
+     "effect": "Roll a dice. On a 3+, until the start of your next turn while the target is within x\" of this terrain feature, the target's weapons have the **Companion** weapon ability, where X is determined by the current battle round as follows:\n\n\n**Battle Round 1:** 9\"\n**Battle Round 2:** 12\"\n**Battle Round 3:** 15\"\n**Battle Round 4:** 18\"\n**Battle Round 5:** 21\"",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ],
+   "terrain": true
+  },
+  {
    "name": "Thricefold Discord",
    "pts": 190,
    "size": 3,

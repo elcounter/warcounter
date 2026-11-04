@@ -1628,6 +1628,74 @@
    ]
   },
   {
+   "name": "Feculent Gnarlmaw",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "CHAOS",
+    "MAGGOTKIN OF NURGLE",
+    "WARD (5+)",
+    "FACTION TERRAIN"
+   ],
+   "stats": {
+    "Move": "-",
+    "Health": "7",
+    "Save": "5+",
+    "Control": "-"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Maggot-infested Mouth",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Rot-Blossom",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Friendly **^^Rotbringers^^** units have **^^Ward (5+)^^** while they are wholly within 12\" of this terrain feature.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Tendrils of Corruption",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Any Movement Phase",
+     "declare": "",
+     "effect": "For the rest of the phase, this terrain feature has a Move characteristic of 3\" and can immediately move 3\". It cannot move through or end that move within the combat ranges of enemy units and it cannot end that move on an objective or another terrain feature.\n**Designer's Note:** *This terrain feature cannot use* **^^Move^^**, **^^Run^^***,* **^^Retreat^^** *or* **^^Charge^^** *abilities.*",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Riddled With Disease",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time a friendly **^^Maggotkin of Nurgle Daemon^^** unit wholly within 12\" of this terrain feature uses the 'Rally' command, you can make 1 additional rally roll of D6. If that unit is a non-**^^Hero^^** unit, you can make 3 additional rally rolls of D6 instead.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ],
+   "terrain": true
+  },
+  {
    "name": "Shaman Foulhoof",
    "pts": 110,
    "size": 1,

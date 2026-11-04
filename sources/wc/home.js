@@ -153,10 +153,10 @@
     const sec = s => `<details class="fold"><summary><span>${esc(s.title)}</span></summary><div class="fold-body">${s.items.map(i => i.abs.length === 1 && i.abs[0].n === i.n
         ? abCard({...i.abs[0], cost:i.pts ? "+" + i.pts + " pts" : i.abs[0].cost})
         : `${i.n !== "Battle Traits" ? `<h4 class="iname">${esc(i.n)}${i.pts ? ` · +${i.pts} pts` : ""}</h4>` : ""}${i.abs.map(abCard).join("")}`).join("")}</div></details>`;
-    const heroes = F.units.filter(u => u.hero), others = F.units.filter(u => !u.hero);
+    const heroes = F.units.filter(u => u.hero && !u.terrain), others = F.units.filter(u => !u.hero && !u.terrain), terr = F.units.filter(u => u.terrain);
     const row = u => `<a class="urow" href="#regle-u-${F.id}~${u.id}"><span>${esc(u.en)}</span><b>${u.pts} pts</b></a>`;
     return `<details class="fold" open><summary><span>Warscrolls <small>· ${F.units.length} unités</small></span></summary><div class="fold-body ulist">
-        <h4 class="iname">Héros</h4>${heroes.map(row).join("")}<h4 class="iname">Unités</h4>${others.map(row).join("")}</div></details>`
+        <h4 class="iname">Héros</h4>${heroes.map(row).join("")}<h4 class="iname">Unités</h4>${others.map(row).join("")}${terr.length ? `<h4 class="iname">Terrain de faction</h4>${terr.map(row).join("")}` : ""}</div></details>`
       + F.sections.map(sec).join("") + `<p class="hint">Données BSData, traduites en français.</p>`;
   }
   function bpPage(){

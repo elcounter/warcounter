@@ -157,6 +157,10 @@ TFIX2.update({
  'Réaction : l\'adversaire a annoncé une aptitude de SORT for a unit à 30" de cette unité.': 'Réaction : l\'adversaire a annoncé une aptitude de SORT pour une unité à 30" de cette unité',
  'Réaction : vous avez annoncé une aptitude de SORT for a DISCIPLES OF TZEENTCH unit wholly à 6" de cette unité': 'Réaction : vous avez annoncé une aptitude de SORT pour une unité DISCIPLES OF TZEENTCH entièrement à 6" de cette unité',
 })
+TFIX2.update({
+ 'Une fois par tour (armée), réaction : vous avez annoncé l\'ordre \'Normal Move\' ability for a CITIES OF SIGMAR INFANTRY unit à 3" of this terrain feature': 'Une fois par tour (armée), réaction : vous avez annoncé l\'aptitude « Mouvement Normal » pour une unité d\'INFANTERIE CITIES OF SIGMAR à 3" de cet élément de terrain',
+ 'Une fois par tour, réaction : vous avez annoncé une aptitude de SORT for a LUMINETH REALM-LORDS unit wholly à 12" of this terrain feature': 'Une fois par tour, réaction : vous avez annoncé une aptitude de SORT pour une unité LUMINETH REALM-LORDS entièrement à 12" de cet élément de terrain',
+})
 COLOR = {'Yellow':'hero','Blue':'shoot','Red':'fight','Orange':'charge','Green':'defense','Purple':'end','Gray':'move','Grey':'move','Black':'passive'}
 TEMPLATES = [
  (r'While this unit has (\d+) or more damage points, the Attacks characteristic of (?:its )?(.+?) is (\S+?) and this unit has a Control characteristic of (\d+)\.?$', r"Tant que cette unité a \1 dégâts ou plus, la caractéristique d'Attaques de \2 est de \3 et sa caractéristique de Contrôle est de \4."),
@@ -198,6 +202,7 @@ def convert(slug, name, img):
              'weapons':[weapon(w) for w in sorted(u['weapons'], key=lambda w: w['kind'] != 'Ranged Weapon')],
              'abilities':[ability(a, T) for a in u['abilities']], 'kw':kw_line(u['kw'])}
         if 'HERO' in u['kw']: o['hero'] = True
+        if u.get('terrain') or 'FACTION TERRAIN' in u['kw']: o['terrain'] = True
         units.append(o)
     units.sort(key=lambda o: (not o.get('hero'), o['en']))
     secs = []

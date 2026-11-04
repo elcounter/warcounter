@@ -1756,6 +1756,50 @@
    ]
   },
   {
+   "name": "Realmshaper Engine",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "FACTION TERRAIN",
+    "SERAPHON",
+    "ORDER"
+   ],
+   "stats": {
+    "Move": "-",
+    "Health": "15",
+    "Save": "4+",
+    "Control": "-"
+   },
+   "weapons": [],
+   "abilities": [
+    {
+     "name": "Fierce Guardians",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to hit rolls for combat attacks made by friendly **^^Saurus^^** or **^^Kroxigor^^** units that target an enemy unit while that enemy unit is within 9\" of this terrain feature.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Power Unleashed",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "If there are any friendly **^^Seraphon Wizards^^** within 3\" of this terrain feature, pick another terrain feature within 24\" of this terrain feature, then pick up to 3 enemy units within 3\" of that terrain feature to be the targets.",
+     "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If that terrain feature has a Health characteristic, inflict D3 mortal damage on it.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ],
+   "terrain": true
+  },
+  {
    "name": "Skink Starpriest",
    "pts": 90,
    "size": 1,

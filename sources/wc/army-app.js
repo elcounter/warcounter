@@ -130,7 +130,8 @@
   const entryPts = (l, e) => { const u = UF(fx(l), e.u); return u.pts * (e.reinf ? 2 : 1) + enhOn(l, e).reduce((s, o) => s + (o.x.pts || 0), 0); };
   const formOf = l => byId(fx(l).formations, l.formation);
   const auxSurcharge = l => 20 * l.aux.length * (l.aux.length - 1) / 2;
-  const listPts = l => entries(l).reduce((s, o) => s + entryPts(l, o.e), 0) + auxSurcharge(l) + ((formOf(l) || {}).pts || 0);
+  const terrOf = l => l.terrain ? UF(fx(l), l.terrain) : null;
+  const listPts = l => entries(l).reduce((s, o) => s + entryPts(l, o.e), 0) + auxSurcharge(l) + ((formOf(l) || {}).pts || 0) + ((terrOf(l) || {}).pts || 0);
   const tacticAb = t => ({c:"end", t:"Fin de votre tour", n:`${t.n} (carte n°${t.card})`, when:["end"],
     x:[...(t.gen ? ["Mise en place : " + t.gen] : []), ...t.t.map(([name, cond], i) => `${TIERS[i]}, ${name} : réussie à la fin de votre tour ${cond.charAt(0).toLowerCase() + cond.slice(1)}`)]});
   const regPts = (l, r) => [r.hero, ...(r.cmd || []), ...r.units].filter(Boolean).reduce((s, e) => s + entryPts(l, e), 0);
@@ -144,6 +145,7 @@
     if (!l.fac || !FX[l.fac]) l.fac = "hashut";
     if (!Array.isArray(l.tactics)) l.tactics = [];
     if (!l.lore) l.lore = {};
+    if (l.terrain && !(UF(fx(l), l.terrain) || {}).terrain) delete l.terrain;
     if (!l.enh) {
       l.enh = {};
       if (l.trait) l.enh.trait = l.trait;
@@ -232,6 +234,7 @@
     const F = fx(l), ents = entries(l), ids = [];
     ents.forEach(o => { if (!ids.includes(o.e.u)) ids.push(o.e.u); });
     const units = ids.map(id => UF(F, id));
+    if (terrOf(l) && !ids.includes(l.terrain)) units.push(terrOf(l));
     const holders = {}, tables = [];
     F.tables.forEach(t => {
       const v = l.enh[t.key]; if (!v) return;
@@ -333,7 +336,7 @@
     normalize(l);
     const F = fx(l), pts = listPts(l), v = validate(l), pct = Math.min(100, Math.round(pts / l.limit * 100));
     const f = formOf(l), empty = !entries(l).length;
-    const HEROES = F.units.filter(u => u.hero), TROOPS = F.units.filter(u => !u.hero), CMDS = F.units.filter(u => u.cmd);
+    const HEROES = F.units.filter(u => u.hero && !u.terrain), TROOPS = F.units.filter(u => !u.hero && !u.terrain), CMDS = F.units.filter(u => u.cmd), TERR = F.units.filter(u => u.terrain);
     const unitOpts = F.hashut ? optList(TROOPS, "", unitLabel)
       : `<optgroup label="Unités">${optList(TROOPS, "", unitLabel)}</optgroup><optgroup label="Héros (si l'option de régiment le permet)">${optList(HEROES, "", unitLabel)}</optgroup>`;
     let h = `<div class="panel"><h3 class="sec dark">Liste</h3><div class="body">
@@ -355,6 +358,7 @@
     h += `<div class="panel"><h3 class="sec">Formation et domaines</h3><div class="body">
       <div><label class="lbl" for="formation">Formation de bataille</label><select id="formation" data-act="formation"><option value="">Choisir…</option>${optList(F.formations, l.formation, o => o.en + (o.pts ? ` (+${o.pts} pts)` : ""))}</select>
       ${f ? `<p class="hint">${esc(f.abs.map(a => a.n).join(", "))}</p>` : ""}</div>
+      ${TERR.length ? `<div><label class="lbl" for="terrain">Terrain de faction</label><select id="terrain" data-act="terrain"><option value="">Aucun</option>${optList(TERR, l.terrain, o => o.en + (o.pts ? ` (+${o.pts} pts)` : ""))}</select></div>` : ""}
       ${loreSel("spells", "Domaine de sorts")}${loreSel("prayers", "Domaine de prières")}${loreSel("manifs", "Domaine de manifestations", true)}
       ${!F.spells.length && !F.prayers.length ? `<p class="hint">Pas de domaine de sorts ni de prières pour cette faction.</p>` : ""}
     </div></div>`;
@@ -417,6 +421,7 @@
     const line = e => { const u = UF(F, e.u), en = enhOn(l, e).map(o => o.x.en); return `- ${u.en}${e.reinf ? " (renforcée)" : ""} : ${entryPts(l, e)} pts${en.length ? " · " + en.join(", ") : ""}`; };
     out.push(l.name || "Sans nom", `${F.en} · ${listPts(l)} / ${l.limit} pts · ${drops(l)} pose${drops(l) > 1 ? "s" : ""}`);
     if (f) out.push(`Formation : ${f.en}`);
+    if (terrOf(l)) out.push(`Terrain de faction : ${terrOf(l).en}${terrOf(l).pts ? ` (${terrOf(l).pts} pts)` : ""}`);
     [["spells","Sorts"],["prayers","Prières"],["manifs","Manifestations"]].forEach(([k, lab]) => { const x = lore(l, k); if (x && F[k].length) out.push(`${lab} : ${x.en}`); });
     l.regiments.forEach((r, i) => {
       out.push("", i === 0 ? "Régiment du général" : `Régiment ${i + 1}`);
@@ -454,6 +459,7 @@
       case "activate": state.active = l.id; break;
       case "formation": l.formation = t.value; break;
       case "lore": l.lore[t.dataset.k] = t.value; break;
+      case "terrain": if (t.value) l.terrain = t.value; else delete l.terrain; break;
       case "sethero": if (t.value) l.regiments[i].hero = {u:t.value, k:newKey()}; break;
       case "addcmd": if (t.value) l.regiments[i].cmd.push({u:t.value, k:newKey()}); break;
       case "addunit": if (t.value) l.regiments[i].units.push({u:t.value, k:newKey()}); break;

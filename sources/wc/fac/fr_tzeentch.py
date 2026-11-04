@@ -88,3 +88,7 @@ T = {
 "Vision of Destined Conquest": ("", "Si cette unité conteste un objectif que vous contrôlez entièrement hors du territoire ami :\n• Si vous êtes l'outsider, gagnez 1 point de destin par point de commandement que vous avez.\n• Sinon, jetez un dé par point de commandement que vous avez. Pour chaque 3+, gagnez 1 point de destin."),
 "Vision of Arcane Sacrifice": ("", "Tant que des unités (amies ou ennemies) sont à 6\" de cette unité :\n• Ajoutez 1 à leurs jets de dissipation.\n• Leurs sorts sont des fiascos sur un jet de lancement non modifié de 4 ou moins.\nLa première fois que cette unité est détruite, gagnez D6 points de destin."),
 }
+
+# Terrain de faction
+T['Magical Focus'] = ('', "La prochaine fois qu'une unité DISCIPLES OF TZEENTCH amie utilise une aptitude de SORT à cette phase, vous pouvez mesurer la portée et la visibilité depuis cet élément de terrain plutôt que depuis le lanceur, et votre adversaire peut mesurer portée et visibilité vers cet élément de terrain pour l'aptitude « Dissipation ».")
+T['Sorcerous Duplication'] = ('', 'Choisissez 1 des effets suivants :\n• S\'il n\'y a qu\'1 Argent Shard ami sur le champ de bataille, placez un autre Argent Shard entièrement à 12" de cet élément de terrain, à plus de 1" de tous les autres éléments de terrain, à plus de 3" de tous les objectifs et à plus de 9" de toutes les unités ennemies.\n• Retirez cet élément de terrain du champ de bataille et replacez-le à plus de 1" de tous les autres éléments de terrain, à plus de 3" de tous les objectifs et à plus de 9" de toutes les unités ennemies.')

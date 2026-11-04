@@ -1868,6 +1868,51 @@
      "cost": ""
     }
    ]
+  },
+  {
+   "name": "Argent Shard",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "DISCIPLES OF TZEENTCH",
+    "CHAOS",
+    "FACTION TERRAIN",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "-",
+    "Health": "6",
+    "Save": "4+",
+    "Control": "-"
+   },
+   "weapons": [],
+   "abilities": [
+    {
+     "name": "Magical Focus",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Any Hero Phase",
+     "declare": "",
+     "effect": "The next time a friendly **^^Disciples of Tzeentch^^** unit uses a **^^Spell^^** ability this phase, when picking targets for that spell, you can measure range and visibility from this terrain feature instead of from the caster, and your opponent can measure range and visibility to this terrain feature instead of to the caster for the purposes of the 'Unbind' ability.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Sorcerous Duplication",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Turn (Army), Any Movement Phase",
+     "declare": "",
+     "effect": "Pick 1 of the following effects:\n• If there is only 1 friendly **Argent Shard** on the battlefield, set up another **Argent Shard** wholly within 12\" of this terrain feature, more than 1\" from all other terrain features, more than 3\" from all objectives and more than 9\" from all enemy units.\n• Remove this terrain feature from the battlefield and set it up again on the battlefield more than 1\" from all other terrain features, more than 3\" from all objectives and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ],
+   "terrain": true
   }
  ],
  "groups": [

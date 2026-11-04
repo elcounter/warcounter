@@ -96,3 +96,6 @@ T = {
 "Violent Offerings": ("Choisissez comme cible une unité ennemie en mêlée avec cette unité.", "Jetez un dé. Sur 3+, infligez D3 dégâts mortels à la cible et Soignez (1) cette unité."),
 "Whispers of Desire": ("Choisissez comme cible une unité ennemie visible à 12\" de cette unité.", "Jetez un dé. Sur 3+, la cible doit se rapprocher de cette unité de 3\" si possible."),
 }
+
+# Terrain de faction
+T['Damned Conduit'] = ('Choisissez comme cible une unité ennemie visible à 18" de cet élément de terrain.', 'Jetez un dé. Sur 3+, jusqu\'au début de votre prochain tour, tant que la cible est à X" de cet élément de terrain, ses armes ont l\'aptitude Compagnon. X dépend du round de bataille en cours :\nRound 1 : 9"\nRound 2 : 12"\nRound 3 : 15"\nRound 4 : 18"\nRound 5 : 21"')

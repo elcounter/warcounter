@@ -1441,7 +1441,8 @@
      "chant": "",
      "cost": ""
     }
-   ]
+   ],
+   "terrain": true
   },
   {
    "name": "Null-Khemist (Scourge of Aqshy)",

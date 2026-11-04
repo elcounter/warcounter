@@ -132,3 +132,7 @@ T = {
 "Aqshian Order of Merit": ("", "Tant que cette unité a des champions, si une unité ennemie en mêlée avec elle utilise l'aptitude « Éruption de Fureur », sur un jet de touche non modifié de 6, n'infligez pas les D3 dégâts mortels supplémentaires à chaque unité en mêlée avec elle."),
 }
 T["Battle Damaged"]=("", "Tant que cette unité a 10 points de dégâts ou plus :\n• Les Attaques de ses Crushing Iron Feet sont de 3.\n• Son score de contrôle est de 5.")
+
+# Terrain de faction
+T['Hauled to War'] = ('', 'Après la résolution de l\'aptitude « Mouvement Normal », choisissez un point du champ de bataille à 1" de l\'unité qui l\'a utilisée et à 6" de cet élément de terrain. Retirez cet élément de terrain du champ de bataille et replacez-le à 1" de ce point et à plus de 3" de toutes les unités ennemies.')
+T['Fury of the Faithful'] = ('Choisissez comme cible une unité ennemie visible à 6" de cet élément de terrain.', "Si cet élément de terrain est en mêlée, appliquez l'effet ci-dessous. Sinon, jetez un dé : sur 3+, appliquez-le.\nPour le restant du tour, les armes de mêlée des unités d'INFANTERIE et de CAVALERIE CITIES OF SIGMAR amies ont Crit (Blessure auto) pour les attaques qui ciblent cette unité ennemie.")

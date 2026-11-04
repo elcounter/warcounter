@@ -113,3 +113,8 @@ T = {
 "Anabolic Accelerators": ("", "Si cette unité a été placée à ce tour, lors de ses jets de charge, ajoutez 1 au nombre de dés jetés (3 maximum), puis retirez 1 dé de votre choix et utilisez les dés restants comme jet de charge."),
 "Serrated Bone Protrusions": ("", "Pour chaque jet de touche non modifié de 1 d'une attaque de mêlée ennemie qui cible cette unité, infligez 1 dégât mortel à l'unité attaquante après la résolution de l'aptitude de CORPS À CORPS."),
 }
+
+# Terrain de faction
+T['Volatile Ground'] = ('', "Les figurines peuvent traverser cet élément de terrain mais ne peuvent pas y être placées ni y finir un mouvement.\nChaque fois qu'une unité ennemie finit un mouvement qui l'a traversé, jetez un D3. Sur 2+, infligez-lui autant de dégâts mortels que le résultat.")
+T['Tunnels Through Reality'] = ('Choisissez comme cible une unité SKAVEN amie hors de mêlée et entièrement à 6" de cet élément de terrain.', 'Retirez la cible du champ de bataille et replacez-la entièrement à 6" d\'un autre Gnawhole ami et à plus de 9" de toutes les unités ennemies.')
+T['The Endless Vermintide'] = ("Choisissez comme cible une unité d'INFANTERIE SKAVEN non HÉROS amie qui a été détruite.", 'Placez une unité de remplacement avec la moitié des figurines de la cible (arrondie au supérieur) entièrement à 6" d\'un Gnawhole ami et à plus de 3" de toutes les unités ennemies.')

@@ -3551,7 +3551,8 @@
      "chant": "",
      "cost": ""
     }
-   ]
+   ],
+   "terrain": true
   },
   {
    "name": "Stormstrike Palladors (Scourge of Aqshy)",

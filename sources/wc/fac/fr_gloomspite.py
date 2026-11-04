@@ -138,3 +138,6 @@ T = {
 "Web Slingshot": ('Choisissez comme cible une unité ennemie visible à 12" de cette unité.', 'Jetez un dé. Sur 3+, la cible est attirée de 3" vers cette unité.'),
 "Whirling Death": ('', 'Ajoutez 1 à la caractéristique Attaques des armes de mêlée de cette unité.'),
 }
+
+# Terrain de faction
+T['Moonclan Lairs'] = ('Choisissez comme cible une unité GLOOMSPITE GITZ non HÉROS, non MONSTRE et non MACHINE DE GUERRE amie qui a été détruite.', 'Placez une unité de remplacement avec la moitié des figurines de la cible (arrondie au supérieur) entièrement à 12" de cet élément de terrain et à plus de 3" de toutes les unités ennemies.')

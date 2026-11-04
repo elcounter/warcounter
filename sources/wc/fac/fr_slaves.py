@@ -99,3 +99,8 @@ T = {
 "Brand of the Unaligned": ("Cette unité ne peut pas utiliser cette aptitude si elle a un Ensorcelled Banner.", "Retirez tous les mots-clés PLEDGE TO CHAOS de cette unité. Puis choisissez 1 des mots-clés suivants, autre qu'un mot-clé déjà choisi pour elle durant cette bataille :\n• PLEDGED TO KHORNE\n• PLEDGED TO TZEENTCH\n• PLEDGED TO NURGLE\n• PLEDGED TO SLAANESH\nCette unité a ce mot-clé pour le restant de la bataille."),
 "Brand of Apoplexy": ("", "Tant que votre niveau de fureur est de 7, ajoutez 1 aux Dégâts des armes de cette unité."),
 }
+
+# Terrain de faction
+T['Draw Power'] = ('', 'Jetez un dé. Donnez à cet élément de terrain autant de points de pouvoir que le résultat (12 maximum).')
+T['Corrupt the Realms'] = ('Si cet élément de terrain a au moins 9 points de pouvoir, choisissez comme source un objectif ou un élément de terrain à 24" de lui. Puis choisissez comme cibles autant d\'unités ennemies que vous le souhaitez à 3" de la source.', 'Retirez 9 points de pouvoir de cet élément de terrain, puis jetez un D3 pour chaque cible. Sur 2+, infligez-lui autant de dégâts mortels que le résultat.')
+T['Infernal Sorcery'] = ('Si cet élément de terrain a au moins 3 points de pouvoir, choisissez comme cible un SORCIER SLAVES TO DARKNESS ami à 3" de lui.', 'Retirez 3 points de pouvoir de cet élément de terrain, puis ajoutez 1 aux jets de lancement de la cible pour le restant du tour.')

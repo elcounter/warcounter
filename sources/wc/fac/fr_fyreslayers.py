@@ -60,3 +60,7 @@ T = {
 "Aureate Hide": ("", "Après la résolution de cette aptitude de CORPS À CORPS, si des figurines ennemies ont été tuées, vous pouvez choisir un PRÊTRE FYRESLAYERS ami visible entièrement à 12\" de cette unité. Donnez-lui D3 points de rituel."),
 "Intense Fyrestream": ("", "Dépensez 1 dé de rage. Si le niveau de fureur de votre adversaire est inférieur au vôtre, il doit l'augmenter de 1 (7 maximum). Puis, pour le restant du tour :\n• Ajoutez X\" à la Portée et X aux Attaques des armes de tir Compagnon de cette unité, X étant votre niveau de fureur.\n• Les armes de tir Compagnon de cette unité ont Tir en mêlée."),
 }
+
+# Terrain de faction
+T['Spending the Forge'] = ('Choisissez un PRÊTRE FYRESLAYERS ami à portée de mêlée de cet élément de terrain pour libérer la puissance de la forge.', "Soignez (D3) chaque unité FYRESLAYERS amie sur le champ de bataille. Une fois cette aptitude utilisée, cet élément de terrain ne peut plus utiliser l'aptitude « Molten Blessing » pour le restant de la bataille.")
+T['Molten Blessing'] = ('Choisissez comme cible un PRÊTRE FYRESLAYERS ami à portée de mêlée de cet élément de terrain.', "Ajoutez 1 aux jets de récitation de la cible pour le restant du tour. De plus, elle peut utiliser l'aptitude « Dissipation » à ce tour comme si elle avait SORCIER (1).")

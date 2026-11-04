@@ -107,3 +107,8 @@ T = {
 "Spectral Carriage": ('', 'Cette unité a une PROTECTION (5+).'),
 "Spell-eaters": ('', 'Cette unité peut tenter de dissiper un sort supplémentaire à chaque phase.'),
 }
+
+# Terrain de faction
+T['Awful Refashioning'] = ('Choisissez un Nexus of Grief ami, puis choisissez comme cibles jusqu\'à 3 unités NIGHTHAUNT amies entièrement à 12" de lui. Une même unité ne peut pas être ciblée par cette aptitude plus d\'une fois par phase.', "Pour chaque cible :\n• Si elle est endommagée, Soignez (D3) la cible.\n• Sinon, ramenez-y des figurines tuées d'une Santé cumulée de D3 maximum.")
+T['Screams of the Penitent'] = ('', 'Les unités ennemies ne peuvent pas utiliser d\'ordres tant qu\'elles sont à 3" de cet élément de terrain.')
+T['Hungry Crypts'] = ('', 'Retirez cet élément de terrain du champ de bataille et replacez-le à 3" d\'une unité NIGHTHAUNT amie, à plus de 3" de tous les objectifs et unités ennemies, à plus de 1" de tous les éléments de terrain et à plus de 12" de tous les autres Nexuses of Grief amis.')

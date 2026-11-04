@@ -1628,7 +1628,8 @@
      "chant": "",
      "cost": ""
     }
-   ]
+   ],
+   "terrain": true
   },
   {
    "name": "High Falconer Felgryn",

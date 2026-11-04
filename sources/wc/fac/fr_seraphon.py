@@ -93,3 +93,7 @@ T = {
 "Titanic Slam": ("Choisissez comme cible une unité ennemie en mêlée avec cette unité.", "Jetez un dé. Ajoutez 1 au résultat si cette unité a chargé à ce tour. Sur 3+, la cible a FRAPPE EN DERNIER pour le restant du tour."),
 "Chameleonic Camouflage": ("", "Tant que cette unité n'a pas utilisé d'aptitude de MOUVEMENT au même tour, elle n'est pas visible des unités ennemies à plus de 12\"."),
 }
+
+# Terrain de faction
+T['Fierce Guardians'] = ('', 'Ajoutez 1 aux jets de touche des attaques de mêlée des unités SAURUS ou KROXIGOR amies qui ciblent une unité ennemie tant qu\'elle est à 9" de cet élément de terrain.')
+T['Power Unleashed'] = ('S\'il y a des SORCIERS SERAPHON amis à 3" de cet élément de terrain, choisissez un autre élément de terrain à 24" de lui, puis choisissez comme cibles jusqu\'à 3 unités ennemies à 3" de cet élément de terrain.', 'Jetez un D3 pour chaque cible. Sur 2+, infligez-lui autant de dégâts mortels que le résultat. Si cet élément de terrain a une caractéristique de Santé, infligez-lui D3 dégâts mortels.')

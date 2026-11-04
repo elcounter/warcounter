@@ -1154,6 +1154,51 @@
    ]
   },
   {
+   "name": "Magmic Battleforge",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "FACTION TERRAIN",
+    "FYRESLAYERS",
+    "ORDER",
+    "WARD (6+)"
+   ],
+   "stats": {
+    "Move": "-",
+    "Health": "8",
+    "Save": "3+",
+    "Control": "-"
+   },
+   "weapons": [],
+   "abilities": [
+    {
+     "name": "Spending the Forge",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Battle (Army), Your Hero Phase",
+     "declare": "Pick a friendly **^^Fyreslayers Priest^^** within this terrain feature's combat range to expend the power of the forge.",
+     "effect": "**Heal (D3)** each friendly **^^Fyreslayers^^** unit on the battlefield. Once this ability has been used, this terrain feature cannot use the 'Molten Blessing' abiity for the rest of the battle.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Molten Blessing",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Start of Any Turn",
+     "declare": "Pick a friendly **^^Fyreslayers Priest^^** within this terrain feature's combat range to be the target.",
+     "effect": "Add 1 to chanting rolls for the target for the rest of the turn. In addition, the target can use the 'Unbind' ability this turn as if it had **^^Wizard (1)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ],
+   "terrain": true
+  },
+  {
    "name": "Auric Runeson on Magmadroth (Scourge of Aqshy)",
    "pts": 330,
    "size": 1,

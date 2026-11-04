@@ -1635,6 +1635,75 @@
    ]
   },
   {
+   "name": "Shrine Luminor",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "FACTION TERRAIN",
+    "FLY",
+    "ORDER",
+    "LUMINETH REALM-LORDS"
+   ],
+   "stats": {
+    "Move": "-",
+    "Health": "12",
+    "Save": "3+",
+    "Control": "-"
+   },
+   "weapons": [],
+   "abilities": [
+    {
+     "name": "Shrine Guardian",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this terrain feature has a Shrine Guardian:\n• This terrain feature has a Move characteristic of 6\" and can use non-command non-**^^Charge^^** **^^Move^^** abilities as if it were a unit. It cannot end a **^^Move^^** ability within the combat range of an enemy unit.\n• The Shrine Guardian cannot use **^^Move^^** abilities and remains on this terrain feature each time it moves.\n• Instead of measuring range or visibility to the Shrine Guardian, measure to this terrain feature instead.\n• All attacks that would target the Shrine Guardian target this terrain feature instead.\n• If this terrain feature is destroyed, before removing it from the battlefield, inflict D3 mortal damage on the Shrine Guardian. Then, set up the Shrine Guardian on the battlefield wholly within 3\" of this terrain feature and not in combat. That unit is no longer a Shrine Guardian. If it is not possible to set up the Shrine Guardian, it is slain.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Enter the Shrine",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "If this terrain feature does not have a Shrine Guardian, pick a friendly **^^Lumineth Realm‑lords Infantry Hero^^** within 3\" of it and not in combat to be the target.",
+     "effect": "Place the target on this terrain feature. The target is now a Shrine Guardian (see 'Shrine Guardian').",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Cleansing Rituals",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn, Reaction: You declared a **^^Spell^^** ability for a **^^Lumineth Realm-lords^^** unit wholly within 12\" of this terrain feature",
+     "declare": "",
+     "effect": "While this terrain feature has a Shrine Guardian, you can re-roll the casting roll for that spell.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Exit the Shrine",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Your Movement Phase",
+     "declare": "",
+     "effect": "If this terrain feature has a Shrine Guardian that was not placed on it this turn, set up the Shrine Guardian on the battlefield wholly within 6\" of this terrain feature and not in combat. That unit is no longer a Shrine Guardian.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ],
+   "terrain": true
+  },
+  {
    "name": "Vanari Lord Regent",
    "pts": 120,
    "size": 1,
