@@ -7,7 +7,7 @@ Application web installable (PWA), hébergée sur GitHub Pages : https://elcount
 
 ## Version
 
-Version actuelle : **2.8.1** (MAJ 04-11-2026).
+Version actuelle : **2.9.0** (MAJ 04-11-2026).
 Numérotation X.Y.Z :
 - X : très gros changement (décidé par elcounter uniquement)
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
@@ -17,6 +17,7 @@ Numérotation X.Y.Z :
 
 ## Historique
 
+- 2.9.0 (04-11-2026) : Parties, les 2 Battle Tactics du joueur 1 se remplissent automatiquement depuis sa liste WarCounter : au choix de la liste, ou au choix d'une faction qui correspond à une de ses listes (liste active en priorité). Rien n'est rempli en mode « Jouer sans tactiques ».
 - 2.8.1 (04-11-2026) : page Soutenir sans adresse e-mail : bouton vers le lien de paiement PayPal (`PAYPAL_URL` dans `home.js`) et QR code (`sources/wc/paypal-qr.png`, injecté par `build.py`).
 - 2.8.0 (04-11-2026) : page « Soutenir le projet » (`#soutenir`, sans onglet), accessible par le petit bouton « Si tu veux soutenir notre travail » en pied de page. Don facultatif via PayPal (lien de paiement et QR code, conseil « Entre proches »).
 - 2.7.0 (04-11-2026) : manifestations génériques (Aetherwrought Machineries, Forbidden Power, Krondspine Incarnate, Morbid Conjuration, Primal Energy, Twilit Sorceries). Nouvelle section « Manifestations » dans l'éditeur de liste, sous les régiments : domaine de la faction ou domaine générique. Sources : `fac/universal.py` (extraction depuis `Lores.cat`) -> `universal_en.json`, traductions `fr_universal.py`, `convert.py` écrit `universal.json`, injecté par `build.py` dans `window.WC_UMANIF`.
@@ -49,7 +50,7 @@ Numérotation X.Y.Z :
 - Listes : création pour les 25 factions, terrain de faction (0-1), domaine de manifestations (faction ou générique), vérification des règles de construction, copie au format texte, export/import JSON (`warcounter-listes-JJ-MM-AAAA.json`).
 - Mémo et Phases : aptitudes de la liste active (ou catalogue d'une faction), recherche instantanée dans le Mémo.
 - Règles : règles de base et avancées, Manuel du Général, 25 factions, recherche globale.
-- Parties : feuille de bataille locale (scores, battleplans).
+- Parties : feuille de bataille locale (scores, battleplans) ; le joueur 1 peut reprendre une de ses listes (faction, poses, auxiliaires et Battle Tactics remplis automatiquement).
 - Soutenir : page de don facultatif (PayPal), lien en pied de page.
 - Statistiques : GoatCounter, scripts placés dans l'en-tête de `index.html` (avant `<title>`), conservés automatiquement par `publish.py`. Absents du fichier HTML téléchargeable.
 - Pas de mode sombre ni de calculateur de dégâts (choix d'elcounter pour l'instant).

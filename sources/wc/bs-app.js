@@ -120,11 +120,23 @@
     return `<select id="f${p}" data-set="faction" data-p="${p}"><option value="">Choisir une faction</option>${FACTIONS.map(([g, list]) => `<optgroup label="${g}">${list.map(f => `<option${f === v ? " selected" : ""}>${esc(f)}</option>`).join("")}</optgroup>`).join("")}</select>`;
   }
   // Listes WarCounter
+  const facName = l => ((window.WC_FAC || []).find(F => F.id === l.fac) || {en:"Helsmiths of Hashut"}).en;
+  // Remplit le joueur 1 depuis une liste : faction, poses, auxiliaires, nom de partie et Battle Tactics
+  function applyList(l){
+    const P = G.players[0];
+    P.list = l.id; P.faction = facName(l);
+    P.poses = (l.regiments || []).length + (l.aux || []).length; P.aux = (l.aux || []).length > 0;
+    if (!G.label) G.label = l.name || "";
+    if (!G.noTac) {
+      const idx = (l.tactics || []).filter(Boolean).map(n => TACTICS.findIndex(t => t.n === n)).filter(i => i >= 0).slice(0, 2);
+      if (idx.length) { P.tac = [idx[0] ?? null, idx[1] ?? null]; G.tac[0] = [[null,null,null],[null,null,null]]; }
+    }
+  }
   function myLists(){ const s = load(LISTS, null); return s && Array.isArray(s.lists) ? s.lists : []; }
   function listSelect(){
     const L = myLists(); if (!L.length) return "";
     const v = G.players[0].list || "";
-    return `<div><label class="lbl" for="ml">Ma liste WarCounter (facultatif)</label><select id="ml" data-set="list" data-p="0"><option value="">Aucune</option>${L.map(l => `<option value="${esc(l.id)}"${l.id === v ? " selected" : ""}>${esc(l.name || "Sans nom")}</option>`).join("")}</select><p class="hint" style="margin-top:6px">Remplit la faction, le nombre de poses et les auxiliaires.</p></div>`;
+    return `<div><label class="lbl" for="ml">Ma liste WarCounter (facultatif)</label><select id="ml" data-set="list" data-p="0"><option value="">Aucune</option>${L.map(l => `<option value="${esc(l.id)}"${l.id === v ? " selected" : ""}>${esc(l.name || "Sans nom")}</option>`).join("")}</select><p class="hint" style="margin-top:6px">Remplit la faction, le nombre de poses, les auxiliaires et les 2 Battle Tactics de la liste. Choisir la faction d'une de tes listes la sélectionne aussi automatiquement.</p></div>`;
   }
   function tacSelect(p, k){
     const v = G.players[p].tac[k], o = G.players[p].tac[1-k];
@@ -305,11 +317,19 @@
     const el = e.target, k = el.dataset.set; if (!k || k === "name" || k === "label") return;
     const p = +el.dataset.p;
     if (k === "bp") { G.bp = el.value === "" ? null : +el.value; G.rounds.forEach(R => R.prim = [[],[]]); }
-    else if (k === "faction") G.players[p].faction = el.value;
+    else if (k === "faction") {
+      G.players[p].faction = el.value;
+      if (p === 0) {
+        // Une de mes listes WarCounter correspond à cette faction : on la reprend (liste active en priorité)
+        const st = load(LISTS, null) || {}, L = myLists().filter(l => facName(l) === el.value);
+        const l = L.find(x => x.id === st.active) || L[0];
+        if (l) applyList(l); else G.players[0].list = "";
+      }
+    }
     else if (k === "list") {
-      const l = myLists().find(x => x.id === el.value), P = G.players[0];
-      P.list = el.value;
-      if (l) { P.faction = ((window.WC_FAC || []).find(F => F.id === l.fac) || {en:"Helsmiths of Hashut"}).en; P.poses = (l.regiments || []).length + (l.aux || []).length; P.aux = (l.aux || []).length > 0; if (!G.label) G.label = l.name || ""; }
+      const l = myLists().find(x => x.id === el.value);
+      G.players[0].list = el.value;
+      if (l) applyList(l);
     }
     else if (k === "tac") { const v = el.value === "" ? null : +el.value; G.players[p].tac[+el.dataset.k] = v; G.tac[p][+el.dataset.k] = [null,null,null]; }
     else if (k === "aux") G.players[p].aux = el.checked;
