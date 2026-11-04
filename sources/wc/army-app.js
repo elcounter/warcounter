@@ -251,6 +251,7 @@
   // ---------- Écran Listes ----------
   const facOptions = sel => FAC_ORDER.map(F => `<option value="${F.id}"${F.id === sel ? " selected" : ""}>${esc(F.en)}</option>`).join("");
   function renderLists(){
+    setTimeout(() => { listMsg = ""; }, 0);
     const cards = state.lists.map(l => {
       const v = validate(l), pts = listPts(l), f = formOf(l);
       return `<button type="button" class="lcard${l.id === state.active ? " on" : ""}" data-open="${esc(l.id)}">
@@ -262,16 +263,50 @@
     }).join("");
     $("lists").innerHTML = `<div class="lhead"><h2>Mes listes</h2></div>
       <div class="panel"><h3 class="sec">Nouvelle liste</h3><div class="body"><div class="row newl"><select id="new-fac" aria-label="Faction de la nouvelle liste">${facOptions(state.newFac || "hashut")}</select><button type="button" class="btn primary" id="new-list">Créer</button></div></div></div>` +
+      `<div class="lbar"><button type="button" class="btn" id="exp-lists"${state.lists.length ? "" : " disabled"}>Exporter mes listes</button><button type="button" class="btn" id="imp-lists">Importer des listes</button><input type="file" id="imp-file" accept=".json,application/json" hidden></div>` +
+      (listMsg ? `<p class="lmsg">${esc(listMsg)}</p>` : "") +
       (cards ? `<div class="lgrid">${cards}</div>` : `<p class="hint center">Aucune liste. Crée ta première liste.</p>`) +
       `<p class="hint">Règles de construction du Manuel du Général 2026-27. Tes listes restent enregistrées sur cet appareil.</p>`;
   }
-  $("lists").addEventListener("change", e => { if (e.target.id === "new-fac") { state.newFac = e.target.value; save(); } });
+  let listMsg = "";
+  const today = () => { const d = new Date(); return [d.getDate(), d.getMonth() + 1, d.getFullYear()].map(n => String(n).padStart(2, "0")).join("-"); };
+  function exportLists(){
+    const blob = new Blob([JSON.stringify({app:"WarCounter", type:"listes", date:today(), lists:state.lists}, null, 1)], {type:"application/json"});
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `warcounter-listes-${today()}.json`;
+    document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+    listMsg = `${state.lists.length} liste${state.lists.length > 1 ? "s" : ""} exportée${state.lists.length > 1 ? "s" : ""}.`; renderLists();
+  }
+  function importLists(file){
+    const r = new FileReader();
+    r.onload = () => {
+      try {
+        const d = JSON.parse(r.result), arr = Array.isArray(d) ? d : Array.isArray(d.lists) ? d.lists : d.regiments ? [d] : null;
+        if (!arr) throw 0;
+        let n = 0;
+        arr.forEach(x => {
+          if (!x || !Array.isArray(x.regiments)) return;
+          const l = clone(x); if (!l.id || getList(l.id)) l.id = newKey();
+          if (!Array.isArray(l.aux)) l.aux = [];
+          normalize(l); state.lists.push(l); n++;
+        });
+        save(); listMsg = n ? `${n} liste${n > 1 ? "s" : ""} importée${n > 1 ? "s" : ""}.` : "Aucune liste trouvée dans ce fichier.";
+      } catch(e) { listMsg = "Fichier non reconnu : choisis un fichier exporté depuis WarCounter."; }
+      renderLists();
+    };
+    r.readAsText(file);
+  }
+  $("lists").addEventListener("change", e => {
+    if (e.target.id === "new-fac") { state.newFac = e.target.value; save(); }
+    if (e.target.id === "imp-file" && e.target.files[0]) importLists(e.target.files[0]);
+  });
   $("lists").addEventListener("click", e => {
     if (e.target.closest("#new-list")) {
       const fac = $("new-fac").value || "hashut";
       const l = {id:newKey(), fac, name:"Nouvelle liste", limit:2000, formation:"", regiments:[{hero:null, cmd:[], units:[]}], aux:[], tactics:[], enh:{}, lore:{}};
       state.lists.push(l); save(); location.hash = "liste-" + l.id; return;
     }
+    if (e.target.closest("#exp-lists")) { exportLists(); return; }
+    if (e.target.closest("#imp-lists")) { $("imp-file").click(); return; }
     const c = e.target.closest("[data-open]");
     if (c) location.hash = "liste-" + c.dataset.open;
   });
@@ -367,9 +402,32 @@
       ${v.info.map(x => `<p class="note">${esc(x)}</p>`).join("")}
     </div></div>`;
 
-    h += `<div class="actions"><button type="button" class="btn" data-act="dup">Dupliquer</button><button type="button" class="btn danger" data-act="dellist">Supprimer la liste</button></div>`;
+    h += `<div class="actions"><button type="button" class="btn primary" data-act="share">Copier la liste en texte</button><button type="button" class="btn" data-act="dup">Dupliquer</button><button type="button" class="btn danger" data-act="dellist">Supprimer la liste</button></div>`;
     $("edit").innerHTML = h;
     $("title").textContent = l.name || "Sans nom";
+  }
+
+  function fallbackCopy(txt){
+    const ta = document.createElement("textarea"); ta.value = txt; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select(); let ok = false; try { ok = document.execCommand("copy"); } catch(e) {} ta.remove(); return ok;
+  }
+  // Liste au format texte (partage)
+  function listText(l){
+    const F = fx(l), f = formOf(l), out = [];
+    const line = e => { const u = UF(F, e.u), en = enhOn(l, e).map(o => o.x.en); return `- ${u.en}${e.reinf ? " (renforcée)" : ""} : ${entryPts(l, e)} pts${en.length ? " · " + en.join(", ") : ""}`; };
+    out.push(l.name || "Sans nom", `${F.en} · ${listPts(l)} / ${l.limit} pts · ${drops(l)} pose${drops(l) > 1 ? "s" : ""}`);
+    if (f) out.push(`Formation : ${f.en}`);
+    [["spells","Sorts"],["prayers","Prières"],["manifs","Manifestations"]].forEach(([k, lab]) => { const x = lore(l, k); if (x && F[k].length) out.push(`${lab} : ${x.en}`); });
+    l.regiments.forEach((r, i) => {
+      out.push("", i === 0 ? "Régiment du général" : `Régiment ${i + 1}`);
+      if (r.hero) out.push(line(r.hero).replace(/^- /, i === 0 ? "- Général : " : "- "));
+      [...(r.cmd || []), ...r.units].forEach(e => out.push(line(e)));
+    });
+    if (l.aux.length) { out.push("", "Unités auxiliaires"); l.aux.forEach(e => out.push(line(e))); }
+    const tac = (l.tactics || []).filter(Boolean);
+    if (tac.length) out.push("", "Battle Tactics : " + tac.join(", "));
+    out.push("", "Créée avec WarCounter");
+    return out.join("\n");
   }
 
   // Résout un chemin "r0.units.2" / "r1.hero" / "aux.0"
@@ -407,6 +465,12 @@
       case "enh": { const k = t.dataset.t; if (t.value) l.enh[k] = {id:t.value, on:(l.enh[k] && l.enh[k].on) || ""}; else delete l.enh[k]; break; }
       case "on": if (l.enh[t.dataset.t]) l.enh[t.dataset.t].on = t.value; break;
       case "tactic": { const j = +t.dataset.j; l.tactics[j] = t.value; l.tactics = l.tactics.slice(0, 2).map(x => x || ""); break; }
+      case "share": {
+        const txt = listText(l), done = ok => { t.textContent = ok ? "Liste copiée" : "Copie impossible"; setTimeout(() => { t.textContent = "Copier la liste en texte"; }, 1800); };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(() => done(true), () => done(fallbackCopy(txt)));
+        else done(fallbackCopy(txt));
+        return;
+      }
       case "dup": { const c = clone(l); c.id = newKey(); c.name = (l.name || "Liste") + " (copie)"; state.lists.push(c); save(); location.hash = "liste-" + c.id; return; }
       case "dellist": {
         if (!t.dataset.confirm) { t.dataset.confirm = "1"; t.textContent = "Confirmer la suppression"; return; }
@@ -437,9 +501,11 @@
     if (s.tactics.length) g.push({id:"tactiques", en:"Battle Tactics"});
     return g;
   }
-  function tile(F, id, name, army, badge){
+  const fold = x => String(x || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  let memoQ = "";
+  function tile(F, id, name, army, badge, extra){
     const p = F.photo(id);
-    return `<button type="button" class="unit-link${army ? " army-link" : ""}${p ? " has-photo" : ""}" data-id="${esc(id)}"${p ? ` style="--img:url('${p}')"` : ""}>${badge ? `<span class="badge">${badge}</span>` : ""}<span>${esc(name)}</span></button>`;
+    return `<button type="button" class="unit-link${army ? " army-link" : ""}${p ? " has-photo" : ""}" data-id="${esc(id)}" data-s="${esc(fold([name].concat(extra || []).join(" ")))}"${p ? ` style="--img:url('${p}')"` : ""}>${badge ? `<span class="badge">${badge}</span>` : ""}<span>${esc(name)}</span></button>`;
   }
   function renderMemo(){
     const s = scope();
@@ -447,9 +513,20 @@
       ? `<a class="banner" href="#liste-${esc(s.l.id)}"><span><b>${esc(s.l.name || "Sans nom")}</b><br>${esc(s.F.en)} · ${listPts(s.l)} / ${s.l.limit} pts${s.formations[0] ? " · " + esc(s.formations[0].en) : ""}</span><span class="banner-go">Modifier</span></a>`
       : `<div class="banner off"><span>Aucune liste active : catalogue de la faction choisie.</span><a class="banner-go" href="#listes">Listes</a></div>
          <div class="catsel"><label class="lbl" for="cat-fac">Faction consultée</label><select id="cat-fac">${facOptions(s.F.id)}</select></div>`;
-    $("list").innerHTML = groupsFor(s).map(g => tile(s.F, g.id, g.en, true)).join("") +
-      s.units.map(u => tile(s.F, u.id, u.en, false, s.l && s.count(u.id) > 1 ? "×" + s.count(u.id) : "")).join("");
+    const gab = id => id === "sorts" ? s.spells.flatMap(x => x.abs) : id === "prieres" ? s.prayers.flatMap(x => x.abs) : id === "manifestations" ? s.manifs.flatMap(x => x.abs)
+      : id === "tactiques" ? s.tactics.map(t => ({n:t.n})) : s.F.bt.concat(s.formations.flatMap(f => f.abs), s.tables.flatMap(t => t.items.flatMap(x => x.abs)));
+    $("memo-banner").insertAdjacentHTML("beforeend", `<input type="search" class="msearch" id="memo-q" placeholder="Rechercher une unité, une aptitude, un mot-clé…" value="${esc(memoQ)}" autocomplete="off">`);
+    $("list").innerHTML = groupsFor(s).map(g => tile(s.F, g.id, g.en, true, "", gab(g.id).map(a => a.n))).join("") +
+      s.units.map(u => tile(s.F, u.id, u.en, false, s.l && s.count(u.id) > 1 ? "×" + s.count(u.id) : "", u.abilities.map(a => a.n).concat([u.kw]))).join("") +
+      `<p class="nores" id="memo-none" hidden>Aucun résultat.</p>`;
+    filterMemo();
   }
+  function filterMemo(){
+    const q = fold(memoQ).trim().split(/\s+/).filter(Boolean); let n = 0;
+    document.querySelectorAll("#list .unit-link").forEach(b => { const ok = q.every(w => b.dataset.s.includes(w)); b.hidden = !ok; if (ok) n++; });
+    const none = $("memo-none"); if (none) none.hidden = n > 0;
+  }
+  $("memo-banner").addEventListener("input", e => { if (e.target.id === "memo-q") { memoQ = e.target.value; filterMemo(); } });
   $("list").addEventListener("click", e => { const t = e.target.closest(".unit-link"); if (t) location.hash = t.dataset.id; });
   $("memo-banner").addEventListener("change", e => { if (e.target.id === "cat-fac") { state.cat = e.target.value; save(); renderMemo(); } });
 

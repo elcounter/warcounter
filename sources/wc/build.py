@@ -1,8 +1,9 @@
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs('build-check', exist_ok=True)
-VERSION='2.3.1'
+VERSION='2.4.0'
 MAJ='04-11-2026'
+LEGAL='<span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span>'
 import re, json, base64, glob, os
 
 def split_rules(css):
@@ -50,7 +51,14 @@ army_css=scope(get_css('shells/mega-shell.html'),'#app-army',True)
 bs_css=scope(get_css('shells/partie-shell.html'),'#app-bs',False)
 home_css=scope(get_css('shells/mega-shell.html'),'#app-home',False)
 extra='''
+.copy .legal{display:inline-block;margin-top:3px;font-size:9px;line-height:1.3;color:#b3b3b3;letter-spacing:.02em}
+#app-army .lbar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+#app-army .lbar .btn{flex:1;min-width:120px}
+#app-army .lmsg{margin:0 0 12px;font-size:13px;color:var(--muted)}
+#app-army .msearch,#app-home .rsearch{width:100%;margin:0 0 12px;padding:11px 14px;border:1px solid #cfc9bf;border-radius:8px;font:400 15px var(--body);background:#fff;color:var(--ink)}
+#app-army .nores{color:var(--muted);font-size:14px;text-align:center;margin:10px 0}
 #app-army .list{grid-template-columns:1fr;gap:8px}
+#app-army .unit-link[hidden],#app-home .rres[hidden],#app-home .rall[hidden]{display:none}
 #app-army .unit-link{aspect-ratio:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:left;background:var(--card);color:var(--ink);border-left:5px solid var(--namebar);padding:13px 16px;font:700 16px/1.3 var(--body);box-shadow:0 1px 2px rgba(0,0,0,.12);cursor:pointer}
 #app-army .unit-link:hover{background:#faf7f2}
 #app-army .unit-link.army-link{background:var(--bar);color:#fff;border-left-color:var(--gold)}
@@ -88,7 +96,7 @@ BACK='<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="curren
 bs_shell=open('shells/partie-shell.html').read()
 bs_body=bs_shell[bs_shell.index('</style>')+8:bs_shell.index('<script>')]
 bs_body=bs_body.replace('id="back"','id="bs-back"').replace('<h1 id="title">Feuille de Bataille</h1>','<h1 id="bs-title">Feuille de Bataille</h1>')
-bs_body=bs_body.replace('<main class="in"><div class="stack" id="view"></div></main>','<main class="in"><div class="stack" id="view"></div><p class="copy">© 2026 elcounter<br>WarCounter version '+VERSION+' · MAJ '+MAJ+'</p></main>')
+bs_body=bs_body.replace('<main class="in"><div class="stack" id="view"></div></main>','<main class="in"><div class="stack" id="view"></div><p class="copy">Propriété intellectuelle © 2026 elcounter<br>WarCounter version '+VERSION+' · MAJ '+MAJ+'<br>'+LEGAL+'</p></main>')
 bs_body=bs_body.replace('<button class="icon-btn" id="bp-info"',HOME_A+'<button class="icon-btn" id="bp-info"')
 assert 'id="bs-title"' in bs_body and 'class="copy"' in bs_body
 
@@ -105,7 +113,7 @@ army_body='''<header class="bar">
   <section id="view-memo"><div id="memo-banner"></div><div class="list" id="list"></div></section>
   <section id="view-unit" hidden><div class="sheet" id="unit"></div></section>
   <section id="view-phases" hidden><div id="phase-banner"></div><div class="phases" id="phases"></div></section>
-  <p class="copy">© 2026 elcounter<br>WarCounter version '''+VERSION+''' · MAJ '''+MAJ+'''</p>
+  <p class="copy">Propriété intellectuelle © 2026 elcounter<br>WarCounter version '''+VERSION+''' · MAJ '''+MAJ+'''<br>'''+LEGAL+'''</p>
 </main>'''
 
 nav='''<nav class="bnav" aria-label="Navigation principale"><div class="in">
@@ -157,7 +165,7 @@ html='''<title>WarCounter</title>
 </div>
 <div id="app-home">
 <header class="bar"><div class="in top"><button class="back" id="home-back" type="button" aria-label="Retour" hidden>'''+BACK+'''</button><h1 id="home-title">WarCounter</h1><span class="menu-hint" id="menu-hint" hidden aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M6 11l6-6 6 6"/></svg><span>App</span></span></div></header>
-<main class="in"><div id="home-view"></div><p class="copy">© 2026 elcounter<br>WarCounter version '''+VERSION+''' · MAJ '''+MAJ+'''</p></main>
+<main class="in"><div id="home-view"></div><p class="copy">Propriété intellectuelle © 2026 elcounter<br>WarCounter version '''+VERSION+''' · MAJ '''+MAJ+'''<br>'''+LEGAL+'''</p></main>
 </div>
 <div id="app-bs" hidden>
 '''+bs_body+'''

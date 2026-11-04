@@ -219,12 +219,41 @@
     if (!e.target.closest("#direct-install") || !deferredPrompt) return;
     deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt = null; $("direct-install").hidden = true;
   });
+  const fold = x => String(x || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  let rulesQ = "", INDEX = null;
+  // Index de recherche : pages de règles, factions, unités et aptitudes
+  function buildIndex(){
+    const out = [], add = (t, sub, href, extra) => out.push({t, sub, href, s:fold([t, sub].concat(extra || []).join(" "))});
+    CORE_PAGES.concat(GHB).forEach(r => add(r.en, r.sub, "#regle-" + r.id));
+    const names = o => o && typeof o === "object" ? [].concat(o.n || o.title || [], ...Object.values(o).filter(v => v && typeof v === "object").map(names)) : [];
+    CORE_PAGES.forEach(r => (r.core || []).forEach(sec => { add(sec.title, `${sec.num ? sec.num + " · " : ""}${r.en}`, "#regle-" + r.id, names(sec)); }));
+    FACTIONS.forEach(F => {
+      add(F.en, "Faction · " + F.ga, "#regle-faction-" + F.id);
+      const units = F.data ? F.data.units : (ARMY ? ARMY.UNITS : []);
+      units.forEach(u => add(u.en, "Unité · " + F.en, F.data ? `#regle-u-${F.id}~${u.id}` : "#regle-faction-" + F.id, [u.kw]));
+      const abs = F.data ? F.data.sections.flatMap(sec => sec.items.flatMap(i => i.abs.map(a => [a, sec.title])))
+        : ARMY ? [].concat(ARMY.BATTLE_TRAITS.map(a => [a, "Traits de bataille"]), ARMY.SPELLS.map(a => [a, "Sorts"]), ARMY.PRAYERS.map(a => [a, "Prières"])) : [];
+      abs.forEach(([a, sec]) => add(a.n, `${sec} · ${F.en}`, "#regle-faction-" + F.id));
+      units.forEach(u => u.abilities.forEach(a => add(a.n, `Aptitude · ${u.en} (${F.en})`, F.data ? `#regle-u-${F.id}~${u.id}` : "#regle-faction-" + F.id)));
+    });
+    const seen = new Set(); return out.filter(x => { const k = x.t + "|" + x.href; if (seen.has(k)) return false; seen.add(k); return true; });
+  }
+  function searchRules(){
+    const box = $("rres"), all = $("rall"); if (!box) return;
+    const q = fold(rulesQ).trim().split(/\s+/).filter(Boolean);
+    if (!q.length || rulesQ.trim().length < 2) { box.hidden = true; all.hidden = false; return; }
+    if (!INDEX) INDEX = buildIndex();
+    const hits = INDEX.filter(x => q.every(w => x.s.includes(w))).sort((a, b) => (fold(a.t).startsWith(q[0]) ? 0 : 1) - (fold(b.t).startsWith(q[0]) ? 0 : 1)).slice(0, 60);
+    box.innerHTML = hits.length ? `<div class="rgrid">${hits.map(x => `<a class="rcard" href="${x.href}"><b>${esc(x.t)}</b><span>${esc(x.sub)}</span></a>`).join("")}</div>${hits.length === 60 ? `<p class="hint">60 premiers résultats : précise ta recherche.</p>` : ""}` : `<p class="hint">Aucun résultat.</p>`;
+    box.hidden = false; all.hidden = true;
+  }
+  document.addEventListener("input", e => { if (e.target.id === "rules-q") { rulesQ = e.target.value; searchRules(); } });
   function rulesHtml(){
     const card = r => `<a class="rcard core" href="#regle-${r.id}"><b>${esc(r.en)}</b><span>${esc(r.sub)}</span></a>`;
-    return `<h2 class="rh">Général</h2><div class="rgrid">${CORE_PAGES.slice(0, 1).map(card).join("")}</div>
+    return `<input type="search" class="rsearch" id="rules-q" placeholder="Rechercher une règle, une faction, une unité, une aptitude…" value="${esc(rulesQ)}" autocomplete="off"><div id="rres" class="rres" hidden></div><div id="rall" class="rall"><h2 class="rh">Général</h2><div class="rgrid">${CORE_PAGES.slice(0, 1).map(card).join("")}</div>
       <h2 class="rh">Règles avancées</h2><div class="rgrid">${CORE_PAGES.slice(1).map(card).join("")}</div>
       <h2 class="rh">Manuel du Général 2026-27</h2><div class="rgrid">${GHB.map(card).join("")}</div>
-      ${ALLIANCES.map(g => { const L = FACTIONS.filter(f => f.ga === g); return L.length ? `<h2 class="rh">${g}</h2><div class="rgrid">${L.map(f => `<a class="rcard" href="#regle-faction-${f.id}"><b>${esc(f.en)}</b><span>${f.data ? f.data.units.length : (ARMY ? ARMY.UNITS.length : "")} unités</span></a>`).join("")}</div>` : ""; }).join("")}`;
+      ${ALLIANCES.map(g => { const L = FACTIONS.filter(f => f.ga === g); return L.length ? `<h2 class="rh">${g}</h2><div class="rgrid">${L.map(f => `<a class="rcard" href="#regle-faction-${f.id}"><b>${esc(f.en)}</b><span>${f.data ? f.data.units.length : (ARMY ? ARMY.UNITS.length : "")} unités</span></a>`).join("")}</div>` : ""; }).join("")}</div>`;
   }
   function route(){
     const h = location.hash.slice(1);
@@ -243,7 +272,7 @@
       $("home-view").innerHTML = installHtml();
     } else if (h === "regles") {
       $("home-title").textContent = "Règles";
-      $("home-view").innerHTML = rulesHtml();
+      $("home-view").innerHTML = rulesHtml(); searchRules();
     } else {
       $("home-title").textContent = "WarCounter";
       $("home-view").innerHTML = homeHtml();
