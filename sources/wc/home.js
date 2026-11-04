@@ -247,7 +247,7 @@
     return `<div class="sup">
       <div class="sup-hero"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#6b2119"/><circle cx="32" cy="32" r="25" fill="none" stroke="#d4ae3f" stroke-width="2.5"/><path d="M32 46s-13-8-13-17a7 7 0 0 1 13-3.5A7 7 0 0 1 45 29c0 9-13 17-13 17z" fill="#fff"/></svg>
         <h2>Soutenir WarCounter</h2>
-        <p>Projet piloté sur mon temps libre, ton abonnement servira à payer un meilleur hébergement et à me donner du temps pour peaufiner l'application.</p>
+        <p>Projet piloté sur mon temps libre, ton don servira à payer un meilleur hébergement et à me donner du temps pour peaufiner l'application.</p>
         <p>WarCounter est gratuit, sans publicité, et le restera. <b>Ce n'est absolument pas obligatoire</b> : utiliser l'app et me faire des retours, c'est déjà un super soutien.</p></div>
       <div class="panel"><h3 class="sec">Faire un don avec PayPal</h3><div class="body">
         <a class="btn primary sup-main" href="${PAYPAL_URL}" target="_blank" rel="noopener">Faire un don avec PayPal</a>
