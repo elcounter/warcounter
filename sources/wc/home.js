@@ -220,7 +220,7 @@
     deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt = null; $("direct-install").hidden = true;
   });
   function rulesHtml(){
-    const card = r => `<a class="rcard" href="#regle-${r.id}"><b>${esc(r.en)}</b><span>${esc(r.sub)}</span></a>`;
+    const card = r => `<a class="rcard core" href="#regle-${r.id}"><b>${esc(r.en)}</b><span>${esc(r.sub)}</span></a>`;
     return `<h2 class="rh">Général</h2><div class="rgrid">${CORE_PAGES.slice(0, 1).map(card).join("")}</div>
       <h2 class="rh">Règles avancées</h2><div class="rgrid">${CORE_PAGES.slice(1).map(card).join("")}</div>
       <h2 class="rh">Manuel du Général 2026-27</h2><div class="rgrid">${GHB.map(card).join("")}</div>

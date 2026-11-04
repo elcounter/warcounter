@@ -7,7 +7,7 @@ Application web installable (PWA), hébergée sur GitHub Pages : https://elcount
 
 ## Version
 
-Version actuelle : **2.3.0** (MAJ 04-11-2026).
+Version actuelle : **2.3.1** (MAJ 04-11-2026).
 Numérotation X.Y.Z :
 - X : très gros changement (décidé par elcounter uniquement)
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
@@ -17,6 +17,7 @@ Numérotation X.Y.Z :
 
 ## Historique
 
+- 2.3.1 (04-11-2026) : onglet Règles, les lignes des règles de base, avancées et du Manuel du Général sont en rouge (liseré doré) pour les distinguer des factions, comme dans le Mémo.
 - 2.3.0 (04-11-2026) : suppression des images de factions ; l'onglet Règles affiche les factions en lignes cliquables (nom + nombre d'unités). L'app ne contient plus aucune image Games Workshop, hors cartes des battleplans (onglet Parties).
 - 2.2.0 (04-11-2026) : plus aucune image dans le Mémo (Règles de l'armée, Sorts, Prières, Battle Tactics, unités) ; les tuiles carrées deviennent des lignes cliquables (cartes compactes). Seules restent les images des factions dans l'onglet Règles (Hashut compris, `fac-img/hashut.jpg`). Objectif : limiter les risques de droits d'auteur en vue d'une diffusion grand public.
 - 2.1.1 (04-11-2026) : suppression de toutes les images d'unités (Hashut et Ogor Mawtribes) dans le Mémo et les fiches. On garde les images des factions (onglet Règles, tuile Règles de l'armée) et des tuiles Sorts, Prières et Battle Tactics. Choix définitif : pas d'images d'unités.

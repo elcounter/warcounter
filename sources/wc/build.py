@@ -1,7 +1,7 @@
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs('build-check', exist_ok=True)
-VERSION='2.3.0'
+VERSION='2.3.1'
 MAJ='04-11-2026'
 import re, json, base64, glob, os
 

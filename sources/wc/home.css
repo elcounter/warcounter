@@ -75,3 +75,6 @@
   #app-home .inst-mobile{display:none}
   #app-home #direct-install[hidden] + .inst-pc{display:block;color:var(--muted);font-size:13px}
 }
+#app-home .rcard.core{background:var(--bar);color:#fff;border-left-color:var(--gold)}
+#app-home .rcard.core span{color:rgba(255,255,255,.78)}
+#app-home .rcard.core:hover{filter:brightness(1.08)}
