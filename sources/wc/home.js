@@ -252,11 +252,10 @@
       <div class="panel"><h3 class="sec">Faire un don avec PayPal</h3><div class="body">
         <a class="btn primary sup-main" href="${PAYPAL_URL}" target="_blank" rel="noopener">Faire un don avec PayPal</a>
         <ol class="steps">
-          ${step(1, "Appuie sur le bouton ci-dessus (ou scanne le QR code avec ton téléphone).")}
+          ${step(1, "Appuie sur le bouton ci-dessus.")}
           ${step(2, "Indique le montant de ton choix.")}
           ${step(3, "Sélectionne <b>Entre proches</b> : ainsi, aucun frais n'est prélevé sur ton don.")}
         </ol>
-        <div class="sup-qr"><img src="${PAYPAL_QR}" alt="QR code PayPal pour faire un don" width="200" height="200"></div>
       </div></div>
       <p class="sup-thanks">Merci du fond du cœur, et bonnes parties !<br><b>elcounter</b></p>
     </div>`;
