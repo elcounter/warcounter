@@ -515,6 +515,14 @@ input::placeholder{color:#a5a5a5;opacity:1}
 #app-home .rcard.core span{color:rgba(255,255,255,.78)}
 #app-home .rcard.core:hover{filter:brightness(1.08)}
 
+#app-home .sup-hero{text-align:center;padding:6px 4px 14px}
+#app-home .sup-hero h2{font:700 24px/1.1 var(--display);text-transform:uppercase;margin:8px 0 10px}
+#app-home .sup-hero p{margin:0 0 10px;line-height:1.5;text-align:left}
+#app-home .sup-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+#app-home .sup-btns .btn{flex:1;min-width:140px;text-align:center;text-decoration:none}
+#app-home .sup-thanks{text-align:center;margin:16px 0 0;line-height:1.5}
+.copy .sup-link{display:inline-block;margin:0 0 6px;padding:5px 12px;border:1px solid #d6cfc3;border-radius:999px;color:var(--bar);font:600 12px var(--body);text-decoration:none;background:#fff}
+
 </style>
 <div id="app-army" hidden>
 <header class="bar">
@@ -530,12 +538,12 @@ input::placeholder{color:#a5a5a5;opacity:1}
   <section id="view-memo"><div id="memo-banner"></div><div class="list" id="list"></div></section>
   <section id="view-unit" hidden><div class="sheet" id="unit"></div></section>
   <section id="view-phases" hidden><div id="phase-banner"></div><div class="phases" id="phases"></div></section>
-  <p class="copy">Propriété intellectuelle © 2026 elcounter<br>WarCounter version 2.7.0 · MAJ 04-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span></p>
+  <p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir notre travail</a><br>Propriété intellectuelle © 2026 elcounter<br>WarCounter version 2.8.0 · MAJ 04-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span></p>
 </main>
 </div>
 <div id="app-home">
 <header class="bar"><div class="in top"><button class="back" id="home-back" type="button" aria-label="Retour" hidden><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><h1 id="home-title">WarCounter</h1><span class="menu-hint" id="menu-hint" hidden aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M6 11l6-6 6 6"/></svg><span>App</span></span></div></header>
-<main class="in"><div id="home-view"></div><p class="copy">Propriété intellectuelle © 2026 elcounter<br>WarCounter version 2.7.0 · MAJ 04-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span></p></main>
+<main class="in"><div id="home-view"></div><p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir notre travail</a><br>Propriété intellectuelle © 2026 elcounter<br>WarCounter version 2.8.0 · MAJ 04-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span></p></main>
 </div>
 <div id="app-bs" hidden>
 
@@ -551,7 +559,7 @@ input::placeholder{color:#a5a5a5;opacity:1}
   </div>
 </header>
 
-<main class="in"><div class="stack" id="view"></div><p class="copy">Propriété intellectuelle © 2026 elcounter<br>WarCounter version 2.7.0 · MAJ 04-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span></p></main>
+<main class="in"><div class="stack" id="view"></div><p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir notre travail</a><br>Propriété intellectuelle © 2026 elcounter<br>WarCounter version 2.8.0 · MAJ 04-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span></p></main>
 
 <footer class="foot" id="foot" hidden>
   <div class="in">
@@ -1265,7 +1273,7 @@ window.WC_FIMG = {};
   const GROUPS = {armee:"Règles de l'armée", sorts:"Sorts", prieres:"Prières", manifestations:"Manifestations", tactiques:"Battle Tactics"};
   function route(){
     const hash = decodeURIComponent(location.hash.slice(1));
-    if (hash === "parties" || hash === "" || hash === "accueil" || hash === "installer" || hash === "regles" || hash.startsWith("regle-")) return;
+    if (hash === "parties" || hash === "" || hash === "accueil" || hash === "installer" || hash === "soutenir" || hash === "regles" || hash.startsWith("regle-")) return;
     const F = scope().F, unit = UF(F, hash), group = hash in GROUPS;
     let view = "memo";
     if (hash === "listes") view = "lists";
@@ -4308,6 +4316,30 @@ window.WC_FIMG = {};
   let deferredPrompt = null;
   window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferredPrompt = e; const b = $("direct-install"); if (b) b.hidden = false; });
   window.addEventListener("appinstalled", () => { deferredPrompt = null; const b = $("direct-install"); if (b) b.hidden = true; });
+  const PAYPAL_MAIL = "pierre.berthelemy@gmail.com";
+  function supportHtml(){
+    const step = (n, t) => `<li><span class="snum">${n}</span><span>${t}</span></li>`;
+    return `<div class="sup">
+      <div class="sup-hero"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#6b2119"/><circle cx="32" cy="32" r="25" fill="none" stroke="#d4ae3f" stroke-width="2.5"/><path d="M32 46s-13-8-13-17a7 7 0 0 1 13-3.5A7 7 0 0 1 45 29c0 9-13 17-13 17z" fill="#fff"/></svg>
+        <h2>Soutenir WarCounter</h2>
+        <p>WarCounter est gratuit, sans publicité, et le restera. Je le développe seul, sur mon temps libre, pour la communauté Age of Sigmar.</p>
+        <p>Si l'app t'est utile et que tu as envie de m'aider à la faire avancer (nouvelles fonctions, mises à jour des règles, corrections), tu peux faire un petit don. <b>Ce n'est absolument pas obligatoire</b> : utiliser l'app et me faire des retours, c'est déjà un super soutien.</p></div>
+      <div class="panel"><h3 class="sec">Faire un don avec PayPal</h3><div class="body">
+        <ol class="steps">
+          ${step(1, `Copie mon adresse PayPal : <b>${PAYPAL_MAIL}</b>`)}
+          ${step(2, "Ouvre PayPal et choisis <b>Envoyer</b>, puis colle l'adresse.")}
+          ${step(3, "Indique le montant de ton choix et sélectionne <b>Entre proches</b> : ainsi, aucun frais n'est prélevé sur ton don.")}
+        </ol>
+        <div class="sup-btns"><button type="button" class="btn" id="copy-mail">Copier l'adresse</button><a class="btn primary" href="https://www.paypal.com/myaccount/transfer/homepage/pay" target="_blank" rel="noopener">Ouvrir PayPal</a></div>
+      </div></div>
+      <p class="sup-thanks">Merci du fond du cœur, et bonnes parties !<br><b>elcounter</b></p>
+    </div>`;
+  }
+  document.addEventListener("click", e => {
+    const b = e.target.closest("#copy-mail"); if (!b) return;
+    const done = ok => { b.textContent = ok ? "Adresse copiée" : PAYPAL_MAIL; setTimeout(() => { b.textContent = "Copier l'adresse"; }, 2000); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(PAYPAL_MAIL).then(() => done(true), () => done(false)); else done(false);
+  });
   function installHtml(){
     const step = (n, t) => `<li><span class="snum">${n}</span><span>${t}</span></li>`;
     return `<div class="inst">
@@ -4377,12 +4409,15 @@ window.WC_FIMG = {};
     let unitPage = null;
     if (h.startsWith("regle-u-")) { const [fid, ...rest] = h.slice(8).split("~"); const F = FACTIONS.find(f => f.id === fid); const U = F && F.data && F.data.units.find(u => u.id === rest.join("~")); if (U) unitPage = {F, U}; }
     const rule = unitPage ? {en:unitPage.U.en, unit:true} : fac ? {en:fac.en, fac:true} : h.startsWith("regle-") ? RULES.find(r => r.id === h.slice(6)) : null;
-    if (!(h === "" || h === "accueil" || h === "regles" || h === "installer" || rule)) return;
+    if (!(h === "" || h === "accueil" || h === "regles" || h === "installer" || h === "soutenir" || rule)) return;
     $("menu-hint").hidden = STANDALONE || !(h === "" || h === "accueil" || h === "installer");
-    $("home-back").hidden = !rule && h !== "installer";
+    $("home-back").hidden = !rule && h !== "installer" && h !== "soutenir";
     if (rule) {
       $("home-title").textContent = rule.en;
       $("home-view").innerHTML = `<div class="rules">${rule.unit ? unitSheet(unitPage.U) : rule.fac ? (fac.data ? genFactionPage(fac.data) : factionPage()) : rule.core ? corePage(rule) : rule.bp ? bpPage() : rule.tac ? tacPage() : blocks(rule.blocks)}</div>`;
+    } else if (h === "soutenir") {
+      $("home-title").textContent = "Soutenir le projet";
+      $("home-view").innerHTML = supportHtml();
     } else if (h === "installer") {
       $("home-title").textContent = "Installer l'app";
       $("home-view").innerHTML = installHtml();
@@ -4395,7 +4430,7 @@ window.WC_FIMG = {};
     }
     window.scrollTo(0, 0);
   }
-  $("home-back").addEventListener("click", () => { const h = location.hash.slice(1); location.hash = h === "installer" ? "accueil" : h.startsWith("regle-u-") ? "regle-faction-" + h.slice(8).split("~")[0] : "regles"; });
+  $("home-back").addEventListener("click", () => { const h = location.hash.slice(1); location.hash = h === "installer" || h === "soutenir" ? "accueil" : h.startsWith("regle-u-") ? "regle-faction-" + h.slice(8).split("~")[0] : "regles"; });
   window.addEventListener("hashchange", route);
   route();
 
@@ -4410,7 +4445,7 @@ window.WC_FIMG = {};
     const h = location.hash.slice(1);
     let app = "army", tab = "memo";
     if (h === "" || h === "accueil") { app = "home"; tab = ""; }
-    else if (h === "installer") { app = "home"; tab = ""; }
+    else if (h === "installer" || h === "soutenir") { app = "home"; tab = ""; }
     else if (h === "regles" || h.startsWith("regle-")) { app = "home"; tab = "regles"; }
     else if (h === "parties") { app = "bs"; tab = "parties"; }
     else if (h === "listes" || h.startsWith("liste-")) tab = "lists";

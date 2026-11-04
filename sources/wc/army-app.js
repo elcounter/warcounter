@@ -626,7 +626,7 @@
   const GROUPS = {armee:"Règles de l'armée", sorts:"Sorts", prieres:"Prières", manifestations:"Manifestations", tactiques:"Battle Tactics"};
   function route(){
     const hash = decodeURIComponent(location.hash.slice(1));
-    if (hash === "parties" || hash === "" || hash === "accueil" || hash === "installer" || hash === "regles" || hash.startsWith("regle-")) return;
+    if (hash === "parties" || hash === "" || hash === "accueil" || hash === "installer" || hash === "soutenir" || hash === "regles" || hash.startsWith("regle-")) return;
     const F = scope().F, unit = UF(F, hash), group = hash in GROUPS;
     let view = "memo";
     if (hash === "listes") view = "lists";

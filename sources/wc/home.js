@@ -192,6 +192,30 @@
   let deferredPrompt = null;
   window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferredPrompt = e; const b = $("direct-install"); if (b) b.hidden = false; });
   window.addEventListener("appinstalled", () => { deferredPrompt = null; const b = $("direct-install"); if (b) b.hidden = true; });
+  const PAYPAL_MAIL = "pierre.berthelemy@gmail.com";
+  function supportHtml(){
+    const step = (n, t) => `<li><span class="snum">${n}</span><span>${t}</span></li>`;
+    return `<div class="sup">
+      <div class="sup-hero"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#6b2119"/><circle cx="32" cy="32" r="25" fill="none" stroke="#d4ae3f" stroke-width="2.5"/><path d="M32 46s-13-8-13-17a7 7 0 0 1 13-3.5A7 7 0 0 1 45 29c0 9-13 17-13 17z" fill="#fff"/></svg>
+        <h2>Soutenir WarCounter</h2>
+        <p>WarCounter est gratuit, sans publicité, et le restera. Je le développe seul, sur mon temps libre, pour la communauté Age of Sigmar.</p>
+        <p>Si l'app t'est utile et que tu as envie de m'aider à la faire avancer (nouvelles fonctions, mises à jour des règles, corrections), tu peux faire un petit don. <b>Ce n'est absolument pas obligatoire</b> : utiliser l'app et me faire des retours, c'est déjà un super soutien.</p></div>
+      <div class="panel"><h3 class="sec">Faire un don avec PayPal</h3><div class="body">
+        <ol class="steps">
+          ${step(1, `Copie mon adresse PayPal : <b>${PAYPAL_MAIL}</b>`)}
+          ${step(2, "Ouvre PayPal et choisis <b>Envoyer</b>, puis colle l'adresse.")}
+          ${step(3, "Indique le montant de ton choix et sélectionne <b>Entre proches</b> : ainsi, aucun frais n'est prélevé sur ton don.")}
+        </ol>
+        <div class="sup-btns"><button type="button" class="btn" id="copy-mail">Copier l'adresse</button><a class="btn primary" href="https://www.paypal.com/myaccount/transfer/homepage/pay" target="_blank" rel="noopener">Ouvrir PayPal</a></div>
+      </div></div>
+      <p class="sup-thanks">Merci du fond du cœur, et bonnes parties !<br><b>elcounter</b></p>
+    </div>`;
+  }
+  document.addEventListener("click", e => {
+    const b = e.target.closest("#copy-mail"); if (!b) return;
+    const done = ok => { b.textContent = ok ? "Adresse copiée" : PAYPAL_MAIL; setTimeout(() => { b.textContent = "Copier l'adresse"; }, 2000); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(PAYPAL_MAIL).then(() => done(true), () => done(false)); else done(false);
+  });
   function installHtml(){
     const step = (n, t) => `<li><span class="snum">${n}</span><span>${t}</span></li>`;
     return `<div class="inst">
@@ -261,12 +285,15 @@
     let unitPage = null;
     if (h.startsWith("regle-u-")) { const [fid, ...rest] = h.slice(8).split("~"); const F = FACTIONS.find(f => f.id === fid); const U = F && F.data && F.data.units.find(u => u.id === rest.join("~")); if (U) unitPage = {F, U}; }
     const rule = unitPage ? {en:unitPage.U.en, unit:true} : fac ? {en:fac.en, fac:true} : h.startsWith("regle-") ? RULES.find(r => r.id === h.slice(6)) : null;
-    if (!(h === "" || h === "accueil" || h === "regles" || h === "installer" || rule)) return;
+    if (!(h === "" || h === "accueil" || h === "regles" || h === "installer" || h === "soutenir" || rule)) return;
     $("menu-hint").hidden = STANDALONE || !(h === "" || h === "accueil" || h === "installer");
-    $("home-back").hidden = !rule && h !== "installer";
+    $("home-back").hidden = !rule && h !== "installer" && h !== "soutenir";
     if (rule) {
       $("home-title").textContent = rule.en;
       $("home-view").innerHTML = `<div class="rules">${rule.unit ? unitSheet(unitPage.U) : rule.fac ? (fac.data ? genFactionPage(fac.data) : factionPage()) : rule.core ? corePage(rule) : rule.bp ? bpPage() : rule.tac ? tacPage() : blocks(rule.blocks)}</div>`;
+    } else if (h === "soutenir") {
+      $("home-title").textContent = "Soutenir le projet";
+      $("home-view").innerHTML = supportHtml();
     } else if (h === "installer") {
       $("home-title").textContent = "Installer l'app";
       $("home-view").innerHTML = installHtml();
@@ -279,6 +306,6 @@
     }
     window.scrollTo(0, 0);
   }
-  $("home-back").addEventListener("click", () => { const h = location.hash.slice(1); location.hash = h === "installer" ? "accueil" : h.startsWith("regle-u-") ? "regle-faction-" + h.slice(8).split("~")[0] : "regles"; });
+  $("home-back").addEventListener("click", () => { const h = location.hash.slice(1); location.hash = h === "installer" || h === "soutenir" ? "accueil" : h.startsWith("regle-u-") ? "regle-faction-" + h.slice(8).split("~")[0] : "regles"; });
   window.addEventListener("hashchange", route);
   route();
