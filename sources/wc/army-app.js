@@ -73,7 +73,7 @@
     prayers:[{id:"p0", en:LORE_NAMES && LORE_NAMES.prayer || "Prayers of the Scorched Sect", abs:PRAYERS}],
     manifs:[],
     when: a => a.when || WHEN[a.n] || [],
-    photo: id => IMG[PHOTO_OF[id]] || ""
+    photo: () => ""
   };
   const FIMG = window.WC_FIMG || {};
   const KNOWN = ["Traits de bataille","Formations de bataille","Traits héroïques","Artefacts de pouvoir","Sorts","Prières","Manifestations"];
@@ -91,7 +91,7 @@
       ].filter(t => t.items.length),
       spells: mk(sec("Sorts"), "s"), prayers: mk(sec("Prières"), "p"), manifs: mk(sec("Manifestations"), "m"),
       when: whenOf,
-      photo: id => id === "armee" ? (FIMG[F.img] || "") : id === "tactiques" ? (IMG[PHOTO_OF.tactiques] || "") : ""
+      photo: () => ""
     };
   });
   const FAC_ORDER = Object.values(FX).sort((a, b) => a.en.localeCompare(b.en));

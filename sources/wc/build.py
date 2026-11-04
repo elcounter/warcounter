@@ -1,7 +1,7 @@
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs('build-check', exist_ok=True)
-VERSION='2.1.1'
+VERSION='2.2.0'
 MAJ='04-11-2026'
 import re, json, base64, glob, os
 
@@ -50,6 +50,11 @@ army_css=scope(get_css('shells/mega-shell.html'),'#app-army',True)
 bs_css=scope(get_css('shells/partie-shell.html'),'#app-bs',False)
 home_css=scope(get_css('shells/mega-shell.html'),'#app-home',False)
 extra='''
+#app-army .list{grid-template-columns:1fr;gap:8px}
+#app-army .unit-link{aspect-ratio:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:left;background:var(--card);color:var(--ink);border-left:5px solid var(--namebar);padding:13px 16px;font:700 16px/1.3 var(--body);box-shadow:0 1px 2px rgba(0,0,0,.12);cursor:pointer}
+#app-army .unit-link:hover{background:#faf7f2}
+#app-army .unit-link.army-link{background:var(--bar);color:#fff;border-left-color:var(--gold)}
+#app-army .unit-link .badge{position:static;order:2;flex:none}
 .bnav .in{margin:0 auto;padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))}
 #app-army .lc-fac{display:block;font:500 12px var(--display);text-transform:uppercase;letter-spacing:.06em;color:var(--gold-dk);margin-top:2px}
 #app-army .newl{display:flex;gap:10px;align-items:center}
@@ -112,7 +117,7 @@ nav='''<nav class="bnav" aria-label="Navigation principale"><div class="in">
 </div></nav>'''
 
 imgs={os.path.basename(f)[:-4]:'data:image/jpeg;base64,'+base64.b64encode(open(f,'rb').read()).decode() for f in sorted(glob.glob('army-img/*.jpg'))}
-of={"armee":"armee","sorts":"v13-sorts","prieres":"v13-prieres","tactiques":"tactiques"}
+of={}
 maps={os.path.basename(f)[:-4]:'data:image/jpeg;base64,'+base64.b64encode(open(f,'rb').read()).decode() for f in sorted(glob.glob('maps/*.jpg'))}
 
 fac_js='window.WC_FAC = '+open('fac/factions.json').read()+';\nwindow.WC_FIMG = '+json.dumps({os.path.basename(f)[:-4]:'data:image/jpeg;base64,'+base64.b64encode(open(f,'rb').read()).decode() for f in sorted(glob.glob('fac-img/*.jpg'))})+';'

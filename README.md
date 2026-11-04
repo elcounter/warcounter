@@ -7,7 +7,7 @@ Application web installable (PWA), hébergée sur GitHub Pages : https://elcount
 
 ## Version
 
-Version actuelle : **2.1.1** (MAJ 04-11-2026).
+Version actuelle : **2.2.0** (MAJ 04-11-2026).
 Numérotation X.Y.Z :
 - X : très gros changement (décidé par elcounter uniquement)
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
@@ -17,6 +17,7 @@ Numérotation X.Y.Z :
 
 ## Historique
 
+- 2.2.0 (04-11-2026) : plus aucune image dans le Mémo (Règles de l'armée, Sorts, Prières, Battle Tactics, unités) ; les tuiles carrées deviennent des lignes cliquables (cartes compactes). Seules restent les images des factions dans l'onglet Règles (Hashut compris, `fac-img/hashut.jpg`). Objectif : limiter les risques de droits d'auteur en vue d'une diffusion grand public.
 - 2.1.1 (04-11-2026) : suppression de toutes les images d'unités (Hashut et Ogor Mawtribes) dans le Mémo et les fiches. On garde les images des factions (onglet Règles, tuile Règles de l'armée) et des tuiles Sorts, Prières et Battle Tactics. Choix définitif : pas d'images d'unités.
 - 2.1.0 (04-11-2026) : Images d'unités pour Ogor Mawtribes.
 - 2.0.0 (03-11-2026) : Sons of Behemat. Toutes les factions principales sont maintenant disponibles.
@@ -42,7 +43,6 @@ sw.js                    Service worker (réseau d'abord, cache hors ligne)
 *-w.png                  Icônes « W »
 sources/wc/              Atelier de fabrication
   build.py               Assemble warcounter.html (CSS scopés, 4 scripts, images en base64)
-  army-img/              Images des tuiles de groupe uniquement (armée Hashut, Sorts, Prières, Battle Tactics) ; aucune image d'unité
   army-data.js           Données Hashut (Méga Forge) + Battle Tactics
   army-app.js            Listes, Mémo, Phases (toutes factions)
   bs-app.js, bs-data.js  Feuille de bataille (Parties)
@@ -53,7 +53,7 @@ sources/wc/              Atelier de fabrication
     dump.py              python3 dump.py <slug>  : liste les textes à traduire
     fr_<slug>.py         Traductions : T = {nom: (annonce_fr, effet_fr)}
     convert.py           Construit factions.json (liste des factions dans __main__)
-  fac-img/               Images des factions publiées (600 px, JPEG q80)
+  fac-img/               Images des factions (onglet Règles uniquement, 600 px, JPEG q80) ; aucune autre image dans l'app
   fac-img-next/          Images prêtes pour les factions restantes
 sources/bsdata/          Copie des catalogues BSData (age-of-sigmar-4th)
 ```
