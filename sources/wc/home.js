@@ -192,7 +192,7 @@
   let deferredPrompt = null;
   window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferredPrompt = e; const b = $("direct-install"); if (b) b.hidden = false; });
   window.addEventListener("appinstalled", () => { deferredPrompt = null; const b = $("direct-install"); if (b) b.hidden = true; });
-  const PAYPAL_MAIL = "pierre.berthelemy@gmail.com";
+  const PAYPAL_URL = "https://www.paypal.com/qrcodes/p2pqrc/MXBPC6EUBZBGN", PAYPAL_QR = "/*PAYPALQR*/";
   function supportHtml(){
     const step = (n, t) => `<li><span class="snum">${n}</span><span>${t}</span></li>`;
     return `<div class="sup">
@@ -201,21 +201,17 @@
         <p>WarCounter est gratuit, sans publicité, et le restera. Je le développe seul, sur mon temps libre, pour la communauté Age of Sigmar.</p>
         <p>Si l'app t'est utile et que tu as envie de m'aider à la faire avancer (nouvelles fonctions, mises à jour des règles, corrections), tu peux faire un petit don. <b>Ce n'est absolument pas obligatoire</b> : utiliser l'app et me faire des retours, c'est déjà un super soutien.</p></div>
       <div class="panel"><h3 class="sec">Faire un don avec PayPal</h3><div class="body">
+        <a class="btn primary sup-main" href="${PAYPAL_URL}" target="_blank" rel="noopener">Faire un don avec PayPal</a>
         <ol class="steps">
-          ${step(1, `Copie mon adresse PayPal : <b>${PAYPAL_MAIL}</b>`)}
-          ${step(2, "Ouvre PayPal et choisis <b>Envoyer</b>, puis colle l'adresse.")}
-          ${step(3, "Indique le montant de ton choix et sélectionne <b>Entre proches</b> : ainsi, aucun frais n'est prélevé sur ton don.")}
+          ${step(1, "Appuie sur le bouton ci-dessus (ou scanne le QR code avec ton téléphone).")}
+          ${step(2, "Indique le montant de ton choix.")}
+          ${step(3, "Sélectionne <b>Entre proches</b> : ainsi, aucun frais n'est prélevé sur ton don.")}
         </ol>
-        <div class="sup-btns"><button type="button" class="btn" id="copy-mail">Copier l'adresse</button><a class="btn primary" href="https://www.paypal.com/myaccount/transfer/homepage/pay" target="_blank" rel="noopener">Ouvrir PayPal</a></div>
+        <div class="sup-qr"><img src="${PAYPAL_QR}" alt="QR code PayPal pour faire un don" width="200" height="200"></div>
       </div></div>
       <p class="sup-thanks">Merci du fond du cœur, et bonnes parties !<br><b>elcounter</b></p>
     </div>`;
   }
-  document.addEventListener("click", e => {
-    const b = e.target.closest("#copy-mail"); if (!b) return;
-    const done = ok => { b.textContent = ok ? "Adresse copiée" : PAYPAL_MAIL; setTimeout(() => { b.textContent = "Copier l'adresse"; }, 2000); };
-    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(PAYPAL_MAIL).then(() => done(true), () => done(false)); else done(false);
-  });
   function installHtml(){
     const step = (n, t) => `<li><span class="snum">${n}</span><span>${t}</span></li>`;
     return `<div class="inst">

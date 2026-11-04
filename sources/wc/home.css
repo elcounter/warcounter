@@ -86,3 +86,6 @@
 #app-home .sup-btns .btn{flex:1;min-width:140px;text-align:center;text-decoration:none}
 #app-home .sup-thanks{text-align:center;margin:16px 0 0;line-height:1.5}
 .copy .sup-link{display:inline-block;margin:0 0 6px;padding:5px 12px;border:1px solid #d6cfc3;border-radius:999px;color:var(--bar);font:600 12px var(--body);text-decoration:none;background:#fff}
+#app-home .sup-main{display:block;width:100%;text-align:center;text-decoration:none;margin:0 0 14px;padding:13px 16px}
+#app-home .sup-qr{text-align:center;margin-top:12px}
+#app-home .sup-qr img{width:200px;height:auto;border-radius:10px;border:1px solid #e3ded5}
