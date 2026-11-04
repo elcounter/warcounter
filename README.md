@@ -7,7 +7,7 @@ Application web installable (PWA), hébergée sur GitHub Pages : https://elcount
 
 ## Version
 
-Version actuelle : **2.1.0** (MAJ 04-11-2026).
+Version actuelle : **2.1.1** (MAJ 04-11-2026).
 Numérotation X.Y.Z :
 - X : très gros changement (décidé par elcounter uniquement)
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
@@ -17,6 +17,7 @@ Numérotation X.Y.Z :
 
 ## Historique
 
+- 2.1.1 (04-11-2026) : suppression de toutes les images d'unités (Hashut et Ogor Mawtribes) dans le Mémo et les fiches. On garde les images des factions (onglet Règles, tuile Règles de l'armée) et des tuiles Sorts, Prières et Battle Tactics. Choix définitif : pas d'images d'unités.
 - 2.1.0 (04-11-2026) : Images d'unités pour Ogor Mawtribes.
 - 2.0.0 (03-11-2026) : Sons of Behemat. Toutes les factions principales sont maintenant disponibles.
 - 1.9.0 (03-11-2026) : Kruleboyz.
@@ -41,6 +42,7 @@ sw.js                    Service worker (réseau d'abord, cache hors ligne)
 *-w.png                  Icônes « W »
 sources/wc/              Atelier de fabrication
   build.py               Assemble warcounter.html (CSS scopés, 4 scripts, images en base64)
+  army-img/              Images des tuiles de groupe uniquement (armée Hashut, Sorts, Prières, Battle Tactics) ; aucune image d'unité
   army-data.js           Données Hashut (Méga Forge) + Battle Tactics
   army-app.js            Listes, Mémo, Phases (toutes factions)
   bs-app.js, bs-data.js  Feuille de bataille (Parties)
