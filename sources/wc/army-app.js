@@ -299,41 +299,14 @@
     }).join("");
     $("lists").innerHTML = `<div class="lhead"><h2>Mes listes</h2></div>
       <div class="panel"><h3 class="sec">Nouvelle liste</h3><div class="body"><div class="row newl"><select id="new-fac" aria-label="Faction de la nouvelle liste">${facOptions(state.newFac || "", "Sélectionner une faction")}</select><button type="button" class="btn primary" id="new-list"${state.newFac ? "" : " disabled"}>Créer</button></div></div></div>` +
-      `<div class="lbar"><button type="button" class="btn" id="exp-lists"${state.lists.length ? "" : " disabled"}>Exporter mes listes</button><button type="button" class="btn" id="imp-lists">Importer des listes</button><input type="file" id="imp-file" accept=".json,application/json" hidden></div>` +
+     
       (listMsg ? `<p class="lmsg">${esc(listMsg)}</p>` : "") +
       (cards ? `<div class="lgrid">${cards}</div>` : `<p class="hint center">Aucune liste. Crée ta première liste.</p>`) +
       `<p class="hint">Règles de construction du Manuel du Général 2026-27. Tes listes restent enregistrées sur cet appareil.</p>`;
   }
   let listMsg = "";
-  const today = () => { const d = new Date(); return [d.getDate(), d.getMonth() + 1, d.getFullYear()].map(n => String(n).padStart(2, "0")).join("-"); };
-  function exportLists(){
-    const blob = new Blob([JSON.stringify({app:"WarCounter", type:"listes", date:today(), lists:state.lists}, null, 1)], {type:"application/json"});
-    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `warcounter-listes-${today()}.json`;
-    document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
-    listMsg = `${state.lists.length} liste${state.lists.length > 1 ? "s" : ""} exportée${state.lists.length > 1 ? "s" : ""}.`; renderLists();
-  }
-  function importLists(file){
-    const r = new FileReader();
-    r.onload = () => {
-      try {
-        const d = JSON.parse(r.result), arr = Array.isArray(d) ? d : Array.isArray(d.lists) ? d.lists : d.regiments ? [d] : null;
-        if (!arr) throw 0;
-        let n = 0;
-        arr.forEach(x => {
-          if (!x || !Array.isArray(x.regiments)) return;
-          const l = clone(x); if (!l.id || getList(l.id)) l.id = newKey();
-          if (!Array.isArray(l.aux)) l.aux = [];
-          normalize(l); state.lists.push(l); n++;
-        });
-        save(); listMsg = n ? `${n} liste${n > 1 ? "s" : ""} importée${n > 1 ? "s" : ""}.` : "Aucune liste trouvée dans ce fichier.";
-      } catch(e) { listMsg = "Fichier non reconnu : choisis un fichier exporté depuis WarCounter."; }
-      renderLists();
-    };
-    r.readAsText(file);
-  }
   $("lists").addEventListener("change", e => {
     if (e.target.id === "new-fac") { state.newFac = e.target.value; save(); const b = $("new-list"); if (b) b.disabled = !state.newFac; }
-    if (e.target.id === "imp-file" && e.target.files[0]) importLists(e.target.files[0]);
   });
   $("lists").addEventListener("click", e => {
     if (e.target.closest("#new-list")) {
@@ -341,8 +314,6 @@
       const l = {id:newKey(), fac, name:"Nouvelle liste", limit:2000, formation:"", regiments:[{hero:null, cmd:[], units:[]}], aux:[], tactics:[], enh:{}, lore:{}};
       state.lists.push(l); save(); location.hash = "liste-" + l.id; return;
     }
-    if (e.target.closest("#exp-lists")) { exportLists(); return; }
-    if (e.target.closest("#imp-lists")) { $("imp-file").click(); return; }
     const c = e.target.closest("[data-open]");
     if (c) location.hash = "liste-" + c.dataset.open;
   });
@@ -463,7 +434,7 @@
       ${v.info.map(x => `<p class="note">${esc(x)}</p>`).join("")}
     </div></div>`;
 
-    h += `<div class="actions"><button type="button" class="btn primary" data-act="share">Copier la liste en texte</button><button type="button" class="btn" data-act="dup">Dupliquer</button><button type="button" class="btn danger" data-act="dellist">Supprimer la liste</button></div>`;
+    h += `<div class="actions"><button type="button" class="btn primary" data-act="share">Exporter la liste (copier le texte)</button><button type="button" class="btn" data-act="dup">Dupliquer</button><button type="button" class="btn danger" data-act="dellist">Supprimer la liste</button></div>`;
     $("edit").innerHTML = h;
     $("title").textContent = l.name || "Sans nom";
   }
@@ -473,25 +444,36 @@
     document.body.appendChild(ta); ta.select(); let ok = false; try { ok = document.execCommand("copy"); } catch(e) {} ta.remove(); return ok;
   }
   // Liste au format texte (partage)
+  // Export d'une liste au format texte des apps d'armée (copier-coller)
   function listText(l){
-    const F = fx(l), f = formOf(l), out = [];
-    const line = e => { const u = UF(F, e.u), en = enhOn(l, e).map(o => o.x.en); return `- ${u.en}${e.reinf ? " (renforcée)" : ""} : ${entryPts(l, e)} pts${en.length ? " · " + en.join(", ") : ""}`; };
-    out.push(l.name || "Sans nom", `${F.base ? F.base + " · armée de renom " + F.en : F.en} · ${listPts(l)} / ${l.limit} pts · ${drops(l)} pose${drops(l) > 1 ? "s" : ""}`);
-    if (f) out.push(`Formation : ${f.en}`);
-    if (terrOf(l)) out.push(`Terrain de faction : ${terrOf(l).en}${terrOf(l).pts ? ` (${terrOf(l).pts} pts)` : ""}`);
-    [["spells","Sorts"],["prayers","Prières"],["manifs","Manifestations"]].forEach(([k, lab]) => { const x = lore(l, k); if (x) out.push(`${lab} : ${x.en}`); });
+    const F = fx(l), f = formOf(l), out = [], tac = (l.tactics || []).filter(Boolean);
+    const unit = (e, gen) => {
+      const u = UF(F, e.u), r = [`${u.en} (${u.pts * (e.reinf ? 2 : 1)})`];
+      if (gen) r.push(" • General");
+      if (e.reinf) r.push(" • Reinforced");
+      enhOn(l, e).forEach(o => r.push(` • ${o.x.en}${o.x.pts ? ` (+${o.x.pts})` : ""}`));
+      return r;
+    };
+    out.push(`${l.name || "Sans nom"} ${listPts(l)}/${l.limit} pts`, "", F.base || F.en);
+    if (F.aor) out.push(F.aor.en); else if (f) out.push(f.en);
+    out.push("General's Handbook 2026-27", `Drops: ${drops(l)}`);
+    [["spells","Spell Lore"],["prayers","Prayer Lore"],["manifs","Manifestation Lore"]].forEach(([k, lab]) => { const x = lore(l, k); if (x) out.push(`${lab} - ${x.en}`); });
+    if (tac.length) out.push("", "Battle Tactic Cards: " + tac.join(", "));
     l.regiments.forEach((r, i) => {
-      out.push("", i === 0 ? "Régiment du général" : `Régiment ${i + 1}`);
-      if (r.hero) out.push(line(r.hero).replace(/^- /, i === 0 ? "- Général : " : "- "));
-      [...(r.cmd || []), ...r.units].forEach(e => out.push(line(e)));
+      out.push("", i === 0 ? "General's Regiment" : `Regiment ${i}`);
+      if (r.hero) out.push(...unit(r.hero, i === 0));
+      r.units.forEach(e => out.push(...unit(e)));
+      (r.cmd || []).forEach(e => out.push(...unit(e)));
     });
-    if (rorOf(l)) out.push("", `Régiment de renom : ${rorOf(l).en} : ${rorOf(l).pts} pts`, "- " + rorComp(rorOf(l)));
-    if (l.aux.length) { out.push("", "Unités auxiliaires"); l.aux.forEach(e => out.push(line(e))); }
-    const tac = (l.tactics || []).filter(Boolean);
-    if (tac.length) out.push("", "Battle Tactics : " + tac.join(", "));
-    out.push("", "Créée avec WarCounter");
+    const R = rorOf(l);
+    if (R) out.push("", "Regiment of Renown", `${R.en} (${R.pts})`, ...R.units.map(([n, c]) => ` • ${c > 1 ? c + "x " : ""}${n}`));
+    if (l.aux.length) { out.push("", "Auxiliary Units"); l.aux.forEach(e => out.push(...unit(e))); }
+    const t = terrOf(l);
+    if (t) out.push("", "Faction Terrain", `${t.en} (${t.pts || 0})`);
+    out.push("", "", "Créée avec WarCounter : https://elcounter.github.io/warcounter/", `App : ${window.WC_VERSION || ""} | Données : BSData`);
     return out.join("\n");
   }
+
 
   // Résout un chemin "r0.units.2" / "r1.hero" / "aux.0"
   function resolve(l, path){
@@ -532,7 +514,7 @@
       case "on": if (l.enh[t.dataset.t]) l.enh[t.dataset.t].on = t.value; break;
       case "tactic": { const j = +t.dataset.j; l.tactics[j] = t.value; l.tactics = l.tactics.slice(0, 2).map(x => x || ""); break; }
       case "share": {
-        const txt = listText(l), done = ok => { t.textContent = ok ? "Liste copiée" : "Copie impossible"; setTimeout(() => { t.textContent = "Copier la liste en texte"; }, 1800); };
+        const txt = listText(l), done = ok => { t.textContent = ok ? "Liste copiée : colle-la où tu veux" : "Copie impossible"; setTimeout(() => { t.textContent = "Exporter la liste (copier le texte)"; }, 1800); };
         if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(() => done(true), () => done(fallbackCopy(txt)));
         else done(fallbackCopy(txt));
         return;
