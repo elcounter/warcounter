@@ -9,7 +9,7 @@ Application web installable (PWA), hébergée sur GitHub Pages : https://elcount
 
 ## Version
 
-Version actuelle : **2.12.0** (MAJ 04-11-2026).
+Version actuelle : **2.13.0** (MAJ 04-11-2026).
 Numérotation X.Y.Z :
 - X : très gros changement (décidé par elcounter uniquement)
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
@@ -19,6 +19,7 @@ Numérotation X.Y.Z :
 
 ## Historique
 
+- 2.13.0 (04-11-2026) : import d'une liste en texte (écran Listes, panneau « Importer une liste » : champ à coller + bouton « Importer ma liste »). `parseList` dans `army-app.js` lit le format d'export (WarCounter ou app officielle) : nom et points, faction, formation ou armée de renom, domaines, Battle Tactic Cards, régiments, puces General / Reinforced / améliorations, régiment de renom, auxiliaires, terrain de faction. Les lignes non reconnues sont signalées sous le panneau.
 - 2.12.0 (04-11-2026) : export liste par liste en texte à copier-coller (bouton « Exporter la liste (copier le texte) » de l'éditeur), au format des apps d'armée : nom et points, faction, formation ou armée de renom, Manuel du Général, poses (Drops), domaines, Battle Tactic Cards, régiments (General's Regiment, Regiment 1…) avec puces General, Reinforced et améliorations, régiment de renom, auxiliaires, terrain de faction, pied « Créée avec WarCounter ». Suppression de l'export/import JSON de toutes les listes. `window.WC_VERSION` injecté par `build.py`.
 - 2.11.0 (04-11-2026) : armées de renom, paquet Chaos (16 : Blades of Khorne, Disciples of Tzeentch, Maggotkin of Nurgle, Hedonites of Slaanesh, Helsmiths of Hashut, Skaven, Slaves to Darkness). Éditeur de liste : menu « Armée de renom » sous la faction (traits de bataille, améliorations et domaines propres, unités autorisées et points de l'AoR, pas de formation ; les unités non autorisées sont retirées) ; régiments de renom limités à ceux autorisés pour l'AoR ; Mémo et Phases suivent l'AoR ; Règles : rubrique « Armées de renom » dans chaque faction, warscrolls propres en `#regle-u-ar~<id>`, recherche. Sources : `fac/aor.py` -> `aor_en.json` (les 60 AoR), `aor_dump.py "Faction1,Faction2"` liste les textes à traduire, traductions `fr_aor_<paquet>.py`, paquets déclarés dans `AOR_PACKS` de `convert.py` (réutilise les traductions de faction quand le texte anglais est identique), sortie `aor.json` -> `window.WC_AOR`. Restent les paquets Destruction, Ordre et Mort.
 - 2.10.0 (04-11-2026) : régiments de renom (76, Manuel du Général 2025-26 dans BSData). Éditeur de liste : section « Régiment de renom » (0-1, filtrée par faction, compte comme un régiment et une pose, points ajoutés) ; Mémo et Phases : aptitudes et unités du régiment ; Règles : page « Régiments de renom » (Manuel du Général), rubrique dans chaque faction, 9 warscrolls propres (Gotrek, Mask of the Deceiver, Cogforts…) en `#regle-u-rr~<id>`, recherche. Sources : `fac/ror.py` -> `ror_en.json`, traductions `fr_ror.py` (clés `Régiment::Aptitude` ou `Unité::Aptitude` en cas d'homonymes), `convert.py` écrit `ror.json`, injecté par `build.py` dans `window.WC_ROR`. Les armées de renom viendront dans une prochaine version.
@@ -52,7 +53,7 @@ Numérotation X.Y.Z :
 
 ## Fonctionnalités
 
-- Listes : création pour les 25 factions, terrain de faction (0-1), domaine de manifestations (faction ou générique), vérification des règles de construction, export de chaque liste en texte à copier-coller (format des apps d'armée).
+- Listes : création pour les 25 factions, terrain de faction (0-1), domaine de manifestations (faction ou générique), vérification des règles de construction, export de chaque liste en texte à copier-coller (format des apps d'armée) et import au même format.
 - Mémo et Phases : aptitudes de la liste active (ou catalogue d'une faction), recherche instantanée dans le Mémo.
 - Règles : règles de base et avancées, Manuel du Général, 25 factions, recherche globale.
 - Parties : feuille de bataille locale (scores, battleplans) ; le joueur 1 peut reprendre une de ses listes (faction, poses, auxiliaires et Battle Tactics remplis automatiquement).

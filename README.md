@@ -6,7 +6,7 @@ Application web gratuite, installable sur téléphone et ordinateur, utilisable 
 
 ## Fonctionnalités
 
-- **Listes** : création de listes d'armée pour les 25 factions, régiments et armées de renom compris, avec vérification des règles de construction, export de chaque liste en texte à copier-coller.
+- **Listes** : création de listes d'armée pour les 25 factions, régiments et armées de renom compris, avec vérification des règles de construction, export de chaque liste en texte à copier-coller, et import d'une liste collée au même format.
 - **Mémo** : toutes les aptitudes de ta liste ou d'une faction, avec une recherche.
 - **Phases** : les aptitudes utilisables à chaque phase du tour.
 - **Règles** : règles de base et avancées, Manuel du Général, régiments de renom, armées de renom et règles des factions, avec une recherche globale.

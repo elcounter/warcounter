@@ -298,13 +298,78 @@
       </button>`;
     }).join("");
     $("lists").innerHTML = `<div class="lhead"><h2>Mes listes</h2></div>
-      <div class="panel"><h3 class="sec">Nouvelle liste</h3><div class="body"><div class="row newl"><select id="new-fac" aria-label="Faction de la nouvelle liste">${facOptions(state.newFac || "", "Sélectionner une faction")}</select><button type="button" class="btn primary" id="new-list"${state.newFac ? "" : " disabled"}>Créer</button></div></div></div>` +
-     
+      <div class="panel"><h3 class="sec">Nouvelle liste</h3><div class="body"><div class="row newl"><select id="new-fac" aria-label="Faction de la nouvelle liste">${facOptions(state.newFac || "", "Sélectionner une faction")}</select><button type="button" class="btn primary" id="new-list"${state.newFac ? "" : " disabled"}>Créer</button></div></div></div>
+      <div class="panel"><h3 class="sec">Importer une liste</h3><div class="body">
+        <textarea id="imp-text" class="imp-text" rows="6" placeholder="Colle ici ta liste au format texte (export WarCounter ou app officielle)" aria-label="Liste à importer"></textarea>
+        <button type="button" class="btn primary wide" id="imp-btn">Importer ma liste</button>
+      </div></div>` +
       (listMsg ? `<p class="lmsg">${esc(listMsg)}</p>` : "") +
       (cards ? `<div class="lgrid">${cards}</div>` : `<p class="hint center">Aucune liste. Crée ta première liste.</p>`) +
       `<p class="hint">Règles de construction du Manuel du Général 2026-27. Tes listes restent enregistrées sur cet appareil.</p>`;
   }
   let listMsg = "";
+  // ---------- Import d'une liste au format texte ----------
+  const key = x => String(x || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[’‘`]/g, "'").replace(/\s+/g, " ").trim().toLowerCase();
+  const findBy = (arr, n, f = o => o.en) => arr.find(o => key(f(o)) === key(n));
+  function parseList(txt){
+    const lines = txt.split(/\r?\n/).map(x => x.trim()), warn = [];
+    const first = lines.find(Boolean) || "", m = first.match(/^(.*?)\s+(\d+)\s*\/\s*(\d+)\s*pts?/i);
+    const l = {id:newKey(), fac:"", name:(m ? m[1] : first) || "Liste importée", limit:m ? +m[3] : 2000, formation:"", regiments:[], aux:[], tactics:[], enh:{}, lore:{}};
+    let F = null, sec = null, last = null;
+    const LORE = {"spell lore":"spells", "prayer lore":"prayers", "manifestation lore":"manifs"};
+    for (const raw of lines.slice(lines.indexOf(first) + 1)) {
+      if (!raw) continue;
+      const k = key(raw);
+      if (!F) { const P = FAC_ORDER.find(x => key(x.en) === k); if (P) { F = P; l.fac = P.id; } continue; }
+      if (/^(general's handbook|drops\b|created with|creee avec|cree avec|app\s*:|data\s*:)/.test(k)) continue;
+      const lm = raw.match(/^(Spell Lore|Prayer Lore|Manifestation Lore)\s*[-:–]\s*(.+)$/i);
+      if (lm) { const kind = LORE[key(lm[1])], x = findBy(F[kind], lm[2]) || (kind === "manifs" && findBy(UMANIF, lm[2])); if (x) l.lore[kind] = x.id; else warn.push(lm[2]); continue; }
+      const tm = raw.match(/^Battle Tactic Cards?\s*:\s*(.+)$/i);
+      if (tm) { tm[1].split(",").forEach(n => { const t = findBy(TACTICS, n, o => o.n); if (t) l.tactics.push(t.n); else warn.push(n.trim()); }); l.tactics = l.tactics.slice(0, 2); continue; }
+      if (k === "general's regiment" || /^regiment \d+$/.test(k)) { sec = "reg"; l.regiments.push({hero:null, cmd:[], units:[]}); last = null; continue; }
+      if (k === "regiment of renown") { sec = "ror"; continue; }
+      if (k === "auxiliary units" || k === "auxiliaries") { sec = "aux"; continue; }
+      if (k === "faction terrain") { sec = "terr"; continue; }
+      if (!sec) { // formation ou armée de renom
+        const a = findBy(aorsOf(F.id), raw); if (a) { l.aor = a.id; F = FXA[a.id]; continue; }
+        const f = findBy(F.formations, raw); if (f) { l.formation = f.id; continue; }
+        warn.push(raw); continue;
+      }
+      if (/^[•*-]/.test(raw)) { // puces : General, Reinforced, amélioration
+        const b = raw.replace(/^[•*-]\s*/, "");
+        if (sec === "ror") continue;
+        if (!last) continue;
+        if (key(b) === "general") continue;
+        if (key(b) === "reinforced") { last.reinf = true; continue; }
+        const nm = b.replace(/\s*\(\+?\d+\)\s*$/, "").replace(/^'(.*)'$/, "$1");
+        const t = F.tables.find(t => findBy(t.items, nm) || findBy(t.items, "'" + nm + "'"));
+        if (t) { const x = findBy(t.items, nm) || findBy(t.items, "'" + nm + "'"); l.enh[t.key] = {id:x.id, on:last.k}; } else warn.push(b);
+        continue;
+      }
+      const um = raw.match(/^(.+?)\s*\((\d+)\)\s*$/), nm = um ? um[1] : raw;
+      if (sec === "ror") { const r = findBy(ROR, nm); if (r) l.ror = r.id; else warn.push(nm); continue; }
+      const u = findBy(F.units, nm);
+      if (!u) { warn.push(nm); last = null; continue; }
+      const e = {u:u.id, k:newKey()}; last = e;
+      if (sec === "terr") { l.terrain = u.id; continue; }
+      if (sec === "aux") { l.aux.push(e); continue; }
+      const r = l.regiments[l.regiments.length - 1];
+      if (u.hero && !r.hero) r.hero = e;
+      else if (u.cmd && F.hashut && r.hero) r.cmd.push(e);
+      else r.units.push(e);
+    }
+    if (!l.regiments.length) l.regiments.push({hero:null, cmd:[], units:[]});
+    return {l: F ? l : null, warn};
+  }
+  function importText(){
+    const ta = $("imp-text"), txt = ta ? ta.value : "";
+    if (!txt.trim()) { listMsg = "Colle d'abord ta liste dans le champ."; renderLists(); return; }
+    const {l, warn} = parseList(txt);
+    if (!l) { listMsg = "Faction non reconnue : vérifie que la ligne de faction est bien présente (ex. Helsmiths of Hashut)."; renderLists(); $("imp-text").value = txt; return; }
+    normalize(l); state.lists.push(l); save();
+    listMsg = `Liste « ${l.name} » importée (${entries(l).length} unités).` + (warn.length ? ` Non reconnu : ${warn.join(", ")}.` : "");
+    renderLists();
+  }
   $("lists").addEventListener("change", e => {
     if (e.target.id === "new-fac") { state.newFac = e.target.value; save(); const b = $("new-list"); if (b) b.disabled = !state.newFac; }
   });
@@ -314,6 +379,7 @@
       const l = {id:newKey(), fac, name:"Nouvelle liste", limit:2000, formation:"", regiments:[{hero:null, cmd:[], units:[]}], aux:[], tactics:[], enh:{}, lore:{}};
       state.lists.push(l); save(); location.hash = "liste-" + l.id; return;
     }
+    if (e.target.closest("#imp-btn")) { importText(); return; }
     const c = e.target.closest("[data-open]");
     if (c) location.hash = "liste-" + c.dataset.open;
   });
