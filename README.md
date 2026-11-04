@@ -6,10 +6,10 @@ Application web gratuite, installable sur téléphone et ordinateur, utilisable 
 
 ## Fonctionnalités
 
-- **Listes** : création de listes d'armée pour les 25 factions, régiments de renom compris, avec vérification des règles de construction, partage en texte et export/import.
+- **Listes** : création de listes d'armée pour les 25 factions, régiments et armées de renom compris, avec vérification des règles de construction, partage en texte et export/import.
 - **Mémo** : toutes les aptitudes de ta liste ou d'une faction, avec une recherche.
 - **Phases** : les aptitudes utilisables à chaque phase du tour.
-- **Règles** : règles de base et avancées, Manuel du Général, régiments de renom et règles des factions, avec une recherche globale.
+- **Règles** : règles de base et avancées, Manuel du Général, régiments de renom, armées de renom et règles des factions, avec une recherche globale.
 - **Parties** : feuille de bataille pour suivre les scores, les battleplans et les Battle Tactics.
 
 ## Mentions

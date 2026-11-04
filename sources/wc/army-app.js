@@ -94,14 +94,27 @@
       photo: () => ""
     };
   });
+  // Armées de renom : variante d'une faction (unités autorisées, traits, améliorations et domaines propres)
+  const AOR = window.WC_AOR || [], FXA = {};
+  AOR.forEach(a => {
+    const P = FX[a.fac]; if (!P) return;
+    const by = {}; P.units.forEach(u => { by[u.en] = u; });
+    const units = a.units.map(([n, pts]) => by[n] && {...by[n], pts: pts || by[n].pts}).filter(Boolean)
+      .concat(a.xunits.map(u => ({...u, unique:/\bUNIQUE\b/.test(u.kw), wizard:/SORCIER/.test(u.kw), priest:/PRÊTRE/.test(u.kw), war:/MACHINE DE GUERRE/.test(u.kw)})));
+    const TT = {trait:["Trait héroïque","Traits héroïques",true], artefact:["Artefact de pouvoir","Artefacts de pouvoir",true]};
+    FXA[a.id] = {...P, en:a.en, base:P.en, aor:a, units, bt:a.bt, formations:[],
+      tables:a.tables.map(t => TT[t.key] ? {key:t.key, title:TT[t.key][0], plural:TT[t.key][1], hero:true, items:t.items} : {key:t.key, title:t.title, plural:t.title, items:t.items}).filter(t => t.items.length),
+      spells:a.spells.length ? a.spells : P.spells, prayers:a.prayers.length ? a.prayers : P.prayers, manifs:a.manifs.length ? a.manifs : P.manifs};
+  });
+  const aorsOf = fid => AOR.filter(a => a.fac === fid && FXA[a.id]);
   // Régiments de renom (General's Handbook) : unités prises dans toutes les factions + warscrolls propres
   const ROR = (window.WC_ROR || {}).regiments || [], RORU = (window.WC_ROR || {}).units || [];
   const unitByName = n => { for (const F of Object.values(FX)) { const u = F.units.find(x => x.en === n); if (u) return u; } return RORU.find(x => x.en === n) || null; };
-  const rorFor = F => ROR.filter(r => r.facs.includes(F.id));
+  const rorFor = F => ROR.filter(r => F.aor ? (r.aors || []).includes(F.aor.en) : r.facs.includes(F.id));
   const rorUnits = r => r.units.map(([n, c]) => ({u:unitByName(n), c})).filter(o => o.u);
   const rorComp = r => r.units.map(([n, c]) => (c > 1 ? c + " × " : "") + n).join(", ");
   const FAC_ORDER = Object.values(FX).sort((a, b) => a.en.localeCompare(b.en));
-  const fx = l => (l && FX[l.fac]) || FX.hashut;
+  const fx = l => (l && l.aor && FXA[l.aor] && FXA[l.aor].id === l.fac && FXA[l.aor]) || (l && FX[l.fac]) || FX.hashut;
   const UF = (F, id) => F.units.find(u => u.id === id);
 
   // ---------- Stockage local ----------
@@ -155,7 +168,14 @@
     if (!Array.isArray(l.tactics)) l.tactics = [];
     if (!l.lore) l.lore = {};
     if (l.terrain && !(UF(fx(l), l.terrain) || {}).terrain) delete l.terrain;
-    if (l.ror && !(rorOf(l) && rorOf(l).facs.includes(l.fac))) delete l.ror;
+    if (l.aor && !(FXA[l.aor] && FXA[l.aor].id === l.fac)) delete l.aor;
+    { // unités non autorisées (changement d'armée de renom)
+      const ok = e => e && UF(fx(l), e.u);
+      l.regiments.forEach(r => { if (r.hero && !ok(r.hero)) { r.hero = null; r.cmd = []; } r.cmd = (r.cmd || []).filter(ok); r.units = r.units.filter(ok); });
+      l.aux = l.aux.filter(ok);
+    }
+    if (l.formation && !formOf(l)) l.formation = "";
+    if (l.ror && !rorFor(fx(l)).some(r => r.id === l.ror)) delete l.ror;
     if (!l.enh) {
       l.enh = {};
       if (l.trait) l.enh.trait = l.trait;
@@ -182,7 +202,7 @@
     const F = fx(l), err = [], info = [];
     const pts = listPts(l);
     if (pts > l.limit) err.push(`Dépassement de ${pts - l.limit} pts pour une partie à ${l.limit} pts.`);
-    if (!l.formation) err.push("Choisis une formation de bataille.");
+    if (!l.formation && F.formations.length) err.push("Choisis une formation de bataille.");
     if (!l.regiments.length) err.push("Ajoute le régiment du général.");
     if (regCount(l) > MAX_REG) err.push(`${MAX_REG} régiments maximum${l.ror ? ", régiment de renom compris" : ""}.`);
     l.regiments.forEach((r, i) => {
@@ -354,7 +374,9 @@
       : `<optgroup label="Unités">${optList(TROOPS, "", unitLabel)}</optgroup><optgroup label="Héros (si l'option de régiment le permet)">${optList(HEROES, "", unitLabel)}</optgroup>`;
     let h = `<div class="panel"><h3 class="sec dark">Liste</h3><div class="body">
       <div><label class="lbl" for="lname">Nom de la liste</label><input type="text" id="lname" value="${esc(l.name)}" placeholder="Ex. Castigation Battery" autocomplete="off"></div>
-      <div><label class="lbl" for="lfac">Faction</label>${empty ? `<select id="lfac" data-act="fac">${facOptions(l.fac)}</select>` : `<p class="facname">${esc(F.en)}</p>`}</div>
+      <div><label class="lbl" for="lfac">Faction</label>${empty ? `<select id="lfac" data-act="fac">${facOptions(l.fac)}</select>` : `<p class="facname">${esc(F.base || F.en)}</p>`}</div>
+      ${aorsOf(l.fac).length ? `<div><label class="lbl" for="laor">Armée de renom</label><select id="laor" data-act="aor"><option value="">Aucune (armée standard)</option>${optList(aorsOf(l.fac), l.aor, o => o.en)}</select>
+        <p class="hint">${F.aor ? `Traits de bataille, améliorations et domaines de ${esc(F.aor.en)} ; ${F.units.length} unités autorisées, pas de formation de bataille. Les unités non autorisées sont retirées de la liste.` : `${aorsOf(l.fac).length} armées de renom disponibles. Elles changent les règles de l'armée et limitent les unités autorisées.`}</p></div>` : ""}
       <div><span class="lbl">Format (3000 pts : d'un commun accord)</span><div class="seg">${LIMITS.map(x => `<button type="button" class="pick" data-act="limit" data-v="${x}" aria-pressed="${l.limit === x}">${x} pts</button>`).join("")}</div></div>
       <div class="total${pts > l.limit ? " over" : ""}"><div class="big">${pts} <span>/ ${l.limit} pts</span></div>
         <div class="meter" role="img" aria-label="${pct} % des points utilisés"><span style="width:${pct}%"></span></div>
@@ -369,8 +391,8 @@
       return `<div><label class="lbl" for="lore-${kind}">${label}</label><select id="lore-${kind}" data-act="lore" data-k="${kind}">${none ? `<option value=""${!cur ? " selected" : ""}>Aucun</option>` : ""}${optList(L, cur && cur.id, o => o.en)}</select></div>`;
     };
     h += `<div class="panel"><h3 class="sec">Formation et domaines</h3><div class="body">
-      <div><label class="lbl" for="formation">Formation de bataille</label><select id="formation" data-act="formation"><option value="">Choisir…</option>${optList(F.formations, l.formation, o => o.en + (o.pts ? ` (+${o.pts} pts)` : ""))}</select>
-      ${f ? `<p class="hint">${esc(f.abs.map(a => a.n).join(", "))}</p>` : ""}</div>
+      ${F.formations.length ? `<div><label class="lbl" for="formation">Formation de bataille</label><select id="formation" data-act="formation"><option value="">Choisir…</option>${optList(F.formations, l.formation, o => o.en + (o.pts ? ` (+${o.pts} pts)` : ""))}</select>
+      ${f ? `<p class="hint">${esc(f.abs.map(a => a.n).join(", "))}</p>` : ""}</div>` : `<p class="hint">Pas de formation de bataille en armée de renom.</p>`}
       ${loreSel("spells", "Domaine de sorts")}${loreSel("prayers", "Domaine de prières")}
       ${!F.spells.length && !F.prayers.length ? `<p class="hint">Pas de domaine de sorts ni de prières pour cette faction.</p>` : ""}
     </div></div>`;
@@ -430,7 +452,7 @@
       const holderSel = `<select data-act="on" data-t="${t.key}" aria-label="Porteur : ${esc(t.title)}"><option value="">Porté par…</option>${hs.map(o => `<option value="${esc(o.e.k)}"${v && v.on === o.e.k ? " selected" : ""}>${esc(UF(F, o.e.u).en)}${o.role === "cmd" ? " (commandant)" : ""}</option>`).join("")}</select>`;
       return `<div><label class="lbl" for="enh-${t.key}">${esc(t.title)}</label><select id="enh-${t.key}" data-act="enh" data-t="${t.key}"><option value="">Aucun</option>${optList(t.items, v && v.id, o => o.en + (o.pts ? ` (+${o.pts} pts)` : "") + (o.aqshy && t.key !== "proc" ? AQSHY : ""))}</select>
         ${v && v.id ? holderSel : ""}</div>`;
-    }).join("") + `<p class="hint">${F.hashut ? "1 amélioration par table : 1 trait héroïque, 1 artefact (héros non Unique) et 1 Procédé Maudit, à choisir sur une Machine de Guerre non Unique." : "1 amélioration par table, sur une unité non Unique (un même héros peut cumuler un trait et un artefact). Les tables spéciales ont leurs propres conditions : vérifie-les dans ton tome de bataille."}</p>
+    }).join("") + `<p class="hint">${F.hashut && !F.aor ? "1 amélioration par table : 1 trait héroïque, 1 artefact (héros non Unique) et 1 Procédé Maudit, à choisir sur une Machine de Guerre non Unique." : "1 amélioration par table, sur une unité non Unique (un même héros peut cumuler un trait et un artefact). Les tables spéciales ont leurs propres conditions : vérifie-les dans ton tome de bataille."}</p>
     </div></div>`;
 
     const tsel = j => `<select data-act="tactic" data-j="${j}" aria-label="Carte de tactique ${j + 1}"><option value="">Carte ${j + 1} : aucune</option>${TACTICS.filter(t => t.n === l.tactics[j] || !l.tactics.includes(t.n)).map(t => `<option value="${esc(t.n)}"${l.tactics[j] === t.n ? " selected" : ""}>n°${t.card} · ${esc(t.n)}</option>`).join("")}</select>`;
@@ -454,7 +476,7 @@
   function listText(l){
     const F = fx(l), f = formOf(l), out = [];
     const line = e => { const u = UF(F, e.u), en = enhOn(l, e).map(o => o.x.en); return `- ${u.en}${e.reinf ? " (renforcée)" : ""} : ${entryPts(l, e)} pts${en.length ? " · " + en.join(", ") : ""}`; };
-    out.push(l.name || "Sans nom", `${F.en} · ${listPts(l)} / ${l.limit} pts · ${drops(l)} pose${drops(l) > 1 ? "s" : ""}`);
+    out.push(l.name || "Sans nom", `${F.base ? F.base + " · armée de renom " + F.en : F.en} · ${listPts(l)} / ${l.limit} pts · ${drops(l)} pose${drops(l) > 1 ? "s" : ""}`);
     if (f) out.push(`Formation : ${f.en}`);
     if (terrOf(l)) out.push(`Terrain de faction : ${terrOf(l).en}${terrOf(l).pts ? ` (${terrOf(l).pts} pts)` : ""}`);
     [["spells","Sorts"],["prayers","Prières"],["manifs","Manifestations"]].forEach(([k, lab]) => { const x = lore(l, k); if (x) out.push(`${lab} : ${x.en}`); });
@@ -491,7 +513,8 @@
     const i = +t.dataset.i;
     switch (act) {
       case "limit": l.limit = +t.dataset.v; break;
-      case "fac": if (!entries(l).length && FX[t.value]) { l.fac = t.value; l.formation = ""; l.enh = {}; l.lore = {}; l.regiments.forEach(r => { r.cmd = []; }); } break;
+      case "aor": if (t.value) l.aor = t.value; else delete l.aor; l.formation = ""; l.enh = {}; l.lore = {}; break;
+      case "fac": if (!entries(l).length && FX[t.value]) { l.fac = t.value; delete l.aor; l.formation = ""; l.enh = {}; l.lore = {}; l.regiments.forEach(r => { r.cmd = []; }); } break;
       case "activate": state.active = l.id; break;
       case "formation": l.formation = t.value; break;
       case "lore": l.lore[t.dataset.k] = t.value; break;

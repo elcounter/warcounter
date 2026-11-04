@@ -242,7 +242,8 @@ if __name__ == '__main__':
     regs = []
     for i, o in enumerate(R['regiments']):
         facs = sorted({ids[n] for n in (re.sub(r' \[LEGENDS\]$', '', re.sub(r' - .*$', '', f)) for f in o['factions']) if n in ids})
-        regs.append({'id':'r%d' % i, 'en':o['name'], 'pts':o['pts'], 'facs':facs, 'units':[[n, c] for n, c in o['units']],
+        aorsok = sorted({f.split(' - ', 1)[1] for f in o['factions'] if ' - ' in f and 'LEGENDS' not in f})
+        regs.append({'id':'r%d' % i, 'en':o['name'], 'pts':o['pts'], 'facs':facs, 'aors':aorsok, 'units':[[n, c] for n, c in o['units']],
                      'abs':[tr(o['name'] + '::' + a['name'], a) for a in o['abilities']]})
     xu = []
     for u in R['units']:
@@ -255,3 +256,52 @@ if __name__ == '__main__':
         xu.append(x)
     open(os.path.join(here, 'ror.json'), 'w').write(json.dumps({'regiments':regs, 'units':xu}, ensure_ascii=False))
     print('Régiments de renom :', len(regs), '· warscrolls propres :', len(xu), '· sans faction :', [r['en'] for r in regs if not r['facs']])
+
+    # Armées de renom (par paquet d'alliance : fr_aor_<paquet>.py)
+    import glob as _g
+    AOR_PACKS = {'chaos': ['Blades of Khorne','Disciples of Tzeentch','Maggotkin of Nurgle','Hedonites of Slaanesh','Helsmiths of Hashut','Skaven','Slaves to Darkness']}
+    src = {}
+    for f in _g.glob(os.path.join(here, '*_en.json')):
+        d = json.load(open(f))
+        if not isinstance(d, dict) or 'units' not in d: continue
+        try: TT = importlib.import_module('fr_' + os.path.basename(f)[:-8]).T
+        except Exception: continue
+        for a in [a for u in d['units'] for a in u['abilities']] + [a for g in d.get('groups', []) for i in g['items'] for a in i['abilities']]:
+            if a['name'] in TT: src[(a['name'], clean(a['effect']).strip())] = TT[a['name']]
+    facunits = {}
+    for f in _g.glob(os.path.join(here, '*_en.json')):
+        d = json.load(open(f))
+        if isinstance(d, dict) and 'units' in d and 'name' in d: facunits[d['name']] = {u['name'] for u in d['units']}
+    AE = json.load(open(os.path.join(here, 'aor_en.json')))
+    aors = []
+    SECK = {'Battle Traits':'bt', 'Heroic Traits':'trait', 'Artefacts of Power':'artefact', 'Spell Lores':'spells', 'Prayer Lores':'prayers', 'Manifestation Lores':'manifs'}
+    for pack, facs in AOR_PACKS.items():
+        TA = importlib.import_module('fr_aor_' + pack).T
+        def tra(a, unit=None):
+            k = (unit + '::' + a['name']) if unit else a['name']
+            fr = TA.get(k) or TA.get(a['name']) or src.get((a['name'], clean(a['effect']).strip()))
+            return ability(a, {a['name']: fr} if fr else {})
+        for d in AE:
+            if d['faction'] not in facs: continue
+            fid = ids[d['faction']]
+            o = {'id':'a%d' % len(aors), 'fac':fid, 'en':d['name'], 'bt':[], 'tables':[], 'spells':[], 'prayers':[], 'manifs':[], 'units':[], 'xunits':[]}
+            for g in d['groups']:
+                k = SECK.get(g['title'])
+                items = [{'id':'%s-%d' % (k or 'x', j), 'en':re.sub(r'^(Spell|Prayer|Manifestation) Lore: ', '', i['name'].strip("'")), 'pts':i['pts'] or 0, 'abs':[tra(a) for a in i['abilities']]} for j, i in enumerate(g['items'])]
+                if k == 'bt': o['bt'] = [a for i in items for a in i['abs']]
+                elif k in ('spells', 'prayers', 'manifs'): o[k] = items
+                elif k in ('trait', 'artefact'): o['tables'].append({'key':k, 'items':items})
+                else: o['tables'].append({'key':'x%d' % len(o['tables']), 'title':g['title'], 'items':items})
+            known = facunits.get(d['faction'], set())
+            for u in d['units']:
+                if u['name'] in known: o['units'].append([u['name'], u['pts']]); continue
+                s = u['stats']
+                x = {'id':'ar-' + re.sub(r'[^a-z0-9]+', '-', u['name'].lower()).strip('-'), 'en':u['name'], 'pts':u['pts'], 'size':u['size'],
+                     'stats':{'M':s.get('Move', '-'), 'S':s.get('Health', '-'), 'C':s.get('Control', '-'), 'Sv':s.get('Save', '-')},
+                     'weapons':[weapon(w) for w in sorted(u['weapons'], key=lambda w: w['kind'] != 'Ranged Weapon')],
+                     'abilities':[tra(a, u['name']) for a in u['abilities']], 'kw':kw_line(u['kw'])}
+                if 'HERO' in u['kw']: x['hero'] = True
+                o['xunits'].append(x)
+            aors.append(o)
+    open(os.path.join(here, 'aor.json'), 'w').write(json.dumps(aors, ensure_ascii=False))
+    print('Armées de renom :', len(aors), '· traductions manquantes :', sorted(set(MISSING)))

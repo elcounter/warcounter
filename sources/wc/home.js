@@ -129,7 +129,7 @@
       + sec("Accursed Devices (Fléau d'Aqshy)", A.PROCEDES.map(p => ({...p.ab, cost:"+" + p.pts + " pts"})))
       + sec("Sorts : " + A.LORE_NAMES.spell, A.SPELLS)
       + sec("Prières : " + A.LORE_NAMES.prayer, A.PRAYERS)
-      + rorFold("hashut")
+      + aorFold("hashut") + rorFold("hashut")
       + `<p class="hint">Données BSData, traduites en français.</p>`;
   }
   // Pages faction génériques (BSData traduit)
@@ -164,6 +164,25 @@
       <p><b>Unités :</b> ${comp}</p>${facs ? `<p class="hint"><b>Factions :</b> ${esc(r.facs.map(facEn).sort().join(", "))}</p>` : ""}
       ${r.abs.length ? r.abs.map(abCard).join("") : `<p class="hint">Pas d'aptitude de régiment : les règles sont sur les warscrolls.</p>`}</div></details>`;
   }
+  // Armées de renom
+  const AOR = window.WC_AOR || [], AORU = {};
+  AOR.forEach(a => a.xunits.forEach(u => { AORU[u.id] = {u, fac:a.fac}; }));
+  const TT = {trait:"Traits héroïques", artefact:"Artefacts de pouvoir"};
+  function aorHtml(a){
+    const urow = (n, pts, href) => href ? `<a class="urow" href="${href}"><span>${esc(n)}</span><b>${pts} pts</b></a>` : `<div class="urow"><span>${esc(n)}</span><b>${pts} pts</b></div>`;
+    const items = L => L.map(i => i.abs.length === 1 && i.abs[0].n === i.en ? abCard({...i.abs[0], cost:i.pts ? "+" + i.pts + " pts" : i.abs[0].cost}) : `<h4 class="iname">${esc(i.en)}${i.pts ? ` · +${i.pts} pts` : ""}</h4>${i.abs.map(abCard).join("")}`).join("");
+    const block = (t, body) => body ? `<h4 class="iname aor-h">${esc(t)}</h4>${body}` : "";
+    return `<details class="fold"><summary><span>${esc(a.en)}</span></summary><div class="fold-body">
+      ${block("Traits de bataille", a.bt.map(abCard).join(""))}
+      ${a.tables.map(t => block(t.title || TT[t.key] || t.key, items(t.items))).join("")}
+      ${block("Sorts", items(a.spells))}${block("Prières", items(a.prayers))}${block("Manifestations", items(a.manifs))}
+      <h4 class="iname aor-h">Unités autorisées (${a.units.length + a.xunits.length})</h4><div class="ulist">${a.units.map(([n, pts]) => urow(n, pts, uLink(n))).concat(a.xunits.map(u => urow(u.en, u.pts, `#regle-u-ar~${u.id}`))).join("")}</div>
+      <p class="hint">Pas de formation de bataille en armée de renom.</p></div></details>`;
+  }
+  function aorFold(fid){
+    const L = AOR.filter(a => a.fac === fid);
+    return L.length ? `<details class="fold"><summary><span>Armées de renom <small>· ${L.length}</small></span></summary><div class="fold-body">${L.map(aorHtml).join("")}</div></details>` : "";
+  }
   function rorFold(fid){
     const L = ROR.filter(r => r.facs.includes(fid));
     return L.length ? `<details class="fold"><summary><span>Régiments de renom <small>· ${L.length}</small></span></summary><div class="fold-body">${L.map(r => rorHtml(r, false)).join("")}</div></details>` : "";
@@ -177,7 +196,7 @@
     const row = u => `<a class="urow" href="#regle-u-${F.id}~${u.id}"><span>${esc(u.en)}</span><b>${u.pts} pts</b></a>`;
     return `<details class="fold" open><summary><span>Warscrolls <small>· ${F.units.length} unités</small></span></summary><div class="fold-body ulist">
         <h4 class="iname">Héros</h4>${heroes.map(row).join("")}<h4 class="iname">Unités</h4>${others.map(row).join("")}${terr.length ? `<h4 class="iname">Terrain de faction</h4>${terr.map(row).join("")}` : ""}</div></details>`
-      + F.sections.map(sec).join("") + rorFold(F.id) + `<p class="hint">Données BSData, traduites en français.</p>`;
+      + F.sections.map(sec).join("") + aorFold(F.id) + rorFold(F.id) + `<p class="hint">Données BSData, traduites en français.</p>`;
   }
   function bpPage(){
     return BS.BATTLEPLANS.map(b => `<details class="fold"><summary><span><b>${esc(b.id)}</b> ${esc(b.n)}</span></summary><div class="fold-body">
@@ -277,6 +296,7 @@
       units.forEach(u => u.abilities.forEach(a => add(a.n, `Aptitude · ${u.en} (${F.en})`, F.data ? `#regle-u-${F.id}~${u.id}` : "#regle-faction-" + F.id)));
     });
     add("Régiments de renom", "Manuel du Général", "#regle-renom");
+    AOR.forEach(a => { const fe = facEn(a.fac), h = "#regle-faction-" + a.fac; add(a.en, "Armée de renom · " + fe, h); a.bt.concat(...a.tables.map(t => t.items.flatMap(i => i.abs)), ...[a.spells, a.prayers, a.manifs].map(L => L.flatMap(i => i.abs))).forEach(x => add(x.n, `Aptitude · ${a.en} (armée de renom)`, h)); a.xunits.forEach(u => add(u.en, "Unité · armée de renom " + a.en, `#regle-u-ar~${u.id}`, [u.kw])); });
     ROR.forEach(r => { add(r.en, `Régiment de renom · ${r.pts} pts`, "#regle-renom", r.units.map(x => x[0]).concat(r.abs.map(a => a.n))); r.abs.forEach(a => add(a.n, "Aptitude · " + r.en + " (régiment de renom)", "#regle-renom")); });
     RORU.forEach(u => add(u.en, "Unité · régiment de renom", `#regle-u-rr~${u.id}`, [u.kw]));
     const seen = new Set(); return out.filter(x => { const k = x.t + "|" + x.href; if (seen.has(k)) return false; seen.add(k); return true; });
@@ -302,7 +322,7 @@
     const h = location.hash.slice(1);
     const fac = h.startsWith("regle-faction-") ? FACTIONS.find(f => f.id === h.slice(14)) : null;
     let unitPage = null;
-    if (h.startsWith("regle-u-")) { const [fid, ...rest] = h.slice(8).split("~"); const F = FACTIONS.find(f => f.id === fid); const U = fid === "rr" ? RORU.find(u => u.id === rest.join("~")) : F && F.data && F.data.units.find(u => u.id === rest.join("~")); if (U) unitPage = {F, U}; }
+    if (h.startsWith("regle-u-")) { const [fid, ...rest] = h.slice(8).split("~"); const F = FACTIONS.find(f => f.id === fid); const U = fid === "ar" ? (AORU[rest.join("~")] || {}).u : fid === "rr" ? RORU.find(u => u.id === rest.join("~")) : F && F.data && F.data.units.find(u => u.id === rest.join("~")); if (U) unitPage = {F, U}; }
     const rule = unitPage ? {en:unitPage.U.en, unit:true} : fac ? {en:fac.en, fac:true} : h === "regle-renom" ? {en:"Régiments de renom", renom:true} : h.startsWith("regle-") ? RULES.find(r => r.id === h.slice(6)) : null;
     if (!(h === "" || h === "accueil" || h === "regles" || h === "installer" || h === "soutenir" || rule)) return;
     $("menu-hint").hidden = STANDALONE || !(h === "" || h === "accueil" || h === "installer");
@@ -325,6 +345,6 @@
     }
     window.scrollTo(0, 0);
   }
-  $("home-back").addEventListener("click", () => { const h = location.hash.slice(1); location.hash = h === "installer" || h === "soutenir" ? "accueil" : h.startsWith("regle-u-rr~") ? "regle-renom" : h.startsWith("regle-u-") ? "regle-faction-" + h.slice(8).split("~")[0] : "regles"; });
+  $("home-back").addEventListener("click", () => { const h = location.hash.slice(1); location.hash = h === "installer" || h === "soutenir" ? "accueil" : h.startsWith("regle-u-rr~") ? "regle-renom" : h.startsWith("regle-u-ar~") ? "regle-faction-" + ((AORU[h.slice(11)] || {}).fac || "") : h.startsWith("regle-u-") ? "regle-faction-" + h.slice(8).split("~")[0] : "regles"; });
   window.addEventListener("hashchange", route);
   route();
