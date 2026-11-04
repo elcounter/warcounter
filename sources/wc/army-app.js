@@ -105,7 +105,7 @@
       const s = JSON.parse(localStorage.getItem(STORE));
       if (s && Array.isArray(s.lists)) return s;
     } catch(e) {}
-    return {lists:[clone(SEED)], active:SEED.id};
+    return {lists:[], active:null};
   }
   let state = load();
   function save(){ try { localStorage.setItem(STORE, JSON.stringify(state)); } catch(e) {} }
@@ -249,7 +249,7 @@
   }
 
   // ---------- Écran Listes ----------
-  const facOptions = sel => FAC_ORDER.map(F => `<option value="${F.id}"${F.id === sel ? " selected" : ""}>${esc(F.en)}</option>`).join("");
+  const facOptions = (sel, ph) => (ph ? `<option value=""${sel ? "" : " selected"} disabled>${ph}</option>` : "") + FAC_ORDER.map(F => `<option value="${F.id}"${F.id === sel ? " selected" : ""}>${esc(F.en)}</option>`).join("");
   function renderLists(){
     setTimeout(() => { listMsg = ""; }, 0);
     const cards = state.lists.map(l => {
@@ -262,7 +262,7 @@
       </button>`;
     }).join("");
     $("lists").innerHTML = `<div class="lhead"><h2>Mes listes</h2></div>
-      <div class="panel"><h3 class="sec">Nouvelle liste</h3><div class="body"><div class="row newl"><select id="new-fac" aria-label="Faction de la nouvelle liste">${facOptions(state.newFac || "hashut")}</select><button type="button" class="btn primary" id="new-list">Créer</button></div></div></div>` +
+      <div class="panel"><h3 class="sec">Nouvelle liste</h3><div class="body"><div class="row newl"><select id="new-fac" aria-label="Faction de la nouvelle liste">${facOptions(state.newFac || "", "Sélectionner une faction")}</select><button type="button" class="btn primary" id="new-list"${state.newFac ? "" : " disabled"}>Créer</button></div></div></div>` +
       `<div class="lbar"><button type="button" class="btn" id="exp-lists"${state.lists.length ? "" : " disabled"}>Exporter mes listes</button><button type="button" class="btn" id="imp-lists">Importer des listes</button><input type="file" id="imp-file" accept=".json,application/json" hidden></div>` +
       (listMsg ? `<p class="lmsg">${esc(listMsg)}</p>` : "") +
       (cards ? `<div class="lgrid">${cards}</div>` : `<p class="hint center">Aucune liste. Crée ta première liste.</p>`) +
@@ -296,12 +296,12 @@
     r.readAsText(file);
   }
   $("lists").addEventListener("change", e => {
-    if (e.target.id === "new-fac") { state.newFac = e.target.value; save(); }
+    if (e.target.id === "new-fac") { state.newFac = e.target.value; save(); const b = $("new-list"); if (b) b.disabled = !state.newFac; }
     if (e.target.id === "imp-file" && e.target.files[0]) importLists(e.target.files[0]);
   });
   $("lists").addEventListener("click", e => {
     if (e.target.closest("#new-list")) {
-      const fac = $("new-fac").value || "hashut";
+      const fac = $("new-fac").value; if (!FX[fac]) return;
       const l = {id:newKey(), fac, name:"Nouvelle liste", limit:2000, formation:"", regiments:[{hero:null, cmd:[], units:[]}], aux:[], tactics:[], enh:{}, lore:{}};
       state.lists.push(l); save(); location.hash = "liste-" + l.id; return;
     }
@@ -512,7 +512,8 @@
     $("memo-banner").innerHTML = s.l
       ? `<a class="banner" href="#liste-${esc(s.l.id)}"><span><b>${esc(s.l.name || "Sans nom")}</b><br>${esc(s.F.en)} · ${listPts(s.l)} / ${s.l.limit} pts${s.formations[0] ? " · " + esc(s.formations[0].en) : ""}</span><span class="banner-go">Modifier</span></a>`
       : `<div class="banner off"><span>Aucune liste active : catalogue de la faction choisie.</span><a class="banner-go" href="#listes">Listes</a></div>
-         <div class="catsel"><label class="lbl" for="cat-fac">Faction consultée</label><select id="cat-fac">${facOptions(s.F.id)}</select></div>`;
+         <div class="catsel"><label class="lbl" for="cat-fac">Faction consultée</label><select id="cat-fac">${facOptions(state.cat && FX[state.cat] ? s.F.id : "", "Sélectionner une faction")}</select></div>`;
+    if (!s.l && !(state.cat && FX[state.cat])) { $("list").innerHTML = `<p class="hint center">Crée une liste ou choisis une faction pour afficher son catalogue.</p>`; return; }
     const gab = id => id === "sorts" ? s.spells.flatMap(x => x.abs) : id === "prieres" ? s.prayers.flatMap(x => x.abs) : id === "manifestations" ? s.manifs.flatMap(x => x.abs)
       : id === "tactiques" ? s.tactics.map(t => ({n:t.n})) : s.F.bt.concat(s.formations.flatMap(f => f.abs), s.tables.flatMap(t => t.items.flatMap(x => x.abs)));
     $("memo-banner").insertAdjacentHTML("beforeend", `<input type="search" class="msearch" id="memo-q" placeholder="Rechercher une unité, une aptitude, un mot-clé…" value="${esc(memoQ)}" autocomplete="off">`);
@@ -571,6 +572,10 @@
   // ---------- Phases ----------
   function renderPhases(){
     const s = scope(), F = s.F, src = [];
+    if (!s.l && !(state.cat && FX[state.cat])) {
+      $("phase-banner").innerHTML = `<a class="banner off" href="#listes"><span>Aucune liste active : crée ta liste, ou choisis une faction dans le Mémo.</span><span class="banner-go">Listes</span></a>`;
+      $("phases").innerHTML = ""; return;
+    }
     F.bt.forEach(a => src.push({who:"Trait de bataille", a}));
     s.formations.forEach(f => f.abs.forEach(a => src.push({who:"Formation " + f.en, a})));
     s.tables.forEach(({t, items, holder}) => items.forEach(x => x.abs.forEach(a => src.push({who:t.title + (holder ? " · " + holder : ""), a}))));

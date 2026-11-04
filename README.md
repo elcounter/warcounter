@@ -7,7 +7,7 @@ Application web installable (PWA), hébergée sur GitHub Pages : https://elcount
 
 ## Version
 
-Version actuelle : **2.5.0** (MAJ 04-11-2026).
+Version actuelle : **2.5.1** (MAJ 04-11-2026).
 Numérotation X.Y.Z :
 - X : très gros changement (décidé par elcounter uniquement)
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
@@ -17,6 +17,7 @@ Numérotation X.Y.Z :
 
 ## Historique
 
+- 2.5.1 (04-11-2026) : un nouvel utilisateur démarre sans aucune liste (la liste d'exemple Hashut n'est plus créée) ; menus « Sélectionner une faction » sans faction présélectionnée (création de liste et catalogue du Mémo), bouton Créer actif seulement une fois la faction choisie.
 - 2.5.0 (04-11-2026) : statistiques de visites avec GoatCounter (sans cookies), tableau de bord https://elcount3r.goatcounter.com ; chaque changement d'onglet est compté (identifiants de listes anonymisés en `#liste`).
 - 2.4.0 (04-11-2026) : partage d'une liste en texte (bouton « Copier la liste en texte » dans l'éditeur) ; export et import des listes en fichier JSON (écran Listes) ; barre de recherche dans le Mémo (unités, aptitudes, mots-clés) et dans Règles (pages, sections, factions, unités, aptitudes) ; pied de page « Propriété intellectuelle © 2026 elcounter » et mention légale « non officielle, non affiliée à Games Workshop » en très petit (variable `LEGAL` de `build.py`).
 - 2.3.1 (04-11-2026) : onglet Règles, les lignes des règles de base, avancées et du Manuel du Général sont en rouge (liseré doré) pour les distinguer des factions, comme dans le Mémo.
