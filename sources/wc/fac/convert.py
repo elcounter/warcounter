@@ -169,6 +169,13 @@ TEMPLATES = [
  (r"Add 1 to the Attacks characteristic of this unit's (.+?) for each instance of (.+?) depicted on your battle scripture\.?$", r"Ajoutez 1 aux Attaques de \1 de cette unité pour chaque instance de \2 sur votre écriture de bataille."),
 ]
 MISSING = []
+TFIX2.update({
+ "Une fois par bataille (armée), réaction : vous avez annoncé l'ordre 'Rip It Up and Chuck It' ability for l'ordre unit in this Regiment of Renown": "Une fois par bataille (armée), réaction : vous avez annoncé l'aptitude « Rip It Up and Chuck It » pour l'unité de ce régiment de renom",
+ 'Once Per Turn(Army), Any Combat Phase': 'Une fois par tour (armée), n\'importe quelle phase de mêlée',
+ 'Une fois par tour (armée), Any HeroPhase': 'Une fois par tour (armée), n\'importe quelle phase des héros',
+ 'Once Per Turn (Army),Deployment Phase': 'Une fois par tour (armée), phase de déploiement',
+ 'Une fois par tour (armée), YourHero Phase': 'Une fois par tour (armée), votre phase des héros',
+})
 def ability(a, T):
     eff = clean(a['effect']).strip(); dec = clean(a['declare']).strip()
     fr = None
@@ -225,3 +232,26 @@ if __name__ == '__main__':
     uni = [{'id':'u%d' % i, 'en':L['name'], 'abs':[ability(a, fr_universal.T) for a in L['abilities']]} for i, L in enumerate(U)]
     open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'universal.json'), 'w').write(json.dumps(uni, ensure_ascii=False))
     print('Manifestations génériques :', [(u['en'], len(u['abs'])) for u in uni])
+
+    # Régiments de renom
+    import fr_ror
+    here = os.path.dirname(os.path.abspath(__file__))
+    R = json.load(open(os.path.join(here, 'ror_en.json')))
+    ids = {f['en']: f['id'] for f in out}; ids['Helsmiths of Hashut'] = 'hashut'
+    def tr(key, a): return ability(a, {a['name']: fr_ror.T[key]} if key in fr_ror.T else fr_ror.T)
+    regs = []
+    for i, o in enumerate(R['regiments']):
+        facs = sorted({ids[n] for n in (re.sub(r' \[LEGENDS\]$', '', re.sub(r' - .*$', '', f)) for f in o['factions']) if n in ids})
+        regs.append({'id':'r%d' % i, 'en':o['name'], 'pts':o['pts'], 'facs':facs, 'units':[[n, c] for n, c in o['units']],
+                     'abs':[tr(o['name'] + '::' + a['name'], a) for a in o['abilities']]})
+    xu = []
+    for u in R['units']:
+        s = u['stats']
+        x = {'id':'rr-' + re.sub(r'[^a-z0-9]+', '-', u['name'].lower()).strip('-'), 'en':u['name'], 'pts':0, 'size':u['size'],
+             'stats':{'M':s.get('Move', '-'), 'S':s.get('Health', '-'), 'C':s.get('Control', '-'), 'Sv':s.get('Save', '-')},
+             'weapons':[weapon(w) for w in sorted(u['weapons'], key=lambda w: w['kind'] != 'Ranged Weapon')],
+             'abilities':[tr(u['name'] + '::' + a['name'], a) for a in u['abilities']], 'kw':kw_line(u['kw'])}
+        if 'HERO' in u['kw']: x['hero'] = True
+        xu.append(x)
+    open(os.path.join(here, 'ror.json'), 'w').write(json.dumps({'regiments':regs, 'units':xu}, ensure_ascii=False))
+    print('Régiments de renom :', len(regs), '· warscrolls propres :', len(xu), '· sans faction :', [r['en'] for r in regs if not r['facs']])

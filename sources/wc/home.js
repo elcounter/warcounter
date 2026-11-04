@@ -129,6 +129,7 @@
       + sec("Accursed Devices (Fléau d'Aqshy)", A.PROCEDES.map(p => ({...p.ab, cost:"+" + p.pts + " pts"})))
       + sec("Sorts : " + A.LORE_NAMES.spell, A.SPELLS)
       + sec("Prières : " + A.LORE_NAMES.prayer, A.PRAYERS)
+      + rorFold("hashut")
       + `<p class="hint">Données BSData, traduites en français.</p>`;
   }
   // Pages faction génériques (BSData traduit)
@@ -144,11 +145,30 @@
   function unitSheet(u){
     const s = u.stats, d = [[s.M,"Mouv."],[s.S,"Santé"],[s.C,"Contrôle"],[s.Sv,"Sauv.","sv"]];
     return `<div class="sheet usheet"><div class="statband"><div class="stats" style="--n:4">${d.map(([v,l,c]) => `<div><div class="disc${c ? " " + c : ""}">${esc(v)}</div><div class="l">${l}</div></div>`).join("")}</div>
-      <p class="unit-pts">${u.size} figurine${u.size > 1 ? "s" : ""} · ${u.pts} pts</p></div>
+      <p class="unit-pts">${u.size} figurine${u.size > 1 ? "s" : ""} · ${u.pts ? u.pts + " pts" : "régiment de renom uniquement"}</p></div>
       ${wBlock(u.weapons.filter(w => w.range !== "Mêlée"), true)}${wBlock(u.weapons.filter(w => w.range === "Mêlée"), false)}
       ${u.abilities.length ? `<h3 class="sec">Aptitudes</h3><div class="abilities">${u.abilities.map(abCard).join("")}</div>` : ""}
       <h3 class="sec">Mots-clés</h3><div class="kw">Mots-clés : <b>${esc(u.kw)}</b></div></div>`;
   }
+  // Régiments de renom
+  const ROR = (window.WC_ROR || {}).regiments || [], RORU = (window.WC_ROR || {}).units || [];
+  function uLink(n){
+    for (const F of FACTIONS) { const u = F.data && F.data.units.find(x => x.en === n); if (u) return `#regle-u-${F.id}~${u.id}`; }
+    const h = ARMY && ARMY.UNITS.find(x => x.en === n); if (h) return "#" + h.id;
+    const r = RORU.find(x => x.en === n); return r ? `#regle-u-rr~${r.id}` : "";
+  }
+  const facEn = id => (FACTIONS.find(f => f.id === id) || {en:id}).en;
+  function rorHtml(r, facs){
+    const comp = r.units.map(([n, c]) => { const href = uLink(n), t = (c > 1 ? c + " × " : "") + n; return href ? `<a href="${href}">${esc(t)}</a>` : esc(t); }).join(", ");
+    return `<details class="fold"><summary><span>${esc(r.en)} <small>· ${r.pts} pts</small></span></summary><div class="fold-body">
+      <p><b>Unités :</b> ${comp}</p>${facs ? `<p class="hint"><b>Factions :</b> ${esc(r.facs.map(facEn).sort().join(", "))}</p>` : ""}
+      ${r.abs.length ? r.abs.map(abCard).join("") : `<p class="hint">Pas d'aptitude de régiment : les règles sont sur les warscrolls.</p>`}</div></details>`;
+  }
+  function rorFold(fid){
+    const L = ROR.filter(r => r.facs.includes(fid));
+    return L.length ? `<details class="fold"><summary><span>Régiments de renom <small>· ${L.length}</small></span></summary><div class="fold-body">${L.map(r => rorHtml(r, false)).join("")}</div></details>` : "";
+  }
+  const rorPage = () => `<p class="hint">Liste et points issus de BSData (Manuel du Général 2025-26). 1 régiment de renom maximum par armée : il compte comme un de tes 5 régiments et ses unités ne peuvent pas être le général ni porter d'amélioration.</p>` + ROR.slice().sort((a, b) => a.en.localeCompare(b.en)).map(r => rorHtml(r, true)).join("");
   function genFactionPage(F){
     const sec = s => `<details class="fold"><summary><span>${esc(s.title)}</span></summary><div class="fold-body">${s.items.map(i => i.abs.length === 1 && i.abs[0].n === i.n
         ? abCard({...i.abs[0], cost:i.pts ? "+" + i.pts + " pts" : i.abs[0].cost})
@@ -157,7 +177,7 @@
     const row = u => `<a class="urow" href="#regle-u-${F.id}~${u.id}"><span>${esc(u.en)}</span><b>${u.pts} pts</b></a>`;
     return `<details class="fold" open><summary><span>Warscrolls <small>· ${F.units.length} unités</small></span></summary><div class="fold-body ulist">
         <h4 class="iname">Héros</h4>${heroes.map(row).join("")}<h4 class="iname">Unités</h4>${others.map(row).join("")}${terr.length ? `<h4 class="iname">Terrain de faction</h4>${terr.map(row).join("")}` : ""}</div></details>`
-      + F.sections.map(sec).join("") + `<p class="hint">Données BSData, traduites en français.</p>`;
+      + F.sections.map(sec).join("") + rorFold(F.id) + `<p class="hint">Données BSData, traduites en français.</p>`;
   }
   function bpPage(){
     return BS.BATTLEPLANS.map(b => `<details class="fold"><summary><span><b>${esc(b.id)}</b> ${esc(b.n)}</span></summary><div class="fold-body">
@@ -256,6 +276,9 @@
       abs.forEach(([a, sec]) => add(a.n, `${sec} · ${F.en}`, "#regle-faction-" + F.id));
       units.forEach(u => u.abilities.forEach(a => add(a.n, `Aptitude · ${u.en} (${F.en})`, F.data ? `#regle-u-${F.id}~${u.id}` : "#regle-faction-" + F.id)));
     });
+    add("Régiments de renom", "Manuel du Général", "#regle-renom");
+    ROR.forEach(r => { add(r.en, `Régiment de renom · ${r.pts} pts`, "#regle-renom", r.units.map(x => x[0]).concat(r.abs.map(a => a.n))); r.abs.forEach(a => add(a.n, "Aptitude · " + r.en + " (régiment de renom)", "#regle-renom")); });
+    RORU.forEach(u => add(u.en, "Unité · régiment de renom", `#regle-u-rr~${u.id}`, [u.kw]));
     const seen = new Set(); return out.filter(x => { const k = x.t + "|" + x.href; if (seen.has(k)) return false; seen.add(k); return true; });
   }
   function searchRules(){
@@ -272,21 +295,21 @@
     const card = r => `<a class="rcard core" href="#regle-${r.id}"><b>${esc(r.en)}</b><span>${esc(r.sub)}</span></a>`;
     return `<input type="search" class="rsearch" id="rules-q" placeholder="Rechercher une règle, une faction, une unité, une aptitude…" value="${esc(rulesQ)}" autocomplete="off"><div id="rres" class="rres" hidden></div><div id="rall" class="rall"><h2 class="rh">Général</h2><div class="rgrid">${CORE_PAGES.slice(0, 1).map(card).join("")}</div>
       <h2 class="rh">Règles avancées</h2><div class="rgrid">${CORE_PAGES.slice(1).map(card).join("")}</div>
-      <h2 class="rh">Manuel du Général 2026-27</h2><div class="rgrid">${GHB.map(card).join("")}</div>
+      <h2 class="rh">Manuel du Général 2026-27</h2><div class="rgrid">${GHB.map(card).join("")}${ROR.length ? card({id:"renom", en:"Régiments de renom", sub:ROR.length + " régiments"}) : ""}</div>
       ${ALLIANCES.map(g => { const L = FACTIONS.filter(f => f.ga === g); return L.length ? `<h2 class="rh">${g}</h2><div class="rgrid">${L.map(f => `<a class="rcard" href="#regle-faction-${f.id}"><b>${esc(f.en)}</b><span>${f.data ? f.data.units.length : (ARMY ? ARMY.UNITS.length : "")} unités</span></a>`).join("")}</div>` : ""; }).join("")}</div>`;
   }
   function route(){
     const h = location.hash.slice(1);
     const fac = h.startsWith("regle-faction-") ? FACTIONS.find(f => f.id === h.slice(14)) : null;
     let unitPage = null;
-    if (h.startsWith("regle-u-")) { const [fid, ...rest] = h.slice(8).split("~"); const F = FACTIONS.find(f => f.id === fid); const U = F && F.data && F.data.units.find(u => u.id === rest.join("~")); if (U) unitPage = {F, U}; }
-    const rule = unitPage ? {en:unitPage.U.en, unit:true} : fac ? {en:fac.en, fac:true} : h.startsWith("regle-") ? RULES.find(r => r.id === h.slice(6)) : null;
+    if (h.startsWith("regle-u-")) { const [fid, ...rest] = h.slice(8).split("~"); const F = FACTIONS.find(f => f.id === fid); const U = fid === "rr" ? RORU.find(u => u.id === rest.join("~")) : F && F.data && F.data.units.find(u => u.id === rest.join("~")); if (U) unitPage = {F, U}; }
+    const rule = unitPage ? {en:unitPage.U.en, unit:true} : fac ? {en:fac.en, fac:true} : h === "regle-renom" ? {en:"Régiments de renom", renom:true} : h.startsWith("regle-") ? RULES.find(r => r.id === h.slice(6)) : null;
     if (!(h === "" || h === "accueil" || h === "regles" || h === "installer" || h === "soutenir" || rule)) return;
     $("menu-hint").hidden = STANDALONE || !(h === "" || h === "accueil" || h === "installer");
     $("home-back").hidden = !rule && h !== "installer" && h !== "soutenir";
     if (rule) {
       $("home-title").textContent = rule.en;
-      $("home-view").innerHTML = `<div class="rules">${rule.unit ? unitSheet(unitPage.U) : rule.fac ? (fac.data ? genFactionPage(fac.data) : factionPage()) : rule.core ? corePage(rule) : rule.bp ? bpPage() : rule.tac ? tacPage() : blocks(rule.blocks)}</div>`;
+      $("home-view").innerHTML = `<div class="rules">${rule.unit ? unitSheet(unitPage.U) : rule.renom ? rorPage() : rule.fac ? (fac.data ? genFactionPage(fac.data) : factionPage()) : rule.core ? corePage(rule) : rule.bp ? bpPage() : rule.tac ? tacPage() : blocks(rule.blocks)}</div>`;
     } else if (h === "soutenir") {
       $("home-title").textContent = "Soutenir le projet";
       $("home-view").innerHTML = supportHtml();
@@ -302,6 +325,6 @@
     }
     window.scrollTo(0, 0);
   }
-  $("home-back").addEventListener("click", () => { const h = location.hash.slice(1); location.hash = h === "installer" || h === "soutenir" ? "accueil" : h.startsWith("regle-u-") ? "regle-faction-" + h.slice(8).split("~")[0] : "regles"; });
+  $("home-back").addEventListener("click", () => { const h = location.hash.slice(1); location.hash = h === "installer" || h === "soutenir" ? "accueil" : h.startsWith("regle-u-rr~") ? "regle-renom" : h.startsWith("regle-u-") ? "regle-faction-" + h.slice(8).split("~")[0] : "regles"; });
   window.addEventListener("hashchange", route);
   route();

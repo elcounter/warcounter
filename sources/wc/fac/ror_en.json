@@ -1,0 +1,4269 @@
+{
+ "regiments": [
+  {
+   "name": "Veremord's Shamblers",
+   "pts": 210,
+   "factions": [
+    "Flesh-eater Courts",
+    "Nighthaunt",
+    "Ossiarch Bonereapers"
+   ],
+   "units": [
+    [
+     "Corpse Cart",
+     1
+    ],
+    [
+     "Deadwalker Zombies",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Vitiating Vapours",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from ward rolls for enemy units while they are within 12\" of the **Corpse Cart** in this Regiment of Renown.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Legend among Graverobbers",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "Pick the **Corpse Cart** in this Regiment of Renown to use this ability if it is within 3\" of the **Deadwalker Zombies** unit in this Regiment of Renown. Then, pick each enemy **^^Infantry^^**, **^^Cavalry^^** and **^^Beast^^** unit within 12\" of the **Corpse Cart** to be the targets.",
+     "effect": "For each target that had any models slain this turn, you can return D3 slain models to the **Deadwalker Zombies** unit in this Regiment of Renown.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Volt-Klaw's Enginecoven",
+   "pts": 380,
+   "factions": [
+    "Beasts of Chaos [LEGENDS]",
+    "Blades of Khorne",
+    "Disciples of Tzeentch",
+    "Hedonites of Slaanesh",
+    "Maggotkin of Nurgle",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince"
+   ],
+   "units": [
+    [
+     "Ratling Warpblaster",
+     1
+    ],
+    [
+     "Warlock Galvaneer",
+     1
+    ],
+    [
+     "Warpvolt Scourgers",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Behold My Genius!",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Battle (Army), Your Shooting Phase",
+     "declare": "Pick all friendly **^^Volt-Klaw's Enginecoven^^** units to be the targets.",
+     "effect": "Until the start of your next turn:\n• Add 1 to hit rolls for the targets' shooting attacks.\n• Add 3\" to the Range characteristic of the targets' ranged weapons.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Hide-shelter!",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While a friendly **^^Volt-Klaw's Enginecoven Infantry^^** unit is within the combat range of a friendly **^^Volt-Klaw's Enginecoven^^ Ratling Warpblaster**, it is not visible to enemy units more than 13\" away.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Big Drogg Fort-kicker",
+   "pts": 440,
+   "factions": [
+    "Flesh-eater Courts",
+    "Gloomspite Gitz",
+    "Ironjawz",
+    "Kruleboyz",
+    "Nighthaunt",
+    "Ogor Mawtribes",
+    "Ossiarch Bonereapers",
+    "Soulblight Gravelords"
+   ],
+   "units": [
+    [
+     "Gatebreaker Mega-Gargant",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Fortress Wrekka",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Battle (Army), Reaction: You declared the 'Rip It Up and Chuck It' ability for the unit in this Regiment of Renown",
+     "declare": "",
+     "effect": "After picking the target for that ability, roll a number of dice equal to the current battle round number. For each 4+, add 1 to the Attacks characteristic of the unit in this Regiment of Renown's **Hurled Boulder** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Grievous Halitosis",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick an enemy unit in combat with the unit in this Regiment of Renown to be the target.",
+     "effect": "Roll a dice for each model in the target unit. For each 6, inflict 1 mortal damage on the target. If any enemy models are slain by this ability, the target has a maximum control score of 1 for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Big Grikk's Kruleshots",
+   "pts": 320,
+   "factions": [
+    "Bonesplitterz [LEGENDS]",
+    "Gloomspite Gitz",
+    "Ironjawz",
+    "Ogor Mawtribes",
+    "Sons of Behemat"
+   ],
+   "units": [
+    [
+     "Man-skewer Boltboyz",
+     2
+    ],
+    [
+     "Beast-skewer Killbow",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Skewer It Again!",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "Pick an enemy **^^Monster^^** that had any damage points allocated to it this phase by a shooting attack made by the **Beast-skewer Killbow** in this Regiment of Renown. Then, pick any number of **Man-skewer Boltboyz** units in this Regiment of Renown to **focus fire**.",
+     "effect": "For the rest of the turn, add 1 to the Attacks characteristic the ranged weapons used by the units you picked to **focus fire** but all of their attacks must target the enemy **^^Monster^^** you picked.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Blades of the Hollow King",
+   "pts": 230,
+   "factions": [
+    "Flesh-eater Courts",
+    "Nighthaunt",
+    "Ossiarch Bonereapers"
+   ],
+   "units": [
+    [
+     "Blades of the Hollow King",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "The Hunger",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "",
+     "effect": "If this unit used a **^^Fight^^** ability this turn, **Heal (D3)** this unit. **Heal (2D3)** this unit instead if it destroyed an enemy unit this turn using a **^^Fight^^** ability.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Bloodthirsty Shiver",
+   "pts": 300,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Kharadron Overlords",
+    "Lumineth Realm-lords",
+    "Seraphon",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Akhelian Allopex",
+     2
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Hunt of the Bloodthirsty Shiver",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "",
+     "effect": "If both units in this Regiment of Renown are within each other's combat range, pick 1 of the following effects to apply until the start of your next turn:\n***Evasive Approach:*** While both units in this Regiment of Renown are within each other's combat range, subtract 1 from hit rolls for attacks that target them.\n***Ferocious Attack:*** While both units in this Regiment of Renown are within each other's combat range, their **Allopex's Ferocious Bites** have **Crit (2 Hits)**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Braggit's Bottle-snatchaz",
+   "pts": 480,
+   "factions": [
+    "Bonesplitterz [LEGENDS]",
+    "Ironjawz",
+    "Kruleboyz",
+    "Ogor Mawtribes",
+    "Sons of Behemat"
+   ],
+   "units": [
+    [
+     "Rabble-Rowza",
+     1
+    ],
+    [
+     "Squig Hoppers",
+     1
+    ],
+    [
+     "Squig Herd",
+     1
+    ],
+    [
+     "Gobbapalooza",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Sneaky Distraction",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the **Gobbapalooza** in this Regiment of Renown to cast this spell, then make a casting roll of 2D6.",
+     "effect": "Until the start of your next turn, subtract 1 from hit rolls for attacks made by enemy units while they are wholly within 12\" of the caster.",
+     "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Sudden Emergence",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Once Per Turn (Army), Any Movement Phase",
+     "declare": "If the **Rabble-Rowza** in this Regiment of Renown is **in a super-secret tunnel**, pick it to be the target.",
+     "effect": "Set up the target anywhere on the battlefield more than 9\" from all enemy units. Then, set up all other friendly units that are in a super-secret tunnel within 3\" of the target and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Super-Secret Tunnels",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick a unit in this Regiment of Renown that has not been deployed.",
+     "effect": "Set up that unit in reserve **in a super-secret tunnel**. It has now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Brand's Oathbound",
+   "pts": 190,
+   "factions": [
+    "Beasts of Chaos [LEGENDS]",
+    "Blades of Khorne",
+    "Disciples of Tzeentch",
+    "Hedonites of Slaanesh",
+    "Helsmiths of Hashut",
+    "Maggotkin of Nurgle",
+    "Skaven"
+   ],
+   "units": [
+    [
+     "Gunnar Brand",
+     1
+    ],
+    [
+     "Singri Brand",
+     1
+    ],
+    [
+     "The Oathsworn Kin",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Favour of the Gods",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "",
+     "effect": "If any enemy **^^Heroes^^** were slain this turn by the **Gunnar Brand** in this Regiment of Renown:\n• **Heal (5)** each unit in this Regiment of Renown.\n• Add 1 to the Attacks characteristic of melee weapons used by friendly units in this Regiment of Renown for the rest of the battle.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Bundo Whalebiter",
+   "pts": 360,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Gloomspite Gitz",
+    "Idoneth Deepkin",
+    "Ironjawz",
+    "Kharadron Overlords",
+    "Kruleboyz",
+    "Lumineth Realm-lords",
+    "Ogor Mawtribes",
+    "Seraphon",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Kraken-eater Mega-Gargant",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Dead Cunning, for a Gargant",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Battle (Army), Any Combat Phase",
+     "declare": "",
+     "effect": "For the rest of the turn, the unit in this Regiment of Renown has **^^Strike-last^^** and **^^Ward (5+)^^**. Pick 1 of the following effects to apply for the rest of the turn:\n\n***A Kunnin' Ruse:*** Other than the **Companion** ability, weapon abilities for attacks that target the unit in this Regiment of Renown have no effect.\n\n***A Nasty Surprise:*** Add 1 to hit rolls for the unit in this Regiment of Renown's combat attacks and ignore negative modifiers to hit rolls and wound rolls for its combat attacks.\n\n***Tricked Ya!:*** Enemy units have a maximum control score of 1 while they are in combat with the unit in this Regiment of Renown.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Da Hurtlin' Hogz",
+   "pts": 430,
+   "factions": [
+    "Bonesplitterz [LEGENDS]",
+    "Gloomspite Gitz",
+    "Kruleboyz",
+    "Ogor Mawtribes",
+    "Sons of Behemat"
+   ],
+   "units": [
+    [
+     "Tuskboss on Maw-grunta",
+     1
+    ],
+    [
+     "Maw-grunta Gougers",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Pullin' Ahead",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Your Combat Phase",
+     "declare": "Pick a friendly unit in this Regiment of Renown that charged this turn and has not used any **^^Rampage^^** abilities this turn to be the target.",
+     "effect": "The target can move D6\". It must end that move in combat. Then, add 1 to the target's **momentum points**. After this ability has been resolved, the target cannot use any other **^^Rampage^^** abilities for the rest of the turn.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Grunta Waaagh!",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Battle, Your Charge Phase",
+     "declare": "You can use this ability if this Regiment of Renown's **Tuskboss on Maw-grunta** is on the battlefield,",
+     "effect": "For the rest of the phase, each time a friendly unit in this Regiment of Renown finishes a charge move, roll a D3 for each enemy unit within 1\" of that unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll. If that enemy unit is **^^Infantry^^**, add 1 to the mortal damage inflicted (if any).",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Okar's Torrbad",
+   "pts": 490,
+   "factions": [
+    "Gloomspite Gitz",
+    "Ironjawz",
+    "Kruleboyz",
+    "Sons of Behemat"
+   ],
+   "units": [
+    [
+     "Huskard on Stonehorn",
+     1
+    ],
+    [
+     "Thundertusk Beastriders",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Along the Icepaths",
+     "kind": "Ability (Prayer)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the **Huskard on Stonehorn** in this Regiment of Renown to chant this prayer, pick up to 3 visible friendly units wholly within 12\" of them to be the targets, then make a chanting roll of D6. Add 1 to the roll if the friendly **Thundertusk Beastriders** unit in this Regiment of Renown is wholly within 12\" of this unit.",
+     "effect": "Until the start of your next turn:\n• Add 3 to run rolls for each target.\n• Each target can use **^^Charge^^** abilities even if it used a **^^Retreat^^** ability in the same turn.\n• Each time a target uses a **^^Retreat^^** ability, no mortal damage is inflicted on it.",
+     "keywords": "**^^Prayer^^**",
+     "cast": "",
+     "chant": "4",
+     "cost": ""
+    },
+    {
+     "name": "Cling On Tight",
+     "kind": "Ability (Passive)",
+     "color": "Gray",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time the **Thundertusk Beastriders** unit in this Regiment of Renown uses the 'Plough the Icepath' ability, you can pick a friendly **^^Infantry^^** unit that has not been reinforced, is wholly within 6\" of that **Thundertusk Beastriders** unit and has not been set up this turn to be the target instead of a friendly **^^Ogor Mawtribes Infantry^^** unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Urrgar's Maulerguts",
+   "pts": 600,
+   "factions": [
+    "Cities of Sigmar",
+    "Flesh-eater Courts",
+    "Fyreslayers",
+    "Gloomspite Gitz",
+    "Helsmiths of Hashut",
+    "Ironjawz",
+    "Kharadron Overlords",
+    "Kruleboyz",
+    "Ossiarch Bonereapers",
+    "Skaven",
+    "Slaves to Darkness",
+    "Soulblight Gravelords",
+    "Stormcast Eternals"
+   ],
+   "units": [
+    [
+     "Tyrant on Glutthorn",
+     1
+    ],
+    [
+     "Maulbeast Cavalry",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "We'll Be There - If the Pay's Right",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Battle (Army), Deployment Phase",
+     "declare": "Pick each unit in this Regiment of Renown to be the targets if none of them have been deployed.",
+     "effect": "Set up the targets in reserve **preparing a flank attack**. They have now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Horns Hit Home",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Once Per Battle (Army), Your Movement Phase",
+     "declare": "Pick each friendly unit that is **preparing a flank attack** to be the targets.",
+     "effect": "Set up the targets on the battlefield, wholly within 6\" of each other, wholly within 9\" of a battlefield edge and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Da Kountin' Krew",
+   "pts": 280,
+   "factions": [
+    "Bonesplitterz [LEGENDS]",
+    "Gloomspite Gitz",
+    "Ironjawz",
+    "Sons of Behemat"
+   ],
+   "units": [
+    [
+     "Hobgrot Slittaz",
+     2
+    ],
+    [
+     "Swampboss Skumdrekk",
+     1
+    ]
+   ],
+   "abilities": []
+  },
+  {
+   "name": "Drekki's Privateers",
+   "pts": 460,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Idoneth Deepkin",
+    "Lumineth Realm-lords",
+    "Ogor Mawtribes",
+    "Seraphon",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Drekki Flynt",
+     1
+    ],
+    [
+     "Arkanaut Frigate",
+     1
+    ],
+    [
+     "Arkanaut Company",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Cruising Into Position",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick all units in this Regiment of Renown that have not been deployed.",
+     "effect": "Set up all of those units in reserve **plying the winds**. They have now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Daredevil Deployment",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Your Movement Phase",
+     "declare": "Pick the **Arkanaut Frigate** in this Regiment of Renown to use this ability if it is **plying the winds**.",
+     "effect": "Set up the **Arkanaut Frigate** anywhere on the battlefield more than 9\" from all enemy units. Then, set up all other units in this Regiment of Renown wholly within 6\" of the **Arkanaut Frigate** and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "You Call It Yours; I Call It Mine",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to hit rolls and wound rolls for shooting attacks made by units in this Regiment of Renown that target an enemy unit that is within 6\" of an enemy unit that has an enhancement.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Good Ship Aelsling",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "The **^^Aelsling^^** has a Health characteristic of 17 instead of 14.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Elthwin's Thorns",
+   "pts": 200,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Idoneth Deepkin",
+    "Kharadron Overlords",
+    "Lumineth Realm-lords",
+    "Seraphon",
+    "Stormcast Eternals"
+   ],
+   "units": [
+    [
+     "Gossamid Archers",
+     1
+    ],
+    [
+     "Arch-Revenant",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Gossamid Champion",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Your Shooting Phase",
+     "declare": "Pick the **Arch-Revenant** in this Regiment of Renown to use this ability, the pick a visible enemy unit within 12\" of them to be the target.",
+     "effect": "Until the start of your next turn, subtract X from charge rolls for the target, where X is the number of damage points allocated to the target this phase by shooting attacks made by the **Gossamid Archers** unit in the Regiment of Renown, to a maximum of 6.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Flight of the Zephyrspites",
+     "kind": "Ability (Activated)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "",
+     "effect": "If both units in this Regiment of Renown are within each other's combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each other's combat range, wholly within 3\" of a terrain feature and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Enforcers of the Tithe",
+   "pts": 470,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Flesh-eater Courts",
+    "Fyreslayers",
+    "Gloomspite Gitz",
+    "Helsmiths of Hashut",
+    "Kharadron Overlords",
+    "Kruleboyz",
+    "Ogor Mawtribes",
+    "Skaven",
+    "Sons of Behemat",
+    "Soulblight Gravelords"
+   ],
+   "units": [
+    [
+     "Mortisan Ossifector",
+     1
+    ],
+    [
+     "Gothizzar Harvester",
+     1
+    ],
+    [
+     "Mortek Guard",
+     2
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Collect the Tithe",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn(Army), Any Combat Phase",
+     "declare": "Pick the **Gothizzar Harvester** in this Regiment of Renown to use this ability, then pick a non-**^^Hero^^** Infantry unit (friendly or enemy) within its combat range to be the target.",
+     "effect": "Roll a dice. If the roll equals or exceeds the target's Health characteristic, 1 model in the target unit is slain, then give the unit using this ability 1 bone-tithe point.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Soul Tax",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the **Mortisan Ossifector** in this Regiment of Renown to cast this spell, then:\n• Pick a friendly unit, excluding units in this Regiment of Renown, to be the target.\n• Pick a unit in this Regiment of Renown to be the **recipient**. The target and the **recipient** must be wholly within 12\" of and visible to the caster. Then, make a casting roll of 2D6.",
+     "effect": "Until the start of your next turn:\n• The target has a maximum control score of 1.\n• Add 1 to hit rolls and wound rolls for the **recipient**'s combat attacks.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Rebuild on the March",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Your Movement Phase",
+     "declare": "Pick the **Gothizzar Harvester** in this Regiment of Renown to use this ability if it has 6 bone-tithe points. Then, pick another unit in this Regiment of Renown that has been destroyed to be the target.",
+     "effect": "Reset the **Gothizzar Harvester**'s bone-tithe points to 0. Then, set up a replacement of the target unit with half the number of models (rounding up) wholly within 9\" of the **Gothizzar Harvester** and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Exile Scavengers",
+   "pts": 390,
+   "factions": [
+    "Beasts of Chaos [LEGENDS]",
+    "Bonesplitterz [LEGENDS]",
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Gloomspite Gitz",
+    "Ironjawz",
+    "Kruleboyz",
+    "Lumineth Realm-lords",
+    "Ogor Mawtribes",
+    "Ossiarch Bonereapers",
+    "Seraphon",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince",
+    "Sons of Behemat",
+    "Soulblight Gravelords"
+   ],
+   "units": [
+    [
+     "Skywardens",
+     1
+    ],
+    [
+     "Grundstok Gunhauler",
+     1
+    ],
+    [
+     "Endrinmaster with Dirigible Suit",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "An Eye for Loot",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "This ability must be used to deploy this Regiment of Renown.",
+     "effect": "Set up the units in this Regiment of Renown in reserve studying the battlefield. They have now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Swoop In",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Your Movement Phase",
+     "declare": "Pick the **Grundstok Gunhauler** in this Regiment of Renown to use this ability if it is studying the battlefield.",
+     "effect": "Set up the **Grundstok Gunhauler** on the battlefield more than 6\" from all enemy units that have an artefact of power and more than 9\" from all other enemy units. Then, set up all other units in this Regiment of Renown wholly within 3\" of the **Grundstok Gunhauler** and more than 6\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "'What's Yours is Mine'",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Your Combat Phase",
+     "declare": "Pick an enemy unit in combat with a unit in this Regiment of Renown to be the target. Then, pick an artefact of power the target has.",
+     "effect": "Roll a dice. Add 1 to the roll for each unit in this Regiment of Renown that is in combat with the target. On a 6+, the target no longer has that artefact of power.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Fjori's Flamebearers",
+   "pts": 420,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Idoneth Deepkin",
+    "Kharadron Overlords",
+    "Lumineth Realm-lords",
+    "Seraphon",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Grimhold Exile",
+     1
+    ],
+    [
+     "Auric Hearthguard",
+     1
+    ],
+    [
+     "Hearthguard Berzerkers with Flamestrike Poleaxes",
+     1
+    ],
+    [
+     "Vulkite Berzerkers with Fyresteel Weapons",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Toe to Toe",
+     "kind": "Ability (Passive)",
+     "color": "Purple",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 10 from the control scores of enemy **^^Monsters^^** while they are in combat with any units in this Regiment of Renown.",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Grimnir's Defiance",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Units in this Regiment of Renown cannot be picked to be the target of **^^Rampage^^** abilities used by enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Godmarked Ascendant",
+   "pts": 240,
+   "factions": [
+    "Blades of Khorne",
+    "Disciples of Tzeentch",
+    "Hedonites of Slaanesh",
+    "Maggotkin of Nurgle"
+   ],
+   "units": [
+    [
+     "Daemon Prince",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Godmarked Legion",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "The unit in this Regiment of Renown gains the 'Gifts of Chaos' ability and one of the following faction keywords that matches your army's faction.\n• **^^Blades of Khorne^^**\n• **^^Disciples of Tzeentch^^**\n• **^^Maggotkin of Nurgle^^**\n• **^^Hedonites of Slaanesh^^**",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Goroan Scions",
+   "pts": 360,
+   "factions": [
+    "Bonesplitterz [LEGENDS]",
+    "Gloomspite Gitz",
+    "Ironjawz",
+    "Kruleboyz",
+    "Ogor Mawtribes",
+    "Sons of Behemat"
+   ],
+   "units": [
+    [
+     "Ogroid Theridons",
+     1
+    ],
+    [
+     "Ogroid Thaumaturge",
+     1
+    ],
+    [
+     "Ogroid Myrmidon",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Bellow of Gorkamorka",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the **Ogroid Thaumaturge** in this Regiment of Renown to cast this spell, pick a visible enemy unit within 12\" of them to be the target, then make a casting roll of 2D6.",
+     "effect": "The target has **^^Strike-last^^** until the start of your next turn. In addition, while the target has the **^^Burning^^** keyword, subtract 1 from hit rolls for the target until the start of your next turn.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Goroan Forgecraft",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick a friendly **^^Destruction Hero^^** that is within the combat range of a **^^Hero^^** in this Regiment of Renown to be the target.",
+     "effect": "On a 3+, add 1 to the Rend characteristic of the target's melee weapons until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Gotrek Gurnisson",
+   "pts": 320,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Idoneth Deepkin",
+    "Kharadron Overlords",
+    "Lumineth Realm-lords",
+    "Seraphon",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Gotrek Gurnisson",
+     1
+    ]
+   ],
+   "abilities": []
+  },
+  {
+   "name": "Hargax's Pit-beasts",
+   "pts": 350,
+   "factions": [
+    "Beasts of Chaos [LEGENDS]",
+    "Blades of Khorne",
+    "Disciples of Tzeentch",
+    "Hedonites of Slaanesh",
+    "Helsmiths of Hashut",
+    "Maggotkin of Nurgle",
+    "Skaven"
+   ],
+   "units": [
+    [
+     "Fomoroid Crusher",
+     1
+    ],
+    [
+     "Ogroid Myrmidon",
+     1
+    ],
+    [
+     "Mindstealer Sphiranx",
+     1
+    ]
+   ],
+   "abilities": []
+  },
+  {
+   "name": "Jerrion's Delegation",
+   "pts": 480,
+   "factions": [
+    "Nighthaunt",
+    "Ossiarch Bonereapers",
+    "Soulblight Gravelords"
+   ],
+   "units": [
+    [
+     "Marrowscroll Herald",
+     1
+    ],
+    [
+     "Crypt Ghouls",
+     1
+    ],
+    [
+     "Crypt Horrors",
+     1
+    ],
+    [
+     "Crypt Flayers",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Urgent Missive",
+     "kind": "Ability (Passive)",
+     "color": "Gray",
+     "timing": "",
+     "declare": "",
+     "effect": "Units in this Regiment of Renown can use **^^Charge^^** abilities even if they used a **^^Retreat^^** ability in the same turn. In addition, no mortal damage is inflicted on units in this Regiment of Renown by **^^Retreat^^** abilities.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Krittok's Clawpack",
+   "pts": 350,
+   "factions": [
+    "Beasts of Chaos [LEGENDS]",
+    "Blades of Khorne",
+    "Disciples of Tzeentch",
+    "Hedonites of Slaanesh",
+    "Maggotkin of Nurgle",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince"
+   ],
+   "units": [
+    [
+     "Doom-flayers",
+     1
+    ],
+    [
+     "Krittok Foulblade",
+     1
+    ],
+    [
+     "Stormvermin",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Fickle Motives",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Attacks characteristic of melee weapons used by friendly **^^Krittok's Clawpack^^** units while you have more victory points than your opponent.\nSubtract 3 from the control scores of friendly **^^Krittok's Clawpack^^** units while you have fewer victory points than your opponent.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Always Three Clawsteps Ahead",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army),  Enemy Hero Phase",
+     "declare": "Pick a friendly **^^Krittok's Clawpack^^** unit that is not in combat to use this ability.",
+     "effect": "That unit can use the 'Normal Move' ability as if it were your movement phase.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Skryre Payloads",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Friendly **^^Krittok's Clawpack^^ Doom-Flayers** units have **^^Ward (5+)^^** while they are within the combat range of a friendly **^^Krittok's Clawpack^^ Stormvermin** unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Lord Skaldior's Chosen",
+   "pts": 530,
+   "factions": [
+    "Beasts of Chaos [LEGENDS]",
+    "Blades of Khorne",
+    "Disciples of Tzeentch",
+    "Hedonites of Slaanesh",
+    "Helsmiths of Hashut",
+    "Maggotkin of Nurgle",
+    "Skaven"
+   ],
+   "units": [
+    [
+     "Chaos Lord on Daemonic Mount",
+     1
+    ],
+    [
+     "Chaos Knights",
+     1
+    ],
+    [
+     "Chaos Warriors",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Ironclad Despoilers",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to save rolls for units in this Regiment of Renown while they are contesting an objective you control.\nAdd 1 to wound rolls for units in this Regiment of Renown while they are contesting an objective you do not control.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Namarti Shore Raid",
+   "pts": 270,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Kharadron Overlords",
+    "Lumineth Realm-lords",
+    "Seraphon",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Namarti Thralls",
+     1
+    ],
+    [
+     "Akhelian Thrallmaster",
+     1
+    ],
+    [
+     "Namarti Reavers",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "In the Shadow of the Ethersea",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "This ability must be used to deploy this Regiment of Renown instead of the 'Deploy Unit' ability or the 'Deploy Regiment' ability.",
+     "effect": "Set up the units in this Regiment of Renown in reserve **in the ethersea**. They have now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Hunt of the Bloodthirsty Shiver",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Your Movement Phase",
+     "declare": "Pick each unit in this Regiment of Renown that is **in the ethersea**.",
+     "effect": "Set up each unit on the battlefield wholly within 7\" of a battlefield edge, more than 9\" from all enemy units and within the combat range of another unit in this Regiment of Renown. Then, each unit can immediately move D3\". The units cannot move into combat during any part of that move.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Neferata's Royal Echelon",
+   "pts": 710,
+   "factions": [
+    "Flesh-eater Courts",
+    "Nighthaunt",
+    "Ossiarch Bonereapers"
+   ],
+   "units": [
+    [
+     "Neferata, Mortarch of Blood",
+     1
+    ],
+    [
+     "Deathrattle Skeletons",
+     2
+    ],
+    [
+     "Barrow Knights",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Soulpike",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the **Neferata** in this Regiment of Renown to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6",
+     "effect": "Until the start of your next turn, each time the target uses a **^^Charge^^** ability, immediately after that ability has been resolved, roll a number of dice equal to the unmodified charge roll for that ability. For each 4+, inflict 1 mortal damage on the target.",
+     "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Premeditated Demise",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick an enemy unit within 12\" of the **Neferata** in this Regiment of Renown to be the target.",
+     "effect": "Until the start of your next turn, ward rolls cannot be made for damage points inflicted on the target by attacks made by units in this Regiment of Renown",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Blood Queen's Will",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Battle (Army), End of Any Turn",
+     "declare": "Pick an enemy unit contesting an objective that the **Neferata** in this Regiment of Renown is contesting to be the target.",
+     "effect": "Roll a dice. On a 2-5, subtract 10 from the control score of the target for the rest of the turn. On a 6, the target has a maximum control score of 1 for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Norgrimm's Rune Throng",
+   "pts": 330,
+   "factions": [
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Idoneth Deepkin",
+    "Kharadron Overlords",
+    "Lumineth Realm-lords",
+    "Seraphon",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Longbeards",
+     1
+    ],
+    [
+     "Irondrakes",
+     1
+    ],
+    [
+     "Runelord",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Wrath and Ruin",
+     "kind": "Ability (Prayer)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the **Runelord** in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18\" of them to be the target, then make a chanting roll of D6",
+     "effect": "Roll 6 dice. If the chanting roll was 8+, roll 9 dice instead. For each 5+, inflict 1 mortal damage on the target. If 3 or more damage points are allocated to the target as a result of those dice rolls, ignore positive modifiers to save rolls for the target until the start of your next turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "4",
+     "cost": ""
+    },
+    {
+     "name": "Rune of Restored Hearth",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Battle (Army), Your Hero Phase",
+     "declare": "",
+     "effect": "If the **Runelord** in the Regiment of Renown is contesting an objective, for the rest of the battle, units in this Regiment of Renown have **^^Ward (5+)^^** while they are contesting that objective.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Nurgle's Gift",
+   "pts": 180,
+   "factions": [
+    "Beasts of Chaos [LEGENDS]",
+    "Bonesplitterz [LEGENDS]",
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Flesh-eater Courts",
+    "Fyreslayers",
+    "Gloomspite Gitz",
+    "Helsmiths of Hashut",
+    "Ironjawz",
+    "Kharadron Overlords",
+    "Kruleboyz",
+    "Lumineth Realm-lords",
+    "Ogor Mawtribes",
+    "Skaven",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince",
+    "Sons of Behemat",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Nurglings",
+     2
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Incubation Period",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "This ability must be used to deploy this Regiment of Renown.",
+     "effect": "Set up the units in this Regiment of Renown in reserve **festering within**. They have now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Bursting With Life",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "If a friendly non-**^^Nurgle's Gift^^** unit would be destroyed, before the last model is removed from play, roll a dice. Add 1 to the roll for each other friendly non-**^^Nurgle's Gift^^** unit that has been destroyed this battle. On a 5+, pick a friendly unit that is **festering within** and set it up wholly within 6\" of that model. It can be set up in combat.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Odo Godswallow",
+   "pts": 420,
+   "factions": [
+    "Gloomspite Gitz",
+    "Ironjawz",
+    "Kruleboyz",
+    "Ogor Mawtribes"
+   ],
+   "units": [
+    [
+     "Beast-smasher Mega-Gargant",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Protective Wards",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "The unit in this Regiment of Renown has **^^Ward (6+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Mighty Walloper",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "Pick an enemy **^^Monster^^** in combat with the unit in this Regiment of Renown to be the target.",
+     "effect": "For the rest of the turn, the unit in this Regiment of Renown's **Menhir Club** has **Crit (2 Hits)** but all attacks made with that weapon this turn must target that enemy **^^Monster^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "One-eyed Grunnock",
+   "pts": 410,
+   "factions": [
+    "Blades of Khorne",
+    "Disciples of Tzeentch",
+    "Gloomspite Gitz",
+    "Hedonites of Slaanesh",
+    "Helsmiths of Hashut",
+    "Ironjawz",
+    "Kruleboyz",
+    "Maggotkin of Nurgle",
+    "Ogor Mawtribes",
+    "Skaven",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince"
+   ],
+   "units": [
+    [
+     "Warstomper Mega-Gargant",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Titanic Stride",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "The unit in this Regiment of Renown can use **^^Charge^^** abilities even if it used a **^^Retreat^^** ability in the same turn. In addition, no mortal damage is inflicted on the unit in this Regiment of Renown by **^^Retreat^^** abilities.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Earth-shaking Stomp",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from hit rolls for combat attacks made by enemy **^^Infantry^^** and **^^Cavalry^^** units while they are in combat with the unit in this Regiment of Renown.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Phulgoth's Shudderhood",
+   "pts": 460,
+   "factions": [
+    "Beasts of Chaos [LEGENDS]",
+    "Blades of Khorne",
+    "Disciples of Tzeentch",
+    "Hedonites of Slaanesh",
+    "Helsmiths of Hashut",
+    "Skaven",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince"
+   ],
+   "units": [
+    [
+     "Harbinger of Decay",
+     1
+    ],
+    [
+     "Putrid Blightkings",
+     1
+    ],
+    [
+     "Pusgoyle Blightlords",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Fog of Despair",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from hit rolls for attacks that target units in this Regiment of Renown while they are wholly within 9\" of the **Harbinger of Decay** in this Regiment of Renown.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Nauseating Convalescence",
+     "kind": "Ability (Activated)",
+     "color": "",
+     "timing": "Once Per Turn (Army), Any HeroPhase",
+     "declare": "",
+     "effect": "**Heal (1)** each unit in this Regiment of Renown.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Saviours of Cinderfall",
+   "pts": 270,
+   "factions": [
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Idoneth Deepkin",
+    "Kharadron Overlords",
+    "Lumineth Realm-lords",
+    "Seraphon",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Callis and Toll",
+     1
+    ],
+    [
+     "Toll's Companions",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Duty Bound",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While every model in the same unit in the Regiment of Renown is contesting the same objective, add 1 to save rolls and ward rolls for that unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Sigmar's Justice",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Battle (Army), Deployment Phase",
+     "declare": "Pick an enemy unit to be **marked for justice**. You can pick a unit that is in reserve.",
+     "effect": "For the rest of the battle, add 1 to wound rolls for combat attacks made by units in this Regiment of Renown that target a unit that is **marked for justice**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Scions of the Necropolis",
+   "pts": 770,
+   "factions": [
+    "Flesh-eater Courts",
+    "Nighthaunt",
+    "Soulblight Gravelords"
+   ],
+   "units": [
+    [
+     "Katakros, Mortarch of the Necropolis",
+     1
+    ],
+    [
+     "Immortis Guard",
+     2
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Bulwark of the Necropolis",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "Pick an enemy unit in combat with a unit in this Regiment of Renown to be the target.",
+     "effect": "Subtract 2D6 from the target's control score for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Skulkrik's Loonladz",
+   "pts": 280,
+   "factions": [
+    "Ironjawz",
+    "Kruleboyz",
+    "Ogor Mawtribes",
+    "Sons of Behemat"
+   ],
+   "units": [
+    [
+     "Loonboss",
+     1
+    ],
+    [
+     "Moonclan Stabbas",
+     1
+    ],
+    [
+     "Loonsmasha Fanatics",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "On Da Moon's Trail",
+     "kind": "Ability (Passive)",
+     "color": "",
+     "timing": "",
+     "declare": "",
+     "effect": "The melee weapons of units in this Regiment of Renown have **Anti-charge (+1 Rend)** while they are contesting an objective you control.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Sky-Port Profiteers",
+   "pts": 350,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Idoneth Deepkin",
+    "Lumineth Realm-lords",
+    "Ogor Mawtribes",
+    "Ossiarch Bonereapers",
+    "Seraphon",
+    "Soulblight Gravelords",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Grundstok Thunderers",
+     2
+    ],
+    [
+     "Codewright",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Supplies Don't Come Cheap",
+     "kind": "Ability (Command)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible terrain feature within 18\" of the **Codewright** in this Regiment of Renown. Each friendly unit wholly within 3\" of that terrain feature is a target.",
+     "effect": "Roll a D3 for each target. On a 2+, **Heal (X)** the target, where **X** is an amount equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": "1"
+    },
+    {
+     "name": "No One Rides For Free",
+     "kind": "Ability (Command)",
+     "color": "Grey",
+     "timing": "Your Movement Phase",
+     "declare": "Pick a friendly **^^Infantry^^** unit with up to 10 models that is wholly within 9\" of the **Codewright** in this Regiment of Renown and not in combat to be the target.",
+     "effect": "Remove the target from the battlefield, then set it up again on the battlefield more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": "1"
+    },
+    {
+     "name": "Long-Range Support",
+     "kind": "Ability (Command)",
+     "color": "Blue",
+     "timing": "Your Shooting Phase",
+     "declare": "Pick an objective within 15\" of the **Codewright** in this Regiment of Renown and that no friendly units are contesting. Each unit contesting that objective is a target.",
+     "effect": "Roll a dice for each target. If the roll exceeds the target's Health characteristic, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": "1"
+    }
+   ]
+  },
+  {
+   "name": "Snerk's Trogg-fer-Hire",
+   "pts": 200,
+   "factions": [
+    "Beasts of Chaos [LEGENDS]",
+    "Blades of Khorne",
+    "Bonesplitterz [LEGENDS]",
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Disciples of Tzeentch",
+    "Hedonites of Slaanesh",
+    "Idoneth Deepkin",
+    "Ironjawz",
+    "Kruleboyz",
+    "Lumineth Realm-lords",
+    "Maggotkin of Nurgle",
+    "Ogor Mawtribes",
+    "Ossiarch Bonereapers",
+    "Seraphon",
+    "Skaven",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince",
+    "Soulblight Gravelords",
+    "Stormcast Eternals"
+   ],
+   "units": [
+    [
+     "Dankhold Troggoth",
+     1
+    ],
+    [
+     "Loonboss",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Taktikal Cowering",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While the **Loonboss** in this Regiment of Renown is within the combat range of the **Dankhold Troggoth** in this Regiment of Renown:\n• That **Loonboss** has **^^Ward (4+)^^**.\n• Each time you make a successful ward roll for that **Loonboss**, allocate 1 damage point to that **Dankhold Troggoth** after the damage sequence for that **Loonboss** has been resolved (ward rolls cannot be made for those damage points).",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Go Dat Way!",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Your Charge Phase",
+     "declare": "Pick the **Dankhold Troggoth** in this Regiment of Renown to be the target if it is within 12\" of the **Loonboss** in this Regiment of Renown.",
+     "effect": "For the rest of the turn, the target can still use **^^Charge^^** abilities even if it used a **^^Retreat^^** ability in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Squires of the Everchosen",
+   "pts": 240,
+   "factions": [
+    "Blades of Khorne",
+    "Disciples of Tzeentch",
+    "Hedonites of Slaanesh",
+    "Maggotkin of Nurgle",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince"
+   ],
+   "units": [
+    [
+     "Morbheg Knights",
+     1
+    ],
+    [
+     "Varghulf Courtier",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "A Deluded Quest",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Battle, Deployment Phase",
+     "declare": "Pick an enemy unit to be the target.",
+     "effect": "The target has the **^^Enemy of the Everchosen^^** keyword.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "A Quest Well Done",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Battle (Army), End of Any Turn",
+     "declare": "",
+     "effect": "If the enemy **^^Enemy of the Everchosen^^** unit is destroyed by a unit in this Regiment of Renown, add 10 to the control score of each unit in this Regiment of Renown for the rest of the battle.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Krong the Club",
+   "pts": 140,
+   "factions": [
+    "Blades of Khorne",
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Disciples of Tzeentch",
+    "Flesh-eater Courts",
+    "Fyreslayers",
+    "Gloomspite Gitz",
+    "Hedonites of Slaanesh",
+    "Helsmiths of Hashut",
+    "Idoneth Deepkin",
+    "Ironjawz",
+    "Kharadron Overlords",
+    "Kruleboyz",
+    "Lumineth Realm-lords",
+    "Maggotkin of Nurgle",
+    "Nighthaunt",
+    "Ogor Mawtribes",
+    "Ossiarch Bonereapers",
+    "Seraphon",
+    "Skaven",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince",
+    "Soulblight Gravelords",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Mancrusher Gargant",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Devastating Collapse",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "When the unit in this Regiment of Renown is destroyed, before removing it from play, you and your opponent must roll off. If you roll higher, inflict 3 mortal damage on each unit (friendly and enemy) within its combat range.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Jump Up and Down",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Turn (Army), Any Combat Phase",
+     "declare": "If the unit in this Regiment of Renown charged this turn, pick an enemy unit in combat with it to be the target.",
+     "effect": "Roll a dice for each model in the target unit. Add 1 to each roll if the target is contesting an objective you do not control. For each 6+, inflict 1 mortal damage on the target. Then, if any of the rolls were an unmodified 1, resolve the effect of the 'Devastating Collapse' ability as if the unit in this Regiment of Renown had been destroyed (it is neither destroyed nor removed from play).",
+     "keywords": "**^^Rampage^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Beast of Castle Sterneiste",
+   "pts": 160,
+   "factions": [
+    "Flesh-eater Courts",
+    "Nighthaunt",
+    "Ossiarch Bonereapers"
+   ],
+   "units": [
+    [
+     "Revenant Draconith",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Deathless Monstrosity",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "",
+     "effect": "**Heal (3)** this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Blacktalons",
+   "pts": 320,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Idoneth Deepkin",
+    "Kharadron Overlords",
+    "Lumineth Realm-lords",
+    "Seraphon",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Neave Blacktalon",
+     1
+    ],
+    [
+     "Lorai, Child of the Abyss",
+     1
+    ],
+    [
+     "Neave's Companions",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Justice Will Be Served",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Once Per Battle (Army), Any Combat Phase",
+     "declare": "Pick the **Neave Blacktalon** in this Regiment of Renown to be the target if it is in combat with an enemy **^^Hero^^**.",
+     "effect": "The target can use 2 **^^Fight^^** abilities this phase. Each time it does so, if it is in combat with  an enemy **^^Hero^^**, all of its attacks must target an enemy **^^Hero^^**. In addition, after the first **^^Fight^^** ability is used, the target has **^^Strike-last^^** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Coven of Thryx",
+   "pts": 270,
+   "factions": [
+    "Beasts of Chaos [LEGENDS]",
+    "Hedonites of Slaanesh",
+    "Maggotkin of Nurgle",
+    "Skaven",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince"
+   ],
+   "units": [
+    [
+     "Pink Horrors",
+     1
+    ],
+    [
+     "Magister",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Sparks of Profane Potential",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Turn (Army),Deployment Phase",
+     "declare": "",
+     "effect": "Effect: If the **Magister** in the Regiment of Renown has been deployed, set up one of the following **^^Manifestations^^** within 1\" of them:\n• 1 **Burning Sigil of Tzeentch**\n• 1 **Tome of Eyes**\n• 1 **Daemonic Simulacrum**",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Skilled Summoner",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the **Magister** in this Regiment of Renown to cast this spell, pick 1 of the **^^Manifestations^^** from the list below that is not on the battlefield, then make a casting roll of 2D6:\n• 1 Burning Sigil of Tzeentch\n• 1 Tome of Eyes\n• 1 Daemonic Simulacrum",
+     "effect": "If there is already a friendly **^^Manifestation^^** from the list above on the battlefield, it is immediately banished. Then, set up the **^^Manifestation^^** you picked within 1\" of the caster and visible to them. If that **^^Manifestation^^** is a **Daemonic Simulacrum**, it must also be set up more than 9\" away from all enemy units.",
+     "keywords": "**^^Spell^^**, **^^Summon^^**",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Bolt of Tzeentch",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the **Magister** in this Regiment of Renown to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+     "effect": "Inflict D3 mortal damage on the target.",
+     "keywords": "**^^Spell^^**, **^^Unlimited^^**, **^^Wyrdflame^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Flickering Wyrdflame",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick an enemy unit that had any damage points inflicted on it this turn by **^^Wyrdflame Spell^^** abilities or attacks made with weapons that have the **^^Wyrdflame^^** weapon ability to be the target.",
+     "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Exiled One",
+   "pts": 400,
+   "factions": [
+    "Disciples of Tzeentch",
+    "Hedonites of Slaanesh",
+    "Helsmiths of Hashut",
+    "Maggotkin of Nurgle",
+    "Skaven",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince"
+   ],
+   "units": [
+    [
+     "Skarbrand",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Hatred for All",
+     "kind": "Ability (Activated)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "You must use this ability if this unit is not in combat and there are any other visible friendly units within this unit's combat range. You must pick 1 of those friendly units to be the target.",
+     "effect": "Resolve combat attacks for this unit against the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Horizon Seekers",
+   "pts": 500,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Idoneth Deepkin",
+    "Kharadron Overlords",
+    "Lumineth Realm-lords",
+    "Seraphon",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Lord-Aquilor",
+     1
+    ],
+    [
+     "Vanguard-Palladors with Starstrike Javelins",
+     1
+    ],
+    [
+     "Vanguard-Hunters",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Hunters' Cohesion",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time this Regiment of Renown's **Lord- Aquilor** uses its 'Ride the Winds Aetheric' ability, you can pick all units in this Regiment of Renown that are not in combat to be the targets.\nIn addition, add 1 to hit rolls for attacks made by this Regiment of Renown's **Lord-Aquilor** and **Vanguard-Palladors** units that target a **^^Hunted^^** enemy unit",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Liche's Hand",
+   "pts": 790,
+   "factions": [
+    "Flesh-eater Courts",
+    "Nighthaunt",
+    "Soulblight Gravelords"
+   ],
+   "units": [
+    [
+     "Morghast Archai",
+     1
+    ],
+    [
+     "Morghast Harbingers",
+     1
+    ],
+    [
+     "Arkhan the Black, Mortarch of Sacrament",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Skeletal Splintering",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "This spell can be cast by the same **^^Wizard^^** more than once per phase. Pick the **Arkhan the Black** in this Regiment of Renown to cast this spell, pick a visible enemy unit within 18\" of them that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6.",
+     "effect": "Roll a number of dice equal to the number of models in the target unit. For each 5+, inflict 1 mortal damage on that unit.",
+     "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+     "cast": "8",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Unholy Sacraments",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the number of dice rolled when making banishment rolls for the **Arkhan the Black** in this Regiment of Renown, to a maximum of 3.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Lost-Song Spirits",
+   "pts": 370,
+   "factions": [
+    "Flesh-eater Courts",
+    "Idoneth Deepkin",
+    "Nighthaunt",
+    "Ossiarch Bonereapers",
+    "Soulblight Gravelords"
+   ],
+   "units": [
+    [
+     "Spite-Revenants",
+     2
+    ],
+    [
+     "Treelord",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Ominous Fog",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Units in this Regiment of Renown are not visible to enemy units more than 12\" from them while they are wholly within 9\" of the **Treelord** in this Regiment of Renown.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Endless Wandering",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Enemy Hero Phase",
+     "declare": "Pick a unit in this Regiment of Renown that is not in combat to use this ability.",
+     "effect": "That unit can use the 'Normal Move' ability as if it were your movement phase.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Red Revelation",
+   "pts": 350,
+   "factions": [
+    "Disciples of Tzeentch",
+    "Hedonites of Slaanesh",
+    "Helsmiths of Hashut",
+    "Maggotkin of Nurgle",
+    "Skaven",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince"
+   ],
+   "units": [
+    [
+     "Slaughterpriest",
+     1
+    ],
+    [
+     "Skullreapers",
+     1
+    ],
+    [
+     "Bloodreavers",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Frenzied Violence",
+     "kind": "Ability (Prayer)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the **Slaughterpriest** in this Regiment of Renown to chant this prayer, pick a visible unit in this Regiment of Renown wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+     "effect": "Until the start of your next turn, the target unit has **^^Ward (5+)^^** while every model in that unit is wholly within the combat range of an enemy unit. If the chanting roll was 10+, you can pick another eligible unit to be a second target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "4",
+     "cost": ""
+    },
+    {
+     "name": "Glimpse the God",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "Pick each unit in this Regiment of Renown that used a **^^Fight^^** ability this turn to be a target.",
+     "effect": "If any damage points were allocated to an enemy unit by the target's combat attacks this turn, that enemy unit was destroyed this turn, and no damage points were allocated to that enemy unit this turn by combat attacks made by a friendly unit that is not in this Regiment of Renown, for the rest of the battle, add 2 to the Attacks characteristic of the target's **Blood-hungry** weapons.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Shinestealaz",
+   "pts": 500,
+   "factions": [
+    "Ironjawz",
+    "Kruleboyz",
+    "Ogor Mawtribes",
+    "Sons of Behemat"
+   ],
+   "units": [
+    [
+     "Snarlboss",
+     1
+    ],
+    [
+     "Wolfgit Retinue",
+     1
+    ],
+    [
+     "Sunsteala Wheelas",
+     1
+    ],
+    [
+     "Snarlpack Cavalry",
+     2
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Sneaky Prowlin'",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick all units in this Regiment of Renown if none of them have been deployed.",
+     "effect": "Set up those units in reserve **prowlin' around***. They have now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ambush Time!",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Battle (Army), Your Movement Phase",
+     "declare": "Pick all units in this Regiment of Renown if they are **prowlin' around**.",
+     "effect": "Set up those units anywhere on the battlefield more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Sorrowmourn Choir",
+   "pts": 590,
+   "factions": [
+    "Flesh-eater Courts",
+    "Ossiarch Bonereapers",
+    "Soulblight Gravelords"
+   ],
+   "units": [
+    [
+     "Lady Olynder, Mortarch of Grief",
+     1
+    ],
+    [
+     "Dreadscythe Harridans",
+     1
+    ],
+    [
+     "Myrmourn Banshees",
+     2
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Insubstantial",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Ignore negative modifiers to save rolls for units in this Regiment of Renown.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ghostly Paths",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "This spell can be cast by the same **^^Wizard^^** more than once per phase. Pick the **Lady Olynder** in this Regiment of Renown to cast this spell, pick a visible friendly unit in this Regiment of Renown that is wholly within 12\" of them, that is not in combat and that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6.",
+     "effect": "Remove the target from the battlefield and set it up again more than 9\" from all enemy units.",
+     "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Bulwark of the Necropolis",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "Pick an enemy unit in combat with a unit in this Regiment of Renown to be the target.",
+     "effect": "Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Sterneiste Garrison",
+   "pts": 680,
+   "factions": [
+    "Flesh-eater Courts",
+    "Nighthaunt",
+    "Ossiarch Bonereapers"
+   ],
+   "units": [
+    [
+     "Mannfred von Carstein, Mortarch of Night",
+     1
+    ],
+    [
+     "Barrow Guard",
+     1
+    ],
+    [
+     "Fell Bats",
+     2
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Engulfing Shadows",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time a unit in this Regiment of Renown is set up, add 1 to the Attacks characteristic of that unit's melee weapons for the rest of the turn",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Stalking Blades",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the **Mannfred von Carstein** in this Regiment of Renown to cast this spell, pick a visible enemy unit within 12\" of them to be the target, then make a casting roll of 2D6.",
+     "effect": "Inflict 1 mortal damage on the target for each other enemy unit within 3\" of the target.",
+     "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Cover of Night",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Your Hero Phase",
+     "declare": "Pick 1 friendly unit in this Regiment of Renown that is not in combat to be the target.",
+     "effect": "Remove that unit from the battlefield and set it up again more than 6\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Summerking's Entourage",
+   "pts": 640,
+   "factions": [
+    "Nighthaunt",
+    "Ossiarch Bonereapers",
+    "Soulblight Gravelords"
+   ],
+   "units": [
+    [
+     "Ushoran, Mortarch of Delusion",
+     1
+    ],
+    [
+     "Morbheg Knights",
+     1
+    ],
+    [
+     "Cryptguard",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Maddening Radiance",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Attacks characteristic of melee weapons used by units in this Regiment of Renown while they are wholly within 12\" of the **Ushoran** in this Regiment of Renown.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Deranged Transformation",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the **Ushoran** in this Regiment of Renown to cast this spell, pick another visible unit in this Regiment of Renown wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+     "effect": "Until the start of your next turn:\n• Add 2\" to the target's Move characteristic.\n• Add 1 to wound rolls for the target's combat attacks",
+     "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Summon Deluded Throngs",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Once Per Battle (Army), Your Movement Phase",
+     "declare": "Pick the **Ushoran** in this Regiment of Renown to use this ability, then pick another unit in this Regiment of Renown that has been destroyed to be the target",
+     "effect": "Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 6\" of a battlefield edge and more than 9\" from all enemy units. The replacement unit is part of this Regiment of Renown.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Valnir's Stormwing",
+   "pts": 350,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Idoneth Deepkin",
+    "Kharadron Overlords",
+    "Lumineth Realm-lords",
+    "Seraphon",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Knight-Draconis",
+     1
+    ],
+    [
+     "Stormdrake Guard",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Hour of Retribution",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Battle (Army), Your Hero Phase",
+     "declare": "",
+     "effect": "For the rest of the turn:\n• Add 1 to wound rolls for attacks made by units in this Regiment of Renown.\n• Add 1 to save rolls for units in this Regiment of Renown.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Horror of Hallow's Watch",
+   "pts": 230,
+   "factions": [
+    "Nighthaunt",
+    "Ossiarch Bonereapers",
+    "Soulblight Gravelords"
+   ],
+   "units": [
+    [
+     "Royal Terrorgheist",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Dark Hunt",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "In your charge phase, if this unit is not in combat and has not used a **^^Run^^** or **^^Retreat^^** ability in the same turn, it must use the 'Charge' ability, and if the charge roll would allow it to end the move within 1/2\" of a visible enemy unit, it must do so.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ravenous Shrieks",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time an enemy unit is destroyed by this unit's shooting attacks, add 1 to the Attacks characteristic of this unit's **Death Shriek** for the rest of the battle (this effect is cumulative).",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Scarlet Jury",
+   "pts": 300,
+   "factions": [
+    "Cities of Sigmar",
+    "Ironjawz",
+    "Kharadron Overlords",
+    "Kruleboyz",
+    "Nighthaunt",
+    "Ogor Mawtribes",
+    "Ossiarch Bonereapers",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince",
+    "Sons of Behemat",
+    "Soulblight Gravelords"
+   ],
+   "units": [
+    [
+     "Grand Justice Gormayne",
+     1
+    ],
+    [
+     "Cryptguard",
+     1
+    ],
+    [
+     "Royal Decapitator",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Punishment Fits the Crime",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "You believe the 'Accusations of Regicide' **^^Delusion^^** (see **Grand Justice Gormayne**'s warscroll).",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Casket of Resurrections",
+   "pts": 180,
+   "factions": [
+    "Flesh-eater Courts",
+    "Ossiarch Bonereapers",
+    "Soulblight Gravelords"
+   ],
+   "units": [
+    [
+     "Black Coach",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Dark Resurrection",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "If any damage points were allocated to an enemy unit by this unit's combat attacks this turn and that enemy unit was destroyed this turn, pick a friendly non-**^^Unique Death Infantry Hero^^** that has been destroyed to be the target.",
+     "effect": "Set up a replacement unit identical to the target wholly within 12\" of this unit. The replacement unit can only be set up in combat with enemy units that are in combat with this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ethereal",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Ignore negative modifiers to save rolls for units in this Regiment of Renown.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Craventhrone Executioners",
+   "pts": 290,
+   "factions": [
+    "Flesh-eater Courts",
+    "Ossiarch Bonereapers",
+    "Soulblight Gravelords"
+   ],
+   "units": [
+    [
+     "Craventhrone Guard",
+     2
+    ],
+    [
+     "Scriptor Mortis",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Enemy of the Throne",
+     "kind": "Ability (Passive)",
+     "color": "Red",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to hit rolls and wound rolls for units in this Regiment of Renown that target a **^^Sentenced^^** unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Ethereal",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Ignore negative modifiers to save rolls for units in this Regiment of Renown.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Curse-Steel Battery",
+   "pts": 390,
+   "factions": [
+    "Blades of Khorne",
+    "Disciples of Tzeentch",
+    "Hedonites of Slaanesh",
+    "Maggotkin of Nurgle",
+    "Skaven",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince"
+   ],
+   "units": [
+    [
+     "Tormentor Bombard",
+     1
+    ],
+    [
+     "Deathshrieker Rocket Battery",
+     1
+    ],
+    [
+     "Daemonsmith",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Display of Total Power",
+     "kind": "Ability (Command)",
+     "color": "Blue",
+     "timing": "Once Per Turn (Army), Your Shooting Phase",
+     "declare": "If neither **^^War Machine^^** unit in this Regiment of Renown used any **^^shoot^^** abilities this turn, pick an enemy unit to be the target.",
+     "effect": "For the rest of the turn:\n• While that enemy unit is on the battlefield, the **^^War Machine^^** units in this **^^Regiment of Renown^^** can only pick that enemy unit to be the target of their shooting attacks.\n• Each of those **^^War Machine^^** units counts as if it has 3 **daemonic power points**.\nThe first time you use this ability, you can use it without any command points being spent.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": "1"
+    },
+    {
+     "name": "Reinforce Daemonsteel",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the **Daemonsmith** in this Regiment of Renown to cast this spell, then make a casting roll of 2D6.",
+     "effect": "Until the start of your next turn, ignore the first damage point allocated to each friendly **^^Helsmiths of Hashut^^** unit in each phase while they are wholly within 12\" of the caster.",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Seeker of the Dread Dirge",
+   "pts": 260,
+   "factions": [
+    "Blades of Khorne",
+    "Disciples of Tzeentch",
+    "Hedonites of Slaanesh",
+    "Maggotkin of Nurgle",
+    "Skaven",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince"
+   ],
+   "units": [
+    [
+     "Ashen Elder",
+     1
+    ],
+    [
+     "Dominator Engine with Bane Maces",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Dirge of Desolation",
+     "kind": "Ability (Prayer)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the **Ashen Elder** in this Regiment of Renown to chant this prayer, pick a terrain feature on the battlefield to be the target, then make a chanting roll of D6.",
+     "effect": "Roll a D3 for each enemy unit contesting the target. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll. If the chanting roll was 10+, you can pick another terrain feature to be a second target.",
+     "keywords": "**^^Prayer^^**",
+     "cast": "",
+     "chant": "6",
+     "cost": ""
+    },
+    {
+     "name": "All-Consuming Search",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "End of Any Turn",
+     "declare": "Pick the **Ashen Elder** in this Regiment of Renown to use this ability. Then, pick an objective or **Place of Power** that they are contesting and that has not been picked to be the target of this ability this battle to be the target,",
+     "effect": "Roll 6 dice. For each 3+, give this unit 1 ritual point.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Diseased Revellers",
+   "pts": 270,
+   "factions": [
+    "Blades of Khorne",
+    "Disciples of Tzeentch",
+    "Hedonites of Slaanesh",
+    "Helsmiths of Hashut",
+    "Skaven",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince"
+   ],
+   "units": [
+    [
+     "Beast of Nurgle",
+     2
+    ],
+    [
+     "Sloppity Bilepiper, Herald of Nurgle",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "The Piper's Infectious Melodies",
+     "kind": "Ability (Passive)",
+     "color": "Orange",
+     "timing": "",
+     "declare": "",
+     "effect": "While a **Beast of Nurgle** in this Regiment of Renown is within 3\" of this Regiment of Renown's **Sloppity Bilepiper**, it can use the 'Attention Seekers' ability even if the other **Beast of Nurgle** in this Regiment of Renown has already used it this turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Pustules",
+   "pts": 200,
+   "factions": [
+    "Blades of Khorne",
+    "Disciples of Tzeentch",
+    "Hedonites of Slaanesh",
+    "Helsmiths of Hashut",
+    "Skaven",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince"
+   ],
+   "units": [
+    [
+     "Spoilpox Scrivener, Herald of Nurgle",
+     1
+    ],
+    [
+     "Feculent Gnarlmaw",
+     1
+    ],
+    [
+     "Plaguebearers",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Blighted Growth",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "",
+     "effect": "Set up this Regiment of Renown's **Feculent Gnarlmaw** wholly within friendly territory and more than 3\" from all objectives and other terrain features. After you have done so, it has been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Multitudinous Diseases",
+     "kind": "Ability (Activated)",
+     "color": "Purple",
+     "timing": "Once Per Turn (Army), End of Any Turn",
+     "declare": "If this Regiment of Renown's **Plaguebearers** unit is wholly within 12\" of this unit's **Feculent Gnarlmaw**, pick that **Plaguebearers** unit to be the target.",
+     "effect": "**Heal (1)** the target. If  the target is contesting an objective, you can also return 1 slain model to the target unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Sigil Convocation",
+   "pts": 130,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Idoneth Deepkin",
+    "Kharadron Overlords",
+    "Seraphon",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Scinari Calligrave",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Cycle Manifestation",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the **Scinari Calligrave** in this Regiment of Renown to cast this spell, pick 1 of the friendly **^^Manifestations^^** below that is not on the battlefield, then make a casting roll of 2D6.\n• **Sanctum of Amyntok**\n• **Hyshian Twinstones**\n• **Rune of Petrification**",
+     "effect": "If there is already a friendly **^^Manifestation^^** from the list above on the battlefield, it is immediately banished and removed from play. Then, set up the **^^Manifestation^^** you picked within 1\" of the caster and visible to them. If that **^^Manifestation^^** is a **Sanctum of Amyntok**, it must instead be set up wholly within 12\" of the caster, more than 3\" from all enemy units, and with its 3 parts touching each other so that they form a ring.",
+     "keywords": "**^^Summon^^**, **^^Spell^^**",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Swift Erasure",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Reaction: Opponent declared a **^^Spell^^** ability",
+     "declare": "",
+     "effect": "Roll a dice for each friendly unit that was picked to be a target of that **^^Spell^^** ability and that is wholly within 12\" of the **Scinari Calligrave** in this Regiment of Renown. On a 4+, that **^^Spell^^** ability has no effect on that unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Arcane Taxonomy",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Once Per Turn, Your Movement Phase",
+     "declare": "",
+     "effect": "Remove the **Scinari Calligrave** in this Regiment of Renown from the battlefield and set it up again on the battlefield wholly within 3\" of a friendly **^^Manifestation^^** and more than 7\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Dawnrider Lance",
+   "pts": 260,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Idoneth Deepkin",
+    "Kharadron Overlords",
+    "Seraphon",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Vanari Lord Regent on Lightcourser",
+     1
+    ],
+    [
+     "Vanari Dawnriders",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Blinding Charge",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Turn (Army), Any Charge Phase",
+     "declare": "Pick a unit in this Regiment of Renown that charged this turn. Then, pick an enemy **^^Infantry^^** unit within 1\" of that unit to be the target.",
+     "effect": "For the rest of the turn, ignore positive modifiers to save rolls for the target.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Masters of All Terrain",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Ignore negative modifiers to run rolls and charge rolls for units in this Regiment of Renown and to their Move characteristic.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Mask of the Deceiver",
+   "pts": 170,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Flesh-eater Courts",
+    "Fyreslayers",
+    "Gloomspite Gitz",
+    "Hedonites of Slaanesh",
+    "Helsmiths of Hashut",
+    "Idoneth Deepkin",
+    "Ironjawz",
+    "Kharadron Overlords",
+    "Kruleboyz",
+    "Lumineth Realm-lords",
+    "Maggotkin of Nurgle",
+    "Nighthaunt",
+    "Ogor Mawtribes",
+    "Ossiarch Bonereapers",
+    "Seraphon",
+    "Skaven",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince",
+    "Soulblight Gravelords",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Mask of the Deceiver",
+     1
+    ]
+   ],
+   "abilities": []
+  },
+  {
+   "name": "Seekers of Silver",
+   "pts": 380,
+   "factions": [
+    "Hedonites of Slaanesh",
+    "Helsmiths of Hashut",
+    "Maggotkin of Nurgle",
+    "Skaven",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince"
+   ],
+   "units": [
+    [
+     "Magister on Disc of Tzeentch",
+     1
+    ],
+    [
+     "Gaunt Summoner on Disc of Tzeentch",
+     1
+    ],
+    [
+     "Screamers of Tzeentch",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Splinters of Sorcery",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a friendly **^^Wizard^^** in this Regiment of Renown to cast this spell, pick a visible terrain feature within 12\" of them that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6.",
+     "effect": "If the target does not have the 'Place of Power' terrain ability, it gains that ability for the rest of the battle. If the target has the 'Place of Power' terrain ability, pick an enemy unit within 12\" of it and roll 9 dice. For each 5+, inflict 1 mortal damage on that enemy unit.",
+     "keywords": "**^^Spell^^**, **^^Unlimited^^**",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Bubbles of Unreality",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), Any Hero Phase",
+     "declare": "Pick a terrain feature with the 'Place of\nPower' terrain ability to be the target.",
+     "effect": "The next time a friendly **^^Wizard^^** in this Regiment of Renown uses a **^^Summon Spell^^** ability this phase, you can measure the range and visibility of that **^^Spell^^** ability from the target instead of from the caster.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Heralds of the Bone-tithe",
+   "pts": 390,
+   "factions": [
+    "Flesh-eater Courts",
+    "Nighthaunt",
+    "Soulblight Gravelords"
+   ],
+   "units": [
+    [
+     "Mortek Guard",
+     1
+    ],
+    [
+     "Immortis Guard",
+     1
+    ],
+    [
+     "Vokmortian, Master of the Bone-tithe",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "The Decree of Nagash",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the friendly **Vokmortian** in this Regiment of Renown to cast this spell, pick a visible enemy unit within 12\" of them to be the target, then make a casting roll of 2D6.",
+     "effect": "For the rest of the turn, each time your opponent declares a **^^Fight^^** ability for the target, unless they spend 1 command point as a reaction, that **^^Fight^^** ability has no effect.\n**Designer's Note:** *That* **^^Fight^^** *ability does not count as a command.*",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Masters of All Terrain",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Ignore negative modifiers to run rolls and charge rolls for units in this Regiment of Renown and to their Move characteristic.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Karahtet's Siege Breaker",
+   "pts": 360,
+   "factions": [
+    "Flesh-eater Courts",
+    "Nighthaunt",
+    "Soulblight Gravelords"
+   ],
+   "units": [
+    [
+     "Mortisan Ossifector",
+     1
+    ],
+    [
+     "Mortek Crawler",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Reinforce Pavise",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "If the **Mortek Crawler** in this Regiment of Renown is wholly within 12\" of and visible to the friendly **Mortisan Ossifector** in this Regiment of Renown, pick that **Mortisan Ossifector** to cast this spell, pick that **Mortek Crawler** to be the target, then make a casting roll of 2D6.",
+     "effect": "Until the start of your next turn, the target has ^^**Ward (5+)^^**.",
+     "keywords": "**^^Spell^^**",
+     "cast": "5",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Drycha's Talons",
+   "pts": 360,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Idoneth Deepkin",
+    "Lumineth Realm-lords",
+    "Seraphon",
+    "Stormcast Eternals"
+   ],
+   "units": [
+    [
+     "Spite-Revenants",
+     2
+    ],
+    [
+     "Drycha Hamadreth",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Bitter Roots",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "If they do not otherwise have one, terrain features have a friendly **overgrown token** while they are contested by a **Spite-Revenants** unit in this Regiment of Renown.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Concealed in the Shadows",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "While they are wholly within 3\" of a terrain feature, the **Spite-Revenants** units in this Regiment of Renown are not visible to enemy units more than 12\" away from them.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Twisted Branch",
+   "pts": 210,
+   "factions": [
+    "Cities of Sigmar",
+    "Daughters of Khaine",
+    "Idoneth Deepkin",
+    "Lumineth Realm-lords",
+    "Seraphon",
+    "Stormcast Eternals"
+   ],
+   "units": [
+    [
+     "Branchwych",
+     1
+    ],
+    [
+     "The Twistweald",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Searching for Remedies",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "",
+     "effect": "Remove each unit in this Regiment of Renown from the battlefield and set them up again wholly within 6\" of a terrain feature and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Soothing Pulse",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the **Branchwych** in this Regiment of Renown to cast this spell, pick a visible friendly unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+     "effect": "Heal (3) the target",
+     "keywords": "**^^Spell^^**",
+     "cast": "7",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Khinerai Death Flight",
+   "pts": 240,
+   "factions": [
+    "Cities of Sigmar",
+    "Fyreslayers",
+    "Idoneth Deepkin",
+    "Kharadron Overlords",
+    "Lumineth Realm-lords",
+    "Seraphon",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Khinerai Heartrenders",
+     1
+    ],
+    [
+     "Khinerai Lifetakers",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Fierce Competition",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "Each time a unit in this Regiment of Renown uses an ability and any enemy models were slain by that ability, after that ability has been resolved, the unit that used that ability is **pre-eminent** and the other unit in this Regiment of Renown is **overlooked**.\nWeapons used by an **overlooked** unit in this Regiment of Renown have **Crit (Auto-wound)**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Crimson Lash",
+   "pts": 220,
+   "factions": [
+    "Cities of Sigmar",
+    "Fyreslayers",
+    "Idoneth Deepkin",
+    "Kharadron Overlords",
+    "Lumineth Realm-lords",
+    "Seraphon",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "High Gladiatrix",
+     1
+    ],
+    [
+     "Sisters of Slaughter",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Site of Slaughter",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Once Per Battle (Army), Deployment Phase",
+     "declare": "",
+     "effect": "Pick an objective wholly outside friendly territory. That objective is considered by you to be the **amphitheatre**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Finishing Moves",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While each model in a unit in this Regiment of Renown is contesting the amphitheatre:\n• That unit's melee weapons have **Crit (Mortal)**.\n• If you control the amphitheatre, if the unmodified hit roll or wound roll for an attack that targets that unit is a 1-4, the attack fails and the attack sequence ends.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Rogue Engine",
+   "pts": 450,
+   "factions": [
+    "Blades of Khorne",
+    "Daughters of Khaine",
+    "Disciples of Tzeentch",
+    "Flesh-eater Courts",
+    "Fyreslayers",
+    "Gloomspite Gitz",
+    "Hedonites of Slaanesh",
+    "Helsmiths of Hashut",
+    "Idoneth Deepkin",
+    "Ironjawz",
+    "Kharadron Overlords",
+    "Kruleboyz",
+    "Lumineth Realm-lords",
+    "Maggotkin of Nurgle",
+    "Nighthaunt",
+    "Ogor Mawtribes",
+    "Ossiarch Bonereapers",
+    "Seraphon",
+    "Skaven",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince",
+    "Sons of Behemat",
+    "Soulblight Gravelords",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Outlaw Cannonade Cogfort",
+     1
+    ]
+   ],
+   "abilities": []
+  },
+  {
+   "name": "Cogfort Raiders",
+   "pts": 410,
+   "factions": [
+    "Blades of Khorne",
+    "Daughters of Khaine",
+    "Disciples of Tzeentch",
+    "Flesh-eater Courts",
+    "Fyreslayers",
+    "Gloomspite Gitz",
+    "Hedonites of Slaanesh",
+    "Helsmiths of Hashut",
+    "Idoneth Deepkin",
+    "Ironjawz",
+    "Kharadron Overlords",
+    "Kruleboyz",
+    "Lumineth Realm-lords",
+    "Maggotkin of Nurgle",
+    "Nighthaunt",
+    "Ogor Mawtribes",
+    "Ossiarch Bonereapers",
+    "Seraphon",
+    "Skaven",
+    "Slaves to Darkness",
+    "Slaves to Darkness - Legion of the First Prince",
+    "Sons of Behemat",
+    "Soulblight Gravelords",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Outlaw Conqueror Cogfort",
+     1
+    ]
+   ],
+   "abilities": []
+  },
+  {
+   "name": "Ven Denst's Hounds",
+   "pts": 230,
+   "factions": [
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Idoneth Deepkin",
+    "Kharadron Overlords",
+    "Lumineth Realm-lords",
+    "Seraphon",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Galen and Doralia ven Denst",
+     1
+    ],
+    [
+     "Wildercorps Hunters",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Spell Hunters",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While both units in this Regiment of Renown are within each other's combat range, enemy **^^Manifestations^^** cannot be set up within 12\" of either of those units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Reinholt's Sharpshooters",
+   "pts": 400,
+   "factions": [
+    "Daughters of Khaine",
+    "Fyreslayers",
+    "Idoneth Deepkin",
+    "Kharadron Overlords",
+    "Lumineth Realm-lords",
+    "Seraphon",
+    "Stormcast Eternals",
+    "Sylvaneth"
+   ],
+   "units": [
+    [
+     "Fusil-Major on Ogor Warhulk",
+     1
+    ],
+    [
+     "Ironweld Great Cannon",
+     1
+    ],
+    [
+     "Freeguild Fusiliers",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Friendly Competition",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to hit rolls for shooting attacks made by non-**^^Hero^^** units in this Regiment of Renown if any enemy models were slain by shooting attacks made by non-**^^Hero^^** units in this Regiment of Renown in the same turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Castle Up!",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While a non-**^^Hero^^** unit in this Regiment of Renown is within the combat range of and visible to this Regiment of Renown's **^^Hero^^**, those units are **under orders**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Accursed Reflection",
+   "pts": 130,
+   "factions": [
+    "Disciples of Tzeentch",
+    "Helsmiths of Hashut",
+    "Maggotkin of Nurgle",
+    "Skaven",
+    "Slaves to Darkness"
+   ],
+   "units": [
+    [
+     "Contorted Epitome",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Spew Forth Sin",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick the **Contorted Epitome** in this Regiment of Renown to cast this spell, then make a casting roll of 2D6.",
+     "effect": "Pick a friendly **^^Hedonites of Slaanesh Manifestation^^** that is not on the battlefield and that was not removed from play earlier in thte same turn.\n\n\nIf you picked a **Dreadful Visage** or **Wheels of Excruciation**, set it up wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units. If you picked a **Mesmerising Mirror**, set it up wholly within 12\" of the caster and visible to them.",
+     "keywords": "**^^Spell^^**, **^^Summon^^**",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Mist-Clad Revellers",
+   "pts": 260,
+   "factions": [
+    "Disciples of Tzeentch",
+    "Helsmiths of Hashut",
+    "Maggotkin of Nurgle",
+    "Skaven",
+    "Slaves to Darkness"
+   ],
+   "units": [
+    [
+     "Blissbarb Archers",
+     1
+    ],
+    [
+     "Shardspeaker of Slaanesh",
+     1
+    ]
+   ],
+   "abilities": [
+    {
+     "name": "Lurking Threat",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick each unit in this Regiment of Renown if none of those units have been deployed.",
+     "effect": "Set up those units in reserve **lurking in the mists**. They have now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "The Mists Part",
+     "kind": "Ability (Activated)",
+     "color": "Grey",
+     "timing": "Your Movement Phase",
+     "declare": "Pick each unit in this Regiment of Renown if they are **lurking in the mists**.",
+     "effect": "Set up the **Shardspeaker of Slaanesh** in this Regiment of Renown on the battlefield wholly within 9\" of a battlefield edge and more than 9\" from all enemy units. Then, set up the **Blissbarb Archers** unit in this Regiment of Renown on the battlefield wholly within 6\" of that **Shardspeaker of Slaanesh**, wholly within 9\" of a battlefield edge and more than 9\" from all enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  }
+ ],
+ "units": [
+  {
+   "name": "Toll's Companions",
+   "pts": 0,
+   "size": 4,
+   "kw": [
+    "ORDER",
+    "CITIES OF SIGMAR",
+    "INFANTRY",
+    "UNIQUE",
+    "SIGMARITE"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "3",
+    "Save": "4+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti‑**^^Wizard^^** (+1 Rend)",
+     "name": "Exotic Assortment of Weapons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Hidden Agents",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick this unit and a friendly **Callis and Toll** unit if those units have not been deployed.",
+     "effect": "Set up those units in reserve **in the shadows**. They have now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Emerge from the Shadows",
+     "kind": "Ability (Activated)",
+     "color": "Gray",
+     "timing": "Your Movement Phase",
+     "declare": "Pick this unit if it is **in the shadows**.",
+     "effect": "Set up this unit anywhere on the battlefield more than 6\" from the enemy **mark** and more than 9\" from all other enemy units. Then, set up the **Callis and Toll** unit **in the shadows** wholly within 6\" of this unit, more than 6\" from the enemy **mark** and more than 9\" from all other enemy units.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Saviours of Cinderfall",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While a friendly **Callis and Toll** unit is wholly within this unit's combat range, both this unit and that friendly unit have **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Gotrek Gurnisson",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "ORDER",
+    "INFANTRY",
+    "DUARDIN",
+    "WARD (3+)"
+   ],
+   "stats": {
+    "Move": "4\"",
+    "Health": "8",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "8",
+     "Hit": "2+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Crit (Mortal)",
+     "name": "Zangrom-Thaz",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Unstoppable Battle Fury",
+     "kind": "Ability (Command)",
+     "color": "Red",
+     "timing": "Any Combat Phase",
+     "declare": "",
+     "effect": "This unit can use 2 **^^Fight^^** abilities this phase. After the first is used, however, this unit has **^^Strike‑last^^** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": "1"
+    },
+    {
+     "name": "'I'll Get There Myself!'",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "This unit cannot be set up in reserve and cannot be targeted by abilities that would remove it from the battlefield.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Mask of the Deceiver",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "INFANTRY",
+    "WIZARD (2)",
+    "WARD (5+)",
+    "CHAOS",
+    "DISCIPLES OF TZEENTCH",
+    "DAEMON"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "6",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "The Trickster's Staff",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Unstoppable Battle Fury",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible friendly\nunit wholly within 12\" of this\nunit to be the target, then make\na casting roll of 2D6.",
+     "effect": "Until the start of your next turn:\n• The target cannot use **^^Move^^** abilities.\n• The target's melee weapons have **Anti-charge (+1 Rend)**.",
+     "keywords": "",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Masked in Plain Sight",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "This unit must be deployed using this ability.",
+     "effect": "Set up this unit in reserve **incognito**. It has now been deployed.\nFriendly **incognito** units are destroyed at the end of the fifth battle round and not at the start of the fourth battle round.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Bait and Switch",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Any Hero Phase",
+     "declare": "This unit can use this ability if it is **incognito**. Pick this unit and a friendly **^^Infantry Hero^^** to be the targets. One target must be **incognito** and the other must be on the battlefield.",
+     "effect": "Set up the incognito target wholly within 6\" of the other target and not in combat. Then, remove the other target\nfrom the battlefield and set it up in reserve **incognito**.\nIf this unit is destroyed, before removing it from play, set up the friendly **incognito** unit wholly within 6\" of a battlefield edge and not in combat.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Outlaw Cannonade Cogfort",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "WAR MACHINE"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "25",
+    "Save": "3+",
+    "Control": "10"
+   },
+   "weapons": [
+    {
+     "Rng": "24\"",
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "4",
+     "Ability": "-",
+     "name": "Godbreaker Cannon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Infantry^^** (+1 Rend)",
+     "name": "Breacher Cannon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Shoot In Combat",
+     "name": "Crew's Leadshotters",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "4",
+     "Ability": "Companion",
+     "name": "Crushing Iron Feet",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points:\n• The Attacks characteristic of its **Crushing Iron Feet** is 3.\n• It has a Control characteristic of 5.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Mercenary Attitudes",
+     "kind": "Ability (Activated)",
+     "color": "Yellow",
+     "timing": "Once Per Turn (Army), YourHero Phase",
+     "declare": "Pick another friendly non-**^^Unique^^** unit wholly within 12\" of this unit to be the target.",
+     "effect": "Pick 1 of the following effects to apply until the start of your next turn and while the target is wholly within 12\" of this unit:\n• You can re-roll run rolls for the target.\n• Add 1 to charge rolls for the target.\n• The target cannot be targeted by shooting attacks.\n• Add 1 to wound rolls for the target's combat attacks.\n• Add 10 to the target's control score.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Outlaw Conqueror Cogfort",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "ORDER",
+    "WAR MACHINE"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "25",
+    "Save": "3+",
+    "Control": "10"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "6D6",
+     "Hit": "2+",
+     "Wnd": "4+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "Anti-**^^Infantry^^** (+1 Rend)",
+     "name": "Realmscorcher Flame Cannon",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "6",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Shoot In Combat",
+     "name": "Crew's Leadshotters",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "4",
+     "Ability": "Companion",
+     "name": "Crushing Iron Feet",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Battle Damaged",
+     "kind": "Ability (Passive)",
+     "color": "Black",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit has 10 or more damage points:\n• The Attacks characteristic of its **Crushing Iron Feet** is 3.\n• It has a Control characteristic of 5.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Everyone Aboard!",
+     "kind": "Ability (Activated)",
+     "color": "Black",
+     "timing": "Deployment Phase",
+     "declare": "Pick up to 1 friendly **^^Infantry Hero^^** and up to 1 friendly non-reinforced, non-**^^Hero Infantry^^** unit that have not been deployed.",
+     "effect": "Set up those units in reserve as this unit's **passengers**. They have now been deployed.",
+     "keywords": "**^^Deploy^^**",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "This is Your Stop, Maggots!",
+     "kind": "Ability (Activated)",
+     "color": "Orange",
+     "timing": "Once Per Battle, Any Charge Phase",
+     "declare": "Pick this unit's **passengers** to be the targets.",
+     "effect": "Set up each target wholly within 6\" of this unit and more than 9\" from all enemy units. In addition, the targets' melee weapons have **Charge (+1 Damage)** for the rest of the turn.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "The Oathsworn Kin",
+   "pts": 0,
+   "size": 3,
+   "kw": [
+    "UNIQUE",
+    "SLAVES TO DARKNESS",
+    "CHAOS",
+    "DARKOATH",
+    "GUNNAR'S OATHSWORN",
+    "INFANTRY"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "3",
+    "Save": "5+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "4",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "2",
+     "Ability": "Crit (Mortal)",
+     "name": "Heavy Darkoath Weapon",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Gnarled Staff",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Broken Nadja",
+     "kind": "Ability (Passive)",
+     "color": "Yellow",
+     "timing": "",
+     "declare": "",
+     "effect": "While this unit's **Broken Nadja** is on the battlefield, it has **^^Wizard (1)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Withering Death",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Pick a visible enemy **^^Hero^^** within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+     "effect": "Inflict 1 mortal damage on the target and subtract 1 from the Attacks characteristic of the target's melee weapons until the start of your next turn.",
+     "keywords": "**^^Spell^^**",
+     "cast": "5",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Singri Brand",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "UNIQUE",
+    "HERO",
+    "SLAVES TO DARKNESS",
+    "CHAOS",
+    "DARKOATH",
+    "GUNNAR'S OATHSWORN",
+    "CAVALRY"
+   ],
+   "stats": {
+    "Move": "12\"",
+    "Health": "4",
+    "Save": "5+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Rng": "18\"",
+     "Atk": "2",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Singri's Warbow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "5+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Warsteed's Hooves",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "3",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Brand Ancestral Knife",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Swift as the Wind",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "Only critical hits score successful hits for shooting attacks that target this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Uncanny Shot",
+     "kind": "Ability (Passive)",
+     "color": "Blue",
+     "timing": "",
+     "declare": "",
+     "effect": "Add 1 to the Rend characteristic of this unit's **Singri's Warbow** for attacks that target enemy units that are within 6\" of a friendly **Gunnar Brand**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Neave's Companions",
+   "pts": 0,
+   "size": 3,
+   "kw": [
+    "INFANTRY",
+    "ORDER",
+    "STORMCAST ETERNALS",
+    "UNIQUE",
+    "THE BLACKTALONS"
+   ],
+   "stats": {
+    "Move": "5\"",
+    "Health": "3",
+    "Save": "3+",
+    "Control": "1"
+   },
+   "weapons": [
+    {
+     "Atk": "6",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Cyclone Sword and Axe",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "4",
+     "Hit": "3+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Stormcharged Warhammer",
+     "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "18\"",
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "Anti-**^^Hero^^** (+1 Rend)",
+     "name": "Typhoon Crossbow",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "Companion",
+     "name": "Anda's Celestial Talons",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Shield of Azyr",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "While any friendly **^^The Blacktalons Heroes^^** are wholly within this unit's combat range, both this unit and those friendly units have **^^Ward (5+)^^**.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  },
+  {
+   "name": "Lorai, Child of the Abyss",
+   "pts": 0,
+   "size": 1,
+   "kw": [
+    "HERO",
+    "UNIQUE",
+    "ORDER",
+    "INFANTRY",
+    "THE BLACKTALONS",
+    "WIZARD (1)",
+    "WARD (5+)",
+    "IDONETH DEEPKIN"
+   ],
+   "stats": {
+    "Move": "6\"",
+    "Health": "5",
+    "Save": "4+",
+    "Control": "2"
+   },
+   "weapons": [
+    {
+     "Atk": "3",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Abyssal Touch",
+     "kind": "Melee Weapon"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Aquatic Illusions",
+     "kind": "Ability (Passive)",
+     "color": "Green",
+     "timing": "",
+     "declare": "",
+     "effect": "Subtract 1 from hit rolls for attacks that target this unit.",
+     "keywords": "",
+     "cast": "",
+     "chant": "",
+     "cost": ""
+    },
+    {
+     "name": "Nebulous Sea-fog",
+     "kind": "Ability (Spell)",
+     "color": "Yellow",
+     "timing": "Your Hero Phase",
+     "declare": "Make a casting roll of 2D6.",
+     "effect": "Until the start of your next turn, while a friendly **^^The Blacktalons^^** unit is wholly within 6\" of this unit, if the unmodified hit roll for a shooting attack that targets that unit is 1-5, the attack fails and the attack sequence ends.",
+     "keywords": "**^^Spell^^**",
+     "cast": "6",
+     "chant": "",
+     "cost": ""
+    }
+   ]
+  }
+ ]
+}

@@ -94,6 +94,12 @@
       photo: () => ""
     };
   });
+  // Régiments de renom (General's Handbook) : unités prises dans toutes les factions + warscrolls propres
+  const ROR = (window.WC_ROR || {}).regiments || [], RORU = (window.WC_ROR || {}).units || [];
+  const unitByName = n => { for (const F of Object.values(FX)) { const u = F.units.find(x => x.en === n); if (u) return u; } return RORU.find(x => x.en === n) || null; };
+  const rorFor = F => ROR.filter(r => r.facs.includes(F.id));
+  const rorUnits = r => r.units.map(([n, c]) => ({u:unitByName(n), c})).filter(o => o.u);
+  const rorComp = r => r.units.map(([n, c]) => (c > 1 ? c + " × " : "") + n).join(", ");
   const FAC_ORDER = Object.values(FX).sort((a, b) => a.en.localeCompare(b.en));
   const fx = l => (l && FX[l.fac]) || FX.hashut;
   const UF = (F, id) => F.units.find(u => u.id === id);
@@ -131,11 +137,13 @@
   const formOf = l => byId(fx(l).formations, l.formation);
   const auxSurcharge = l => 20 * l.aux.length * (l.aux.length - 1) / 2;
   const terrOf = l => l.terrain ? UF(fx(l), l.terrain) : null;
-  const listPts = l => entries(l).reduce((s, o) => s + entryPts(l, o.e), 0) + auxSurcharge(l) + ((formOf(l) || {}).pts || 0) + ((terrOf(l) || {}).pts || 0);
+  const rorOf = l => l.ror ? byId(ROR, l.ror) : null;
+  const listPts = l => entries(l).reduce((s, o) => s + entryPts(l, o.e), 0) + auxSurcharge(l) + ((formOf(l) || {}).pts || 0) + ((terrOf(l) || {}).pts || 0) + ((rorOf(l) || {}).pts || 0);
   const tacticAb = t => ({c:"end", t:"Fin de votre tour", n:`${t.n} (carte n°${t.card})`, when:["end"],
     x:[...(t.gen ? ["Mise en place : " + t.gen] : []), ...t.t.map(([name, cond], i) => `${TIERS[i]}, ${name} : réussie à la fin de votre tour ${cond.charAt(0).toLowerCase() + cond.slice(1)}`)]});
   const regPts = (l, r) => [r.hero, ...(r.cmd || []), ...r.units].filter(Boolean).reduce((s, e) => s + entryPts(l, e), 0);
-  const drops = l => l.regiments.length + l.aux.length;
+  const drops = l => l.regiments.length + l.aux.length + (l.ror ? 1 : 0);
+  const regCount = l => l.regiments.length + (l.ror ? 1 : 0);
   const sizeOf = (l, e) => UF(fx(l), e.u).size * (e.reinf ? 2 : 1);
   const holdersFor = (l, t) => entries(l).filter(o => { const u = UF(fx(l), o.e.u); return !u.unique && (t.hero ? u.hero : t.war ? u.war : true); });
   const UMANIF = window.WC_UMANIF || [];
@@ -147,6 +155,7 @@
     if (!Array.isArray(l.tactics)) l.tactics = [];
     if (!l.lore) l.lore = {};
     if (l.terrain && !(UF(fx(l), l.terrain) || {}).terrain) delete l.terrain;
+    if (l.ror && !(rorOf(l) && rorOf(l).facs.includes(l.fac))) delete l.ror;
     if (!l.enh) {
       l.enh = {};
       if (l.trait) l.enh.trait = l.trait;
@@ -175,7 +184,7 @@
     if (pts > l.limit) err.push(`Dépassement de ${pts - l.limit} pts pour une partie à ${l.limit} pts.`);
     if (!l.formation) err.push("Choisis une formation de bataille.");
     if (!l.regiments.length) err.push("Ajoute le régiment du général.");
-    if (l.regiments.length > MAX_REG) err.push(`${MAX_REG} régiments maximum.`);
+    if (regCount(l) > MAX_REG) err.push(`${MAX_REG} régiments maximum${l.ror ? ", régiment de renom compris" : ""}.`);
     l.regiments.forEach((r, i) => {
       const name = i === 0 ? "Régiment du général" : `Régiment ${i + 1}`;
       if (!r.hero) { err.push(`${name} : choisis le héros qui le commande.`); return; }
@@ -188,6 +197,7 @@
     });
     const all = entries(l);
     F.units.filter(u => u.unique).forEach(u => { if (all.filter(o => o.e.u === u.id).length > 1) err.push(`${u.en} est Unique : 1 seul exemplaire.`); });
+    if (rorOf(l)) rorUnits(rorOf(l)).forEach(({u}) => { if (/\bUNIQUE\b/.test(u.kw) && all.some(o => UF(F, o.e.u) && UF(F, o.e.u).en === u.en)) err.push(`${u.en} est Unique : il est déjà dans le régiment de renom.`); });
     Object.entries(l.enh).forEach(([k, v]) => {
       const t = tableOf(F, k); if (!t) return;
       const holder = all.find(o => o.e.k === v.on);
@@ -196,7 +206,7 @@
     });
     all.forEach(o => { if (entryPts(l, o.e) > l.limit / 2) err.push(`${UF(F, o.e.u).en} coûte ${entryPts(l, o.e)} pts : une unité ne peut pas dépasser la moitié des points (${l.limit / 2} pts).`); });
     if (pts <= l.limit && l.limit - pts >= 50) info.push(`${l.limit - pts} pts non dépensés : 1 point de commandement supplémentaire au début du premier round.`);
-    if (l.regiments.length) info.push(`${l.regiments.length} régiment${l.regiments.length > 1 ? "s" : ""} : si tu en as plus que ton adversaire, tu peux relancer ton jet de priorité une fois par bataille.`);
+    if (l.regiments.length) info.push(`${regCount(l)} régiment${regCount(l) > 1 ? "s" : ""}${l.ror ? " (régiment de renom compris)" : ""} : si tu en as plus que ton adversaire, tu peux relancer ton jet de priorité une fois par bataille.`);
     const aq = all.some(o => UF(F, o.e.u).aqshy) || Object.entries(l.enh).some(([k, v]) => (enhItem(F, k, v.id) || {}).aqshy);
     if (aq) info.push("Contenu Fléau d'Aqshy : jouable uniquement avec le pack de bataille du Manuel du Général 2026-27.");
     if (l.aux.length) info.push(`${l.aux.length} unité${l.aux.length > 1 ? "s" : ""} auxiliaire${l.aux.length > 1 ? "s" : ""}${auxSurcharge(l) ? ` (surcoût de ${auxSurcharge(l)} pts)` : ""} : le joueur qui en a le moins gagne 1 point de commandement supplémentaire au début de chaque round.`);
@@ -230,12 +240,14 @@
     if (!l) {
       const F = FX[state.cat] || FX.hashut;
       return {l:null, F, units:F.units.slice(), formations:F.formations, tables:F.tables.map(t => ({t, items:t.items, holder:""})),
-        spells:F.spells, prayers:F.prayers, manifs:F.manifs.concat(UMANIF), tactics:TACTICS, wizard:true, priest:true, holders:{}};
+        spells:F.spells, prayers:F.prayers, manifs:F.manifs.concat(UMANIF), tactics:TACTICS, wizard:true, priest:true, holders:{}, rors:rorFor(F)};
     }
     const F = fx(l), ents = entries(l), ids = [];
     ents.forEach(o => { if (!ids.includes(o.e.u)) ids.push(o.e.u); });
     const units = ids.map(id => UF(F, id));
     if (terrOf(l) && !ids.includes(l.terrain)) units.push(terrOf(l));
+    const R = rorOf(l), rc = {};
+    if (R) rorUnits(R).forEach(({u, c}) => { rc[u.id] = (rc[u.id] || 0) + c; if (!units.some(x => x.id === u.id)) units.push(u); });
     const holders = {}, tables = [];
     F.tables.forEach(t => {
       const v = l.enh[t.key]; if (!v) return;
@@ -249,7 +261,7 @@
     return {l, F, units, tactics:(l.tactics || []).map(n => TACTICS.find(t => t.n === n)).filter(Boolean), formations:f ? [f] : [], tables,
       spells: wizard && lore(l, "spells") ? [lore(l, "spells")] : [], prayers: priest && lore(l, "prayers") ? [lore(l, "prayers")] : [],
       manifs: (wizard || priest) && m ? [m] : [], wizard, priest, holders,
-      count: id => ents.filter(o => o.e.u === id).length};
+      rors: R ? [R] : [], count: id => ents.filter(o => o.e.u === id).length + (rc[id] || 0)};
   }
 
   // ---------- Écran Listes ----------
@@ -380,9 +392,17 @@
         ${n < cap ? `<select data-act="addunit" data-i="${i}" aria-label="Ajouter une unité"><option value="">+ Ajouter une unité</option>${unitOpts}</select>` : ""}</div>`;
       h += `</div></div>`;
     });
-    h += `<button type="button" class="btn wide" data-act="addreg"${l.regiments.length >= MAX_REG ? " disabled" : ""}>+ Ajouter un régiment (${l.regiments.length} / ${MAX_REG})</button>`;
+    h += `<button type="button" class="btn wide" data-act="addreg"${regCount(l) >= MAX_REG ? " disabled" : ""}>+ Ajouter un régiment (${regCount(l)} / ${MAX_REG})</button>`;
     if (!F.hashut) h += `<p class="hint">Les options de régiment propres à chaque héros (warscroll) ne sont pas vérifiées : contrôle-les dans ton tome de bataille.</p>`;
 
+    {
+      const R = rorOf(l), RL = rorFor(F);
+      h += `<div class="panel"><h3 class="sec"><span>Régiment de renom</span><span class="sec-r">${R ? R.pts + " pts" : "0 pts"}</span></h3><div class="body">
+        <div><label class="lbl" for="ror">Régiment de renom (0-1)</label><select id="ror" data-act="ror"${!R && regCount(l) >= MAX_REG ? " disabled" : ""}><option value="">Aucun</option>${optList(RL, l.ror, o => `${o.en} (${o.pts} pts)`)}</select></div>
+        ${R ? `<p class="hint"><b>Unités :</b> ${esc(rorComp(R))}</p>` : ""}
+        <p class="hint">${RL.length} régiments de renom jouables avec ${esc(F.en)}. Il compte comme un régiment (${MAX_REG} maximum, régiment de renom compris) et comme une pose. Ses unités ne peuvent pas être le général ni porter d'amélioration.</p>
+      </div></div>`;
+    }
     if (TERR.length) {
       const tu = terrOf(l);
       h += `<div class="panel"><h3 class="sec"><span>Terrain de faction</span><span class="sec-r">${tu ? (tu.pts ? tu.pts + " pts" : "Gratuit") : "0 pts"}</span></h3><div class="body">
@@ -443,6 +463,7 @@
       if (r.hero) out.push(line(r.hero).replace(/^- /, i === 0 ? "- Général : " : "- "));
       [...(r.cmd || []), ...r.units].forEach(e => out.push(line(e)));
     });
+    if (rorOf(l)) out.push("", `Régiment de renom : ${rorOf(l).en} : ${rorOf(l).pts} pts`, "- " + rorComp(rorOf(l)));
     if (l.aux.length) { out.push("", "Unités auxiliaires"); l.aux.forEach(e => out.push(line(e))); }
     const tac = (l.tactics || []).filter(Boolean);
     if (tac.length) out.push("", "Battle Tactics : " + tac.join(", "));
@@ -479,7 +500,8 @@
       case "addcmd": if (t.value) l.regiments[i].cmd.push({u:t.value, k:newKey()}); break;
       case "addunit": if (t.value) l.regiments[i].units.push({u:t.value, k:newKey()}); break;
       case "addaux": if (t.value) l.aux.push({u:t.value, k:newKey()}); break;
-      case "addreg": if (l.regiments.length < MAX_REG) l.regiments.push({hero:null, cmd:[], units:[]}); break;
+      case "ror": if (t.value) l.ror = t.value; else delete l.ror; break;
+      case "addreg": if (regCount(l) < MAX_REG) l.regiments.push({hero:null, cmd:[], units:[]}); break;
       case "delreg": l.regiments.splice(i, 1); break;
       case "del": { const x = resolve(l, t.dataset.path); if (x.reg) { x.reg.hero = null; x.reg.cmd = []; } else x.arr.splice(x.idx, 1); break; }
       case "reinf": getEntry(l, t.dataset.path).reinf = t.checked; break;
@@ -519,6 +541,7 @@
     if (s.spells.length) g.push({id:"sorts", en:"Sorts"});
     if (s.prayers.length) g.push({id:"prieres", en:"Prières"});
     if (s.manifs.length) g.push({id:"manifestations", en:"Manifestations"});
+    if (s.rors.length) g.push({id:"renom", en:s.l ? "Régiment de renom" : "Régiments de renom"});
     if (s.tactics.length) g.push({id:"tactiques", en:"Battle Tactics"});
     return g;
   }
@@ -536,7 +559,7 @@
          <div class="catsel"><label class="lbl" for="cat-fac">Faction consultée</label><select id="cat-fac">${facOptions(state.cat && FX[state.cat] ? s.F.id : "", "Sélectionner une faction")}</select></div>`;
     if (!s.l && !(state.cat && FX[state.cat])) { $("list").innerHTML = `<p class="hint center">Crée une liste ou choisis une faction pour afficher son catalogue.</p>`; return; }
     const gab = id => id === "sorts" ? s.spells.flatMap(x => x.abs) : id === "prieres" ? s.prayers.flatMap(x => x.abs) : id === "manifestations" ? s.manifs.flatMap(x => x.abs)
-      : id === "tactiques" ? s.tactics.map(t => ({n:t.n})) : s.F.bt.concat(s.formations.flatMap(f => f.abs), s.tables.flatMap(t => t.items.flatMap(x => x.abs)));
+      : id === "tactiques" ? s.tactics.map(t => ({n:t.n})) : id === "renom" ? s.rors.flatMap(r => [{n:r.en}, {n:rorComp(r)}].concat(r.abs)) : s.F.bt.concat(s.formations.flatMap(f => f.abs), s.tables.flatMap(t => t.items.flatMap(x => x.abs)));
     $("memo-banner").insertAdjacentHTML("beforeend", `<input type="search" class="msearch" id="memo-q" placeholder="Rechercher une unité, une aptitude, un mot-clé…" value="${esc(memoQ)}" autocomplete="off">`);
     $("list").innerHTML = groupsFor(s).map(g => tile(s.F, g.id, g.en, true, "", gab(g.id).map(a => a.n))).join("") +
       s.units.map(u => tile(s.F, u.id, u.en, false, s.l && s.count(u.id) > 1 ? "×" + s.count(u.id) : "", u.abilities.map(a => a.n).concat([u.kw]))).join("") +
@@ -562,6 +585,7 @@
     if (id === "sorts") h += loreHtml(s.spells);
     else if (id === "prieres") h += loreHtml(s.prayers);
     else if (id === "manifestations") h += loreHtml(s.manifs);
+    else if (id === "renom") h += s.rors.map(r => `<h3 class="sec"><span>${esc(r.en)}</span><span class="sec-r">${r.pts} pts</span></h3><p class="hint ror-comp"><b>Unités :</b> ${esc(rorComp(r))}</p>${r.abs.length ? `<div class="abilities">${r.abs.map(abCard).join("")}</div>` : `<p class="hint ror-comp">Pas d'aptitude de régiment : les règles sont sur les warscrolls.</p>`}`).join("");
     else if (id === "tactiques") h += sectionHtml(s.l ? "Tes cartes" : "Battle Tactics 2026-27", s.tactics.map(tacticAb));
     else {
       h += sectionHtml("Traits de bataille", s.F.bt);
@@ -580,7 +604,7 @@
     if (st.W) discs.push([st.W,"Prot.","wd"]);
     h += `<div class="statband"><div class="stats" style="--n:${discs.length}">` +
       discs.map(([v,lab,c]) => `<div><div class="disc${c ? " " + c : ""}">${esc(v)}</div><div class="l">${lab}</div></div>`).join("") + `</div>
-      <p class="unit-pts">${u.size} figurine${u.size > 1 ? "s" : ""} · ${u.pts} pts${u.size > 1 && !u.hero ? ` · renforcée : ${u.size * 2} fig., ${u.pts * 2} pts` : ""}${u.aqshy ? " · Fléau d'Aqshy" : ""}</p></div>`;
+      <p class="unit-pts">${u.size} figurine${u.size > 1 ? "s" : ""} · ${u.pts ? u.pts + " pts" : "régiment de renom uniquement"}${u.pts && u.size > 1 && !u.hero ? ` · renforcée : ${u.size * 2} fig., ${u.pts * 2} pts` : ""}${u.aqshy ? " · Fléau d'Aqshy" : ""}</p></div>`;
     h += weaponBlock(u.weapons.filter(w => !isMelee(w)), true);
     h += weaponBlock(u.weapons.filter(isMelee), false);
     h += sectionHtml("Aptitudes", u.abilities);
@@ -603,6 +627,7 @@
     s.spells.forEach(L => L.abs.forEach(a => src.push({who:"Sort · " + L.en, a})));
     s.prayers.forEach(L => L.abs.forEach(a => src.push({who:"Prière · " + L.en, a})));
     s.manifs.forEach(L => L.abs.forEach(a => src.push({who:"Manifestation · " + L.en, a})));
+    if (s.l) s.rors.forEach(r => r.abs.forEach(a => src.push({who:"Régiment de renom · " + r.en, a})));
     s.tactics.forEach(t => src.push({who:"Battle Tactic", a:tacticAb(t)}));
     s.units.forEach(u => { const n = s.l ? s.count(u.id) : 1; u.abilities.forEach(a => src.push({who:u.en + (n > 1 ? " ×" + n : ""), a})); });
     const seen = new Set();
@@ -611,7 +636,8 @@
       : `<a class="banner off" href="#listes"><span>Aucune liste active : toutes les aptitudes de ${esc(F.en)} sont affichées.</span><span class="banner-go">Choisir</span></a>`;
     $("phases").innerHTML = PHASES.map(ph => {
       const items = src.filter(({who, a}) => {
-        if (!(a.when || F.when(a) || []).includes(ph.k)) return false;
+        const w = a.when || F.when(a);
+        if (!(w && w.length ? w : whenOf(a)).includes(ph.k)) return false;
         const key = ph.k + "|" + who + "|" + a.n;
         if (seen.has(key)) return false;
         seen.add(key); return true;
@@ -623,11 +649,11 @@
   }
 
   // ---------- Navigation ----------
-  const GROUPS = {armee:"Règles de l'armée", sorts:"Sorts", prieres:"Prières", manifestations:"Manifestations", tactiques:"Battle Tactics"};
+  const GROUPS = {armee:"Règles de l'armée", sorts:"Sorts", prieres:"Prières", manifestations:"Manifestations", renom:"Régiments de renom", tactiques:"Battle Tactics"};
   function route(){
     const hash = decodeURIComponent(location.hash.slice(1));
     if (hash === "parties" || hash === "" || hash === "accueil" || hash === "installer" || hash === "soutenir" || hash === "regles" || hash.startsWith("regle-")) return;
-    const F = scope().F, unit = UF(F, hash), group = hash in GROUPS;
+    const S = scope(), F = S.F, unit = UF(F, hash) || S.units.find(u => u.id === hash), group = hash in GROUPS;
     let view = "memo";
     if (hash === "listes") view = "lists";
     else if (hash.startsWith("liste-")) { editing = hash.slice(6); view = getList(editing) ? "edit" : "lists"; }

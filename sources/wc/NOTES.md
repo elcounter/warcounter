@@ -9,7 +9,7 @@ Application web installable (PWA), hébergée sur GitHub Pages : https://elcount
 
 ## Version
 
-Version actuelle : **2.9.0** (MAJ 04-11-2026).
+Version actuelle : **2.10.0** (MAJ 04-11-2026).
 Numérotation X.Y.Z :
 - X : très gros changement (décidé par elcounter uniquement)
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
@@ -19,6 +19,7 @@ Numérotation X.Y.Z :
 
 ## Historique
 
+- 2.10.0 (04-11-2026) : régiments de renom (76, Manuel du Général 2025-26 dans BSData). Éditeur de liste : section « Régiment de renom » (0-1, filtrée par faction, compte comme un régiment et une pose, points ajoutés) ; Mémo et Phases : aptitudes et unités du régiment ; Règles : page « Régiments de renom » (Manuel du Général), rubrique dans chaque faction, 9 warscrolls propres (Gotrek, Mask of the Deceiver, Cogforts…) en `#regle-u-rr~<id>`, recherche. Sources : `fac/ror.py` -> `ror_en.json`, traductions `fr_ror.py` (clés `Régiment::Aptitude` ou `Unité::Aptitude` en cas d'homonymes), `convert.py` écrit `ror.json`, injecté par `build.py` dans `window.WC_ROR`. Les armées de renom viendront dans une prochaine version.
 - 2.9.0 (04-11-2026) : Parties, les 2 Battle Tactics du joueur 1 se remplissent automatiquement depuis sa liste WarCounter : au choix de la liste, ou au choix d'une faction qui correspond à une de ses listes (liste active en priorité). Rien n'est rempli en mode « Jouer sans tactiques ».
 - 2.8.1 (04-11-2026) : page Soutenir sans adresse e-mail : bouton vers le lien de paiement PayPal (`PAYPAL_URL` dans `home.js`) et QR code (`sources/wc/paypal-qr.png`, injecté par `build.py`).
 - 2.8.0 (04-11-2026) : page « Soutenir le projet » (`#soutenir`, sans onglet), accessible par le petit bouton « Si tu veux soutenir notre travail » en pied de page. Don facultatif via PayPal (lien de paiement et QR code, conseil « Entre proches »).
@@ -75,7 +76,8 @@ sources/wc/              Atelier de fabrication
     extract.py           python3 extract.py "<Faction>" <slug>  ->  <slug>_en.json
     dump.py              python3 dump.py <slug>  : liste les textes à traduire
     fr_<slug>.py         Traductions : T = {nom: (annonce_fr, effet_fr)}
-    convert.py           Construit factions.json (liste des factions dans __main__)
+    convert.py           Construit factions.json (liste des factions dans __main__), universal.json et ror.json
+    ror.py               Régiments de renom (gst + Regiments of Renown.cat) -> ror_en.json ; traductions fr_ror.py
 sources/bsdata/          Copie des catalogues BSData (age-of-sigmar-4th)
 ```
 

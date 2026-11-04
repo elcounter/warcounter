@@ -125,7 +125,7 @@
   function applyList(l){
     const P = G.players[0];
     P.list = l.id; P.faction = facName(l);
-    P.poses = (l.regiments || []).length + (l.aux || []).length; P.aux = (l.aux || []).length > 0;
+    P.poses = (l.regiments || []).length + (l.aux || []).length + (l.ror ? 1 : 0); P.aux = (l.aux || []).length > 0;
     if (!G.label) G.label = l.name || "";
     if (!G.noTac) {
       const idx = (l.tactics || []).filter(Boolean).map(n => TACTICS.findIndex(t => t.n === n)).filter(i => i >= 0).slice(0, 2);
