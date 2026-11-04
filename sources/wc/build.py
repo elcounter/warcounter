@@ -1,7 +1,7 @@
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs('build-check', exist_ok=True)
-VERSION='2.14.0'
+VERSION='2.14.1'
 MAJ='04-11-2026'
 LEGAL='<span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span>'
 import re, json, base64, glob, os
@@ -141,7 +141,7 @@ top_js='''(function(){
     const h = location.hash.slice(1);
     let app = "army", tab = "memo";
     if (h === "" || h === "accueil") { app = "home"; tab = ""; }
-    else if (h === "installer" || h === "soutenir") { app = "home"; tab = ""; }
+    else if (h === "installer" || h === "soutenir" || h === "avenir" || h === "feedback") { app = "home"; tab = ""; }
     else if (h === "regles" || h.startsWith("regle-")) { app = "home"; tab = "regles"; }
     else if (h === "parties") { app = "bs"; tab = "parties"; }
     else if (h === "listes" || h.startsWith("liste-")) tab = "lists";
@@ -166,7 +166,7 @@ html='''<title>WarCounter</title>
 </div>
 <div id="app-home">
 <header class="bar"><div class="in top"><button class="back" id="home-back" type="button" aria-label="Retour" hidden>'''+BACK+'''</button><h1 id="home-title">WarCounter</h1><span class="menu-hint" id="menu-hint" hidden aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M6 11l6-6 6 6"/></svg><span>App</span></span></div></header>
-<main class="in"><div id="home-view"></div><p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version '''+VERSION+''' · MAJ '''+MAJ+'''<br>'''+LEGAL+'''</p></main>
+<main class="in"><div id="home-view"></div><p class="copy">© 2026 elcounter. Tous droits réservés.<br>WarCounter version '''+VERSION+''' · MAJ '''+MAJ+'''<br>'''+LEGAL+'''</p></main>
 </div>
 <div id="app-bs" hidden>
 '''+bs_body+'''
