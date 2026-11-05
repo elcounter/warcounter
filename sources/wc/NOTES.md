@@ -9,7 +9,7 @@ Application web installable (PWA), hébergée sur GitHub Pages : https://elcount
 
 ## Version
 
-Version actuelle : **2.13.2** (MAJ 04-11-2026).
+Version actuelle : **2.14.9** (MAJ 05-11-2026).
 Numérotation X.Y.Z :
 - X : très gros changement (décidé par elcounter uniquement)
 - Y : changement moyen (nouveau paquet de factions, nouvelle fonction) ; Z repasse à 0
@@ -19,6 +19,8 @@ Numérotation X.Y.Z :
 
 ## Historique
 
+- 2.14.9 (05-11-2026) : unités à 0 pt prises avec une autre (Freeguild Command Corps Auxiliaries et Whisperblade avec les Adjutants, The Shadow Queen avec Morathi-Khaine, compagnons de Callis and Toll, Gunnar Brand, Neave Blacktalon, Ancient Ghyrochs avec Ma Maegran) : options à cocher sur l'entrée parente (`e.comp`), cochées par défaut, une seule entrée dans le régiment ; masquées des menus d'ajout. `extract.py` retrouve le parent (`with`) via les conditions BSData, `convert.py` le convertit en id. Les listes existantes sont migrées automatiquement ; export et import gèrent ces lignes « (0) ». Signalé par un utilisateur.
+- 2.14.0 à 2.14.8 (05-11-2026) : versions publiées hors de cette conversation (retours par mail warcounter@proton.me, page d'accueil, bouton accueil dans Règles, suppression du README) : détail dans l'historique Git.
 - 2.13.2 (04-11-2026) : pied de page « © 2026 elcounter. Tous droits réservés. » (au lieu de « Propriété intellectuelle © 2026 elcounter ») ; fichier `LICENSE` (tous droits réservés) à la racine du dépôt.
 - 2.13.1 (04-11-2026) : unités à 0 pt prises avec leur héros désormais extraites (`extract.py` : entrées liées sans coût, hors jetons sans Contrôle) : The Shadow Queen (Daughters of Khaine), Toll's Companions (Cities of Sigmar), The Oathsworn Kin et Singri Brand (Slaves to Darkness), Neave's Companions et Lorai (Stormcast Eternals). Signalé par un utilisateur.
 - 2.13.0 (04-11-2026) : import d'une liste en texte (écran Listes, panneau « Importer une liste » : champ à coller + bouton « Importer ma liste »). `parseList` dans `army-app.js` lit le format d'export (WarCounter ou app officielle) : nom et points, faction, formation ou armée de renom, domaines, Battle Tactic Cards, régiments, puces General / Reinforced / améliorations, régiment de renom, auxiliaires, terrain de faction. Les lignes non reconnues sont signalées sous le panneau.

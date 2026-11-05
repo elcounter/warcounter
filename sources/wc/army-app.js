@@ -116,6 +116,9 @@
   const FAC_ORDER = Object.values(FX).sort((a, b) => a.en.localeCompare(b.en));
   const fx = l => (l && l.aor && FXA[l.aor] && FXA[l.aor].id === l.fac && FXA[l.aor]) || (l && FX[l.fac]) || FX.hashut;
   const UF = (F, id) => F.units.find(u => u.id === id);
+  // Unités à 0 pt prises avec une autre (Command Corps, Shadow Queen, compagnons…) : options de l'entrée parente
+  const compsOf = (F, u) => u ? F.units.filter(x => x.with === u.id) : [];
+  const withComps = (F, e) => { const c = compsOf(F, UF(F, e.u)); if (c.length) e.comp = c.map(x => x.id); return e; };
 
   // ---------- Stockage local ----------
   const STORE = "warcounter-listes";
@@ -169,10 +172,18 @@
     if (!l.lore) l.lore = {};
     if (l.terrain && !(UF(fx(l), l.terrain) || {}).terrain) delete l.terrain;
     if (l.aor && !(FXA[l.aor] && FXA[l.aor].id === l.fac)) delete l.aor;
+    { // compagnons ajoutés comme unités séparées (avant 2.13.3) : rattachés à leur parent
+      const Fc = fx(l), isC = e => e && (UF(Fc, e.u) || {}).with;
+      const attach = (arr, e) => { const p = arr.find(x => x && x.u === UF(Fc, e.u).with); if (p) { p.comp = p.comp || []; if (!p.comp.includes(e.u)) p.comp.push(e.u); } };
+      l.regiments.forEach(r => { const all = [r.hero, ...(r.cmd || []), ...r.units]; all.filter(isC).forEach(e => attach(all, e)); r.cmd = (r.cmd || []).filter(e => !isC(e)); r.units = r.units.filter(e => !isC(e)); if (isC(r.hero)) r.hero = null; });
+      l.aux.filter(isC).forEach(e => attach(l.aux, e)); l.aux = l.aux.filter(e => !isC(e));
+    }
     { // unités non autorisées (changement d'armée de renom)
       const ok = e => e && UF(fx(l), e.u);
       l.regiments.forEach(r => { if (r.hero && !ok(r.hero)) { r.hero = null; r.cmd = []; } r.cmd = (r.cmd || []).filter(ok); r.units = r.units.filter(ok); });
       l.aux = l.aux.filter(ok);
+      const all = [...l.regiments.flatMap(r => [r.hero, ...(r.cmd || []), ...r.units]), ...l.aux].filter(Boolean);
+      all.forEach(e => { if (e.comp) { const ids = compsOf(fx(l), UF(fx(l), e.u)).map(c => c.id); e.comp = e.comp.filter(c => ids.includes(c)); if (!e.comp.length) delete e.comp; } });
     }
     if (l.formation && !formOf(l)) l.formation = "";
     if (l.ror && !rorFor(fx(l)).some(r => r.id === l.ror)) delete l.ror;
@@ -267,6 +278,7 @@
     const units = ids.map(id => UF(F, id));
     if (terrOf(l) && !ids.includes(l.terrain)) units.push(terrOf(l));
     const R = rorOf(l), rc = {};
+    ents.forEach(o => (o.e.comp || []).forEach(c => { rc[c] = (rc[c] || 0) + 1; if (!units.some(x => x.id === c) && UF(F, c)) units.push(UF(F, c)); }));
     if (R) rorUnits(R).forEach(({u, c}) => { rc[u.id] = (rc[u.id] || 0) + c; if (!units.some(x => x.id === u.id)) units.push(u); });
     const holders = {}, tables = [];
     F.tables.forEach(t => {
@@ -350,6 +362,12 @@
       if (sec === "ror") { const r = findBy(ROR, nm); if (r) l.ror = r.id; else warn.push(nm); continue; }
       const u = findBy(F.units, nm);
       if (!u) { warn.push(nm); last = null; continue; }
+      if (u.with) { // compagnon : option de l'entrée parente
+        const pool = sec === "aux" ? l.aux : (r0 => r0 ? [r0.hero, ...r0.cmd, ...r0.units] : [])(l.regiments[l.regiments.length - 1]);
+        const p = pool.filter(Boolean).reverse().find(x => x.u === u.with);
+        if (p) { p.comp = p.comp || []; if (!p.comp.includes(u.id)) p.comp.push(u.id); } else warn.push(nm);
+        continue;
+      }
       const e = {u:u.id, k:newKey()}; last = e;
       if (sec === "terr") { l.terrain = u.id; continue; }
       if (sec === "aux") { l.aux.push(e); continue; }
@@ -367,7 +385,7 @@
     const {l, warn} = parseList(txt);
     if (!l) { listMsg = "Faction non reconnue : vérifie que la ligne de faction est bien présente (ex. Helsmiths of Hashut)."; renderLists(); $("imp-text").value = txt; return; }
     normalize(l); state.lists.push(l); save();
-    listMsg = `Liste « ${l.name} » importée (${entries(l).length} unités).` + (warn.length ? ` Non reconnu : ${warn.join(", ")}.` : "");
+    listMsg = `Liste « ${l.name} » importée (${entries(l).length} unité${entries(l).length > 1 ? "s" : ""}).` + (warn.length ? ` Non reconnu : ${warn.join(", ")}.` : "");
     renderLists();
   }
   $("lists").addEventListener("change", e => {
@@ -397,6 +415,7 @@
         <div class="ent-meta">${sizeOf(l, e)} fig. · <b>${entryPts(l, e)} pts</b>${tags.map(t => ` <span class="tag gold">${esc(t)}</span>`).join("")}</div></div>
       <button type="button" class="del" data-act="del" data-path="${path}" aria-label="Retirer ${esc(u.en)}">${ICON_X}</button>
       ${canReinf ? `<div class="ent-opts"><label class="check"><input type="checkbox" data-act="reinf" data-path="${path}"${e.reinf ? " checked" : ""}> Renforcée (+${u.pts} pts)</label></div>` : ""}
+      ${compsOf(F, u).map(c => `<div class="ent-opts"><label class="check"><input type="checkbox" data-act="comp" data-path="${path}" data-c="${esc(c.id)}"${(e.comp || []).includes(c.id) ? " checked" : ""}> Avec ${esc(c.en)} (0 pt, même entrée)</label></div>`).join("")}
     </div>`;
   }
 
@@ -406,7 +425,7 @@
     normalize(l);
     const F = fx(l), pts = listPts(l), v = validate(l), pct = Math.min(100, Math.round(pts / l.limit * 100));
     const f = formOf(l), empty = !entries(l).length;
-    const HEROES = F.units.filter(u => u.hero && !u.terrain), TROOPS = F.units.filter(u => !u.hero && !u.terrain), CMDS = F.units.filter(u => u.cmd), TERR = F.units.filter(u => u.terrain);
+    const HEROES = F.units.filter(u => u.hero && !u.terrain && !u.with), TROOPS = F.units.filter(u => !u.hero && !u.terrain && !u.with), CMDS = F.units.filter(u => u.cmd), TERR = F.units.filter(u => u.terrain);
     const unitOpts = F.hashut ? optList(TROOPS, "", unitLabel)
       : `<optgroup label="Unités">${optList(TROOPS, "", unitLabel)}</optgroup><optgroup label="Héros (si l'option de régiment le permet)">${optList(HEROES, "", unitLabel)}</optgroup>`;
     let h = `<div class="panel"><h3 class="sec dark">Liste</h3><div class="body">
@@ -518,6 +537,7 @@
       if (gen) r.push(" • General");
       if (e.reinf) r.push(" • Reinforced");
       enhOn(l, e).forEach(o => r.push(` • ${o.x.en}${o.x.pts ? ` (+${o.x.pts})` : ""}`));
+      (e.comp || []).forEach(c => { const x = UF(F, c); if (x) r.push(`${x.en} (0)`); });
       return r;
     };
     out.push(`${l.name || "Sans nom"} ${listPts(l)}/${l.limit} pts`, "", F.base || F.en);
@@ -567,15 +587,16 @@
       case "formation": l.formation = t.value; break;
       case "lore": l.lore[t.dataset.k] = t.value; break;
       case "terrain": if (t.value) l.terrain = t.value; else delete l.terrain; break;
-      case "sethero": if (t.value) l.regiments[i].hero = {u:t.value, k:newKey()}; break;
-      case "addcmd": if (t.value) l.regiments[i].cmd.push({u:t.value, k:newKey()}); break;
-      case "addunit": if (t.value) l.regiments[i].units.push({u:t.value, k:newKey()}); break;
-      case "addaux": if (t.value) l.aux.push({u:t.value, k:newKey()}); break;
+      case "sethero": if (t.value) l.regiments[i].hero = withComps(fx(l), {u:t.value, k:newKey()}); break;
+      case "addcmd": if (t.value) l.regiments[i].cmd.push(withComps(fx(l), {u:t.value, k:newKey()})); break;
+      case "addunit": if (t.value) l.regiments[i].units.push(withComps(fx(l), {u:t.value, k:newKey()})); break;
+      case "addaux": if (t.value) l.aux.push(withComps(fx(l), {u:t.value, k:newKey()})); break;
       case "ror": if (t.value) l.ror = t.value; else delete l.ror; break;
       case "addreg": if (regCount(l) < MAX_REG) l.regiments.push({hero:null, cmd:[], units:[]}); break;
       case "delreg": l.regiments.splice(i, 1); break;
       case "del": { const x = resolve(l, t.dataset.path); if (x.reg) { x.reg.hero = null; x.reg.cmd = []; } else x.arr.splice(x.idx, 1); break; }
       case "reinf": getEntry(l, t.dataset.path).reinf = t.checked; break;
+      case "comp": { const x = getEntry(l, t.dataset.path), c = t.dataset.c; x.comp = (x.comp || []).filter(y => y !== c); if (t.checked) x.comp.push(c); break; }
       case "enh": { const k = t.dataset.t; if (t.value) l.enh[k] = {id:t.value, on:(l.enh[k] && l.enh[k].on) || ""}; else delete l.enh[k]; break; }
       case "on": if (l.enh[t.dataset.t]) l.enh[t.dataset.t].on = t.value; break;
       case "tactic": { const j = +t.dataset.j; l.tactics[j] = t.value; l.tactics = l.tactics.slice(0, 2).map(x => x || ""); break; }

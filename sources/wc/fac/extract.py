@@ -50,6 +50,14 @@ def extract(fac):
                 for c in m.findall(B+'constraints/'+B+'constraint'):
                     if c.attrib['type']=='min' and c.attrib['scope']=='parent': size+=int(float(c.attrib['value']))
         u={'name':n,'pts':pts.get(n),'size':size or 1,'kw':kws,'stats':{},'weapons':[],'abilities':[]}
+        if not pts.get(n) and not terrain:  # unité à 0 pt prise avec un héros/une unité : retrouver ce parent
+            elids={el.attrib['id']:el.attrib['name'] for el in main.iter(B+'entryLink')}
+            for el in main.iter(B+'entryLink'):
+                if el.attrib.get('name')!=n: continue
+                for c in el.iter(B+'condition'):
+                    pn=elids.get(c.attrib.get('childId'))
+                    if pn and pn!=n: u['with']=pn; break
+                if 'with' in u: break
         if terrain: u['terrain']=True
         seen=set()
         for p in se.iter(B+'profile'):

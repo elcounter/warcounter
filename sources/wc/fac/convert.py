@@ -210,8 +210,14 @@ def convert(slug, name, img):
              'abilities':[ability(a, T) for a in u['abilities']], 'kw':kw_line(u['kw'])}
         if 'HERO' in u['kw']: o['hero'] = True
         if u.get('terrain') or 'FACTION TERRAIN' in u['kw']: o['terrain'] = True
+        if u.get('with'): o['with'] = u['with']
         units.append(o)
     units.sort(key=lambda o: (not o.get('hero'), o['en']))
+    byname = {o['en']: o['id'] for o in units}
+    for o in units:
+        if 'with' in o:
+            if o['with'] in byname: o['with'] = byname[o['with']]
+            else: del o['with']
     secs = []
     for g in d['groups']:
         title = g['title']; key = next((k for k in ORDER if title.startswith(k)), None)
