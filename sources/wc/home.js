@@ -380,7 +380,7 @@
     } else if (h === "avenir") {
       $("home-title").textContent = "À venir";
       $("home-view").innerHTML = roadmapHtml();
- else if (h === "installer") {
+    } else if (h === "installer") {
       $("home-title").textContent = "Installer l'app";
       $("home-view").innerHTML = installHtml();
     } else if (h === "regles") {
