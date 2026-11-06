@@ -94,6 +94,10 @@
 .home-extra{display:flex;flex-direction:column;gap:10px;margin:22px 0 8px;align-items:stretch}
 .home-extra .btn-link{display:block;text-align:center;padding:12px 14px;border:1px solid #d8d8d8;border-radius:10px;background:#fff;color:#6b2119;font:600 14px var(--display);text-decoration:none}
 .home-extra .btn-link:active{background:#f7f2ea}
+.home-extra .nc-btn{display:flex;flex-direction:column;align-items:center;gap:2px;background:#2a2c30;border-color:#5c636c;border-left:4px solid #f0b040;color:#eef1f4}
+.home-extra .nc-btn b{color:#f0b040;font-weight:600}
+.home-extra .nc-btn span{font:400 12px var(--body);color:#a8b0ba}
+.home-extra .nc-btn:active{background:#32363c}
 .fld{display:flex;flex-direction:column;gap:6px;margin:0 0 14px}
 .fld span{font:600 13px var(--display);color:#444}
 .fld select,.fld textarea{font:400 15px var(--body);padding:10px 12px;border:1px solid #ccc;border-radius:8px;background:#fff}

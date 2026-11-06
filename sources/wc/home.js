@@ -255,6 +255,7 @@
         <a class="btn-link" href="mailto:warcounter@proton.me?subject=%5BWarCounter%5D%20Retour">Signaler un bug / Suggestion</a>
         <a class="btn-link" href="#avenir">Fonctionnalités à venir</a>
         <a class="btn-link" href="#soutenir">Si tu veux soutenir le projet</a>
+        <a class="btn-link nc-btn" href="https://elcounter.github.io/necrocounter/" target="_blank" rel="noopener"><b>Découvrir NecroCounter</b><span>Ton compagnon pour Necromunda</span></a>
       </div>`;
   }
   const STANDALONE = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;

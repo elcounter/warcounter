@@ -1,9 +1,9 @@
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs('build-check', exist_ok=True)
-VERSION='2.15.3'
+VERSION='2.15.4'
 MAJ='06-11-2026'
-LEGAL='<span class="legal">Application non officielle, non affiliée à Games Workshop. Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span>'
+LEGAL='<span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span>'
 import re, json, base64, glob, os
 
 def split_rules(css):
@@ -55,6 +55,10 @@ extra='''
 #app-army .lbar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
 #app-army .lbar .btn{flex:1;min-width:120px}
 #app-army .lmsg{margin:0 0 12px;font-size:13px;color:var(--muted)}
+.copy .nc-link{display:inline-flex;flex-direction:column;align-items:center;gap:1px;margin:0 0 8px;padding:6px 16px;border:1px solid #5c636c;border-left:3px solid #f0b040;border-radius:10px;background:#2a2c30;color:#eef1f4;text-decoration:none;line-height:1.25}
+.copy .nc-link b{font-size:13px;color:#f0b040;letter-spacing:.02em}
+.copy .nc-link span{font-size:11px;color:#a8b0ba}
+.copy .nc-link:hover{background:#32363c}
 #app-army .mwar,#app-home .mwar{margin-top:10px;border-top:1px dashed var(--line,#ccc);padding-top:8px}
 #app-army .mwar>summary,#app-home .mwar>summary{cursor:pointer;font-weight:600;font-size:13px;color:var(--accent,#6b2119)}
 #app-army .mwar .statband,#app-home .mwar .statband{margin:8px 0}
@@ -100,7 +104,7 @@ BACK='<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="curren
 bs_shell=open('shells/partie-shell.html').read()
 bs_body=bs_shell[bs_shell.index('</style>')+8:bs_shell.index('<script>')]
 bs_body=bs_body.replace('id="back"','id="bs-back"').replace('<h1 id="title">Feuille de Bataille</h1>','<h1 id="bs-title">Feuille de Bataille</h1>')
-bs_body=bs_body.replace('<main class="in"><div class="stack" id="view"></div></main>','<main class="in"><div class="stack" id="view"></div><p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version '+VERSION+' · MAJ '+MAJ+'<br>'+LEGAL+'</p></main>')
+bs_body=bs_body.replace('<main class="in"><div class="stack" id="view"></div></main>','<main class="in"><div class="stack" id="view"></div><p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br><a class="nc-link" href="https://elcounter.github.io/necrocounter/" target="_blank" rel="noopener"><b>Découvrir NecroCounter</b><span>Ton compagnon pour Necromunda</span></a><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version '+VERSION+' · MAJ '+MAJ+'<br>'+LEGAL+'</p></main>')
 bs_body=bs_body.replace('<button class="icon-btn" id="bp-info"',HOME_A+'<button class="icon-btn" id="bp-info"')
 assert 'id="bs-title"' in bs_body and 'class="copy"' in bs_body
 
@@ -117,7 +121,7 @@ army_body='''<header class="bar">
   <section id="view-memo"><div id="memo-banner"></div><div class="list" id="list"></div></section>
   <section id="view-unit" hidden><div class="sheet" id="unit"></div></section>
   <section id="view-phases" hidden><div id="phase-banner"></div><div class="phases" id="phases"></div></section>
-  <p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version '''+VERSION+''' · MAJ '''+MAJ+'''<br>'''+LEGAL+'''</p>
+  <p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br><a class="nc-link" href="https://elcounter.github.io/necrocounter/" target="_blank" rel="noopener"><b>Découvrir NecroCounter</b><span>Ton compagnon pour Necromunda</span></a><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version '''+VERSION+''' · MAJ '''+MAJ+'''<br>'''+LEGAL+'''</p>
 </main>'''
 
 nav='''<nav class="bnav" aria-label="Navigation principale"><div class="in">
