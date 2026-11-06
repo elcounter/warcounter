@@ -2331,5 +2331,831 @@
     "cost": ""
    }
   ]
+ },
+ {
+  "name": "Cadaverous Barricade",
+  "src": "Flesh-eater Courts - Library.cat",
+  "kw": [
+   "DEATH",
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLESH-EATER COURTS"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "10",
+   "Save": "5+",
+   "Banishment": "8+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Grasping Hands",
+    "kind": "Ability (Passive)",
+    "color": "Gray",
+    "timing": "",
+    "declare": "",
+    "effect": "Enemy units cannot use **^^Run^^** or **^^Retreat^^** abilities while they are within this **^^Manifestation^^**'s combat range. In addition, if an enemy unit is picked to use a **^^Move^^** ability while it is within this **^^Manifestation^^**'s combat range, halve that unit's Move characteristic (rounding up) for the rest of the turn.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Chalice of Ushoran",
+  "src": "Flesh-eater Courts - Library.cat",
+  "kw": [
+   "DEATH",
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "FLESH-EATER COURTS"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "6",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Overflowing Gore",
+    "kind": "Ability (Activated)",
+    "color": "Red",
+    "timing": "Any Combat Phase",
+    "declare": "Pick an enemy unit within 6\" of this **^^Manifestation^^** to be the target.",
+    "effect": "Roll a dice. On a 3+, your opponent must pick 1 of the following effects to apply for the rest of the turn:\n***Drink Deep from the Chalice:*** Other than the **Companion** weapon ability, weapon abilities for attacks made by the target have no effect.\n***Turn aside and Suffer the Consequences:*** Combat attacks that target that enemy unit score critical hits on unmodified hit rolls of 5+.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Corpsemare Stampede",
+  "src": "Flesh-eater Courts - Library.cat",
+  "kw": [
+   "DEATH",
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "FLESH-EATER COURTS"
+  ],
+  "stats": {
+   "Move": "12\"",
+   "Health": "10",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "6",
+    "Hit": "5+",
+    "Wnd": "3+",
+    "Rnd": "1",
+    "Dmg": "1",
+    "Ability": "Crit (2 Hits)",
+    "name": "Corpsemare Trample",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Trampled Underfoot",
+    "kind": "Ability (Activated)",
+    "color": "Orange",
+    "timing": "Your Charge Phase",
+    "declare": "This **^^Manifestation^^** can use this ability even if it is in combat.\nPick a point on a battlefield edge to be the target. Then, make a stampede roll of 2D6. Add 1D6 to the roll for each battle round that this **^^Manifestation^^** has been on the battlefield and has not been banished. For example, the stampede roll would be 2D6 in the turn it which it was summoned, 3D6 in your next turn, and so on.",
+    "effect": "This **^^Manifestation^^** can move a distance up to the value of the stampede roll in a straight line directly towards the target. It can move through the combat ranges of enemy units. It cannot end that move in combat unless it ends that move within 1/2\" of a visible enemy unit. If it does so, this  **^^Manifestation^^** has charged.\nRoll a D3 for each enemy unit that this **^^Manifestation^^** passed across during that move. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.\nIn addition, if this **^^Manifestation^^** charged this turn, add the value of the stampede roll to the Attacks characteristic of this **^^Manifestation^^**'s **Corpsemare Trample** for the rest of the turn.",
+    "keywords": "**^^Core^^**, **^^Move^^**, **^^Charge^^**",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Vault of Souls",
+  "src": "Nighthaunt - Library.cat",
+  "kw": [
+   "DEATH",
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "NIGHTHAUNT"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "6",
+   "Save": "4+",
+   "Banishment": "8+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Siphon Souls",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "Each time a model from a friendly or enemy unit is slain within 12\" of this **^^Manifestation^^**, give this **^^Manifestation^^** a **soul point**, to a maximum of 6.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Soul Eruption",
+    "kind": "Ability (Activated)",
+    "color": "Purple",
+    "timing": "End of Any Turn",
+    "declare": "If this **^^Manifestation^^** has 6 **soul points**, pick any number of enemy units within 6\" of this unit to be the targets.",
+    "effect": "Roll 6 dice for each target. For each 4+, inflict 1 mortal damage on the target. Then, reset this **^^Manifestation^^**'s **soul points** to 0.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Shyish Reaper",
+  "src": "Nighthaunt - Library.cat",
+  "kw": [
+   "DEATH",
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "NIGHTHAUNT"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "7",
+   "Save": "4+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "1",
+    "Hit": "3+",
+    "Wnd": "2+",
+    "Rnd": "2",
+    "Dmg": "4",
+    "Ability": "Crit (Auto-wound)",
+    "name": "Almighty Reap",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Soulreaper",
+    "kind": "Ability (Passive)",
+    "color": "Green",
+    "timing": "",
+    "declare": "",
+    "effect": "Add 2 to the Attacks characteristic of this **^^Manifestation^^**'s **Almighty Reap** if it charged in the same turn.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Mortalis Terminexus",
+  "src": "Nighthaunt - Library.cat",
+  "kw": [
+   "DEATH",
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "NIGHTHAUNT"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "6",
+   "Save": "4+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Keeper of Mortality",
+    "kind": "Ability (Activated)",
+    "color": "Yellow",
+    "timing": "Your Hero Phase",
+    "declare": "Pick a visible friendly **^^Nighthaunt^^** unit within 3\" of this **^^Manifestation^^** to be the target.",
+    "effect": "Roll a dice. On a 2+, pick 1 of the following effects:\n• Add 1 to run rolls and charge rolls for the target for the rest of the turn.\n• **Heal (3)** the target.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Soulstealer Carrion",
+  "src": "Ossiarch Bonereapers - Library.cat",
+  "kw": [
+   "DEATH",
+   "WARD (6+)",
+   "OSSIARCH BONEREAPERS",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY"
+  ],
+  "stats": {
+   "Move": "10\"",
+   "Health": "7",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "6",
+    "Hit": "4+",
+    "Wnd": "2+",
+    "Rnd": "1",
+    "Dmg": "D3",
+    "Ability": "-",
+    "name": "Spectral Claws and Beak",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Aviarch Sentry",
+    "kind": "Ability (Passive)",
+    "color": "Purple",
+    "timing": "",
+    "declare": "",
+    "effect": "Subtract 10 from the control scores of enemy units while they are within 6\" of this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Nightmare Predator",
+  "src": "Ossiarch Bonereapers - Library.cat",
+  "kw": [
+   "DEATH",
+   "WARD (6+)",
+   "OSSIARCH BONEREAPERS",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "7",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "6",
+    "Hit": "4+",
+    "Wnd": "2+",
+    "Rnd": "2",
+    "Dmg": "2",
+    "Ability": "-",
+    "name": "Lacerating Claws",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Death Incarnate",
+    "kind": "Ability (Activated)",
+    "color": "Purple",
+    "timing": "End of Any Turn",
+    "declare": "",
+    "effect": "If this ^^**Manifestation^^** was destroyed or banished this turn and the unit that summoned it is on the battlefield, roll a dice. On a 4+, set up this **^^Manifestation^^** again, wholly within 12\" of the unit that summoned it and more than 9\" from all enemy units. That unit has summoned that **^^Manifestation^^**. Add 1 to the roll if any enemy models were slain by this **^^Manifestation^^**'s combat attacks this turn.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Bone-tithe Shrieker",
+  "src": "Ossiarch Bonereapers - Library.cat",
+  "kw": [
+   "DEATH",
+   "WARD (6+)",
+   "OSSIARCH BONEREAPERS",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "7",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "4",
+    "Hit": "3+",
+    "Wnd": "4+",
+    "Rnd": "1",
+    "Dmg": "D3",
+    "Ability": "-",
+    "name": "Soul-rending Shriek",
+    "kind": "Melee Weapon"
+   },
+   {
+    "Rng": "12\"",
+    "Atk": "4",
+    "Hit": "3+",
+    "Wnd": "4+",
+    "Rnd": "1",
+    "Dmg": "D3",
+    "Ability": "Shoot in Combat",
+    "name": "Soul-rending Shriek",
+    "kind": "Ranged Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "No Escape",
+    "kind": "Ability (Passive)",
+    "color": "Red",
+    "timing": "",
+    "declare": "",
+    "effect": "Subtract 1 from ward rolls for enemy units while they are within 12\" of this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Unholy Reliquary",
+  "src": "Soulblight Gravelords - Library.cat",
+  "kw": [
+   "DEATH",
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "SOULBLIGHT GRAVELORDS"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "8",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Draw on Power",
+    "kind": "Ability (Activated)",
+    "color": "Red",
+    "timing": "Any Combat Phase",
+    "declare": "Pick a friendly **^^Soulblight Gravelords Hero^^** wholly within 12\" of this **^^Manifestation^^** to be the target.",
+    "effect": "Pick 1 of the following:\n• **Heal (D3)** the target.\n• Add 1 to the Attacks characteristic of the target's melee weapons for the rest of the turn. Then, this **^^Manifestation^^** is banished and removed from play.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Sanguine Swarm",
+  "src": "Soulblight Gravelords - Library.cat",
+  "kw": [
+   "DEATH",
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "SOULBLIGHT GRAVELORDS"
+  ],
+  "stats": {
+   "Move": "12\"",
+   "Health": "6",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "10",
+    "Hit": "5+",
+    "Wnd": "5+",
+    "Rnd": "-",
+    "Dmg": "1",
+    "Ability": "Crit (Mortal)",
+    "name": "Leeching Bites",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Leeching Bites",
+    "kind": "Ability (Passive)",
+    "color": "Green",
+    "timing": "",
+    "declare": "",
+    "effect": "Each time an attack made by this **^^Manifestation^^** scores a critical hit, **Heal (1)** this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Multiple Parts",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "When a number of damage points equal to this **^^Manifestation^^**'s Health characteristic are allocated to it, this **^^Manifestation^^** is destroyed and both its parts are removed from play.\nEach time this **^^Manifestation^^** moves, both its parts must end within 9\" of each other.\nEach part of this **^^Manifestation^^** is armed with **Leeching Bites**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Hand of Nagash",
+  "src": "Soulblight Gravelords - Library.cat",
+  "kw": [
+   "DEATH",
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "SOULBLIGHT GRAVELORDS"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "10",
+   "Save": "5+",
+   "Banishment": "8+"
+  },
+  "weapons": [
+   {
+    "Atk": "5",
+    "Hit": "4+",
+    "Wnd": "2+",
+    "Rnd": "1",
+    "Dmg": "2",
+    "Ability": "Crit (Mortal)",
+    "name": "Grasping Talon",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Chill Grasp",
+    "kind": "Ability (Activated)",
+    "color": "Red",
+    "timing": "Any Combat Phase",
+    "declare": "Pick an enemy unit in combat with this **^^Manifestation^^** to be the target.",
+    "effect": "Roll a dice. On a 4+, the following effects apply until the start of your next turn:\n• While the target is within 3\" of this **^^Manifestation^^**, the target has a maximum control score of 1 that cannot be modified.\n• While the target is within 3\" of this **^^Manifestation^^**, the target cannot use **^^Move^^** abilities.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Inescapable Reach",
+    "kind": "Ability (Activated)",
+    "color": "Grey",
+    "timing": "Your Movement Phase",
+    "declare": "This **^^Manifestation^^** can only use this ability if it has not been set up this turn.",
+    "effect": "Remove this **^^Manifestation^^** from the battlefield and set it up anywhere on the battlefield more than 9\" from all enemy units. Then, roll a D3. On a 2+, this **^^Manifestation^^** can move a number of inches equal to the roll.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Scuttletide",
+  "src": "Gloomspite Gitz - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "DESTRUCTION",
+   "GLOOMSPITE GITZ"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "6",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "8",
+    "Hit": "4+",
+    "Wnd": "4+",
+    "Rnd": "-",
+    "Dmg": "1",
+    "Ability": "Crit (Mortal)",
+    "name": "Spider Bites",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Endless Terrors",
+    "kind": "Ability (Passive)",
+    "color": "Green",
+    "timing": "",
+    "declare": "",
+    "effect": "This unit has **^^Ward (4+)^^** while it is wholly within 12\" of any friendly **^^Arachnarok^^** units.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Wall Crawler",
+    "kind": "Ability (Passive)",
+    "color": "Gray",
+    "timing": "",
+    "declare": "",
+    "effect": "This **^^Manifestation^^** can pass across terrain features as if it had **^^Fly^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Mork's Mighty Mushroom",
+  "src": "Gloomspite Gitz - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "DESTRUCTION",
+   "GLOOMSPITE GITZ"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "6",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Mutating Spores",
+    "kind": "Ability (Activated)",
+    "color": "Blue",
+    "timing": "Any Shooting Phase",
+    "declare": "Pick up to 3 enemy units within 6\" of this **^^Manifestation^^** to be the targets.",
+    "effect": "For each target, roll a number of dice equal to the number of models in that unit that are within 6\" of this **^^Manifestation^^**. For each 5+, inflict 1 mortal damage on the target.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Malevolent Moon",
+  "src": "Gloomspite Gitz - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "DESTRUCTION",
+   "GLOOMSPITE GITZ",
+   "FLY"
+  ],
+  "stats": {
+   "Move": "12\"",
+   "Health": "6",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "1",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "-",
+    "Dmg": "D3",
+    "Ability": "-",
+    "name": "Lunarock Slam",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Lurid Light",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "While friendly **^^Gloomspite Gitz^^** units are wholly within 12\" of this **^^Manifestation^^** they are affected by all four faces of the Bad Moon (Grinnin', Scowlin', Sulkin', and Cacklin').",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Scrapskuttle's Arachnacauldron",
+  "src": "Gloomspite Gitz - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "DESTRUCTION",
+   "GLOOMSPITE GITZ"
+  ],
+  "stats": {
+   "Move": "6\"",
+   "Health": "6",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "2",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "-",
+    "Dmg": "2",
+    "Ability": "-",
+    "name": "Spider Legs",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Blessings of the Cauldron",
+    "kind": "Ability (Activated)",
+    "color": "Yellow",
+    "timing": "Your Hero Phase",
+    "declare": "Pick a friendly **^^Gloomspite Gitz Wizard^^** within 1\" of this **^^Manifestation^^** to be the target.",
+    "effect": "Add 1 to the target's power level until the start of your next turn.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Foot of Gork",
+  "src": "Orruk Warclans - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "IRONJAWZ",
+   "KRULEBOYZ",
+   "DESTRUCTION"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "8",
+   "Save": "4+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Wandering Destruction",
+    "kind": "Ability (Activated)",
+    "color": "Gray",
+    "timing": "Once Per Turn, Your Movement Phase",
+    "declare": "Pick a part of this **^^Manifestation^^** to be the target.",
+    "effect": "Remove the target from the battlefield and set it up again on the battlefield wholly within 9\" of the other part of this **^^Manifestation^^**.\n Then, roll a D3 for each enemy unit within 3\" of the target. On a 2+:\n• Inflict an amount of mortal damage on that unit equal to the roll.\n• That unit has the **^^Stomped^^** keyword until the start of your next turn.\n• Subtract 1 from the number of dice rolled when making charge rolls for **^^Stomped^^** units, to a minimum of 1.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Multiple Parts",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "When a number of damage points equal to this **^^Manifestation^^**'s Health characteristic are allocated to it, this **^^Manifestation^^** is destroyed and all its parts are removed from play.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Gork-Roara",
+  "src": "Orruk Warclans - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "IRONJAWZ",
+   "KRULEBOYZ"
+  ],
+  "stats": {
+   "Move": "6\"",
+   "Health": "6",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "5",
+    "Hit": "2+",
+    "Wnd": "4+",
+    "Rnd": "1",
+    "Dmg": "D3",
+    "Ability": "-",
+    "name": "Toxic Gas",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Bellowing Waaagh!-Cries",
+    "kind": "Ability (Activated)",
+    "color": "Yellow",
+    "timing": "Your Hero Phase",
+    "declare": "Pick a friendly **^^Ironjawz^^** or **^^Kruleboyz Wizard^^** or **^^Priest^^** within 3\" of this **^^Manifestation^^**  to be the target.",
+    "effect": "Pick either 1 or 2 to add to casting rolls or chanting rolls for the target until the start of your next turn. Then, roll a number of dice equal to the number picked. For each 1-2, allocate 1 damage point to the target (ward rolls cannot be made for those damage points). For each 5+, until the start of your next turn, add 1 to charge rolls for friendly **^^Kruleboyz^^** or **^^Ironjawz^^** units while they are wholly within 12\" of this **^^Manifestation^^**. Friendly units can be affected by this ability multiple times and the effects are cumulative.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Morkspit Marsh",
+  "src": "Orruk Warclans - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "IRONJAWZ",
+   "KRULEBOYZ",
+   "DESTRUCTION"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "8",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Tricksy Footing",
+    "kind": "Ability (Passive)",
+    "color": "Yellow",
+    "timing": "",
+    "declare": "",
+    "effect": "Subtract 3 from the control score of enemy units while they are within 6\" of this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Grasping Gunge",
+    "kind": "Ability (Passive)",
+    "color": "Gray",
+    "timing": "",
+    "declare": "",
+    "effect": "Enemy units cannot use **^^Run^^** abilities while they are within 6\" of this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
  }
 ]
