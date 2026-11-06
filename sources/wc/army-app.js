@@ -245,9 +245,21 @@
   }
 
   // ---------- Rendu commun ----------
+  // Warscrolls de manifestations, affichés sous leur sort d'invocation
+  const MANIF = window.WC_MANIF || {};
+  const manifOf = a => { if (!/^Summon /.test((a && a.n) || "")) return null; const n = a.n.slice(7); return MANIF[n] || MANIF["The " + n] || null; };
+  function mSheet(m){
+    const st = m.stats, d = [[st.M,"Mouv."],[st.S,"Santé"],[st.Sv,"Sauv.","sv"],[st.B,"Bann."]];
+    if (st.W) d.push([st.W,"Prot.","wd"]);
+    return `<div class="statband"><div class="stats" style="--n:${d.length}">${d.map(([v,l,c]) => `<div><div class="disc${c ? " " + c : ""}">${esc(v)}</div><div class="l">${l}</div></div>`).join("")}</div></div>`
+      + weaponBlock(m.weapons.filter(w => w.range !== "Mêlée"), true) + weaponBlock(m.weapons.filter(w => w.range === "Mêlée"), false)
+      + (m.abilities.length ? `<div class="abilities">${m.abilities.map(abCard).join("")}</div>` : "")
+      + `<div class="kw">Mots-clés : <b>${esc(m.kw)}</b></div>`;
+  }
+  const mWar = a => { const m = manifOf(a); return m ? `<details class="mwar"><summary>Warscroll : ${esc(m.en)}</summary>${mSheet(m)}</details>` : ""; };
   function abCard(a){
     return `<div class="ab" style="--c:${PHASE[a.c] || PHASE.passive}"><div class="ab-head"><span>${esc(a.t)}</span>${a.cast ? `<span class="cast" aria-label="Valeur de lancement ${a.cast}">${a.cast}</span>` : ""}${a.chant ? `<span class="chant" aria-label="Valeur de récitation ${a.chant}"><span>${a.chant}</span></span>` : ""}${a.cost ? `<span class="cost">${esc(a.cost)}</span>` : ""}</div>
-        <div class="ab-name">${esc(a.n)}</div><div class="ab-body">${a.x.map(p => `<p>${esc(p)}</p>`).join("")}</div></div>`;
+        <div class="ab-name">${esc(a.n)}</div><div class="ab-body">${a.x.map(p => `<p>${esc(p)}</p>`).join("")}</div>${mWar(a)}</div>`;
   }
   function weaponBlock(list, ranged){
     if (!list.length) return "";

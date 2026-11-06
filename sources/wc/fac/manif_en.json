@@ -1,0 +1,841 @@
+[
+ {
+  "name": "Krondspine Incarnate of Ghur",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "WARD (6+)",
+   "FLY",
+   "INCARNATE"
+  ],
+  "stats": {
+   "Move": "10\"",
+   "Health": "12",
+   "Save": "6+",
+   "Banishment": "8+"
+  },
+  "weapons": [
+   {
+    "Atk": "6",
+    "Hit": "4+",
+    "Wnd": "2+",
+    "Rnd": "2",
+    "Dmg": "3",
+    "Ability": "Anti-**^^Manifestation^^**(+1 Rend)",
+    "name": "Amberbone Claws and Fangs",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Devourer of Magics",
+    "kind": "Ability (Activated)",
+    "color": "Purple",
+    "timing": "End of Any Turn",
+    "declare": "",
+    "effect": "If this **^^Manifestation^^** destroyed any enemy **^^Manifestations^^** this turn, Heal (6) this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Arcane Predator",
+    "kind": "Ability (Passive)",
+    "color": "Orange",
+    "timing": "",
+    "declare": "",
+    "effect": "You can add 1 to the number of dice rolled when making charge rolls for this **^^Manifestation^^**, to a maximum of 3, while it is within 18\" of any enemy **^^Manifestations^^**, but if you do so, it must end the charge move within 1/2\" of an enemy **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Wild Form",
+    "kind": "Ability (Passive)",
+    "color": "Green",
+    "timing": "",
+    "declare": "",
+    "effect": "Each time this **^^Manifestation^^** is targeted by the 'Banish Manifestation' ability, if it would be banished, it is not banished. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points).",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Purple Sun of Shyish",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "10",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "2D6",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "1",
+    "Dmg": "1",
+    "Ability": "Crit (Mortal)",
+    "name": "Transmuting Rays",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "End Given Form",
+    "kind": "Ability (Activated)",
+    "color": "Gray",
+    "timing": "Your Movement Phase",
+    "declare": "",
+    "effect": "This **^^Manifestation^^** can move a distance up to its Move characteristic. It can pass through models during that move but cannot end that move in combat. Then, pick up to 3 enemy units that this **^^Manifestation^^** passed across during that move to be the targets. Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+    "keywords": "**^^Core^^**, **^^Move^^**",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Pull of the Nadir",
+    "kind": "Ability (Passive)",
+    "color": "Red",
+    "timing": "",
+    "declare": "",
+    "effect": "Subtract 1 from save rolls for friendly and enemy units while they are within 3\" of this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Soulsnare Shackles",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "6",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Bound for the Great Oubliette",
+    "kind": "Ability (Activated)",
+    "color": "Yellow",
+    "timing": "Any Hero Phase",
+    "declare": "For each part of this **^^Manifestation^^**, you can pick an enemy unit within 3\" of that part to be the targets. You cannot pick the same unit to be the target of this ability more than once per turn.",
+    "effect": "Roll a D3 for each target. On a 2+:\n• Inflict an amount of mortal damage on the target equal to the roll.\n• Subtract a number of inches equal to the roll from the target's Move characteristic for the rest of the turn.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Multiple Parts",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "When a number of damage points equal to this **^^Manifestation^^**'s Health characteristic are allocated to it, this **^^Manifestation^^** is destroyed and all its parts are removed from play.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Soulscream Bridge",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "12",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Deathly Passage",
+    "kind": "Ability (Activated)",
+    "color": "Gray",
+    "timing": "Your Movement Phase",
+    "declare": "Pick a friendly unit wholly within 6\" of one part of this **^^Manifestation^^** to be the target.",
+    "effect": "Remove the target from the battlefield and set it up again on the battlefield wholly within 6\" of the other part of this **^^Manifestation^^** and more than 9\" from all enemy units.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Multiple Parts",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "When a number of damage points equal to this **^^Manifestation^^**'s Health characteristic are allocated to it, this **^^Manifestation^^** is destroyed and both its parts are removed from play.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Aethervoid Pendulum",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "6",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Scything Blade",
+    "kind": "Ability (Activated)",
+    "color": "Gray",
+    "timing": "Any Movement Phase",
+    "declare": "",
+    "effect": "This **^^Manifestation^^** can move a distance up to its Move characteristic in one direction (see 'The Pendulum Swings'). It can pass through models during that move and can end that move in combat. Then, pick up to 3 enemy units that this **^^Manifestation^^** passed across during that move or that are within 1/2\" of it to be the targets. Roll a D6 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+    "keywords": "**^^Core^^**, **^^Move^^**",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "The Pendulum Swings",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "This **^^Manifestation^^** cannot use **^^Charge^^** or **^^Fight^^** abilities. In addition, when this **^^Manifestation^^** moves, it must move in a straight line either in the direction in which the tip of the pendulum blade is pointing or in the opposite direction to the direction in which the tip of the pendulum blade is pointing",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Chronomantic Cogs",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "6",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Mechanisms of Time",
+    "kind": "Ability (Activated)",
+    "color": "Yellow",
+    "timing": "Once Per Turn, Your Hero Phase",
+    "declare": "",
+    "effect": "If there are any friendly **^^Wizards^^** within 3\" of this **^^Manifestation^^**, pick 1 of the following effects:\n***Increase Time Flow***: Until the start of your next turn, you can re-roll charge rolls for friendly units while they are wholly within 12\" of this **^^Manifestation^^**.\n***Decrease Time Flow***: Until the start of your next turn, subtract 1 from hit rolls for attacks that target friendly **^^Wizards^^** while they are wholly within 12\" of this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "The Burning Head",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "6",
+   "Save": "6+",
+   "Banishment": "6+"
+  },
+  "weapons": [
+   {
+    "Rng": "10\"",
+    "Atk": "D6",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "2",
+    "Dmg": "1",
+    "Ability": "Shoot in Combat, Anti-**^^WAR MACHINE^^** (+1 Rend)",
+    "name": "Burning Breath",
+    "kind": "Ranged Weapon"
+   },
+   {
+    "Atk": "2D6",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "2",
+    "Dmg": "1",
+    "Ability": "Anti-**^^WAR MACHINE^^** (+1 Rend)",
+    "name": "Flaming Maw",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Burning Up",
+    "kind": "Ability (Passive)",
+    "color": "Blue",
+    "timing": "",
+    "declare": "",
+    "effect": "Each time this **^^Manifestation^^** uses a **^^Shoot^^** ability, after that ability has been resolved, allocate 1 damage point to this **^^Manifestation^^** (ward rolls cannot be made for that damage point).",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Horrorghast",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "6",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Rng": "10\"",
+    "Atk": "6",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "2",
+    "Dmg": "1",
+    "Ability": "Shoot in Combat, Anti-**^^INFANTRY^^** (+1 Rend)",
+    "name": "Scream of Terror",
+    "kind": "Ranged Weapon"
+   },
+   {
+    "Atk": "4",
+    "Hit": "4+",
+    "Wnd": "4+",
+    "Rnd": "-",
+    "Dmg": "1",
+    "Ability": "-",
+    "name": "Deathly Touch",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Harbinger of Horror",
+    "kind": "Ability (Activated)",
+    "color": "Blue",
+    "timing": "Any Shooting Phase",
+    "declare": "Pick an enemy unit that was targeted by this **^^Manifestation^^**'s shooting attacks this phase to be the target.",
+    "effect": "Roll a dice. If the roll is less than the number of models in the target unit that were slain this phase, the target cannot use commands for the rest of the turn.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Malevolent Maelstrom",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "6",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "2D6",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "-",
+    "Dmg": "1",
+    "Ability": "Crit (2 Hits)",
+    "name": "Lashing Tendrils of Energy",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Morbid Detonation",
+    "kind": "Ability (Activated)",
+    "color": "Purple",
+    "timing": "End of Any Turn",
+    "declare": "You must, and can only, use this ability if this unit has 6 **maelstrom points**. Pick each unit (friendly and enemy) within 9\" of it to be the targets.",
+    "effect": "Roll a dice for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Then, this **^^Manifestation^^** is destroyed.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Necrotic Vortex",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "Give this **^^Manifestation^^** 1 **maelstrom point** each time:\n• This **^^Manifestation^^** is set up.\n• A unit successfully casts a spell while it is within 12\" of this **^^Manifestation^^**.\n• A model is slain within 12\" of this **^^Manifestation^^**.\nThis **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Shards of Valagharr",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "8",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Phantasmal Translocation",
+    "kind": "Ability (Activated)",
+    "color": "Gray",
+    "timing": "Your Movement Phase",
+    "declare": "",
+    "effect": "Pick a part of this **^^Manifestation^^**, remove it from the battlefield and set it up again on the battlefield wholly within 9\" of the other part and more than 3\" from all enemy units.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Multiple Parts",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "When a number of damage points equal to this **^^Manifestation^^**'s Health characteristic are allocated to it, this **^^Manifestation^^** is destroyed and both its parts are removed from play.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Ensnaring Soul-drain",
+    "kind": "Ability (Passive)",
+    "color": "Gray",
+    "timing": "",
+    "declare": "",
+    "effect": "Each time an enemy unit uses a **^^Move^^** ability while it is within 9\" of any parts of this Manifestation, the effects of the 'Fly' ability do not apply to that unit. Enemy units cannot be set up within 9\" of either part of this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Lauchon the Soulseeker",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY"
+  ],
+  "stats": {
+   "Move": "12\"",
+   "Health": "10",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "3",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "1",
+    "Dmg": "D3",
+    "Ability": "Crit (2 Hits)",
+    "name": "Scything Oar",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Traverse the Tides of Death",
+    "kind": "Ability (Activated)",
+    "color": "Gray",
+    "timing": "Your Movement Phase",
+    "declare": "Pick a friendly **^^Infantry Wizard Hero^^** within 3\" of this **^^Manifestation^^** to be the target",
+    "effect": "This **^^Manifestation^^** can move a distance up to its Move characteristic. It can pass through models during that move but cannot end that move in combat. Then, remove the target from the battlefield and set them up again on the battlefield within 3\" of this **^^Manifestation^^** and not in combat. Then, inflict 1 mortal damage on the target.",
+    "keywords": "**^^Core^^**, **^^Move**^^",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Quicksilver Swords",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "6",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "12",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "1",
+    "Dmg": "1",
+    "Ability": "Crit (Mortal)",
+    "name": "Quicksilver Blades",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Dancing Blades",
+    "kind": "Ability (Passive)",
+    "color": "Red",
+    "timing": "",
+    "declare": "",
+    "effect": "Ward rolls cannot be made for damage points inflicted by this **^^Manifestation^^**'s attacks.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Emerald Lifeswarm",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "5",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "2D6",
+    "Hit": "4+",
+    "Wnd": "4+",
+    "Rnd": "-",
+    "Dmg": "1",
+    "Ability": "Anti-**^^Infantry^^** (+1 Rend)",
+    "name": "Swarming Bites",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Restored Vigour",
+    "kind": "Ability (Activated)",
+    "color": "Purple",
+    "timing": "End of Any Turn",
+    "declare": "",
+    "effect": "**Heal (3)** this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Bounteous Healing",
+    "kind": "Ability (Activated)",
+    "color": "Gray",
+    "timing": "Your Movement Phase",
+    "declare": "Pick a friendly unit within 3\" of this **^^Manifestation^^** to be the target.",
+    "effect": "**Heal (3)** the target.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Ravenak's Gnashing Jaws",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL"
+  ],
+  "stats": {
+   "Move": "3D6\"",
+   "Health": "10",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "10",
+    "Hit": "4+",
+    "Wnd": "2+",
+    "Rnd": "1",
+    "Dmg": "1",
+    "Ability": "Charge (+1 Damage)",
+    "name": "Gnashing Jaws",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Ravening Hunger",
+    "kind": "Ability (Activated)",
+    "color": "Orange",
+    "timing": "Any Charge Phase",
+    "declare": "If this **^^Manifestation^^** charged this turn, pick an enemy unit within 1\" of it to be the target.",
+    "effect": "Roll 10 dice. For each 5+, inflict 1 mortal damage on the target.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Suffocating Gravetide",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY"
+  ],
+  "stats": {
+   "Move": "12\"",
+   "Health": "8",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "8",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "1",
+    "Dmg": "1",
+    "Ability": "Charge (+1 Damage)",
+    "name": "Spectral Riptide",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Pulled to the Grave",
+    "kind": "Ability (Activated)",
+    "color": "Gray",
+    "timing": "Your Movement Phase",
+    "declare": "",
+    "effect": "This **^^Manifestation^^** can move a distance up to its Move characteristic. It can pass through models during that move but cannot end that move in combat. Then, you can pick an enemy unit that this **^^Manifestation^^** passed across during that move to be the target. Roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.",
+    "keywords": "**^^Core^^**, **^^Move^^**",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Geminids of Uhl-Gysh",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "8",
+   "Save": "6+",
+   "Banishment": "6+"
+  },
+  "weapons": [
+   {
+    "Atk": "4",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "1",
+    "Dmg": "D3",
+    "Ability": "-",
+    "name": "Tendrils of Light and Shadow",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Tendrils of Light and Shadow",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "Enemy units cannot use commands while they are within 3\" of either part of this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Multiple Parts",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "When a number of damage points equal to this **^^Manifestation^^**'s Health characteristic are allocated to it, this **^^Manifestation^^** is destroyed and both its parts are removed from play.\nEach time this **^^Manifestation^^** moves, both its parts must end within 9\" of each other.\nEach part of this **^^Manifestation^^** is armed with **Tendrils of Light and Shadow**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Umbral Spellportal",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "8",
+   "Save": "6+",
+   "Banishment": "6+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Multiple Parts",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "When a number of damage points equal to this **^^Manifestation^^**'s Health characteristic are allocated to it, this **^^Manifestation^^** is destroyed and both its parts are removed from play.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Arcane Passage",
+    "kind": "Ability (Activated)",
+    "color": "Yellow",
+    "timing": "Your Hero Phase",
+    "declare": "Pick a friendly **^^Wizard^^** within 3\" of this **^^Manifestation^^** to be the target.",
+    "effect": "The next time the target uses a non-**^^Summon Spell^^** ability this phase, add 1 to the casting value of that spell. When picking targets for that spell, you can measure range and visibility from either part of this **^^Manifestation^^** instead of from the caster, and your opponent can measure range and visibility to either part of this **^^Manifestation^^** instead of to the caster for the purposes of the 'Unbind' ability.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Prismatic Palisade",
+  "src": "Age of Sigmar 4.0.gst",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "8",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Blinding Light",
+    "kind": "Ability (Passive)",
+    "color": "Green",
+    "timing": "",
+    "declare": "",
+    "effect": "This **^^Manifestation^^** cannot be targeted by shooting attacks. In addition, a unit cannot be targeted by shooting attacks if it is impossible to draw a straight line from a model in the attacking unit to a model in the target unit without that line passing across this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ }
+]

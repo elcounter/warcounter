@@ -30,7 +30,7 @@ def weapon(w):
             if crit == 'none': extra.append(p)
             continue
         if p == 'Companion': comp = True; extra.append('Compagnon'); continue
-        m = re.match(r'Anti-(.+?) \(\+(\d) Rend\)', p)
+        m = re.match(r'Anti-(.+?)\s*\(\+(\d) Rend\)', p)
         if m: extra.append('Anti-' + ('charge' if m.group(1).lower() == 'charge' else kw_fr(m.group(1).upper())) + f' (+{m.group(2)} Perf.)'); continue
         m = re.match(r'Charge \(\+(\d) Damage\)', p)
         if m: extra.append(f'Charge (+{m.group(1)} dégât)'); continue
@@ -311,3 +311,17 @@ if __name__ == '__main__':
             aors.append(o)
     open(os.path.join(here, 'aor.json'), 'w').write(json.dumps(aors, ensure_ascii=False))
     print('Armées de renom :', len(aors), '· traductions manquantes :', sorted(set(MISSING)))
+
+    # Warscrolls de manifestations (fr_manif.py, clés "Manifestation::Aptitude")
+    import fr_manif
+    M = {}
+    for u in json.load(open(os.path.join(here, 'manif_en.json'))):
+        s = u['stats']; ward = next((re.sub(r'\D', '', k) + '+' for k in u['kw'] if k.startswith('WARD')), None)
+        st = {'M':s.get('Move', '-'), 'S':s.get('Health', '-'), 'Sv':s.get('Save', '-'), 'B':s.get('Banishment', '-')}
+        if ward: st['W'] = ward
+        M[u['name']] = {'en':u['name'], 'stats':st,
+            'weapons':[weapon(w) for w in sorted(u['weapons'], key=lambda w: w['kind'] != 'Ranged Weapon')],
+            'abilities':[ability(a, {a['name']: fr_manif.T[u['name'] + '::' + a['name']]} if u['name'] + '::' + a['name'] in fr_manif.T else {}) for a in u['abilities']],
+            'kw':kw_line([k for k in u['kw'] if not k.startswith('WARD')])}
+    open(os.path.join(here, 'manif.json'), 'w').write(json.dumps(M, ensure_ascii=False))
+    print('Manifestations :', len(M), '· traductions manquantes :', sorted(set(MISSING)))
