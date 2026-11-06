@@ -960,6 +960,16 @@
      "Ability": "-",
      "name": "Moonclan Bow",
      "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "4+",
+     "Wnd": "5+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Moonclan Bow",
+     "kind": "Melee Weapon"
     }
    ],
    "abilities": [

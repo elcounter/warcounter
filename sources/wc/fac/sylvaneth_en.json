@@ -78,6 +78,17 @@
      "kind": "Melee Weapon"
     },
     {
+     "Rng": "12\"",
+     "Atk": "1",
+     "Hit": "2+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "4",
+     "Ability": "-",
+     "name": "Spear of Kurnoth",
+     "kind": "Ranged Weapon"
+    },
+    {
      "Atk": "6",
      "Hit": "4+",
      "Wnd": "2+",

@@ -1410,6 +1410,16 @@
      "Ability": "-",
      "name": "Blade of the High Heavens",
      "kind": "Melee Weapon"
+    },
+    {
+     "Atk": "2",
+     "Hit": "2+",
+     "Wnd": "2+",
+     "Rnd": "2",
+     "Dmg": "3",
+     "Ability": "Anti-**^^Monster^^** (+1 Rend)",
+     "name": "Thengavar",
+     "kind": "Melee Weapon"
     }
    ],
    "abilities": [
@@ -2373,6 +2383,17 @@
      "Ability": "Charge (+1 Damage)",
      "name": "Stormcall Javelin",
      "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "-",
+     "name": "Stormcall Javelin",
+     "kind": "Ranged Weapon"
     }
    ],
    "abilities": [
@@ -2653,6 +2674,16 @@
      "Ability": "-",
      "name": "Starstrike Javelin",
      "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Starstrike Javelin",
+     "kind": "Melee Weapon"
     },
     {
      "Rng": "10\"",
@@ -3313,6 +3344,16 @@
      "Ability": "Crit (2 Hits)",
      "name": "Hallowed Greatspear",
      "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "5",
+     "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "2",
+     "Ability": "Crit (2 Hits)",
+     "name": "Hallowed Greatspear",
+     "kind": "Melee Weapon"
     }
    ],
    "abilities": [

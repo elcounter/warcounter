@@ -63,8 +63,8 @@ def extract(fac):
         for p in se.iter(B+'profile'):
             t=p.attrib.get('typeName','')
             if t=='Unit' and not u['stats']: u['stats']=chars(p)
-            elif t in('Melee Weapon','Ranged Weapon') and p.attrib['name'] not in seen:
-                seen.add(p.attrib['name']); d=chars(p); d['name']=p.attrib['name']; d['kind']=t; u['weapons'].append(d)
+            elif t in('Melee Weapon','Ranged Weapon') and (t, p.attrib['name']) not in seen:
+                seen.add((t, p.attrib['name'])); d=chars(p); d['name']=p.attrib['name']; d['kind']=t; u['weapons'].append(d)
             elif t.startswith('Ability') and ('a',p.attrib['name']) not in seen:
                 seen.add(('a',p.attrib['name'])); u['abilities'].append(ability(p))
         units.append(u)

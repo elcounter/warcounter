@@ -875,6 +875,17 @@
      "Ability": "-",
      "name": "Magmapike",
      "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "D3",
+     "Ability": "Shoot in Combat",
+     "name": "Magmapike",
+     "kind": "Ranged Weapon"
     }
    ],
    "abilities": [

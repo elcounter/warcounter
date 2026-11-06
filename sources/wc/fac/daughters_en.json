@@ -978,6 +978,16 @@
      "Ability": "-",
      "name": "Barbed Javelin",
      "kind": "Ranged Weapon"
+    },
+    {
+     "Atk": "1",
+     "Hit": "3+",
+     "Wnd": "4+",
+     "Rnd": "-",
+     "Dmg": "1",
+     "Ability": "-",
+     "name": "Barbed Javelin",
+     "kind": "Melee Weapon"
     }
    ],
    "abilities": [

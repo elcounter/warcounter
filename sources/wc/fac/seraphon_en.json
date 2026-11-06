@@ -1016,6 +1016,17 @@
      "Rng": "10\"",
      "Atk": "1",
      "Hit": "3+",
+     "Wnd": "3+",
+     "Rnd": "1",
+     "Dmg": "2",
+     "Ability": "-",
+     "name": "Hunter Javelin",
+     "kind": "Ranged Weapon"
+    },
+    {
+     "Rng": "10\"",
+     "Atk": "1",
+     "Hit": "3+",
      "Wnd": "4+",
      "Rnd": "-",
      "Dmg": "1",

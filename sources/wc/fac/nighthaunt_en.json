@@ -1265,6 +1265,17 @@
      "Ability": "Crit (Auto-wound)",
      "name": "Ghastflails",
      "kind": "Melee Weapon"
+    },
+    {
+     "Rng": "12\"",
+     "Atk": "2",
+     "Hit": "4+",
+     "Wnd": "3+",
+     "Rnd": "2",
+     "Dmg": "1",
+     "Ability": "Crit (Auto-wound)",
+     "name": "Ghastflails",
+     "kind": "Ranged Weapon"
     }
    ],
    "abilities": [

@@ -4379,7 +4379,8 @@
       "chant": "",
       "cost": ""
      }
-    ]
+    ],
+    "with": "Freeguild Command Corps Adjutants"
    },
    {
     "name": "Freeguild Command Corps Whisperblade",
@@ -4422,7 +4423,8 @@
       "chant": "",
       "cost": ""
      }
-    ]
+    ],
+    "with": "Freeguild Command Corps Adjutants"
    },
    {
     "name": "Amethyst Knellmage",
@@ -4783,6 +4785,17 @@
       "Ability": "Crit (2 Hits)",
       "name": "Magmapike",
       "kind": "Melee Weapon"
+     },
+     {
+      "Rng": "12\"",
+      "Atk": "2",
+      "Hit": "4+",
+      "Wnd": "3+",
+      "Rnd": "1",
+      "Dmg": "D3",
+      "Ability": "Crit (2 Hits), Shoot in Combat",
+      "name": "Magmapike",
+      "kind": "Ranged Weapon"
      }
     ],
     "abilities": [
@@ -7632,6 +7645,98 @@
     ]
    },
    {
+    "name": "The Shadow Queen",
+    "pts": 0,
+    "size": 1,
+    "kw": [
+     "UNIQUE",
+     "HERO",
+     "WARD (6+)",
+     "ORDER",
+     "DAUGHTERS OF KHAINE",
+     "MONSTER",
+     "FLY"
+    ],
+    "stats": {
+     "Move": "12\"",
+     "Health": "15",
+     "Save": "4+",
+     "Control": "10"
+    },
+    "weapons": [
+     {
+      "Atk": "8",
+      "Hit": "3+",
+      "Wnd": "3+",
+      "Rnd": "2",
+      "Dmg": "3",
+      "Ability": "Crit (Mortal)",
+      "name": "Heartrender",
+      "kind": "Melee Weapon"
+     },
+     {
+      "Atk": "1",
+      "Hit": "3+",
+      "Wnd": "3+",
+      "Rnd": "2",
+      "Dmg": "6",
+      "Ability": "Crit (Mortal)",
+      "name": "Envenomed Tail",
+      "kind": "Melee Weapon"
+     }
+    ],
+    "abilities": [
+     {
+      "name": "Coils of the Shadow",
+      "kind": "Ability (Activated)",
+      "color": "Red",
+      "timing": "Once Per Turn (Army), Any Combat Phase",
+      "declare": "If any enemy units are **constricted**, they are no longer **constricted**. Pick an enemy **^^Hero^^** or **^^Monster^^** in combat with this unit to be the target.",
+      "effect": "Roll a dice. On a 3+, until the start of your next turn, the target is **constricted** while it is in combat with this unit.\nThis unit's combat attacks that target a **constricted** enemy unit score critical hits on unmodified hit rolls of 5+.",
+      "keywords": "**^^Rampage^^**",
+      "cast": "",
+      "chant": "",
+      "cost": ""
+     },
+     {
+      "name": "Battle Damaged",
+      "kind": "Ability (Passive)",
+      "color": "Black",
+      "timing": "",
+      "declare": "",
+      "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Heartrender** is 5.",
+      "keywords": "",
+      "cast": "",
+      "chant": "",
+      "cost": ""
+     },
+     {
+      "name": "Crown of Serpents",
+      "kind": "Ability (Activated)",
+      "color": "Red",
+      "timing": "Any Combat Phase",
+      "declare": "Pick an enemy unit in combat with this unit to be the target.",
+      "effect": "Roll 5 dice. Add 2 to each roll if the target is **constricted**. For each 5+, pick 1 of the following effects. You cannot pick the same effect more than once per turn.\n• Subtract 1 from hit rolls for the target's combat attacks for the rest of the turn.\n• Subtract 1 from wound rolls for the target's combat attacks for the rest of the turn.\n• Random characteristic rolls for. the Damage characteristic of the target's melee weapons are treated as unmodified rolls of 1 for the rest of the turn.\n• Inflict D3 mortal damage on the target.\n• The target cannot be healed or have slain models returned to it for the rest of the turn.",
+      "keywords": "",
+      "cast": "",
+      "chant": "",
+      "cost": ""
+     },
+     {
+      "name": "Two Bodies, One Soul",
+      "kind": "Ability (Activated)",
+      "color": "Yellow",
+      "timing": "Once Per Battle (Army), Your Hero Phase",
+      "declare": "This unit can use this ability even if it has been destroyed. If you have used the 'Blessings of Khaine' ability 3 or more times this battle, pick a friendly **Morathi-Khaine** or **Shadow Queen** that has been destroyed to be the target.",
+      "effect": "Set up a replacement unit identical to the target within 3\" of a friendly **Morathi-Khaine** or **Shadow Queen**.",
+      "keywords": "",
+      "cast": "",
+      "chant": "",
+      "cost": ""
+     }
+    ]
+   },
+   {
     "name": "Bloodwrack Shrine",
     "pts": 270,
     "size": 1,
@@ -7940,6 +8045,16 @@
       "Ability": "-",
       "name": "Barbed Javelin",
       "kind": "Ranged Weapon"
+     },
+     {
+      "Atk": "1",
+      "Hit": "3+",
+      "Wnd": "4+",
+      "Rnd": "-",
+      "Dmg": "1",
+      "Ability": "-",
+      "name": "Barbed Javelin",
+      "kind": "Melee Weapon"
      }
     ],
     "abilities": [
@@ -15787,6 +15902,16 @@
       "Ability": "-",
       "name": "Moonclan Bow",
       "kind": "Ranged Weapon"
+     },
+     {
+      "Atk": "1",
+      "Hit": "4+",
+      "Wnd": "5+",
+      "Rnd": "-",
+      "Dmg": "1",
+      "Ability": "-",
+      "name": "Moonclan Bow",
+      "kind": "Melee Weapon"
      }
     ],
     "abilities": [
@@ -16524,6 +16649,17 @@
       "Ability": "-",
       "name": "Moonclan Bow",
       "kind": "Melee Weapon"
+     },
+     {
+      "Rng": "18\"",
+      "Atk": "2",
+      "Hit": "4+",
+      "Wnd": "5+",
+      "Rnd": "-",
+      "Dmg": "1",
+      "Ability": "-",
+      "name": "Moonclan Bow",
+      "kind": "Ranged Weapon"
      }
     ],
     "abilities": [
@@ -36279,6 +36415,17 @@
       "Ability": "Crit (Auto-wound)",
       "name": "Ghastflails",
       "kind": "Melee Weapon"
+     },
+     {
+      "Rng": "12\"",
+      "Atk": "2",
+      "Hit": "4+",
+      "Wnd": "3+",
+      "Rnd": "2",
+      "Dmg": "1",
+      "Ability": "Crit (Auto-wound)",
+      "name": "Ghastflails",
+      "kind": "Ranged Weapon"
      }
     ],
     "abilities": [
@@ -47298,6 +47445,16 @@
       "Ability": "-",
       "name": "Marauder Javelin",
       "kind": "Ranged Weapon"
+     },
+     {
+      "Atk": "2",
+      "Hit": "4+",
+      "Wnd": "4+",
+      "Rnd": "1",
+      "Dmg": "1",
+      "Ability": "-",
+      "name": "Marauder Javelin",
+      "kind": "Melee Weapon"
      }
     ],
     "abilities": [
@@ -47326,6 +47483,74 @@
       "cost": ""
      }
     ]
+   },
+   {
+    "name": "The Oathsworn Kin",
+    "pts": 0,
+    "size": 3,
+    "kw": [
+     "UNIQUE",
+     "SLAVES TO DARKNESS",
+     "CHAOS",
+     "DARKOATH",
+     "GUNNAR'S OATHSWORN",
+     "INFANTRY"
+    ],
+    "stats": {
+     "Move": "5\"",
+     "Health": "3",
+     "Save": "5+",
+     "Control": "1"
+    },
+    "weapons": [
+     {
+      "Atk": "4",
+      "Hit": "4+",
+      "Wnd": "3+",
+      "Rnd": "-",
+      "Dmg": "2",
+      "Ability": "Crit (Mortal)",
+      "name": "Heavy Darkoath Weapon",
+      "kind": "Melee Weapon"
+     },
+     {
+      "Atk": "3",
+      "Hit": "4+",
+      "Wnd": "4+",
+      "Rnd": "-",
+      "Dmg": "D3",
+      "Ability": "-",
+      "name": "Gnarled Staff",
+      "kind": "Melee Weapon"
+     }
+    ],
+    "abilities": [
+     {
+      "name": "Broken Nadja",
+      "kind": "Ability (Passive)",
+      "color": "Yellow",
+      "timing": "",
+      "declare": "",
+      "effect": "While this unit's **Broken Nadja** is on the battlefield, it has **^^Wizard (1)^^**.",
+      "keywords": "",
+      "cast": "",
+      "chant": "",
+      "cost": ""
+     },
+     {
+      "name": "Withering Death",
+      "kind": "Ability (Spell)",
+      "color": "Yellow",
+      "timing": "Your Hero Phase",
+      "declare": "Pick a visible enemy **^^Hero^^** within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+      "effect": "Inflict 1 mortal damage on the target and subtract 1 from the Attacks characteristic of the target's melee weapons until the start of your next turn.",
+      "keywords": "**^^Spell^^**",
+      "cast": "5",
+      "chant": "",
+      "cost": ""
+     }
+    ],
+    "with": "Gunnar Brand"
    },
    {
     "name": "Gunnar Brand",
@@ -47384,6 +47609,86 @@
       "cost": ""
      }
     ]
+   },
+   {
+    "name": "Singri Brand",
+    "pts": 0,
+    "size": 1,
+    "kw": [
+     "UNIQUE",
+     "HERO",
+     "SLAVES TO DARKNESS",
+     "CHAOS",
+     "DARKOATH",
+     "GUNNAR'S OATHSWORN",
+     "CAVALRY"
+    ],
+    "stats": {
+     "Move": "12\"",
+     "Health": "4",
+     "Save": "5+",
+     "Control": "2"
+    },
+    "weapons": [
+     {
+      "Rng": "18\"",
+      "Atk": "2",
+      "Hit": "3+",
+      "Wnd": "3+",
+      "Rnd": "1",
+      "Dmg": "D3",
+      "Ability": "Crit (Auto-wound)",
+      "name": "Singri's Warbow",
+      "kind": "Ranged Weapon"
+     },
+     {
+      "Atk": "2",
+      "Hit": "5+",
+      "Wnd": "3+",
+      "Rnd": "-",
+      "Dmg": "1",
+      "Ability": "Companion",
+      "name": "Warsteed's Hooves",
+      "kind": "Melee Weapon"
+     },
+     {
+      "Atk": "3",
+      "Hit": "4+",
+      "Wnd": "3+",
+      "Rnd": "1",
+      "Dmg": "1",
+      "Ability": "-",
+      "name": "Brand Ancestral Knife",
+      "kind": "Melee Weapon"
+     }
+    ],
+    "abilities": [
+     {
+      "name": "Swift as the Wind",
+      "kind": "Ability (Passive)",
+      "color": "Blue",
+      "timing": "",
+      "declare": "",
+      "effect": "Only critical hits score successful hits for shooting attacks that target this unit.",
+      "keywords": "",
+      "cast": "",
+      "chant": "",
+      "cost": ""
+     },
+     {
+      "name": "Uncanny Shot",
+      "kind": "Ability (Passive)",
+      "color": "Blue",
+      "timing": "",
+      "declare": "",
+      "effect": "Add 1 to the Rend characteristic of this unit's **Singri's Warbow** for attacks that target enemy units that are within 6\" of a friendly **Gunnar Brand**.",
+      "keywords": "",
+      "cast": "",
+      "chant": "",
+      "cost": ""
+     }
+    ],
+    "with": "Gunnar Brand"
    },
    {
     "name": "The Gnarlspirit Pack",
@@ -49074,7 +49379,8 @@
       "chant": "",
       "cost": ""
      }
-    ]
+    ],
+    "with": "Ma Maegran, Chooser of the Mighty"
    },
    {
     "name": "Boss-stompers",
@@ -53008,6 +53314,16 @@
       "Ability": "-",
       "name": "Blade of the High Heavens",
       "kind": "Melee Weapon"
+     },
+     {
+      "Atk": "2",
+      "Hit": "2+",
+      "Wnd": "2+",
+      "Rnd": "2",
+      "Dmg": "3",
+      "Ability": "Anti-**^^Monster^^** (+1 Rend)",
+      "name": "Thengavar",
+      "kind": "Melee Weapon"
      }
     ],
     "abilities": [
@@ -53776,6 +54092,17 @@
       "Ability": "Charge (+1 Damage)",
       "name": "Stormcall Javelin",
       "kind": "Melee Weapon"
+     },
+     {
+      "Rng": "10\"",
+      "Atk": "1",
+      "Hit": "3+",
+      "Wnd": "3+",
+      "Rnd": "1",
+      "Dmg": "D3",
+      "Ability": "-",
+      "name": "Stormcall Javelin",
+      "kind": "Ranged Weapon"
      }
     ],
     "abilities": [
@@ -54056,6 +54383,16 @@
       "Ability": "-",
       "name": "Starstrike Javelin",
       "kind": "Ranged Weapon"
+     },
+     {
+      "Atk": "1",
+      "Hit": "3+",
+      "Wnd": "3+",
+      "Rnd": "1",
+      "Dmg": "2",
+      "Ability": "-",
+      "name": "Starstrike Javelin",
+      "kind": "Melee Weapon"
      },
      {
       "Rng": "10\"",
@@ -57903,6 +58240,16 @@
       "Ability": "-",
       "name": "Blade of the High Heavens",
       "kind": "Melee Weapon"
+     },
+     {
+      "Atk": "2",
+      "Hit": "2+",
+      "Wnd": "2+",
+      "Rnd": "2",
+      "Dmg": "3",
+      "Ability": "Anti-**^^Monster^^** (+1 Rend)",
+      "name": "Thengavar",
+      "kind": "Melee Weapon"
      }
     ],
     "abilities": [
@@ -59401,6 +59748,17 @@
       "Ability": "Charge (+1 Damage)",
       "name": "Stormcall Javelin",
       "kind": "Melee Weapon"
+     },
+     {
+      "Rng": "10\"",
+      "Atk": "1",
+      "Hit": "3+",
+      "Wnd": "3+",
+      "Rnd": "1",
+      "Dmg": "D3",
+      "Ability": "-",
+      "name": "Stormcall Javelin",
+      "kind": "Ranged Weapon"
      }
     ],
     "abilities": [
@@ -59842,6 +60200,16 @@
       "Ability": "Crit (2 Hits)",
       "name": "Hallowed Greatspear",
       "kind": "Ranged Weapon"
+     },
+     {
+      "Atk": "5",
+      "Hit": "3+",
+      "Wnd": "3+",
+      "Rnd": "2",
+      "Dmg": "2",
+      "Ability": "Crit (2 Hits)",
+      "name": "Hallowed Greatspear",
+      "kind": "Melee Weapon"
      }
     ],
     "abilities": [
