@@ -837,5 +837,852 @@
     "cost": ""
    }
   ]
+ },
+ {
+  "name": "Avatar of Khaine",
+  "src": "Daughters of Khaine - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "ORDER",
+   "DAUGHTERS OF KHAINE",
+   "ENDLESS SPELL",
+   "MANIFESTATION"
+  ],
+  "stats": {
+   "Move": "6\"",
+   "Health": "7",
+   "Save": "3+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "3",
+    "Hit": "3+",
+    "Wnd": "3+",
+    "Rnd": "2",
+    "Dmg": "3",
+    "Ability": "-",
+    "name": "Blade of the Bloody-Handed God",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Lord of Murder Incarnate",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "This **^^Manifestation^^** is affected by the 'Blessings of Khaine' ability as if it were a unit.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Wrath of Khaine",
+    "kind": "Ability (Passive)",
+    "color": "Red",
+    "timing": "",
+    "declare": "",
+    "effect": "Add X to the Attacks characteristic of this **^^Manifestation^^**'s melee weapons, where X is the number of times you have used the 'Blessings of Khaine' ability this battle, to a maximum of 3.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Bloodwrack Viper",
+  "src": "Daughters of Khaine - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "ORDER",
+   "DAUGHTERS OF KHAINE"
+  ],
+  "stats": {
+   "Move": "9\"",
+   "Health": "10",
+   "Save": "4+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "4",
+    "Hit": "4+",
+    "Wnd": "2+",
+    "Rnd": "1",
+    "Dmg": "3",
+    "Ability": "Anti-**^^Hero^^** (+1 Rend), Crit (Mortal)",
+    "name": "Fanged Strikes",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Crushing Coils",
+    "kind": "Ability (Activated)",
+    "color": "Red",
+    "timing": "Any Combat Phase",
+    "declare": "Pick an enemy **^^Hero^^** or **^^Monster^^** in combat with this **^^Manifestation^^** to be the target.",
+    "effect": "Roll a dice. On a 3+, the target has **^^Strike-last^^** for the rest of the turn.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Bind and Bite",
+    "kind": "Ability (Passive)",
+    "color": "Red",
+    "timing": "",
+    "declare": "",
+    "effect": "This unit's combat attacks score critical hits on unmodified hit rolls of 4+ if the target of those attacks has **^^Strike-Last^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Bladewind",
+  "src": "Daughters of Khaine - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "ORDER",
+   "DAUGHTERS OF KHAINE"
+  ],
+  "stats": {
+   "Move": "12\"",
+   "Health": "7",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "9",
+    "Hit": "3+",
+    "Wnd": "3+",
+    "Rnd": "1",
+    "Dmg": "1",
+    "Ability": "",
+    "name": "Bladed Vortex",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Unnatural Edge",
+    "kind": "Ability (Activated)",
+    "color": "Red",
+    "timing": "Any Combat Phase",
+    "declare": "If this **^^Manifestation^^** charged this turn, pick an enemy unit in combat with it to be the target.",
+    "effect": "If any damage points are allocated to the target this phase by this **^^Manifestation^^**'s combat attacks, ward rolls cannot be made for the target for the rest of the battle.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Heart of Fury",
+  "src": "Daughters of Khaine - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ORDER",
+   "DAUGHTERS OF KHAINE",
+   "INVOCATION"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "7",
+   "Save": "4+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Locus of the Murder God",
+    "kind": "Ability (Passive)",
+    "color": "Green",
+    "timing": "",
+    "declare": "",
+    "effect": "Subtract 1 from wound rolls for attacks that target friendly **^^Daughters of Khaine Infantry^^** units while they are wholly within 12\" of this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Runic Fyrewall",
+  "src": "Fyreslayers - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "INVOCATION",
+   "ORDER",
+   "FYRESLAYERS"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "8",
+   "Save": "3+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Roaring Rune-fire",
+    "kind": "Ability (Activated)",
+    "color": "Gray",
+    "timing": "Enemy Movement Phase",
+    "declare": "Pick up to 3 enemy units within 6\" of this **^^Manifestation^^** to be the targets.",
+    "effect": "Roll a D3 for each target. On a 2+:\n• Inflict an amount of mortal damage on the target equal to the roll.\n• Subtract 3 from the target's control score for the rest of the turn.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Molten Infernoth",
+  "src": "Fyreslayers - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "INVOCATION",
+   "FLY",
+   "ORDER",
+   "FYRESLAYERS"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "10",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Rng": "8\"",
+    "Atk": "2",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "2",
+    "Dmg": "D3",
+    "Ability": "Shoot in Combat",
+    "name": "Raging Torrents of Lava",
+    "kind": "Ranged Weapon"
+   },
+   {
+    "Atk": "6",
+    "Hit": "4+",
+    "Wnd": "2+",
+    "Rnd": "1",
+    "Dmg": "D3",
+    "Ability": "Crit (Mortal)",
+    "name": "Molten Claws",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Flamescarred",
+    "kind": "Ability (Activated)",
+    "color": "Purple",
+    "timing": "End of Any Turn",
+    "declare": "Pick an enemy unit that had any damage points allocated to it this turn by this **^^Manifestation^^**'s attacks to be the target.",
+    "effect": "Subtract 1 from wound rolls for the target's combat attacks until the end of your next turn.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Zharrgron Flame-spitter",
+  "src": "Fyreslayers - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "INVOCATION",
+   "ORDER",
+   "FYRESLAYERS"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "5",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Rng": "18\"",
+    "Atk": "8",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "1",
+    "Dmg": "1",
+    "Ability": "Crit (2 Hits)",
+    "name": "Magma Blast",
+    "kind": "Ranged Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Magma Blast",
+    "kind": "Ability (Passive)",
+    "color": "Blue",
+    "timing": "",
+    "declare": "",
+    "effect": "Add 1 to hit rolls for this **^^Manifestation^^**'s shooting attacks if the target unit has 10 or more models. Add 1 to hit rolls and wound rolls instead if the target unit has 15 or more models.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Abyssal Tendril",
+  "src": "Idoneth Deepkin - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "ORDER",
+   "IDONETH DEEPKIN",
+   "INCARNATE"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "6",
+   "Save": "6+",
+   "Banishment": "6+"
+  },
+  "weapons": [
+   {
+    "Atk": "4",
+    "Hit": "4+",
+    "Wnd": "2+",
+    "Rnd": "1",
+    "Dmg": "D3",
+    "Ability": "-",
+    "name": "Freezing Grasp",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Crushing Coil",
+    "kind": "Ability (Passive)",
+    "color": "Red",
+    "timing": "",
+    "declare": "",
+    "effect": "Add 1 to hit rolls for attacks made by friendly **^^Idoneth Deepkin Manifestations^^** that target an **ensnared** enemy unit.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Watery Clutch",
+    "kind": "Ability (Activated)",
+    "color": "Red",
+    "timing": "Once Per Turn (Army), Any Combat Phase",
+    "declare": "Pick an enemy unit in combat with this **^^Manifestation^^** to be the target.",
+    "effect": "Roll a dice. If the roll exceeds the target's Health characteristic, the target is **ensnared** for the rest of the turn.\nA unit cannot use commands while it is **ensnared**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Incarnate of the Deep",
+  "src": "Idoneth Deepkin - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "ORDER",
+   "IDONETH DEEPKIN",
+   "INCARNATE"
+  ],
+  "stats": {
+   "Move": "10\"",
+   "Health": "12",
+   "Save": "4+",
+   "Banishment": "9+"
+  },
+  "weapons": [
+   {
+    "Atk": "6",
+    "Hit": "4+",
+    "Wnd": "2+",
+    "Rnd": "1",
+    "Dmg": "3",
+    "Ability": "Anti-**^^Faction Terrain^^** (+1 Rend)",
+    "name": "Crushing Maw and Scything Waves",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Surrender to the Sea",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "When this **^^Manifestation^^** is removed from play, each friendly **Abyssal Tendril** on the battlefield is automatically removed from play.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Grasping Tendrils",
+    "kind": "Ability (Activated)",
+    "color": "Yellow",
+    "timing": "Any Hero Phase",
+    "declare": "",
+    "effect": "Roll a dice. Add 1 to the roll if it is your turn.\nOn a 4+:\n• You can remove 1 friendly **Abyssal Tendril** from the battlefield.\n• If there are fewer than 2 friendly Abyssal Tendrils on the battlefield, you can set up an **Abyssal Tendril** wholly within 9\" of this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Wild Form",
+    "kind": "Ability (Passive)",
+    "color": "Green",
+    "timing": "",
+    "declare": "",
+    "effect": "Each time this **^^Manifestation^^** is targeted by the 'Banish Manifestation' ability, if it would be banished, it is not banished. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points).",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Rune of Petrification",
+  "src": "Lumineth Realm-lords - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "ORDER",
+   "LUMINETH REALM-LORDS"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "6",
+   "Save": "4+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Turn to Stone",
+    "kind": "Ability (Activated)",
+    "color": "Yellow",
+    "timing": "Any Hero Phase",
+    "declare": "",
+    "effect": "Roll a D3 for each enemy unit within 6\" of this **^^Manifestation^^**. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If an enemy unit has at least 3 mortal damage inflicted on it by this ability this turn, it has **^^Strike-last^^** for the rest of the turn.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Sanctum of Amyntok",
+  "src": "Lumineth Realm-lords - Library.cat",
+  "kw": [
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "ORDER",
+   "LUMINETH REALM-LORDS",
+   "WARD (6+)"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "6",
+   "Save": "4+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Multiple Parts",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "When a number of damage points equal to this **^^Manifestation^^**'s Health characteristic are allocated to it, this **^^Manifestation^^** is destroyed and all its parts are removed from play.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Sigil of Yngra",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "While a friendly unit with a Health characteristic of 10 or less is wholly inside the ring formed by this **^^Manifestation^^**:\n• That unit is not visible to enemy units that are not within its combat range.\n• Enemy abilities that would target this unit must target this **^^Manifestation^^** instead.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Hyshian Twinstones",
+  "src": "Lumineth Realm-lords - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "ORDER",
+   "LUMINETH REALM-LORDS"
+  ],
+  "stats": {
+   "Move": "5\"",
+   "Health": "5",
+   "Save": "4+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "2D6",
+    "Hit": "4+",
+    "Wnd": "4+",
+    "Rnd": "-",
+    "Dmg": "1",
+    "Ability": "-",
+    "name": "Crackling Energy",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Reservoir of Power",
+    "kind": "Ability (Passive)",
+    "color": "Yellow",
+    "timing": "",
+    "declare": "",
+    "effect": "Each time a unit (friendly or enemy) successfully casts a spell while it is within 12\" of this **^^Manifestation^^**, give this **^^Manifestation^^** 1 **arcane charge point**.\nThis **^^Manifestation^^** can have a maximum of 6 **arcane charge points**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Release Arcane Charge",
+    "kind": "Ability (Activated)",
+    "color": "Yellow",
+    "timing": "Once Per Turn (Army), Reaction: You declared a **^^Spell^^** or **^^Unbind^^** ability for a **^^Lumineth Realm-lords Wizard^^** within 3\" of this **^^Manifestation^^**",
+    "declare": "",
+    "effect": "Add this **^^Manifestation^^**'s **arcane charge points** to the casting roll or unbinding roll. Then, reset this **^^Manifestation^^**'s arcane charge points to 0.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Celestian Vortex",
+  "src": "Stormcast Eternals - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "ORDER",
+   "STORMCAST ETERNALS"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "7",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "12",
+    "Hit": "4+",
+    "Wnd": "4+",
+    "Rnd": "1",
+    "Dmg": "1",
+    "Ability": "Crit (Auto-wound)",
+    "name": "Storm of Vengeance",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Tornado of Magic",
+    "kind": "Ability (Passive)",
+    "color": "Green",
+    "timing": "",
+    "declare": "",
+    "effect": "Subtract 1 from hit rolls for shooting attacks made by enemy units while they are within 12\" of this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Dais Arcanum",
+  "src": "Stormcast Eternals - Library.cat",
+  "kw": [
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "ORDER",
+   "STORMCAST ETERNALS"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "-",
+   "Save": "-",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Arcane Enhancement",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "While the unit that was picked to be the target of the 'Summon Dais Arcanum' ability is on the platform of this **^^Manifestation^^**:\n• That unit has **^^Ward (5+)^^** and **^^Fly^^**.\n• If that unit is a **^^Wizard^^**, add 1 to that unit's power level.\n• That unit cannot use **^^Move^^** abilities and remains on this **^^Manifestation^^** each time it moves.\n• If that unit is picked to make a pile-in move, move this **^^Manifestation^^** instead.\n• Instead of measuring range or visibility to that unit, measure to this **^^Manifestation^^** instead.\n• This **^^Manifestation^^** cannot be picked to be the target of abilities other than **^^Banish^^** abilities. \nIf this **^^Manifestation^^** is banished, before removing it from the battlefield, set up the unit on its platform on the battlefield within 3\" of it. That unit can only be set up in combat with units it was already in combat with when this **^^Manifestation^^** was banished. If it is not possible to set up that unit, it is destroyed.\nIf the unit on the platform is removed from the battlefield, immediately remove this **^^Manifestation^^** from play.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Everblaze Comet",
+  "src": "Stormcast Eternals - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "ORDER",
+   "STORMCAST ETERNALS"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "5",
+   "Save": "4+",
+   "Banishment": "6+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Burning Vengeance",
+    "kind": "Ability (Activated)",
+    "color": "Yellow",
+    "timing": "Any Hero Phase",
+    "declare": "If this **^^Manifestation^^** was summoned this phase, pick any number of enemy units within 6\" of it to be the targets.",
+    "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Arcane Disruption",
+    "kind": "Ability (Passive)",
+    "color": "Yellow",
+    "timing": "",
+    "declare": "",
+    "effect": "Subtract 1 from casting rolls for enemy **^^Wizards^^** while they are within 12\" of this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Gladewyrm",
+  "src": "Sylvaneth - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "ORDER",
+   "SYLVANETH"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "7",
+   "Save": "4+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "6",
+    "Hit": "4+",
+    "Wnd": "2+",
+    "Rnd": "1",
+    "Dmg": "D3",
+    "Ability": "Anti-**^^Wizard^^** (+1 Rend), Anti-**^^Priest^^** (+1 Rend)",
+    "name": "Fearsome Mandibles and Bladed Carapace",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Eldritch Hunters",
+    "kind": "Ability (Activated)",
+    "color": "Gray",
+    "timing": "Your Movement Phase",
+    "declare": "",
+    "effect": "If this **^^Manifestation^^** is not in combat, remove it from the battlefield and set it up again on the battlefield more than 9\" from all enemy non-**^^Wizard^^** non-**^^Priest^^** units and more than 3\" from all enemy **^^Wizards^^** and enemy **^^Priests^^**.",
+    "keywords": "**^^Core^^**",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Feed on Eldritch Energy",
+    "kind": "Ability (Passive)",
+    "color": "Yellow",
+    "timing": "",
+    "declare": "",
+    "effect": "Subtract 1 from casting rolls, unbinding rolls, chanting rolls and banishment rolls for enemy units while they are in combat with this **^^Manifestation^^**",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Vengeful Skullroot",
+  "src": "Sylvaneth - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "ORDER",
+   "SYLVANETH"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "8",
+   "Save": "4+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "3",
+    "Hit": "4+",
+    "Wnd": "2+",
+    "Rnd": "1",
+    "Dmg": "D3",
+    "Ability": "-",
+    "name": "Writhing Roots",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Vengeful Terrors",
+    "kind": "Ability (Passive)",
+    "color": "Green",
+    "timing": "",
+    "declare": "",
+    "effect": "Subtract 1 from hit rolls for attacks made by enemy units while they are within 6\" of this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Spiteswarm Hive",
+  "src": "Sylvaneth - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "ORDER",
+   "SYLVANETH"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "6",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Rng": "18",
+    "Atk": "5",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "1",
+    "Dmg": "1",
+    "Ability": "Crit (2 Hits)",
+    "name": "Spiteswarm",
+    "kind": "Ranged Weapon"
+   },
+   {
+    "Atk": "10",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "1",
+    "Dmg": "1",
+    "Ability": "Crit (2 Hits)",
+    "name": "Spiteswarm",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Anger The Hive",
+    "kind": "Ability (Activated)",
+    "color": "Blue",
+    "timing": "Your Shooting Phase",
+    "declare": "",
+    "effect": "If this **^^Manifestation^^** was not set up this turn, add 10 to the Attacks characteristic of this **^^Manifestation^^**'s ranged weapons for the rest of the phase, but all of the shooting attacks it makes this phase must target an enemy unit within 9\" of it.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
  }
 ]

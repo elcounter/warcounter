@@ -5,7 +5,7 @@ sys.argv = sys.argv[:1]
 import extract as X
 B = X.B; D = X.D
 import xml.etree.ElementTree as ET
-FILES = ['Age of Sigmar 4.0.gst']
+FILES = ['Age of Sigmar 4.0.gst'] + [f + ' - Library.cat' for f in ['Cities of Sigmar', 'Daughters of Khaine', 'Fyreslayers', 'Idoneth Deepkin', 'Lumineth Realm-lords', 'Stormcast Eternals', 'Sylvaneth']]
 out = []
 for f in FILES:
     r = ET.parse(D + f).getroot(); seen_u = set()
@@ -15,6 +15,7 @@ for f in FILES:
         if not mp: continue
         seen_u.add(se.attrib['name'])
         kws = [c.attrib['name'] for c in se.iter() if c.tag.endswith('categoryLink')]
+        if 'Legends' in kws: continue
         u = {'name': se.attrib['name'], 'src': f, 'kw': kws, 'stats': X.chars(mp[0]), 'weapons': [], 'abilities': []}; seen = set()
         for p in se.iter():
             if not p.tag.endswith('profile'): continue

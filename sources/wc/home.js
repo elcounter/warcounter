@@ -86,16 +86,23 @@
   const RULES = GHB.concat(CORE_PAGES);
   // Warscrolls de manifestations, affichés sous leur sort d'invocation
   const MANIF = window.WC_MANIF || {};
-  const manifOf = a => { if (!/^Summon /.test((a && a.n) || "")) return null; const n = a.n.slice(7); return MANIF[n] || MANIF["The " + n] || null; };
+  // sort « Summon X », ou aptitude qui fait apparaître une manifestation citée dans son texte (Avatar of Khaine, Abyssal Tendril…)
+  const manifOf = a => {
+    if (!a || !a.n) return [];
+    if (/^Summon /.test(a.n)) { const n = a.n.slice(7), m = MANIF[n] || MANIF["The " + n]; if (m) return [m]; }
+    const txt = (a.x || []).join(" ");
+    return Object.values(MANIF).filter(m => m.en !== a.self && txt.includes(m.en) && !(a.seen && a.seen.has(m.en)) && (!a.seen || a.seen.add(m.en)));
+  };
   function mSheet(m){
+    const seen = new Set([m.en]);
     const st = m.stats, d = [[st.M,"Mouv."],[st.S,"Santé"],[st.Sv,"Sauv.","sv"],[st.B,"Bann."]];
     if (st.W) d.push([st.W,"Prot.","wd"]);
     return `<div class="statband"><div class="stats" style="--n:${d.length}">${d.map(([v,l,c]) => `<div><div class="disc${c ? " " + c : ""}">${esc(v)}</div><div class="l">${l}</div></div>`).join("")}</div></div>`
       + wBlock(m.weapons.filter(w => w.range !== "Mêlée"), true) + wBlock(m.weapons.filter(w => w.range === "Mêlée"), false)
-      + (m.abilities.length ? `<div class="abilities">${m.abilities.map(abCard).join("")}</div>` : "")
+      + (m.abilities.length ? `<div class="abilities">${m.abilities.map(x => abCard({...x, self:m.en, seen})).join("")}</div>` : "")
       + `<div class="kw">Mots-clés : <b>${esc(m.kw)}</b></div>`;
   }
-  const mWar = a => { const m = manifOf(a); return m ? `<details class="mwar"><summary>Warscroll : ${esc(m.en)}</summary>${mSheet(m)}</details>` : ""; };
+  const mWar = a => manifOf(a).map(m => `<details class="mwar"><summary>Warscroll : ${esc(m.en)}</summary>${mSheet(m)}</details>`).join("");
   function abCard(a){
     return `<div class="ab" style="--c:${PHASE[a.c]}"><div class="ab-head"><span>${esc(a.t)}</span>${a.cast ? `<span class="cast">${a.cast}</span>` : ""}${a.chant ? `<span class="chant"><span>${a.chant}</span></span>` : ""}${a.cost ? `<span class="cost">${esc(a.cost)}</span>` : ""}</div><div class="ab-name">${esc(a.n)}</div><div class="ab-body">${a.x.map(p => `<p>${esc(p)}</p>`).join("")}</div>${mWar(a)}</div>`;
   }

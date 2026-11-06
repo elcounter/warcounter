@@ -131,6 +131,7 @@ TFIX2 = {
  "Réaction : vous avez annoncé l'ordre 'Unpredictable Tide' ability or l'ordre 'Steed of Tides' ability": "Réaction : vous avez annoncé l'aptitude « Unpredictable Tide » ou « Steed of Tides »",
 }
 TFIX2.update({
+ 'Une fois par tour (armée), réaction : vous avez annoncé a SPELL or UNBIND ability for a LUMINETH REALM-LORDS WIZARD à 3" of this MANIFESTATION': 'Une fois par tour (armée), réaction : vous avez annoncé une aptitude de SORT ou de DISSIPATION pour un SORCIER LUMINETH REALM-LORDS à 3" ou moins de cette MANIFESTATION',
  'Réaction : A friendly unit à 12" de cette unité was picked to be l\'ordre target of an enemy SPELL ability.': 'Réaction : une unité amie à 12" de cette unité a été choisie comme cible d\'une aptitude de SORT ennemie',
  'Your Movement Phase, Reaction: You declared a non-CHARGE MOVE ability for a friendly SKYVESSEL': 'Votre phase de mouvement, réaction : vous avez annoncé une aptitude de MOUVEMENT autre que CHARGE pour un SKYVESSEL ami',
  'Une fois par tour, réaction : l\'adversaire a annoncé une aptitude de CHARGE for a unit à 12" de cette unité.': 'Une fois par tour, réaction : l\'adversaire a annoncé une aptitude de CHARGE pour une unité à 12" de cette unité',
