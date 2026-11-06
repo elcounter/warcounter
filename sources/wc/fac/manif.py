@@ -5,7 +5,7 @@ sys.argv = sys.argv[:1]
 import extract as X
 B = X.B; D = X.D
 import xml.etree.ElementTree as ET
-FILES = ['Age of Sigmar 4.0.gst'] + [f + ' - Library.cat' for f in ['Cities of Sigmar', 'Daughters of Khaine', 'Fyreslayers', 'Idoneth Deepkin', 'Lumineth Realm-lords', 'Stormcast Eternals', 'Sylvaneth']]
+FILES = ['Age of Sigmar 4.0.gst'] + [f + ' - Library.cat' for f in ['Cities of Sigmar', 'Daughters of Khaine', 'Fyreslayers', 'Idoneth Deepkin', 'Lumineth Realm-lords', 'Stormcast Eternals', 'Sylvaneth', 'Blades of Khorne', 'Disciples of Tzeentch', 'Hedonites of Slaanesh', 'Skaven', 'Slaves to Darkness']]
 out = []
 for f in FILES:
     r = ET.parse(D + f).getroot(); seen_u = set()

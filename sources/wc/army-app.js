@@ -247,12 +247,13 @@
   // ---------- Rendu commun ----------
   // Warscrolls de manifestations, affichés sous leur sort d'invocation
   const MANIF = window.WC_MANIF || {};
+  const MI = {}; Object.values(MANIF).forEach(m => { MI[m.en.toLowerCase()] = m; });
   // sort « Summon X », ou aptitude qui fait apparaître une manifestation citée dans son texte (Avatar of Khaine, Abyssal Tendril…)
   const manifOf = a => {
     if (!a || !a.n) return [];
-    if (/^Summon /.test(a.n)) { const n = a.n.slice(7), m = MANIF[n] || MANIF["The " + n]; if (m) return [m]; }
+    if (/^Summon /.test(a.n)) { const n = a.n.slice(7).toLowerCase(), m = MI[n] || MI["the " + n]; if (m) return [m]; }
     const txt = (a.x || []).join(" ");
-    return Object.values(MANIF).filter(m => m.en !== a.self && txt.includes(m.en) && !(a.seen && a.seen.has(m.en)) && (!a.seen || a.seen.add(m.en)));
+    return Object.values(MANIF).filter(m => m.nosum && m.en !== a.self && txt.includes(m.en) && !(a.seen && a.seen.has(m.en)) && (!a.seen || a.seen.add(m.en)));
   };
   function mSheet(m){
     const seen = new Set([m.en]);

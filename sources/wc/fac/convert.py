@@ -131,6 +131,8 @@ TFIX2 = {
  "Réaction : vous avez annoncé l'ordre 'Unpredictable Tide' ability or l'ordre 'Steed of Tides' ability": "Réaction : vous avez annoncé l'aptitude « Unpredictable Tide » ou « Steed of Tides »",
 }
 TFIX2.update({
+ 'Once Per Phase (Army), Reaction: Opponent declared a MOVE ability for a unit within 18" of and visible to this MANIFESTATION': 'Une fois par phase (armée), réaction : votre adversaire a annoncé une aptitude de MOUVEMENT pour une unité à 18" ou moins de cette MANIFESTATION et visible pour elle',
+ 'Une fois par phase (armée), réaction : votre adversaire a annoncé a MOVE ability for a unit à 18" of and visible to this MANIFESTATION': 'Une fois par phase (armée), réaction : votre adversaire a annoncé une aptitude de MOUVEMENT pour une unité à 18" ou moins de cette MANIFESTATION et visible pour elle',
  'Une fois par tour (armée), réaction : vous avez annoncé a SPELL or UNBIND ability for a LUMINETH REALM-LORDS WIZARD à 3" of this MANIFESTATION': 'Une fois par tour (armée), réaction : vous avez annoncé une aptitude de SORT ou de DISSIPATION pour un SORCIER LUMINETH REALM-LORDS à 3" ou moins de cette MANIFESTATION',
  'Réaction : A friendly unit à 12" de cette unité was picked to be l\'ordre target of an enemy SPELL ability.': 'Réaction : une unité amie à 12" de cette unité a été choisie comme cible d\'une aptitude de SORT ennemie',
  'Your Movement Phase, Reaction: You declared a non-CHARGE MOVE ability for a friendly SKYVESSEL': 'Votre phase de mouvement, réaction : vous avez annoncé une aptitude de MOUVEMENT autre que CHARGE pour un SKYVESSEL ami',
@@ -324,5 +326,9 @@ if __name__ == '__main__':
             'weapons':[weapon(w) for w in sorted(u['weapons'], key=lambda w: w['kind'] != 'Ranged Weapon')],
             'abilities':[ability(a, {a['name']: fr_manif.T[u['name'] + '::' + a['name']]} if u['name'] + '::' + a['name'] in fr_manif.T else {}) for a in u['abilities']],
             'kw':kw_line([k for k in u['kw'] if not k.startswith('WARD')])}
+    # sans sort « Summon X » : affichée sous l'aptitude qui la cite (Avatar of Khaine, Abyssal Tendril…)
+    allsum = {n.lower() for n in re.findall(r'"n": "Summon ([^"]+)"', json.dumps([out, json.load(open(os.path.join(here, 'universal.json'))), aors], ensure_ascii=False))}
+    for k, m in M.items():
+        if k.lower() not in allsum and re.sub(r'^the ', '', k.lower()) not in allsum: m['nosum'] = True
     open(os.path.join(here, 'manif.json'), 'w').write(json.dumps(M, ensure_ascii=False))
     print('Manifestations :', len(M), '· traductions manquantes :', sorted(set(MISSING)))

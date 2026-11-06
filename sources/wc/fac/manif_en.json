@@ -1684,5 +1684,652 @@
     "cost": ""
    }
   ]
+ },
+ {
+  "name": "Wrath-axe",
+  "src": "Blades of Khorne - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "INVOCATION",
+   "FLY",
+   "CHAOS",
+   "BLADES OF KHORNE"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "7",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "4",
+    "Hit": "4+",
+    "Wnd": "2+",
+    "Rnd": "2",
+    "Dmg": "D3",
+    "Ability": "-",
+    "name": "Wrath-axe",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Hatred's Edge",
+    "kind": "Ability (Activated)",
+    "color": "Red",
+    "timing": "Any Combat Phase",
+    "declare": "If this **^^Manifestation^^** charged this turn, pick an enemy unit with a starting size greater than 1 that is in combat with this **^^Manifestation^^** to be the target.",
+    "effect": "Roll 2D6. On an 8+, 1 model in the target unit is slain.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Bleeding Icon",
+  "src": "Blades of Khorne - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "INVOCATION",
+   "FLY",
+   "CHAOS",
+   "BLADES OF KHORNE"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "8",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Sigil of Doom",
+    "kind": "Ability (Activated)",
+    "color": "Yellow",
+    "timing": "Your Hero Phase",
+    "declare": "Pick a visible friendly **^^Blades of Khorne^^** unit wholly within 8\" of this **^^Manifestation^^** to be the target. Then, pick a passive **^^Blood Tithe^^** ability that you have not unlocked this battle.",
+    "effect": "Roll a dice. If the roll equals or exceeds the **blood tithe points** cost of the chosen ability, until the start of your next turn, the effects of that ability apply to the target as if it had been unlocked.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Hexgorger Skulls",
+  "src": "Blades of Khorne - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "INVOCATION",
+   "FLY",
+   "CHAOS",
+   "BLADES OF KHORNE"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "6",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "2",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "-",
+    "Dmg": "D3",
+    "Ability": "-",
+    "name": "Stream of Molten Blood",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Hexgorgers",
+    "kind": "Ability (Passive)",
+    "color": "Yellow",
+    "timing": "",
+    "declare": "",
+    "effect": "For each part of this **^^Manifestation^^** that is within 8\" of a **^^Wizard^^** (friendly or enemy), subtract 1 from casting rolls for that **^^Wizard^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Multiple Parts",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "When a number of damage points equal to this **^^Manifestation^^**'s Health characteristic are allocated to it, this **^^Manifestation^^** is destroyed and both its parts are removed from play.\nEach time this **^^Manifestation^^** moves, both its parts must end within 8\" of each other. Each part of this **^^Manifestation^^** is armed with a **Stream of Molten Blood**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Tome of Eyes",
+  "src": "Disciples of Tzeentch - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "DISCIPLES OF TZEENTCH",
+   "CHAOS"
+  ],
+  "stats": {
+   "Move": "4\"",
+   "Health": "5",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "2D6",
+    "Hit": "4+",
+    "Wnd": "4+",
+    "Rnd": "-",
+    "Dmg": "1",
+    "Ability": "-",
+    "name": "Incinerating Gaze",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Compendium of Darkness",
+    "kind": "Ability (Activated)",
+    "color": "Yellow",
+    "timing": "Your Hero Phase",
+    "declare": "Pick a visible friendly **^^Disciples of Tzeentch Wizard^^** within 3\" of this **^^Manifestation^^** to be the target.",
+    "effect": "The target can immediately use a **^^Spell^^** ability from the Lore of Change or the Lore of Fate.\n**Designer's Note**: *That spell does not count towards the number of **^^Spell^^** or **^^Banish^^** abilities the target can use this phase.*",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Burning Sigil of Tzeentch",
+  "src": "Disciples of Tzeentch - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "DISCIPLES OF TZEENTCH",
+   "CHAOS"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "6",
+   "Save": "4+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Radiant Transmogrification",
+    "kind": "Ability (Activated)",
+    "color": "Yellow",
+    "timing": "Any Hero Phase",
+    "declare": "This **^^Manifestation^^** must use this ability in each hero phase. Pick each unit (friendly and enemy) within 9\" of this **^^Manifestation^^** to be the targets.",
+    "effect": "Roll 2 dice, pick either result, then apply the corresponding effect for the rest of the turn:\n**1** No effect.\n**2-3** **Heal (D3)** each friendly **^^Disciples of Tzeentch^^** target. Inflict D3 mortal damage on each enemy target.\n**4** Friendly **^^Disciples of Tzeentch^^** targets can use **^^Charge^^** abilities even if they used a **^^Run^^** ability in the same turn. Enemy targets cannot use **^^Run^^** abilities.\n**5** Add 1 to hit rolls for attacks made by friendly **^^Disciples of Tzeentch^^** targets. Subtract 1 from hit rolls for attacks made by enemy targets.\n**6** Add 1 to wound rolls for attacks made by  friendly **^^Disciples of Tzeentch^^** targets. Subtract 1 from wound rolls for attacks made by enemy targets.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Daemonic Simulacrum",
+  "src": "Disciples of Tzeentch - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "DISCIPLES OF TZEENTCH",
+   "CHAOS"
+  ],
+  "stats": {
+   "Move": "9\"",
+   "Health": "8",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "2D6",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "1",
+    "Dmg": "1",
+    "Ability": "Anti-**^^Wizard^^ (+1 Rend)**, Crit (Mortal)",
+    "name": "Snapping Jaws",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Jaws of Fate",
+    "kind": "Ability (Passive)",
+    "color": "Red",
+    "timing": "",
+    "declare": "",
+    "effect": "Add 2 to the Attacks characteristic of this unit's **Snapping Jaws** for each **fate point** you have.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Mesmerising Mirror",
+  "src": "Hedonites of Slaanesh - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "CHAOS",
+   "HEDONITES OF SLAANESH"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "6",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Irresistible Lure",
+    "kind": "Ability (Activated)",
+    "color": "Gray",
+    "timing": "Once Per Phase (Army), Reaction: Opponent declared a **^^Move^^** ability for a unit within 18\" of and visible to this **^^Manifestation^^**",
+    "declare": "",
+    "effect": "If that enemy unit does not end the move closer to this **^^Manifestation^^** than it was at the start of the move, inflict D6 mortal damage on it after the **^^Move^^** ability has been resolved.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Dreadful Visage",
+  "src": "Hedonites of Slaanesh - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "CHAOS",
+   "HEDONITES OF SLAANESH"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "6",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "8",
+    "Hit": "3+",
+    "Wnd": "4+",
+    "Rnd": "1",
+    "Dmg": "1",
+    "Ability": "Crit (2 Hits)",
+    "name": "Hooked Tongues",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Flensing Tongues",
+    "kind": "Ability (Activated)",
+    "color": "Yellow",
+    "timing": "Any Hero Phase",
+    "declare": "Pick a visible enemy unit within 12\" of this **^^Manifestation^^** to be the target.",
+    "effect": "Until this **^^Manifestation^^** is banished or destroyed, the target is **tongue-tied** while it is within 12\" of this **^^Manifestation^^**. While the target is **tongue-tied**:\n\n\n• It cannot use **^^Run^^** abilities.\n• Your opponent must roll a D6 instead of a D3 when determining the amount of mortal damage inflicted on the target when it uses a **^^Retreat^^** ability.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Wheels of Excruciation",
+  "src": "Hedonites of Slaanesh - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "CHAOS",
+   "HEDONITES OF SLAANESH"
+  ],
+  "stats": {
+   "Move": "8\"",
+   "Health": "6",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "6",
+    "Hit": "4+",
+    "Wnd": "2+",
+    "Rnd": "2",
+    "Dmg": "1",
+    "Ability": "Charge (+1 Damage)",
+    "name": "Rending Wheels",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Exquisite Agony",
+    "kind": "Ability (Activated)",
+    "color": "Purple",
+    "timing": "End of Any Turn",
+    "declare": "Pick an enemy unit in combat with this **^^Manifestation^^** to be the target.",
+    "effect": "Inflict D6 mortal damage on the target.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Bell of Doom",
+  "src": "Skaven - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "SKAVEN",
+   "CHAOS"
+  ],
+  "stats": {
+   "Move": "3D6\"",
+   "Health": "7",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "2D6",
+    "Hit": "4+",
+    "Wnd": "4+",
+    "Rnd": "1",
+    "Dmg": "1",
+    "Ability": "-",
+    "name": "Volatile Warp Energy",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Toll of Doom",
+    "kind": "Ability (Passive)",
+    "color": "Green",
+    "timing": "",
+    "declare": "",
+    "effect": "Subtract 1 from wound rolls for attacks that target friendly **^^Skaven Infantry^^** units while they are wholly within 13\" of this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Vermintide",
+  "src": "Skaven - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "SKAVEN",
+   "CHAOS"
+  ],
+  "stats": {
+   "Move": "7\"",
+   "Health": "13",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "13",
+    "Hit": "5+",
+    "Wnd": "5+",
+    "Rnd": "-",
+    "Dmg": "1",
+    "Ability": "Crit (Auto-wound)",
+    "name": "Chittering Bites",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "More-more Rats",
+    "kind": "Ability (Activated)",
+    "color": "Purple",
+    "timing": "End of Any Turn",
+    "declare": "",
+    "effect": "**Heal (D6)** this Manifestation.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Warp Lightning Vortex",
+  "src": "Skaven - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "SKAVEN",
+   "CHAOS"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "7",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Multiple Parts",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "When a number of damage points equal to this **^^Manifestation^^**'s Health characteristic are allocated to it, this **^^Manifestation^^** is destroyed and all its parts are removed from play.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Warp Lightning Bolts",
+    "kind": "Ability (Activated)",
+    "color": "Yellow",
+    "timing": "Any Hero Phase",
+    "declare": "If this **^^Manifestation^^** was not set up this turn, pick each enemy unit within 6\" of this **^^Manifestation^^** to be the targets.",
+    "effect": "Roll a dice for each target. On a 4+, inflict D3 mortal damage on the target.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   },
+   {
+    "name": "Warp Vortex",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "Subtract 2 from run rolls and charge rolls for enemy units while they are within 6\" of this **^^Manifestation^^**. In addition, if an enemy unit passes across this **^^Manifestation^^** and/or the round-cornered triangle formed by drawing a line around all the bases of the **^^Manifestation^^**'s parts, inflict D3 mortal damage on that enemy unit after the **^^Move^^** ability has been resolved.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Eightfold Doom-sigil",
+  "src": "Slaves to Darkness - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "CHAOS",
+   "SLAVES TO DARKNESS"
+  ],
+  "stats": {
+   "Move": "-",
+   "Health": "6",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [],
+  "abilities": [
+   {
+    "name": "Empowered by Atrocity",
+    "kind": "Ability (Passive)",
+    "color": "Red",
+    "timing": "",
+    "declare": "",
+    "effect": "If 2 or more units (friendly or enemy) were destroyed this turn, for the rest of the turn, add 1 to the Attacks characteristic of melee weapons used by friendly **^^Slaves to Darkness^^** units while they are wholly within 12\" of this **^^Manifestation^^**.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Realmscourge Rupture",
+  "src": "Slaves to Darkness - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "CHAOS",
+   "SLAVES TO DARKNESS"
+  ],
+  "stats": {
+   "Move": "9\"",
+   "Health": "7",
+   "Save": "5+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Atk": "2D3",
+    "Hit": "4+",
+    "Wnd": "3+",
+    "Rnd": "1",
+    "Dmg": "1",
+    "Ability": "Crit (2 Hits)",
+    "name": "Surging Spikes",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Debilitating Shockwave",
+    "kind": "Ability (Activated)",
+    "color": "Orange",
+    "timing": "Any Charge Phase",
+    "declare": "If this **^^Manifestation^^** charged this phase, pick an enemy unit within 1\" of it to be the target.",
+    "effect": "Roll a dice for each model in the target unit. For each 6, inflict 1 mortal damage on the target. If any models in the target unit are slain by this ability, subtract 1 from hit rolls for the target's attacks for the rest of the turn.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
+ },
+ {
+  "name": "Darkfire Daemonrift",
+  "src": "Slaves to Darkness - Library.cat",
+  "kw": [
+   "WARD (6+)",
+   "MANIFESTATION",
+   "ENDLESS SPELL",
+   "FLY",
+   "CHAOS",
+   "SLAVES TO DARKNESS"
+  ],
+  "stats": {
+   "Move": "9\"",
+   "Health": "6",
+   "Save": "6+",
+   "Banishment": "7+"
+  },
+  "weapons": [
+   {
+    "Rng": "8\"",
+    "Atk": "D6",
+    "Hit": "2+",
+    "Wnd": "3+",
+    "Rnd": "1",
+    "Dmg": "1",
+    "Ability": "Shoot in Combat",
+    "name": "Darkfire Torrent",
+    "kind": "Ranged Weapon"
+   },
+   {
+    "Atk": "3",
+    "Hit": "4+",
+    "Wnd": "2+",
+    "Rnd": "-",
+    "Dmg": "D3",
+    "Ability": "-",
+    "name": "Daemonrift Maw",
+    "kind": "Melee Weapon"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Fuelled by Sorcery",
+    "kind": "Ability (Passive)",
+    "color": "Black",
+    "timing": "",
+    "declare": "",
+    "effect": "Each time a spell is successfully cast by a unit within 12\" of this **^^Manifestation^^**, give this **^^Manifestation^^** 1 **ruinous energy point**, to a maximum of 6.\nEach time this **^^Manifestation^^** uses a **^^Shoot^^** ability, add 1 to the Attacks characteristic of its **Darkfire Torrent** for each ruinous energy point it has.\nIf this **^^Manifestation^^** is removed from play, all of its ruinous energy points are lost.",
+    "keywords": "",
+    "cast": "",
+    "chant": "",
+    "cost": ""
+   }
+  ]
  }
 ]
