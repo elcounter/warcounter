@@ -788,7 +788,7 @@
       h += `<div class="panel"><h3 class="sec"><span>Ma collection</span><span class="sec-r">${facs.length} armée${facs.length > 1 ? "s" : ""}</span></h3><div class="body">
         <div class="ctot"><span class="clab">Total, toutes armées confondues</span>${collBar(all)}</div>
         <h4 class="csub">Par armée</h4>
-        ${facs.map(F => `<button type="button" class="crow${F.id === collFac ? " on" : ""}" data-cfac="${F.id}"><span>${esc(F.en)}</span>${collBar(collStats(F.id))}</button>`).join("")}</div></div>`;
+        ${facs.map(F => `<button type="button" class="crow${F.id === collFac ? " on" : ""}" data-cfac="${F.id}"><span>${esc(F.en)}${(st => st.t && st.p === st.t ? `<svg class="cdone" viewBox="0 0 24 24" role="img" aria-label="Armée entièrement peinte"><circle cx="12" cy="12" r="11"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>` : "")(collStats(F.id))}</span>${collBar(collStats(F.id))}</button>`).join("")}</div></div>`;
     }
     const F = FX[collFac], C = (collFac && coll[collFac]) || {};
     h += `<div class="panel"><h3 class="sec">Faction</h3><div class="body">
