@@ -249,6 +249,7 @@
     ["phases","Phases","Vois quoi faire à chaque phase de jeu.",'<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/>'],
     ["parties","Parties","Suis le score de tes parties entre amis, round par round.",'<rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1.2" fill="currentColor"/><circle cx="15" cy="15" r="1.2" fill="currentColor"/><circle cx="15" cy="9" r="1.2" fill="currentColor"/><circle cx="9" cy="15" r="1.2" fill="currentColor"/>'],
     ["collection","Collection","Suis la peinture de tes figurines, faction par faction.",'<path d="M18 3l3 3-9 9-3-3z"/><path d="M9 12l-4 1-2 7 7-2 1-4"/>'],
+    ["carte","Carte des joueurs","Trouve des joueurs et des clubs près de chez toi.",'<path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>'],
   ];
   const EXTRA = [
     ["mailto:warcounter@proton.me?subject=%5BWarCounter%5D%20Retour","Signaler un bug / Suggestion","Envoie un e-mail pour faire remonter un souci ou une idée.",'<path d="M4 4h16v16H4z"/><path d="M4 8l8 5 8-5"/>'],
@@ -454,9 +455,29 @@
   document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && sess) sync(false); });
   window.addEventListener("online", () => { if (sess) sync(false); });
   // ---------- Profil joueur (carte communautaire) ----------
-  let prof = null, profLoaded = false, profCity = null, cityT = null;
+  let prof = null, profLoaded = false, profCity = null, cityT = null, profClub = null, clubT = null;
+  const likeQ = q => q.replace(/[%_*,()\\]/g, " ").trim();
+  async function clubSuggest(q){
+    const box = $("pf-csug"); if (!box) return;
+    if (q.length < 2) { box.hidden = true; return; }
+    try {
+      const L = await api(`/rest/v1/clubs?select=id,name&name=ilike.*${encodeURIComponent(likeQ(q))}*&order=name&limit=6`);
+      const exact = L.some(c => c.name.toLowerCase() === q.toLowerCase());
+      box.innerHTML = L.map(c => `<button type="button" data-club="${esc(JSON.stringify(c))}">Rejoindre <b>${esc(c.name)}</b></button>`).join("")
+        + (exact ? "" : `<p class="hint pf-new">${L.length ? "Sinon, le club" : "Nouveau club :"} « ${esc(q)} » sera créé à l'enregistrement.</p>`);
+      box.hidden = false;
+    } catch(e) { box.hidden = true; }
+  }
+  async function resolveClub(name){   // club choisi, existant (même nom) ou créé
+    if (!name) return null;
+    if (profClub && profClub.name.toLowerCase() === name.toLowerCase()) return profClub;
+    const f = await api(`/rest/v1/clubs?select=id,name&name=ilike.${encodeURIComponent(likeQ(name))}&limit=1`);
+    if (f.length) return f[0];
+    try { const c = await api("/rest/v1/clubs", {method:"POST", headers:{Prefer:"return=representation"}, body:JSON.stringify({name, created_by:sess.uid})}); return c[0]; }
+    catch(e) { const g = await api(`/rest/v1/clubs?select=id,name&name=ilike.${encodeURIComponent(likeQ(name))}&limit=1`); if (g.length) return g[0]; throw e; }
+  }
   async function loadProfile(){
-    try { if (await fresh()) { const r = await api(`/rest/v1/profiles?select=*&user_id=eq.${sess.uid}`); prof = (r || [])[0] || null; profCity = prof && prof.city ? {city:prof.city, insee:prof.insee, lat:prof.lat, lng:prof.lng} : null; } }
+    try { if (await fresh()) { const r = await api(`/rest/v1/profiles?select=*&user_id=eq.${sess.uid}`); prof = (r || [])[0] || null; profCity = prof && prof.city ? {city:prof.city, insee:prof.insee, lat:prof.lat, lng:prof.lng} : null; profClub = prof && prof.club_id ? {id:prof.club_id, name:prof.club} : null; } }
     catch(e) { accMsg = "Profil indisponible : " + frMsg(e.message); accErr = true; }
     profLoaded = true; if (location.hash === "#compte") renderAccount();
   }
@@ -468,7 +489,8 @@
       <label class="lbl" for="pf-pseudo">Pseudo</label><input id="pf-pseudo" maxlength="30" value="${esc(P.pseudo || "")}" autocomplete="nickname">
       <label class="lbl" for="pf-city">Ville</label>
       <div class="pf-cityw"><input id="pf-city" value="${esc(profCity ? profCity.city : "")}" autocomplete="off" placeholder="Tape le nom de ta commune"><div id="pf-sug" class="pf-sug" hidden></div></div>
-      <label class="lbl" for="pf-club">Club / Association (facultatif)</label><input id="pf-club" maxlength="60" value="${esc(P.club || "")}">
+      <label class="lbl" for="pf-club">Club / Association (facultatif)</label>
+      <div class="pf-cityw"><input id="pf-club" maxlength="60" value="${esc(P.club || "")}" autocomplete="off" placeholder="Tape le nom : rejoins un club existant ou crée le tien"><div id="pf-csug" class="pf-sug" hidden></div></div>
       <details class="pf-fold"${mine.size ? "" : " open"}><summary><span class="lbl">Factions jouées</span><span class="pf-count">${mine.size ? [...mine].join(", ") : "Aucune"}</span></summary>
       <div class="pf-facs">${FACTIONS.filter(f => !f.soon).map(f => `<label><input type="checkbox" class="pf-fac" value="${esc(f.en)}"${mine.has(f.en) ? " checked" : ""}> ${esc(f.en)}</label>`).join("")}</div></details>
       <label class="pf-vis"><input type="checkbox" id="pf-vis"${P.visible ? " checked" : ""}> <span><b>Apparaître sur la carte communautaire</b><br>Seuls ton pseudo, ta ville, ton club et tes factions seront visibles. Jamais ton e-mail.</span></label>
@@ -484,7 +506,8 @@
     accBusy = true;
     try {
       if (!(await fresh())) throw new Error("Session expirée, reconnecte-toi.");
-      const row = {user_id:sess.uid, pseudo, club:club || null, factions, visible:vis, updated_at:new Date().toISOString(),
+      const C = await resolveClub(club); profClub = C;
+      const row = {user_id:sess.uid, pseudo, club:C ? C.name : null, club_id:C ? C.id : null, factions, visible:vis, updated_at:new Date().toISOString(),
         city:profCity ? profCity.city : null, insee:profCity ? profCity.insee : null, lat:profCity ? profCity.lat : null, lng:profCity ? profCity.lng : null};
       await api("/rest/v1/profiles", {method:"POST", headers:{Prefer:"resolution=merge-duplicates,return=minimal"}, body:JSON.stringify(row)});
       prof = row; accMsg = vis ? "Profil enregistré : tu apparaîtras sur la carte." : "Profil enregistré (non visible sur la carte)."; accErr = false;
@@ -502,8 +525,44 @@
     } catch(e) { box.innerHTML = `<p class="hint">Recherche de ville indisponible (connexion ?).</p>`; box.hidden = false; }
   }
   $("home-view").addEventListener("input", e => {
+    if (e.target.id === "pf-club") { profClub = null; clearTimeout(clubT); const q = e.target.value.trim(); clubT = setTimeout(() => clubSuggest(q), 300); return; }
     if (e.target.id === "pf-city") { profCity = null; clearTimeout(cityT); const q = e.target.value.trim(); cityT = setTimeout(() => citySuggest(q), 300); }
   });
+  // ---------- Carte communautaire (Leaflet + OpenStreetMap, chargés à la demande) ----------
+  let mapObj = null, mapFac = "";
+  function loadLeaflet(){
+    if (window.L) return Promise.resolve();
+    return new Promise((ok, ko) => {
+      const css = document.createElement("link"); css.rel = "stylesheet"; css.href = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"; document.head.appendChild(css);
+      const js = document.createElement("script"); js.src = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"; js.onload = ok; js.onerror = ko; document.head.appendChild(js);
+    });
+  }
+  const mapHtml = () => `<div class="mapw"><p class="hint">Les joueurs qui ont choisi d'apparaître sur la carte, regroupés par ville. Pour y figurer : <a href="#compte">Mon compte</a>, puis Mon profil joueur.</p>
+    <select id="map-fac" aria-label="Filtrer par faction"><option value="">Toutes les factions</option>${FACTIONS.filter(f => !f.soon).map(f => `<option${f.en === mapFac ? " selected" : ""}>${esc(f.en)}</option>`).join("")}</select>
+    <div id="map" class="map"></div><p class="hint" id="map-info"></p></div>`;
+  async function renderMap(){
+    $("home-view").innerHTML = mapHtml();
+    try { await loadLeaflet(); } catch(e) { $("map").innerHTML = `<p class="hint">Carte indisponible : vérifie ta connexion à Internet.</p>`; return; }
+    let rows = [];
+    try { rows = await api("/rest/v1/profiles?select=pseudo,city,lat,lng,club,factions&visible=eq.true&lat=not.is.null&limit=2000", {}, !!sess); }
+    catch(e) { $("map-info").textContent = "Joueurs indisponibles : " + frMsg(e.message); }
+    if (!$("map")) return;
+    if (mapObj) { mapObj.remove(); mapObj = null; }
+    const me = prof && prof.lat ? [prof.lat, prof.lng] : null;
+    mapObj = L.map("map", {scrollWheelZoom:true}).setView(me || [46.6, 2.4], me ? 9 : 5);
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom:18, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(mapObj);
+    const R = rows.filter(r => !mapFac || (r.factions || []).includes(mapFac)), by = {};
+    R.forEach(r => { const k = r.lat.toFixed(4) + "," + r.lng.toFixed(4); (by[k] = by[k] || {lat:r.lat, lng:r.lng, city:r.city, P:[]}).P.push(r); });
+    Object.values(by).forEach(g => {
+      const n = g.P.length;
+      L.circleMarker([g.lat, g.lng], {radius:7 + Math.min(n, 10) * 1.5, color:"#d4ae3f", weight:2, fillColor:"#6b2119", fillOpacity:.85}).addTo(mapObj)
+        .bindPopup(`<b>${esc(g.city || "")}</b> · ${n} joueur${n > 1 ? "s" : ""}<br>` + g.P.map(p => `<div class="mp"><b>${esc(p.pseudo)}</b>${p.club ? ` · ${esc(p.club)}` : ""}${(p.factions || []).length ? `<br><small>${esc(p.factions.join(", "))}</small>` : ""}</div>`).join(""));
+    });
+    const clubs = new Set(R.map(r => r.club).filter(Boolean));
+    $("map-info").textContent = `${R.length} joueur${R.length > 1 ? "s" : ""}, ${Object.keys(by).length} ville${Object.keys(by).length > 1 ? "s" : ""}, ${clubs.size} club${clubs.size > 1 ? "s" : ""}.`;
+    if (!me && R.length) mapObj.fitBounds(L.latLngBounds(R.map(r => [r.lat, r.lng])).pad(.2), {maxZoom:9});
+  }
+  $("home-view").addEventListener("change", e => { if (e.target.id === "map-fac") { mapFac = e.target.value; renderMap(); } });
   function accountHtml(){
     const m = ls.get(SK.meta) || {};
     const msg = accMsg ? `<p class="acc-msg${accErr ? " err" : ""}">${esc(accMsg)}</p>` : "";
@@ -547,6 +606,8 @@
     const id = e.target.id;
     if (id === "acc-in" || id === "acc-up") { accAuth(id === "acc-up"); return; }
     if (id === "pf-save") { saveProfile(); return; }
+    const kb = e.target.closest("[data-club]");
+    if (kb) { profClub = JSON.parse(kb.dataset.club); $("pf-club").value = profClub.name; $("pf-csug").hidden = true; return; }
     const cb = e.target.closest("[data-city]");
     if (cb) { profCity = JSON.parse(cb.dataset.city); $("pf-city").value = profCity.city; $("pf-sug").hidden = true; return; }
     if (id === "acc-sync") { accBusy = true; renderAccount(); window.WCSync.dirty(); clearTimeout(pushT); try { if (await fresh()) await push(); accMsg = "Synchronisé."; accErr = false; } catch(x) { accMsg = "Synchronisation impossible : " + frMsg(x.message); accErr = true; } accBusy = false; renderAccount(); return; }
@@ -575,9 +636,9 @@
     let unitPage = null;
     if (h.startsWith("regle-u-")) { const [fid, ...rest] = h.slice(8).split("~"); const F = FACTIONS.find(f => f.id === fid); const U = fid === "ar" ? (AORU[rest.join("~")] || {}).u : fid === "rr" ? RORU.find(u => u.id === rest.join("~")) : F && F.data && F.data.units.find(u => u.id === rest.join("~")); if (U) unitPage = {F, U}; }
     const rule = unitPage ? {en:unitPage.U.en, unit:true} : fac ? {en:fac.en, fac:true} : h === "regle-renom" ? {en:"Régiments de renom", renom:true} : h === "regle-manifestations" ? {en:"Manifestations génériques", manif:true} : h.startsWith("regle-") ? RULES.find(r => r.id === h.slice(6)) : null;
-    if (!(h === "" || h === "accueil" || h === "regles" || h === "installer" || h === "soutenir" || h === "avenir" || h === "compte" || h === "confidentialite" || rule)) return;
+    if (!(h === "" || h === "accueil" || h === "regles" || h === "installer" || h === "soutenir" || h === "avenir" || h === "compte" || h === "confidentialite" || h === "carte" || rule)) return;
     $("menu-hint").hidden = STANDALONE || !(h === "" || h === "accueil" || h === "installer");
-    $("home-back").hidden = !rule && h !== "installer" && h !== "soutenir" && h !== "avenir" && h !== "compte" && h !== "confidentialite" && h !== "regles";
+    $("home-back").hidden = !rule && h !== "installer" && h !== "soutenir" && h !== "avenir" && h !== "compte" && h !== "confidentialite" && h !== "carte" && h !== "regles";
     if (rule) {
       $("home-title").textContent = rule.en;
       $("home-view").innerHTML = `<div class="rules">${rule.unit ? unitSheet(unitPage.U) : rule.renom ? rorPage() : rule.manif ? manifPage() : rule.fac ? (fac.soon ? `<p class="hint">Faction en cours de construction. Ses règles, unités et warscrolls arriveront dans une prochaine mise à jour.</p>` : fac.data ? genFactionPage(fac.data) : factionPage()) : rule.core ? corePage(rule) : rule.bp ? bpPage() : rule.tac ? tacPage() : blocks(rule.blocks)}</div>`;
@@ -586,6 +647,9 @@
       $("home-view").innerHTML = supportHtml();
     } else if (h === "compte") {
       $("home-title").textContent = "Mon compte"; delArmed = false; renderAccount();
+    } else if (h === "carte") {
+      $("home-title").textContent = "Carte";
+      if (sess && !profLoaded) loadProfile().then(() => { if (location.hash === "#carte") renderMap(); }); else renderMap();
     } else if (h === "confidentialite") {
       $("home-title").textContent = "Confidentialité";
       $("home-view").innerHTML = privacyHtml();
@@ -604,6 +668,6 @@
     }
     window.scrollTo(0, 0);
   }
-  $("home-back").addEventListener("click", () => { const h = location.hash.slice(1); location.hash = h === "confidentialite" ? "compte" : h === "installer" || h === "soutenir" || h === "avenir" || h === "compte" || h === "regles" ? "accueil" : h.startsWith("regle-u-rr~") ? "regle-renom" : h.startsWith("regle-u-ar~") ? "regle-faction-" + ((AORU[h.slice(11)] || {}).fac || "") : h.startsWith("regle-u-") ? "regle-faction-" + h.slice(8).split("~")[0] : "regles"; });
+  $("home-back").addEventListener("click", () => { const h = location.hash.slice(1); location.hash = h === "confidentialite" ? "compte" : h === "installer" || h === "soutenir" || h === "avenir" || h === "compte" || h === "carte" || h === "regles" ? "accueil" : h.startsWith("regle-u-rr~") ? "regle-renom" : h.startsWith("regle-u-ar~") ? "regle-faction-" + ((AORU[h.slice(11)] || {}).fac || "") : h.startsWith("regle-u-") ? "regle-faction-" + h.slice(8).split("~")[0] : "regles"; });
   window.addEventListener("hashchange", route);
   route();
