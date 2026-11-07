@@ -243,7 +243,6 @@
 
   const I = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
   const FEATURES = [
-    ["compte","Mon compte","Retrouve tes listes et ta collection sur tous tes appareils.",'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>'],
     ["listes","Listes","Crée et vérifie tes listes d'armée.",'<path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/>'],
     ["regles","Règles","Découvre les règles de base et de saison.",'<path d="M12 4v16M5 7l7-3 7 3M5 7l-2 6a3 3 0 0 0 4 0zM19 7l-2 6a3 3 0 0 0 4 0zM8 20h8"/>'],
     ["memo","Mémo","Retrouve tes warscrolls et les règles de ton armée.",'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/><path d="M9 7h6"/>'],
@@ -260,6 +259,8 @@
     return `<div class="welcome"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#6b2119"/><circle cx="32" cy="32" r="25" fill="none" stroke="#d4ae3f" stroke-width="2.5"/><path d="M20 18l6 28 6-18 6 18 6-28" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></svg>
       <h2>Bienvenue sur WarCounter</h2><p>Ton compagnon pour Warhammer Age of Sigmar.</p></div>
       ${STANDALONE ? "" : `<a class="btn-install" href="#installer">${I('<path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 19h14"/>')}<span>Installer l'app</span></a>`}
+      <a class="btn-install btn-acc" href="#compte">${I('<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>')}<span>${sess ? "Mon compte" : "Créer mon compte"}</span></a>
+      ${sess ? "" : `<p class="acc-pitch">Gratuit : tes listes et ta collection sauvegardées et retrouvées sur tous tes appareils.</p>`}
       <div class="feat">${FEATURES.map(([id, n, d, svg]) => `<a class="fcard" href="#${id}"><span class="ficon">${I(svg)}</span><span><b>${n}</b><br>${d}</span></a>`).join("")}</div>
       <div class="home-extra">
         <div class="feat">${EXTRA.map(([href, n, d, svg]) => `<a class="fcard" href="${href}"><span class="ficon">${I(svg)}</span><span><b>${n}</b><br>${d}</span></a>`).join("")}</div>

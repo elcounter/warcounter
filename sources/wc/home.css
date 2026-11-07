@@ -115,3 +115,5 @@
 #app-home .acc .btn:disabled{opacity:.5}
 #app-home .acc .lbl{display:block;font:600 12px var(--body);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
 #app-home .acc p{margin:0}
+
+#app-home .acc-pitch{margin:-6px 0 14px;text-align:center;font-size:13px;color:var(--muted)}
