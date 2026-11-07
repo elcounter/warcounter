@@ -1,7 +1,7 @@
 .hm{flex:none;display:grid;place-items:center;width:40px;height:40px;margin-left:auto;color:#fff;border-radius:4px}
 .hm svg{width:24px;height:24px}
 .hm:hover{background:rgba(255,255,255,.12)}
-.hm-map+.hm,.hm-acc+.hm{margin-left:2px}
+.hm-col+.hm,.hm-map+.hm,.hm-acc+.hm{margin-left:2px}
 #app-army .bar h1,#app-bs .bar h1{flex:1}
 #app-home main{padding-block:16px calc(40px + var(--navh))}
 #app-home .welcome{text-align:center;padding:12px 8px 18px}
@@ -137,3 +137,4 @@
 #app-home #map-fac{width:100%;padding:10px;border:1px solid #d6cfc3;border-radius:8px;font:15px var(--body);background:#fff}
 #app-home .mp{margin-top:6px}
 #app-home .pf-new{margin:0;padding:8px 12px}
+@media (max-width:420px){.hm{width:34px}.hm svg{width:21px;height:21px}.hm-col+.hm,.hm-map+.hm,.hm-acc+.hm{margin-left:0}}
