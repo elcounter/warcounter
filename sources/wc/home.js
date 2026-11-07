@@ -243,6 +243,7 @@
 
   const I = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
   const FEATURES = [
+    ["compte","Mon compte","Retrouve tes listes et ta collection sur tous tes appareils.",'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>'],
     ["listes","Listes","Crée et vérifie tes listes d'armée.",'<path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/>'],
     ["regles","Règles","Découvre les règles de base et de saison.",'<path d="M12 4v16M5 7l7-3 7 3M5 7l-2 6a3 3 0 0 0 4 0zM19 7l-2 6a3 3 0 0 0 4 0zM8 20h8"/>'],
     ["memo","Mémo","Retrouve tes warscrolls et les règles de ton armée.",'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/><path d="M9 7h6"/>'],
@@ -251,7 +252,6 @@
     ["collection","Collection","Suis la peinture de tes figurines, faction par faction.",'<path d="M18 3l3 3-9 9-3-3z"/><path d="M9 12l-4 1-2 7 7-2 1-4"/>'],
   ];
   const EXTRA = [
-    ["#compte","Mon compte","Retrouve tes listes et ta collection sur tous tes appareils.",'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>'],
     ["mailto:warcounter@proton.me?subject=%5BWarCounter%5D%20Retour","Signaler un bug / Suggestion","Envoie un e-mail pour faire remonter un souci ou une idée.",'<path d="M4 4h16v16H4z"/><path d="M4 8l8 5 8-5"/>'],
     ["#avenir","Fonctionnalités à venir","Découvre ce qui arrive bientôt dans l'app.",'<path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/>'],
     ["#soutenir","Si tu veux soutenir le projet","Un don pour l'hébergement et le développement.",'<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>']

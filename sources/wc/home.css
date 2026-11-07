@@ -1,6 +1,7 @@
 .hm{flex:none;display:grid;place-items:center;width:40px;height:40px;margin-left:auto;color:#fff;border-radius:4px}
 .hm svg{width:24px;height:24px}
 .hm:hover{background:rgba(255,255,255,.12)}
+.hm-acc+.hm{margin-left:2px}
 #app-army .bar h1,#app-bs .bar h1{flex:1}
 #app-home main{padding-block:16px calc(40px + var(--navh))}
 #app-home .welcome{text-align:center;padding:12px 8px 18px}
