@@ -803,7 +803,7 @@
       const rows = Object.entries(C).map(([id, c]) => [UF(F, id), c]).filter(([u]) => u).sort((x, y) => x[0].en.localeCompare(y[0].en));
       h += rows.length ? `<div class="panel"><h3 class="sec"><span>Unités</span><span class="sec-r">${rows.length}</span></h3><div class="body">${rows.map(([u, c]) => `
         <div class="cunit"><div class="cun"><b>${esc(u.en)}</b><button type="button" class="del" data-cdel="${esc(u.id)}" aria-label="Retirer ${esc(u.en)}">${ICON_X}</button></div>
-          <div class="cnum">${["À peindre","En cours","Peintes"].map((lab, k) => `<label><span>${lab}</span><input type="number" min="0" inputmode="numeric" value="${c[k]}" data-cu="${esc(u.id)}" data-ck="${k}"></label>`).join("")}</div>
+          <div class="cnum">${["À peindre","En cours","Peintes"].map((lab, k) => `<div class="cst"><span>${lab}</span><div class="cstep"><button type="button" data-cu="${esc(u.id)}" data-ck="${k}" data-cd="-1" aria-label="${lab} : moins"${c[k] ? "" : " disabled"}>−</button><b>${c[k]}</b><button type="button" data-cu="${esc(u.id)}" data-ck="${k}" data-cd="1" aria-label="${lab} : plus">+</button></div></div>`).join("")}</div>
           <div class="cbar sm"><span class="cp" style="width:${cSum(c) ? Math.round(c[2] * 100 / cSum(c)) : 0}%"></span><span class="ce" style="width:${cSum(c) ? Math.round(c[1] * 100 / cSum(c)) : 0}%"></span></div></div>`).join("")}</div></div>`
         : `<p class="hint">Ajoute tes unités : elles arrivent « à peindre » avec leur nombre de figurines, puis répartis-les entre à peindre, en cours et peintes.</p>`;
     }
@@ -814,10 +814,10 @@
     const t = e.target;
     if (t.id === "coll-fac") { collFac = t.value; renderColl(); return; }
     if (t.id === "coll-add" && t.value) { const u = UF(FX[collFac], t.value); (coll[collFac] = coll[collFac] || {})[t.value] = [u.size || 1, 0, 0]; saveColl(); renderColl(); return; }
-    if (t.dataset.cu) { const c = coll[collFac][t.dataset.cu]; c[+t.dataset.ck] = Math.max(0, parseInt(t.value, 10) || 0); saveColl(); renderColl(); }
   });
   $("coll").addEventListener("click", e => {
     const f = e.target.closest("[data-cfac]"); if (f) { collFac = f.dataset.cfac; renderColl(); return; }
+    const st = e.target.closest("[data-cd]"); if (st) { const c = coll[collFac][st.dataset.cu], k = +st.dataset.ck; c[k] = Math.max(0, c[k] + +st.dataset.cd); saveColl(); renderColl(); return; }
     const d = e.target.closest("[data-cdel]"); if (d) { delete coll[collFac][d.dataset.cdel]; if (!Object.keys(coll[collFac]).length) delete coll[collFac]; saveColl(); renderColl(); }
   });
   function route(){
