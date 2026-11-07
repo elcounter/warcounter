@@ -453,6 +453,57 @@
   if (sess) sync(false);
   document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && sess) sync(false); });
   window.addEventListener("online", () => { if (sess) sync(false); });
+  // ---------- Profil joueur (carte communautaire) ----------
+  let prof = null, profLoaded = false, profCity = null, cityT = null;
+  async function loadProfile(){
+    try { if (await fresh()) { const r = await api(`/rest/v1/profiles?select=*&user_id=eq.${sess.uid}`); prof = (r || [])[0] || null; profCity = prof && prof.city ? {city:prof.city, insee:prof.insee, lat:prof.lat, lng:prof.lng} : null; } }
+    catch(e) { accMsg = "Profil indisponible : " + frMsg(e.message); accErr = true; }
+    profLoaded = true; if (location.hash === "#compte") renderAccount();
+  }
+  function profileHtml(){
+    if (!profLoaded) return `<div class="panel"><h3 class="sec">Mon profil joueur</h3><div class="body acc"><p class="hint">Chargement…</p></div></div>`;
+    const P = prof || {}, mine = new Set(P.factions || []);
+    return `<div class="panel"><h3 class="sec">Mon profil joueur</h3><div class="body acc">
+      <p class="hint">Pour la future carte communautaire : trouve des joueurs et des clubs près de chez toi.</p>
+      <label class="lbl" for="pf-pseudo">Pseudo</label><input id="pf-pseudo" maxlength="30" value="${esc(P.pseudo || "")}" autocomplete="nickname">
+      <label class="lbl" for="pf-city">Ville</label>
+      <div class="pf-cityw"><input id="pf-city" value="${esc(profCity ? profCity.city : "")}" autocomplete="off" placeholder="Tape le nom de ta commune"><div id="pf-sug" class="pf-sug" hidden></div></div>
+      <label class="lbl" for="pf-club">Club / Association (facultatif)</label><input id="pf-club" maxlength="60" value="${esc(P.club || "")}">
+      <details class="pf-fold"${mine.size ? "" : " open"}><summary><span class="lbl">Factions jouées</span><span class="pf-count">${mine.size ? [...mine].join(", ") : "Aucune"}</span></summary>
+      <div class="pf-facs">${FACTIONS.filter(f => !f.soon).map(f => `<label><input type="checkbox" class="pf-fac" value="${esc(f.en)}"${mine.has(f.en) ? " checked" : ""}> ${esc(f.en)}</label>`).join("")}</div></details>
+      <label class="pf-vis"><input type="checkbox" id="pf-vis"${P.visible ? " checked" : ""}> <span><b>Apparaître sur la carte communautaire</b><br>Seuls ton pseudo, ta ville, ton club et tes factions seront visibles. Jamais ton e-mail.</span></label>
+      <button type="button" class="btn primary wide" id="pf-save"${accBusy ? " disabled" : ""}>Enregistrer mon profil</button>
+    </div></div>`;
+  }
+  async function saveProfile(){
+    const pseudo = ($("pf-pseudo").value || "").trim(), club = ($("pf-club").value || "").trim(), vis = $("pf-vis").checked;
+    const factions = [...document.querySelectorAll(".pf-fac:checked")].map(x => x.value);
+    if (($("pf-city").value || "").trim() === "") profCity = null;
+    if (pseudo.length < 2) { accMsg = "Choisis un pseudo d'au moins 2 caractères."; accErr = true; renderAccount(); return; }
+    if (vis && !profCity) { accMsg = "Pour apparaître sur la carte, choisis ta ville dans la liste proposée."; accErr = true; renderAccount(); return; }
+    accBusy = true;
+    try {
+      if (!(await fresh())) throw new Error("Session expirée, reconnecte-toi.");
+      const row = {user_id:sess.uid, pseudo, club:club || null, factions, visible:vis, updated_at:new Date().toISOString(),
+        city:profCity ? profCity.city : null, insee:profCity ? profCity.insee : null, lat:profCity ? profCity.lat : null, lng:profCity ? profCity.lng : null};
+      await api("/rest/v1/profiles", {method:"POST", headers:{Prefer:"resolution=merge-duplicates,return=minimal"}, body:JSON.stringify(row)});
+      prof = row; accMsg = vis ? "Profil enregistré : tu apparaîtras sur la carte." : "Profil enregistré (non visible sur la carte)."; accErr = false;
+    } catch(e) { accMsg = /duplicate|unique|23505/i.test(e.message) ? "Ce pseudo est déjà pris, choisis-en un autre." : "Enregistrement impossible : " + frMsg(e.message); accErr = true; }
+    accBusy = false; renderAccount(); window.scrollTo(0, 0);
+  }
+  async function citySuggest(q){
+    const box = $("pf-sug"); if (!box) return;
+    if (q.length < 2) { box.hidden = true; return; }
+    try {
+      const r = await fetch(`https://geo.api.gouv.fr/communes?nom=${encodeURIComponent(q)}&fields=nom,code,centre,departement&boost=population&limit=6`);
+      const L = await r.json();
+      box.innerHTML = L.map(c => `<button type="button" data-city="${esc(JSON.stringify({city:c.nom + (c.departement ? " (" + c.departement.code + ")" : ""), insee:c.code, lat:c.centre ? c.centre.coordinates[1] : null, lng:c.centre ? c.centre.coordinates[0] : null}))}">${esc(c.nom)}${c.departement ? ` <small>${esc(c.departement.nom)} (${esc(c.departement.code)})</small>` : ""}</button>`).join("") || `<p class="hint">Aucune commune trouvée.</p>`;
+      box.hidden = false;
+    } catch(e) { box.innerHTML = `<p class="hint">Recherche de ville indisponible (connexion ?).</p>`; box.hidden = false; }
+  }
+  $("home-view").addEventListener("input", e => {
+    if (e.target.id === "pf-city") { profCity = null; clearTimeout(cityT); const q = e.target.value.trim(); cityT = setTimeout(() => citySuggest(q), 300); }
+  });
   function accountHtml(){
     const m = ls.get(SK.meta) || {};
     const msg = accMsg ? `<p class="acc-msg${accErr ? " err" : ""}">${esc(accMsg)}</p>` : "";
@@ -463,6 +514,7 @@
         <button type="button" class="btn primary wide" id="acc-sync"${accBusy ? " disabled" : ""}>Synchroniser maintenant</button>
         <button type="button" class="btn wide" id="acc-out">Se déconnecter</button>
       </div></div>
+      ${profileHtml()}
       <div class="panel"><div class="body acc">
         <p class="hint">Supprimer ton compte efface définitivement tes données sur le serveur. Les données de cet appareil sont conservées.</p>
         <button type="button" class="btn danger wide" id="acc-del">${delArmed ? "Confirmer la suppression définitive" : "Supprimer mon compte"}</button>
@@ -478,7 +530,7 @@
       </div></div>
       <p class="sup-thanks"><a href="#confidentialite">Confidentialité et données personnelles</a></p></div>`;
   }
-  function renderAccount(){ $("home-view").innerHTML = accountHtml(); }
+  function renderAccount(){ $("home-view").innerHTML = accountHtml(); if (sess && !profLoaded) loadProfile(); }
   async function accAuth(signup){
     const email = ($("acc-mail").value || "").trim(), password = $("acc-pass").value || "";
     if (!email || !password) { accMsg = "Indique ton e-mail et ton mot de passe."; accErr = true; renderAccount(); return; }
@@ -494,11 +546,14 @@
   $("home-view").addEventListener("click", async e => {
     const id = e.target.id;
     if (id === "acc-in" || id === "acc-up") { accAuth(id === "acc-up"); return; }
+    if (id === "pf-save") { saveProfile(); return; }
+    const cb = e.target.closest("[data-city]");
+    if (cb) { profCity = JSON.parse(cb.dataset.city); $("pf-city").value = profCity.city; $("pf-sug").hidden = true; return; }
     if (id === "acc-sync") { accBusy = true; renderAccount(); window.WCSync.dirty(); clearTimeout(pushT); try { if (await fresh()) await push(); accMsg = "Synchronisé."; accErr = false; } catch(x) { accMsg = "Synchronisation impossible : " + frMsg(x.message); accErr = true; } accBusy = false; renderAccount(); return; }
-    if (id === "acc-out") { try { await api("/auth/v1/logout", {method:"POST"}); } catch(x) {} clearSess(); accMsg = "Tu es déconnecté. Tes données restent sur cet appareil."; accErr = false; delArmed = false; renderAccount(); return; }
+    if (id === "acc-out") { try { await api("/auth/v1/logout", {method:"POST"}); } catch(x) {} clearSess(); prof = null; profLoaded = false; profCity = null; accMsg = "Tu es déconnecté. Tes données restent sur cet appareil."; accErr = false; delArmed = false; renderAccount(); return; }
     if (id === "acc-del") {
       if (!delArmed) { delArmed = true; renderAccount(); return; }
-      try { if (await fresh()) await api("/rest/v1/rpc/delete_my_account", {method:"POST", body:"{}"}); clearSess(); accMsg = "Ton compte et tes données en ligne ont été supprimés."; accErr = false; }
+      try { if (await fresh()) await api("/rest/v1/rpc/delete_my_account", {method:"POST", body:"{}"}); clearSess(); prof = null; profLoaded = false; profCity = null; accMsg = "Ton compte et tes données en ligne ont été supprimés."; accErr = false; }
       catch(x) { accMsg = "Suppression impossible : " + frMsg(x.message); accErr = true; }
       delArmed = false; renderAccount();
     }
@@ -507,6 +562,7 @@
     <div class="panel"><div class="body"><dl class="blk">
       <dt><b>Sans compte</b></dt><dd>Tes listes, ta collection et tes parties restent uniquement sur ton appareil. Rien n'est envoyé.</dd>
       <dt><b>Avec un compte (facultatif)</b></dt><dd>Sont enregistrés : ton adresse e-mail, ton mot de passe (chiffré, jamais lisible), tes listes et ta collection. Ils servent uniquement à te connecter et à synchroniser tes données entre tes appareils.</dd>
+      <dt><b>Profil joueur (facultatif)</b></dt><dd>Pseudo, ville (centre de la commune, jamais d'adresse), club et factions jouées. Ils ne sont visibles des autres joueurs que si tu coches « Apparaître sur la carte communautaire », et tu peux décocher à tout moment.</dd>
       <dt><b>Hébergement</b></dt><dd>Supabase, sur des serveurs situés dans l'Union européenne.</dd>
       <dt><b>Durée de conservation</b></dt><dd>Jusqu'à la suppression de ton compte.</dd>
       <dt><b>Tes droits</b></dt><dd>Tu peux supprimer ton compte et toutes tes données en ligne à tout moment depuis la page Mon compte. Pour toute question (accès, rectification, suppression) : warcounter@proton.me.</dd>

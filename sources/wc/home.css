@@ -117,3 +117,18 @@
 #app-home .acc p{margin:0}
 
 #app-home .acc-pitch{margin:-6px 0 14px;text-align:center;font-size:13px;color:var(--muted)}
+#app-home .pf-cityw{position:relative}
+#app-home .pf-sug{display:grid;margin-top:4px;border:1px solid #d6cfc3;border-radius:8px;background:#fff;overflow:hidden}
+#app-home .pf-sug button{text-align:left;padding:10px 12px;border:0;border-top:1px solid #eee5d8;background:#fff;font:15px var(--body);cursor:pointer}
+#app-home .pf-sug button:first-child{border-top:0}
+#app-home .pf-sug small{color:var(--muted)}
+#app-home .pf-facs{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:6px 10px;font-size:14px}
+#app-home .pf-facs label{display:flex;align-items:center;gap:6px}
+#app-home .pf-vis{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:#f7f2ea;border-radius:8px;font-size:14px}
+#app-home .pf-vis input{margin-top:3px;width:20px;height:20px;flex:none}
+#app-home .acc input[type=checkbox]{width:auto;padding:0}
+#app-home .panel .sec{margin:0}
+#app-home .pf-fold summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;gap:2px;padding:10px 12px;border:1px solid #d6cfc3;border-radius:8px}
+#app-home .pf-fold summary::-webkit-details-marker{display:none}
+#app-home .pf-fold[open] summary{margin-bottom:10px}
+#app-home .pf-count{font-size:14px}
