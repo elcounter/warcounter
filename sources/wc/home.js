@@ -82,6 +82,9 @@
   const FIMG = window.WC_FIMG || {};
   const FACTIONS = [{id:"hashut", en:"Helsmiths of Hashut", ga:"Chaos", src:FIMG.hashut}]
     .concat(FACDATA.map(f => ({id:f.id, en:f.en, ga:{ogors:"Destruction", lumineth:"Ordre", skaven:"Chaos", cities:"Ordre", stormcast:"Ordre", slaves:"Chaos", soulblight:"Mort", daughters:"Ordre", fyreslayers:"Ordre", idoneth:"Ordre", kharadron:"Ordre", seraphon:"Ordre", sylvaneth:"Ordre", khorne:"Chaos", tzeentch:"Chaos", nurgle:"Chaos", slaanesh:"Chaos", fec:"Mort", nighthaunt:"Mort", ossiarch:"Mort", gloomspite:"Destruction", ironjawz:"Destruction", kruleboyz:"Destruction", sons:"Destruction"}[f.id] || "Autres", src:FIMG[f.img], data:f})));
+  // Factions annoncées, sans données pour l'instant
+  FACTIONS.push({id:"khazalite", en:"Khazalite Holds", ga:"Ordre", soon:true});
+  FACTIONS.sort((a, b) => a.en.localeCompare(b.en));
   const ALLIANCES = ["Ordre", "Chaos", "Mort", "Destruction"];
   const RULES = GHB.concat(CORE_PAGES);
   // Warscrolls de manifestations, affichés sous leur sort d'invocation
@@ -355,6 +358,7 @@
     CORE_PAGES.forEach(r => (r.core || []).forEach(sec => { add(sec.title, `${sec.num ? sec.num + " · " : ""}${r.en}`, "#regle-" + r.id, names(sec)); }));
     FACTIONS.forEach(F => {
       add(F.en, "Faction · " + F.ga, "#regle-faction-" + F.id);
+      if (F.soon) return;
       const units = F.data ? F.data.units : (ARMY ? ARMY.UNITS : []);
       units.forEach(u => add(u.en, "Unité · " + F.en, F.data ? `#regle-u-${F.id}~${u.id}` : "#regle-faction-" + F.id, [u.kw]));
       const abs = F.data ? F.data.sections.flatMap(sec => sec.items.flatMap(i => i.abs.map(a => [a, sec.title])))
@@ -384,7 +388,7 @@
     return `<input type="search" class="rsearch" id="rules-q" placeholder="Rechercher une règle, une faction, une unité, une aptitude…" value="${esc(rulesQ)}" autocomplete="off"><div id="rres" class="rres" hidden></div><div id="rall" class="rall"><h2 class="rh">Général</h2><div class="rgrid">${CORE_PAGES.slice(0, 1).map(card).join("")}</div>
       <h2 class="rh">Règles avancées</h2><div class="rgrid">${CORE_PAGES.slice(1).map(card).join("")}</div>
       <h2 class="rh">Manuel du Général 2026-27</h2><div class="rgrid">${GHB.map(card).join("")}${ROR.length ? card({id:"renom", en:"Régiments de renom", sub:ROR.length + " régiments"}) : ""}${UMANIF.length ? card({id:"manifestations", en:"Manifestations génériques", sub:UMANIF.length + " domaines"}) : ""}</div>
-      ${ALLIANCES.map(g => { const L = FACTIONS.filter(f => f.ga === g); return L.length ? `<h2 class="rh">${g}</h2><div class="rgrid">${L.map(f => `<a class="rcard" href="#regle-faction-${f.id}"><b>${esc(f.en)}</b><span>${f.data ? f.data.units.length : (ARMY ? ARMY.UNITS.length : "")} unités</span></a>`).join("")}</div>` : ""; }).join("")}</div>`;
+      ${ALLIANCES.map(g => { const L = FACTIONS.filter(f => f.ga === g); return L.length ? `<h2 class="rh">${g}</h2><div class="rgrid">${L.map(f => `<a class="rcard" href="#regle-faction-${f.id}"><b>${esc(f.en)}</b><span>${f.soon ? "À venir" : (f.data ? f.data.units.length : (ARMY ? ARMY.UNITS.length : "")) + " unités"}</span></a>`).join("")}</div>` : ""; }).join("")}</div>`;
   }
   function route(){
     const h = location.hash.slice(1);
@@ -397,7 +401,7 @@
     $("home-back").hidden = !rule && h !== "installer" && h !== "soutenir" && h !== "avenir" && h !== "regles";
     if (rule) {
       $("home-title").textContent = rule.en;
-      $("home-view").innerHTML = `<div class="rules">${rule.unit ? unitSheet(unitPage.U) : rule.renom ? rorPage() : rule.manif ? manifPage() : rule.fac ? (fac.data ? genFactionPage(fac.data) : factionPage()) : rule.core ? corePage(rule) : rule.bp ? bpPage() : rule.tac ? tacPage() : blocks(rule.blocks)}</div>`;
+      $("home-view").innerHTML = `<div class="rules">${rule.unit ? unitSheet(unitPage.U) : rule.renom ? rorPage() : rule.manif ? manifPage() : rule.fac ? (fac.soon ? `<p class="hint">Faction en cours de construction. Ses règles, unités et warscrolls arriveront dans une prochaine mise à jour.</p>` : fac.data ? genFactionPage(fac.data) : factionPage()) : rule.core ? corePage(rule) : rule.bp ? bpPage() : rule.tac ? tacPage() : blocks(rule.blocks)}</div>`;
     } else if (h === "soutenir") {
       $("home-title").textContent = "Soutenir le projet";
       $("home-view").innerHTML = supportHtml();

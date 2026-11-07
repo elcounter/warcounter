@@ -317,7 +317,9 @@
   }
 
   // ---------- Écran Listes ----------
-  const facOptions = (sel, ph) => (ph ? `<option value=""${sel ? "" : " selected"} disabled>${ph}</option>` : "") + FAC_ORDER.map(F => `<option value="${F.id}"${F.id === sel ? " selected" : ""}>${esc(F.en)}</option>`).join("");
+  // Factions annoncées, visibles mais pas encore sélectionnables
+  const FAC_SOON = [{id:"", en:"Khazalite Holds", soon:true}];
+  const facOptions = (sel, ph) => (ph ? `<option value=""${sel ? "" : " selected"} disabled>${ph}</option>` : "") + FAC_ORDER.concat(FAC_SOON).sort((a, b) => a.en.localeCompare(b.en)).map(F => F.soon ? `<option value="" disabled>${esc(F.en)} (à venir)</option>` : `<option value="${F.id}"${F.id === sel ? " selected" : ""}>${esc(F.en)}</option>`).join("");
   function renderLists(){
     setTimeout(() => { listMsg = ""; }, 0);
     const cards = state.lists.map(l => {
