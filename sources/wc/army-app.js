@@ -783,7 +783,9 @@
     let h = "";
     if (facs.length) {
       const all = facs.map(F => collStats(F.id)).reduce((x, y) => ({a:x.a + y.a, e:x.e + y.e, p:x.p + y.p, t:x.t + y.t, pts:x.pts + y.pts}));
-      h += `<div class="panel"><h3 class="sec">Toutes mes armées</h3><div class="body">${collBar(all)}
+      h += `<div class="panel"><h3 class="sec"><span>Ma collection</span><span class="sec-r">${facs.length} armée${facs.length > 1 ? "s" : ""}</span></h3><div class="body">
+        <div class="ctot"><span class="clab">Total, toutes armées confondues</span>${collBar(all)}</div>
+        <h4 class="csub">Par armée</h4>
         ${facs.map(F => `<button type="button" class="crow${F.id === collFac ? " on" : ""}" data-cfac="${F.id}"><span>${esc(F.en)}</span>${collBar(collStats(F.id))}</button>`).join("")}</div></div>`;
     }
     const F = FX[collFac], C = (collFac && coll[collFac]) || {};
