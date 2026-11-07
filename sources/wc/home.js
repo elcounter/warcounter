@@ -246,15 +246,18 @@
     ["phases","Phases","Vois quoi faire à chaque phase de jeu.",'<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/>'],
     ["parties","Parties","Suis le score de tes parties entre amis, round par round.",'<rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1.2" fill="currentColor"/><circle cx="15" cy="15" r="1.2" fill="currentColor"/><circle cx="15" cy="9" r="1.2" fill="currentColor"/><circle cx="9" cy="15" r="1.2" fill="currentColor"/>']
   ];
+  const EXTRA = [
+    ["mailto:warcounter@proton.me?subject=%5BWarCounter%5D%20Retour","Signaler un bug / Suggestion","Envoie un e-mail pour faire remonter un souci ou une idée.",'<path d="M4 4h16v16H4z"/><path d="M4 8l8 5 8-5"/>'],
+    ["#avenir","Fonctionnalités à venir","Découvre ce qui arrive bientôt dans l'app.",'<path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/>'],
+    ["#soutenir","Si tu veux soutenir le projet","Un don pour l'hébergement et le développement.",'<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>']
+  ];
   function homeHtml(){
     return `<div class="welcome"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#6b2119"/><circle cx="32" cy="32" r="25" fill="none" stroke="#d4ae3f" stroke-width="2.5"/><path d="M20 18l6 28 6-18 6 18 6-28" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></svg>
       <h2>Bienvenue sur WarCounter</h2><p>Ton compagnon pour Warhammer Age of Sigmar.</p></div>
       ${STANDALONE ? "" : `<a class="btn-install" href="#installer">${I('<path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 19h14"/>')}<span>Installer l'app</span></a>`}
       <div class="feat">${FEATURES.map(([id, n, d, svg]) => `<a class="fcard" href="#${id}"><span class="ficon">${I(svg)}</span><span><b>${n}</b><br>${d}</span></a>`).join("")}</div>
       <div class="home-extra">
-        <a class="btn-link" href="mailto:warcounter@proton.me?subject=%5BWarCounter%5D%20Retour">Signaler un bug / Suggestion</a>
-        <a class="btn-link" href="#avenir">Fonctionnalités à venir</a>
-        <a class="btn-link" href="#soutenir">Si tu veux soutenir le projet</a>
+        <div class="feat">${EXTRA.map(([href, n, d, svg]) => `<a class="fcard" href="${href}"><span class="ficon">${I(svg)}</span><span><b>${n}</b><br>${d}</span></a>`).join("")}</div>
         <a class="btn-link nc-btn" href="https://elcounter.github.io/necrocounter/" target="_blank" rel="noopener"><b>Découvrir NecroCounter</b><span>Ton compagnon pour Necromunda</span></a>
       </div>`;
   }
