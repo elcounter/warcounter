@@ -130,7 +130,7 @@
     return {lists:[], active:null};
   }
   let state = load();
-  function save(){ try { localStorage.setItem(STORE, JSON.stringify(state)); } catch(e) {} }
+  function save(){ try { localStorage.setItem(STORE, JSON.stringify(state)); } catch(e) {} if (window.WCSync) window.WCSync.dirty(); }
   const getList = id => state.lists.find(l => l.id === id);
   const activeList = () => getList(state.active) || null;
 
@@ -767,7 +767,7 @@
   // ---------- Collection : figurines à peindre / en cours / peintes, par faction ----------
   const COLL = "warcounter-collection";
   let coll = (() => { try { return JSON.parse(localStorage.getItem(COLL)) || {}; } catch(e) { return {}; } })(), collFac = "";
-  const saveColl = () => { try { localStorage.setItem(COLL, JSON.stringify(coll)); } catch(e) {} };
+  const saveColl = () => { try { localStorage.setItem(COLL, JSON.stringify(coll)); } catch(e) {} if (window.WCSync) window.WCSync.dirty(); };
   const cSum = c => c[0] + c[1] + c[2];
   function collStats(fid){
     const F = FX[fid], C = coll[fid] || {}; let a = 0, e = 0, p = 0, pts = 0;

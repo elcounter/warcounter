@@ -102,3 +102,15 @@
 .fld span{font:600 13px var(--display);color:#444}
 .fld select,.fld textarea{font:400 15px var(--body);padding:10px 12px;border:1px solid #ccc;border-radius:8px;background:#fff}
 .fld textarea{resize:vertical;min-height:110px}
+
+#app-home .acc{display:grid;gap:10px}
+#app-home .acc input{width:100%;box-sizing:border-box;padding:12px;border:1px solid #d6cfc3;border-radius:8px;font:16px var(--body)}
+#app-home .acc .lbl{margin:4px 0 -4px}
+#app-home .acc-msg{margin:0 0 12px;padding:10px 12px;border-radius:8px;background:#e7f1e8;color:#2d5c35;font-size:14px}
+#app-home .acc-msg.err{background:#f6e3e0;color:#8a2a1c}
+#app-home .btn.danger{color:#8a2a1c;border-color:#e3b9b2}
+#app-home .acc .btn{width:100%;padding:12px 14px;border:2px solid #d6cfc3;border-radius:8px;background:#fff;color:#2a2a2a;font:700 15px var(--body);cursor:pointer}
+#app-home .acc .btn.primary{background:var(--bar);border-color:var(--bar);color:#fff}
+#app-home .acc .btn:disabled{opacity:.5}
+#app-home .acc .lbl{display:block;font:600 12px var(--body);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+#app-home .acc p{margin:0}

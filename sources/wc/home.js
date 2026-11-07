@@ -251,6 +251,7 @@
     ["collection","Collection","Suis la peinture de tes figurines, faction par faction.",'<path d="M18 3l3 3-9 9-3-3z"/><path d="M9 12l-4 1-2 7 7-2 1-4"/>'],
   ];
   const EXTRA = [
+    ["#compte","Mon compte","Retrouve tes listes et ta collection sur tous tes appareils.",'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>'],
     ["mailto:warcounter@proton.me?subject=%5BWarCounter%5D%20Retour","Signaler un bug / Suggestion","Envoie un e-mail pour faire remonter un souci ou une idée.",'<path d="M4 4h16v16H4z"/><path d="M4 8l8 5 8-5"/>'],
     ["#avenir","Fonctionnalités à venir","Découvre ce qui arrive bientôt dans l'app.",'<path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/>'],
     ["#soutenir","Si tu veux soutenir le projet","Un don pour l'hébergement et le développement.",'<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>']
@@ -390,21 +391,147 @@
       <h2 class="rh">Manuel du Général 2026-27</h2><div class="rgrid">${GHB.map(card).join("")}${ROR.length ? card({id:"renom", en:"Régiments de renom", sub:ROR.length + " régiments"}) : ""}${UMANIF.length ? card({id:"manifestations", en:"Manifestations génériques", sub:UMANIF.length + " domaines"}) : ""}</div>
       ${ALLIANCES.map(g => { const L = FACTIONS.filter(f => f.ga === g); return L.length ? `<h2 class="rh">${g}</h2><div class="rgrid">${L.map(f => `<a class="rcard" href="#regle-faction-${f.id}"><b>${esc(f.en)}</b><span>${f.soon ? "À venir" : (f.data ? f.data.units.length : (ARMY ? ARMY.UNITS.length : "")) + " unités"}</span></a>`).join("")}</div>` : ""; }).join("")}</div>`;
   }
+  // ---------- Compte (Supabase) : synchronisation des listes et de la collection ----------
+  const SB = "https://agqdwjkxeodxdrujphrv.supabase.co", SBK = "sb_publishable_B0a1M8wjrilqmHfGnAErMQ_iueIp0g8";
+  const SK = {lists:"warcounter-listes", collection:"warcounter-collection", sess:"warcounter-session", meta:"warcounter-sync"};
+  const ls = {get:k => { try { return JSON.parse(localStorage.getItem(k)); } catch(e) { return null; } },
+    set:(k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch(e) {} }, del:k => { try { localStorage.removeItem(k); } catch(e) {} }};
+  let sess = ls.get(SK.sess), accMsg = "", accErr = false, accBusy = false, delArmed = false, pushT = null;
+  async function api(path, opt = {}, auth = true){
+    const h = Object.assign({apikey:SBK, "Content-Type":"application/json"}, opt.headers || {});
+    if (auth && sess) h.Authorization = "Bearer " + sess.access_token;
+    const r = await fetch(SB + path, Object.assign({}, opt, {headers:h}));
+    const t = await r.text(); let j = null; try { j = t ? JSON.parse(t) : null; } catch(e) {}
+    if (!r.ok) { const e = new Error((j && (j.msg || j.message || j.error_description || j.error)) || "Erreur " + r.status); e.status = r.status; throw e; }
+    return j;
+  }
+  function setSess(j){
+    sess = {access_token:j.access_token, refresh_token:j.refresh_token, expires_at:Date.now() / 1000 + (j.expires_in || 3600),
+      email:(j.user || {}).email || (sess || {}).email, uid:(j.user || {}).id || (sess || {}).uid};
+    ls.set(SK.sess, sess);
+  }
+  function clearSess(){ sess = null; ls.del(SK.sess); ls.del(SK.meta); }
+  async function fresh(){
+    if (!sess) return false;
+    if (sess.expires_at - 60 > Date.now() / 1000) return true;
+    try { setSess(await api("/auth/v1/token?grant_type=refresh_token", {method:"POST", body:JSON.stringify({refresh_token:sess.refresh_token})}, false)); return true; }
+    catch(e) { if (e.status === 400 || e.status === 401) clearSess(); return false; }   // hors ligne : on garde la session
+  }
+  const frMsg = m => /invalid login/i.test(m) ? "E-mail ou mot de passe incorrect." : /already registered|already exists/i.test(m) ? "Un compte existe déjà avec cet e-mail : connecte-toi." : /password.*(6|characters)/i.test(m) ? "Le mot de passe doit faire au moins 6 caractères." : /valid email|invalid.*email/i.test(m) ? "Adresse e-mail invalide." : /fetch|network/i.test(m) ? "Connexion impossible : vérifie ton accès à Internet." : m;
+  async function pull(){ const r = await api(`/rest/v1/user_data?select=lists,collection,updated_at&user_id=eq.${sess.uid}`); return (r || [])[0] || null; }
+  async function push(){
+    const at = new Date().toISOString();
+    await api("/rest/v1/user_data", {method:"POST", headers:{Prefer:"resolution=merge-duplicates,return=minimal"},
+      body:JSON.stringify({user_id:sess.uid, lists:ls.get(SK.lists) || {}, collection:ls.get(SK.collection) || {}, updated_at:at})});
+    ls.set(SK.meta, {at, dirty:false});
+  }
+  function mergeRemote(R){   // première connexion sur cet appareil : on additionne local et compte
+    const L = ls.get(SK.lists) || {lists:[], active:null}, RL = R.lists || {}, ids = new Set((RL.lists || []).map(l => l.id));
+    ls.set(SK.lists, Object.assign({}, RL, L, {lists:(RL.lists || []).concat((L.lists || []).filter(l => !ids.has(l.id))), active:L.active || RL.active || null}));
+    const C = ls.get(SK.collection) || {}, RC = R.collection || {};
+    Object.keys(RC).forEach(f => { C[f] = Object.assign({}, RC[f], C[f] || {}); });
+    ls.set(SK.collection, C);
+  }
+  async function sync(first){
+    if (!(await fresh())) return;
+    try {
+      const m = ls.get(SK.meta) || {}, r = await pull();
+      if (first) { if (r) mergeRemote(r); await push(); location.reload(); return; }
+      if (r && !m.dirty && (!m.at || Date.parse(r.updated_at) > Date.parse(m.at))) {
+        ls.set(SK.lists, r.lists || {lists:[], active:null}); ls.set(SK.collection, r.collection || {}); ls.set(SK.meta, {at:r.updated_at, dirty:false});
+        location.reload(); return;
+      }
+      if (m.dirty || !r) await push();
+    } catch(e) { accMsg = "Synchronisation impossible : " + frMsg(e.message); accErr = true; if (location.hash === "#compte") renderAccount(); }
+  }
+  window.WCSync = {dirty(){
+    if (!sess) return;
+    ls.set(SK.meta, Object.assign(ls.get(SK.meta) || {}, {dirty:true}));
+    clearTimeout(pushT); pushT = setTimeout(() => { fresh().then(ok => ok && push()).catch(() => {}); }, 2000);
+  }};
+  if (sess) sync(false);
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && sess) sync(false); });
+  window.addEventListener("online", () => { if (sess) sync(false); });
+  function accountHtml(){
+    const m = ls.get(SK.meta) || {};
+    const msg = accMsg ? `<p class="acc-msg${accErr ? " err" : ""}">${esc(accMsg)}</p>` : "";
+    if (sess) return `<div class="sup"><div class="sup-hero"><h2>Mon compte</h2><p>Connecté avec <b>${esc(sess.email || "")}</b></p></div>${msg}
+      <div class="panel"><div class="body acc">
+        <p>Tes listes et ta collection sont synchronisées automatiquement sur tous les appareils où tu es connecté.</p>
+        <p class="hint">${m.dirty ? "Modifications en attente d'envoi." : m.at ? "Dernière synchronisation : " + new Date(m.at).toLocaleString("fr-FR") : ""}</p>
+        <button type="button" class="btn primary wide" id="acc-sync"${accBusy ? " disabled" : ""}>Synchroniser maintenant</button>
+        <button type="button" class="btn wide" id="acc-out">Se déconnecter</button>
+      </div></div>
+      <div class="panel"><div class="body acc">
+        <p class="hint">Supprimer ton compte efface définitivement tes données sur le serveur. Les données de cet appareil sont conservées.</p>
+        <button type="button" class="btn danger wide" id="acc-del">${delArmed ? "Confirmer la suppression définitive" : "Supprimer mon compte"}</button>
+      </div></div>
+      <p class="sup-thanks"><a href="#confidentialite">Confidentialité et données personnelles</a></p></div>`;
+    return `<div class="sup"><div class="sup-hero"><h2>Mon compte</h2><p>Facultatif : sans compte, l'app fonctionne comme avant.<br>Avec un compte, tu retrouves tes listes et ta collection sur tous tes appareils.</p></div>${msg}
+      <div class="panel"><div class="body acc">
+        <label class="lbl" for="acc-mail">E-mail</label><input type="email" id="acc-mail" autocomplete="email" inputmode="email">
+        <label class="lbl" for="acc-pass">Mot de passe (6 caractères minimum)</label><input type="password" id="acc-pass" autocomplete="current-password">
+        <button type="button" class="btn primary wide" id="acc-in"${accBusy ? " disabled" : ""}>Se connecter</button>
+        <button type="button" class="btn wide" id="acc-up"${accBusy ? " disabled" : ""}>Créer un compte</button>
+        <p class="hint">À la première connexion, les listes et la collection de cet appareil sont ajoutées à ton compte.</p>
+      </div></div>
+      <p class="sup-thanks"><a href="#confidentialite">Confidentialité et données personnelles</a></p></div>`;
+  }
+  function renderAccount(){ $("home-view").innerHTML = accountHtml(); }
+  async function accAuth(signup){
+    const email = ($("acc-mail").value || "").trim(), password = $("acc-pass").value || "";
+    if (!email || !password) { accMsg = "Indique ton e-mail et ton mot de passe."; accErr = true; renderAccount(); return; }
+    accBusy = true; accMsg = ""; renderAccount();
+    try {
+      const j = signup ? await api("/auth/v1/signup", {method:"POST", body:JSON.stringify({email, password})}, false)
+                       : await api("/auth/v1/token?grant_type=password", {method:"POST", body:JSON.stringify({email, password})}, false);
+      if (!j || !j.access_token) { accMsg = "Compte créé, mais il doit être confirmé avant la connexion."; accErr = true; }
+      else { setSess(j); accBusy = false; accMsg = "Connexion réussie, synchronisation…"; accErr = false; renderAccount(); await sync(true); return; }
+    } catch(e) { accMsg = frMsg(e.message); accErr = true; }
+    accBusy = false; renderAccount();
+  }
+  $("home-view").addEventListener("click", async e => {
+    const id = e.target.id;
+    if (id === "acc-in" || id === "acc-up") { accAuth(id === "acc-up"); return; }
+    if (id === "acc-sync") { accBusy = true; renderAccount(); window.WCSync.dirty(); clearTimeout(pushT); try { if (await fresh()) await push(); accMsg = "Synchronisé."; accErr = false; } catch(x) { accMsg = "Synchronisation impossible : " + frMsg(x.message); accErr = true; } accBusy = false; renderAccount(); return; }
+    if (id === "acc-out") { try { await api("/auth/v1/logout", {method:"POST"}); } catch(x) {} clearSess(); accMsg = "Tu es déconnecté. Tes données restent sur cet appareil."; accErr = false; delArmed = false; renderAccount(); return; }
+    if (id === "acc-del") {
+      if (!delArmed) { delArmed = true; renderAccount(); return; }
+      try { if (await fresh()) await api("/rest/v1/rpc/delete_my_account", {method:"POST", body:"{}"}); clearSess(); accMsg = "Ton compte et tes données en ligne ont été supprimés."; accErr = false; }
+      catch(x) { accMsg = "Suppression impossible : " + frMsg(x.message); accErr = true; }
+      delArmed = false; renderAccount();
+    }
+  });
+  const privacyHtml = () => `<div class="sup"><div class="sup-hero"><h2>Confidentialité</h2><p>Ce que WarCounter fait de tes données.</p></div>
+    <div class="panel"><div class="body"><dl class="blk">
+      <dt><b>Sans compte</b></dt><dd>Tes listes, ta collection et tes parties restent uniquement sur ton appareil. Rien n'est envoyé.</dd>
+      <dt><b>Avec un compte (facultatif)</b></dt><dd>Sont enregistrés : ton adresse e-mail, ton mot de passe (chiffré, jamais lisible), tes listes et ta collection. Ils servent uniquement à te connecter et à synchroniser tes données entre tes appareils.</dd>
+      <dt><b>Hébergement</b></dt><dd>Supabase, sur des serveurs situés dans l'Union européenne.</dd>
+      <dt><b>Durée de conservation</b></dt><dd>Jusqu'à la suppression de ton compte.</dd>
+      <dt><b>Tes droits</b></dt><dd>Tu peux supprimer ton compte et toutes tes données en ligne à tout moment depuis la page Mon compte. Pour toute question (accès, rectification, suppression) : warcounter@proton.me.</dd>
+      <dt><b>Ce qu'on ne fait pas</b></dt><dd>Aucune publicité, aucune revente, aucun partage de tes données. La mesure d'audience (GoatCounter) est anonyme et sans cookie.</dd>
+      <dt><b>Responsable</b></dt><dd>elcounter, éditeur de WarCounter (warcounter@proton.me).</dd>
+    </dl></div></div></div>`;
   function route(){
     const h = location.hash.slice(1);
     const fac = h.startsWith("regle-faction-") ? FACTIONS.find(f => f.id === h.slice(14)) : null;
     let unitPage = null;
     if (h.startsWith("regle-u-")) { const [fid, ...rest] = h.slice(8).split("~"); const F = FACTIONS.find(f => f.id === fid); const U = fid === "ar" ? (AORU[rest.join("~")] || {}).u : fid === "rr" ? RORU.find(u => u.id === rest.join("~")) : F && F.data && F.data.units.find(u => u.id === rest.join("~")); if (U) unitPage = {F, U}; }
     const rule = unitPage ? {en:unitPage.U.en, unit:true} : fac ? {en:fac.en, fac:true} : h === "regle-renom" ? {en:"Régiments de renom", renom:true} : h === "regle-manifestations" ? {en:"Manifestations génériques", manif:true} : h.startsWith("regle-") ? RULES.find(r => r.id === h.slice(6)) : null;
-    if (!(h === "" || h === "accueil" || h === "regles" || h === "installer" || h === "soutenir" || h === "avenir" || rule)) return;
+    if (!(h === "" || h === "accueil" || h === "regles" || h === "installer" || h === "soutenir" || h === "avenir" || h === "compte" || h === "confidentialite" || rule)) return;
     $("menu-hint").hidden = STANDALONE || !(h === "" || h === "accueil" || h === "installer");
-    $("home-back").hidden = !rule && h !== "installer" && h !== "soutenir" && h !== "avenir" && h !== "regles";
+    $("home-back").hidden = !rule && h !== "installer" && h !== "soutenir" && h !== "avenir" && h !== "compte" && h !== "confidentialite" && h !== "regles";
     if (rule) {
       $("home-title").textContent = rule.en;
       $("home-view").innerHTML = `<div class="rules">${rule.unit ? unitSheet(unitPage.U) : rule.renom ? rorPage() : rule.manif ? manifPage() : rule.fac ? (fac.soon ? `<p class="hint">Faction en cours de construction. Ses règles, unités et warscrolls arriveront dans une prochaine mise à jour.</p>` : fac.data ? genFactionPage(fac.data) : factionPage()) : rule.core ? corePage(rule) : rule.bp ? bpPage() : rule.tac ? tacPage() : blocks(rule.blocks)}</div>`;
     } else if (h === "soutenir") {
       $("home-title").textContent = "Soutenir le projet";
       $("home-view").innerHTML = supportHtml();
+    } else if (h === "compte") {
+      $("home-title").textContent = "Mon compte"; delArmed = false; renderAccount();
+    } else if (h === "confidentialite") {
+      $("home-title").textContent = "Confidentialité";
+      $("home-view").innerHTML = privacyHtml();
     } else if (h === "avenir") {
       $("home-title").textContent = "À venir";
       $("home-view").innerHTML = roadmapHtml();
@@ -420,6 +547,6 @@
     }
     window.scrollTo(0, 0);
   }
-  $("home-back").addEventListener("click", () => { const h = location.hash.slice(1); location.hash = h === "installer" || h === "soutenir" || h === "avenir" || h === "regles" ? "accueil" : h.startsWith("regle-u-rr~") ? "regle-renom" : h.startsWith("regle-u-ar~") ? "regle-faction-" + ((AORU[h.slice(11)] || {}).fac || "") : h.startsWith("regle-u-") ? "regle-faction-" + h.slice(8).split("~")[0] : "regles"; });
+  $("home-back").addEventListener("click", () => { const h = location.hash.slice(1); location.hash = h === "confidentialite" ? "compte" : h === "installer" || h === "soutenir" || h === "avenir" || h === "compte" || h === "regles" ? "accueil" : h.startsWith("regle-u-rr~") ? "regle-renom" : h.startsWith("regle-u-ar~") ? "regle-faction-" + ((AORU[h.slice(11)] || {}).fac || "") : h.startsWith("regle-u-") ? "regle-faction-" + h.slice(8).split("~")[0] : "regles"; });
   window.addEventListener("hashchange", route);
   route();
