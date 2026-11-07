@@ -762,6 +762,60 @@
 
   // ---------- Navigation ----------
   const GROUPS = {armee:"Règles de l'armée", sorts:"Sorts", prieres:"Prières", manifestations:"Manifestations", renom:"Régiments de renom", tactiques:"Battle Tactics"};
+  // ---------- Collection : figurines à peindre / en cours / peintes, par faction ----------
+  const COLL = "warcounter-collection";
+  let coll = (() => { try { return JSON.parse(localStorage.getItem(COLL)) || {}; } catch(e) { return {}; } })(), collFac = "";
+  const saveColl = () => { try { localStorage.setItem(COLL, JSON.stringify(coll)); } catch(e) {} };
+  const cSum = c => c[0] + c[1] + c[2];
+  function collStats(fid){
+    const F = FX[fid], C = coll[fid] || {}; let a = 0, e = 0, p = 0, pts = 0;
+    Object.entries(C).forEach(([id, c]) => { a += c[0]; e += c[1]; p += c[2]; const u = F && UF(F, id); if (u && u.pts) pts += Math.round(u.pts * cSum(c) / (u.size || 1)); });
+    return {a, e, p, t:a + e + p, pts};
+  }
+  function collBar(st){
+    const pc = x => st.t ? Math.round(x * 100 / st.t) : 0;
+    return `<div class="cbar" role="img" aria-label="${pc(st.p)} % peintes"><span class="cp" style="width:${pc(st.p)}%"></span><span class="ce" style="width:${pc(st.e)}%"></span></div>
+      <p class="cleg"><b>${pc(st.p)} %</b> peintes · ${st.p} peinte${st.p > 1 ? "s" : ""} · ${st.e} en cours · ${st.a} à peindre${st.pts ? ` · ≈ ${st.pts} pts` : ""}</p>`;
+  }
+  function renderColl(){
+    const facs = FAC_ORDER.filter(F => collStats(F.id).t);
+    if (!collFac) collFac = (facs[0] || {}).id || "";
+    let h = "";
+    if (facs.length) {
+      const all = facs.map(F => collStats(F.id)).reduce((x, y) => ({a:x.a + y.a, e:x.e + y.e, p:x.p + y.p, t:x.t + y.t, pts:x.pts + y.pts}));
+      h += `<div class="panel"><h3 class="sec">Toutes mes armées</h3><div class="body">${collBar(all)}
+        ${facs.map(F => `<button type="button" class="crow${F.id === collFac ? " on" : ""}" data-cfac="${F.id}"><span>${esc(F.en)}</span>${collBar(collStats(F.id))}</button>`).join("")}</div></div>`;
+    }
+    const F = FX[collFac], C = (collFac && coll[collFac]) || {};
+    h += `<div class="panel"><h3 class="sec">Faction</h3><div class="body">
+      <select id="coll-fac" aria-label="Faction">${facOptions(collFac, "Sélectionner une faction")}</select>`;
+    if (F) {
+      const ids = Object.keys(C), U = F.units.filter(u => !ids.includes(u.id) && !u.with);
+      h += collBar(collStats(collFac)) + `<label class="lbl" for="coll-add">Ajouter une unité</label>
+        <select id="coll-add"><option value="">Choisir…</option>${U.map(u => `<option value="${esc(u.id)}">${esc(u.en)}${u.size > 1 ? ` (${u.size} fig.)` : ""}</option>`).join("")}</select>`;
+    }
+    h += `</div></div>`;
+    if (F) {
+      const rows = Object.entries(C).map(([id, c]) => [UF(F, id), c]).filter(([u]) => u).sort((x, y) => x[0].en.localeCompare(y[0].en));
+      h += rows.length ? `<div class="panel"><h3 class="sec"><span>Unités</span><span class="sec-r">${rows.length}</span></h3><div class="body">${rows.map(([u, c]) => `
+        <div class="cunit"><div class="cun"><b>${esc(u.en)}</b><button type="button" class="del" data-cdel="${esc(u.id)}" aria-label="Retirer ${esc(u.en)}">${ICON_X}</button></div>
+          <div class="cnum">${["À peindre","En cours","Peintes"].map((lab, k) => `<label><span>${lab}</span><input type="number" min="0" inputmode="numeric" value="${c[k]}" data-cu="${esc(u.id)}" data-ck="${k}"></label>`).join("")}</div>
+          <div class="cbar sm"><span class="cp" style="width:${cSum(c) ? Math.round(c[2] * 100 / cSum(c)) : 0}%"></span><span class="ce" style="width:${cSum(c) ? Math.round(c[1] * 100 / cSum(c)) : 0}%"></span></div></div>`).join("")}</div></div>`
+        : `<p class="hint">Ajoute tes unités : elles arrivent « à peindre » avec leur nombre de figurines, puis répartis-les entre à peindre, en cours et peintes.</p>`;
+    }
+    h += `<p class="hint">Ta collection est enregistrée sur cet appareil.</p>`;
+    $("coll").innerHTML = h;
+  }
+  $("coll").addEventListener("change", e => {
+    const t = e.target;
+    if (t.id === "coll-fac") { collFac = t.value; renderColl(); return; }
+    if (t.id === "coll-add" && t.value) { const u = UF(FX[collFac], t.value); (coll[collFac] = coll[collFac] || {})[t.value] = [u.size || 1, 0, 0]; saveColl(); renderColl(); return; }
+    if (t.dataset.cu) { const c = coll[collFac][t.dataset.cu]; c[+t.dataset.ck] = Math.max(0, parseInt(t.value, 10) || 0); saveColl(); renderColl(); }
+  });
+  $("coll").addEventListener("click", e => {
+    const f = e.target.closest("[data-cfac]"); if (f) { collFac = f.dataset.cfac; renderColl(); return; }
+    const d = e.target.closest("[data-cdel]"); if (d) { delete coll[collFac][d.dataset.cdel]; if (!Object.keys(coll[collFac]).length) delete coll[collFac]; saveColl(); renderColl(); }
+  });
   function route(){
     const hash = decodeURIComponent(location.hash.slice(1));
     if (hash === "parties" || hash === "" || hash === "accueil" || hash === "installer" || hash === "soutenir" || hash === "regles" || hash.startsWith("regle-")) return;
@@ -770,9 +824,10 @@
     if (hash === "listes") view = "lists";
     else if (hash.startsWith("liste-")) { editing = hash.slice(6); view = getList(editing) ? "edit" : "lists"; }
     else if (hash === "phases") view = "phases";
+    else if (hash === "collection") view = "coll";
     else if (unit || group) view = "unit";
-    ["lists","edit","memo","unit","phases"].forEach(k => { $("view-" + k).hidden = k !== view; });
-    $("back").hidden = !(view === "unit" || view === "edit");
+    ["lists","edit","memo","unit","phases","coll"].forEach(k => { $("view-" + k).hidden = k !== view; });
+    $("back").hidden = !(view === "unit" || view === "edit" || view === "coll");
     const tab = view === "edit" ? "lists" : view === "unit" ? "memo" : view;
     ["lists","memo","phases"].forEach(k => { if (k === tab) $("nav-" + k).setAttribute("aria-current", "page"); else $("nav-" + k).removeAttribute("aria-current"); });
     $("title").textContent = "WarCounter";
@@ -780,10 +835,11 @@
     else if (view === "edit") renderEdit();
     else if (view === "memo") renderMemo();
     else if (view === "phases") renderPhases();
+    else if (view === "coll") { renderColl(); $("title").textContent = "Collection"; }
     else if (group) { showGroup(hash); $("title").textContent = GROUPS[hash]; }
     else { showUnit(F, unit); $("title").textContent = unit.en; }
     window.scrollTo(0, 0);
   }
-  $("back").addEventListener("click", () => { location.hash = $("view-edit").hidden ? "memo" : "listes"; });
+  $("back").addEventListener("click", () => { location.hash = !$("view-coll").hidden ? "accueil" : $("view-edit").hidden ? "memo" : "listes"; });
   window.addEventListener("hashchange", route);
   route();

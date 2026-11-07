@@ -1,7 +1,7 @@
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs('build-check', exist_ok=True)
-VERSION='2.15.6'
+VERSION='2.16.0'
 MAJ='07-11-2026'
 LEGAL='<span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span>'
 import re, json, base64, glob, os
@@ -55,6 +55,21 @@ extra='''
 #app-army .lbar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
 #app-army .lbar .btn{flex:1;min-width:120px}
 #app-army .lmsg{margin:0 0 12px;font-size:13px;color:var(--muted)}
+#app-army .cbar{display:flex;height:12px;border-radius:6px;background:#e4ddd1;overflow:hidden;margin:6px 0 4px}
+#app-army .cbar.sm{height:6px;margin:8px 0 0}
+#app-army .cbar .cp{background:#3f7d4a}
+#app-army .cbar .ce{background:#d4ae3f}
+#app-army .cleg{margin:0 0 10px;font-size:13px;color:var(--muted)}
+#app-army .crow{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid #eee5d8;padding:10px 0 0;margin:0;font:inherit;color:inherit;cursor:pointer}
+#app-army .crow>span{font-weight:600}
+#app-army .crow.on>span{color:var(--accent,#6b2119)}
+#app-army .cunit{padding:10px 0;border-top:1px solid #eee5d8}
+#app-army .cunit:first-child{border-top:0;padding-top:0}
+#app-army .cun{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px}
+#app-army .cnum{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+#app-army .cnum label{display:flex;flex-direction:column;gap:3px;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+#app-army .cnum input{width:100%;box-sizing:border-box;padding:8px;font:600 16px var(--body);border:1px solid #d6cfc3;border-radius:8px;text-align:center}
+#app-army #coll .body>select{width:100%;margin-bottom:10px}
 #app-army .mwar,#app-home .mwar{margin-top:10px;border-top:1px dashed var(--line,#ccc);padding-top:8px}
 #app-army .mwar>summary,#app-home .mwar>summary{cursor:pointer;font-weight:600;font-size:13px;color:var(--accent,#6b2119)}
 #app-army .mwar .statband,#app-home .mwar .statband{margin:8px 0}
@@ -114,6 +129,7 @@ army_body='''<header class="bar">
 <main class="in">
   <section id="view-lists" hidden><div id="lists"></div></section>
   <section id="view-edit" hidden><div id="edit"></div></section>
+  <section id="view-coll" hidden><div id="coll"></div></section>
   <section id="view-memo"><div id="memo-banner"></div><div class="list" id="list"></div></section>
   <section id="view-unit" hidden><div class="sheet" id="unit"></div></section>
   <section id="view-phases" hidden><div id="phase-banner"></div><div class="phases" id="phases"></div></section>
@@ -149,6 +165,7 @@ top_js='''(function(){
     else if (h === "parties") { app = "bs"; tab = "parties"; }
     else if (h === "listes" || h.startsWith("liste-")) tab = "lists";
     else if (h === "phases") tab = "phases";
+    else if (h === "collection") tab = "";
     ["army","bs","home"].forEach(k => { $("app-" + k).hidden = k !== app; });
     ["lists","memo","phases","regles","parties"].forEach(k => { if (k === tab) $("nav-" + k).setAttribute("aria-current", "page"); else $("nav-" + k).removeAttribute("aria-current"); });
     window.scrollTo(0, 0);
