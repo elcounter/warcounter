@@ -1,7 +1,7 @@
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs('build-check', exist_ok=True)
-VERSION='2.19.3'
+VERSION='2.19.4'
 MAJ='07-11-2026'
 LEGAL='<span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span>'
 import re, json, base64, glob, os
@@ -59,6 +59,11 @@ extra='''
 #app-army .cbar.sm{height:6px;margin:8px 0 0}
 #app-army .cbar .cp{background:#3f7d4a}
 #app-army .cbar .ce{background:#d4ae3f}
+#app-army .cbar .ca{background:#b33a2b}
+#app-army .cleg i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;vertical-align:0}
+#app-army .cleg .dp{background:#3f7d4a}
+#app-army .cleg .de{background:#d4ae3f}
+#app-army .cleg .da{background:#b33a2b}
 #app-army .cleg{margin:0 0 10px;font-size:13px;color:var(--muted)}
 #app-army .ctot{background:#f7f2ea;border:1px solid #e4ddd1;border-radius:10px;padding:10px 12px 2px;margin-bottom:14px}
 #app-army .clab{display:block;font:700 12px var(--body);text-transform:uppercase;letter-spacing:.05em;color:var(--accent,#6b2119)}

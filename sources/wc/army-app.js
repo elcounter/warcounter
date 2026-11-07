@@ -776,8 +776,8 @@
   }
   function collBar(st){
     const pc = x => st.t ? Math.round(x * 100 / st.t) : 0;
-    return `<div class="cbar" role="img" aria-label="${pc(st.p)} % peintes"><span class="cp" style="width:${pc(st.p)}%"></span><span class="ce" style="width:${pc(st.e)}%"></span></div>
-      <p class="cleg"><b>${pc(st.p)} %</b> peintes · ${st.p} peinte${st.p > 1 ? "s" : ""} · ${st.e} en cours · ${st.a} à peindre${st.pts ? ` · ≈ ${st.pts} pts` : ""}</p>`;
+    return `<div class="cbar" role="img" aria-label="${pc(st.p)} % peintes"><span class="cp" style="width:${pc(st.p)}%"></span><span class="ce" style="width:${pc(st.e)}%"></span><span class="ca" style="width:${st.t ? 100 - pc(st.p) - pc(st.e) : 0}%"></span></div>
+      <p class="cleg"><b>${pc(st.p)} %</b> peintes · <i class="dp"></i>${st.p} peinte${st.p > 1 ? "s" : ""} · <i class="de"></i>${st.e} en cours · <i class="da"></i>${st.a} à peindre${st.pts ? ` · ≈ ${st.pts} pts` : ""}</p>`;
   }
   function renderColl(){
     const facs = FAC_ORDER.filter(F => collStats(F.id).t);
@@ -804,7 +804,7 @@
       h += rows.length ? `<div class="panel"><h3 class="sec"><span>Unités</span><span class="sec-r">${rows.length}</span></h3><div class="body">${rows.map(([u, c]) => `
         <div class="cunit"><div class="cun"><b>${esc(u.en)}</b><button type="button" class="del" data-cdel="${esc(u.id)}" aria-label="Retirer ${esc(u.en)}">${ICON_X}</button></div>
           <div class="cnum">${["À peindre","En cours","Peintes"].map((lab, k) => `<div class="cst"><span>${lab}</span><div class="cstep"><button type="button" data-cu="${esc(u.id)}" data-ck="${k}" data-cd="-1" aria-label="${lab} : moins"${c[k] ? "" : " disabled"}>−</button><input type="number" min="0" inputmode="numeric" value="${c[k]}" data-cu="${esc(u.id)}" data-ck="${k}" aria-label="${lab}"><button type="button" data-cu="${esc(u.id)}" data-ck="${k}" data-cd="1" aria-label="${lab} : plus">+</button></div></div>`).join("")}</div>
-          <div class="cbar sm"><span class="cp" style="width:${cSum(c) ? Math.round(c[2] * 100 / cSum(c)) : 0}%"></span><span class="ce" style="width:${cSum(c) ? Math.round(c[1] * 100 / cSum(c)) : 0}%"></span></div></div>`).join("")}</div></div>`
+          <div class="cbar sm"><span class="cp" style="width:${cSum(c) ? Math.round(c[2] * 100 / cSum(c)) : 0}%"></span><span class="ce" style="width:${cSum(c) ? Math.round(c[1] * 100 / cSum(c)) : 0}%"></span><span class="ca" style="width:${cSum(c) ? 100 - Math.round(c[2] * 100 / cSum(c)) - Math.round(c[1] * 100 / cSum(c)) : 0}%"></span></div></div>`).join("")}</div></div>`
         : `<p class="hint">Ajoute tes unités : elles arrivent « à peindre » avec leur nombre de figurines, puis répartis-les entre à peindre, en cours et peintes.</p>`;
     }
     h += `<p class="hint">Ta collection est enregistrée sur cet appareil.</p>`;
