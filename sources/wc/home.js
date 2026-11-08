@@ -266,6 +266,7 @@
       <div class="home-extra">
         <div class="feat">${EXTRA.map(([href, n, d, svg]) => `<a class="fcard" href="${href}"><span class="ficon">${I(svg)}</span><span><b>${n}</b><br>${d}</span></a>`).join("")}</div>
         <a class="btn-link nc-btn" href="https://elcounter.github.io/necrocounter/" target="_blank" rel="noopener"><b>Découvrir NecroCounter</b><span>Ton compagnon pour Necromunda</span></a>
+        <a class="sc-btn" href="https://elcounter.github.io/spearhead/" target="_blank" rel="noopener"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3l25 14.5v29L32 61 7 46.5v-29z" fill="#141414" stroke="#d4ae3f" stroke-width="3"/><text x="32" y="42" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="28" fill="#e8c35a">S</text></svg><span><b>Découvre SpearCounter</b><small>Ton compagnon pour Spearhead.</small></span></a>
       </div>`;
   }
   const STANDALONE = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
