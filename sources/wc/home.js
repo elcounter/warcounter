@@ -333,7 +333,7 @@
       <div class="inst-mobile">
       <h2 class="rh">Android (Chrome)</h2>
       <ol class="steps">
-        ${step(1, "Appuie sur les <b>3 petits points</b> en haut à droite de ton navigateur (la flèche te les montre).")}
+        ${step(1, "Appuie sur les <b>3 petits points</b> en haut à droite de ton navigateur.")}
         ${step(2, "Appuie sur <b>Ajouter à l'écran d'accueil</b> (ou <b>Installer l'application</b>).")}
         ${step(3, "Choisis <b>Installer</b> (et non « Créer un raccourci »), puis confirme avec <b>Installer</b>.")}
         ${step(4, "L'icône <b>W</b> de WarCounter apparaît sur l'écran d'accueil de ton téléphone. C'est prêt !")}
@@ -637,7 +637,6 @@
     if (h.startsWith("regle-u-")) { const [fid, ...rest] = h.slice(8).split("~"); const F = FACTIONS.find(f => f.id === fid); const U = fid === "ar" ? (AORU[rest.join("~")] || {}).u : fid === "rr" ? RORU.find(u => u.id === rest.join("~")) : F && F.data && F.data.units.find(u => u.id === rest.join("~")); if (U) unitPage = {F, U}; }
     const rule = unitPage ? {en:unitPage.U.en, unit:true} : fac ? {en:fac.en, fac:true} : h === "regle-renom" ? {en:"Régiments de renom", renom:true} : h === "regle-manifestations" ? {en:"Manifestations génériques", manif:true} : h.startsWith("regle-") ? RULES.find(r => r.id === h.slice(6)) : null;
     if (!(h === "" || h === "accueil" || h === "regles" || h === "installer" || h === "soutenir" || h === "avenir" || h === "compte" || h === "confidentialite" || h === "carte" || rule)) return;
-    $("menu-hint").hidden = STANDALONE || !(h === "" || h === "accueil" || h === "installer");
     $("home-back").hidden = !rule && h !== "installer" && h !== "soutenir" && h !== "avenir" && h !== "compte" && h !== "confidentialite" && h !== "carte" && h !== "regles";
     if (rule) {
       $("home-title").textContent = rule.en;
