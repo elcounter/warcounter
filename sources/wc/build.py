@@ -1,9 +1,9 @@
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs('build-check', exist_ok=True)
-VERSION='2.19.6'
-MAJ='08-11-2026'
-LEGAL='<span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.</span>'
+VERSION='2.19.7'
+MAJ='09-11-2026'
+LEGAL='<span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span>'
 import re, json, base64, glob, os
 
 def split_rules(css):
