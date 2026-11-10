@@ -1,0 +1,1648 @@
+{
+  "id": "khazalite",
+  "en": "Forts Khazalites",
+  "en_official": "Khazalite Holds",
+  "img": "khazalite",
+  "alliance": "ORDER",
+  "note": "Fyreslayers (Grimmdrons) fusionnés ici. Certains passent Legends le 01/06/2027.",
+  "units": [
+    {
+      "id": "high-kyng-valankrom",
+      "en": "High Kyng Valankrom",
+      "pts": 390,
+      "size": 1,
+      "hero": true,
+      "unique": true,
+      "base": "170 × 105mm",
+      "stats": {
+        "M": "10\"",
+        "S": "16",
+        "C": "5",
+        "Sv": "3+"
+      },
+      "kw": "WARMASTER, UNIQUE, HERO, WAR MACHINE, ORDER, KHAZALITE HOLDS, DUARDIN, KROMDRON",
+      "weapons": [
+        {
+          "n": "Forge-spark Lightning",
+          "range": "12\"",
+          "a": 6,
+          "h": 4,
+          "w": 2,
+          "r": 2,
+          "d": "1",
+          "crit": "2 Hits",
+          "extra": [
+            "Companion"
+          ]
+        },
+        {
+          "n": "Bharadreng",
+          "range": "Mêlée",
+          "a": 6,
+          "h": 3,
+          "w": 3,
+          "r": 2,
+          "d": "3",
+          "crit": "Mortel",
+          "extra": [
+            "Anti-MONSTER (+1 Perf.)"
+          ]
+        },
+        {
+          "n": "Karak War Council's Armoury",
+          "range": "Mêlée",
+          "a": 6,
+          "h": 3,
+          "w": 3,
+          "r": 1,
+          "d": "2",
+          "crit": "none",
+          "extra": [
+            "Battle Damaged: Att. = 4 si ≥10 pts de dégâts"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "c": "defense",
+          "t": "Passif",
+          "n": "Battle Damaged",
+          "x": [
+            "Effet : Tant que cette unité a 10 points de dégâts ou plus, la caractéristique d'Attaques de son Karak War Council's Armoury est de 4."
+          ]
+        },
+        {
+          "c": "start",
+          "t": "Début de n'importe quel tour",
+          "n": "Defend the High Throne!",
+          "x": [
+            "Annonce : Choisissez une autre unité KHAZALITE HOLDS amie visible entièrement à 12\" de cette unité comme cible. Pour chaque marque de rancune que cette unité a, vous pouvez choisir une autre unité éligible comme cible supplémentaire.",
+            "Effet : Pour le restant du tour, les effets suivants s'appliquent aux cibles tant qu'elles sont entièrement à 6\" de cette unité. Ajoutez 3\" à cette portée pour chaque marque de rancune que cette unité a.",
+            "• Les armes de mêlée de la cible ont Anti-charge (+1 Perf.).",
+            "• Si la cible n'a aucune marque de rancune, elle compte comme en ayant 1."
+          ]
+        },
+        {
+          "c": "hero",
+          "t": "Votre phase des héros",
+          "n": "High Kyng's War Council",
+          "x": [
+            "Effet : Choisissez 1 des effets suivants jusqu'au début de votre prochain tour :",
+            "• Stonesmith's Disruption : Choisissez une unité ennemie visible à 12\" de cette unité. La cible a un score de Contrôle maximum de 1.",
+            "• Grudgebearer's Denunciation : Tant qu'elles sont entièrement à 12\" de cette unité, les unités KHAZALITE HOLDS amies visibles peuvent utiliser des capacités CHARGE même si elles ont utilisé RETRAITE ce tour. De plus, aucune dégât mortel ne leur est infligé par des capacités RETRAITE.",
+            "• Holdseeker's Guidance : Ajoutez 1 aux jets de lancer, d'incantation et de bannissement des unités KHAZALITE HOLDS amies entièrement à 12\" de cette unité."
+          ]
+        },
+        {
+          "c": "start",
+          "t": "Début du round de bataille",
+          "n": "Stirring the High Kyng's Ire",
+          "x": [
+            "Annonce : Choisissez un HÉROS ennemi visible à 18\" de cette unité qui n'a pas encore été choisi comme cible de cette aptitude durant la bataille.",
+            "Effet : Votre adversaire décide si la cible accepte ou rejette l'accusation.",
+            "• S'il accepte : jusqu'au début de votre prochain tour, ajoutez 1 aux jets de touche des attaques de combat des unités KHAZALITE HOLDS amies qui ciblent cette unité ennemie.",
+            "• S'il rejette : la cible ne peut pas utiliser de commandements jusqu'au début de votre prochain tour."
+          ]
+        },
+        {
+          "c": "move",
+          "t": "Une fois par tour (armée), n'importe quelle phase de mouvement",
+          "n": "Tide of Stone",
+          "x": [
+            "Effet : Cette unité peut se déplacer de D6\", ou de 2D6\" si c'est votre phase de mouvement. Elle peut traverser d'autres figurines et les portées de combat ennemies, mais ne peut pas terminer ce mouvement en combat.",
+            "Puis choisissez une unité ennemie que cette unité a traversée pendant ce mouvement et jetez un dé. Sur 3+, infligez à la cible autant de dégâts mortels que le résultat.",
+            "Mots-clés : BASE, MOUVEMENT"
+          ]
+        }
+      ],
+      "regiment": [
+        "0-1 GRIMNIR'S CHOSEN",
+        "0-1 VULCATRIX'S CHOSEN",
+        "Any KROMDRON NOBLE",
+        "Any KHAZALITE HOLDS"
+      ]
+    },
+    {
+      "id": "hjulda-drakkblud",
+      "en": "Hjulda Drakkblud",
+      "pts": 140,
+      "size": 1,
+      "hero": true,
+      "unique": true,
+      "base": "32mm",
+      "stats": {
+        "M": "4\"",
+        "S": "5",
+        "C": "2",
+        "Sv": "3+"
+      },
+      "kw": "UNIQUE, HERO, INFANTRY, ORDER, KHAZALITE HOLDS, DUARDIN, KROMDRON",
+      "weapons": [
+        {
+          "n": "Azangrom",
+          "range": "Mêlée",
+          "a": 6,
+          "h": 3,
+          "w": 3,
+          "r": 2,
+          "d": "2",
+          "crit": "Mortel",
+          "extra": []
+        }
+      ],
+      "abilities": [
+        {
+          "c": "start",
+          "t": "Une fois par bataille (armée), début du premier round de bataille",
+          "n": "Book of Fallen Holds",
+          "x": [
+            "Annonce : Vous devez utiliser cette aptitude. Choisissez une unité ennemie pour être l'objet de la rancune (elle peut être en réserve).",
+            "Effet : Pour le restant de la bataille :",
+            "• Tant que l'unité ennemie rancunière est à 12\" de cette unité et visible, vous pouvez relancer les jets de charge des unités KHAZALITE HOLDS amies entièrement à 12\" de cette unité.",
+            "• Tant qu'aucune unité ennemie rancunière n'est sur le champ de bataille, ajoutez 3 aux scores de Contrôle des unités KHAZALITE HOLDS amies entièrement à 12\" de cette unité."
+          ]
+        },
+        {
+          "c": "fight",
+          "t": "Passif",
+          "n": "Talisman of the Lost Karak",
+          "x": [
+            "Effet : Tant que cette unité est en combat, ajoutez 1 aux jets de touche des attaques de combat des unités KHAZALITE HOLDS INFANTERIE non-HÉROS amies à 3\" de cette unité et visibles."
+          ]
+        },
+        {
+          "c": "hero",
+          "t": "Votre phase des héros",
+          "n": "Last of Her Clan",
+          "x": [
+            "Annonce : Choisissez cette unité et jusqu'à 2 autres unités KHAZALITE HOLDS non-HÉROS amies visibles entièrement à 12\" de cette unité comme cibles.",
+            "Effet : Si cette unité a des marques de rancune, appliquez l'effet automatiquement. Sinon, jetez un dé pour chaque cible. Sur 3+, jusqu'au début de votre prochain tour, ignorez le premier point de dégâts qui serait alloué à cette cible à chaque phase."
+          ]
+        }
+      ],
+      "regiment": [
+        "0-1 GRIMNIR'S CHOSEN",
+        "Any KROMDRON NOBLE",
+        "Any KHAZALITE HOLDS"
+      ]
+    },
+    {
+      "id": "ormyr-and-ashtongue",
+      "en": "Ormyr and Ashtongue",
+      "pts": 140,
+      "size": 2,
+      "hero": true,
+      "unique": true,
+      "base": "32mm / 50mm",
+      "stats": {
+        "M": "4\"",
+        "S": "5",
+        "C": "2",
+        "Sv": "5+",
+        "Ward": "6+"
+      },
+      "kw": "UNIQUE, HERO, INFANTRY, WARD (6+), ORDER, KHAZALITE HOLDS, DUARDIN, GRIMMDRON",
+      "weapons": [
+        {
+          "n": "Ormyr's Double-bladed Axe and Punchblade",
+          "range": "Mêlée",
+          "a": 5,
+          "h": 3,
+          "w": 3,
+          "r": 1,
+          "d": "2",
+          "crit": "none",
+          "extra": [
+            "Anti-MONSTER (+1 Perf.)"
+          ]
+        },
+        {
+          "n": "Ashtongue's Maw and Claws",
+          "range": "Mêlée",
+          "a": 3,
+          "h": 3,
+          "w": 3,
+          "r": 1,
+          "d": "2",
+          "crit": "Mortel",
+          "extra": [
+            "Companion"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "c": "fight",
+          "t": "Passif",
+          "n": "Vulcatrix's Fury",
+          "x": [
+            "Effet : Tant que cette unité a des marques de rancune, ajoutez 1 à la caractéristique d'Attaques des armes Companion utilisées par les unités KHAZALITE HOLDS amies visibles entièrement à 12\" de cette unité."
+          ]
+        },
+        {
+          "c": "hero",
+          "t": "Votre phase des héros",
+          "n": "Drothmaster at Heart",
+          "x": [
+            "Annonce : Choisissez une unité Vulkyn Flameseekers ou GRIMMDRON MONSTER amie visible entièrement à 12\" de cette unité comme cible.",
+            "Effet : Choisissez 1 des effets suivants :",
+            "• Si la cible est Vulkyn Flameseekers : jusqu'au début de votre prochain tour, ignorez les modificateurs négatifs aux jets de touche et de blessure de ses attaques de combat, et ignorez les modificateurs négatifs à son score de Contrôle.",
+            "• Si la cible est GRIMMDRON MONSTER : ajoutez 1 aux jets de touche des attaques faites avec ses armes Companion jusqu'au début de votre prochain tour."
+          ]
+        },
+        {
+          "c": "shoot",
+          "t": "Votre phase de tir",
+          "n": "Smoke and Ash",
+          "x": [
+            "Annonce : Si cette unité contient Ashtongue, choisissez une unité ennemie visible à 9\" de cette unité comme cible.",
+            "Effet : Jetez un dé. Sur 3+, jusqu'au début de votre prochain tour, les unités (amies et ennemies), éléments de terrain et MANIFESTATIONS ne sont pas visibles pour la cible tant qu'ils sont à plus de 6\" d'elle."
+          ]
+        }
+      ],
+      "regiment": [
+        "0-1 GRIMNIR'S CHOSEN",
+        "Any KHAZALITE HOLDS"
+      ],
+      "note": "1/2 figurines est Ashtongue (arme Companion à la place des autres)."
+    },
+    {
+      "id": "runewright",
+      "en": "Runewright",
+      "pts": 110,
+      "size": 1,
+      "hero": true,
+      "base": "32mm",
+      "stats": {
+        "M": "4\"",
+        "S": "5",
+        "C": "2",
+        "Sv": "4+"
+      },
+      "kw": "HERO, WIZARD (1), INFANTRY, ORDER, KHAZALITE HOLDS, DUARDIN, KROMDRON",
+      "weapons": [
+        {
+          "n": "Runic Forgehammers",
+          "range": "Mêlée",
+          "a": 3,
+          "h": 3,
+          "w": 4,
+          "r": 1,
+          "d": "2",
+          "crit": "none",
+          "extra": []
+        }
+      ],
+      "abilities": [
+        {
+          "c": "hero",
+          "t": "Passif",
+          "n": "Grudgement of the Forge",
+          "x": [
+            "Effet : Ajoutez 1 aux jets de dissipation, de bannissement et de martelage rythmique de cette unité tant qu'elle a des marques de rancune."
+          ]
+        },
+        {
+          "c": "hero",
+          "t": "Réaction : Vous avez déclaré une aptitude SORT de 'Reverberations of the Runes' ou 'Resonance of the Runes' pour cette unité",
+          "n": "Rhythmic Hammering",
+          "x": [
+            "Effet : Si le jet de lancer est égal ou supérieur à la valeur d'incantation, faites un jet de martelage rythmique de 2D6.",
+            "Si le jet de martelage est inférieur à la valeur d'incantation, le sort échoue et son effet n'est pas résolu.",
+            "S'il est égal ou supérieur, augmentez la portée du sort de 3\". Vous pouvez continuer à faire des jets de martelage pour ce sort jusqu'à obtenir un résultat inférieur. Les effets sont cumulatifs."
+          ]
+        }
+      ],
+      "regiment": [
+        "Any KHAZALITE HOLDS"
+      ]
+    },
+    {
+      "id": "thrynn",
+      "en": "Thrynn",
+      "pts": 120,
+      "size": 1,
+      "hero": true,
+      "base": "32mm",
+      "stats": {
+        "M": "4\"",
+        "S": "5",
+        "C": "2",
+        "Sv": "3+"
+      },
+      "kw": "HERO, INFANTRY, ORDER, KHAZALITE HOLDS, DUARDIN, KROMDRON",
+      "weapons": [
+        {
+          "n": "Grudgehammer and Runic Axe",
+          "range": "Mêlée",
+          "a": 5,
+          "h": 3,
+          "w": 3,
+          "r": 1,
+          "d": "2",
+          "crit": "Mortel",
+          "extra": []
+        }
+      ],
+      "abilities": [
+        {
+          "c": "fight",
+          "t": "Une fois par tour (armée), n'importe quelle phase de combat",
+          "n": "Steadfast Retribution",
+          "x": [
+            "Effet : Ajoutez 1 à la caractéristique d'Attaques des armes de mêlée de cette unité, jusqu'à un maximum de +3, pour chaque autre unité amie visible entièrement à 6\" de cette unité qui a des marques de rancune."
+          ]
+        },
+        {
+          "c": "fight",
+          "t": "Une fois par tour (armée), Réaction : Vous avez déclaré une aptitude COMBAT pour cette unité ou une unité KROMDRON INFANTERIE non-HÉROS à 3\" et visible",
+          "n": "Fight Shoulder to Shoulder",
+          "x": [
+            "Effet : Si vous avez déclaré COMBAT pour cette unité, choisissez une unité KROMDRON INFANTERIE non-HÉROS amie qui n'a pas utilisé COMBAT ce tour, dans la portée de combat de cette unité et visible. Elle peut être choisie pour utiliser COMBAT immédiatement après. Si c'est le cas, ajoutez 1 aux jets de touche de ses attaques pour le restant du tour.",
+            "Si vous avez déclaré COMBAT pour une unité KROMDRON INFANTERIE non-HÉROS amie, si cette unité n'a pas utilisé COMBAT ce tour, elle peut être choisie pour utiliser COMBAT immédiatement après ; ajoutez alors 1 aux jets de touche de ses attaques pour le restant du tour."
+          ]
+        }
+      ],
+      "regiment": [
+        "Any KHAZALITE HOLDS"
+      ]
+    },
+    {
+      "id": "thrynn-on-war-throne",
+      "en": "Thrynn on War Throne",
+      "pts": 340,
+      "size": 1,
+      "hero": true,
+      "base": "170 × 105mm",
+      "stats": {
+        "M": "10\"",
+        "S": "16",
+        "C": "5",
+        "Sv": "3+"
+      },
+      "kw": "HERO, WAR MACHINE, ORDER, KHAZALITE HOLDS, DUARDIN, KROMDRON",
+      "weapons": [
+        {
+          "n": "Forge-spark Lightning",
+          "range": "12\"",
+          "a": 6,
+          "h": 4,
+          "w": 2,
+          "r": 2,
+          "d": "1",
+          "crit": "2 Hits",
+          "extra": [
+            "Companion"
+          ]
+        },
+        {
+          "n": "Thrynn's Runeweapons",
+          "range": "Mêlée",
+          "a": 6,
+          "h": 3,
+          "w": 3,
+          "r": 2,
+          "d": "2",
+          "crit": "Mortel",
+          "extra": []
+        },
+        {
+          "n": "Karak War Council's Armoury",
+          "range": "Mêlée",
+          "a": 6,
+          "h": 3,
+          "w": 3,
+          "r": 1,
+          "d": "2",
+          "crit": "none",
+          "extra": [
+            "Battle Damaged: Att. = 4 si ≥10 pts de dégâts"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "c": "defense",
+          "t": "Passif",
+          "n": "Battle Damaged",
+          "x": [
+            "Effet : Tant que cette unité a 10 points de dégâts ou plus, la caractéristique d'Attaques de son Karak War Council's Armoury est de 4."
+          ]
+        },
+        {
+          "c": "start",
+          "t": "Une fois par tour (armée), début de n'importe quel tour",
+          "n": "Defend the Throne!",
+          "x": [
+            "Annonce : Choisissez une autre unité KHAZALITE HOLDS amie visible entièrement à 12\" de cette unité comme cible. Pour chaque marque de rancune, vous pouvez choisir une cible supplémentaire.",
+            "Effet : Pour le restant du tour, les armes de mêlée des cibles ont Anti-charge (+1 Perf.) tant qu'elles sont entièrement à 6\" de cette unité. Ajoutez 3\" à cette portée pour chaque marque de rancune."
+          ]
+        },
+        {
+          "c": "hero",
+          "t": "Une fois par tour (armée), votre phase des héros",
+          "n": "Karak War Council",
+          "x": [
+            "Effet : Choisissez 1 des effets suivants jusqu'au début de votre prochain tour :",
+            "• Stonesmith's Passage : Ajoutez 2\" à la caractéristique de Mouvement des unités KHAZALITE HOLDS INFANTERIE amies visibles entièrement à 12\". Aucun dégât mortel ne leur est infligé par des capacités RETRAITE.",
+            "• Grudgebearer's Accusation : Choisissez un HÉROS ennemi visible à 18\". Les unités KHAZALITE HOLDS INFANTERIE amies peuvent ignorer les effets de 'Guarded Hero' sur la cible pour leurs attaques de tir.",
+            "• Holdseeker's Protection : Choisissez une unité KHAZALITE HOLDS amie visible entièrement à 12\". Jetez un dé. Sur 3+, sauf l'aptitude d'arme Companion, les aptitudes d'armes des attaques ciblant cette unité n'ont aucun effet."
+          ]
+        },
+        {
+          "c": "move",
+          "t": "Une fois par tour (armée), Réaction : Vous avez déclaré une aptitude MOUVEMENT pour cette unité dans votre phase de mouvement",
+          "n": "Forge a Path",
+          "x": [
+            "Effet : Choisissez une unité KROMDRON INFANTERIE amie visible entièrement à 6\" de cette unité, pas en combat et non déployée ce tour. Retirez-la du champ de bataille. Après que cette unité a terminé son mouvement, replacez la cible entièrement à 6\" de cette unité et à plus de 9\" de toutes les unités ennemies."
+          ]
+        },
+        {
+          "c": "charge",
+          "t": "Une fois par tour (armée), n'importe quelle phase de charge",
+          "n": "Tectonic Impact",
+          "x": [
+            "Annonce : Si cette unité a chargé ce tour, choisissez une unité ennemie visible à 1\" d'elle comme cible.",
+            "Effet : Jetez un dé. Sur 3+, infligez à la cible autant de dégâts mortels que le résultat."
+          ]
+        }
+      ],
+      "regiment": [
+        "0-1 GRIMNIR'S CHOSEN",
+        "Any KROMDRON NOBLE",
+        "Any KHAZALITE HOLDS"
+      ]
+    },
+    {
+      "id": "auric-hearthguard",
+      "en": "Auric Hearthguard",
+      "pts": 110,
+      "size": 5,
+      "reinforceable": true,
+      "base": "32mm",
+      "stats": {
+        "M": "4\"",
+        "S": "2",
+        "C": "1",
+        "Sv": "6+",
+        "Ward": "6+"
+      },
+      "kw": "INFANTRY, CHAMPION, WARD (6+), ORDER, KHAZALITE HOLDS, DUARDIN, GRIMMDRON",
+      "weapons": [
+        {
+          "n": "Magmapike",
+          "range": "12\"",
+          "a": 2,
+          "h": 4,
+          "w": 3,
+          "r": 1,
+          "d": "1",
+          "crit": "2 Hits",
+          "extra": [
+            "Shoot in Combat"
+          ]
+        },
+        {
+          "n": "Magmapike (mêlée)",
+          "range": "Mêlée",
+          "a": 1,
+          "h": 3,
+          "w": 3,
+          "r": 1,
+          "d": "1",
+          "crit": "2 Hits",
+          "extra": []
+        }
+      ],
+      "abilities": [
+        {
+          "c": "shoot",
+          "t": "Passif",
+          "n": "Focused Ire",
+          "x": [
+            "Effet : Ajoutez 1 aux jets de touche des attaques de tir de cette unité tant qu'elle a des marques de rancune."
+          ]
+        },
+        {
+          "c": "shoot",
+          "t": "Une fois par tour (armée), n'importe quelle phase de tir",
+          "n": "Molten Rockbolts",
+          "x": [
+            "Annonce : Choisissez une unité ennemie à laquelle des points de dégâts ont été alloués ce tour par les attaques de tir de cette unité.",
+            "Effet : Soustrayez 1 aux jets de touche des attaques de la cible jusqu'au début de votre prochain tour."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clangunners-thrundok-rifles",
+      "en": "Clangunners with Thrundok Rifles",
+      "pts": 140,
+      "size": 10,
+      "reinforceable": true,
+      "base": "28.5mm",
+      "stats": {
+        "M": "4\"",
+        "S": "1",
+        "C": "1",
+        "Sv": "4+"
+      },
+      "kw": "INFANTRY, CHAMPION, MUSICIAN (1/10), STANDARD BEARER (1/10), ORDER, KHAZALITE HOLDS, DUARDIN, KROMDRON",
+      "weapons": [
+        {
+          "n": "Thrundok Rifle",
+          "range": "18\"",
+          "a": 2,
+          "h": 3,
+          "w": 4,
+          "r": 1,
+          "d": "1",
+          "crit": "none",
+          "extra": []
+        },
+        {
+          "n": "Rifle Butt",
+          "range": "Mêlée",
+          "a": 1,
+          "h": 4,
+          "w": 4,
+          "r": 0,
+          "d": "1",
+          "crit": "none",
+          "extra": []
+        }
+      ],
+      "abilities": [
+        {
+          "c": "shoot",
+          "t": "Passif",
+          "n": "Settled with a Bullet",
+          "x": [
+            "Effet : Ajoutez 1 aux jets de blessure des attaques de tir de cette unité tant qu'elle a des marques de rancune."
+          ]
+        },
+        {
+          "c": "shoot",
+          "t": "Une fois par tour (armée), n'importe quelle phase de tir",
+          "n": "Thrundok Hail",
+          "x": [
+            "Annonce : Choisissez une unité ennemie à laquelle des points de dégâts ont été alloués ce tour par les attaques de tir de cette unité.",
+            "Effet : Jetez un dé. Ajoutez 1 si la cible est CAVALERIE ou a VOL. Ajoutez 2 si c'est un MONSTRE. Sur 4+, divisez par 2 la caractéristique de Mouvement de la cible jusqu'au début de votre prochain tour."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clangunners-thrundrin-shotcannons",
+      "en": "Clangunners with Thrundrin Shotcannons",
+      "pts": 130,
+      "size": 10,
+      "reinforceable": true,
+      "base": "28.5mm",
+      "stats": {
+        "M": "4\"",
+        "S": "1",
+        "C": "1",
+        "Sv": "4+"
+      },
+      "kw": "INFANTRY, CHAMPION, MUSICIAN (1/10), STANDARD BEARER (1/10), ORDER, KHAZALITE HOLDS, DUARDIN, KROMDRON",
+      "weapons": [
+        {
+          "n": "Thrundrin Shotcannon",
+          "range": "12\"",
+          "a": 2,
+          "h": 3,
+          "w": 3,
+          "r": 0,
+          "d": "1",
+          "crit": "Auto-wound",
+          "extra": []
+        },
+        {
+          "n": "Shotcannon Butt",
+          "range": "Mêlée",
+          "a": 1,
+          "h": 4,
+          "w": 4,
+          "r": 0,
+          "d": "1",
+          "crit": "none",
+          "extra": []
+        }
+      ],
+      "abilities": [
+        {
+          "c": "shoot",
+          "t": "Passif",
+          "n": "Grim Retaliation",
+          "x": [
+            "Effet : Ajoutez 1 à la caractéristique d'Attaques des armes à distance de cette unité tant qu'elle a des marques de rancune."
+          ]
+        },
+        {
+          "c": "shoot",
+          "t": "Une fois par tour (armée), n'importe quelle phase de tir",
+          "n": "Blasted and Dazed",
+          "x": [
+            "Annonce : Choisissez une unité ennemie à laquelle des points de dégâts ont été alloués ce tour par les attaques de tir de cette unité.",
+            "Effet : Jetez un dé. Ajoutez 1 si la cible n'a pas VOL. Sur 4+, jusqu'au début de votre prochain tour, soustrayez 1 au nombre de dés jetés pour les charges de la cible (minimum 1)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clanshields",
+      "en": "Clanshields",
+      "pts": 110,
+      "size": 10,
+      "reinforceable": true,
+      "base": "28.5mm",
+      "stats": {
+        "M": "4\"",
+        "S": "1",
+        "C": "1",
+        "Sv": "3+"
+      },
+      "kw": "INFANTRY, CHAMPION, MUSICIAN (1/10), STANDARD BEARER (1/10), ORDER, KHAZALITE HOLDS, DUARDIN, KROMDRON",
+      "weapons": [
+        {
+          "n": "Kromdron Weapon",
+          "range": "Mêlée",
+          "a": 2,
+          "h": 3,
+          "w": 4,
+          "r": 0,
+          "d": "1",
+          "crit": "none",
+          "extra": [
+            "Anti-INFANTRY (+1 Perf.)"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "c": "defense",
+          "t": "Passif",
+          "n": "Tough as Stone",
+          "x": [
+            "Effet : Soustrayez 1 à la caractéristique de Perforation des armes utilisées pour des attaques de combat ciblant cette unité tant que chaque figurine de cette unité est à 3\" d'un objectif que vous contrôlez."
+          ]
+        },
+        {
+          "c": "fight",
+          "t": "Passif",
+          "n": "Remember Their Names",
+          "x": [
+            "Effet : Ajoutez 1 aux jets de blessure des attaques de cette unité tant qu'elle a des marques de rancune."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "valayan-guardians-rune-axes",
+      "en": "Valayan Guardians with Rune Axes and Shields",
+      "pts": 110,
+      "size": 5,
+      "reinforceable": true,
+      "base": "28.5mm",
+      "stats": {
+        "M": "4\"",
+        "S": "1",
+        "C": "1",
+        "Sv": "3+",
+        "Ward": "4+"
+      },
+      "kw": "INFANTRY, CHAMPION, WARD (4+), ORDER, KHAZALITE HOLDS, DUARDIN, KROMDRON, VALAYAN",
+      "weapons": [
+        {
+          "n": "Valayan Rune Axe",
+          "range": "Mêlée",
+          "a": 3,
+          "h": 3,
+          "w": 4,
+          "r": 1,
+          "d": "1",
+          "crit": "none",
+          "extra": []
+        }
+      ],
+      "abilities": [
+        {
+          "c": "fight",
+          "t": "Une fois par tour (armée), n'importe quelle phase de combat",
+          "n": "Shield Maidens",
+          "x": [
+            "Annonce : Choisissez une unité ennemie qui a chargé ce tour et est en combat avec cette unité.",
+            "Effet : Jetez un dé pour chaque figurine ennemie en combat avec cette unité. Pour chaque 4+, infligez 1 dégât mortel à la cible."
+          ]
+        },
+        {
+          "c": "defense",
+          "t": "Passif",
+          "n": "Protection of Valaya",
+          "x": [
+            "Effet : Tant que cette unité a des marques de rancune, les unités KHAZALITE HOLDS INFANTERIE et WAR MACHINE non-GHOLEM amies visibles ont WARD (5+) tant qu'elles sont entièrement à 6\" de cette unité."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "valayan-guardians-runic-halberds",
+      "en": "Valayan Guardians with Runic Halberds",
+      "pts": 110,
+      "size": 5,
+      "reinforceable": true,
+      "base": "28.5mm",
+      "stats": {
+        "M": "4\"",
+        "S": "1",
+        "C": "1",
+        "Sv": "4+",
+        "Ward": "4+"
+      },
+      "kw": "INFANTRY, CHAMPION, WARD (4+), ORDER, KHAZALITE HOLDS, DUARDIN, KROMDRON, VALAYAN",
+      "weapons": [
+        {
+          "n": "Valayan Runic Halberd",
+          "range": "Mêlée",
+          "a": 2,
+          "h": 3,
+          "w": 4,
+          "r": 2,
+          "d": "2",
+          "crit": "2 Hits",
+          "extra": []
+        }
+      ],
+      "abilities": [
+        {
+          "c": "charge",
+          "t": "Une fois par tour (armée), votre phase de charge",
+          "n": "Warriors of the Hearth",
+          "x": [
+            "Annonce : Si cette unité n'est pas en combat et n'a pas utilisé COURSE ni RETRAITE ce tour, faites un jet de charge de 2D6. Tant qu'elle a des marques de rancune, vous pouvez relancer ce jet.",
+            "Effet : Cette unité peut se déplacer d'une distance jusqu'à la valeur du jet de charge. Elle peut traverser les portées de combat ennemies, passer sur des figurines ennemies et doit terminer ce mouvement à ½\" d'une unité ennemie visible. Si c'est le cas, elle a chargé.",
+            "Puis, si elle a chargé ce tour, choisissez une unité ennemie qu'elle a traversée ce tour. Infligez D3 dégâts mortels à cette unité ennemie.",
+            "Mots-clés : BASE, MOUVEMENT, CHARGE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gholems-of-gazul",
+      "en": "Gholems of Gazul",
+      "pts": 210,
+      "size": 3,
+      "reinforceable": true,
+      "base": "50mm",
+      "stats": {
+        "M": "6\"",
+        "S": "5",
+        "C": "2",
+        "Sv": "3+"
+      },
+      "kw": "WAR MACHINE, ORDER, KHAZALITE HOLDS, GHOLEM",
+      "weapons": [
+        {
+          "n": "Gazulite Great Hammer",
+          "range": "Mêlée",
+          "a": 3,
+          "h": 4,
+          "w": 2,
+          "r": 2,
+          "d": "3",
+          "crit": "none",
+          "extra": []
+        }
+      ],
+      "abilities": [
+        {
+          "c": "fight",
+          "t": "Passif",
+          "n": "Runes of Gazul",
+          "x": [
+            "Effet : Soustrayez 1 aux jets de protection (ward) contre les points de dégâts infligés par les attaques de combat de cette unité."
+          ]
+        },
+        {
+          "c": "fight",
+          "t": "Une fois par tour (armée), n'importe quelle phase de combat",
+          "n": "Armour-crushing Swings",
+          "x": [
+            "Annonce : Choisissez une unité ennemie en combat avec cette unité comme cible.",
+            "Effet : Votre adversaire choisit si la cible tente d'esquiver ou non. Si oui, soustrayez 1 aux jets de touche des attaques de la cible pour le restant du tour.",
+            "Puis jetez un dé. Soustrayez 1 au résultat si la cible a tenté d'esquiver. Si le résultat est égal ou supérieur à la caractéristique de Sauvegarde de la cible, soustrayez 1 aux jets de sauvegarde de la cible pour le restant du tour."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gholems-of-valaya",
+      "en": "Gholems of Valaya",
+      "pts": 200,
+      "size": 3,
+      "reinforceable": true,
+      "base": "50mm",
+      "stats": {
+        "M": "6\"",
+        "S": "5",
+        "C": "2",
+        "Sv": "3+"
+      },
+      "kw": "WAR MACHINE, ORDER, KHAZALITE HOLDS, GHOLEM, VALAYAN",
+      "weapons": [
+        {
+          "n": "Valayan Great Axe",
+          "range": "Mêlée",
+          "a": 4,
+          "h": 4,
+          "w": 2,
+          "r": 2,
+          "d": "2",
+          "crit": "none",
+          "extra": []
+        }
+      ],
+      "abilities": [
+        {
+          "c": "defense",
+          "t": "Passif",
+          "n": "Icons of Valaya",
+          "x": [
+            "Effet : Si cette unité est détruite, avant de la retirer du jeu, donnez 1 marque de rancune à chaque unité VALAYAN non-GHOLEM amie visible."
+          ]
+        },
+        {
+          "c": "fight",
+          "t": "Une fois par tour (armée), n'importe quelle phase de combat",
+          "n": "Shield Strike",
+          "x": [
+            "Annonce : Si cette unité a chargé ce tour, choisissez une unité ennemie visible à 1\" d'elle comme cible.",
+            "Effet : Jetez un dé. Sur 3+, la cible a FRAPPE EN DERNIER pour le restant du tour."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oathkeeper-cannon",
+      "en": "Oathkeeper Cannon",
+      "pts": 150,
+      "size": 1,
+      "base": "100mm",
+      "stats": {
+        "M": "4\"",
+        "S": "6",
+        "C": "2",
+        "Sv": "3+"
+      },
+      "kw": "WAR MACHINE, ORDER, KHAZALITE HOLDS, KROMDRON",
+      "weapons": [
+        {
+          "n": "Oathkeeper Shot",
+          "range": "24\"",
+          "a": 3,
+          "h": 4,
+          "w": 2,
+          "r": 2,
+          "d": "D3+2",
+          "crit": "none",
+          "extra": []
+        },
+        {
+          "n": "Oathkeeper Crew Tools",
+          "range": "Mêlée",
+          "a": 3,
+          "h": 4,
+          "w": 4,
+          "r": 0,
+          "d": "1",
+          "crit": "none",
+          "extra": []
+        }
+      ],
+      "abilities": [
+        {
+          "c": "shoot",
+          "t": "Passif",
+          "n": "Artillerist's Revenge",
+          "x": [
+            "Effet : Les armes à distance de cette unité ont Crit (2 Hits) tant qu'elle a des marques de rancune."
+          ]
+        },
+        {
+          "c": "shoot",
+          "t": "Une fois par tour (armée), votre phase de tir",
+          "n": "Oathkeeper Apprentice Runestriker",
+          "x": [
+            "Annonce : Choisissez une unité ennemie à laquelle des points de dégâts ont été alloués ce tour par les attaques de tir de cette unité.",
+            "Effet : Jetez un dé. Sur 3+, choisissez 1 des effets suivants :",
+            "• Rune of Sundering : jusqu'au début de votre prochain tour, soustrayez 1 à la Perforation des armes de mêlée de la cible.",
+            "• Rune of Burning : pour le restant du tour, les attaques de combat ciblant cette unité ennemie marquent des coups critiques sur des jets de touche non modifiés de 5+.",
+            "• Rune of Shock : la cible a FRAPPE EN DERNIER jusqu'au début de votre prochain tour."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stonebreaker-mortar",
+      "en": "Stonebreaker Mortar",
+      "pts": 140,
+      "size": 1,
+      "base": "100mm",
+      "stats": {
+        "M": "4\"",
+        "S": "6",
+        "C": "2",
+        "Sv": "3+"
+      },
+      "kw": "WAR MACHINE, ORDER, KHAZALITE HOLDS, KROMDRON",
+      "weapons": [
+        {
+          "n": "Stonebreaker Shot",
+          "range": "30\"",
+          "a": 5,
+          "h": 3,
+          "w": 3,
+          "r": 1,
+          "d": "2",
+          "crit": "none",
+          "extra": [
+            "Anti-INFANTRY (+1 Perf.)"
+          ]
+        },
+        {
+          "n": "Stonebreaker Crew Tools",
+          "range": "Mêlée",
+          "a": 3,
+          "h": 4,
+          "w": 4,
+          "r": 0,
+          "d": "1",
+          "crit": "none",
+          "extra": []
+        }
+      ],
+      "abilities": [
+        {
+          "c": "shoot",
+          "t": "Passif",
+          "n": "Artillerist's Revenge",
+          "x": [
+            "Effet : Les armes à distance de cette unité ont Crit (2 Hits) tant qu'elle a des marques de rancune."
+          ]
+        },
+        {
+          "c": "shoot",
+          "t": "Une fois par tour (armée), votre phase de tir",
+          "n": "Stonebreaker Apprentice Runestriker",
+          "x": [
+            "Annonce : Choisissez une unité ennemie à laquelle des points de dégâts ont été alloués ce tour par les attaques de tir de cette unité.",
+            "Effet : Jetez un dé. Sur 3+, choisissez 1 des effets suivants :",
+            "• Rune of Detonation : jetez un D3 pour chaque unité ennemie à 3\" de la cible. Sur 2+, infligez autant de dégâts mortels que le résultat.",
+            "• Rune of Thunder : jusqu'au début de votre prochain tour, la cible a un score de Contrôle maximum de 1.",
+            "• Rune of Earthshaking : la cible ne peut pas utiliser d'aptitudes COURSE jusqu'au début de votre prochain tour."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "molten-infernoth",
+      "en": "Molten Infernoth",
+      "pts": 0,
+      "size": 1,
+      "base": "120x92mm",
+      "stats": {
+        "M": "8\"",
+        "S": "10",
+        "Banish": "7",
+        "Sv": "5+",
+        "Ward": "6+"
+      },
+      "kw": "WARD (6+), MANIFESTATION, INVOCATION, FLY, ORDER, FYRESLAYERS",
+      "weapons": [
+        {
+          "n": "Raging Torrents of Lava",
+          "range": "8\"",
+          "a": 2,
+          "h": 4,
+          "w": 3,
+          "r": 2,
+          "d": "D3",
+          "crit": "none",
+          "extra": [
+            "Shoot in Combat"
+          ]
+        },
+        {
+          "n": "Molten Claws",
+          "range": "Mêlée",
+          "a": 6,
+          "h": 4,
+          "w": 2,
+          "r": 1,
+          "d": "D3",
+          "crit": "mortal",
+          "extra": []
+        }
+      ],
+      "abilities": [
+        {
+          "c": "end",
+          "t": "Fin de n'importe quel tour",
+          "n": "Flamescarred",
+          "x": [
+            "Annonce : Choisissez une unité ennemie à laquelle des points de dégâts ont été alloués ce tour par les attaques de cette MANIFESTATION.",
+            "Effet : Soustrayez 1 aux jets de blessure des attaques de combat de la cible jusqu'à la fin de votre prochain tour."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "runic-fyrewall",
+      "en": "Runic Fyrewall",
+      "pts": 0,
+      "size": 1,
+      "base": "Use model",
+      "stats": {
+        "M": "-",
+        "S": "8",
+        "Banish": "7",
+        "Sv": "3+",
+        "Ward": "6+"
+      },
+      "kw": "WARD (6+), MANIFESTATION, INVOCATION, ORDER, FYRESLAYERS",
+      "weapons": [],
+      "abilities": [
+        {
+          "c": "move",
+          "t": "Phase de mouvement ennemie",
+          "n": "Roaring Rune-fire",
+          "x": [
+            "Annonce : Choisissez jusqu'à 3 unités ennemies à 6\" de cette MANIFESTATION comme cibles.",
+            "Effet : Jetez un D3 pour chaque cible. Sur 2+ :",
+            "• Infligez autant de dégâts mortels que le résultat à la cible.",
+            "• Soustrayez 3 au score de Contrôle de la cible pour le restant du tour."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zharrgron-flame-spitter",
+      "en": "Zharrgron Flame-spitter",
+      "pts": 0,
+      "size": 1,
+      "base": "50mm",
+      "stats": {
+        "M": "-",
+        "S": "5",
+        "Banish": "7",
+        "Sv": "6+",
+        "Ward": "6+"
+      },
+      "kw": "WARD (6+), MANIFESTATION, INVOCATION, ORDER, FYRESLAYERS",
+      "weapons": [
+        {
+          "n": "Magma Blast",
+          "range": "18\"",
+          "a": 8,
+          "h": 4,
+          "w": 3,
+          "r": 1,
+          "d": "1",
+          "crit": "2hits",
+          "extra": []
+        }
+      ],
+      "abilities": [
+        {
+          "c": "shoot",
+          "t": "Passif",
+          "n": "Magma Blast",
+          "x": [
+            "Effet : Ajoutez 1 aux jets de touche des attaques de tir de cette MANIFESTATION si l'unité cible a 10 figurines ou plus. Ajoutez 1 aux jets de touche et de blessure à la place si l'unité cible a 15 figurines ou plus."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magmic-battleforge",
+      "en": "Magmic Battleforge",
+      "pts": 0,
+      "size": 1,
+      "base": "Use Model",
+      "stats": {
+        "M": "-",
+        "S": "8",
+        "C": "-",
+        "Sv": "3+",
+        "Ward": "6+"
+      },
+      "kw": "FACTION TERRAIN, KHAZALITE HOLDS, ORDER, WARD (6+)",
+      "weapons": [],
+      "abilities": [
+        {
+          "c": "hero",
+          "t": "Une fois par bataille (armée), votre phase des héros",
+          "n": "Spending the Forge",
+          "x": [
+            "Annonce : Choisissez un PRÊTRE FYRESLAYERS ami à portée de combat de ce terrain pour dépenser le pouvoir de la forge.",
+            "Effet : Soignez (D3) chaque unité FYRESLAYERS amie sur le champ de bataille. Une fois cette aptitude utilisée, ce terrain ne peut plus utiliser 'Molten Blessing' pour le restant de la bataille."
+          ]
+        },
+        {
+          "c": "start",
+          "t": "Début de n'importe quel tour",
+          "n": "Molten Blessing",
+          "x": [
+            "Annonce : Choisissez un PRÊTRE FYRESLAYERS ami à portée de combat de ce terrain comme cible.",
+            "Effet : Ajoutez 1 aux jets d'incantation de la cible pour le restant du tour. De plus, la cible peut utiliser l'aptitude 'Unbind' ce tour comme si elle avait WIZARD (1)."
+          ]
+        },
+        {
+          "c": "passive",
+          "t": "Passif",
+          "n": "Magmic Battleforge",
+          "x": [
+            "Effet : Les aptitudes de terrain universelles suivantes s'appliquent (Terrain, 1.2) : Cover, Impassable, Obscuring."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gotrek-gurnisson",
+      "en": "Gotrek Gurnisson",
+      "pts": 220,
+      "size": 1,
+      "base": "32mm",
+      "stats": {
+        "M": "4\"",
+        "S": "8",
+        "C": "2",
+        "Sv": "5+",
+        "Ward": "3+"
+      },
+      "kw": "UNIQUE, HERO, INFANTRY, WARD (3+), ORDER, KHAZALITE HOLDS, DUARDIN",
+      "weapons": [
+        {
+          "n": "Zangrom-Thaz",
+          "range": "Mêlée",
+          "a": 8,
+          "h": 2,
+          "w": 2,
+          "r": 2,
+          "d": "3",
+          "crit": "mortal",
+          "extra": []
+        }
+      ],
+      "abilities": [
+        {
+          "c": "passive",
+          "t": "Passif",
+          "n": "Indifferent and Pragmatic",
+          "x": [
+            "Effet : Cette unité ne peut pas avoir de marques de rancune et ne peut pas être affectée par les aptitudes VŒU ANCESTRAL."
+          ]
+        },
+        {
+          "c": "passive",
+          "t": "Passif",
+          "n": "Too Stubborn to Die",
+          "x": [
+            "Effet : La première fois que cette unité serait détruite, avant de la retirer du jeu, jetez un dé. Sur 3+, elle n'est pas détruite et tous les points de dégâts restants n'ont aucun effet. Puis Soignez (D3) cette unité."
+          ]
+        },
+        {
+          "c": "passive",
+          "t": "Passif",
+          "n": "A Glorious Doom",
+          "x": [
+            "Effet : Tant que cette unité est en combat avec des HÉROS ou MONSTRES ennemis :",
+            "• Elle ne peut choisir que ces unités ennemies comme cibles de ses attaques de combat.",
+            "• Ajoutez 2 à la caractéristique d'Attaques de ses armes de mêlée pour chaque unité HÉROS ou MONSTRE ennemie en combat avec elle.",
+            "Note du designer : Une unité ayant à la fois HERO et MONSTER n'ajoute que +2 (pas +4)."
+          ]
+        }
+      ]
+    }
+  ],
+  "formations": [
+    {
+      "n": "War Callers — Bellicose Belligerents",
+      "x": [
+        "Effet : Soustrayez 3 au score de Contrôle des unités ennemies en combat avec des unités KHAZALITE HOLDS amies de cette formation."
+      ]
+    },
+    {
+      "n": "Hearthsworn Defenders — Lock Shields!",
+      "x": [
+        "Effet : Soustrayez 1 aux jets de touche des attaques de tir ciblant des unités KHAZALITE HOLDS amies de cette formation tant qu'elles sont entièrement dans votre territoire ou sur un objectif que vous contrôlez."
+      ]
+    },
+    {
+      "n": "Unyielding Anvil — Stalwart Resolve",
+      "x": [
+        "Effet : Les unités ennemies en combat avec des unités de cette formation ne peuvent se rapprocher (pile-in) que de 1\" au lieu de 3\"."
+      ]
+    },
+    {
+      "n": "Wayfarer Nomads — Well-travelled Roamers",
+      "x": [
+        "Effet : Les unités de cette formation peuvent relancer les jets de distance de mouvement tant qu'elles sont à plus de 9\" de toutes les autres unités amies."
+      ]
+    }
+  ],
+  "battle_traits": [
+    {
+      "n": "Thorgrim's Beard! There Are Grudges to Be Settled!",
+      "t": "Une fois par tour (armée)",
+      "x": [
+        "Annonce : Choisissez une unité ennemie visible à 12\" d'une unité KHAZALITE HOLDS amie comme cible pour recevoir une marque de rancune, ou choisissez une unité KHAZALITE HOLDS amie qui a une marque de rancune.",
+        "Effet : Si vous avez choisi une unité ennemie, donnez-lui 1 marque de rancune. Si vous avez choisi une unité amie, retirez 1 marque de rancune de cette unité et appliquez un des effets liés aux marques de rancune selon les règles de faction.",
+        "Note : Les marques de rancune sont au cœur du jeu Khazalite Holds (Kromdron / Grimmdrons)."
+      ]
+    },
+    {
+      "n": "Reclaim the Karaks",
+      "t": "Passif",
+      "x": [
+        "Effet : Chaque fois qu'une unité KHAZALITE HOLDS amie est détruite alors qu'elle contestait un objectif, ou qu'une unité KHAZALITE HOLDS amie utilise une aptitude RETRAITE, vous pouvez donner 1 marque de rancune à une unité ennemie visible à 12\" de l'emplacement de cette unité."
+      ]
+    },
+    {
+      "n": "Let It Be Known!",
+      "t": "Une fois par tour (armée)",
+      "x": [
+        "Annonce : Choisissez une unité ennemie qui a déjà une marque de rancune et qui est à 12\" d'une unité KHAZALITE HOLDS amie.",
+        "Effet : Donnez 1 marque de rancune supplémentaire à une autre unité ennemie à 12\" de la première."
+      ]
+    },
+    {
+      "n": "Gazul, Remember the Fallen!",
+      "t": "Passif",
+      "x": [
+        "Effet : Tant qu'une unité KHAZALITE HOLDS amie a moins de la moitié de ses figurines restantes (en tenant compte des figurines revenues), ajoutez 1 aux jets de touche de ses attaques de mêlée.",
+        "Note du designer : Les figurines revenues par des aptitudes comptent pour déterminer si l'unité est sous la moitié."
+      ]
+    },
+    {
+      "n": "We Honour Valaya!",
+      "t": "Une fois par bataille (armée), phase des héros — Vœu ancestral",
+      "x": [
+        "Restriction : Vous ne pouvez pas utiliser plus d'un Vœu ancestral par round de bataille.",
+        "Annonce : Choisissez une unité KHAZALITE HOLDS amie entièrement à 12\" d'un HÉROS ami comme cible.",
+        "Effet : Jetez un D3. Infligez autant de dégâts mortels à une unité ennemie en combat avec la cible. Si la cible a le mot-clé VALAYAN, le résultat est automatiquement 3. Alternativement, soignez la cible d'autant de points, ou ramenez autant de figurines détruites (dans les limites de l'unité)."
+      ]
+    },
+    {
+      "n": "Inghilde, Our Light in the Darkness",
+      "t": "Une fois par bataille (armée), phase des héros — Vœu ancestral",
+      "x": [
+        "Restriction : Vous ne pouvez pas utiliser plus d'un Vœu ancestral par round de bataille.",
+        "Annonce : Choisissez jusqu'à 3 unités d'INFANTERIE KHAZALITE HOLDS amies entièrement dans un élément de terrain.",
+        "Effet : Retirez ces unités du champ de bataille et replacez-les entièrement dans un autre élément de terrain à plus de 9\" des unités ennemies."
+      ]
+    },
+    {
+      "n": "By Grungni, Stand Firm!",
+      "t": "Une fois par bataille (armée), phase des héros — Vœu ancestral",
+      "x": [
+        "Restriction : Vous ne pouvez pas utiliser plus d'un Vœu ancestral par round de bataille.",
+        "Annonce : Choisissez une unité KHAZALITE HOLDS amie qui n'a pas chargé ce tour.",
+        "Effet : Jusqu'au début de votre prochain tour, soustrayez 1 à la Perforation des attaques ciblant cette unité si l'attaquant a chargé ce tour."
+      ]
+    },
+    {
+      "n": "Grimnir's Wrath Will Burn Bright!",
+      "t": "Une fois par bataille (armée), phase des héros — Vœu ancestral",
+      "x": [
+        "Restriction : Vous ne pouvez pas utiliser plus d'un Vœu ancestral par round de bataille.",
+        "Annonce : Choisissez une unité d'INFANTERIE ou GRIMMDRON KHAZALITE HOLDS amie.",
+        "Effet : Jusqu'au début de votre prochain tour, ajoutez 1 aux jets de blessure de cette unité et elle a FRAPPE EN PREMIER."
+      ]
+    },
+    {
+      "n": "Enlighten Us with Your Wisdom, Grombrindal!",
+      "t": "Une fois par bataille (armée), phase des héros — Vœu ancestral",
+      "x": [
+        "Restriction : Vous ne pouvez pas utiliser plus d'un Vœu ancestral par round de bataille.",
+        "Annonce : Choisissez un SORCIER ou PRÊTRE KHAZALITE HOLDS ami.",
+        "Effet : Jusqu'au début de votre prochain tour, ajoutez 1 aux jets de lancer et d'incantation de cette unité, et les unités KHAZALITE HOLDS amies entièrement à 12\" d'elle ont WARD (4+)."
+      ]
+    }
+  ],
+  "artefacts": [
+    {
+      "n": "Hearthflares",
+      "t": "Artefact de pouvoir — Héros uniquement",
+      "x": [
+        "Effet : Ajoutez 5 au score de Contrôle du porteur tant qu'il conteste un objectif."
+      ]
+    },
+    {
+      "n": "Flamescale Rune Cloak",
+      "t": "Artefact de pouvoir — Héros uniquement",
+      "x": [
+        "Effet : Soustrayez 1 aux jets de touche des attaques ciblant le porteur s'il n'a pas chargé ce tour."
+      ]
+    },
+    {
+      "n": "Deep-earth Runic Weapon",
+      "t": "Artefact de pouvoir — Héros uniquement",
+      "x": [
+        "Phase de déploiement : Choisissez une des améliorations suivantes pour une arme de mêlée du porteur pour le restant de la bataille : +1 Perforation, +1 Attaque, ou +1 Dégâts.",
+        "Note : Lié aux frappes runiques / resonance des runes."
+      ]
+    }
+  ],
+  "heroic_traits": [
+    {
+      "n": "Long of Beard or Braid",
+      "t": "Trait héroïque — Héros uniquement",
+      "x": [
+        "Effet : Lorsqu'une aptitude RALLIEMENT est utilisée sur une unité entièrement à 12\" de ce Héros, vous pouvez faire un jet de ralliement supplémentaire."
+      ]
+    },
+    {
+      "n": "Innate Resonance",
+      "t": "Trait héroïque — Héros uniquement",
+      "x": [
+        "Effet : Si ce Héros est un SORCIER, ajoutez 1 à son niveau de sorcier. Les MANIFESTATIONS ennemies entièrement à 12\" de ce Héros ont FRAPPE EN DERNIER."
+      ]
+    },
+    {
+      "n": "Sworn to Vengeance",
+      "t": "Trait héroïque — Héros uniquement",
+      "x": [
+        "Fin de tour : Si une unité amie entièrement à 12\" de ce Héros a été détruite ce tour, gagnez 1 jeton de vengeance.",
+        "Effet : Vous pouvez dépenser des jetons de vengeance pour ajouter 1 aux jets de touche ou de blessure des unités KHAZALITE HOLDS amies (1 jeton par bonus)."
+      ]
+    }
+  ],
+  "marks_of_vulcatrix": [
+    {
+      "n": "Intense Fyrestream",
+      "pts": 10,
+      "x": [
+        "Réservé aux MONSTRES GRIMMDRON.",
+        "Effet : Gains liés aux dés de rage / niveau de fureur. Étend la portée et les attaques ; permet de Tirer en Combat dans certaines conditions."
+      ]
+    },
+    {
+      "n": "Thickened Scales",
+      "pts": 20,
+      "x": [
+        "Réservé aux MONSTRES GRIMMDRON.",
+        "Effet : Soustrayez 1 à la Perforation des attaques ciblant cette unité."
+      ]
+    },
+    {
+      "n": "Aureate Hide",
+      "pts": 10,
+      "x": [
+        "Réservé aux MONSTRES GRIMMDRON.",
+        "Réaction : Après que cette unité a tué une figurine ennemie avec une aptitude COMBAT.",
+        "Effet : Un PRÊTRE ami visible gagne D3 points de rituel."
+      ]
+    }
+  ],
+  "regiments_of_renown": [
+    {
+      "n": "Thengin's Grudgesettlers",
+      "pts": 510,
+      "units": [
+        "1 Runewright",
+        "1 Clanshields (10)",
+        "1 Oathkeeper Cannon",
+        "1 Clangunners with Thrundok Rifles (10)"
+      ],
+      "x": [
+        "Peut être inclus dans : Cities of Sigmar, Daughters of Khaine, Idoneth Deepkin, Kharadron Overlords, Lumineth Realm-lords, Seraphon, Stormcast Eternals, Sylvaneth."
+      ]
+    }
+  ],
+  "prayers": {
+    "vulkyn_gifts": {
+      "name": "Vulkyn Gifts",
+      "pts": 0,
+      "items": [
+        {
+          "n": "Fury of Vulcatrix",
+          "cv": 4,
+          "t": "Votre phase des héros",
+          "x": [
+            "Annonce : Choisissez un PRÊTRE GRIMMDRON ami pour chanter cette prière, choisissez une unité GRIMMDRON amie visible entièrement à 12\" de lui comme cible, puis faites un jet d'incantation de D6.",
+            "Effet : Ajoutez 1 aux jets de touche des attaques de combat de la cible, y compris les armes Companion, jusqu'au début de votre prochain tour.",
+            "De plus, si le jet d'incantation était 8+, ajoutez 1 à la caractéristique d'Attaques des armes de mêlée de la cible, y compris Companion, jusqu'au début de votre prochain tour."
+          ]
+        },
+        {
+          "n": "Ichor of the Ur-Salamander",
+          "cv": 3,
+          "unlimited": true,
+          "t": "Votre phase des héros",
+          "x": [
+            "Annonce : Choisissez un PRÊTRE GRIMMDRON ami pour chanter cette prière, choisissez une unité GRIMMDRON amie visible entièrement à 12\" de lui comme cible, puis faites un jet d'incantation de D6.",
+            "Effet : Si le jet était 6+, vous pouvez choisir une seconde cible éligible. Jusqu'au début de votre prochain tour :",
+            "• Si la cible est un MONSTRE : chaque fois que son aptitude 'Volcanic Blood' infligerait 1 dégât mortel à une unité ennemie, infligez D3 dégâts mortels à la place.",
+            "• Si la cible n'est pas un MONSTRE : chaque fois que vous obtenez un jet de sauvegarde non modifié de 1 pour une attaque de combat ciblant cette unité, infligez 1 dégât mortel à l'unité attaquante après résolution de l'aptitude COMBAT."
+          ]
+        },
+        {
+          "n": "Blazing Impetus",
+          "cv": 5,
+          "t": "Votre phase des héros",
+          "x": [
+            "Annonce : Choisissez un PRÊTRE GRIMMDRON ami pour chanter cette prière, choisissez une unité GRIMMDRON amie visible entièrement à 12\" de lui qui n'a pas été déployée ce tour comme cible, puis faites un jet d'incantation de D6.",
+            "Effet : Si le jet était 10+, vous pouvez choisir une seconde cible éligible. Chaque cible peut utiliser l'aptitude 'Normal Move' ou 'Retreat' comme s'il s'agissait de votre phase de mouvement."
+          ]
+        }
+      ]
+    },
+    "ancestor_god_recitations": {
+      "name": "Ancestor God Recitations",
+      "pts": 10,
+      "items": [
+        {
+          "n": "Recitation to Valaya",
+          "cv": 4,
+          "unlimited": true,
+          "t": "Votre phase des héros",
+          "x": [
+            "Annonce : Choisissez un PRÊTRE KHAZALITE HOLDS ami pour chanter cette prière, choisissez une unité KHAZALITE HOLDS amie visible entièrement à 12\" de lui comme cible, puis faites un jet d'incantation de D6.",
+            "Effet : Si le jet était 8+, vous pouvez choisir une seconde cible éligible. Soustrayez 1 aux jets de blessure des attaques ciblant ces unités amies jusqu'au début de votre prochain tour."
+          ]
+        },
+        {
+          "n": "Recitation to Gazul",
+          "cv": 4,
+          "t": "Votre phase des héros",
+          "x": [
+            "Annonce : Choisissez un PRÊTRE KHAZALITE HOLDS ami pour chanter cette prière, puis faites un jet d'incantation de D6.",
+            "Effet : Jusqu'au début de votre prochain tour, les unités ennemies et MANIFESTATIONS ennemies ne peuvent pas être déployées à 12\" du chanteur. Si le jet était 9+, cette distance passe à 18\"."
+          ]
+        },
+        {
+          "n": "Recitation to Grimnir",
+          "cv": 5,
+          "t": "Votre phase des héros",
+          "x": [
+            "Annonce : Choisissez un PRÊTRE KHAZALITE HOLDS ami pour chanter cette prière, choisissez une unité ennemie visible à 18\" de lui comme cible, puis faites un jet d'incantation de D6.",
+            "Effet : Jusqu'au début de votre prochain tour, chaque fois que la cible utilise une aptitude CORE, après résolution, infligez 1 dégât mortel à la cible, ou D3 si le jet d'incantation était 10+."
+          ]
+        }
+      ]
+    },
+    "magmic_invocations": {
+      "name": "Magmic Invocations",
+      "pts": 0,
+      "note": "Legends 01/06/2027 — nécessite un PRÊTRE FYRESLAYERS / GRIMMDRON",
+      "items": [
+        {
+          "n": "Summon Molten Infernoth",
+          "cv": 6,
+          "t": "Votre phase des héros",
+          "x": [
+            "Annonce : S'il n'y a pas de Molten Infernoth ami sur le champ de bataille, choisissez un PRÊTRE FYRESLAYERS ami pour chanter cette prière, puis faites un jet d'incantation de D6.",
+            "Effet : Placez un Molten Infernoth entièrement à 12\" du chanteur, visible pour lui et à plus de 9\" de toutes les unités ennemies.",
+            "Mots-clés : PRIÈRE, INVOCATION"
+          ]
+        },
+        {
+          "n": "Summon Runic Fyrewall",
+          "cv": 4,
+          "t": "Votre phase des héros",
+          "x": [
+            "Annonce : S'il n'y a pas de Runic Fyrewall ami sur le champ de bataille, choisissez un PRÊTRE FYRESLAYERS ami pour chanter cette prière, puis faites un jet d'incantation de D6.",
+            "Effet : Placez un Runic Fyrewall entièrement à 12\" du chanteur et visible pour lui.",
+            "Mots-clés : PRIÈRE, INVOCATION"
+          ]
+        },
+        {
+          "n": "Summon Zharrgron Flame-spitter",
+          "cv": 4,
+          "t": "Votre phase des héros",
+          "x": [
+            "Annonce : S'il n'y a pas de Zharrgron Flame-spitter ami sur le champ de bataille, choisissez un PRÊTRE FYRESLAYERS ami pour chanter cette prière, puis faites un jet d'incantation de D6.",
+            "Effet : Placez un Zharrgron Flame-spitter entièrement à 12\" du chanteur et visible pour lui.",
+            "Mots-clés : PRIÈRE, INVOCATION"
+          ]
+        }
+      ]
+    }
+  },
+  "spells": {
+    "reverberations_of_the_runes": {
+      "name": "Reverberations of the Runes",
+      "pts": 20,
+      "items": [
+        {
+          "n": "Rune of Dismay",
+          "cv": 6,
+          "unlimited": true,
+          "t": "Votre phase des héros",
+          "x": [
+            "Annonce : Choisissez un SORCIER KHAZALITE HOLDS ami pour lancer ce sort, puis faites un jet de lancer de 2D6.",
+            "Effet : Jusqu'au début de votre prochain tour, soustrayez 1 à la caractéristique d'Attaques des armes de mêlée des unités ennemies à 6\" du lanceur."
+          ]
+        },
+        {
+          "n": "Rune of Courage",
+          "cv": 6,
+          "t": "Votre phase des héros",
+          "x": [
+            "Annonce : Choisissez un SORCIER KHAZALITE HOLDS ami pour lancer ce sort, puis faites un jet de lancer de 2D6.",
+            "Effet : Jusqu'au début de votre prochain tour, vous pouvez relancer les jets de charge des unités KHAZALITE HOLDS amies entièrement à 12\" du lanceur."
+          ]
+        },
+        {
+          "n": "Rune of the Furnace",
+          "cv": 8,
+          "t": "Votre phase des héros",
+          "x": [
+            "Annonce : Choisissez un SORCIER KHAZALITE HOLDS ami pour lancer ce sort, puis faites un jet de lancer de 2D6.",
+            "Effet : Infligez D3 dégâts mortels à chaque unité ennemie visible à 12\" du lanceur."
+          ]
+        }
+      ]
+    },
+    "resonance_of_the_runes": {
+      "name": "Resonance of the Runes",
+      "pts": 10,
+      "items": [
+        {
+          "n": "Rune of Might",
+          "cv": 6,
+          "unlimited": true,
+          "t": "Votre phase des héros",
+          "x": [
+            "Annonce : Choisissez un SORCIER KHAZALITE HOLDS ami pour lancer ce sort, puis faites un jet de lancer de 2D6.",
+            "Effet : Jusqu'au début de votre prochain tour, ajoutez 1 à la Perforation des armes de mêlée utilisées par les unités KHAZALITE HOLDS amies à 3\" du lanceur."
+          ]
+        },
+        {
+          "n": "Rune of Sanctuary",
+          "cv": 7,
+          "t": "Votre phase des héros",
+          "x": [
+            "Annonce : Choisissez un SORCIER KHAZALITE HOLDS ami pour lancer ce sort, puis faites un jet de lancer de 2D6.",
+            "Effet : Jusqu'au début de votre prochain tour, tant qu'elles sont entièrement à 12\" du lanceur, les unités KHAZALITE HOLDS amies ne sont pas visibles pour les unités ennemies situées à plus de 12\" d'elles."
+          ]
+        },
+        {
+          "n": "Rune of Warding",
+          "cv": 7,
+          "t": "Votre phase des héros",
+          "x": [
+            "Annonce : Choisissez un SORCIER KHAZALITE HOLDS ami pour lancer ce sort, puis faites un jet de lancer de 2D6.",
+            "Effet : Jusqu'au début de votre prochain tour, tant qu'elles sont à 12\" du lanceur, les attaques des unités ennemies ne peuvent pas marquer de coups critiques (traitez-les comme des touches normales)."
+          ]
+        }
+      ]
+    }
+  },
+  "faction_terrain": {
+    "id": "magmic-battleforge",
+    "en": "Magmic Battleforge",
+    "pts": 0,
+    "size": 1,
+    "base": "Use Model",
+    "stats": {
+      "M": "-",
+      "S": "8",
+      "C": "-",
+      "Sv": "3+",
+      "Ward": "6+"
+    },
+    "kw": "FACTION TERRAIN, KHAZALITE HOLDS, ORDER, WARD (6+)",
+    "weapons": [],
+    "abilities": [
+      {
+        "c": "hero",
+        "t": "Une fois par bataille (armée), votre phase des héros",
+        "n": "Spending the Forge",
+        "x": [
+          "Annonce : Choisissez un PRÊTRE FYRESLAYERS ami à portée de combat de ce terrain pour dépenser le pouvoir de la forge.",
+          "Effet : Soignez (D3) chaque unité FYRESLAYERS amie sur le champ de bataille. Une fois cette aptitude utilisée, ce terrain ne peut plus utiliser 'Molten Blessing' pour le restant de la bataille."
+        ]
+      },
+      {
+        "c": "start",
+        "t": "Début de n'importe quel tour",
+        "n": "Molten Blessing",
+        "x": [
+          "Annonce : Choisissez un PRÊTRE FYRESLAYERS ami à portée de combat de ce terrain comme cible.",
+          "Effet : Ajoutez 1 aux jets d'incantation de la cible pour le restant du tour. De plus, la cible peut utiliser l'aptitude 'Unbind' ce tour comme si elle avait WIZARD (1)."
+        ]
+      },
+      {
+        "c": "passive",
+        "t": "Passif",
+        "n": "Magmic Battleforge",
+        "x": [
+          "Effet : Les aptitudes de terrain universelles suivantes s'appliquent (Terrain, 1.2) : Cover, Impassable, Obscuring."
+        ]
+      }
+    ]
+  }
+}

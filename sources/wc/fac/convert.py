@@ -231,6 +231,7 @@ def convert(slug, name, img):
 
 if __name__ == '__main__':
     out = [convert(*x) for x in [('ogors','Ogor Mawtribes','ogors'), ('lumineth','Lumineth Realm-lords','lumineth'), ('skaven','Skaven','skaven'), ('cities','Cities of Sigmar','cities'), ('stormcast','Stormcast Eternals','stormcast'), ('slaves','Slaves to Darkness','slaves'), ('soulblight','Soulblight Gravelords','soulblight'), ('daughters','Daughters of Khaine','daughters'), ('fyreslayers','Fyreslayers','fyreslayers'), ('idoneth','Idoneth Deepkin','idoneth'), ('kharadron','Kharadron Overlords','kharadron'), ('seraphon','Seraphon','seraphon'), ('sylvaneth','Sylvaneth','sylvaneth'), ('khorne','Blades of Khorne','khorne'), ('tzeentch','Disciples of Tzeentch','tzeentch'), ('nurgle','Maggotkin of Nurgle','nurgle'), ('slaanesh','Hedonites of Slaanesh','slaanesh'), ('fec','Flesh-eater Courts','fec'), ('nighthaunt','Nighthaunt','nighthaunt'), ('ossiarch','Ossiarch Bonereapers','ossiarch'), ('gloomspite','Gloomspite Gitz','gloomspite'), ('ironjawz','Ironjawz','ironjawz'), ('kruleboyz','Kruleboyz','kruleboyz'), ('sons','Sons of Behemat','sons')]]
+    import khazalite; out.append(khazalite.build())
     open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'factions.json'), 'w').write(json.dumps(out, ensure_ascii=False).replace("OFFICAR'S", "OFFICER'S"))
     print('Traductions manquantes :', sorted(set(MISSING)))
     for f in out: print(f['en'], len(f['units']), 'unités', [(s['title'], len(s['items'])) for s in f['sections']])
@@ -254,6 +255,7 @@ if __name__ == '__main__':
         aorsok = sorted({f.split(' - ', 1)[1] for f in o['factions'] if ' - ' in f and 'LEGENDS' not in f})
         regs.append({'id':'r%d' % i, 'en':o['name'], 'pts':o['pts'], 'facs':facs, 'aors':aorsok, 'units':[[n, c] for n, c in o['units']],
                      'abs':[tr(o['name'] + '::' + a['name'], a) for a in o['abilities']]})
+    for r in khazalite.ror(ids): regs.append({'id':'r%d' % len(regs), **r})
     xu = []
     for u in R['units']:
         s = u['stats']
