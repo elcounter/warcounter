@@ -29,7 +29,15 @@ def weapon(w):
     o['extra'] = ex
     return o
 
-def build():
+# Fyreslayers intégrés aux Khazalite Holds (GRIMMDRON), points du battletome Khazalite
+FS_PTS = {'Auric Flamekeeper':110, 'Auric Runefather':130, 'Auric Runefather on Magmadroth':320, 'Auric Runemaster':160,
+          'Auric Runesmiter':110, 'Auric Runesmiter on Magmadroth':290, 'Auric Runeson':100, 'Auric Runeson on Magmadroth':290,
+          'Auric Runeson on Magmadroth (Scourge of Aqshy)':300, 'Battlesmith':110, 'Doomseeker':100, 'Grimhold Exile':110,
+          'Grimwrath Berzerker':110, 'Hearthguard Berzerkers with Berzerker Broadaxes':110, 'Hearthguard Berzerkers with Flamestrike Poleaxes':110,
+          'Vulkite Berzerkers with Bladed Slingshields':150, 'Vulkite Berzerkers with Fyresteel Weapons':130,
+          'Vulkyn Flameseekers':160, 'Vulkyn Flameseekers (Scourge of Aqshy)':190}
+
+def build(fs=None):
     d = json.load(open(os.path.join(HERE, 'khazalite_fr.json')))
     units = []
     for u in d['units']:
@@ -39,6 +47,11 @@ def build():
              'abilities': [ab(a) for a in u['abilities']], 'kw': kw_line(u['kw'].split(', '))}
         if u.get('hero') or 'HERO' in u['kw'].split(', '): o['hero'] = True
         if 'FACTION TERRAIN' in u['kw']: o['terrain'] = True
+        units.append(o)
+    for u in (fs or {}).get('units', []):
+        if u['en'] not in FS_PTS: continue
+        o = json.loads(json.dumps(u)); o['pts'] = FS_PTS[u['en']]
+        o['kw'] = o['kw'].replace('FYRESLAYERS', 'KHAZALITE HOLDS, DUARDIN, GRIMMDRON').replace('DUARDIN, GRIMMDRON, DUARDIN', 'DUARDIN, GRIMMDRON')
         units.append(o)
     units.sort(key=lambda o: (not o.get('hero'), o['en']))
     def split(n):
