@@ -1,5 +1,5 @@
 // WarCounter : service worker (réseau d'abord, cache en secours hors ligne)
-const VERSION = "warcounter-2.21.7";
+const VERSION = "warcounter-2.22.0";
 const CORE = ["./", "./index.html", "./manifest.webmanifest?v=9", "./icon-192-w.png", "./icon-512-w.png", "./icon-maskable-512-w.png", "./apple-touch-icon-w.png", "./favicon-32-w.png"];
 
 self.addEventListener("install", e => {
