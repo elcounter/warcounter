@@ -114,6 +114,13 @@ select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,va
 .hist{display:grid;gap:8px}
 .hist div{display:flex;justify-content:space-between;gap:8px;padding:10px 12px;background:#fff;border-radius:8px;font-size:14px}
 .hist .grow{flex:1;min-width:0}
+.r-win{color:#2e7d32}.r-loss{color:#c62828}.r-draw{color:var(--muted)}
+.stats summary{cursor:pointer;list-style:none}
+.stats summary::-webkit-details-marker{display:none}
+.stats summary::after{content:"+";font-weight:700}
+.stats[open] summary::after{content:"-"}
+.st td,.st th{padding:6px 6px;white-space:nowrap}
+.st td:first-child{white-space:normal}
 .hopen{text-align:left;background:none;border:0;padding:0;font:inherit;color:inherit}
 .hopen:hover b{text-decoration:underline}
 .del{flex:none;width:40px;height:40px;border-radius:8px;border:0;background:none;color:var(--bar);display:grid;place-items:center}

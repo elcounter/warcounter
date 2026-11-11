@@ -100,6 +100,33 @@
   const rawName = p => (G.players[p].name || "").trim() || ("Joueur " + (p+1));
   const pname = p => esc(rawName(p));
 
+  const res = (m, o) => m > o ? `<b class="r-win">(Victoire)</b>` : m < o ? `<b class="r-loss">(Défaite)</b>` : `<b class="r-draw">(Égalité)</b>`;
+  // Statistiques des parties terminées : par joueur, par faction, par battleplan
+  function statsHtml(hist){
+    if (!hist.length) return "";
+    const P = {}, F = {}, B = {};
+    const add = (M, k, r) => { if (!k) return; const o = M[k] = M[k] || {n:0, v:0, d:0, e:0}; o.n++; o[r]++; };
+    hist.forEach(x => {
+      const sc = [x.sa, x.sb], nm = [x.a, x.b];
+      [0,1].forEach(p => {
+        const r = sc[p] > sc[1-p] ? "v" : sc[p] < sc[1-p] ? "d" : "e";
+        add(P, (nm[p] || "").trim(), r);
+        if (x.g && x.g.players && x.g.players[p]) add(F, x.g.players[p].faction, r);
+      });
+      add(B, x.bp, "v");
+    });
+    const tab = (title, M, cols) => {
+      const rows = Object.entries(M).sort((a, b) => b[1].n - a[1].n || b[1].v - a[1].v || a[0].localeCompare(b[0], "fr"));
+      if (!rows.length) return "";
+      return `<span class="lbl">${title}</span><div class="scroll"><table class="rt st"><thead><tr><th></th>${cols.map(c => `<th>${c[0]}</th>`).join("")}</tr></thead><tbody>
+        ${rows.map(([k, o]) => `<tr><td>${esc(k)}</td>${cols.map(c => `<td>${c[1](o)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+    };
+    const full = [["Parties", o => o.n], ["V", o => `<b class="r-win">${o.v}</b>`], ["D", o => `<b class="r-loss">${o.d}</b>`], ["É", o => o.e], ["Taux", o => Math.round(100 * o.v / o.n) + " %"]];
+    return `<details class="panel stats"><summary class="sec">Statistiques</summary><div class="body">
+      <p class="hint" style="margin:0">Sur ${hist.length} partie${hist.length > 1 ? "s" : ""} terminée${hist.length > 1 ? "s" : ""}. Taux = part de victoires.</p>
+      ${tab("Par joueur", P, full)}${tab("Par faction", F, full)}${tab("Par battleplan", B, [["Parties", o => o.n]])}
+    </div></details>`;
+  }
   function vHome(){
     const hist = load(HKEY, []);
     let h = `<button class="btn primary" type="button" data-act="new">Nouvelle partie</button>`;
@@ -111,7 +138,8 @@
         <div class="row"><span class="tag">${where}</span><span class="grow"></span><button class="del" type="button" data-act="del" data-id="${g.id}" aria-label="Supprimer cette partie">${TRASH}</button><button class="btn gold" type="button" data-act="resume" data-id="${g.id}">Reprendre</button></div>
       </div></div>`; })).join("")}</div></div>`;
     else h += `<div class="panel hero"><h2>Aucune partie en cours</h2><p class="hint">Battleplan, joueurs et tactiques, puis le score round par round.</p></div>`;
-    if (hist.length) h += `<div><span class="lbl">Parties terminées</span><div class="hist">${hist.slice(0,15).map((x, i) => `<div>${x.g ? `<button class="grow hopen" type="button" data-act="hopen" data-i="${i}">` : `<span class="grow">`}<b>${esc(x.a)}</b> ${x.sa} - ${x.sb} <b>${esc(x.b)}</b><br><span class="hint">${esc(x.bp)} · ${esc(x.d)}</span>${x.g ? `</button>` : `</span>`}<button class="del" type="button" data-act="hdel" data-i="${i}" aria-label="Supprimer cette partie">${TRASH}</button></div>`).join("")}</div></div>`;
+    if (hist.length) h += `<div><span class="lbl">Parties terminées</span><div class="hist">${hist.slice(0,15).map((x, i) => `<div>${x.g ? `<button class="grow hopen" type="button" data-act="hopen" data-i="${i}">` : `<span class="grow">`}<b>${esc(x.a)}</b> ${res(x.sa, x.sb)} ${x.sa} - ${x.sb} <b>${esc(x.b)}</b> ${res(x.sb, x.sa)}<br><span class="hint">${esc(x.bp)} · ${esc(x.d)}</span>${x.g ? `</button>` : `</span>`}<button class="del" type="button" data-act="hdel" data-i="${i}" aria-label="Supprimer cette partie">${TRASH}</button></div>`).join("")}</div></div>`;
+    h += statsHtml(hist);
     return h;
   }
 
@@ -268,6 +296,7 @@
       ${ro ? `<button class="btn primary" type="button" data-act="home">Retour à l'accueil</button>` : done ? `<button class="btn primary" type="button" data-act="new">Nouvelle partie</button>` : `<button class="btn primary" type="button" data-act="finish">Terminer la partie</button>`}
       ${ro ? "" : `<button class="btn" type="button" data-act="home">Retour à l'accueil</button>`}
       <button class="btn" type="button" data-act="copy">Copier le résumé</button>
+      <button class="btn gold" type="button" data-act="share">Partager en image</button>
       ${ro ? "" : `<button class="btn ghost" type="button" data-act="del">Supprimer la partie</button>`}
       <p class="hint" id="copy-msg" style="text-align:center" aria-live="polite"></p></div>`;
     return h;
@@ -380,6 +409,11 @@
       GAMES = GAMES.filter(x => x.id !== G.id); store(LKEY, GAMES); G = null;
       closeModal(); return go("hist:0");
     }
+    if (a === "share") {
+      const keep = G; if (view.startsWith("hist:") && histG) G = histG; const snap = shareData(); G = keep;
+      shareImage(snap).catch(() => { $("copy-msg").textContent = "Partage impossible sur cet appareil."; });
+      return;
+    }
     if (a === "copy") {
       const keep = G; if (view.startsWith("hist:") && histG) G = histG; const txt = summaryText(); G = keep;
       const msg = $("copy-msg");
@@ -388,6 +422,59 @@
       return;
     }
   });
+  function shareData(){
+    return {names:[rawName(0), rawName(1)], facs:[0,1].map(p => G.players[p].faction || ""), sc:[total(0), total(1)],
+      rounds:[1,2,3,4,5].map(r => [roundScore(0, r), roundScore(1, r)]), bp:bp() ? bp().id + " " + bp().n : "", label:G.label || "",
+      date:new Date(G.updated || Date.now()).toLocaleDateString("fr-FR")};
+  }
+  async function shareImage(D){
+    const W = 1080, H = 1350, c = document.createElement("canvas"); c.width = W; c.height = H;
+    const x = c.getContext("2d");
+    try { await Promise.all(["700 60px Oswald", "400 30px Bitter", "700 30px Bitter"].map(f => document.fonts.load(f))); } catch (e) {}
+    const DISP = "Oswald, 'Arial Narrow', sans-serif", BODY = "Bitter, Georgia, serif";
+    const BG = "#6b2119", CREAM = "#f3ead8", GOLD = "#d4ae3f", INK = "#1f1a17", MUT = "#7a6f66";
+    const txt = (t, X, Y, f, col, al) => { x.font = f; x.fillStyle = col; x.textAlign = al || "center"; x.fillText(t, X, Y); };
+    const fit = (t, f, max) => { let s = f.size; do { x.font = `${f.w} ${s}px ${f.fam}`; s -= 2; } while (x.measureText(t).width > max && s > 20); return `${f.w} ${s + 2}px ${f.fam}`; };
+    const box = (X, Y, w, h) => { x.fillStyle = "#fff"; x.beginPath(); if (x.roundRect) x.roundRect(X, Y, w, h, 28); else x.rect(X, Y, w, h); x.fill(); };
+    x.fillStyle = "#efe9df"; x.fillRect(0, 0, W, H);
+    x.fillStyle = BG; x.fillRect(0, 0, W, 260);
+    txt("W", 120, 175, `700 130px ${DISP}`, CREAM); x.fillStyle = GOLD; x.fillRect(84, 198, 72, 10);
+    txt("WARCOUNTER", 210, 130, `700 64px ${DISP}`, CREAM, "left");
+    txt("FEUILLE DE PARTIE · AGE OF SIGMAR", 212, 185, `400 28px ${DISP}`, GOLD, "left");
+    const [a, b] = D.sc, win = a === b ? -1 : a > b ? 0 : 1, head = win < 0 ? "ÉGALITÉ" : "VICTOIRE DE " + D.names[win].toUpperCase();
+    box(60, 310, W - 120, 560);
+    txt(head, W / 2, 395, fit(head, {w:700, size:52, fam:DISP}, W - 200), win < 0 ? MUT : "#2e7d32");
+    [0,1].forEach(p => {
+      const X = p ? W * 0.75 : W * 0.25;
+      txt(D.names[p], X, 490, fit(D.names[p], {w:700, size:50, fam:BODY}, 400), INK);
+      txt(D.facs[p], X, 540, fit(D.facs[p], {w:400, size:30, fam:BODY}, 420), MUT);
+      txt(win < 0 ? "Égalité" : win === p ? "Victoire" : "Défaite", X, 590, `700 32px ${BODY}`, win < 0 ? MUT : win === p ? "#2e7d32" : "#c62828");
+    });
+    txt(`${a}  -  ${b}`, W / 2, 760, `700 170px ${DISP}`, BG);
+    txt("points de victoire", W / 2, 830, `400 30px ${BODY}`, MUT);
+    const top = 920, cw = (W - 120) / 7;
+    box(60, top, W - 120, 260);
+    ["", "R1", "R2", "R3", "R4", "R5", "Total"].forEach((h, i) => txt(h, 60 + cw * i + cw / 2, top + 65, `700 32px ${DISP}`, MUT));
+    [0,1].forEach(p => {
+      const Y = top + 140 + p * 80;
+      txt(D.names[p], 60 + cw / 2, Y, fit(D.names[p], {w:700, size:30, fam:BODY}, cw - 12), INK);
+      D.rounds.forEach((r, i) => txt(String(r[p]), 60 + cw * (i + 1) + cw / 2, Y, `400 36px ${BODY}`, INK));
+      txt(String(D.sc[p]), 60 + cw * 6 + cw / 2, Y, `700 40px ${BODY}`, BG);
+    });
+    const foot = [D.bp, D.label, D.date].filter(Boolean).join(" · ");
+    txt(foot, W / 2, 1250, fit(foot, {w:400, size:32, fam:BODY}, W - 120), INK);
+    txt("elcounter.github.io/warcounter", W / 2, 1305, `700 30px ${DISP}`, BG);
+    const blob = await new Promise(r => c.toBlob(r, "image/png"));
+    const name = `WarCounter-${D.names[0]}-${D.names[1]}.png`.replace(/[^\w.-]+/g, "_");
+    const file = new File([blob], name, {type:"image/png"});
+    if (navigator.canShare && navigator.canShare({files:[file]})) {
+      try { await navigator.share({files:[file], title:"WarCounter", text:`${D.names[0]} ${a} - ${b} ${D.names[1]}`}); return; }
+      catch (e) { if (e && e.name === "AbortError") return; }
+    }
+    const u = URL.createObjectURL(blob), l = document.createElement("a"); l.href = u; l.download = name; document.body.appendChild(l); l.click(); l.remove();
+    setTimeout(() => URL.revokeObjectURL(u), 4000);
+    $("copy-msg").textContent = "Image téléchargée.";
+  }
   function summaryText(){
     const L = [];
     L.push(`${rawName(0)} ${total(0)} - ${total(1)} ${rawName(1)}`);
