@@ -95,12 +95,11 @@
 .home-extra{display:flex;flex-direction:column;gap:10px;margin:22px 0 8px;align-items:stretch}
 .home-extra .btn-link{display:block;text-align:center;padding:12px 14px;border:1px solid #d8d8d8;border-radius:10px;background:#fff;color:#6b2119;font:600 14px var(--display);text-decoration:none}
 .home-extra .btn-link:active{background:#f7f2ea}
-.home-extra .nc-btn{display:flex;flex-direction:column;align-items:center;gap:2px;background:#2a2c30;border-color:#5c636c;border-left:4px solid #f0b040;color:#eef1f4}
-.home-extra .nc-btn b{color:#f0b040;font-weight:600}
-.home-extra .nc-btn span{font:400 12px var(--body);color:#a8b0ba}
-.home-extra .nc-btn:active{background:#32363c}
 .home-extra .sc-btn{display:flex;align-items:center;gap:12px;margin-top:0;padding:12px 14px;border-radius:10px;background:#6b2119;border:1px solid #d4ae3f;color:#fff;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25)}
 .home-extra .sc-btn:active{background:#7d2a20}
+.home-extra .sc-btn.nc{background:#2a2c30;border-color:#f0a028}
+.home-extra .sc-btn.nc:active{background:#32363c}
+.home-extra .sc-btn.nc b{color:#f0a028}
 .home-extra .sc-btn svg{flex:none;width:34px;height:34px}
 .home-extra .sc-btn b{display:block;color:#d4ae3f;font-weight:700;font-size:15px;line-height:1.2;letter-spacing:.06em;text-transform:uppercase}
 .home-extra .sc-btn small{display:block;margin-top:2px;font-size:13px;opacity:.9}

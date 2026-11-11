@@ -263,8 +263,8 @@
       <div class="feat">${FEATURES.map(([id, n, d, svg]) => `<a class="fcard" href="#${id}"><span class="ficon">${I(svg)}</span><span><b>${n}</b><br>${d}</span></a>`).join("")}</div>
       <div class="home-extra">
         <div class="feat">${EXTRA.map(([href, n, d, svg]) => `<a class="fcard" href="${href}"><span class="ficon">${I(svg)}</span><span><b>${n}</b><br>${d}</span></a>`).join("")}</div>
-        <a class="btn-link nc-btn" href="https://elcounter.github.io/necrocounter/" target="_blank" rel="noopener"><b>Découvrir NecroCounter</b><span>Ton compagnon pour Necromunda</span></a>
-        <a class="sc-btn" href="https://elcounter.github.io/spearhead/" target="_blank" rel="noopener"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3l25 14.5v29L32 61 7 46.5v-29z" fill="#141414" stroke="#d4ae3f" stroke-width="3"/><text x="32" y="42" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="28" fill="#e8c35a">S</text></svg><span><b>Découvre SpearCounter</b><small>Ton compagnon pour Spearhead.</small></span></a>
+        <a class="sc-btn nc" href="https://elcounter.github.io/necrocounter/" target="_blank" rel="noopener"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#141414"/><circle cx="32" cy="32" r="26" fill="none" stroke="#f0a028" stroke-width="2.5"/><path d="M22 45V19h4l12 18V19h4v26h-4L26 27v18z" fill="#f0a028"/></svg><span><b>Découvre NecroCounter</b><small>Ton compagnon pour Necromunda.</small></span></a>
+        <a class="sc-btn" href="https://elcounter.github.io/spearhead/" target="_blank" rel="noopener"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#4e170f"/><text x="32" y="44" text-anchor="middle" font-family="Oswald,'Arial Narrow',sans-serif" font-weight="700" font-size="38" fill="#f3ead8">S</text><rect x="20" y="49" width="24" height="3" fill="#d4ae3f"/></svg><span><b>Découvre SpearCounter</b><small>Ton compagnon pour Spearhead.</small></span></a>
       </div>`;
   }
   const STANDALONE = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
