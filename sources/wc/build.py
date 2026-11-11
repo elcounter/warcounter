@@ -1,7 +1,7 @@
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs('build-check', exist_ok=True)
-VERSION='2.21.3'
+VERSION='2.21.4'
 MAJ='11-11-2026'
 LEGAL='<span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span>'
 import re, json, base64, glob, os
@@ -195,6 +195,9 @@ top_js='''(function(){
 html='''<title>WarCounter</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="theme-color" content="#6b2119">
+<style>#boot{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#6b2119;transition:opacity .25s}#boot.out{opacity:0;pointer-events:none}#boot svg{width:96px;height:96px;animation:bootspin 1.2s linear infinite}@keyframes bootspin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){#boot svg{animation-duration:3s}}</style>
+<div id="boot" aria-hidden="true"><svg viewBox="0 0 96 96"><path d="M14 18h13l6 38 8-38h14l8 38 6-38h13L70 74H57l-9-36-9 36H26z" fill="#f3ead8"/><rect x="30" y="82" width="36" height="5" fill="#d4ae3f"/></svg></div>
+<script>addEventListener("load",function(){var b=document.getElementById("boot");if(!b)return;b.classList.add("out");setTimeout(function(){b.remove()},300)});</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Bitter:wght@400;600;700&display=swap">
 <style>
 '''+army_css+'\n'+bs_css+'\n'+home_css+'\n'+extra+open('home.css').read()+'''
