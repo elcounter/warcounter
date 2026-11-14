@@ -61,6 +61,9 @@
     if (t.includes("fin de n'importe quel tour")) out.push("end", "end-opp");
     return out;
   }
+  // Photos des figurines (reprises de SpearCounter), servies depuis le site
+  const PHOTO = window.WC_PHOTO || {}, PBASE = location.protocol === "file:" ? "https://elcounter.github.io/warcounter/" : "";
+  const photoOf = fid => id => (PHOTO[fid] && PHOTO[fid][id]) ? PBASE + PHOTO[fid][id] : "";
   const FX = {};
   FX.hashut = {id:"hashut", en:"Helsmiths of Hashut", hashut:true, units:UNITS, bt:BATTLE_TRAITS,
     formations: FORMATIONS.map(f => ({id:f.id, en:f.en, pts:0, abs:[f.ab]})),
@@ -73,7 +76,7 @@
     prayers:[{id:"p0", en:LORE_NAMES && LORE_NAMES.prayer || "Prayers of the Scorched Sect", abs:PRAYERS}],
     manifs:[],
     when: a => a.when || WHEN[a.n] || [],
-    photo: () => ""
+    photo: photoOf("hashut")
   };
   const FIMG = window.WC_FIMG || {};
   const KNOWN = ["Traits de bataille","Formations de bataille","Traits héroïques","Artefacts de pouvoir","Sorts","Prières","Manifestations"];
@@ -91,7 +94,7 @@
       ].filter(t => t.items.length),
       spells: mk(sec("Sorts"), "s"), prayers: mk(sec("Prières"), "p"), manifs: mk(sec("Manifestations"), "m"),
       when: whenOf,
-      photo: () => ""
+      photo: photoOf(F.id)
     };
   });
   // Armées de renom : variante d'une faction (unités autorisées, traits, améliorations et domaines propres)

@@ -1,0 +1,240 @@
+{
+"lumineth": {
+"hurakan-windmage": "img/units/lumineth/hurakan-windmage.webp",
+"hurakan-spirit-of-the-wind": "img/units/lumineth/hurakan-spirit-of-the-wind.webp",
+"hurakan-windchargers": "img/units/lumineth/hurakan-windchargers.webp",
+"vanari-auralan-wardens": "img/units/lumineth/vanari-auralan-wardens.webp",
+"scinari-cathallar": "img/units/lumineth/scinari-cathallar.webp",
+"vanari-bladelords": "img/units/lumineth/vanari-bladelords.webp",
+"vanari-auralan-sentinels": "img/units/lumineth/vanari-auralan-sentinels.webp"
+},
+"ossiarch": {
+"liege-kavalos": "img/units/ossiarch/liege-kavalos.webp",
+"teratic-cohort": "img/units/ossiarch/teratic-cohort.webp",
+"kavalos-deathriders": "img/units/ossiarch/kavalos-deathriders.webp",
+"mortisan-soulreaper": "img/units/ossiarch/mortisan-soulreaper.webp",
+"mortek-guard": "img/units/ossiarch/mortek-guard.webp",
+"gothizzar-harvester": "img/units/ossiarch/gothizzar-harvester.webp",
+"mortisan-ossifector": "img/units/ossiarch/mortisan-ossifector.webp",
+"immortis-guard": "img/units/ossiarch/immortis-guard.webp",
+"necropolis-stalkers": "img/units/ossiarch/necropolis-stalkers.webp",
+"morghast-archai": "img/units/ossiarch/morghast-archai.webp"
+},
+"nighthaunt": {
+"spirit-torment": "img/units/nighthaunt/spirit-torment.webp",
+"chainghasts": "img/units/nighthaunt/chainghasts.webp",
+"bladegheist-revenants": "img/units/nighthaunt/bladegheist-revenants.webp",
+"grimghast-reapers": "img/units/nighthaunt/grimghast-reapers.webp",
+"dreadblade-harrows": "img/units/nighthaunt/dreadblade-harrows.webp"
+},
+"ogors": {
+"tyrant": "img/units/ogors/tyrant.webp",
+"ironblaster": "img/units/ogors/ironblaster.webp",
+"leadbelchers": "img/units/ogors/leadbelchers.webp",
+"gluttons": "img/units/ogors/gluttons.webp",
+"mournfang-pack": "img/units/ogors/mournfang-pack.webp",
+"mantrapper": "img/units/ogors/mantrapper.webp",
+"gnoblar-scraplauncher": "img/units/ogors/gnoblar-scraplauncher.webp",
+"gnoblars": "img/units/ogors/gnoblars.webp",
+"ironguts": "img/units/ogors/ironguts.webp",
+"maulbeast-cavalry": "img/units/ogors/maulbeast-cavalry.webp"
+},
+"sylvaneth": {
+"branchwych": "img/units/sylvaneth/branchwych.webp",
+"treelord": "img/units/sylvaneth/treelord.webp",
+"kurnoth-hunters-with-kurnoth-greatbows": "img/units/sylvaneth/kurnoth-hunters-with-kurnoth-greatbows.webp",
+"spite-revenants": "img/units/sylvaneth/spite-revenants.webp",
+"arch-revenant": "img/units/sylvaneth/arch-revenant.webp",
+"gossamid-archers": "img/units/sylvaneth/gossamid-archers.webp",
+"spiterider-lancers": "img/units/sylvaneth/spiterider-lancers.webp",
+"revenant-seekers": "img/units/sylvaneth/revenant-seekers.webp"
+},
+"fec": {
+"abhorrant-gorewarden": "img/units/fec/abhorrant-gorewarden.webp",
+"royal-beastflayers": "img/units/fec/royal-beastflayers.webp",
+"crypt-horrors": "img/units/fec/crypt-horrors.webp",
+"crypt-flayers": "img/units/fec/crypt-flayers.webp",
+"abhorrant-archregent": "img/units/fec/abhorrant-archregent.webp",
+"cryptguard": "img/units/fec/cryptguard.webp",
+"morbheg-knights": "img/units/fec/morbheg-knights.webp",
+"varghulf-courtier": "img/units/fec/varghulf-courtier.webp"
+},
+"khorne": {
+"slaughterpriest": "img/units/khorne/slaughterpriest.webp",
+"mighty-skullcrushers": "img/units/khorne/mighty-skullcrushers.webp",
+"blood-warriors": "img/units/khorne/blood-warriors.webp",
+"bloodreavers": "img/units/khorne/bloodreavers.webp",
+"karanak": "img/units/khorne/karanak.webp",
+"flesh-hounds": "img/units/khorne/flesh-hounds.webp",
+"claws-of-karanak": "img/units/khorne/claws-of-karanak.webp"
+},
+"nurgle": {
+"rotbringer-sorcerer": "img/units/nurgle/rotbringer-sorcerer.webp",
+"nurglings": "img/units/nurgle/nurglings.webp",
+"beast-of-nurgle": "img/units/nurgle/beast-of-nurgle.webp",
+"rotmire-creed": "img/units/nurgle/rotmire-creed.webp",
+"spoilpox-scrivener-herald-of-nurgle": "img/units/nurgle/spoilpox-scrivener-herald-of-nurgle.webp",
+"lord-of-afflictions": "img/units/nurgle/lord-of-afflictions.webp",
+"putrid-blightkings": "img/units/nurgle/putrid-blightkings.webp",
+"plaguebearers": "img/units/nurgle/plaguebearers.webp"
+},
+"idoneth": {
+"isharann-soulscryer": "img/units/idoneth/isharann-soulscryer.webp",
+"akhelian-morrsarr-guard": "img/units/idoneth/akhelian-morrsarr-guard.webp",
+"akhelian-allopex": "img/units/idoneth/akhelian-allopex.webp",
+"namarti-thralls": "img/units/idoneth/namarti-thralls.webp",
+"akhelian-king": "img/units/idoneth/akhelian-king.webp",
+"akhelian-ishlaen-guard": "img/units/idoneth/akhelian-ishlaen-guard.webp",
+"namarti-reavers": "img/units/idoneth/namarti-reavers.webp"
+},
+"soulblight": {
+"vampire-lord": "img/units/soulblight/vampire-lord.webp",
+"blood-knights": "img/units/soulblight/blood-knights.webp",
+"vargheists": "img/units/soulblight/vargheists.webp",
+"deathrattle-skeletons": "img/units/soulblight/deathrattle-skeletons.webp",
+"wight-king": "img/units/soulblight/wight-king.webp",
+"barrow-guard": "img/units/soulblight/barrow-guard.webp",
+"barrow-knights": "img/units/soulblight/barrow-knights.webp"
+},
+"cities": {
+"freeguild-cavalier-marshal": "img/units/cities/freeguild-cavalier-marshal.webp",
+"freeguild-steelhelms": "img/units/cities/freeguild-steelhelms.webp",
+"freeguild-cavaliers": "img/units/cities/freeguild-cavaliers.webp",
+"ironweld-great-cannon": "img/units/cities/ironweld-great-cannon.webp",
+"fusil-major-on-ogor-warhulk": "img/units/cities/fusil-major-on-ogor-warhulk.webp",
+"alchemite-warforger": "img/units/cities/alchemite-warforger.webp",
+"freeguild-fusiliers": "img/units/cities/freeguild-fusiliers.webp",
+"wildercorps-hunters": "img/units/cities/wildercorps-hunters.webp",
+"freeguild-marshal-and-relic-envoy": "img/units/cities/freeguild-marshal-and-relic-envoy.webp",
+"pontifex-zenestra-matriarch-of-the-great-wheel": "img/units/cities/pontifex-zenestra-matriarch-of-the-great-wheel.webp",
+"freeguild-command-corps-whisperblade": "img/units/cities/freeguild-command-corps-whisperblade.webp"
+},
+"stormcast": {
+"lord-vigilant-on-gryph-stalker": "img/units/stormcast/lord-vigilant-on-gryph-stalker.webp",
+"lord-veritant": "img/units/stormcast/lord-veritant.webp",
+"prosecutors": "img/units/stormcast/prosecutors.webp",
+"liberators": "img/units/stormcast/liberators.webp",
+"yndrasta-the-celestial-spear": "img/units/stormcast/yndrasta-the-celestial-spear.webp",
+"knight-vexillor": "img/units/stormcast/knight-vexillor.webp",
+"annihilators": "img/units/stormcast/annihilators.webp",
+"vindictors": "img/units/stormcast/vindictors.webp",
+"stormstrike-chariot": "img/units/stormcast/stormstrike-chariot.webp"
+},
+"tzeentch": {
+"magister-on-disc-of-tzeentch": "img/units/tzeentch/magister-on-disc-of-tzeentch.webp",
+"flamers-of-tzeentch": "img/units/tzeentch/flamers-of-tzeentch.webp",
+"screamers-of-tzeentch": "img/units/tzeentch/screamers-of-tzeentch.webp",
+"tzaangors": "img/units/tzeentch/tzaangors.webp",
+"kairic-acolytes": "img/units/tzeentch/kairic-acolytes.webp",
+"tzaangor-shaman": "img/units/tzeentch/tzaangor-shaman.webp",
+"tzaangor-enlightened": "img/units/tzeentch/tzaangor-enlightened.webp",
+"tzaangor-skyfires": "img/units/tzeentch/tzaangor-skyfires.webp"
+},
+"daughters": {
+"slaughter-queen-on-cauldron-of-blood": "img/units/daughters/slaughter-queen-on-cauldron-of-blood.webp",
+"hag-queen": "img/units/daughters/hag-queen.webp",
+"bloodwrack-medusa": "img/units/daughters/bloodwrack-medusa.webp",
+"sisters-of-slaughter": "img/units/daughters/sisters-of-slaughter.webp",
+"khainite-shadowstalkers": "img/units/daughters/khainite-shadowstalkers.webp",
+"melusai-ironscale": "img/units/daughters/melusai-ironscale.webp",
+"blood-stalkers": "img/units/daughters/blood-stalkers.webp",
+"doomfire-warlocks": "img/units/daughters/doomfire-warlocks.webp",
+"witch-aelves": "img/units/daughters/witch-aelves.webp"
+},
+"skaven": {
+"deathmaster-crixxit": "img/units/skaven/deathmaster-crixxit.webp",
+"deathmaster": "img/units/skaven/deathmaster.webp",
+"gutter-runners": "img/units/skaven/gutter-runners.webp",
+"night-runners": "img/units/skaven/night-runners.webp",
+"grey-seer": "img/units/skaven/grey-seer.webp",
+"stormfiends": "img/units/skaven/stormfiends.webp",
+"warp-lightning-cannon": "img/units/skaven/warp-lightning-cannon.webp",
+"clanrats": "img/units/skaven/clanrats.webp",
+"clawlord-on-gnaw-beast": "img/units/skaven/clawlord-on-gnaw-beast.webp",
+"warlock-engineer": "img/units/skaven/warlock-engineer.webp",
+"rat-ogors": "img/units/skaven/rat-ogors.webp"
+},
+"kharadron": {
+"endrinmaster-with-dirigible-suit": "img/units/kharadron/endrinmaster-with-dirigible-suit.webp",
+"grundstok-thunderers": "img/units/kharadron/grundstok-thunderers.webp",
+"grundstok-gunhauler": "img/units/kharadron/grundstok-gunhauler.webp",
+"endrinriggers": "img/units/kharadron/endrinriggers.webp",
+"arkanaut-admiral": "img/units/kharadron/arkanaut-admiral.webp",
+"arkanaut-company": "img/units/kharadron/arkanaut-company.webp",
+"skywardens": "img/units/kharadron/skywardens.webp",
+"arkanaut-frigate": "img/units/kharadron/arkanaut-frigate.webp"
+},
+"slaanesh": {
+"fiends": "img/units/slaanesh/fiends.webp",
+"daemonettes": "img/units/slaanesh/daemonettes.webp",
+"seekers": "img/units/slaanesh/seekers.webp",
+"shardspeaker-of-slaanesh": "img/units/slaanesh/shardspeaker-of-slaanesh.webp",
+"slickblade-seekers": "img/units/slaanesh/slickblade-seekers.webp",
+"slaangor-fiendbloods": "img/units/slaanesh/slaangor-fiendbloods.webp",
+"blissbarb-archers": "img/units/slaanesh/blissbarb-archers.webp"
+},
+"gloomspite": {
+"snarlboss": "img/units/gloomspite/snarlboss.webp",
+"snarlpack-cavalry": "img/units/gloomspite/snarlpack-cavalry.webp",
+"loonboss": "img/units/gloomspite/loonboss.webp",
+"squig-hoppers": "img/units/gloomspite/squig-hoppers.webp",
+"rockgut-troggoths": "img/units/gloomspite/rockgut-troggoths.webp",
+"moonclan-stabbas": "img/units/gloomspite/moonclan-stabbas.webp"
+},
+"ironjawz": {
+"megaboss": "img/units/ironjawz/megaboss.webp",
+"brute-ragerz": "img/units/ironjawz/brute-ragerz.webp",
+"ardboyz": "img/units/ironjawz/ardboyz.webp",
+"brutes": "img/units/ironjawz/brutes.webp"
+},
+"fyreslayers": {
+"battlesmith": "img/units/fyreslayers/battlesmith.webp",
+"hearthguard-berzerkers-with-berzerker-broadaxes": "img/units/fyreslayers/hearthguard-berzerkers-with-berzerker-broadaxes.webp",
+"vulkite-berzerkers-with-fyresteel-weapons": "img/units/fyreslayers/vulkite-berzerkers-with-fyresteel-weapons.webp"
+},
+"khazalite": {
+"battlesmith": "img/units/khazalite/battlesmith.webp",
+"hearthguard-berzerkers-with-berzerker-broadaxes": "img/units/khazalite/hearthguard-berzerkers-with-berzerker-broadaxes.webp",
+"vulkite-berzerkers-with-fyresteel-weapons": "img/units/khazalite/vulkite-berzerkers-with-fyresteel-weapons.webp",
+"hjulda-drakkblud": "img/units/khazalite/hjulda-drakkblud.webp",
+"clanshields": "img/units/khazalite/clanshields.webp",
+"gholems-of-gazul": "img/units/khazalite/gholems-of-gazul.webp",
+"oathkeeper-cannon": "img/units/khazalite/oathkeeper-cannon.webp"
+},
+"hashut": {
+"war-despot": "img/units/hashut/war-despot.webp",
+"dominator-cannons": "img/units/hashut/dominator-cannons.webp",
+"bombard": "img/units/hashut/bombard.webp",
+"cohort-spears": "img/units/hashut/cohort-spears.webp"
+},
+"sons": {
+"rock-hurlers": "img/units/sons/rock-hurlers.webp",
+"mancrusher-gargant": "img/units/sons/mancrusher-gargant.webp"
+},
+"slaves": {
+"chaos-lord": "img/units/slaves/chaos-lord.webp",
+"chaos-chariot": "img/units/slaves/chaos-chariot.webp",
+"chaos-warriors": "img/units/slaves/chaos-warriors.webp",
+"chaos-knights": "img/units/slaves/chaos-knights.webp",
+"darkoath-warqueen": "img/units/slaves/darkoath-warqueen.webp",
+"darkoath-savagers": "img/units/slaves/darkoath-savagers.webp",
+"darkoath-fellriders": "img/units/slaves/darkoath-fellriders.webp",
+"darkoath-marauders": "img/units/slaves/darkoath-marauders.webp"
+},
+"seraphon": {
+"saurus-oldblood-on-carnosaur": "img/units/seraphon/saurus-oldblood-on-carnosaur.webp",
+"saurus-warriors": "img/units/seraphon/saurus-warriors.webp",
+"kroxigor": "img/units/seraphon/kroxigor.webp",
+"sunblood-pack": "img/units/seraphon/sunblood-pack.webp",
+"spawn-of-chotec": "img/units/seraphon/spawn-of-chotec.webp",
+"hunters-of-huanchi-with-dartpipes": "img/units/seraphon/hunters-of-huanchi-with-dartpipes.webp",
+"terrawings": "img/units/seraphon/terrawings.webp"
+},
+"kruleboyz": {
+"killaboss-on-great-gnashtoof": "img/units/kruleboyz/killaboss-on-great-gnashtoof.webp",
+"beast-skewer-killbow": "img/units/kruleboyz/beast-skewer-killbow.webp",
+"murknob-with-belcha-banna": "img/units/kruleboyz/murknob-with-belcha-banna.webp",
+"gutrippaz": "img/units/kruleboyz/gutrippaz.webp",
+"man-skewer-boltboyz": "img/units/kruleboyz/man-skewer-boltboyz.webp"
+}
+}
