@@ -1,7 +1,7 @@
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs('build-check', exist_ok=True)
-VERSION='2.23.0'
+VERSION='2.23.1'
 MAJ='14-11-2026'
 LEGAL='<span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span>'
 THEME_BTN='<button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button>'
@@ -222,10 +222,10 @@ army_body='''<header class="bar">
 
 nav='''<a id="back-game" class="back-game" href="#parties" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span>Retour à la partie</span><b id="back-score"></b></a>
 <nav class="bnav" aria-label="Navigation principale"><div class="in">
+  <a href="#regles" id="nav-regles">'''+ICON_RULES+'''<span>Règles</span></a>
   <a href="#listes" id="nav-lists">'''+ICON_LIST+'''<span>Listes</span></a>
   <a href="#memo" id="nav-memo">'''+ICON_BOOK+'''<span>Mémo</span></a>
   <a href="#phases" id="nav-phases">'''+ICON_LAYERS+'''<span>Phases</span></a>
-  <a href="#regles" id="nav-regles">'''+ICON_RULES+'''<span>Règles</span></a>
   <a href="#parties" id="nav-parties">'''+ICON_DICE+'''<span>Parties</span></a>
 </div></nav>'''
 
