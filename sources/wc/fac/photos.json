@@ -107,7 +107,8 @@
 "wildercorps-hunters": "img/units/cities/wildercorps-hunters.webp",
 "freeguild-marshal-and-relic-envoy": "img/units/cities/freeguild-marshal-and-relic-envoy.webp",
 "pontifex-zenestra-matriarch-of-the-great-wheel": "img/units/cities/pontifex-zenestra-matriarch-of-the-great-wheel.webp",
-"freeguild-command-corps-whisperblade": "img/units/cities/freeguild-command-corps-whisperblade.webp"
+"freeguild-command-corps-whisperblade": "img/units/cities/freeguild-command-corps-whisperblade.webp",
+"freeguild-command-corps-adjutants": "img/units/cities/freeguild-command-corps-adjutants.webp"
 },
 "stormcast": {
 "lord-vigilant-on-gryph-stalker": "img/units/stormcast/lord-vigilant-on-gryph-stalker.webp",
@@ -171,7 +172,8 @@
 "shardspeaker-of-slaanesh": "img/units/slaanesh/shardspeaker-of-slaanesh.webp",
 "slickblade-seekers": "img/units/slaanesh/slickblade-seekers.webp",
 "slaangor-fiendbloods": "img/units/slaanesh/slaangor-fiendbloods.webp",
-"blissbarb-archers": "img/units/slaanesh/blissbarb-archers.webp"
+"blissbarb-archers": "img/units/slaanesh/blissbarb-archers.webp",
+"thricefold-discord": "img/units/slaanesh/thricefold-discord.webp"
 },
 "gloomspite": {
 "snarlboss": "img/units/gloomspite/snarlboss.webp",
@@ -179,7 +181,10 @@
 "loonboss": "img/units/gloomspite/loonboss.webp",
 "squig-hoppers": "img/units/gloomspite/squig-hoppers.webp",
 "rockgut-troggoths": "img/units/gloomspite/rockgut-troggoths.webp",
-"moonclan-stabbas": "img/units/gloomspite/moonclan-stabbas.webp"
+"moonclan-stabbas": "img/units/gloomspite/moonclan-stabbas.webp",
+"wolfgit-retinue": "img/units/gloomspite/wolfgit-retinue.webp",
+"sunsteala-wheelas": "img/units/gloomspite/sunsteala-wheelas.webp",
+"sunsteala-wheelas-scourge-of-aqshy": "img/units/gloomspite/sunsteala-wheelas-scourge-of-aqshy.webp"
 },
 "ironjawz": {
 "megaboss": "img/units/ironjawz/megaboss.webp",
