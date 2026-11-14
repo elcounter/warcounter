@@ -85,7 +85,7 @@
       sc:[{n:"Objectif primaire", v:3, t:"Si vous contrôlez l'objectif primaire."}, {n:"2+ secondaires", v:3, t:"Si vous contrôlez au moins 2 objectifs secondaires."}, P.more]}
   ];
 
-  const TIERS = ["Échauffourée", "Frappe", "Domination"];
+  const TIERS = ["Niveau 1", "Niveau 2", "Niveau 3"];
   const TACTICS = [
     {n:"Blazing Onslaught", card:1, gen:"Au début de la bataille, après les aptitudes de la phase de déploiement mais avant de déterminer qui joue en premier, votre adversaire doit choisir 1 élément de terrain (hors TERRAIN DE FACTION) dans son territoire comme repaire. Le repaire ne peut jamais être retiré du champ de bataille.",
       t:[["Master of Arms","Si une même unité ennemie a subi au moins 1 dégât lors de 3 phases différentes à ce tour."],

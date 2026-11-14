@@ -269,7 +269,7 @@
     const P = G.players[p];
     const rows = [0,1].filter(k => P.tac[k] != null);
     if (!rows.length) return `<p class="hint">Aucune tactique choisie.</p>`;
-    return `<table class="tt"><thead><tr><th>Tactique</th><th title="Échauffourée">É</th><th title="Frappe">F</th><th title="Domination">D</th></tr></thead><tbody>${rows.map(k => {
+    return `<table class="tt"><thead><tr><th>Tactique</th><th title="Niveau 1">N1</th><th title="Niveau 2">N2</th><th title="Niveau 3">N3</th></tr></thead><tbody>${rows.map(k => {
       const st = G.tac[p][k], t = TACTICS[P.tac[k]];
       return `<tr><td><span class="tname">${esc(t.n)}<button class="info" type="button" data-act="tinfo" data-i="${P.tac[k]}" aria-label="Voir ${esc(t.n)}">i</button></span></td>${[0,1,2].map(i => {
         const d = st[i];
