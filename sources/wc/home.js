@@ -538,6 +538,8 @@
   const mapHtml = () => `<div class="mapw"><p class="hint">Les joueurs qui ont choisi d'apparaître sur la carte, regroupés par ville. Pour y figurer : <a href="#compte">Mon compte</a>, puis Mon profil joueur.</p>
     <p class="map-total" id="map-info" aria-live="polite">Chargement des joueurs…</p>
     <div id="map" class="map"></div></div>`;
+  // Le profil est commun aux trois apps : ne garder que les factions Age of Sigmar
+  const aos = L => { const ok = new Set(FACTIONS.map(f => f.en)); return (L || []).filter(f => ok.has(f)); };
   async function renderMap(){
     $("home-view").innerHTML = mapHtml();
     // 1. Les joueurs et le total, même si le fond de carte ne charge pas
@@ -560,7 +562,7 @@
     Object.values(by).forEach(g => {
       const n = g.P.length;
       L.circleMarker([g.lat, g.lng], {radius:7 + Math.min(n, 10) * 1.5, color:"#d4ae3f", weight:2, fillColor:"#6b2119", fillOpacity:.85}).addTo(mapObj)
-        .bindPopup(`<b>${esc(g.city || "")}</b> · ${n} joueur${n > 1 ? "s" : ""}<br>` + g.P.map(p => `<div class="mp"><b>${esc(p.pseudo)}</b>${p.club ? ` · ${esc(p.club)}` : ""}${(p.factions || []).length ? `<br><small>${esc(p.factions.join(", "))}</small>` : ""}</div>`).join(""));
+        .bindPopup(`<b>${esc(g.city || "")}</b> · ${n} joueur${n > 1 ? "s" : ""}<br>` + g.P.map(p => `<div class="mp"><b>${esc(p.pseudo)}</b>${p.club ? ` · ${esc(p.club)}` : ""}${aos(p.factions).length ? `<br><small>${esc(aos(p.factions).join(", "))}</small>` : ""}</div>`).join(""));
     });
     if (!me && R.length) mapObj.fitBounds(L.latLngBounds(R.map(r => [r.lat, r.lng])).pad(.2), {maxZoom:9});
   }
@@ -576,11 +578,11 @@
       </div></div>
       ${profileHtml()}
       <div class="panel"><div class="body acc">
-        <p class="hint"><b class="acc-warn">Attention !</b> Supprimer ton compte efface définitivement tes données sur le serveur. Les données de cet appareil sont conservées.</p>
+        <p class="hint"><b class="acc-warn">Attention !</b> Supprimer ton compte efface définitivement tes données sur le serveur, pour WarCounter, SpearCounter et NecroCounter. Les données de cet appareil sont conservées.</p>
         <button type="button" class="btn danger wide" id="acc-del">${delArmed ? "Confirmer la suppression définitive" : "Supprimer mon compte"}</button>
       </div></div>
       <p class="sup-thanks"><a href="#confidentialite">Confidentialité et données personnelles</a></p></div>`;
-    return `<div class="sup"><div class="sup-hero"><h2>Mon compte</h2><p>Facultatif : sans compte, l'app fonctionne comme avant.<br>Avec un compte, tu retrouves tes listes et ta collection sur tous tes appareils.</p></div>${msg}
+    return `<div class="sup"><div class="sup-hero"><h2>Mon compte</h2><p>Facultatif : sans compte, l'app fonctionne comme avant.<br>Avec un compte, tu retrouves tes listes et ta collection sur tous tes appareils.<br><b>Un seul compte pour les trois apps</b> : WarCounter, SpearCounter et NecroCounter.</p></div>${msg}
       <div class="panel"><div class="body acc">
         <label class="lbl" for="acc-mail">E-mail</label><input type="email" id="acc-mail" autocomplete="email" inputmode="email">
         <label class="lbl" for="acc-pass">Mot de passe (6 caractères minimum)</label><input type="password" id="acc-pass" autocomplete="current-password">
@@ -623,13 +625,13 @@
   const privacyHtml = () => `<div class="sup"><div class="sup-hero"><h2>Confidentialité</h2><p>Ce que WarCounter fait de tes données.</p></div>
     <div class="panel"><div class="body"><dl class="blk">
       <dt><b>Sans compte</b></dt><dd>Tes listes, ta collection et tes parties restent uniquement sur ton appareil. Rien n'est envoyé.</dd>
-      <dt><b>Avec un compte (facultatif)</b></dt><dd>Sont enregistrés : ton adresse e-mail, ton mot de passe (chiffré, jamais lisible), tes listes et ta collection. Ils servent uniquement à te connecter et à synchroniser tes données entre tes appareils.</dd>
+      <dt><b>Avec un compte (facultatif)</b></dt><dd>Sont enregistrés : ton adresse e-mail, ton mot de passe (chiffré, jamais lisible), tes listes et ta collection. Ils servent uniquement à te connecter et à synchroniser tes données entre tes appareils. Le compte est commun à WarCounter, SpearCounter et NecroCounter.</dd>
       <dt><b>Profil joueur (facultatif)</b></dt><dd>Pseudo, ville (centre de la commune, jamais d'adresse), club et factions jouées. Ils ne sont visibles des autres joueurs que si tu coches « Apparaître sur la carte communautaire », et tu peux décocher à tout moment.</dd>
       <dt><b>Hébergement</b></dt><dd>Supabase, sur des serveurs situés dans l'Union européenne.</dd>
       <dt><b>Durée de conservation</b></dt><dd>Jusqu'à la suppression de ton compte.</dd>
       <dt><b>Tes droits</b></dt><dd>Tu peux supprimer ton compte et toutes tes données en ligne à tout moment depuis la page Mon compte. Pour toute question (accès, rectification, suppression) : warcounter@proton.me.</dd>
       <dt><b>Ce qu'on ne fait pas</b></dt><dd>Aucune publicité, aucune revente, aucun partage de tes données. La mesure d'audience (GoatCounter) est anonyme et sans cookie.</dd>
-      <dt><b>Responsable</b></dt><dd>elcounter, éditeur de WarCounter (warcounter@proton.me).</dd>
+      <dt><b>Responsable</b></dt><dd>elcounter, éditeur de WarCounter, SpearCounter et NecroCounter (warcounter@proton.me).</dd>
     </dl></div></div></div>`;
   function route(){
     const h = location.hash.slice(1);
