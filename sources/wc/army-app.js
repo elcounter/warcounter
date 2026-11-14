@@ -63,7 +63,13 @@
   }
   // Photos des figurines (reprises de SpearCounter), servies depuis le site
   const PHOTO = window.WC_PHOTO || {}, PBASE = location.protocol === "file:" ? "https://elcounter.github.io/warcounter/" : "";
-  const photoOf = fid => id => (PHOTO[fid] && PHOTO[fid][id]) ? PBASE + PHOTO[fid][id] : "";
+  const GKEYS = ["armee", "sorts", "prieres", "manifestations", "renom", "tactiques"];
+  const photoOf = fid => id => {
+    const P = PHOTO[fid]; if (!P) return "";
+    if (P[id] && id[0] !== "_") return PBASE + P[id];
+    const g = P._groups, i = GKEYS.indexOf(id);
+    return g && g.length && i >= 0 ? PBASE + g[i % g.length] : "";
+  };
   const FX = {};
   FX.hashut = {id:"hashut", en:"Helsmiths of Hashut", hashut:true, units:UNITS, bt:BATTLE_TRAITS,
     formations: FORMATIONS.map(f => ({id:f.id, en:f.en, pts:0, abs:[f.ab]})),
@@ -723,8 +729,8 @@
   }
   const loreHtml = L => L.map(x => sectionHtml(x.en, x.abs)).join("");
   function showGroup(id){
-    const s = scope();
-    let h = "";
+    const s = scope(), gp = s.F.photo(id);
+    let h = gp ? `<div class="hero-photo"><img src="${gp}" alt=""></div>` : "";
     if (id === "sorts") h += loreHtml(s.spells);
     else if (id === "prieres") h += loreHtml(s.prayers);
     else if (id === "manifestations") h += loreHtml(s.manifs);
