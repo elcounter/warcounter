@@ -132,7 +132,11 @@
   let state = load();
   function save(){ try { localStorage.setItem(STORE, JSON.stringify(state)); } catch(e) {} if (window.WCSync) window.WCSync.dirty(); }
   const getList = id => state.lists.find(l => l.id === id);
-  const activeList = () => getList(state.active) || null;
+  // Vue ouverte depuis une partie (window.WCGame.view) : liste ou faction du joueur, sans toucher à la liste active
+  const GV = () => (window.WCGame && window.WCGame.view) || null;
+  const catId = () => { const g = GV(); if (!g) return state.cat; const F = Object.values(FX).find(F => F.en === g.fac); return F ? F.id : ""; };
+  const activeList = () => { const g = GV(); if (g) return g.list ? getList(g.list) || null : null; return getList(state.active) || null; };
+  const gvBanner = (what, F) => { const g = GV(); return `<div class="banner"><span><b>${esc(g.name)}</b><br>${what} · ${esc(F.en)}</span></div>`; };
 
   // ---------- Calculs de liste ----------
   function entries(l){
@@ -285,12 +289,33 @@
   }
   const withPts = (a, pts, aqshy) => ({...a, n:a.n + (aqshy ? AQSHY : ""), cost: pts ? "+" + pts + " pts" : a.cost});
 
+  // Traits de bataille : avec une liste, on retire ceux qui ne visent que des sous-factions absentes
+  // (ex. HÉROS BEASTCLAW sans aucune unité BEASTCLAW dans la liste)
+  const GENKW = /^(HÉROS|INFANTERIE|CAVALERIE|MONSTRE|BÊTE|MACHINE DE GUERRE|SORCIER|PRÊTRE|CHAMPION|MUSICIEN|PORTE-ÉTENDARD|UNIQUE|SEIGNEUR DE GUERRE|VOL|PROTECTION|MANIFESTATION|SORT PERSISTANT|TERRAIN DE FACTION|ORDRE|CHAOS|MORT|DESTRUCTION)\b/;
+  const kwOf = u => (Array.isArray(u.kw) ? u.kw : String(u.kw || "").split(/,\s*/)).map(k => k.trim()).filter(Boolean);
+  function btFor(F, units){
+    const all = new Set(), have = new Set();
+    F.units.forEach(u => kwOf(u).forEach(k => all.add(k)));
+    units.forEach(u => kwOf(u).forEach(k => have.add(k)));
+    const subs = [...all].filter(k => !/^non-|\(/.test(k) && !GENKW.test(k) && F.units.some(u => !kwOf(u).includes(k)))
+      .sort((a, b) => b.length - a.length);
+    return F.bt.filter(a => {
+      let t = " " + (a.x || []).join(" ") + " ";
+      const hit = [];
+      subs.forEach(k => {
+        const re = new RegExp("(^|[^\\wÀ-ÿ-])(non[ -])?" + k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(?![\\wÀ-ÿ])", "g");
+        t = t.replace(re, (m, a1, neg) => { if (!neg) hit.push(k); return a1 + " "; });
+      });
+      return !hit.length || hit.some(k => have.has(k));
+    });
+  }
+
   // Ce qui est joué : liste active ou catalogue de la faction consultée
   function scope(){
     const l = activeList();
     if (!l) {
-      const F = FX[state.cat] || FX.hashut;
-      return {l:null, F, units:F.units.slice(), formations:F.formations, tables:F.tables.map(t => ({t, items:t.items, holder:""})),
+      const F = FX[catId()] || FX.hashut;
+      return {l:null, F, bt:F.bt, units:F.units.slice(), formations:F.formations, tables:F.tables.map(t => ({t, items:t.items, holder:""})),
         spells:F.spells, prayers:F.prayers, manifs:F.manifs.concat(UMANIF), tactics:TACTICS, wizard:true, priest:true, holders:{}, rors:rorFor(F)};
     }
     const F = fx(l), ents = entries(l), ids = [];
@@ -310,7 +335,7 @@
     });
     const f = formOf(l), m = lore(l, "manifs");
     const wizard = units.some(u => u.wizard), priest = units.some(u => u.priest);
-    return {l, F, units, tactics:(l.tactics || []).map(n => TACTICS.find(t => t.n === n)).filter(Boolean), formations:f ? [f] : [], tables,
+    return {l, F, bt:btFor(F, units), units, tactics:(l.tactics || []).map(n => TACTICS.find(t => t.n === n)).filter(Boolean), formations:f ? [f] : [], tables,
       spells: wizard && lore(l, "spells") ? [lore(l, "spells")] : [], prayers: priest && lore(l, "prayers") ? [lore(l, "prayers")] : [],
       manifs: (wizard || priest) && m ? [m] : [], wizard, priest, holders,
       rors: R ? [R] : [], count: id => ents.filter(o => o.e.u === id).length + (rc[id] || 0)};
@@ -671,9 +696,10 @@
       ? `<a class="banner" href="#liste-${esc(s.l.id)}"><span><b>${esc(s.l.name || "Sans nom")}</b><br>${esc(s.F.en)} · ${listPts(s.l)} / ${s.l.limit} pts${s.formations[0] ? " · " + esc(s.formations[0].en) : ""}</span><span class="banner-go">Modifier</span></a>`
       : `<div class="banner off"><span>Aucune liste active : catalogue de la faction choisie.</span><a class="banner-go" href="#listes">Listes</a></div>
          <div class="catsel"><label class="lbl" for="cat-fac">Faction consultée</label><select id="cat-fac">${facOptions(state.cat && FX[state.cat] ? s.F.id : "", "Sélectionner une faction")}</select></div>`;
-    if (!s.l && !(state.cat && FX[state.cat])) { $("list").innerHTML = `<p class="hint center">Crée une liste ou choisis une faction pour afficher son catalogue.</p>`; return; }
+    if (!s.l && !(catId() && FX[catId()])) { $("list").innerHTML = `<p class="hint center">Crée une liste ou choisis une faction pour afficher son catalogue.</p>`; return; }
     const gab = id => id === "sorts" ? s.spells.flatMap(x => x.abs) : id === "prieres" ? s.prayers.flatMap(x => x.abs) : id === "manifestations" ? s.manifs.flatMap(x => x.abs)
-      : id === "tactiques" ? s.tactics.map(t => ({n:t.n})) : id === "renom" ? s.rors.flatMap(r => [{n:r.en}, {n:rorComp(r)}].concat(r.abs)) : s.F.bt.concat(s.formations.flatMap(f => f.abs), s.tables.flatMap(t => t.items.flatMap(x => x.abs)));
+      : id === "tactiques" ? s.tactics.map(t => ({n:t.n})) : id === "renom" ? s.rors.flatMap(r => [{n:r.en}, {n:rorComp(r)}].concat(r.abs)) : s.bt.concat(s.formations.flatMap(f => f.abs), s.tables.flatMap(t => t.items.flatMap(x => x.abs)));
+    if (GV()) $("memo-banner").innerHTML = gvBanner(s.l ? "Mémo de sa liste" : "Mémo de sa faction", s.F);
     $("memo-banner").insertAdjacentHTML("beforeend", `<input type="search" class="msearch" id="memo-q" placeholder="Rechercher une unité, une aptitude, un mot-clé…" value="${esc(memoQ)}" autocomplete="off">`);
     $("list").innerHTML = groupsFor(s).map(g => tile(s.F, g.id, g.en, true, "", gab(g.id).map(a => a.n))).join("") +
       s.units.map(u => tile(s.F, u.id, u.en, false, s.l && s.count(u.id) > 1 ? "×" + s.count(u.id) : "", u.abilities.map(a => a.n).concat([u.kw]))).join("") +
@@ -702,7 +728,7 @@
     else if (id === "renom") h += s.rors.map(r => `<h3 class="sec"><span>${esc(r.en)}</span><span class="sec-r">${r.pts} pts</span></h3><p class="hint ror-comp"><b>Unités :</b> ${esc(rorComp(r))}</p>${r.abs.length ? `<div class="abilities">${r.abs.map(abCard).join("")}</div>` : `<p class="hint ror-comp">Pas d'aptitude de régiment : les règles sont sur les warscrolls.</p>`}`).join("");
     else if (id === "tactiques") h += sectionHtml(s.l ? "Tes cartes" : "Battle Tactics 2026-27", s.tactics.map(tacticAb));
     else {
-      h += sectionHtml("Traits de bataille", s.F.bt);
+      h += sectionHtml("Traits de bataille", s.bt);
       h += s.l ? sectionHtml(s.formations[0] ? "Formation : " + s.formations[0].en : "Formation", s.formations.flatMap(f => f.abs.map(a => withPts(a, f.pts))))
                : sectionHtml("Formations de bataille (1 au choix)", s.F.formations.flatMap(f => f.abs.map(a => withPts({...a, n: f.abs.length > 1 ? f.en + " : " + a.n : a.n}, f.pts))));
       s.tables.forEach(({t, items, holder}) => {
@@ -731,11 +757,11 @@
   // ---------- Phases ----------
   function renderPhases(){
     const s = scope(), F = s.F, src = [];
-    if (!s.l && !(state.cat && FX[state.cat])) {
+    if (!s.l && !(catId() && FX[catId()])) {
       $("phase-banner").innerHTML = `<a class="banner off" href="#listes"><span>Aucune liste active : crée ta liste, ou choisis une faction dans le Mémo.</span><span class="banner-go">Listes</span></a>`;
       $("phases").innerHTML = ""; return;
     }
-    F.bt.forEach(a => src.push({who:"Trait de bataille", a}));
+    s.bt.forEach(a => src.push({who:"Trait de bataille", a}));
     s.formations.forEach(f => f.abs.forEach(a => src.push({who:"Formation " + f.en, a})));
     s.tables.forEach(({t, items, holder}) => items.forEach(x => x.abs.forEach(a => src.push({who:t.title + (holder ? " · " + holder : ""), a}))));
     s.spells.forEach(L => L.abs.forEach(a => src.push({who:"Sort · " + L.en, a})));
@@ -748,6 +774,7 @@
     $("phase-banner").innerHTML = s.l
       ? `<a class="banner" href="#liste-${esc(s.l.id)}"><span><b>${esc(s.l.name || "Sans nom")}</b><br>Phases de ta liste active · ${esc(F.en)}</span><span class="banner-go">Modifier</span></a>`
       : `<a class="banner off" href="#listes"><span>Aucune liste active : toutes les aptitudes de ${esc(F.en)} sont affichées.</span><span class="banner-go">Choisir</span></a>`;
+    if (GV()) $("phase-banner").innerHTML = gvBanner(s.l ? "Phases de sa liste" : "Phases de sa faction", F);
     $("phases").innerHTML = PHASES.map(ph => {
       const items = src.filter(({who, a}) => {
         const w = a.when || F.when(a);

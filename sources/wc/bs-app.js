@@ -215,13 +215,23 @@
   const pickRow = (key, val, r) => `<div class="two">${[0,1].map(p => `<button class="pick" type="button" data-act="${key}" data-p="${p}"${r != null ? ` data-r="${r}"` : ""} aria-pressed="${val === p}">${pname(p)}</button>`).join("")}</div>`;
   function vStart(){
     const b = bp();
-    return `<div class="panel"><h2 class="sec">Qui est l'attaquant ?</h2><div class="body">${pickRow("attacker", G.attacker)}</div></div>
-      <div class="panel"><h2 class="sec">Qui joue en premier au round 1 ?</h2><div class="body">${pickRow("first", G.rounds[0].first, 1)}</div></div>
+    return `<div class="panel"><h2 class="sec">Qui est l'attaquant ?</h2><div class="body"><p class="hint rappel">Jet de dé : chaque joueur lance un dé, le gagnant choisit qui est l'attaquant.</p>${pickRow("attacker", G.attacker)}</div></div>
+      <div class="panel"><h2 class="sec">Qui joue en premier au round 1 ?</h2><div class="body"><p class="hint rappel">Le joueur qui a terminé ses poses en premier choisit qui joue en premier.</p>${pickRow("first", G.rounds[0].first, 1)}</div></div>
       <div class="panel"><h2 class="sec"><span>Carte de déploiement</span><button class="info" type="button" data-act="bpinfo" aria-label="Voir le battleplan" style="color:#fff">i</button></h2><div class="body">
         <img class="map" src="${MAPS[b.id]}" alt="Carte de déploiement ${esc(b.n)}">
         ${G.attacker != null ? `<p class="hint" style="text-align:center">Territoire rouge : <b>${pname(G.attacker)}</b> · Territoire bleu : <b>${pname(other(G.attacker))}</b></p>` : ""}</div></div>`;
   }
 
+  const ICO_MEMO = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M9 10h6M9 14h6"/></svg>`;
+  const ICO_PH = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg>`;
+  // Mémo / Phases ouverts depuis la feuille de score : faction (ou liste) du joueur, barre « Retour à la partie »
+  window.WCGame = window.WCGame || {};
+  window.WCGame.scoreLine = () => { const m = /^r(\d)$/.exec(view); return G ? (m ? `Round ${m[1]} · ` : "") + `${total(0)} - ${total(1)}` : ""; };
+  document.addEventListener("click", e => {
+    const a = e.target.closest("a[data-gv]"); if (!a || !G) return;
+    const p = +a.dataset.gv, P = G.players[p];
+    window.WCGame.view = {list: p === 0 ? (P.list || "") : "", fac: P.faction, name: rawName(p)};
+  });
   function vRound(r){
     const A = analysis(), R = G.rounds[r-1], b = bp();
     let h = "";
@@ -250,6 +260,7 @@
         <div><span class="lbl">Score primaire</span><div class="chips">${b.sc.map((s, i) => avail(s, r) ? `<button class="chip" type="button" data-act="prim" data-p="${p}" data-r="${r}" data-i="${i}" aria-pressed="${!!R.prim[p][i]}">${esc(s.n)}<span class="v">${s.v}</span></button>` : "").join("")}</div></div>
         ${G.noTac ? "" : `<div><span class="lbl">Tactiques de bataille${locked ? " · bloquées (double tour)" : ""}</span>${tacTable(p, r, locked)}</div>`}
         <div class="sub"><span>Points ce round</span><b>${roundScore(p, r)} PV</b></div>
+        ${P.faction ? `<div class="gmemo"><a class="btn g-memo" data-gv="${p}" href="#memo">${ICO_MEMO}<span>Mémo<small>${esc(P.faction)}</small></span></a><a class="btn g-memo" data-gv="${p}" href="#phases">${ICO_PH}<span>Phases<small>${P.list && p === 0 ? "Ma liste" : esc(P.faction)}</small></span></a></div>` : ""}
       </div></div>`;
     });
     return h;

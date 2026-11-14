@@ -1,7 +1,7 @@
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs('build-check', exist_ok=True)
-VERSION='2.22.3'
+VERSION='2.23.0'
 MAJ='14-11-2026'
 LEGAL='<span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span>'
 THEME_BTN='<button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button>'
@@ -93,6 +93,11 @@ html[data-theme="dark"] body{background:var(--page);color:var(--ink)}
 html[data-theme="dark"] input,html[data-theme="dark"] select,html[data-theme="dark"] textarea{background:#262626;color:var(--ink);border-color:#444}
 html[data-theme="dark"] a{color:#e9c96b}
 html[data-theme="dark"] .bar a,html[data-theme="dark"] .btn-install,html[data-theme="dark"] .sc-btn,html[data-theme="dark"] .bnav a{color:inherit}
+.back-game{position:fixed;left:0;right:0;bottom:var(--navh);z-index:30;display:flex;align-items:center;gap:8px;padding:12px 16px;background:var(--bar);color:#fff;font:700 15px var(--body);text-decoration:none;box-shadow:0 -2px 8px rgba(0,0,0,.25)}
+.back-game[hidden]{display:none}
+.back-game svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.back-game b{margin-left:auto;font:700 16px var(--display);letter-spacing:.04em;color:#e9c96b}
+body.has-back-game #app-army main{padding-bottom:calc(var(--navh) + 90px)}
 .copy .theme-btn,.theme-btn{cursor:pointer;display:inline-flex;align-items:center;gap:6px;margin:0 0 6px;padding:5px 12px;border:1px solid #d6cfc3;border-radius:999px;background:#fff;color:var(--bar);font:600 12px var(--body);vertical-align:top}
 html[data-theme="dark"] .copy .sup-link,html[data-theme="dark"] .theme-btn{background:#262626;border-color:#444;color:#e9c96b}
 .theme-btn svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round}
@@ -154,6 +159,13 @@ extra='''
 #app-army .unit-link:hover{background:#faf7f2}
 #app-army .unit-link.army-link{background:var(--bar);color:#fff;border-left-color:var(--gold)}
 #app-army .unit-link .badge{position:static;order:2;flex:none}
+#app-army #list{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#app-army #list .unit-link{aspect-ratio:1;display:grid;place-items:center;justify-content:center;align-content:center;text-align:center;padding:12px;border:0;border-radius:10px;background:var(--namebar);color:#fff;font:700 clamp(14px,4vw,17px)/1.25 var(--body);overflow-wrap:anywhere}
+#app-army #list .unit-link:hover{background:var(--namebar);filter:brightness(1.12)}
+#app-army #list .unit-link.army-link{background:var(--bar);box-shadow:inset 0 0 0 2px var(--gold)}
+#app-army #list .unit-link .badge{position:absolute;top:8px;right:8px}
+#app-army #list .unit-link.has-photo{place-items:end start;justify-content:stretch;align-content:end;text-align:left;background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.55) 35%,rgba(0,0,0,0) 70%),var(--img) center 30%/cover no-repeat,#e8e5df}
+#app-army #list .nores{grid-column:1/-1}
 .bnav .in{margin:0 auto;padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))}
 #app-army .lc-fac{display:block;font:500 12px var(--display);text-transform:uppercase;letter-spacing:.06em;color:var(--gold-dk);margin-top:2px}
 #app-army .newl{display:flex;gap:10px;align-items:center}
@@ -208,7 +220,8 @@ army_body='''<header class="bar">
   <p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br>'''+THEME_BTN+'''<br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version '''+VERSION+''' · MAJ '''+MAJ+'''<br>'''+LEGAL+'''</p>
 </main>'''
 
-nav='''<nav class="bnav" aria-label="Navigation principale"><div class="in">
+nav='''<a id="back-game" class="back-game" href="#parties" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span>Retour à la partie</span><b id="back-score"></b></a>
+<nav class="bnav" aria-label="Navigation principale"><div class="in">
   <a href="#listes" id="nav-lists">'''+ICON_LIST+'''<span>Listes</span></a>
   <a href="#memo" id="nav-memo">'''+ICON_BOOK+'''<span>Mémo</span></a>
   <a href="#phases" id="nav-phases">'''+ICON_LAYERS+'''<span>Phases</span></a>
@@ -240,9 +253,21 @@ top_js='''(function(){
     else if (h === "collection") tab = "";
     ["army","bs","home"].forEach(k => { $("app-" + k).hidden = k !== app; });
     ["lists","memo","phases","regles","parties"].forEach(k => { if (k === tab) $("nav-" + k).setAttribute("aria-current", "page"); else $("nav-" + k).removeAttribute("aria-current"); });
+    // Barre « Retour à la partie » tant que l'on consulte le Mémo / les Phases d'un joueur
+    const G = window.WCGame || {};
+    if (G.view && !(app === "army" && (tab === "memo" || tab === "phases"))) G.view = null;
+    const bg = $("back-game"); if (bg) { bg.hidden = !G.view; $("back-score").textContent = G.view && G.scoreLine ? G.scoreLine() : ""; }
+    document.body.classList.toggle("has-back-game", !!G.view);
     window.scrollTo(0, 0);
   }
   window.addEventListener("hashchange", top);
+  // La barre de navigation revient à ta propre liste
+  document.addEventListener("click", e => {
+    const a = e.target.closest(".bnav a"); const G = window.WCGame;
+    if (!a || !G || !G.view) return;
+    G.view = null;
+    if (a.getAttribute("href") === location.hash) setTimeout(() => window.dispatchEvent(new HashChangeEvent("hashchange")), 0);
+  });
   top();
 })();'''
 
