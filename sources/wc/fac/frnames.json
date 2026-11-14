@@ -1,0 +1,250 @@
+{
+"lumineth": {
+"hurakan-windmage": "Mage du Vent Hurakain",
+"hurakan-spirit-of-the-wind": "Esprit du Vent Hurakain",
+"hurakan-windchargers": "Charge-vent Hurakains",
+"vanari-auralan-wardens": "Gardes Auraliens Vanari",
+"scinari-cathallar": "Cathallar Scinari",
+"vanari-bladelords": "Maîtres des Lames Vanari",
+"vanari-auralan-sentinels": "Sentinelles Auraliennes Vanari"
+},
+"ossiarch": {
+"liege-kavalos": "Suzerain-Kavalos",
+"teratic-cohort": "Cohorte Tératique",
+"kavalos-deathriders": "Juchemorts Kavalos",
+"mortisan-soulreaper": "Mortisan Faucheur d'Âmes",
+"mortek-guard": "Garde Mortek",
+"gothizzar-harvester": "Moissonneur Gothizzar",
+"mortisan-ossifector": "Mortisan Ossifacteur",
+"immortis-guard": "Gardes Immortis",
+"necropolis-stalkers": "Rôdeurs de la Nécropole",
+"morghast-archai": "Morghasts Archaï"
+},
+"nighthaunt": {
+"spirit-torment": "Esprit Tourmenteur",
+"chainghasts": "Mânes Enchaînés",
+"bladegheist-revenants": "Revenants Lamemânes",
+"grimghast-reapers": "Carognes Faucheuses",
+"dreadblade-harrows": "Écumeurs Affrelames"
+},
+"ogors": {
+"tyrant": "Tyran",
+"ironblaster": "Boute-fer",
+"leadbelchers": "Crache-plomb",
+"mournfang-pack": "Meute de Mornecrocs",
+"gnoblar-scraplauncher": "Lance-ferraille Gnoblar",
+"gnoblars": "Gnoblars",
+"ironguts": "Ventres-durs",
+"maulbeast-cavalry": "Cavalerie Mutilante",
+"gluttons": "Gloutons"
+},
+"sylvaneth": {
+"branchwych": "Branchanteresse",
+"spite-revenants": "Sylve-revenants",
+"arch-revenant": "Archi-revenant",
+"gossamid-archers": "Archers Diaphanes",
+"spiterider-lancers": "Lanciers Coursefiel",
+"revenant-seekers": "Veneurs Revenants"
+},
+"fec": {
+"abhorrant-gorewarden": "Sangtinelle Abhorrante",
+"royal-beastflayers": "Dépeceurs Royaux",
+"crypt-horrors": "Horreurs des Cryptes",
+"crypt-flayers": "Fléaux des Cryptes",
+"abhorrant-archregent": "Grand Régent Abhorrant",
+"cryptguard": "Prévôts des Cryptes",
+"morbheg-knights": "Chevaliers de Morbheg",
+"varghulf-courtier": "Courtisan Varghulf",
+"varghulf-courtier-scourge-of-aqshy": "Courtisan Varghulf (Scourge of Aqshy)"
+},
+"khorne": {
+"slaughterpriest": "Prêtre du Carnage",
+"mighty-skullcrushers": "Massacreurs de Khorne",
+"blood-warriors": "Guerriers de Sang",
+"bloodreavers": "Pillards de Sang",
+"karanak": "Karanak",
+"flesh-hounds": "Molosses de Khorne",
+"claws-of-karanak": "Griffes de Karanak",
+"blood-warriors-scourge-of-aqshy": "Guerriers de Sang (Scourge of Aqshy)"
+},
+"nurgle": {
+"rotbringer-sorcerer": "Sorcier Gangreneur",
+"nurglings": "Nurglings",
+"beast-of-nurgle": "Bête de Nurgle",
+"rotmire-creed": "Credo de Putrefange",
+"spoilpox-scrivener-herald-of-nurgle": "Scribe Avarieur",
+"putrid-blightkings": "Pesticrates Putrides",
+"plaguebearers": "Portepestes",
+"putrid-blightkings-scourge-of-aqshy": "Pesticrates Putrides (Scourge of Aqshy)"
+},
+"idoneth": {
+"isharann-soulscryer": "Scruteur d'Âmes Isharann",
+"akhelian-morrsarr-guard": "Gardes Morrarr Akhéliens",
+"akhelian-allopex": "Allopex Akhélien",
+"namarti-thralls": "Hilotes Namarti",
+"akhelian-king": "Roi Akhélien",
+"akhelian-ishlaen-guard": "Gardes Ishlaen Akhéliens",
+"namarti-reavers": "Écumeurs Namarti",
+"namarti-reavers-scourge-of-aqshy": "Écumeurs Namarti (Scourge of Aqshy)"
+},
+"soulblight": {
+"vampire-lord": "Seigneur Vampire",
+"blood-knights": "Chevaliers de Sang",
+"vargheists": "Vargheists",
+"deathrattle-skeletons": "Squelettes Raclemorts",
+"wight-king": "Roi Revenant",
+"barrow-guard": "Garde des Tertres",
+"barrow-knights": "Chevaliers des Tertres"
+},
+"cities": {
+"freeguild-cavalier-marshal": "Maréchal-Cavalier des Guildes Franches",
+"freeguild-steelhelms": "Heaumefers des Guildes Franches",
+"freeguild-cavaliers": "Cavaliers des Guildes Franches",
+"ironweld-great-cannon": "Grand Canon Soudefer",
+"fusil-major-on-ogor-warhulk": "Fusil-Major sur Ogor d'Affût",
+"alchemite-warforger": "Forgeguerre Alchimite",
+"freeguild-fusiliers": "Fusiliers des Guildes Franches",
+"wildercorps-hunters": "Chasseurs du Corps d'Éclaireurs",
+"freeguild-marshal-and-relic-envoy": "Maréchal des Guildes Franches et Estafette Reliquaire",
+"pontifex-zenestra-matriarch-of-the-great-wheel": "Pontifex Zenestra, Matriarche de la Grande Roue",
+"freeguild-command-corps-whisperblade": "Prestelame du Corps de Commandement des Guildes Franches",
+"alchemite-warforger-scourge-of-aqshy": "Forgeguerre Alchimite (Scourge of Aqshy)",
+"pontifex-zenestra-matriarch-of-the-great-wheel-scourge-of-aqshy": "Pontifex Zenestra, Matriarche de la Grande Roue (Scourge of Aqshy)"
+},
+"stormcast": {
+"lord-vigilant-on-gryph-stalker": "Seigneur-Vigilant sur Gryph-rôdeur",
+"lord-veritant": "Seigneur-Véritant",
+"prosecutors": "Prosécutors",
+"liberators": "Libérators",
+"yndrasta-the-celestial-spear": "Yndrasta, la Lance Céleste",
+"knight-vexillor": "Chevalier-Vexillor",
+"annihilators": "Annihilators",
+"vindictors": "Vincitors",
+"stormstrike-chariot": "Char Foudroyeur"
+},
+"tzeentch": {
+"magister-on-disc-of-tzeentch": "Magister sur Disque de Tzeentch",
+"flamers-of-tzeentch": "Incendiaires de Tzeentch",
+"screamers-of-tzeentch": "Hurleurs de Tzeentch",
+"tzaangors": "Tzaangors",
+"kairic-acolytes": "Acolytes Kairiques",
+"tzaangor-shaman": "Chamane Tzaangor",
+"tzaangor-enlightened": "Tzaangors Éclairés",
+"tzaangor-skyfires": "Tzaangors Flambeciel",
+"screamers-of-tzeentch-scourge-of-aqshy": "Hurleurs de Tzeentch (Scourge of Aqshy)"
+},
+"daughters": {
+"slaughter-queen-on-cauldron-of-blood": "Reine du Massacre sur Chaudron de Sang",
+"hag-queen": "Reine Matriarche",
+"bloodwrack-medusa": "Méduse Incarnate",
+"sisters-of-slaughter": "Sœurs du Massacre",
+"khainite-shadowstalkers": "Rôdeurs de l'Ombre Khainites",
+"melusai-ironscale": "Ferécaille Melusaï",
+"blood-stalkers": "Rôdeuses de Sang",
+"doomfire-warlocks": "Conjurateurs du Feu Maudit",
+"witch-aelves": "Érinyes",
+"khainite-shadowstalkers-scourge-of-aqshy": "Rôdeurs de l'Ombre Khainites (Scourge of Aqshy)",
+"melusai-ironscale-scourge-of-aqshy": "Ferécaille Melusaï (Scourge of Aqshy)"
+},
+"skaven": {
+"deathmaster-crixxit": "Maîtremort Crixxit",
+"deathmaster": "Maîtremort",
+"gutter-runners": "Coureurs d'Égouts",
+"night-runners": "Coureurs Nocturnes",
+"grey-seer": "Prophète Gris",
+"stormfiends": "Colosses de Choc",
+"warp-lightning-cannon": "Canon à Malefoudre",
+"clanrats": "Rats des Clans",
+"clawlord-on-gnaw-beast": "Griffarque sur Ronge-bête",
+"warlock-engineer": "Ingénieur Technomage",
+"rat-ogors": "Rats-ogors"
+},
+"kharadron": {
+"endrinmaster-with-dirigible-suit": "Maître-endrinieur avec Dirigeable Dorsal",
+"grundstok-thunderers": "Foudroyeurs Grundstok",
+"grundstok-gunhauler": "Canonnère Grundstok",
+"endrinriggers": "Endringréeurs",
+"arkanaut-admiral": "Amiral Arkanaute",
+"arkanaut-company": "Compagnie d'Arkanautes",
+"skywardens": "Stratogardes",
+"arkanaut-frigate": "Frégate Arkanaute",
+"endrinriggers-scourge-of-aqshy": "Endringréeurs (Scourge of Aqshy)"
+},
+"slaanesh": {
+"fiends": "Charnelles",
+"daemonettes": "Démonettes",
+"seekers": "Veneuses",
+"shardspeaker-of-slaanesh": "Éclatoracle de Slaanesh",
+"slickblade-seekers": "Traqueurs Fluidelames",
+"slaangor-fiendbloods": "Slaangors Sanguivores",
+"blissbarb-archers": "Archers Ardillons",
+"thricefold-discord": "La Triple Discorde"
+},
+"gloomspite": {
+"snarlboss": "Grogneboss",
+"snarlpack-cavalry": "Cavalerie Grognemeute",
+"loonboss": "Loufboss",
+"squig-hoppers": "Squigaliers",
+"rockgut-troggoths": "Troggoths Ventreroc",
+"moonclan-stabbas": "Troueurs Luneclans",
+"wolfgit-retinue": "Suite de Vils-leus",
+"sunsteala-wheelas": "Rouleurs Fauchesoleil",
+"sunsteala-wheelas-scourge-of-aqshy": "Rouleurs Fauchesoleil (Scourge of Aqshy)"
+},
+"ironjawz": {
+"megaboss": "Mégaboss",
+"brute-ragerz": "Rageux Brutes",
+"ardboyz": "Durboyz",
+"brutes": "Brutes",
+"megaboss-scourge-of-aqshy": "Mégaboss (Scourge of Aqshy)",
+"brutes-scourge-of-aqshy": "Brutes (Scourge of Aqshy)"
+},
+"fyreslayers": {
+"battlesmith": "Belliforgeron"
+},
+"khazalite": {
+"battlesmith": "Belliforgeron",
+"hjulda-drakkblud": "Hjulda Drakkblud",
+"clanshields": "Boucliers Claniques",
+"gholems-of-gazul": "Gholems de Gazul",
+"oathkeeper-cannon": "Canon Garde-serment"
+},
+"hashut": {
+"war-despot": "Despote de Guerre",
+"dominator-cannons": "Machine Dominotaure avec Canons d'Immolation",
+"bombard": "Bombarde de Tourment",
+"cohort-spears": "Cohorte Infernale avec Lances Hashutites"
+},
+"sons": {
+"rock-hurlers": "Lance-rochers",
+"mancrusher-gargant": "Gargant Broyeur d'Hommes",
+"mancrusher-gargant-scourge-of-aqshy": "Gargant Broyeur d'Hommes (Scourge of Aqshy)"
+},
+"slaves": {
+"chaos-lord": "Seigneur du Chaos",
+"chaos-chariot": "Char du Chaos",
+"chaos-warriors": "Guerriers du Chaos",
+"chaos-knights": "Chevaliers du Chaos",
+"darkoath-warqueen": "Reine de Guerre Noir-serment",
+"darkoath-savagers": "Saccageurs Noir-serment",
+"darkoath-fellriders": "Cavaliers Cruels Noir-serment",
+"darkoath-marauders": "Maraudeurs Noir-serment",
+"chaos-warriors-scourge-of-aqshy": "Guerriers du Chaos (Scourge of Aqshy)"
+},
+"seraphon": {
+"saurus-oldblood-on-carnosaur": "Sang-ancien Saurus sur Carnosaure",
+"saurus-warriors": "Guerriers Saurus",
+"kroxigor": "Kroxigor",
+"sunblood-pack": "Meute Sang Solaire",
+"spawn-of-chotec": "Rejeton de Chotec",
+"terrawings": "Terraptères"
+},
+"kruleboyz": {
+"killaboss-on-great-gnashtoof": "Bosskitu' sur Bruxodonte",
+"beast-skewer-killbow": "Empaleuse",
+"murknob-with-belcha-banna": "Nobskur avec Rotétendard",
+"gutrippaz": "Éventreurs",
+"man-skewer-boltboyz": "Embrocheurs",
+"killaboss-on-great-gnashtoof-scourge-of-aqshy": "Bosskitu' sur Bruxodonte (Scourge of Aqshy)"
+}
+}

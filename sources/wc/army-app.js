@@ -70,7 +70,11 @@
     const g = P._groups, i = GKEYS.indexOf(id);
     return g && g.length && i >= 0 ? PBASE + g[i % g.length] : "";
   };
+  // Noms français officiels connus (repris de SpearCounter) ; l'anglais reste pour l'export, l'import et les recherches
+  const FRN = window.WC_FRN || {};
+  const nm = u => (u && (u.fr || u.en)) || "";
   const FX = {};
+  UNITS.forEach(u => { u.fr = (FRN.hashut || {})[u.id] || ""; });
   FX.hashut = {id:"hashut", en:"Helsmiths of Hashut", hashut:true, units:UNITS, bt:BATTLE_TRAITS,
     formations: FORMATIONS.map(f => ({id:f.id, en:f.en, pts:0, abs:[f.ab]})),
     tables: [
@@ -89,7 +93,7 @@
   (window.WC_FAC || []).forEach(F => {
     const sec = t => F.sections.find(s => s.title === t);
     const mk = (s, p) => s ? s.items.map((it, i) => ({id:p + i, en:it.n, pts:it.pts || 0, abs:it.abs})) : [];
-    const units = F.units.map(u => ({...u, unique:/\bUNIQUE\b/.test(u.kw), wizard:/SORCIER/.test(u.kw), priest:/PRÊTRE/.test(u.kw),
+    const units = F.units.map(u => ({...u, fr:(FRN[F.id] || {})[u.id] || "", unique:/\bUNIQUE\b/.test(u.kw), wizard:/SORCIER/.test(u.kw), priest:/PRÊTRE/.test(u.kw),
       war:/MACHINE DE GUERRE/.test(u.kw), aqshy:/Scourge of Aqshy/.test(u.en)}));
     FX[F.id] = {id:F.id, en:F.en, units, bt:mk(sec("Traits de bataille"), "b").flatMap(i => i.abs),
       formations: mk(sec("Formations de bataille"), "f"),
@@ -240,15 +244,15 @@
       }
     });
     const all = entries(l);
-    F.units.filter(u => u.unique).forEach(u => { if (all.filter(o => o.e.u === u.id).length > 1) err.push(`${u.en} est Unique : 1 seul exemplaire.`); });
-    if (rorOf(l)) rorUnits(rorOf(l)).forEach(({u}) => { if (/\bUNIQUE\b/.test(u.kw) && all.some(o => UF(F, o.e.u) && UF(F, o.e.u).en === u.en)) err.push(`${u.en} est Unique : il est déjà dans le régiment de renom.`); });
+    F.units.filter(u => u.unique).forEach(u => { if (all.filter(o => o.e.u === u.id).length > 1) err.push(`${nm(u)} est Unique : 1 seul exemplaire.`); });
+    if (rorOf(l)) rorUnits(rorOf(l)).forEach(({u}) => { if (/\bUNIQUE\b/.test(u.kw) && all.some(o => UF(F, o.e.u) && UF(F, o.e.u).en === u.en)) err.push(`${nm(u)} est Unique : il est déjà dans le régiment de renom.`); });
     Object.entries(l.enh).forEach(([k, v]) => {
       const t = tableOf(F, k); if (!t) return;
       const holder = all.find(o => o.e.k === v.on);
       if (!holder) err.push(`Choisis l'unité qui porte : ${t.title}.`);
       else if (UF(F, holder.e.u).unique) err.push(`${t.title} : une unité Unique ne peut pas porter d'amélioration.`);
     });
-    all.forEach(o => { if (entryPts(l, o.e) > l.limit / 2) err.push(`${UF(F, o.e.u).en} coûte ${entryPts(l, o.e)} pts : une unité ne peut pas dépasser la moitié des points (${l.limit / 2} pts).`); });
+    all.forEach(o => { if (entryPts(l, o.e) > l.limit / 2) err.push(`${nm(UF(F, o.e.u))} coûte ${entryPts(l, o.e)} pts : une unité ne peut pas dépasser la moitié des points (${l.limit / 2} pts).`); });
     if (pts <= l.limit && l.limit - pts >= 50) info.push(`${l.limit - pts} pts non dépensés : 1 point de commandement supplémentaire au début du premier round.`);
     if (l.regiments.length) info.push(`${regCount(l)} régiment${regCount(l) > 1 ? "s" : ""}${l.ror ? " (régiment de renom compris)" : ""} : si tu en as plus que ton adversaire, tu peux relancer ton jet de priorité une fois par bataille.`);
     const aq = all.some(o => UF(F, o.e.u).aqshy) || Object.entries(l.enh).some(([k, v]) => (enhItem(F, k, v.id) || {}).aqshy);
@@ -339,7 +343,7 @@
       const v = l.enh[t.key]; if (!v) return;
       const x = byId(t.items, v.id); if (!x) return;
       const o = ents.find(z => z.e.k === v.on);
-      tables.push({t, items:[x], holder: o ? UF(F, o.e.u).en : ""});
+      tables.push({t, items:[x], holder: o ? nm(UF(F, o.e.u)) : ""});
       if (o) (holders[o.e.u] = holders[o.e.u] || []).push({kind:t.title, x});
     });
     const f = formOf(l), m = lore(l, "manifs");
@@ -461,15 +465,15 @@
   // ---------- Éditeur de liste ----------
   let editing = null;
   const optList = (arr, sel, label) => arr.map(o => `<option value="${esc(o.id)}"${o.id === sel ? " selected" : ""}>${esc(label(o))}</option>`).join("");
-  const unitLabel = u => `${u.en} (${u.pts} pts)`;
+  const unitLabel = u => `${nm(u)} (${u.pts} pts)`;
 
   function entRow(e, path, l){
     const F = fx(l), u = UF(F, e.u), tags = enhOn(l, e).map(o => o.x.en);
     const canReinf = !u.hero && u.size > 1;
     return `<div class="ent">
-      <div class="ent-main"><div class="ent-name">${esc(u.en)}</div>
+      <div class="ent-main"><div class="ent-name">${esc(nm(u))}</div>
         <div class="ent-meta">${sizeOf(l, e)} fig. · <b>${entryPts(l, e)} pts</b>${tags.map(t => ` <span class="tag gold">${esc(t)}</span>`).join("")}</div></div>
-      <button type="button" class="del" data-act="del" data-path="${path}" aria-label="Retirer ${esc(u.en)}">${ICON_X}</button>
+      <button type="button" class="del" data-act="del" data-path="${path}" aria-label="Retirer ${esc(nm(u))}">${ICON_X}</button>
       ${canReinf ? `<div class="ent-opts"><label class="check"><input type="checkbox" data-act="reinf" data-path="${path}"${e.reinf ? " checked" : ""}> Renforcée (+${u.pts} pts)</label></div>` : ""}
       ${compsOf(F, u).map(c => `<div class="ent-opts"><label class="check"><input type="checkbox" data-act="comp" data-path="${path}" data-c="${esc(c.id)}"${(e.comp || []).includes(c.id) ? " checked" : ""}> Avec ${esc(c.en)} (0 pt, même entrée)</label></div>`).join("")}
     </div>`;
@@ -711,7 +715,7 @@
     if (GV()) $("memo-banner").innerHTML = gvBanner(s.l ? "Mémo de sa liste" : "Mémo de sa faction", s.F);
     $("memo-banner").insertAdjacentHTML("beforeend", `<input type="search" class="msearch" id="memo-q" placeholder="Rechercher une unité, une aptitude, un mot-clé…" value="${esc(memoQ)}" autocomplete="off">`);
     $("list").innerHTML = groupsFor(s).map(g => tile(s.F, g.id, g.en, true, "", gab(g.id).map(a => a.n))).join("") +
-      s.units.map(u => tile(s.F, u.id, u.en, false, s.l && s.count(u.id) > 1 ? "×" + s.count(u.id) : "", u.abilities.map(a => a.n).concat([u.kw]))).join("") +
+      s.units.map(u => tile(s.F, u.id, nm(u), false, s.l && s.count(u.id) > 1 ? "×" + s.count(u.id) : "", u.abilities.map(a => a.n).concat([u.kw, u.en]))).join("") +
       `<p class="nores" id="memo-none" hidden>Aucun résultat.</p>`;
     filterMemo();
   }
@@ -753,7 +757,7 @@
     if (st.W) discs.push([st.W,"Prot.","wd"]);
     h += `<div class="statband"><div class="stats" style="--n:${discs.length}">` +
       discs.map(([v,lab,c]) => `<div><div class="disc${c ? " " + c : ""}">${esc(v)}</div><div class="l">${lab}</div></div>`).join("") + `</div>
-      <p class="unit-pts">${u.size} figurine${u.size > 1 ? "s" : ""} · ${u.pts ? u.pts + " pts" : /^rr-/.test(u.id) ? "régiment de renom uniquement" : "0 pt, prise avec son héros"}${u.pts && u.size > 1 && !u.hero ? ` · renforcée : ${u.size * 2} fig., ${u.pts * 2} pts` : ""}${u.aqshy ? " · Fléau d'Aqshy" : ""}</p></div>`;
+      <p class="unit-pts">${u.size} figurine${u.size > 1 ? "s" : ""} · ${u.pts ? u.pts + " pts" : /^rr-/.test(u.id) ? "régiment de renom uniquement" : "0 pt, prise avec son héros"}${u.pts && u.size > 1 && !u.hero ? ` · renforcée : ${u.size * 2} fig., ${u.pts * 2} pts` : ""}${u.aqshy ? " · Fléau d'Aqshy" : ""}</p>${u.fr ? `<p class="unit-en">Nom anglais : ${esc(u.en)}</p>` : ""}</div>`;
     h += weaponBlock(u.weapons.filter(w => !isMelee(w)), true);
     h += weaponBlock(u.weapons.filter(isMelee), false);
     h += sectionHtml("Aptitudes", u.abilities);
@@ -778,7 +782,7 @@
     s.manifs.forEach(L => L.abs.forEach(a => src.push({who:"Manifestation · " + L.en, a})));
     if (s.l) s.rors.forEach(r => r.abs.forEach(a => src.push({who:"Régiment de renom · " + r.en, a})));
     s.tactics.forEach(t => src.push({who:"Battle Tactic", a:tacticAb(t)}));
-    s.units.forEach(u => { const n = s.l ? s.count(u.id) : 1; u.abilities.forEach(a => src.push({who:u.en + (n > 1 ? " ×" + n : ""), a})); });
+    s.units.forEach(u => { const n = s.l ? s.count(u.id) : 1; u.abilities.forEach(a => src.push({who:nm(u) + (n > 1 ? " ×" + n : ""), a})); });
     const seen = new Set();
     $("phase-banner").innerHTML = s.l
       ? `<a class="banner" href="#liste-${esc(s.l.id)}"><span><b>${esc(s.l.name || "Sans nom")}</b><br>Phases de ta liste active · ${esc(F.en)}</span><span class="banner-go">Modifier</span></a>`
@@ -832,13 +836,13 @@
     if (F) {
       const ids = Object.keys(C), U = F.units.filter(u => !ids.includes(u.id) && !u.with);
       h += collBar(collStats(collFac)) + `<label class="lbl" for="coll-add">Ajouter une unité</label>
-        <select id="coll-add"><option value="">Choisir…</option>${U.map(u => `<option value="${esc(u.id)}">${esc(u.en)}${u.size > 1 ? ` (${u.size} fig.)` : ""}</option>`).join("")}</select>`;
+        <select id="coll-add"><option value="">Choisir…</option>${U.map(u => `<option value="${esc(u.id)}">${esc(nm(u))}${u.size > 1 ? ` (${u.size} fig.)` : ""}</option>`).join("")}</select>`;
     }
     h += `</div></div>`;
     if (F) {
       const rows = Object.entries(C).map(([id, c]) => [UF(F, id), c]).filter(([u]) => u).sort((x, y) => x[0].en.localeCompare(y[0].en));
       h += rows.length ? `<div class="panel"><h3 class="sec"><span>Unités</span><span class="sec-r">${rows.length}</span></h3><div class="body">${rows.map(([u, c]) => `
-        <div class="cunit"><div class="cun"><b>${esc(u.en)}</b><button type="button" class="del" data-cdel="${esc(u.id)}" aria-label="Retirer ${esc(u.en)}">${ICON_X}</button></div>
+        <div class="cunit"><div class="cun"><b>${esc(nm(u))}</b><button type="button" class="del" data-cdel="${esc(u.id)}" aria-label="Retirer ${esc(nm(u))}">${ICON_X}</button></div>
           <div class="cnum">${["À peindre","En cours","Peintes"].map((lab, k) => `<div class="cst"><span>${lab}</span><div class="cstep"><button type="button" data-cu="${esc(u.id)}" data-ck="${k}" data-cd="-1" aria-label="${lab} : moins"${c[k] ? "" : " disabled"}>−</button><input type="number" min="0" inputmode="numeric" value="${c[k]}" data-cu="${esc(u.id)}" data-ck="${k}" aria-label="${lab}"><button type="button" data-cu="${esc(u.id)}" data-ck="${k}" data-cd="1" aria-label="${lab} : plus">+</button></div></div>`).join("")}</div>
           <div class="cbar sm"><span class="cp" style="width:${cSum(c) ? Math.round(c[2] * 100 / cSum(c)) : 0}%"></span><span class="ce" style="width:${cSum(c) ? Math.round(c[1] * 100 / cSum(c)) : 0}%"></span><span class="ca" style="width:${cSum(c) ? 100 - Math.round(c[2] * 100 / cSum(c)) - Math.round(c[1] * 100 / cSum(c)) : 0}%"></span></div></div>`).join("")}</div></div>`
         : `<p class="hint">Ajoute tes unités : elles arrivent « à peindre » avec leur nombre de figurines, puis répartis-les entre à peindre, en cours et peintes.</p>`;
@@ -878,7 +882,7 @@
     else if (view === "phases") renderPhases();
     else if (view === "coll") { renderColl(); $("title").textContent = "Collection"; }
     else if (group) { showGroup(hash); $("title").textContent = GROUPS[hash]; }
-    else { showUnit(F, unit); $("title").textContent = unit.en; }
+    else { showUnit(F, unit); $("title").textContent = nm(unit); }
     window.scrollTo(0, 0);
   }
   $("back").addEventListener("click", () => { location.hash = !$("view-coll").hidden ? "accueil" : $("view-edit").hidden ? "memo" : "listes"; });

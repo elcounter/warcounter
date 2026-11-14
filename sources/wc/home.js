@@ -79,6 +79,10 @@
     .concat(CORE.adv.map((c, k) => ({id:"avancees-" + k, en:c.name, sub:"Règles avancées · " + c.sections.length + " sections", core:c.sections, adv:true})));
   const ARMY = window.WC_ARMY;
   const FACDATA = window.WC_FAC || [];
+  // Noms français officiels connus (repris de SpearCounter)
+  const FRN = window.WC_FRN || {};
+  FACDATA.forEach(F => F.units.forEach(u => { u.fr = (FRN[F.id] || {})[u.id] || ""; }));
+  const nm = u => (u && (u.fr || u.en)) || "";
   const FIMG = window.WC_FIMG || {};
   const FACTIONS = [{id:"hashut", en:"Helsmiths of Hashut", ga:"Chaos", src:FIMG.hashut}]
     .concat(FACDATA.map(f => ({id:f.id, en:f.en, ga:{ogors:"Destruction", lumineth:"Ordre", skaven:"Chaos", cities:"Ordre", stormcast:"Ordre", slaves:"Chaos", soulblight:"Mort", daughters:"Ordre", fyreslayers:"Ordre", khazalite:"Ordre", idoneth:"Ordre", kharadron:"Ordre", seraphon:"Ordre", sylvaneth:"Ordre", khorne:"Chaos", tzeentch:"Chaos", nurgle:"Chaos", slaanesh:"Chaos", fec:"Mort", nighthaunt:"Mort", ossiarch:"Mort", gloomspite:"Destruction", ironjawz:"Destruction", kruleboyz:"Destruction", sons:"Destruction"}[f.id] || "Autres", src:FIMG[f.img], data:f})));
@@ -166,7 +170,7 @@
   function unitSheet(u){
     const s = u.stats, d = [[s.M,"Mouv."],[s.S,"Santé"],[s.C,"Contrôle"],[s.Sv,"Sauv.","sv"]];
     return `<div class="sheet usheet"><div class="statband"><div class="stats" style="--n:4">${d.map(([v,l,c]) => `<div><div class="disc${c ? " " + c : ""}">${esc(v)}</div><div class="l">${l}</div></div>`).join("")}</div>
-      <p class="unit-pts">${u.size} figurine${u.size > 1 ? "s" : ""} · ${u.pts ? u.pts + " pts" : /^rr-/.test(u.id) ? "régiment de renom uniquement" : "0 pt, prise avec son héros"}</p></div>
+      <p class="unit-pts">${u.size} figurine${u.size > 1 ? "s" : ""} · ${u.pts ? u.pts + " pts" : /^rr-/.test(u.id) ? "régiment de renom uniquement" : "0 pt, prise avec son héros"}</p>${u.fr ? `<p class="unit-en">Nom anglais : ${esc(u.en)}</p>` : ""}</div>
       ${wBlock(u.weapons.filter(w => w.range !== "Mêlée"), true)}${wBlock(u.weapons.filter(w => w.range === "Mêlée"), false)}
       ${u.abilities.length ? `<h3 class="sec">Aptitudes</h3><div class="abilities">${u.abilities.map(abCard).join("")}</div>` : ""}
       <h3 class="sec">Mots-clés</h3><div class="kw">Mots-clés : <b>${esc(u.kw)}</b></div></div>`;
@@ -219,7 +223,7 @@
         ? abCard({...i.abs[0], cost:i.pts ? "+" + i.pts + " pts" : i.abs[0].cost})
         : `${i.n !== "Battle Traits" ? `<h4 class="iname">${esc(i.n)}${i.pts ? ` · +${i.pts} pts` : ""}</h4>` : ""}${i.abs.map(abCard).join("")}`).join("")}</div></details>`;
     const heroes = F.units.filter(u => u.hero && !u.terrain), others = F.units.filter(u => !u.hero && !u.terrain), terr = F.units.filter(u => u.terrain);
-    const row = u => `<a class="urow" href="#regle-u-${F.id}~${u.id}"><span>${esc(u.en)}</span><b>${u.pts} pts</b></a>`;
+    const row = u => `<a class="urow" href="#regle-u-${F.id}~${u.id}"><span>${esc(nm(u))}</span><b>${u.pts} pts</b></a>`;
     return `<details class="fold" open><summary><span>Warscrolls <small>· ${F.units.length} unités</small></span></summary><div class="fold-body ulist">
         <h4 class="iname">Héros</h4>${heroes.map(row).join("")}<h4 class="iname">Unités</h4>${others.map(row).join("")}${terr.length ? `<h4 class="iname">Terrain de faction</h4>${terr.map(row).join("")}` : ""}</div></details>`
       + F.sections.map(sec).join("") + aorFold(F.id) + rorFold(F.id) + `<p class="hint">Données BSData, traduites en français.</p>`;
@@ -361,11 +365,11 @@
       add(F.en, "Faction · " + F.ga, "#regle-faction-" + F.id);
       if (F.soon) return;
       const units = F.data ? F.data.units : (ARMY ? ARMY.UNITS : []);
-      units.forEach(u => add(u.en, "Unité · " + F.en, F.data ? `#regle-u-${F.id}~${u.id}` : "#regle-faction-" + F.id, [u.kw]));
+      units.forEach(u => add(nm(u), "Unité · " + F.en, F.data ? `#regle-u-${F.id}~${u.id}` : "#regle-faction-" + F.id, [u.kw, u.en]));
       const abs = F.data ? F.data.sections.flatMap(sec => sec.items.flatMap(i => i.abs.map(a => [a, sec.title])))
         : ARMY ? [].concat(ARMY.BATTLE_TRAITS.map(a => [a, "Traits de bataille"]), ARMY.SPELLS.map(a => [a, "Sorts"]), ARMY.PRAYERS.map(a => [a, "Prières"])) : [];
       abs.forEach(([a, sec]) => add(a.n, `${sec} · ${F.en}`, "#regle-faction-" + F.id));
-      units.forEach(u => u.abilities.forEach(a => add(a.n, `Aptitude · ${u.en} (${F.en})`, F.data ? `#regle-u-${F.id}~${u.id}` : "#regle-faction-" + F.id)));
+      units.forEach(u => u.abilities.forEach(a => add(a.n, `Aptitude · ${nm(u)} (${F.en})`, F.data ? `#regle-u-${F.id}~${u.id}` : "#regle-faction-" + F.id)));
     });
     add("Régiments de renom", "Manuel du Général", "#regle-renom");
     AOR.forEach(a => { const fe = facEn(a.fac), h = "#regle-faction-" + a.fac; add(a.en, "Armée de renom · " + fe, h); a.bt.concat(...a.tables.map(t => t.items.flatMap(i => i.abs)), ...[a.spells, a.prayers, a.manifs].map(L => L.flatMap(i => i.abs))).forEach(x => add(x.n, `Aptitude · ${a.en} (armée de renom)`, h)); a.xunits.forEach(u => add(u.en, "Unité · armée de renom " + a.en, `#regle-u-ar~${u.id}`, [u.kw])); });
@@ -638,7 +642,7 @@
     const fac = h.startsWith("regle-faction-") ? FACTIONS.find(f => f.id === h.slice(14)) : null;
     let unitPage = null;
     if (h.startsWith("regle-u-")) { const [fid, ...rest] = h.slice(8).split("~"); const F = FACTIONS.find(f => f.id === fid); const U = fid === "ar" ? (AORU[rest.join("~")] || {}).u : fid === "rr" ? RORU.find(u => u.id === rest.join("~")) : F && F.data && F.data.units.find(u => u.id === rest.join("~")); if (U) unitPage = {F, U}; }
-    const rule = unitPage ? {en:unitPage.U.en, unit:true} : fac ? {en:fac.en, fac:true} : h === "regle-renom" ? {en:"Régiments de renom", renom:true} : h === "regle-manifestations" ? {en:"Manifestations génériques", manif:true} : h.startsWith("regle-") ? RULES.find(r => r.id === h.slice(6)) : null;
+    const rule = unitPage ? {en:nm(unitPage.U), unit:true} : fac ? {en:fac.en, fac:true} : h === "regle-renom" ? {en:"Régiments de renom", renom:true} : h === "regle-manifestations" ? {en:"Manifestations génériques", manif:true} : h.startsWith("regle-") ? RULES.find(r => r.id === h.slice(6)) : null;
     if (!(h === "" || h === "accueil" || h === "regles" || h === "installer" || h === "soutenir" || h === "avenir" || h === "compte" || h === "confidentialite" || h === "carte" || rule)) return;
     $("home-back").hidden = !rule && h !== "installer" && h !== "soutenir" && h !== "avenir" && h !== "compte" && h !== "confidentialite" && h !== "carte" && h !== "regles";
     if (rule) {
