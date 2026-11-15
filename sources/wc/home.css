@@ -149,3 +149,10 @@
 html[data-theme="dark"] #app-home .map-total b{color:#e9c96b}
 #app-home .acc-warn{color:#c62828;font-weight:700}
 html[data-theme="dark"] #app-home .acc-warn{color:#ff7b72}
+
+/* Boutons Découvre SpearCounter / NecroCounter : charte commune */
+#app-home .home-extra .sc-btn,#app-home .home-extra .sc-btn.nc{background:linear-gradient(180deg,#7a3b22,#5a2a17);border:1px solid #d3bfad;color:#f1eadf;box-shadow:0 2px 8px rgba(46,42,38,.25)}
+#app-home .home-extra .sc-btn:active,#app-home .home-extra .sc-btn.nc:active{background:#5a2a17}
+#app-home .home-extra .sc-btn b,#app-home .home-extra .sc-btn.nc b{color:#f1eadf;font-family:var(--display)}
+#app-home .home-extra .sc-btn small{color:#e3d6c9;opacity:1}
+#app-home .home-extra .sc-btn svg{width:40px;height:40px}

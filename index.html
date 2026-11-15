@@ -647,6 +647,13 @@ html[data-theme="dark"] #app-home .map-total b{color:#e9c96b}
 #app-home .acc-warn{color:#c62828;font-weight:700}
 html[data-theme="dark"] #app-home .acc-warn{color:#ff7b72}
 
+/* Boutons Découvre SpearCounter / NecroCounter : charte commune */
+#app-home .home-extra .sc-btn,#app-home .home-extra .sc-btn.nc{background:linear-gradient(180deg,#7a3b22,#5a2a17);border:1px solid #d3bfad;color:#f1eadf;box-shadow:0 2px 8px rgba(46,42,38,.25)}
+#app-home .home-extra .sc-btn:active,#app-home .home-extra .sc-btn.nc:active{background:#5a2a17}
+#app-home .home-extra .sc-btn b,#app-home .home-extra .sc-btn.nc b{color:#f1eadf;font-family:var(--display)}
+#app-home .home-extra .sc-btn small{color:#e3d6c9;opacity:1}
+#app-home .home-extra .sc-btn svg{width:40px;height:40px}
+
 :root{--bar:#7a3b22;--bar-dk:#5a2a17;--bar-ink:#f1eadf;--khaki:#d3bfad;--olive:#8e3420;--olive-dk:#5a2a17;--gold:#d3bfad;--gold-dk:#8e3420;
 --page:#dcd7cd;--card:#f2efe9;--colhead:#d3bfad;--namebar:#4a3a30;--soft:#e3d6c9;--ink:#2e2a26;--muted:#6b6259;--line:#b6ab9c;--disc:#2e2a26;--rim:#b6ab9c;--bad:#a3341f;
 --body:"Source Sans 3","Segoe UI",Arial,sans-serif;--navh:calc(58px + env(safe-area-inset-bottom,0px))}
@@ -754,7 +761,7 @@ html[data-theme="dark"] .bar a,html[data-theme="dark"] .btn-install,html[data-th
 .back-game b{margin-left:auto;font:700 16px var(--display);letter-spacing:.04em;color:#e9c96b}
 body.has-back-game #app-army main{padding-bottom:calc(var(--navh) + 90px)}
 .unit-en{margin:2px 0 0;text-align:center;font:italic 13px var(--body);color:var(--muted)}
-.copy .theme-btn,.theme-btn{cursor:pointer;display:inline-flex;align-items:center;gap:6px;margin:0 0 6px;padding:5px 12px;border:1px solid #d6cfc3;border-radius:999px;background:#fff;color:var(--bar);font:600 12px var(--body);vertical-align:top}
+.copy .theme-btn,.theme-btn{cursor:pointer;display:inline-flex;align-items:center;gap:6px;margin:0 0 6px;padding:5px 12px;border:1px solid #b6ab9c;border-radius:999px;background:#f2efe9;color:#8e3420;font:600 12px var(--body);vertical-align:top}
 html[data-theme="dark"] .copy .sup-link,html[data-theme="dark"] .theme-btn{background:#2e2823;border-color:#5a4a3c;color:#e0a27e}
 .theme-btn svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round}
 html[data-theme="dark"] #app-army .unit-link.has-photo{background:linear-gradient(to top, rgba(0,0,0,.9) 0%, rgba(0,0,0,.55) 35%, rgba(0,0,0,0) 70%), var(--img) center 30%/cover no-repeat, #2e2823}
@@ -834,12 +841,12 @@ html[data-theme="dark"] #app-home #map-fac{border:1px solid #4a4038;background:#
   <section id="view-memo"><div id="memo-banner"></div><div class="list" id="list"></div></section>
   <section id="view-unit" hidden><div class="sheet" id="unit"></div></section>
   <section id="view-phases" hidden><div id="phase-banner"></div><div class="phases" id="phases"></div></section>
-  <p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.26.5 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p>
+  <p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.26.6 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p>
 </main>
 </div>
 <div id="app-home">
 <header class="bar"><div class="in top"><button class="back" id="home-back" type="button" aria-label="Retour" hidden><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><h1 id="home-title">WarCounter</h1><a class="hm hm-col" href="#collection" aria-label="Collection"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 3l3 3-9 9-3-3z"/><path d="M9 12l-4 1-2 7 7-2 1-4"/></svg></a><a class="hm hm-map" href="#carte" aria-label="Carte des joueurs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></a><a class="hm hm-acc" href="#compte" aria-label="Mon compte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></a><a class="hm" href="#accueil" aria-label="Accueil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></a></div></header>
-<main class="in"><div id="home-view"></div><p class="copy"><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.26.5 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p></main>
+<main class="in"><div id="home-view"></div><p class="copy"><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.26.6 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p></main>
 </div>
 <div id="app-bs" hidden>
 
@@ -855,7 +862,7 @@ html[data-theme="dark"] #app-home #map-fac{border:1px solid #4a4038;background:#
   </div>
 </header>
 
-<main class="in"><div class="stack" id="view"></div><p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.26.5 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p></main>
+<main class="in"><div class="stack" id="view"></div><p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.26.6 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p></main>
 
 <footer class="foot" id="foot" hidden>
   <div class="in">
@@ -877,7 +884,7 @@ html[data-theme="dark"] #app-home #map-fac{border:1px solid #4a4038;background:#
   <a href="#parties" id="nav-parties"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1.2" fill="currentColor"/><circle cx="15" cy="15" r="1.2" fill="currentColor"/><circle cx="15" cy="9" r="1.2" fill="currentColor"/><circle cx="9" cy="15" r="1.2" fill="currentColor"/></svg><span>Parties</span></a>
 </div></nav>
 <script>
-window.WC_VERSION = "2.26.5";
+window.WC_VERSION = "2.26.6";
 window.WC_PHOTO = {}
 ;
 window.WC_FRN = {
@@ -5300,8 +5307,8 @@ window.WC_FIMG = {};
       <div class="feat">${FEATURES.map(([id, n, d, svg]) => `<a class="fcard" href="#${id}"><span class="ficon">${I(svg)}</span><span><b>${n}</b><br>${d}</span></a>`).join("")}</div>
       <div class="home-extra">
         <div class="feat">${EXTRA.map(([href, n, d, svg]) => `<a class="fcard" href="${href}"><span class="ficon">${I(svg)}</span><span><b>${n}</b><br>${d}</span></a>`).join("")}</div>
-        <a class="sc-btn" href="https://elcounter.github.io/spearhead/" target="_blank" rel="noopener"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#4e170f"/><text x="32" y="44" text-anchor="middle" font-family="Oswald,'Arial Narrow',sans-serif" font-weight="700" font-size="38" fill="#f3ead8">S</text><rect x="20" y="49" width="24" height="3" fill="#d4ae3f"/></svg><span><b>Découvre SpearCounter</b><small>Ton compagnon pour Spearhead.</small></span></a>
-        <a class="sc-btn nc" href="https://elcounter.github.io/necrocounter/" target="_blank" rel="noopener"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#141414"/><circle cx="32" cy="32" r="26" fill="none" stroke="#f0a028" stroke-width="2.5"/><path d="M22 45V19h4l12 18V19h4v26h-4L26 27v18z" fill="#f0a028"/></svg><span><b>Découvre NecroCounter</b><small>Ton compagnon pour Necromunda.</small></span></a>
+        <a class="sc-btn" href="https://elcounter.github.io/spearhead/" target="_blank" rel="noopener"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#4a2214"/><text x="32" y="43" text-anchor="middle" font-family="Oswald,'Arial Narrow',sans-serif" font-weight="700" font-size="36" fill="#f1eadf">S</text><rect x="21" y="49" width="22" height="3.5" fill="#d3bfad"/></svg><span><b>Découvre SpearCounter</b><small>Ton compagnon pour Spearhead.</small></span></a>
+        <a class="sc-btn nc" href="https://elcounter.github.io/necrocounter/" target="_blank" rel="noopener"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#4a2214"/><path fill="#f1eadf" transform="translate(23.5 13) scale(.105)" d="M10 266V10h48l43 128V10h48v256h-38l-53-132v132z"/><rect x="21" y="49" width="22" height="3.5" fill="#d3bfad"/></svg><span><b>Découvre NecroCounter</b><small>Ton compagnon pour Necromunda.</small></span></a>
       </div>`;
   }
   const STANDALONE = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
