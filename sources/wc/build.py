@@ -1,7 +1,7 @@
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs('build-check', exist_ok=True)
-VERSION='2.26.7'
+VERSION='2.26.8'
 MAJ='15-11-2026'
 LEGAL='<span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span>'
 THEME_BTN='<button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button>'
@@ -333,7 +333,7 @@ html='''<title>WarCounter</title>
 <meta name="theme-color" content="#5a2a17" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#3a1c10" media="(prefers-color-scheme: dark)">
 <script>try{if(localStorage.getItem("wc-theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
-<style>#boot{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#6a321d;transition:opacity .25s}#boot.out{opacity:0;pointer-events:none}#boot .bw{display:flex;flex-direction:column;align-items:center}#boot i{display:block;width:96px;height:11px;margin-top:44px;background:#d3bfad}#boot svg{display:block;width:118px;height:148px;animation:bootspin 1.2s linear infinite}@keyframes bootspin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){#boot svg{animation-duration:3s}}</style>
+<style>#boot{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#6a321d;transition:opacity .25s}#boot.out{opacity:0;pointer-events:none}#boot .bw{display:flex;flex-direction:column;align-items:center}#boot i{display:block;width:96px;height:11px;margin-top:44px;background:#d3bfad}#boot svg{display:block;width:118px;height:148px;animation:bootspin 1.8s linear infinite}@keyframes bootspin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){#boot svg{animation-duration:3s}}</style>
 <div id="boot" aria-hidden="true"><div class="bw"><svg viewBox="0 0 118 148" width="118" height="148"><path fill="#f1eadf" d="M0 0h27l11 98 12-98h18l12 98 11-98h27l-21 148H70L59 60 48 148H21z"/></svg><i></i></div></div>
 <script>addEventListener("load",function(){setTimeout(function(){var b=document.getElementById("boot");if(!b)return;b.classList.add("out");setTimeout(function(){b.remove()},300)},1400)});</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
