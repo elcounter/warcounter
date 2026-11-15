@@ -9,12 +9,12 @@
 <meta name="apple-mobile-web-app-title" content="WarCounter">
 <title>WarCounter</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="theme-color" content="#6b2119">
+<meta name="theme-color" content="#5a2a17">
 <script>try{if(localStorage.getItem("wc-theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
 <style>#boot{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#6b2119;transition:opacity .25s}#boot.out{opacity:0;pointer-events:none}#boot img{width:240px;height:240px;border-radius:50%;animation:bootspin 1.2s linear infinite}@keyframes bootspin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){#boot img{animation-duration:3s}}</style>
 <div id="boot" aria-hidden="true"><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAIAAADTED8xAAAWmUlEQVR42u2dSW8ry3XH69Sp7qZESpxEarjPMRwgSLxNssouCRADWRpINnEWDrII4ADZZ5V1vkCAfBN/gWwyA5kH2PF7EqfmLIk9VNXJoqVrPYkim5R4fQH/f3irB6kvQdWvq+qcU6foB9+6VAD8vKLxFQAIAAAEAAACAAABAIAAAEAAACAAABAAAAgAAAQAAAIAAAEAgAAAQAAAIAAAEAAACAAABAAAAgAAAQCAAABAAAAgAAAQAAAIAAAEAAACAAABAIAAAEAAACAAABAAAAgAAAQAAAIAAAEAgAAAQAAAIAAAEAAACAAABAAAAgAAAQCAAABAAAAgAAAQAAAIAAAEAAACAAgAAAQAAAIAAAEAgAAAQAAAIAAAEAAACAAABAAAAgAAAQCAAABAAAAgAAAQAAAIAAAEAAACAAABAIAAAEAAACAAABAAAAgAAAQAAAIA8LPC4CtYCxEpovI/L96XeaYotfahxf8XpZTIp/9gEAA8x2aZd16VHmkmDGnjuBTvfYnBTVpv/gmXW2dt+Q8WhOFOwkAAoJSozre+eXRy4p2jEqNHREY//r88zV79YZGgUjFBIOpVB0iRczZP0g16OGvr5536eddZu/WDkSIvfvC/PyrzwxAA/HScZavVb//RH/7G7333bj7XzJtVIVJe5K/++E9/9A//HB4fvVxyEFGeZb//F3/+q7/7O6vlUmteJ4gPKpUv//U//vpP/sw7p7R+uRYiomyV/Ob3v/db3//e7XS27YMJG3M3m/3ld//gfr4gY7YuriAAUEop0jrL0llvYMKQNW8ZZ0qJSBQEJ+2Wd47oxRuelHgfRFHnm79QqVZfW+SIiAmC7re+aSpRcnvHas1M4UVMFNW7XaUU85YPJt6bMLifLfIk3bKsggDgxbtWL0Zjm2WiRLxXG1fc3jt9VKk2GuLdup8kLz4KgtN2M09T75x6ZVeai0THR43z7s3sv5l5vSShqTUbzlqllHjZ+KmESM/j2OY5EeH1rxAGLb0BEDa8nExslmmtFZEitek/pUwYVpt159aoQkqJc8fNerXZ8N7T6yiRIIqal5fOWqXppZTKezZBrVUX78t8Kja8GI1tmmIDAAF22gCL1rwYxTbP167F13LaOdO8buVC5KxrXV4GlUhENgRkvHNBJWqcd5x1tFYkEROGx/WG91JGYzJm2uvlaYYlEATYaQJQbHja6+dJorWWEgsmZ91pux1E4bodsPLO1bsdE4bi/GbzTBA0LrqvKEfeuXqnHR5VxDkq8am8tYvRWOHtDwF23gMwJ3f3t5NZmXcnKSXeV5tNDgKRdTOAsydnbRNFIhsF0OSsbX24epgrXvwzzrmTszMTBptnkoeHacrTbDmeMBuF9T8E2GkKICKX54t4rA2XWQKJc7VWwwTrhqYoZtO8uqASIjnrGufnQaUizj17cxMpcb7WfPxXti3jFJHNssUoJtYCAyDArqmAYvSw5jJLIO9dtVHnIHi5BCpW9s3Li7Ur+2fPEeca5x0TBF5e1kyQd67abHAQbq1uECVa6zxNp70+IwMAAfZJBSTptD9gY9S2HScp5b1Ex8fVZkOcp2djWiQIo3qn45xbE9t5NgM4V202aq2Gf2WVf9JuMXOZFzox303nye1dqW0MBAAvF0KLwdB5t30TSVRkneqdtvPuxRJITBjUu2feuTLPCSpR+8MH/6J4QURMFDyIRCUiuczL8djluSJSWAJBgH1SAeOJLRlDFOEgqDaaz2qHSCln7Wn3rHJSKxO6ERETRvXzjrfPRRLvTRDVzpr+pWNrtwCsl/E4L1IZGP8QYMdUgKIiFZBlpLfHEb2ICYJqsy5OnpevOde8vDBhWCZ0I84HUVjvdp7PPETqMQ0sztPWKcALGzPtD/IkLfP5IQBYMwNMBwObppq258LEiwlMtVH3/uvVo0RiXb1zFkRRqbp8UuJ9+8MHE4bPKh1EhI2pNhq+1KpMich8MPRFzhhAgJ1nAOb72fxuviDeHggiUiJy2u2wMc9ilM65086ZCQMvZeJJ5K1rXp2HUeWpMKSU975Sqx2fnmzJpj1u4u1DEoARAoIAe30vRDa3y/FEc4lqCCLn3OlZ20ShfzJwRcREYevqSryncvFX52z9vPM820XkrKt3OyYKvQiVCuPmy7j48PhjQoA9yiG0tlm2jGPNvDWRVLyhiyzVU1vE+zCK6pddZ13JijRn/Um7XalV5UnUiEiJd7VWyxRJgM2PEiGiPEtng4FmI5gBIMA+34vWeZJOe8NypQQkzlUbDVPkwooBSlSUr9U7HSkRunmsqnDR0VH7w9XXj3FRkQbmrwu2Yf2WLG+X8UQbxvCHAHtByjk7Gwyk3A+Lk+PGaVEORE9mgKBSOWm33NYkwJPEmYmi+sX5s1yYc67arD8sjbbBzMvxxOa5xg4YAuy9EWbmZTyx6fYTVaSU9y46Pj5ptz4epS+SAM3L8+j4+HmGeONJriCKTjtnzj7NHItmPu2cla1lYr2MxzbLFI7CQIB9dwFCzIt4bLNs+/K9eHMHwWmn7d3DuTDS5J1rXJwHUakkwE8PGWtqXV7QkwSWePmpFVuTCSLMZjYc5WmqGX9fCLB3KoDNbDB4EGDryrtIBjcb4j4WvZGzRWgo8iWXQEqRJpfb9jc+FHX/T08M11pN8Y7KPWTW69ssRxIAAuwPG17G4+T2rkwqoBij1Ub9a0lckcZF1wS7VOQXkdDuWRCFvpg3iMQLh6bWbHhXJptGNs+X8aRk2RwEAOtjKYrIZvkiHvO2xhBKPVQfVBsN8VIIIF6CStS6uiqzbnlWEHHa7QRRVOynSSkRb0xQbTTKZHY1aZvmi/G4TAAXQIBN0XSb5cvxhErlwpQXX+92HlIBRCI+iKJ6t+OsLT/+SSnv3FGt1ri48Ll9DDH5WrsVHh9tXwKJEJPN0sVwRMzKQwAIsPdXwzpP0/lwxGXSSUTeuZN2kQwWeqjeCU47ZyWTAF87QhCFzauLx/YQVNRTBEEofstmWpQi0tlqNRsMGTtgCKDedjDMZtm01ytTUElPD0Z6X5wFOzqtFadbdvpnvXMmqhSl/0UjXPGu1mpw+STAZJatkjJbFwABSqQC8hLhFCLvpNqoF0cQSevihHt4dOSd0E69GUSxMY2L7sNBFiL3Mc28/TTwYxIA/bAgwDs0CCpSAWmuSZfYBrvjev1jTwf52A1F/G69STR5Z8++8SGMKiJCROKl2mjoYPv5TBGl2Szj2KYZ+mFBgLfhhVjPhyObpcRb3qZUHGc5qpycnTnntNZFEmBts6AS7SFs/eI8qETivIg3Ydi46EqZdu0ibPS0N8hTtASFAG+G2cz7w+x+RaSlVDLYnLRbRQKLtG5entMeJxKJxPlGp2gB5MWLCYOTdts5W2Yl5qybD0fohwUB3uVYjM6SZDmZ8tq2h+tyYbVmwzvx4sNK1Lx6pdFniRnguFGvtVveuaKktNZsiN9+EkBrsmm2HI+Z0Q0FArxLKiDPl/GYSmRVxXsOwmqj7r1VokwU1btnYl+N3L+6Ri8ioZWo9eHKWVfkpGvNhrht4VT5afKOGN1QIIB6jw5ZaTofxcx6+/tUlDZcazUfmzgEp2dna5s4iFKk9Wp56+z6VU1R/dbodryzSiQ6Pj5unG4NpxZtffM0nfYG6IcFAd6nQ1aeZrNer9QNK/QQ+QnC0Nn8pNU8rp+6tTOACBvz5b/8e3p3r9dfBeBNGJ52O+LFOV/vdsxjZcS2flj6bj5PFkv0w4IA73YyZj4ae2vLpQJ8rdU0UWQz27y6LOp5Xv5iUe/wo3/8J2etpvU3Q4r37S+uTBR5a0/azYd+idsOQ3KRBLDohwUB3i0XZpbjsU1TranMsZhqs2nC0Fl72u2Y4iTAur2qd+76v/7nfr6gde1Hi/vwmpeX4VHF2bzabJkgUCVagtJj4oLQDwsCvFMuTC9G47yord+8CipmgGbdBMbZ/KEd0MsCZhFNZLN89OOfvFppR+Sdb5x3TBja3Fab9VJ1EF6xMbP+IEsSjSQABHiXQJA2Ztrr50mqS8RVxLnj+mlQqWjm1tWliLyMxxeH1lfL5fj6Zj4cMfPake2tO2m3KrWqEjltt6lEKrrohzUbDEs1zwIQoEwqQGte3d7ezWakeXs9nIiJopOzNhtTlHOuiXWKMOtFPE6Wy8lX12tvTSVFXlx4dNS6utTM9fOud1ZtG9RFP6zb8RRHYSDA+zUIInK5fTgWs20J9JALa9TZmHqnI86vj4EyzwdDm7t50X70pSSkxEkQhfXuGWl90m6J8yU24WSzbBHH9MqsAiDAHg2CyKbZshhV23s6iAmCo3qdjTnttos01pp8mTGT6xtv88UoztJ07fJGxJuocnp2Rppqrabz2wqBHk7wZLP+EGlgCKDe9bKMZHozYMMlijG9icKjWvWkc1ap1UTWJAGIyDs/uelrw/GXX+Wr5LUTZ0SqeXURVirVZl2c27wEeuiHdXu3HJc7wwkgQPmF0Gw4FF+mqlk0c7Veb16cmzAUtyZyr7W2aboYxSaMbsfTu9mM180tpMhZ17joNi7Ow8pRme6izHoxHtssV5rw/ocA7zb8mfk2npa7LIPEu1q72fpwZcLAi1/fuDPNZv2BCQKbZbPBkNbuLjSJdyftdvuLKw5MmSwYMd/GE5vnpHEUBgK84zaYuXizbj1iUixvqo1G+8PV2mqcYqGS3t9PrnsmDNJVUtxEtj4S6txJu1UEgko1JmIzH47yJC1zfAcUGHwFpS7LuOnlaRoUzao2auCsbZx3xXtn7dqTkEXjzvT+no1Z3d7GX361thyIlBIv4dHRF9/+FU3ayfZSUK31pDewWaZ0TXn85SDA+12WcTeb3y+WrVo133zVF+niMBcZtnm+Zn4VIeb5cGSznANDpGf9gcvXRkKpuBXmi2//crGm39oPqKjcZtwJgCXQAS7LyJfjMW0bW0RFBrfZ+cYXLrfqxVJEivmkN8jShIi04Xl/lCUprS+KduHR0cUv/aJfm1BbkwVLl+iHBQEOc1lGvojHWm8fW8Vr+7h++lrchrSe3NwU+S9mM76+sWm6dh8sojTrsFIp0wxCE+V5vhjG6IcFAQ5wWUaazAdDNmWv3HptyBbd5ubDEWv24ov2o3ezOb+eZSuT0xWlSFO2Ws0GAzZY1kIA9c4Hw1xuZ73B25stk9Z5mi6GMRlW/qF4YTYYluq+uOUojLmdTNNVQoQkAAQ4QCBoMR6/tdlOUa2QptObHrMR8cScJcmsiIS+ZeEuolkv44nLi5MAUAACvO9lGZqLi9ff0mxHlNLM94vlYjwu1jxElCfp+KtrNuYtgUsRxcyLOM7TFP2wIMBBZoDZYFjysoyN72kzHw5tmqvHzrVENL0ZvPUyCxFmg35YEOBwnaJ5PoyTu7u3dJwVpbTR80Fss1QXIomwMbPhME9TzfSmXYpzi+EI8U8IcJhcmNY2y2/Hkzf1HH8shM5WSdFxWkS04en1TZ4kRPsnsEiTzdLlZFI+TgUgwK4dsrJFPCb9hhFG5J2f9vsiD4ldUYqNmQ1H94vlWxJYpMlm+WIUoyU6BFAHOhVg03Q+GLHZ/7AVPRZCs3lya1iRGdglybAuC4Z+WBDgsAJQnmbTm57eu91IkazNsll/qJmlCPqIaOY8SWb9gWYjb+hhej9f3M8X6IcFAQ61D9CsF+OJzfNdm90+LarLVqtpr8/GfHxNE1GWJPGX19qYPUsYiiTAeOLKdO8CEEDt1yBI8+14Yt+QCtCsH+9dffYEmvb6ztr9epkUF3ks4/jhs2EJBAHUAS7LYMPzwSjPcr1fKqBIAoziF5cXCRueD0d5muj9zvKKYjbT/jBPUvTDggAH+6YMzwaDIoIpe6WT2fC018+T5Omte+KliI3aoih6r/e3kJr1B3vPIRAAlFjBE6er1e1kQmz2TiZMrm+enS0WpbQxs/7wfrncL4hJRC5Lb8dFEgB/KwhwoFSAJpvZ5ag4ciX7nKrJ8vkw1i/atpEmm2XzwWi/jm5FD/fFeEIa/bAggDrwZRlxrNnInsM0nReF0E9/X0STztN01h9o8xge3f1G+1l/iDQwBDj0ZRnprDdgs/sM8LwQWp49OV0l+9WEfuyHtRjFGv2wIMDBL8sYjpx1u4bbi2F6v1wu4pjN+oX+5Kbv3T5dnZn17Xhi84yQBYMAhy2KZrMcT2ya6V1zYaKYeT4YvVL2/BgJTdKd3+IipHkRP7YtwhIIAhz01tRFHNssU0Q77VZFiTY8H45smmp6voISL8xmct3Li0a5uwziIrq6GI0sTgJAgMMfi3k4dKK13q1y82khNK9pmK4DM+33V8sl8Y5JBlFa87TXL9O4DkCAN16WoVeL5d1sTrsuVIjE+1lv8LEQek2IKUnnw5h3TTJosnm+iCf7VSgBCLCLAkQuz0tdlrG2GUQcry9XLgpF0+whErrTk4lsli3jidaIgUKAQxeEap1n2XLXe9g/ju/B8LWLxopC0SISKt7v8mRts2wxGrFBQzgIoA5/KiBJi37O5UuXRSnSnK1Wk+vea42gi+3s9KbvnS+/lC/25dkqmfaHvFd6DkCA3Zfy/cHa6x83F9Itx5Pk9m7D5oGNeawJ1bv0w9K301l2f0+MPQAE+AQVQcy3k5KXZXztwMp8+LIQ+tnFYTy56dkk3aGmX0RrXo6LJ+MkAAT4FBfH6+VovP5qx43tcmf9QZ682rVKlNImmN70k7s7TWU3GKIUMy92/DwAAuzfIk4bMx0M8nS3Dlmk9fT6xmabclWkKUuS+XBEhndKL0x7/SxBFgwCfJpUAPPteLJaFl1Mykcq89lgtGmMPkSK0ll/tMMlp0TOu8UwxuIHAnzKyzLscjwuVupbebwVL52PRnpjz5IiUhR/9RUb9t6XePbDfXvoh6VwRdKn7JCVp+nteBpEkcty2hqxESHWNs2mN33efIE7KfF+1uuT1mxMqao4UuLcIp6QRj8sCPCpbsuwWT76yZfp3d39YrF1mIoIB8FiNFqMRmw2dv4R4SAY3/Tmw7jUplaEDGer1fSmhxlgb+gH37rEt7DrVjgIQxOFJWsWSJH3LlslJbfL4VFlhwMK4tP7Ff4omAE+6dnIPMuyJNnpd0o2LBHnVovlrp2r8UeBAJ/aAW3M9qtLi2oFpaS4xKLco3e65GuHJwMI8L4LoYfxV2aM7v5kgDAoABAAAAgAAAQAAAIAAAEAgAAAKOQBfibVQJ/v0RPvkUOAAOqwZwJWt/nnmaoiUtGRwR0ZEOCA2V82+te+82GfBtGHH/7O+n/7m6GzHscjIcDBzgQH+te/8yE6NvKZLTZIU3pv//NvY5d7TAIQ4LBLIOfkMxQgW1m0xoIAn2ITrPe6J+/QAmi0B0UYFADMAOrQoUbvP78lEGKgEODTDLSjWvB5boKZCdtfCHDY0e9y/3c/vP5sw6AIAUGAw56E9Fb+/ofXn3MiDEkACHDwJRBKISDAz/UmGF+CQhgUAAgAAAQAAAIAAAEAgAAAQAAAIAAAEAAACAAABAAAAgAAAQCAAABAAAAgAAAQAAAIAAAEAAACAAABAIAAAEAAACAAABAAAAgAAAQAAAIAAAEAgAAAQAAAIAAAEAAACAAABAAAAgAAAQCAAABAAAAgAAAQAEAAACAAABAAAAgAAAQAAAIAAAEAgAAAQAAAIAAAEAAACAAABAAAAgAAAQCAAABAAAAgAAAQAAAIAAAEAAACAAABAIAAAHwW/D9pC073ZgVjogAAAABJRU5ErkJggg=="></div>
 <script>addEventListener("load",function(){setTimeout(function(){var b=document.getElementById("boot");if(!b)return;b.classList.add("out");setTimeout(function(){b.remove()},300)},1400)});</script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Bitter:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
 <style>
 :root{
   color-scheme: light;
@@ -646,6 +646,97 @@ html[data-theme="dark"] #app-home .map-total b{color:#e9c96b}
 #app-home .acc-warn{color:#c62828;font-weight:700}
 html[data-theme="dark"] #app-home .acc-warn{color:#ff7b72}
 
+:root{--bar:#7a3b22;--bar-dk:#5a2a17;--bar-ink:#f1eadf;--khaki:#d3bfad;--olive:#8e3420;--olive-dk:#5a2a17;--gold:#d3bfad;--gold-dk:#8e3420;
+--page:#dcd7cd;--card:#f2efe9;--colhead:#d3bfad;--namebar:#4a3a30;--soft:#e3d6c9;--ink:#2e2a26;--muted:#6b6259;--line:#b6ab9c;--disc:#2e2a26;--rim:#b6ab9c;--bad:#a3341f;
+--body:"Source Sans 3","Segoe UI",Arial,sans-serif;--navh:calc(58px + env(safe-area-inset-bottom,0px))}
+body{font-size:16px;line-height:1.45;background-color:#dcd7cd;background-image:radial-gradient(ellipse at 20% 0%,rgba(255,255,255,.45),transparent 55%),radial-gradient(ellipse at 90% 60%,rgba(255,255,255,.25),transparent 50%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .25 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-attachment:fixed}
+.bar{background:linear-gradient(180deg,#7a3b22,#5a2a17);color:#f1eadf;border-bottom:3px solid #d3bfad;box-shadow:0 2px 8px rgba(46,42,38,.3)}
+.bnav{height:var(--navh)}
+.bar h1,.sec,.btn,.lbl,.bnav a span,.panel h2,.mtitle,h1,h2,h3{letter-spacing:.05em}
+a{color:#8e3420}
+#boot{background:linear-gradient(180deg,#7a3b22,#5a2a17)!important}
+/* Fiches : bandeaux brun foncé, pastilles carrées */
+:root{--ph-hero:#4a3a30;--ph-shoot:#4a3a30;--ph-fight:#4a3a30;--ph-charge:#4a3a30;--ph-passive:#4a3a30;--ph-end:#4a3a30;--ph-defense:#4a3a30;--ph-move:#4a3a30;--save:#4a3a30}
+#app-army .disc,#app-home .disc,#app-army .disc.sv,#app-home .disc.sv,#app-army .disc.wd,#app-home .disc.wd{border-radius:12px;background:#2e2a26;border:2px solid #d3bfad;box-shadow:0 1px 3px rgba(46,42,38,.35);color:#f1eadf}
+#app-army .disc.sv,#app-home .disc.sv{background:#5a2a17}
+#app-army .disc.wd,#app-home .disc.wd{background:#8e3420}
+#app-army .statband,#app-home .statband{background:linear-gradient(180deg,#e3d6c9,#d3bfad);color:#2e2a26}
+#app-army .statband .l,#app-home .statband .l,#app-army .statband .unit-pts,#app-home .statband .unit-pts{color:#2e2a26}
+#app-army .statband .unit-en,#app-home .statband .unit-en{color:#6b6259}
+#app-army .tabs a[aria-current="page"]{color:#f1eadf}
+#app-army .unit-link.has-photo{background:linear-gradient(to top, rgba(0,0,0,.9) 0%, rgba(0,0,0,.55) 35%, rgba(0,0,0,0) 70%), var(--img) center 30%/cover no-repeat, #e3d6c9}
+#app-army .badge{color:#2e2a26}
+#app-army .disc.wd{background:radial-gradient(circle at 40% 35%, #b5463a, #7a3b22 70%)}
+#app-army .hero-photo{background:radial-gradient(ellipse at center, #ebe7df 0%, #e3d6c9 100%)}
+#app-army .ab-name{border-bottom:2px solid #b6ab9c}
+input[type=text],select{background:#ebe7df}
+#app-army .pick{background:#f2efe9}
+#app-army .pick[aria-pressed="true"]{color:#2e2a26}
+#app-army .btn{background:#f2efe9}
+#app-army .ent{background:#ebe7df}
+#app-army .ent-opts select{background-color:#f2efe9}
+#app-army .tag.gold{color:#2e2a26}
+#app-army .note{background:#f2efe9}
+#app-bs .btn{background:#f2efe9}
+#app-bs .btn.gold{color:#2e2a26}
+#app-bs .pick{background:#f2efe9}
+#app-bs .pick[aria-pressed="true"]{color:#2e2a26}
+#app-bs .stepper button{background:#f2efe9}
+#app-bs .tag.first{color:#2e2a26}
+#app-bs .chip{background:#f2efe9}
+#app-bs .box{background:#f2efe9}
+#app-bs .note{background:#f2efe9}
+#app-bs .missing{color:#a3341f}
+#app-bs .hist div{background:#f2efe9}
+#app-bs .rappel{background:var(--soft,#ebe7df)}
+#app-bs .foot .btn.ghost{color:#f1eadf}
+#app-home .tabs a[aria-current="page"]{color:#f1eadf}
+#app-home .unit-link.has-photo{background:linear-gradient(to top, rgba(0,0,0,.9) 0%, rgba(0,0,0,.55) 35%, rgba(0,0,0,0) 70%), var(--img) center 30%/cover no-repeat, #e3d6c9}
+#app-home .badge{color:#2e2a26}
+#app-home .disc.wd{background:radial-gradient(circle at 40% 35%, #b5463a, #7a3b22 70%)}
+#app-home .hero-photo{background:radial-gradient(ellipse at center, #ebe7df 0%, #e3d6c9 100%)}
+#app-home .ab-name{border-bottom:2px solid #b6ab9c}
+#app-home .pick{background:#f2efe9}
+#app-home .pick[aria-pressed="true"]{color:#2e2a26}
+#app-home .btn{background:#f2efe9}
+#app-home .ent{background:#ebe7df}
+#app-home .ent-opts select{background-color:#f2efe9}
+#app-home .tag.gold{color:#2e2a26}
+#app-home .note{background:#f2efe9}
+#app-army .cbar{background:#e3d6c9}
+#app-army .ctot{background:#ebe7df;border:1px solid #b6ab9c}
+#app-army .clab{color:var(--accent,#8e3420)}
+#app-army .csub{background:#7a3b22}
+#app-army .crow{border-top:1px solid #b6ab9c}
+#app-army .crow.on>span{color:var(--accent,#8e3420)}
+#app-army .cunit{border-top:1px solid #b6ab9c}
+#app-army .cstep{border:1px solid #b6ab9c;background:#f2efe9}
+#app-army .cstep button{background:#ebe7df;color:#8e3420}
+#app-army .cstep button:active{background:#e3d6c9}
+#app-army .cstep input{background:#f2efe9;color:var(--text,#2e2a26)}
+#app-army .mwar,#app-home .mwar{border-top:1px dashed var(--line,#b6ab9c)}
+#app-army .mwar>summary,#app-home .mwar>summary{color:var(--accent,#8e3420)}
+#app-army .imp-text{border:1px solid var(--line,#b6ab9c);background:#f2efe9}
+#app-army .msearch,#app-home .rsearch{background:#f2efe9}
+#app-army .unit-link:hover{background:#ebe7df}
+#app-army #list .unit-link.has-photo{background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.55) 35%,rgba(0,0,0,0) 70%),var(--img) center 30%/cover no-repeat,#e3d6c9}
+.bnav{background:#f2efe9;border-top:1px solid #b6ab9c}
+#app-home .fcard:hover{background:#ebe7df}
+#app-home .fold > summary b{color:#f1eadf}
+.copy .sup-link{border:1px solid #b6ab9c;background:#f2efe9}
+.home-extra .btn-link{border:1px solid #b6ab9c;background:#f2efe9;color:#8e3420}
+.home-extra .btn-link:active{background:#ebe7df}
+.home-extra .sc-btn{background:#7a3b22;border:1px solid #d3bfad}
+.home-extra .sc-btn b{color:#8e3420}
+.fld span{color:#4a423b}
+.fld select,.fld textarea{border:1px solid #b6ab9c;background:#f2efe9}
+#app-home .acc input{border:1px solid #b6ab9c}
+#app-home .acc .btn{border:2px solid #b6ab9c;background:#f2efe9}
+#app-home .pf-sug{border:1px solid #b6ab9c;background:#f2efe9}
+#app-home .pf-sug button{border-top:1px solid #b6ab9c;background:#f2efe9}
+#app-home .pf-vis{background:#ebe7df}
+#app-home .pf-fold summary{border:1px solid #b6ab9c}
+#app-home #map-fac{border:1px solid #b6ab9c;background:#f2efe9}
 html[data-theme="dark"]{color-scheme:dark;--page:#121212;--card:#1e1e1e;--colhead:#2c2c2c;--namebar:#2a2a2a;--soft:#262626;--ink:#ececec;--muted:#a8a8a8;--line:#3a3a3a;--khaki:#6f6340;--disc:#0c0c0c;--ph-passive:#3a3a3a}
 html[data-theme="dark"] body{background:var(--page);color:var(--ink)}
 html[data-theme="dark"] input,html[data-theme="dark"] select,html[data-theme="dark"] textarea{background:#262626;color:var(--ink);border-color:#444}
@@ -737,12 +828,12 @@ html[data-theme="dark"] #app-home #map-fac{border:1px solid #3a3a3a;background:#
   <section id="view-memo"><div id="memo-banner"></div><div class="list" id="list"></div></section>
   <section id="view-unit" hidden><div class="sheet" id="unit"></div></section>
   <section id="view-phases" hidden><div id="phase-banner"></div><div class="phases" id="phases"></div></section>
-  <p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.25.2 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p>
+  <p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.26.0 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p>
 </main>
 </div>
 <div id="app-home">
 <header class="bar"><div class="in top"><button class="back" id="home-back" type="button" aria-label="Retour" hidden><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><h1 id="home-title">WarCounter</h1><a class="hm hm-col" href="#collection" aria-label="Collection"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 3l3 3-9 9-3-3z"/><path d="M9 12l-4 1-2 7 7-2 1-4"/></svg></a><a class="hm hm-map" href="#carte" aria-label="Carte des joueurs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></a><a class="hm hm-acc" href="#compte" aria-label="Mon compte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></a><a class="hm" href="#accueil" aria-label="Accueil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></a></div></header>
-<main class="in"><div id="home-view"></div><p class="copy"><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.25.2 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p></main>
+<main class="in"><div id="home-view"></div><p class="copy"><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.26.0 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p></main>
 </div>
 <div id="app-bs" hidden>
 
@@ -758,7 +849,7 @@ html[data-theme="dark"] #app-home #map-fac{border:1px solid #3a3a3a;background:#
   </div>
 </header>
 
-<main class="in"><div class="stack" id="view"></div><p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.25.2 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p></main>
+<main class="in"><div class="stack" id="view"></div><p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.26.0 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p></main>
 
 <footer class="foot" id="foot" hidden>
   <div class="in">
@@ -780,7 +871,7 @@ html[data-theme="dark"] #app-home #map-fac{border:1px solid #3a3a3a;background:#
   <a href="#parties" id="nav-parties"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1.2" fill="currentColor"/><circle cx="15" cy="15" r="1.2" fill="currentColor"/><circle cx="15" cy="9" r="1.2" fill="currentColor"/><circle cx="9" cy="15" r="1.2" fill="currentColor"/></svg><span>Parties</span></a>
 </div></nav>
 <script>
-window.WC_VERSION = "2.25.2";
+window.WC_VERSION = "2.26.0";
 window.WC_PHOTO = {}
 ;
 window.WC_FRN = {
