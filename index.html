@@ -9,10 +9,11 @@
 <meta name="apple-mobile-web-app-title" content="WarCounter">
 <title>WarCounter</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="theme-color" content="#5a2a17">
+<meta name="theme-color" content="#5a2a17" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#3a1c10" media="(prefers-color-scheme: dark)">
 <script>try{if(localStorage.getItem("wc-theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
-<style>#boot{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#6b2119;transition:opacity .25s}#boot.out{opacity:0;pointer-events:none}#boot img{width:240px;height:240px;border-radius:50%;animation:bootspin 1.2s linear infinite}@keyframes bootspin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){#boot img{animation-duration:3s}}</style>
-<div id="boot" aria-hidden="true"><img alt="" src="data:image/png;base64,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"></div>
+<style>#boot{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#6a321d;transition:opacity .25s}#boot.out{opacity:0;pointer-events:none}#boot img{width:240px;height:240px;border-radius:50%;animation:bootspin 1.2s linear infinite}@keyframes bootspin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){#boot img{animation-duration:3s}}</style>
+<div id="boot" aria-hidden="true"><img alt="" src="data:image/png;base64,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"></div>
 <script>addEventListener("load",function(){setTimeout(function(){var b=document.getElementById("boot");if(!b)return;b.classList.add("out");setTimeout(function(){b.remove()},300)},1400)});</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
 <style>
@@ -654,7 +655,6 @@ body{font-size:16px;line-height:1.45;background-color:#dcd7cd;background-image:r
 .bnav{height:var(--navh)}
 .bar h1,.sec,.btn,.lbl,.bnav a span,.panel h2,.mtitle,h1,h2,h3{letter-spacing:.05em}
 a{color:#8e3420}
-#boot{background:linear-gradient(180deg,#7a3b22,#5a2a17)!important}
 /* Fiches : bandeaux brun foncé, pastilles carrées */
 :root{--ph-hero:#4a3a30;--ph-shoot:#4a3a30;--ph-fight:#4a3a30;--ph-charge:#4a3a30;--ph-passive:#4a3a30;--ph-end:#4a3a30;--ph-defense:#4a3a30;--ph-move:#4a3a30;--save:#4a3a30}
 #app-army .disc,#app-home .disc,#app-army .disc.sv,#app-home .disc.sv,#app-army .disc.wd,#app-home .disc.wd{border-radius:12px;background:#2e2a26;border:2px solid #d3bfad;box-shadow:0 1px 3px rgba(46,42,38,.35);color:#f1eadf}
@@ -737,10 +737,16 @@ input[type=text],select{background:#ebe7df}
 #app-home .pf-vis{background:#ebe7df}
 #app-home .pf-fold summary{border:1px solid #b6ab9c}
 #app-home #map-fac{border:1px solid #b6ab9c;background:#f2efe9}
-html[data-theme="dark"]{color-scheme:dark;--page:#121212;--card:#1e1e1e;--colhead:#2c2c2c;--namebar:#2a2a2a;--soft:#262626;--ink:#ececec;--muted:#a8a8a8;--line:#3a3a3a;--khaki:#6f6340;--disc:#0c0c0c;--ph-passive:#3a3a3a}
+html[data-theme="dark"]{color-scheme:dark;--page:#1a1714;--card:#25201c;--colhead:#3a2f27;--namebar:#3a2f27;--soft:#2e2823;--ink:#ece4d8;--muted:#b0a597;--line:#4a4038;--khaki:#5a4a3c;--gold:#5a4a3c;--disc:#120f0d;--ph-hero:#3a2f27;--ph-shoot:#3a2f27;--ph-fight:#3a2f27;--ph-charge:#3a2f27;--ph-passive:#3a2f27;--ph-end:#3a2f27;--ph-defense:#3a2f27;--ph-move:#3a2f27}
+html[data-theme="dark"] body{background-color:#1a1714;background-image:radial-gradient(ellipse at 20% 0%,rgba(255,240,220,.05),transparent 55%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .95 0 0 0 0 .9 0 0 0 .035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+html[data-theme="dark"] .bar{background:linear-gradient(180deg,#5a2a17,#3a1c10);border-bottom-color:#5a4a3c}
+html[data-theme="dark"] #app-army .statband,html[data-theme="dark"] #app-home .statband{background:linear-gradient(180deg,#2e2823,#3a2f27);color:var(--ink)}
+html[data-theme="dark"] #app-army .statband .l,html[data-theme="dark"] #app-home .statband .l,html[data-theme="dark"] #app-army .statband .unit-pts,html[data-theme="dark"] #app-home .statband .unit-pts{color:var(--ink)}
+html[data-theme="dark"] #app-army .disc,html[data-theme="dark"] #app-home .disc{background:#120f0d;border-color:#5a4a3c}
+html[data-theme="dark"] #app-army .disc.sv,html[data-theme="dark"] #app-home .disc.sv{background:#5a2a17}
 html[data-theme="dark"] body{background:var(--page);color:var(--ink)}
-html[data-theme="dark"] input,html[data-theme="dark"] select,html[data-theme="dark"] textarea{background:#262626;color:var(--ink);border-color:#444}
-html[data-theme="dark"] a{color:#e9c96b}
+html[data-theme="dark"] input,html[data-theme="dark"] select,html[data-theme="dark"] textarea{background:#2e2823;color:var(--ink);border-color:#5a4a3c}
+html[data-theme="dark"] a{color:#e0a27e}
 html[data-theme="dark"] .bar a,html[data-theme="dark"] .btn-install,html[data-theme="dark"] .sc-btn,html[data-theme="dark"] .bnav a{color:inherit}
 .back-game{position:fixed;left:0;right:0;bottom:var(--navh);z-index:30;display:flex;align-items:center;gap:8px;padding:12px 16px;background:var(--bar);color:#fff;font:700 15px var(--body);text-decoration:none;box-shadow:0 -2px 8px rgba(0,0,0,.25)}
 .back-game[hidden]{display:none}
@@ -749,69 +755,69 @@ html[data-theme="dark"] .bar a,html[data-theme="dark"] .btn-install,html[data-th
 body.has-back-game #app-army main{padding-bottom:calc(var(--navh) + 90px)}
 .unit-en{margin:2px 0 0;text-align:center;font:italic 13px var(--body);color:var(--muted)}
 .copy .theme-btn,.theme-btn{cursor:pointer;display:inline-flex;align-items:center;gap:6px;margin:0 0 6px;padding:5px 12px;border:1px solid #d6cfc3;border-radius:999px;background:#fff;color:var(--bar);font:600 12px var(--body);vertical-align:top}
-html[data-theme="dark"] .copy .sup-link,html[data-theme="dark"] .theme-btn{background:#262626;border-color:#444;color:#e9c96b}
+html[data-theme="dark"] .copy .sup-link,html[data-theme="dark"] .theme-btn{background:#2e2823;border-color:#5a4a3c;color:#e0a27e}
 .theme-btn svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round}
-html[data-theme="dark"] #app-army .unit-link.has-photo{background:linear-gradient(to top, rgba(0,0,0,.9) 0%, rgba(0,0,0,.55) 35%, rgba(0,0,0,0) 70%), var(--img) center 30%/cover no-repeat, #262626}
+html[data-theme="dark"] #app-army .unit-link.has-photo{background:linear-gradient(to top, rgba(0,0,0,.9) 0%, rgba(0,0,0,.55) 35%, rgba(0,0,0,0) 70%), var(--img) center 30%/cover no-repeat, #2e2823}
 html[data-theme="dark"] #app-army .badge{color:#ececec}
-html[data-theme="dark"] #app-army .hero-photo{background:radial-gradient(ellipse at center, #262626 0%, #262626 100%)}
-html[data-theme="dark"] #app-army .ab-name{border-bottom:2px solid #3a3a3a}
-html[data-theme="dark"] input[type=text],html[data-theme="dark"] select{background:#262626}
-html[data-theme="dark"] #app-army .pick{background:#1e1e1e}
+html[data-theme="dark"] #app-army .hero-photo{background:radial-gradient(ellipse at center, #2e2823 0%, #2e2823 100%)}
+html[data-theme="dark"] #app-army .ab-name{border-bottom:2px solid #4a4038}
+html[data-theme="dark"] input[type=text],html[data-theme="dark"] select{background:#2e2823}
+html[data-theme="dark"] #app-army .pick{background:#25201c}
 html[data-theme="dark"] #app-army .pick[aria-pressed="true"]{color:#ececec}
-html[data-theme="dark"] #app-army .btn{background:#1e1e1e}
-html[data-theme="dark"] #app-army .ent{background:#262626}
-html[data-theme="dark"] #app-army .ent-opts select{background-color:#1e1e1e}
+html[data-theme="dark"] #app-army .btn{background:#25201c}
+html[data-theme="dark"] #app-army .ent{background:#2e2823}
+html[data-theme="dark"] #app-army .ent-opts select{background-color:#25201c}
 html[data-theme="dark"] #app-army .tag.gold{color:#ececec}
-html[data-theme="dark"] #app-army .note{background:#1e1e1e}
-html[data-theme="dark"] #app-bs .btn{background:#1e1e1e}
+html[data-theme="dark"] #app-army .note{background:#25201c}
+html[data-theme="dark"] #app-bs .btn{background:#25201c}
 html[data-theme="dark"] #app-bs .btn.gold{color:#ececec}
-html[data-theme="dark"] #app-bs .pick{background:#1e1e1e}
+html[data-theme="dark"] #app-bs .pick{background:#25201c}
 html[data-theme="dark"] #app-bs .pick[aria-pressed="true"]{color:#ececec}
-html[data-theme="dark"] #app-bs .stepper button{background:#1e1e1e}
+html[data-theme="dark"] #app-bs .stepper button{background:#25201c}
 html[data-theme="dark"] #app-bs .tag.first{color:#ececec}
-html[data-theme="dark"] #app-bs .chip{background:#1e1e1e}
-html[data-theme="dark"] #app-bs .box{background:#1e1e1e}
-html[data-theme="dark"] #app-bs .note{background:#1e1e1e}
-html[data-theme="dark"] #app-bs .hist div{background:#1e1e1e}
-html[data-theme="dark"] #app-bs .rappel{background:var(--soft,#262626)}
-html[data-theme="dark"] #app-home .unit-link.has-photo{background:linear-gradient(to top, rgba(0,0,0,.9) 0%, rgba(0,0,0,.55) 35%, rgba(0,0,0,0) 70%), var(--img) center 30%/cover no-repeat, #262626}
+html[data-theme="dark"] #app-bs .chip{background:#25201c}
+html[data-theme="dark"] #app-bs .box{background:#25201c}
+html[data-theme="dark"] #app-bs .note{background:#25201c}
+html[data-theme="dark"] #app-bs .hist div{background:#25201c}
+html[data-theme="dark"] #app-bs .rappel{background:var(--soft,#2e2823)}
+html[data-theme="dark"] #app-home .unit-link.has-photo{background:linear-gradient(to top, rgba(0,0,0,.9) 0%, rgba(0,0,0,.55) 35%, rgba(0,0,0,0) 70%), var(--img) center 30%/cover no-repeat, #2e2823}
 html[data-theme="dark"] #app-home .badge{color:#ececec}
-html[data-theme="dark"] #app-home .hero-photo{background:radial-gradient(ellipse at center, #262626 0%, #262626 100%)}
-html[data-theme="dark"] #app-home .ab-name{border-bottom:2px solid #3a3a3a}
-html[data-theme="dark"] #app-home .pick{background:#1e1e1e}
+html[data-theme="dark"] #app-home .hero-photo{background:radial-gradient(ellipse at center, #2e2823 0%, #2e2823 100%)}
+html[data-theme="dark"] #app-home .ab-name{border-bottom:2px solid #4a4038}
+html[data-theme="dark"] #app-home .pick{background:#25201c}
 html[data-theme="dark"] #app-home .pick[aria-pressed="true"]{color:#ececec}
-html[data-theme="dark"] #app-home .btn{background:#1e1e1e}
-html[data-theme="dark"] #app-home .ent{background:#262626}
-html[data-theme="dark"] #app-home .ent-opts select{background-color:#1e1e1e}
+html[data-theme="dark"] #app-home .btn{background:#25201c}
+html[data-theme="dark"] #app-home .ent{background:#2e2823}
+html[data-theme="dark"] #app-home .ent-opts select{background-color:#25201c}
 html[data-theme="dark"] #app-home .tag.gold{color:#ececec}
-html[data-theme="dark"] #app-home .note{background:#1e1e1e}
-html[data-theme="dark"] #app-army .cbar{background:#262626}
-html[data-theme="dark"] #app-army .ctot{background:#262626;border:1px solid #3a3a3a}
-html[data-theme="dark"] #app-army .crow{border-top:1px solid #3a3a3a}
-html[data-theme="dark"] #app-army .cunit{border-top:1px solid #3a3a3a}
-html[data-theme="dark"] #app-army .cstep{border:1px solid #3a3a3a;background:#1e1e1e}
-html[data-theme="dark"] #app-army .cstep button{background:#262626}
-html[data-theme="dark"] #app-army .cstep button:active{background:#262626}
-html[data-theme="dark"] #app-army .cstep input{background:#1e1e1e;color:var(--text,#e0e0e0)}
-html[data-theme="dark"] #app-army .mwar,html[data-theme="dark"] #app-home .mwar{border-top:1px dashed var(--line,#3a3a3a)}
-html[data-theme="dark"] #app-army .imp-text{border:1px solid var(--line,#3a3a3a);background:#1e1e1e}
-html[data-theme="dark"] #app-army .msearch,html[data-theme="dark"] #app-home .rsearch{background:#1e1e1e}
-html[data-theme="dark"] #app-army .unit-link:hover{background:#262626}
-html[data-theme="dark"] #app-army #list .unit-link.has-photo{background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.55) 35%,rgba(0,0,0,0) 70%),var(--img) center 30%/cover no-repeat,#262626}
-html[data-theme="dark"] .bnav{background:#1e1e1e;border-top:1px solid #3a3a3a}
-html[data-theme="dark"] #app-home .fcard:hover{background:#262626}
-html[data-theme="dark"] .copy .sup-link{border:1px solid #3a3a3a;background:#1e1e1e}
-html[data-theme="dark"] .home-extra .btn-link{border:1px solid #3a3a3a;background:#1e1e1e}
-html[data-theme="dark"] .home-extra .btn-link:active{background:#262626}
+html[data-theme="dark"] #app-home .note{background:#25201c}
+html[data-theme="dark"] #app-army .cbar{background:#2e2823}
+html[data-theme="dark"] #app-army .ctot{background:#2e2823;border:1px solid #4a4038}
+html[data-theme="dark"] #app-army .crow{border-top:1px solid #4a4038}
+html[data-theme="dark"] #app-army .cunit{border-top:1px solid #4a4038}
+html[data-theme="dark"] #app-army .cstep{border:1px solid #4a4038;background:#25201c}
+html[data-theme="dark"] #app-army .cstep button{background:#2e2823}
+html[data-theme="dark"] #app-army .cstep button:active{background:#2e2823}
+html[data-theme="dark"] #app-army .cstep input{background:#25201c;color:var(--text,#e0e0e0)}
+html[data-theme="dark"] #app-army .mwar,html[data-theme="dark"] #app-home .mwar{border-top:1px dashed var(--line,#4a4038)}
+html[data-theme="dark"] #app-army .imp-text{border:1px solid var(--line,#4a4038);background:#25201c}
+html[data-theme="dark"] #app-army .msearch,html[data-theme="dark"] #app-home .rsearch{background:#25201c}
+html[data-theme="dark"] #app-army .unit-link:hover{background:#2e2823}
+html[data-theme="dark"] #app-army #list .unit-link.has-photo{background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.55) 35%,rgba(0,0,0,0) 70%),var(--img) center 30%/cover no-repeat,#2e2823}
+html[data-theme="dark"] .bnav{background:#25201c;border-top:1px solid #4a4038}
+html[data-theme="dark"] #app-home .fcard:hover{background:#2e2823}
+html[data-theme="dark"] .copy .sup-link{border:1px solid #4a4038;background:#25201c}
+html[data-theme="dark"] .home-extra .btn-link{border:1px solid #4a4038;background:#25201c}
+html[data-theme="dark"] .home-extra .btn-link:active{background:#2e2823}
 html[data-theme="dark"] .fld span{color:#bdbdbd}
-html[data-theme="dark"] .fld select,html[data-theme="dark"] .fld textarea{border:1px solid #3a3a3a;background:#1e1e1e}
-html[data-theme="dark"] #app-home .acc input{border:1px solid #3a3a3a}
-html[data-theme="dark"] #app-home .acc .btn{border:2px solid #3a3a3a;background:#1e1e1e}
-html[data-theme="dark"] #app-home .pf-sug{border:1px solid #3a3a3a;background:#1e1e1e}
-html[data-theme="dark"] #app-home .pf-sug button{border-top:1px solid #3a3a3a;background:#1e1e1e}
-html[data-theme="dark"] #app-home .pf-vis{background:#262626}
-html[data-theme="dark"] #app-home .pf-fold summary{border:1px solid #3a3a3a}
-html[data-theme="dark"] #app-home #map-fac{border:1px solid #3a3a3a;background:#1e1e1e}
+html[data-theme="dark"] .fld select,html[data-theme="dark"] .fld textarea{border:1px solid #4a4038;background:#25201c}
+html[data-theme="dark"] #app-home .acc input{border:1px solid #4a4038}
+html[data-theme="dark"] #app-home .acc .btn{border:2px solid #4a4038;background:#25201c}
+html[data-theme="dark"] #app-home .pf-sug{border:1px solid #4a4038;background:#25201c}
+html[data-theme="dark"] #app-home .pf-sug button{border-top:1px solid #4a4038;background:#25201c}
+html[data-theme="dark"] #app-home .pf-vis{background:#2e2823}
+html[data-theme="dark"] #app-home .pf-fold summary{border:1px solid #4a4038}
+html[data-theme="dark"] #app-home #map-fac{border:1px solid #4a4038;background:#25201c}
 </style>
 <div id="app-army" hidden>
 <header class="bar">
@@ -828,12 +834,12 @@ html[data-theme="dark"] #app-home #map-fac{border:1px solid #3a3a3a;background:#
   <section id="view-memo"><div id="memo-banner"></div><div class="list" id="list"></div></section>
   <section id="view-unit" hidden><div class="sheet" id="unit"></div></section>
   <section id="view-phases" hidden><div id="phase-banner"></div><div class="phases" id="phases"></div></section>
-  <p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.26.0 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p>
+  <p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.26.1 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p>
 </main>
 </div>
 <div id="app-home">
 <header class="bar"><div class="in top"><button class="back" id="home-back" type="button" aria-label="Retour" hidden><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><h1 id="home-title">WarCounter</h1><a class="hm hm-col" href="#collection" aria-label="Collection"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 3l3 3-9 9-3-3z"/><path d="M9 12l-4 1-2 7 7-2 1-4"/></svg></a><a class="hm hm-map" href="#carte" aria-label="Carte des joueurs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></a><a class="hm hm-acc" href="#compte" aria-label="Mon compte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></a><a class="hm" href="#accueil" aria-label="Accueil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></a></div></header>
-<main class="in"><div id="home-view"></div><p class="copy"><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.26.0 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p></main>
+<main class="in"><div id="home-view"></div><p class="copy"><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.26.1 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p></main>
 </div>
 <div id="app-bs" hidden>
 
@@ -849,7 +855,7 @@ html[data-theme="dark"] #app-home #map-fac{border:1px solid #3a3a3a;background:#
   </div>
 </header>
 
-<main class="in"><div class="stack" id="view"></div><p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.26.0 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p></main>
+<main class="in"><div class="stack" id="view"></div><p class="copy"><a class="sup-link" href="#soutenir">Si tu veux soutenir le projet</a><br><button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button><br>© 2026 elcounter. Tous droits réservés.<br>WarCounter version 2.26.1 · MAJ 15-11-2026<br><span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span></p></main>
 
 <footer class="foot" id="foot" hidden>
   <div class="in">
@@ -871,7 +877,7 @@ html[data-theme="dark"] #app-home #map-fac{border:1px solid #3a3a3a;background:#
   <a href="#parties" id="nav-parties"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1.2" fill="currentColor"/><circle cx="15" cy="15" r="1.2" fill="currentColor"/><circle cx="15" cy="9" r="1.2" fill="currentColor"/><circle cx="9" cy="15" r="1.2" fill="currentColor"/></svg><span>Parties</span></a>
 </div></nav>
 <script>
-window.WC_VERSION = "2.26.0";
+window.WC_VERSION = "2.26.1";
 window.WC_PHOTO = {}
 ;
 window.WC_FRN = {
