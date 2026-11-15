@@ -3,7 +3,7 @@
   // ---------- Outils ----------
   const PHASE = {
     hero:"var(--ph-hero)", shoot:"var(--ph-shoot)", fight:"var(--ph-fight)", charge:"var(--ph-charge)",
-    passive:"var(--ph-passive)", end:"var(--ph-end)", defense:"var(--ph-defense)", move:"var(--ph-move)"
+    passive:"var(--ph-passive);--ct:#f1eadf", end:"var(--ph-end)", defense:"var(--ph-defense)", move:"var(--ph-move)"
   };
   const CRIT_LABEL = {none:"", "2hits":"Crit (2 touches)", auto:"Crit (blessure auto)", mortal:"Crit (mortel)"};
   const PHASES = [

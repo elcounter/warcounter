@@ -1,6 +1,6 @@
   // ---------- Accueil et Règles ----------
   const BS = window.WC_BS;
-  const PHASE = {hero:"var(--ph-hero)", shoot:"var(--ph-shoot)", fight:"var(--ph-fight)", charge:"var(--ph-charge)", passive:"var(--ph-passive)", end:"var(--ph-end)", defense:"var(--ph-defense)", move:"var(--ph-move)"};
+  const PHASE = {hero:"var(--ph-hero)", shoot:"var(--ph-shoot)", fight:"var(--ph-fight)", charge:"var(--ph-charge)", passive:"var(--ph-passive);--ct:#f1eadf", end:"var(--ph-end)", defense:"var(--ph-defense)", move:"var(--ph-move)"};
   const $ = id => document.getElementById(id);
   const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 /*AB*/

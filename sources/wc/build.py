@@ -1,7 +1,7 @@
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs('build-check', exist_ok=True)
-VERSION='2.26.8'
+VERSION='2.27.0'
 MAJ='15-11-2026'
 LEGAL='<span class="legal">Application non officielle, non affiliée à Games Workshop.<br>Warhammer Age of Sigmar est une marque de Games Workshop Ltd.<br>Données des unités issues de BSData (projet communautaire open source).</span>'
 THEME_BTN='<button type="button" class="sup-link theme-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Mode sombre</span></button>'
@@ -88,7 +88,9 @@ def dark_css(css):
             sels.append(sl)
         out.append(','.join(sels)+'{'+';'.join(ds)+'}')
     return '\n'.join(out)
-DARK_VARS="""html[data-theme="dark"]{color-scheme:dark;--page:#1a1714;--card:#25201c;--colhead:#3a2f27;--namebar:#3a2f27;--soft:#2e2823;--ink:#ece4d8;--muted:#b0a597;--line:#4a4038;--khaki:#5a4a3c;--gold:#5a4a3c;--disc:#120f0d;--ph-hero:#3a2f27;--ph-shoot:#3a2f27;--ph-fight:#3a2f27;--ph-charge:#3a2f27;--ph-passive:#3a2f27;--ph-end:#3a2f27;--ph-defense:#3a2f27;--ph-move:#3a2f27}
+DARK_VARS="""html[data-theme="dark"]{color-scheme:dark;--page:#1a1714;--card:#25201c;--colhead:#3a2f27;--namebar:#3a2f27;--soft:#2e2823;--ink:#ece4d8;--muted:#b0a597;--line:#4a4038;--khaki:#5a4a3c;--gold:#5a4a3c;--disc:#120f0d;--ph-hero:#6b5f2e;--ph-shoot:#34536b;--ph-fight:#7a3d34;--ph-charge:#7f5330;--ph-passive:#2a2725;--ph-end:#54436a;--ph-defense:#43582d;--ph-move:#4f4a44}
+html[data-theme="dark"] #app-army .ab-head,html[data-theme="dark"] #app-home .ab-head,html[data-theme="dark"] #app-bs .ab-head,html[data-theme="dark"] #app-army .phase > summary{color:#f1eadf}
+html[data-theme="dark"] #app-army .phase > summary .count{background:rgba(255,255,255,.15)}
 html[data-theme="dark"] body{background-color:#1a1714;background-image:radial-gradient(ellipse at 20% 0%,rgba(255,240,220,.05),transparent 55%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .95 0 0 0 0 .9 0 0 0 .035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 html[data-theme="dark"] .bar{background:linear-gradient(180deg,#5a2a17,#3a1c10);border-bottom-color:#5a4a3c}
 html[data-theme="dark"] #app-army .statband,html[data-theme="dark"] #app-home .statband{background:linear-gradient(180deg,#2e2823,#3a2f27);color:var(--ink)}
@@ -150,7 +152,10 @@ body{font-size:16px;line-height:1.45;background-color:#dcd7cd;background-image:r
 .bar h1,.sec,.btn,.lbl,.bnav a span,.panel h2,.mtitle,h1,h2,h3{letter-spacing:.05em}
 a{color:#8e3420}
 /* Fiches : bandeaux brun foncé, pastilles carrées */
-:root{--ph-hero:#4a3a30;--ph-shoot:#4a3a30;--ph-fight:#4a3a30;--ph-charge:#4a3a30;--ph-passive:#4a3a30;--ph-end:#4a3a30;--ph-defense:#4a3a30;--ph-move:#4a3a30;--save:#4a3a30}
+:root{--ph-hero:#e6d79a;--ph-shoot:#aac4d8;--ph-fight:#e0a69c;--ph-charge:#ebbd92;--ph-passive:#3a3633;--ph-end:#c8b6da;--ph-defense:#b9cd9c;--ph-move:#cfcac3;--save:#4a3a30}
+#app-army .ab-head,#app-home .ab-head,#app-bs .ab-head,#app-army .phase > summary{color:var(--ct,#2e2a26)}
+#app-army .phase > summary .count{background:rgba(46,42,38,.15);color:inherit}
+#app-army .ab-head .cast,#app-home .ab-head .cast,#app-army .ab-head .chant,#app-home .ab-head .chant{color:#f1eadf}
 #app-army .disc,#app-home .disc,#app-army .disc.sv,#app-home .disc.sv,#app-army .disc.wd,#app-home .disc.wd{border-radius:12px;background:#2e2a26;border:2px solid #d3bfad;box-shadow:0 1px 3px rgba(46,42,38,.35);color:#f1eadf}
 #app-army .disc.sv,#app-home .disc.sv{background:#5a2a17}
 #app-army .disc.wd,#app-home .disc.wd{background:#8e3420}

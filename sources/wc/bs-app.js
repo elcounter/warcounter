@@ -1,4 +1,4 @@
-  const PHASE = {hero:"var(--ph-hero)", shoot:"var(--ph-shoot)", fight:"var(--ph-fight)", charge:"var(--ph-charge)", passive:"var(--ph-passive)", end:"var(--ph-end)", defense:"var(--ph-defense)", move:"var(--ph-move)"};
+  const PHASE = {hero:"var(--ph-hero)", shoot:"var(--ph-shoot)", fight:"var(--ph-fight)", charge:"var(--ph-charge)", passive:"var(--ph-passive);--ct:#f1eadf", end:"var(--ph-end)", defense:"var(--ph-defense)", move:"var(--ph-move)"};
   const ROUNDS = 5, TAC_PTS = 5;
   const TRASH = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>';
   const KEY = "warcounter-partie-v1", LKEY = "warcounter-parties", HKEY = "warcounter-historique", LISTS = "warcounter-listes";
