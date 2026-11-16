@@ -754,7 +754,8 @@
     const s = scope(), st = u.stats, p = F.photo(u.id);
     let h = p ? `<div class="hero-photo"><img src="${p}" alt=""></div>` : "";
     const discs = [[st.M,"Mouv."],[st.S,"Santé"],[st.C,"Contrôle"],[st.Sv,"Sauv.","sv"]];
-    if (st.W) discs.push([st.W,"Prot.","wd"]);
+    const wd = st.W || (/PROTECTION \((\d\+)\)/.exec(String(u.kw || "")) || [])[1];
+    if (wd) discs.push([wd,"Prot.","wd"]);
     h += `<div class="statband"><div class="stats" style="--n:${discs.length}">` +
       discs.map(([v,lab,c]) => `<div><div class="disc${c ? " " + c : ""}">${esc(v)}</div><div class="l">${lab}</div></div>`).join("") + `</div>
       <p class="unit-pts">${u.size} figurine${u.size > 1 ? "s" : ""} · ${u.pts ? u.pts + " pts" : /^rr-/.test(u.id) ? "régiment de renom uniquement" : "0 pt, prise avec son héros"}${u.pts && u.size > 1 && !u.hero ? ` · renforcée : ${u.size * 2} fig., ${u.pts * 2} pts` : ""}${u.aqshy ? " · Fléau d'Aqshy" : ""}</p>${u.fr ? `<p class="unit-en">Nom anglais : ${esc(u.en)}</p>` : ""}</div>`;
