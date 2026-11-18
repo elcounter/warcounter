@@ -1,7 +1,7 @@
 {
   "name": "WarCounter",
   "short_name": "WarCounter",
-  "description": "Ton compagnon pour Warhammer Age of Sigmar",
+  "description": "Ton compagnon pour Age of Sigmar",
   "lang": "fr",
   "start_url": "./#accueil",
   "scope": "./",

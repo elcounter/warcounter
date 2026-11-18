@@ -261,7 +261,7 @@
     ["#soutenir","Si tu veux soutenir le projet","Un don pour l'hébergement et le développement.",'<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>']
   ];
   function homeHtml(){
-    return `<div class="welcome"><h2>Bienvenue sur WarCounter</h2><p>Ton compagnon pour Warhammer Age of Sigmar.</p></div>
+    return `<div class="welcome"><h2>Bienvenue sur WarCounter</h2><p>Ton compagnon pour Age of Sigmar.</p></div>
       ${STANDALONE ? "" : `<a class="btn-install" href="#installer">${I('<path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 19h14"/>')}<span>Installer l'app</span></a>`}
       <a class="btn-install btn-acc" href="#compte">${I('<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>')}<span>${sess ? "Mon compte" : "Créer mon compte"}</span></a>
       ${sess ? "" : `<p class="acc-pitch">Gratuit : tes listes et ta collection sauvegardées et retrouvées sur tous tes appareils.</p>`}
